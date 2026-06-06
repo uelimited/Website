@@ -1,0 +1,19 @@
+[
+  {
+    "id": "tst-foxconn",
+    "quote": "Exceptional fast-track execution of MEPF works with strong adherence to timelines and quality.",
+    "author_name": "Mr. Albert",
+    "author_role": "Country Head",
+    "author_company": "Foxconn",
+    "project_id": "prj-foxconn",
+    "sort_order": 1
+  },
+  {
+    "id": "tst-bits",
+    "quote": "Reliable Pan-India execution of MEPF works with consistent quality and on-time delivery.",
+    "author_name": "Mr. Siddharth Banerjee",
+    "author_role": "President",
+    "author_company": "BITS Pilani",
+    "sort_order": 2
+  }
+]

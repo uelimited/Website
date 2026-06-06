@@ -1,0 +1,22 @@
+[
+  {
+    "id": "ldr-pradeep",
+    "name": "Pradeep Sharma",
+    "role": "Founding & Managing Director",
+    "credential": "B.Tech Mechanical Engineering · YMCA '88",
+    "experience": "40 years in the MEPF industry",
+    "bio": "Co-founded Unique Engineers in 1990. Director — Project Co-ordination. Directly engaged on tier-1 mandates across data centre, semiconductor and large-format mixed-use projects.",
+    "portrait_url": "/firm/pradeep-sharma.jpg",
+    "sort_order": 1
+  },
+  {
+    "id": "ldr-manmohan",
+    "name": "Manmohan Jindal",
+    "role": "Founding & Managing Director",
+    "credential": "B.Tech Mechanical Engineering · YMCA '89",
+    "experience": "40 years in the MEPF industry",
+    "bio": "Co-founded Unique Engineers in 1990. Director — Project Execution. Hands-on technical leadership across HVAC, cleanroom and process-cooling delivery.",
+    "portrait_url": "/firm/manmohan-jindal.jpg",
+    "sort_order": 2
+  }
+]

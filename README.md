@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Unique Engineers — Website
 
-## Getting Started
+Marketing website for Unique Engineers (MEPF, BMS, and civil contracting), built with
+[Next.js 16](https://nextjs.org) (App Router), React 19, Tailwind CSS 4, and shadcn/ui.
 
-First, run the development server:
+## Tech stack
+
+- **Framework:** Next.js 16 (App Router, Turbopack)
+- **Language:** TypeScript
+- **UI:** React 19, Tailwind CSS 4, shadcn/ui, lucide-react, motion
+- **Package manager:** pnpm
+
+## Pages
+
+- `/` — Home
+- `/firm` — About the firm
+- `/approach` — Our approach
+- `/services`, `/services/[slug]`, `/services/[slug]/[sub]` — Services
+- `/sectors`, `/sectors/[slug]` — Sectors served
+- `/projects`, `/projects/[slug]` — Project case studies
+- `/contact` — Contact
+
+## Prerequisites
+
+- **Node.js 20.9+** (Node 18.18+ also works; this repo was developed on Node 24)
+- **pnpm** — install with `npm install -g pnpm` if you don't have it
+
+## Getting started
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser. Pages hot-reload as
+you edit files under `src/app`.
 
-## Learn More
+## Available scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command       | Description                                  |
+| ------------- | -------------------------------------------- |
+| `pnpm dev`    | Start the local development server           |
+| `pnpm build`  | Create a production build                    |
+| `pnpm start`  | Serve the production build (run after build) |
+| `pnpm lint`   | Run ESLint                                   |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Production build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm build
+pnpm start
+```
 
-## Deploy on Vercel
+This serves the optimized build on [http://localhost:3000](http://localhost:3000).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/         Routes (App Router pages and layouts)
+  components/  Reusable UI — site/ (page sections) and ui/ (shadcn primitives)
+  data/        Content/data used to render pages
+  lib/         Helpers (e.g. cms.ts)
+  styles/      Global styles
+public/         Static assets (images, video, SVGs)
+```
+
+## Deployment
+
+Deploys to any Node host or to [Vercel](https://vercel.com/new). On Vercel, import the
+repo and accept the detected Next.js settings — no extra configuration required.

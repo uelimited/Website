@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Button as ButtonPrimitive } from "@base-ui/react/button"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -40,18 +41,45 @@ const buttonVariants = cva(
   }
 )
 
+type ButtonProps = ButtonPrimitive.Props &
+  VariantProps<typeof buttonVariants> & {
+    /**
+     * When true, renders the child element via base-ui's `render` prop
+     * (single child required). Mimics Radix/shadcn `asChild` so usage
+     * stays familiar: `<Button asChild><Link href="...">Label</Link></Button>`.
+     */
+    asChild?: boolean
+  }
+
 function Button({
   className,
   variant = "default",
   size = "default",
+  asChild,
+  children,
   ...props
-}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
+}: ButtonProps) {
+  const classes = cn(buttonVariants({ variant, size, className }))
+
+  if (asChild) {
+    const child = React.Children.only(children) as React.ReactElement<{
+      className?: string
+    }>
+    return (
+      <ButtonPrimitive
+        data-slot="button"
+        className={classes}
+        render={child}
+        nativeButton={false}
+        {...props}
+      />
+    )
+  }
+
   return (
-    <ButtonPrimitive
-      data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    />
+    <ButtonPrimitive data-slot="button" className={classes} {...props}>
+      {children}
+    </ButtonPrimitive>
   )
 }
 

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "j-1990",
+    "year": "1990",
+    "title": "Foundation",
+    "description": "Establishment of the company in Gurugram by two mechanical-engineer founders, as a specialist HVAC contractor.",
+    "sort_order": 1
+  },
+  {
+    "id": "j-1993",
+    "year": "1993",
+    "title": "National Recognition",
+    "description": "Expanded operations across the nation, taking on HVAC mandates beyond the National Capital Region.",
+    "sort_order": 2
+  },
+  {
+    "id": "j-1995",
+    "year": "1995",
+    "title": "Global Recognition",
+    "description": "HVAC partner for NTPC and BHEL, awarded by Rolls Royce Power Engineering Group, UK.",
+    "sort_order": 3
+  },
+  {
+    "id": "j-2005",
+    "year": "2005",
+    "title": "Vertical Integration",
+    "description": "Started in-house manufacturing of Air Handling Units (AHUs) and Air Washer Units.",
+    "sort_order": 4
+  },
+  {
+    "id": "j-2010",
+    "year": "2010",
+    "title": "Commonwealth Projects",
+    "description": "HVAC service provider for stadiums and hotels supporting the 2010 Commonwealth Games in Delhi.",
+    "sort_order": 5
+  },
+  {
+    "id": "j-2012-18",
+    "year": "2012–2018",
+    "title": "Expansion into MEPF",
+    "description": "Scaled from specialised HVAC service to comprehensive multi-discipline MEPF solutions, strengthening nationwide execution capacity.",
+    "sort_order": 6
+  },
+  {
+    "id": "j-2019",
+    "year": "2019",
+    "title": "Large-Scale MEPF Milestone",
+    "description": "Awarded MEPF contract for Mopa International Airport — a significant step into high-value, large-scale infrastructure execution.",
+    "sort_order": 7
+  },
+  {
+    "id": "j-2020",
+    "year": "2020",
+    "title": "Critical Pandemic Support",
+    "description": "Led pandemic-support operations through continuous HVAC O&M across NCR hospitals — uninterrupted facility uptime under the most demanding conditions.",
+    "sort_order": 8
+  },
+  {
+    "id": "j-2023",
+    "year": "2023",
+    "title": "Entered Data Centre Vertical",
+    "description": "Entered the data centre sector with STT Mumbai (₹30+ Cr), expanding into high-uptime, mission-critical infrastructure.",
+    "sort_order": 9
+  },
+  {
+    "id": "j-2024",
+    "year": "2024",
+    "title": "Entered Semiconductor Vertical",
+    "description": "Entered the semiconductor industry, executing Class 1000 cleanroom infrastructure projects for Foxconn (Apple) in Bangalore.",
+    "sort_order": 10
+  }
+]

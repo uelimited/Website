@@ -1,0 +1,13 @@
+[
+  { "id": "cert-iso-9001", "name": "ISO 9001:2015", "category": "Quality Management", "sort_order": 1 },
+  { "id": "cert-iso-14001", "name": "ISO 14001:2015", "category": "Environmental Management", "sort_order": 2 },
+  { "id": "cert-iso-45001", "name": "ISO 45001:2018", "category": "Occupational Health & Safety", "sort_order": 3 },
+  { "id": "cert-cpwd", "name": "CPWD", "category": "Empanelment", "sort_order": 4 },
+  { "id": "cert-nbcc", "name": "NBCC", "category": "Empanelment", "sort_order": 5 },
+  { "id": "cert-rites", "name": "RITES", "category": "Empanelment", "sort_order": 6 },
+  { "id": "cert-hscc", "name": "HSCC", "category": "Empanelment", "sort_order": 7 },
+  { "id": "cert-aai", "name": "Airports Authority of India", "category": "Empanelment", "sort_order": 8 },
+  { "id": "cert-ishrae", "name": "ISHRAE", "category": "Membership", "sort_order": 9 },
+  { "id": "cert-nfpa", "name": "NFPA", "category": "Membership", "sort_order": 10 },
+  { "id": "cert-igbc", "name": "IGBC", "category": "Membership", "sort_order": 11 }
+]

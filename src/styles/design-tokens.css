@@ -1,0 +1,138 @@
+/* ============================================================
+   UNIQUE ENGINEERS — Design tokens (single source of truth)
+   --------------------------------------------------------------
+   Change a value here and it flows through Tailwind, shadcn,
+   and the .ue-* utility classes. Do not hardcode values anywhere
+   else in the codebase — always reference these variables.
+   ============================================================ */
+
+:root {
+  /* ---------- COLOR — cool-neutral greys with a faint blue bias ---------- */
+  --ink-950: #0A0C10;
+  --ink-900: #111318;
+  --ink-800: #1C1F25;
+  --ink-700: #2A2E36;
+  --ink-600: #3D424B;
+  --ink-500: #5F6570;   /* secondary text */
+  --ink-400: #868C97;   /* tertiary text, icon */
+  --ink-300: #B0B5BD;
+  --ink-200: #D6D9DE;   /* borders, hairline */
+  --ink-100: #E9EBEE;   /* subtle backgrounds */
+  --ink-50:  #F4F5F7;   /* panels */
+
+  --paper:      #FFFFFF;
+  --paper-soft: #FAFAFB;
+
+  /* ---------- COLOR — the one accent (muted system blue) ---------- */
+  --accent-700: #1E40AF;
+  --accent-600: #2D55C8;
+  --accent-500: #3B6FE0;   /* primary CTA, links, focus, eyebrows */
+  --accent-400: #5D89EA;
+  --accent-300: #8FADF3;
+  --accent-100: #D8E3F9;
+  --accent-50:  #EEF3FC;
+
+  /* Status */
+  --ok:   #0E8A4E;
+  --warn: #C58A1E;
+  --stop: #B42318;
+
+  /* ---------- SEMANTIC ---------- */
+  --bg:            var(--paper);
+  --bg-subtle:     var(--paper-soft);
+  --bg-panel:      var(--ink-50);
+  --bg-inverse:    var(--ink-950);
+  --surface:       var(--paper);
+  --fg:            var(--ink-950);
+  --fg-muted:      var(--ink-500);
+  --fg-subtle:     var(--ink-400);
+  --fg-inverse:    var(--paper);
+  --border-color:  var(--ink-200);
+  --border-strong: var(--ink-300);
+  --accent:        var(--accent-500);
+  --accent-ink:    var(--accent-700);
+
+  /* ---------- TYPE FAMILIES ----------
+     The --font-inter-tight / --font-jetbrains-mono vars are injected
+     by next/font in src/app/layout.tsx. Change the font there, or
+     change the stack here — either flows through the whole site. */
+  --font-display: var(--font-inter-tight), ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  --font-body:    var(--font-inter-tight), ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  --font-mono:    var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ---------- TYPE SCALE ---------- */
+  --fs-xs:   11px;
+  --fs-sm:   13px;
+  --fs-base: 15px;
+  --fs-md:   17px;
+  --fs-lg:   21px;
+  --fs-xl:   28px;
+  --fs-2xl:  36px;
+  --fs-3xl:  48px;
+  --fs-4xl:  64px;
+  --fs-5xl:  88px;
+  --fs-6xl:  128px;
+
+  /* Tracking — tight on big, near-flat on small. No all-caps tracking. */
+  --tracking-tight: -0.022em;
+  --tracking-snug:  -0.012em;
+  --tracking-flat:  0em;
+
+  /* Weights — the ceiling is 500 Medium */
+  --w-light:   300;
+  --w-regular: 400;
+  --w-book:    450;
+  --w-medium:  500;
+
+  /* Line heights */
+  --lh-tight: 1.02;
+  --lh-snug:  1.1;
+  --lh-body:  1.55;
+  --lh-loose: 1.7;
+
+  /* ---------- SPACING (8px baseline) ---------- */
+  --s-0:  0;
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  24px;
+  --s-6:  32px;
+  --s-7:  48px;
+  --s-8:  64px;
+  --s-9:  96px;
+  --s-10: 128px;
+  --s-11: 160px;
+  --s-12: 200px;
+
+  /* ---------- RADII ---------- */
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-pill: 999px;
+
+  /* ---------- HAIRLINES ---------- */
+  --hair: 1px;
+
+  /* ---------- SHADOWS ---------- */
+  --shadow-xs: 0 1px 1px rgba(10,12,16,0.03);
+  --shadow-sm: 0 1px 2px rgba(10,12,16,0.04), 0 0 0 1px rgba(10,12,16,0.03);
+  --shadow-md: 0 4px 16px rgba(10,12,16,0.06), 0 0 0 1px rgba(10,12,16,0.03);
+  --shadow-lg: 0 20px 60px rgba(10,12,16,0.08), 0 0 0 1px rgba(10,12,16,0.03);
+
+  /* ---------- MOTION ---------- */
+  --ease-std: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 360ms;
+
+  /* ---------- LAYOUT ---------- */
+  --col-gap: 24px;
+  --max-w:   1240px;
+
+  /* ---------- TYPE DEFAULTS ---------- */
+  --fs-body-default: 17px;
+}

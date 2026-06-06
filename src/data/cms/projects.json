@@ -1,0 +1,444 @@
+[
+  {
+    "id": "prj-foxconn",
+    "slug": "foxconn-bangalore",
+    "code": "UE-SEM-0650",
+    "name": "Foxconn Semiconductor Facility",
+    "client_id": "cli-foxconn",
+    "client_name_display": "Foxconn · Apple",
+    "location_city": "Bangalore",
+    "location_state": "Karnataka",
+    "location_country": "India",
+    "project_type": "Semiconductor",
+    "timeline_text": "1 year",
+    "value_cr": 650,
+    "value_display": "₹650 Cr",
+    "summary": "Fast-track cleanroom MEPF for an Apple semiconductor manufacturing facility — two ISO-class floors of 14,000 sqm delivered in three months.",
+    "narrative": [
+      "Foxconn assigned Unique Engineers to deliver fast-track packages for a semiconductor manufacturing facility under tight deadlines. The project required multi-service MEPF execution in active clean rooms, emphasising precision, contamination control, and strict sequencing. Installations had to meet ISO clean-room standards while ensuring continuous site progress.",
+      "Despite aggressive schedules, Unique Engineers delivered two floors of 14,000 sq m each within three months by deploying a workforce of 1,500+. The project was completed ahead of schedule and recognised with a performance bonus of ₹12 Cr for early delivery.",
+      "Clean-room execution required high-precision installation of process utility piping including CDA (Compressed Dry Air) system, Nitrogen and Vacuum networks. Systems were routed with strict slope control, leak-tested to stringent standards, and integrated without compromising contamination zones."
+    ],
+    "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical", "Clean Room", "CDA", "Nitrogen", "Vacuum"],
+    "status": "completed",
+    "featured": true,
+    "landmark_order": 2,
+    "hero_image_url": "/projects/foxconn-hero.jpg",
+    "hero_image_alt": "Foxconn semiconductor cleanroom interior with process piping and lighting array",
+    "accent": "pulse",
+    "key_metrics": [
+      { "k": "Workforce peak", "v": "1,500+" },
+      { "k": "Floor area delivered", "v": "2 × 14,000 sqm" },
+      { "k": "Schedule", "v": "3 months" },
+      { "k": "Early-delivery bonus", "v": "₹12 Cr" }
+    ],
+    "execution_snapshots": [
+      {
+        "title": "Clean Room Excellence",
+        "body": [
+          "The HVAC system included HEPA-filtered air-handling units, laminar airflow ducting and pressure cascade control to maintain ISO-class conditions. Electrical containment, drainage and specialty supports were installed with micron-level alignment to prevent vibration, particulate shedding and airflow disruption within the semiconductor environment.",
+          "Clean-room execution required high-precision installation of process utility piping including the CDA (Compressed Dry Air) system, Nitrogen and Vacuum networks. Systems were routed with strict slope control, leak-tested to stringent standards, and integrated without compromising contamination zones."
+        ],
+        "image_url": "/projects/foxconn-cleanroom.jpg"
+      }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-ingka",
+    "slug": "ingka-centre-ikea",
+    "code": "UE-MIX-0411",
+    "name": "Ingka Centre",
+    "client_id": "cli-ikea",
+    "client_name_display": "INGKA Centre · IKEA",
+    "location_city": "Noida",
+    "location_state": "Uttar Pradesh",
+    "location_country": "India",
+    "project_type": "Mixed Use",
+    "timeline_text": "3 years",
+    "value_cr": 411,
+    "value_display": "₹411 Cr",
+    "summary": "UEL's largest single-order project — full MEPF, solar and PNG for IKEA's flagship Indian mixed-use development.",
+    "narrative": [
+      "Our biggest single-order mandate to date — full MEPF and solar services, with PNG. Unique Engineers Limited is handling all the MEPF and solar services along with PNG. A further ₹450 Cr second phase for office and hotel floors is in the pipeline.",
+      "The project is delivered against a fully coordinated multi-disciplinary BIM model at LOD 400 across HVAC, Firefighting, Plumbing, Electrical, Solar and PNG systems. All services are integrated into a federated 3D environment where real-time clash detection and inter-trade coordination are completed before site installation.",
+      "Shop drawings are generated directly from the coordinated model to ensure execution accuracy and minimise rework. The modelling process is creating a digital twin of the project, enabling constructability validation, accurate material take-offs, prefabrication planning and lifecycle-ready asset data."
+    ],
+    "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical", "Solar", "PNG"],
+    "status": "active",
+    "featured": true,
+    "landmark_order": 1,
+    "hero_image_url": "/projects/ingka-hero.jpg",
+    "hero_image_alt": "Ingka Centre IKEA mixed-use tower in Noida at twilight",
+    "accent": "blocks",
+    "key_metrics": [
+      { "k": "BIM LOD", "v": "400" },
+      { "k": "Pipeline phase 2", "v": "₹450 Cr" },
+      { "k": "Scope", "v": "MEPF · Solar · PNG" }
+    ],
+    "execution_snapshots": [
+      {
+        "title": "BIM Modelling",
+        "body": [
+          "Unique Engineers is developing a fully coordinated multi-disciplinary BIM model at LOD 400 across HVAC, Firefighting, Plumbing, Electrical, Solar and PNG systems. All services are integrated into a federated 3D environment where real-time clash detection and inter-trade coordination are completed before site installation.",
+          "Shop drawings are generated directly from the coordinated model to ensure execution accuracy and minimise rework. This modelling process is creating a digital twin of the project, enabling constructability validation, accurate material take-offs, prefabrication planning and lifecycle-ready asset data."
+        ],
+        "image_url": "/projects/ingka-bim.jpg"
+      }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-central-secretariat",
+    "slug": "common-central-secretariat",
+    "code": "UE-GOV-0250",
+    "name": "Common Central Secretariat — Executive Enclave",
+    "client_id": "cli-goi",
+    "client_name_display": "Government of India",
+    "location_city": "New Delhi",
+    "location_country": "India",
+    "project_type": "Office Building",
+    "timeline_text": "3 years",
+    "value_cr": 250,
+    "value_display": "₹250 Cr",
+    "summary": "IGBC-Gold administrative complex with 16,000 TR HVAC plant, 5,00,000 sqm ducting and 1,00,000 m piping — optimised for lifecycle carbon reduction.",
+    "narrative": [
+      "The Common Central Secretariat — Executive Enclave in New Delhi is a landmark administrative infrastructure development. Unique Engineers completed large-scale HVAC and Firefighting works across this high-security, high-performance office complex within a 3-year schedule.",
+      "Delivered as a high-performance government office complex with IGBC Gold certification, with sustainability embedded into the mechanical and fire systems from design through execution.",
+      "A 16,000 TR high-efficiency HVAC plant was installed with optimised air distribution across 5,00,000 sqm of ducting and 1,00,000 metres of piping. The system uses energy-efficient chillers, optimised airflow balancing, reduced pumping losses and intelligent zoning to improve lifecycle performance while supporting long-term carbon reduction targets."
+    ],
+    "scope_tags": ["HVAC", "Firefighting"],
+    "status": "completed",
+    "featured": true,
+    "landmark_order": 3,
+    "hero_image_url": "/projects/central-secretariat-hero.jpg",
+    "hero_image_alt": "Kartavya Bhavan Central Secretariat building in New Delhi",
+    "accent": "fan",
+    "key_metrics": [
+      { "k": "Plant capacity", "v": "16,000 TR" },
+      { "k": "Ducting executed", "v": "5,00,000 sqm" },
+      { "k": "Piping executed", "v": "1,00,000 m" },
+      { "k": "Certification", "v": "IGBC Gold" }
+    ],
+    "certifications": ["IGBC Gold"],
+    "execution_snapshots": [
+      {
+        "title": "Sustainable Engineering",
+        "body": [
+          "The Common Central Secretariat — Executive Enclave was delivered as a high-performance government office complex with IGBC Gold certification, with sustainability embedded into the mechanical and fire systems from design through execution.",
+          "A 16,000 TR high-efficiency HVAC plant was installed with optimised air distribution across 5,00,000 sqm of ducting and 1,00,000 metres of piping. The system uses energy-efficient chillers, optimised airflow balancing, reduced pumping losses and intelligent zoning to improve lifecycle performance while supporting long-term carbon reduction targets."
+        ],
+        "image_url": "/projects/central-secretariat-plant.jpg"
+      }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-mopa",
+    "slug": "mopa-international-airport",
+    "code": "UE-AIR-0130",
+    "name": "Mopa International Airport",
+    "client_id": "cli-gmr",
+    "client_name_display": "GMR Group",
+    "location_city": "Goa",
+    "location_country": "India",
+    "project_type": "Airport",
+    "timeline_text": "1 year",
+    "value_cr": 130,
+    "value_display": "₹130 Cr",
+    "summary": "Full MEPF delivery in a logistically constrained location — structured material planning held schedule discipline through a compressed timeline.",
+    "narrative": [
+      "Full MEPF delivery in a logistically constrained site. Structured material planning and parallel work fronts held schedule discipline through a compressed timeline.",
+      "The project required full-scale MEPF delivery in a developing, logistically constrained location. Unique Engineers mobilised manpower, plant, and supply chains to maintain schedule discipline under compressed timelines.",
+      "Structured material planning and parallel work fronts enabled seamless execution, demonstrating our ability to deliver high-value infrastructure in geographically challenging environments."
+    ],
+    "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical"],
+    "status": "completed",
+    "featured": true,
+    "landmark_order": 4,
+    "hero_image_url": "/projects/mopa-hero.jpg",
+    "hero_image_alt": "Mopa International Airport control tower at dusk",
+    "accent": "graph",
+    "key_metrics": [
+      { "k": "Scope", "v": "Full MEPF" },
+      { "k": "Schedule", "v": "1 year" },
+      { "k": "Sector", "v": "Aviation infrastructure" }
+    ],
+    "execution_snapshots": [
+      {
+        "title": "Execution Under Challenging Conditions",
+        "body": [
+          "The project required full-scale MEPF delivery in a developing, logistically constrained location. Unique Engineers mobilised manpower, plant, and supply chains to maintain schedule discipline under compressed timelines.",
+          "Structured material planning and parallel work fronts enabled seamless execution, demonstrating our ability to deliver high-value infrastructure in geographically challenging environments."
+        ],
+        "image_url": "/projects/mopa-aerial.jpg"
+      }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-nalanda",
+    "slug": "nalanda-university",
+    "code": "UE-EDU-0060",
+    "name": "Nalanda University",
+    "client_id": "cli-mea",
+    "client_name_display": "Ministry of External Affairs",
+    "location_city": "Rajgir",
+    "location_state": "Bihar",
+    "location_country": "India",
+    "project_type": "University Campus",
+    "timeline_text": "2 years",
+    "value_cr": 60,
+    "value_display": "₹60 Cr",
+    "summary": "India's first net-zero university campus — thermal storage, brine chillers and geothermal VRV tied into an IBMS for real-time energy control.",
+    "narrative": [
+      "Nalanda University, Rajgir, was developed as India's first net-zero university campus. Unique Engineers delivered advanced HVAC systems and Integrated Building Management Systems (IBMS), aligning mechanical performance with long-term sustainability objectives.",
+      "The campus incorporated energy-efficient HVAC technologies including thermal energy storage for peak-load optimisation, brine chillers for enhanced heat transfer efficiency, geothermal water-cooled VRV systems, and advanced evaporative cooling strategies.",
+      "An Integrated Building Management System (IBMS) was implemented to monitor and control HVAC operations, energy consumption, and system performance in real time. This ensured centralised visibility, optimised load management, and sustained energy efficiency across academic and residential blocks. The combined mechanical and digital infrastructure supports long-term carbon reduction while maintaining occupant comfort and operational reliability."
+    ],
+    "scope_tags": ["HVAC", "IBMS", "Thermal storage", "Geothermal VRV"],
+    "status": "completed",
+    "featured": true,
+    "landmark_order": 5,
+    "hero_image_url": "/projects/nalanda-hero.jpg",
+    "hero_image_alt": "Nalanda University campus in Rajgir, Bihar",
+    "accent": "sun",
+    "key_metrics": [
+      { "k": "Distinction", "v": "India's first net-zero campus" },
+      { "k": "HVAC systems", "v": "Thermal storage + geothermal VRV" },
+      { "k": "Controls", "v": "IBMS-integrated" }
+    ],
+    "execution_snapshots": [
+      {
+        "title": "Integrated Engineering Approach",
+        "body": [
+          "The campus incorporated energy-efficient HVAC technologies including thermal energy storage for peak-load optimisation, brine chillers for enhanced heat transfer efficiency, geothermal water-cooled VRV systems, and advanced evaporative cooling strategies.",
+          "An Integrated Building Management System (IBMS) was implemented to monitor and control HVAC operations, energy consumption, and system performance in real time."
+        ],
+        "image_url": "/projects/nalanda-plant.jpg"
+      }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-sael",
+    "slug": "sael-solar-cell-manufacturing",
+    "code": "UE-SEM-0300",
+    "name": "SAEL Solar Cell Manufacturing",
+    "client_id": "cli-sael",
+    "client_name_display": "SAEL Industries",
+    "location_city": "Jewar",
+    "location_state": "NCR",
+    "location_country": "India",
+    "project_type": "Solar Cell Manufacturing",
+    "timeline_text": "In execution",
+    "value_cr": 300,
+    "value_display": "₹300 Cr",
+    "summary": "India's first 5.75 GW domestic solar-cell facility — full HVAC, cleanroom and process-cooling MEPF across 66,000+ sqm of ISO 6/7/8 zones.",
+    "narrative": [
+      "India's first 5.75 GW domestic solar-cell facility — full HVAC, cleanroom and process-cooling MEPF in a single engagement. ISO 6/7/8 cleanroom zones across 66,000+ sqm with GSS ducting, insulation, pressure cascade between zones and DOAS make-up.",
+      "Hydronics and controls scope includes 29,250 TR of installed cooling, primary-secondary distribution, dual 5.05 MW SS316 plate heat exchangers for process cooling water, and a unified BMS + SCADA + historian. 1,400+ sensors and instruments across the facility tie into the controls plane.",
+      "Air-side delivery includes 13,656 fan filter units, 217 air-handling units and 130 make-up air units. The project is being executed against the SAEL PMO's tier-1 commissioning protocol with weekly earned-value reporting and a 3-week rolling look-ahead."
+    ],
+    "scope_tags": ["HVAC", "Cleanroom", "PCW", "BMS", "SCADA"],
+    "status": "active",
+    "featured": true,
+    "hero_image_url": "/projects/sael-hero.jpg",
+    "hero_image_alt": "Solar cell manufacturing cleanroom interior at SAEL",
+    "accent": "sun",
+    "key_metrics": [
+      { "k": "Cleanroom area", "v": "66,000+ sqm" },
+      { "k": "Installed cooling", "v": "29,250 TR" },
+      { "k": "FFUs", "v": "13,656" },
+      { "k": "AHUs / MAUs", "v": "217 / 130" },
+      { "k": "Sensors", "v": "1,400+" }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-tabreed",
+    "slug": "tabreed-amravati-district-cooling",
+    "code": "UE-DCO-0500",
+    "name": "Tabreed Amravati District Cooling",
+    "client_id": "cli-tabreed",
+    "client_name_display": "Tabreed (National Central Cooling)",
+    "location_city": "Amravati",
+    "location_state": "Andhra Pradesh",
+    "location_country": "India",
+    "project_type": "District Cooling",
+    "timeline_text": "In commercial close",
+    "value_cr": 500,
+    "value_display": "₹500 Cr",
+    "summary": "Single-window design-build engagement — full district-cooling design plus civil + MEPF execution across 30,000 TR central plant and multi-km CHW network.",
+    "narrative": [
+      "Design–build engagement in final stages of commercial close — UEL leading both engineering and construction. Full district-cooling design includes a central chiller plant, primary-secondary distribution network, ETS specifications, and BMS/SCADA architecture, LEED-aligned.",
+      "Construction scope covers civil and MEPF execution, chilled-water distribution across multiple kilometres, energy transfer stations at consumer buildings, TAB and operational commissioning. Long-term O&M under discussion.",
+      "30,000 TR of central-plant capacity, multi-kilometre CHW distribution, 5+ ETS at consumer buildings — all delivered under a single accountable design-build contract."
+    ],
+    "scope_tags": ["District Cooling", "HVAC", "Civil", "BMS"],
+    "status": "planning",
+    "featured": false,
+    "hero_image_url": "/projects/tabreed-hero.jpg",
+    "hero_image_alt": "Conceptual rendering of district cooling plant",
+    "accent": "fan",
+    "key_metrics": [
+      { "k": "Central plant", "v": "30,000 TR" },
+      { "k": "ETS buildings", "v": "5+" },
+      { "k": "Distribution", "v": "Multi-km CHW" }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-tata-dholera",
+    "slug": "tata-electronics-dholera",
+    "code": "UE-SEM-0050",
+    "name": "Tata Electronics Dholera",
+    "client_id": "cli-tata-electronics",
+    "client_name_display": "Tata Electronics Pvt. Ltd.",
+    "location_city": "Dholera",
+    "location_state": "Gujarat",
+    "location_country": "India",
+    "project_type": "Semiconductor Fab",
+    "timeline_text": "In execution",
+    "value_cr": 50,
+    "value_display": "₹50 Cr+",
+    "summary": "Three design-build packages awarded for India's first commercial semiconductor fab — pipeline expected to expand toward ₹500 Cr as further packages are awarded.",
+    "narrative": [
+      "First-of-its-kind commercial semiconductor fab in India. Three packages awarded; expansion into the fab utility build expected in the next phase.",
+      "Design-build scope covers underground piping, electrical infrastructure, and civil excavation — engineered and executed under one contract, supporting the upcoming fab build.",
+      "Currently executing at approximately ₹50 Cr, with scope expected to expand toward ₹500 Cr as further packages are awarded."
+    ],
+    "scope_tags": ["Underground Piping", "Electrical", "Civil"],
+    "status": "active",
+    "featured": false,
+    "accent": "blocks",
+    "key_metrics": [
+      { "k": "Packages awarded", "v": "3 design-build" },
+      { "k": "Pipeline", "v": "~₹500 Cr expected" },
+      { "k": "Sector", "v": "Semiconductor fab" }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-jsw-ev",
+    "slug": "jsw-ev-manufacturing",
+    "code": "UE-IND-0080",
+    "name": "JSW EV Manufacturing",
+    "client_id": "cli-jsw",
+    "client_name_display": "JSW Group",
+    "location_city": "Bangalore",
+    "location_state": "Karnataka",
+    "location_country": "India",
+    "project_type": "EV Manufacturing",
+    "timeline_text": "In execution",
+    "value_cr": 80,
+    "value_display": "₹80 Cr+",
+    "summary": "Complete MEPF for a JSW electric-vehicle manufacturing facility including ISO 7/8 battery-assembly cleanroom zones.",
+    "narrative": [
+      "Industrial MEPF services delivered for an electric-vehicle manufacturing facility — automotive electric-vehicle manufacturing for the JSW Group.",
+      "Scope includes full MEPF and ISO 7/8 battery-assembly cleanroom zones within the broader manufacturing facility. PCW distribution to battery-line equipment with plate heat exchanger interface to primary cooling. Compressed-air distribution for battery-line pneumatics and tooling."
+    ],
+    "scope_tags": ["MEPF", "Cleanroom", "PCW", "CDA"],
+    "status": "active",
+    "featured": false,
+    "accent": "current",
+    "key_metrics": [
+      { "k": "Scope", "v": "Complete MEPF + cleanroom" },
+      { "k": "Cleanroom class", "v": "ISO 7 / 8" },
+      { "k": "Sector", "v": "EV manufacturing" }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-stt",
+    "slug": "stt-gdc-mumbai",
+    "code": "UE-DC-0032",
+    "name": "STT GDC Mumbai (NMDC01)",
+    "client_id": "cli-stt",
+    "client_name_display": "STT GDC India (CapitaLand)",
+    "location_city": "Mumbai",
+    "location_state": "Maharashtra",
+    "location_country": "India",
+    "project_type": "Data Centre",
+    "timeline_text": "Delivered",
+    "value_cr": 32,
+    "value_display": "₹32 Cr",
+    "summary": "Precision HVAC for the ground and first-floor data halls of a live STT GDC campus — 9 MW capacity, NABL-calibrated witnessing.",
+    "narrative": [
+      "HVAC scope includes chilled-water piping with complete valve assemblies, precision air-conditioning for data-hall environments, AHU installation & commissioning, ductwork, insulation, and air distribution.",
+      "Testing and commissioning included full T&C and performance verification per the operator's commissioning protocol, NABL-calibrated instrumentation and witnessed records.",
+      "Coordination model: direct interface with the STT project team, weekly site reviews, single-window accountability across the HVAC scope."
+    ],
+    "scope_tags": ["HVAC"],
+    "status": "completed",
+    "featured": false,
+    "accent": "fan",
+    "key_metrics": [
+      { "k": "Capacity", "v": "9 MW" },
+      { "k": "Floors", "v": "Ground + 1st + terrace" },
+      { "k": "Operator", "v": "STT GDC India" }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-ctrls",
+    "slug": "ctrls-mahape-mumbai",
+    "code": "UE-DC-0080",
+    "name": "CtrlS Mahape Mumbai",
+    "client_id": "cli-ctrls",
+    "client_name_display": "CtrlS Datacentres Ltd.",
+    "location_city": "Navi Mumbai",
+    "location_state": "Maharashtra",
+    "location_country": "India",
+    "project_type": "Data Centre",
+    "timeline_text": "Delivered",
+    "value_cr": 80,
+    "value_display": "₹80 Cr",
+    "summary": "End-to-end MEP delivery for a live 20 MW colocation facility — HVAC, electrical, fire, plumbing across four floors.",
+    "narrative": [
+      "GC MEP fit-out for Floors 6-9 of a live CtrlS colocation facility — 20 MW total capacity.",
+      "HVAC: TFAs, AHUs (CW & DX), HACs, dehumidifiers, VRF/VRV, CW piping (25-350 mm), ventilation, BMS DDC integration. Electrical & ELV: 22 kV HT (bus duct to CSS), LT to rack sockets, cable trays, earthing, FAS / VESDA / WLD / LLD / PA, BMS (DDC + H₂ sensing), access control, CCTV.",
+      "Fire fighting & plumbing: Pre-action (UL/FM), 823 sprinklers per floor pair (K80/K115), MS piping 25-150 NB, NFPA-13 compliant, domestic water, UPVC/CPVC piping. Full GC MEP scope across four floors."
+    ],
+    "scope_tags": ["HVAC", "Electrical", "ELV", "Firefighting", "Plumbing", "BMS"],
+    "status": "completed",
+    "featured": false,
+    "accent": "current",
+    "key_metrics": [
+      { "k": "Capacity", "v": "20 MW" },
+      { "k": "Floors", "v": "4 (Fl 6-9)" },
+      { "k": "Sprinklers per floor pair", "v": "823" }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-digital-edge",
+    "slug": "digital-edge-bom01",
+    "code": "UE-DC-0050",
+    "name": "Digital Edge BOM01",
+    "client_id": "cli-digital-edge",
+    "client_name_display": "Digital Edge",
+    "location_city": "Mumbai",
+    "location_state": "Maharashtra",
+    "location_country": "India",
+    "project_type": "Data Centre",
+    "timeline_text": "Delivered",
+    "value_cr": 50,
+    "value_display": "₹50 Cr",
+    "summary": "Mechanical, HSD fuel and seismic systems across a 48 MW data centre — 900+ Mason spring isolators, NV5-compliant seismic design.",
+    "narrative": [
+      "Mechanical scope: desiccant dehumidifiers (~2,700 CFM, 42 kW), fans, CW piping (Ø80mm-Ø450mm), 33+ VRF indoor units, 26 stratified tanks, 24 CW pumps, GI ductwork, 110+ motorised damper actuators.",
+      "Seismic supports: 900+ Mason spring isolators, seismic snubbers, flexible connectors, cable/pipe bracing — NV5-compliant seismic design across MEP services."
+    ],
+    "scope_tags": ["Mechanical", "Seismic", "HSD Fuel"],
+    "status": "completed",
+    "featured": false,
+    "accent": "fan",
+    "key_metrics": [
+      { "k": "Capacity", "v": "48 MW" },
+      { "k": "Spring isolators", "v": "900+" },
+      { "k": "VRF indoor units", "v": "33+" }
+    ],
+    "published": true
+  }
+]

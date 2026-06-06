@@ -1,0 +1,35 @@
+[
+  { "project_id": "prj-foxconn", "service_category_id": "cat-hvac-process-cooling", "is_primary": true, "scope_note": "ISO 7/8 cleanroom HVAC + HEPA-filtered AHUs" },
+  { "project_id": "prj-foxconn", "service_category_id": "cat-hvac-high-side", "is_primary": false, "scope_note": "Cleanroom plant + PCW" },
+  { "project_id": "prj-foxconn", "service_category_id": "cat-hvac-low-side", "is_primary": false, "scope_note": "FFU array + return-air risers" },
+
+  { "project_id": "prj-ingka", "service_category_id": "cat-hvac-comfort-cooling", "is_primary": true, "scope_note": "Mixed-use mall + office + hotel conditioning" },
+  { "project_id": "prj-ingka", "service_category_id": "cat-hvac-high-side", "is_primary": false },
+
+  { "project_id": "prj-central-secretariat", "service_category_id": "cat-hvac-comfort-cooling", "is_primary": true, "scope_note": "16,000 TR high-efficiency plant for government office complex" },
+  { "project_id": "prj-central-secretariat", "service_category_id": "cat-hvac-high-side", "is_primary": false, "scope_note": "1,00,000 m piping" },
+  { "project_id": "prj-central-secretariat", "service_category_id": "cat-hvac-low-side", "is_primary": false, "scope_note": "5,00,000 sqm ducting" },
+
+  { "project_id": "prj-mopa", "service_category_id": "cat-hvac-comfort-cooling", "is_primary": true, "scope_note": "Terminal building + ATC tower" },
+
+  { "project_id": "prj-nalanda", "service_category_id": "cat-hvac-high-side", "is_primary": true, "scope_note": "Thermal storage + brine chillers + geothermal VRV" },
+  { "project_id": "prj-nalanda", "service_category_id": "cat-hvac-comfort-cooling", "is_primary": false, "scope_note": "Academic + residential block conditioning" },
+
+  { "project_id": "prj-sael", "service_category_id": "cat-hvac-process-cooling", "is_primary": true, "scope_note": "ISO 6/7/8 cleanroom — 66,000+ sqm, 13,656 FFUs" },
+  { "project_id": "prj-sael", "service_category_id": "cat-hvac-high-side", "is_primary": false, "scope_note": "29,250 TR cooling + dual 5.05 MW PCW PHE" },
+  { "project_id": "prj-sael", "service_category_id": "cat-hvac-low-side", "is_primary": false, "scope_note": "217 AHUs + 130 MAUs" },
+
+  { "project_id": "prj-tabreed", "service_category_id": "cat-hvac-high-side", "is_primary": true, "scope_note": "30,000 TR central plant" },
+  { "project_id": "prj-tabreed", "service_category_id": "cat-hvac-comfort-cooling", "is_primary": false, "scope_note": "ETS at consumer buildings" },
+
+  { "project_id": "prj-jsw-ev", "service_category_id": "cat-hvac-process-cooling", "is_primary": true, "scope_note": "ISO 7/8 battery-line cleanroom + PCW" },
+  { "project_id": "prj-jsw-ev", "service_category_id": "cat-hvac-industrial-cooling", "is_primary": false, "scope_note": "Factory hall conditioning" },
+
+  { "project_id": "prj-stt", "service_category_id": "cat-hvac-data-center-cooling", "is_primary": true, "scope_note": "Precision AC for data hall + chilled-water" },
+
+  { "project_id": "prj-ctrls", "service_category_id": "cat-hvac-data-center-cooling", "is_primary": true, "scope_note": "TFAs, AHUs (CW/DX), HACs, dehumidifiers, VRF/VRV" },
+  { "project_id": "prj-ctrls", "service_category_id": "cat-hvac-high-side", "is_primary": false, "scope_note": "CW piping 25-350 mm" },
+
+  { "project_id": "prj-digital-edge", "service_category_id": "cat-hvac-data-center-cooling", "is_primary": true, "scope_note": "Mechanical + seismic for 48 MW DC" },
+  { "project_id": "prj-digital-edge", "service_category_id": "cat-hvac-high-side", "is_primary": false, "scope_note": "Desiccant dehumidifiers + CW piping" }
+]

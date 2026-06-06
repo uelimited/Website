@@ -1,0 +1,2519 @@
+[
+  {
+    "id": "cat-hvac-high-side",
+    "service_id": "svc-hvac",
+    "slug": "high-side",
+    "num": "01",
+    "name": "High Side",
+    "category_type": "system_layer",
+    "short_blurb": "Central plant — chillers, cooling towers, primary distribution, thermal storage and the hydronic backbone that feeds every air-side device.",
+    "intro_paragraphs": [
+      "High side is the central plant — the chillers, cooling towers, pumps, hydronic piping and thermal storage that produce the chilled water and circulate it through the building. It is where most of the energy is consumed, and where most of the lifetime cost is decided.",
+      "We design and execute air-cooled and water-cooled plants from a few hundred TR up to 16,000+ TR installed (Common Central Secretariat, New Delhi). Plant topology — parallel chillers, primary-secondary distribution, variable-primary, N+1 or 2N — follows the building's reliability target and the operator's standard. The choice is never default."
+    ],
+    "approach_paragraphs": [
+      "Chiller selection is driven by the part-load profile, not the design-day peak. Most buildings operate below 60% of peak load for the majority of operating hours, so plants are staged for high IPLV (integrated part-load value) and tuned through the BMS for optimised setpoints once running.",
+      "Hydronic networks are sized in AFT Fathom against an instrumented head-loss budget — actual fitting counts, control-valve authority, branch-balancing discipline. Variable-primary flow is the default for new builds; primary-secondary remains where operators standardise on it. Plate heat exchangers interface district cooling, geothermal loops and process-side circuits with full isolation."
+    ],
+    "systems": [
+      {
+        "name": "Air-cooled & water-cooled chillers",
+        "description": "Centrifugal, screw and scroll chillers selected for design-day capacity and stage-optimised part-load efficiency. Magnetic-bearing oil-free chillers where harmonics or part-load IPLV matter most.",
+        "specs": [
+          { "k": "Range", "v": "100 – 16,000 TR" },
+          { "k": "Refrigerants", "v": "R134a · R1234ze · HFO blends" },
+          { "k": "Part-load", "v": "IPLV-optimised staging" }
+        ]
+      },
+      {
+        "name": "Cooling towers",
+        "description": "Counter-flow and cross-flow towers sized for site footprint and approach temperature. Variable-speed fans, drift eliminators, basin sweepers and concurrent-maintainable cell isolation for redundancy.",
+        "specs": [
+          { "k": "Approach", "v": "3–4 °C typical" },
+          { "k": "Fan control", "v": "VFD + setpoint optimisation" },
+          { "k": "Cell isolation", "v": "Concurrent-maintainable" }
+        ]
+      },
+      {
+        "name": "Primary–secondary distribution",
+        "description": "Variable-primary or primary-secondary headers with N+1/2N pump banks on VFDs. Branch-valve TAB to ASHRAE/AABC/NEBB protocols. Plate heat exchangers for process or district-cooling interfaces.",
+        "specs": [
+          { "k": "Pipe sizes", "v": "Ø80 mm – Ø450 mm typical" },
+          { "k": "Resilience", "v": "N+1 / 2N" },
+          { "k": "Balancing", "v": "ASHRAE / AABC / NEBB" }
+        ]
+      },
+      {
+        "name": "Thermal energy storage",
+        "description": "Chilled-water or ice-based storage for peak-shaving, brownout ride-through, and demand-charge optimisation. Tank stratification design and BMS-integrated charge/discharge logic.",
+        "specs": [
+          { "k": "Storage types", "v": "Stratified CHW · Ice" },
+          { "k": "Use case", "v": "Peak-shave · ride-through" },
+          { "k": "Tie-in", "v": "BMS-controlled" }
+        ]
+      },
+      {
+        "name": "Geothermal & alternative sources",
+        "description": "Geothermal water-cooled VRV and ground-loop systems where site geology permits. Delivered at Nalanda University as part of India's first net-zero campus.",
+        "specs": [
+          { "k": "Reference", "v": "Nalanda University · Bihar" },
+          { "k": "System", "v": "Geothermal VRV + IBMS" },
+          { "k": "Benefit", "v": "Year-round source temperature" }
+        ]
+      },
+      {
+        "name": "Plant-room hydronics",
+        "description": "Headers, manifolds, expansion tanks, air separators, dirt separators, chemical dosing skids and the metering instrumentation that lets the operator see what the plant is doing.",
+        "specs": [
+          { "k": "Test", "v": "Hydrostatic + pneumatic" },
+          { "k": "Cleanliness", "v": "Flushed to BSRIA TG 2 / 99" },
+          { "k": "Metering", "v": "Energy + flow + ΔT" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-hvac-low-side",
+      "cat-hvac-data-center-cooling",
+      "cat-hvac-process-cooling",
+      "cat-bms-ddc-field-controls",
+      "cat-electrical-ht-lt"
+    ],
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "cat-hvac-low-side",
+    "service_id": "svc-hvac",
+    "slug": "low-side",
+    "num": "02",
+    "name": "Low Side",
+    "category_type": "system_layer",
+    "short_blurb": "Air-side equipment — AHUs, FCUs, VRF, terminal units, ducting and the diffusion strategy that delivers conditioned air to the space.",
+    "intro_paragraphs": [
+      "Low side is everything between the chilled-water pipe and the occupant — air handling units, fan coil units, VRF/VRV indoor units, dedicated outdoor air systems, terminal devices, ducting, dampers and diffusers. It is the part of the system the occupant actually experiences.",
+      "Our low-side work spans the full range — from a single 500 CFM FCU in a hotel room to a 217-AHU plus 130-MAU installation at the SAEL solar-cell facility in Jewar. Every AHU is sized against the room's heat load and ventilation requirement, every duct route is coordinated in the federated BIM model, and every diffuser is selected for throw, drop and noise."
+    ],
+    "approach_paragraphs": [
+      "Air-handling units are selected from the heat-load calculation, the supply-air temperature schedule, and the room's acoustic limit. Coil rows, face velocity and bypass factor are picked deliberately — not from a default AHU configurator. DX, chilled-water and dual-coil arrangements coexist on most projects, sized for their loads.",
+      "Ducting is routed in Revit (LOD 400) against the structural and architectural envelope, with all clashes resolved before fabrication release. Duct cross-sections balance pressure-drop budget against space constraint. Site installation is leak-tested to SMACNA class A/B/C as the spec demands."
+    ],
+    "systems": [
+      {
+        "name": "Air handling units (AHUs)",
+        "description": "Floor-mount and ceiling-suspended AHUs with chilled-water or DX coils, single or dual-fan, plug-fan or housed-fan, with full filtration train. In-house AHU manufacturing capability since 2005.",
+        "specs": [
+          { "k": "Range", "v": "1,000 – 60,000 CFM" },
+          { "k": "Coil rows", "v": "4 – 8 row CHW" },
+          { "k": "Filtration", "v": "G4 → F9 → HEPA H13/H14" }
+        ]
+      },
+      {
+        "name": "Fan coil units (FCUs)",
+        "description": "Concealed and exposed FCUs for guest rooms, offices, and zone-level conditioning. EC-motor selection where part-load and acoustics matter; standard PSC where simple control is sufficient.",
+        "specs": [
+          { "k": "Range", "v": "200 – 1,500 CFM" },
+          { "k": "Motor", "v": "PSC · EC variable" },
+          { "k": "Control", "v": "Thermostat · DDC integrated" }
+        ]
+      },
+      {
+        "name": "VRF / VRV systems",
+        "description": "Variable refrigerant volume systems for offices, retail and hospitality where chilled-water plant is over-specified. Heat-recovery topologies where simultaneous heating and cooling exists.",
+        "specs": [
+          { "k": "Topology", "v": "Heat-pump · heat-recovery" },
+          { "k": "Indoor units", "v": "Cassette · ducted · wall-mount" },
+          { "k": "Tie-in", "v": "BMS via gateway" }
+        ]
+      },
+      {
+        "name": "Dedicated outdoor air systems (DOAS)",
+        "description": "DOAS / make-up air units sized to ASHRAE 62.1 ventilation rates with energy recovery (sensible or enthalpy) where climate makes the payback work.",
+        "specs": [
+          { "k": "Reference code", "v": "ASHRAE 62.1" },
+          { "k": "Recovery", "v": "Sensible · enthalpy wheel" },
+          { "k": "Pre-treat", "v": "Cooling + reheat as required" }
+        ]
+      },
+      {
+        "name": "Ducting & terminal devices",
+        "description": "Galvanised steel and pre-insulated aluminium ducting, fabricated to SMACNA, leak-tested to class A/B/C. Diffusers, grilles and VAV terminals selected for throw, drop, noise and architectural integration.",
+        "specs": [
+          { "k": "Material", "v": "GI · pre-insulated AL" },
+          { "k": "Leak class", "v": "SMACNA A / B / C" },
+          { "k": "Insulation", "v": "Closed-cell · nitrile · fibre" }
+        ]
+      },
+      {
+        "name": "Fan filter units (FFUs)",
+        "description": "Ceiling-mounted FFUs for cleanroom and laboratory zones with HEPA H13/H14 terminal filtration. 13,656 FFUs installed on the SAEL Jewar project alone.",
+        "specs": [
+          { "k": "Scale", "v": "13,656 FFUs at SAEL" },
+          { "k": "Filter", "v": "HEPA H13 / H14 gel-seal" },
+          { "k": "Test", "v": "In-situ DOP / PAO" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-hvac-high-side",
+      "cat-hvac-comfort-cooling",
+      "cat-hvac-process-cooling",
+      "cat-bms-ddc-field-controls"
+    ],
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "cat-hvac-comfort-cooling",
+    "service_id": "svc-hvac",
+    "slug": "comfort-cooling",
+    "num": "03",
+    "name": "Comfort Cooling",
+    "category_type": "application",
+    "short_blurb": "Offices, hotels, retail, hospitality and residential — conditioning sized to ASHRAE 62.1/90.1 with occupancy-driven controls and BMS tie-in.",
+    "intro_paragraphs": [
+      "Comfort cooling is the discipline of conditioning spaces designed for human occupancy — corporate offices, hotels, retail malls, hospitality and residential. The performance window is set by ASHRAE 55 (thermal comfort), ASHRAE 62.1 (ventilation) and ASHRAE 90.1 (energy). The objective is invisible: occupants notice when the system is wrong, not when it is right.",
+      "We have delivered comfort cooling across the full range — five-star hotels (Westin, Radisson, Marriott, Crowne Plaza, Holiday Inn), corporate towers (Bharti, Vatika, Spaze), mixed-use developments (Ingka/IKEA Centre, Noida), retail malls, and high-end residential (M3M, DLF, Vatika)."
+    ],
+    "approach_paragraphs": [
+      "Heat loads are calculated room-by-room against occupancy schedules, fabric U-values, solar gains by orientation and time-of-day, and equipment dissipation. ASHRAE 62.1 ventilation rates are added with simultaneity factors and demand-controlled ventilation where occupancy is dynamic.",
+      "Distribution strategies are picked against the building shape and the operator's preference — CHW + AHU/FCU for large commercial; VRF heat-recovery for mid-market offices; DX split for distributed retail. Comfort is verified by an instrumented post-occupancy walk-through, not a tick-box at handover."
+    ],
+    "systems": [
+      {
+        "name": "Office & corporate cooling",
+        "description": "Floor-by-floor AHUs with VAV terminals, perimeter induction or chilled beams in premium fit-outs. Demand-controlled ventilation tied to CO₂ sensing in conference rooms.",
+        "specs": [
+          { "k": "Typical fit-out", "v": "40 – 180 K sq.ft per floor" },
+          { "k": "Reference codes", "v": "ASHRAE 55 / 62.1 / 90.1" },
+          { "k": "Control", "v": "VAV + DCV + BMS" }
+        ]
+      },
+      {
+        "name": "Hotel & hospitality cooling",
+        "description": "Four-pipe FCU systems for guest-room conditioning with simultaneous heating/cooling capability. DOAS for ventilation make-up. Specialist treatment for ballrooms, kitchens and spa zones.",
+        "specs": [
+          { "k": "References", "v": "Westin · Marriott · Radisson" },
+          { "k": "Distribution", "v": "Four-pipe FCU + DOAS" },
+          { "k": "Guest-room control", "v": "Occupancy + thermostat" }
+        ]
+      },
+      {
+        "name": "Retail & mall cooling",
+        "description": "Large AHUs with high-induction diffusion for atria and shop-front spaces. Energy recovery on outdoor air. Zoning per tenant package with sub-metering for cost allocation.",
+        "specs": [
+          { "k": "Scale", "v": "Mall-wide central plant" },
+          { "k": "Diffusion", "v": "High-induction · long-throw" },
+          { "k": "Metering", "v": "Tenant-level sub-meters" }
+        ]
+      },
+      {
+        "name": "Residential cooling",
+        "description": "VRF heat-recovery, split DX or low-static FCUs for premium residential. Acoustic-led selection: NC 25-30 indoor unit specifications in bedrooms.",
+        "specs": [
+          { "k": "References", "v": "M3M · DLF · Vatika · Suncity" },
+          { "k": "Topology", "v": "VRF · split DX · low-static FCU" },
+          { "k": "Acoustic target", "v": "NC 25–30 bedrooms" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-hvac-low-side",
+      "cat-bms-energy-management",
+      "cat-electrical-critical-cleanroom-lighting"
+    ],
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "cat-hvac-industrial-cooling",
+    "service_id": "svc-hvac",
+    "slug": "industrial-cooling",
+    "num": "04",
+    "name": "Industrial Cooling",
+    "category_type": "application",
+    "short_blurb": "Factory floors, manufacturing halls and warehouses — high-volume air distribution, process-exhaust make-up and equipment cooling at industrial scale.",
+    "intro_paragraphs": [
+      "Industrial cooling serves the manufacturing floor — large open volumes, high equipment dissipation, process exhausts that pull large quantities of make-up air, and operators who need stable conditions for the product, not just for themselves. The discipline blurs into process cooling at one end and comfort cooling at the other.",
+      "We have delivered industrial HVAC for JSW EV manufacturing (Bangalore), Coca-Cola plants, Unilever, BMW, Hyundai, ITC and the IKEA Noida mixed-use development. Scope ranges from large AHU farms feeding factory halls to spot cooling and high-velocity destratification on shed-roof floors."
+    ],
+    "approach_paragraphs": [
+      "Heat loads include process equipment dissipation, internal occupancy, solar gain through skylights, infiltration and exhaust make-up. Make-up air for process exhaust is sized to maintain a defined building pressure relative to outside — typically slightly positive to keep dust out, slightly negative where contaminants need containment.",
+      "Air distribution favours high-volume, lower-pressure systems with destratification where shed-roof heights cause vertical temperature gradients. Spot cooling for operator stations is treated as a separate scope where the process generates intense local heat."
+    ],
+    "systems": [
+      {
+        "name": "Factory hall AHUs & MAUs",
+        "description": "Large AHUs and make-up air units sized for the hall's exhaust requirement and operator comfort window. Energy recovery on outdoor air where climate makes the payback work.",
+        "specs": [
+          { "k": "Scale", "v": "10,000 – 60,000 CFM units" },
+          { "k": "Recovery", "v": "Sensible / enthalpy where viable" },
+          { "k": "Filtration", "v": "G4–F8 for industrial cleanliness" }
+        ]
+      },
+      {
+        "name": "Process exhaust make-up",
+        "description": "Make-up air systems sized to maintain the building's pressure regime relative to outside. Heat-recovery wheels on hot-process exhausts where energy density justifies it.",
+        "specs": [
+          { "k": "Pressure regime", "v": "Building-specific" },
+          { "k": "Recovery", "v": "Wheel / plate / runaround coil" },
+          { "k": "Spec basis", "v": "OEM datasheet exhausts" }
+        ]
+      },
+      {
+        "name": "Spot & equipment cooling",
+        "description": "Localised cooling for high-dissipation equipment — battery-line cells, welding stations, paint booths, CNC enclosures. Treated separately from the hall's general comfort cooling.",
+        "specs": [
+          { "k": "Reference", "v": "JSW EV battery-line cleanroom zones" },
+          { "k": "Distribution", "v": "Spot / localised supply" },
+          { "k": "Control", "v": "Equipment-interlocked" }
+        ]
+      },
+      {
+        "name": "Destratification & high-velocity distribution",
+        "description": "HVLS (high-volume low-speed) fans for shed-roof destratification. High-velocity diffusion in tall halls where conventional throw is insufficient.",
+        "specs": [
+          { "k": "Application", "v": "Sheds with ≥ 8 m ceiling" },
+          { "k": "Benefit", "v": "Reduces vertical ΔT" },
+          { "k": "Energy", "v": "Lowers heating + cooling load" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-hvac-low-side",
+      "cat-hvac-process-cooling",
+      "cat-bms-scada-head-end",
+      "cat-electrical-bus-trunking-switchgear"
+    ],
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "cat-hvac-data-center-cooling",
+    "service_id": "svc-hvac",
+    "slug": "data-center-cooling",
+    "num": "05",
+    "name": "Data Center Cooling",
+    "category_type": "specialised",
+    "short_blurb": "White-space conditioning for colocation, hyperscale and HPC — aisle containment, CRAH/InRow/RDHX, liquid-ready paths and Tier 3/4-ready resilience.",
+    "intro_paragraphs": [
+      "Data centre cooling is a discipline of its own. The load is dense, the resilience target is uncompromising, the supply-air window is narrow, and the operator's commissioning protocol is exact. We have delivered MEPF for 10+ data centres including STT GDC (Mumbai), CtrlS (Navi Mumbai), Digital Edge (BOM01), Anant Raj Cloud, STPI, ASF Insignia, TTSL, NISM and UIDAI — ₹400+ Cr cumulative DC revenue.",
+      "Every white-space layout is built around supply-air temperature management to ASHRAE TC 9.9, contained aisles, redundant cooling distribution, and a clear migration path to liquid for AI/HPC density. The cooling plant — chillers, towers, hydronics — is engineered for concurrent maintainability, with all faults discovered in commissioning rather than during the operator's first failover drill."
+    ],
+    "approach_paragraphs": [
+      "Air-side strategy is settled at design — hot/cold-aisle containment, perimeter CRAH or InRow units for medium-density halls, rear-door heat exchangers for high-density rows, liquid manifolds reserved at the cabinet for future HPC build-out. Supply-air setpoints are tuned to ASHRAE TC 9.9 with the operator's risk tolerance.",
+      "PUE is treated as a design output, not a marketing number. Free-cooling hours are calculated against the site's wet-bulb profile (water-side economiser) or dry-bulb (air-side where envelope permits). Chiller staging, pump VFDs and tower fan VFDs are sequenced for low part-load energy."
+    ],
+    "systems": [
+      {
+        "name": "Aisle containment & airflow strategy",
+        "description": "Hot-aisle or cold-aisle containment with brush seals at row ends, blanking panels in unused U-positions, and BMS-monitored supply-air temperature across the cold aisle. Supply-air managed to ASHRAE TC 9.9.",
+        "specs": [
+          { "k": "Containment", "v": "Hot-aisle / cold-aisle" },
+          { "k": "Reference standard", "v": "ASHRAE TC 9.9" },
+          { "k": "Telemetry", "v": "Per-aisle SAT to BMS" }
+        ]
+      },
+      {
+        "name": "CRAH / CRAC perimeter cooling",
+        "description": "Perimeter chilled-water CRAH units with EC plug fans, variable supply-air capacity, and BMS-modulated chilled-water valves. DX-based CRAC for sites without central chilled-water plant.",
+        "specs": [
+          { "k": "Fan", "v": "EC plug-fan variable" },
+          { "k": "Control", "v": "Variable CHW valve + fan VFD" },
+          { "k": "Redundancy", "v": "N+1 / 2N as per Tier" }
+        ]
+      },
+      {
+        "name": "InRow & rear-door heat exchangers",
+        "description": "InRow cooling units placed within the cabinet row for medium-high density loads. Rear-door heat exchangers for high-density (15-30 kW/rack) zones, including AI and HPC build-outs.",
+        "specs": [
+          { "k": "Density window", "v": "8 – 30 kW/rack" },
+          { "k": "Form factor", "v": "InRow · RDHX" },
+          { "k": "Capture index", "v": "≥ 90% return-air containment" }
+        ]
+      },
+      {
+        "name": "Liquid-ready architecture",
+        "description": "Reserved liquid manifolds and cabinet-level Coolant Distribution Unit (CDU) drops for AI/HPC build-out. Direct-Liquid-Cooling pre-stubbed taps designed for non-disruptive migration from air to liquid.",
+        "specs": [
+          { "k": "Topology", "v": "CDU-fed manifolds" },
+          { "k": "Future-proof", "v": "Pre-stubbed CDU taps" },
+          { "k": "Density", "v": "≥ 50 kW/rack capable" }
+        ]
+      },
+      {
+        "name": "Chilled-water plant & hydronics",
+        "description": "Air- or water-cooled chillers sized for design-day ambient, staged for part-load efficiency. Primary–secondary or variable-primary headers with N+1/2N pumps on VFDs. Concurrent-maintainable cell isolation on towers.",
+        "specs": [
+          { "k": "Resilience", "v": "Concurrent-maintainable" },
+          { "k": "Plant", "v": "Air-cooled · water-cooled" },
+          { "k": "TES tie-in", "v": "For ride-through" }
+        ]
+      },
+      {
+        "name": "Leak detection & containment",
+        "description": "Zoned water-leak detection (WLD) under raised floors and along piping runs. BMS-integrated alarm hierarchy. Isolation valves at fault zones. Drip pans and bunding around all wet equipment.",
+        "specs": [
+          { "k": "Detection", "v": "Zoned WLD · BMS-tied" },
+          { "k": "Containment", "v": "Drip pans + bunding" },
+          { "k": "Isolation", "v": "Zone-level valves" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-hvac-high-side",
+      "cat-electrical-backup-power",
+      "cat-bms-dcim-integration",
+      "cat-firefighting-gas-suppression"
+    ],
+    "sort_order": 5,
+    "published": true
+  },
+  {
+    "id": "cat-hvac-process-cooling",
+    "service_id": "svc-hvac",
+    "slug": "process-cooling",
+    "num": "06",
+    "name": "Process Cooling",
+    "category_type": "specialised",
+    "short_blurb": "Cleanroom HVAC (ISO 6/7/8), process cooling water, pressure cascade and HEPA-filtered air for semiconductor, pharma and laboratory environments.",
+    "intro_paragraphs": [
+      "Process cooling is the most exacting discipline in the HVAC stack. The performance window is set by the process — ISO 14644-1 cleanroom class, pressure cascade between zones, supply-air ACPH, temperature and humidity tolerance — and the system is engineered against the tighter of the tender spec and the governing standard.",
+      "We have executed Class 10,000 / 100,000 (ISO 7/8) cleanrooms at scale for Foxconn (Apple) in Bangalore — wall and ceiling PUF panelling, epoxy flooring, HEPA-filtered AHUs, return-air risers, cleanroom doors and view panels — and the SAEL Jewar 5.75 GW solar-cell facility, with ISO 6/7/8 zones across 66,000+ sqm, 13,656 FFUs, 217 AHUs and 130 MAUs."
+    ],
+    "approach_paragraphs": [
+      "Cleanroom design follows a deliberate workflow: concept zoning by ISO class and pressure strategy; room-by-room heat-load with tool dissipation per OEM datasheet; FFU and HEPA banding; pressure cascade with door-interlock logic; federated BIM at LOD 400 with all clashes resolved before shop release. Validation tests particle count, recovery time, ACPH, ΔP, T/RH, noise and lighting against ISO 14644-3 test methods.",
+      "Process cooling water (PCW) is a separate, closed-loop system with SS 316 / PP-H piping, hydro and pneumatic testing, conductivity and leak taps, and OEM-validated hookups. Primary-secondary distribution with plate heat exchangers isolates the process loop from the building's chilled-water plant. Delivered for Foxconn India and the JSW EV battery-line cleanroom."
+    ],
+    "systems": [
+      {
+        "name": "Cleanroom HVAC (ISO 6/7/8)",
+        "description": "HEPA-filtered AHUs with laminar-airflow ducting, pressure cascade between zones (≥15 Pa typical for ISO 6), tight T/RH stability (±1 °C, ±5% RH), HEPA H13/H14 gel-seal terminal filtration with in-situ leak testing.",
+        "specs": [
+          { "k": "ISO class", "v": "6 / 7 / 8" },
+          { "k": "ACPH", "v": "60–90 (ISO 6) · 20–40 (ISO 7/8)" },
+          { "k": "Pressure cascade", "v": "≥ 15 Pa between zones" }
+        ]
+      },
+      {
+        "name": "Fan filter units (FFUs)",
+        "description": "Ceiling-grid FFUs for unidirectional or semi-directional flow in ISO 6/7 zones. Low-turbulence supply with terminal HEPA H13/H14 gel-seal filtration. 13,656 FFUs installed at SAEL alone.",
+        "specs": [
+          { "k": "Filter class", "v": "HEPA H13 / H14" },
+          { "k": "Test method", "v": "In-situ DOP / PAO" },
+          { "k": "Scale", "v": "13,656 FFUs · SAEL Jewar" }
+        ]
+      },
+      {
+        "name": "Process cooling water (PCW)",
+        "description": "Closed-loop process-water headers with SS 316 / PP-H piping, primary-secondary interfaces, plate heat exchanger to building CHW. Conductivity and leak taps. OEM-validated hookups. Hydro + pneumatic testing.",
+        "specs": [
+          { "k": "Pipe", "v": "SS 316 · PP-H" },
+          { "k": "Capacity", "v": "Dual 5.05 MW PHE at SAEL" },
+          { "k": "Testing", "v": "Hydro + pneumatic" }
+        ]
+      },
+      {
+        "name": "Pressure cascade & airflow strategy",
+        "description": "Deliberate pressure cascade between zones with door-interlock logic, emergency purge paths, and cross-contamination modelling. Controlled return-air architecture with low-level returns for particle sweep-out.",
+        "specs": [
+          { "k": "Door interlock", "v": "BMS-driven logic" },
+          { "k": "Cascade", "v": "Modelled at design" },
+          { "k": "Return air", "v": "Low-level sweep-out" }
+        ]
+      },
+      {
+        "name": "CDA, nitrogen & vacuum",
+        "description": "Compressed dry air, nitrogen and vacuum distribution networks routed with strict slope control, leak-tested to stringent standards, integrated without compromising the contamination zone. Delivered for Foxconn cleanroom and Tata Dholera utility piping.",
+        "specs": [
+          { "k": "References", "v": "Foxconn · Tata Dholera · JSW EV" },
+          { "k": "Pipe", "v": "SS · Aluminium · POU regulators" },
+          { "k": "Testing", "v": "Leak-tested to dew-point spec" }
+        ]
+      },
+      {
+        "name": "Pharma & lab process cooling",
+        "description": "USP / EP-grade water systems, controlled-temperature process loops, dehumidification and reheat for tight RH-tolerant manufacturing — cosmetics, pharmaceutical, lens (Luxotica), animal biotech (NAIB).",
+        "specs": [
+          { "k": "References", "v": "Belco Pharma · NAIB · Luxotica" },
+          { "k": "RH stability", "v": "±5% process-dependent" },
+          { "k": "Treatment", "v": "USP / EP water systems" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-hvac-high-side",
+      "cat-hvac-low-side",
+      "cat-bms-ddc-field-controls",
+      "cat-plumbing-industrial-piping",
+      "cat-electrical-critical-cleanroom-lighting"
+    ],
+    "sort_order": 6,
+    "published": true
+  },
+
+  {
+    "id": "cat-civil-foundations",
+    "service_id": "svc-civil",
+    "slug": "foundations-structural",
+    "num": "01",
+    "name": "Foundations & Structural",
+    "category_type": "system_layer",
+    "short_blurb": "Raft, pile and combined foundations engineered against soil investigation, load take-down and seismic zone.",
+    "intro_paragraphs": [
+      "Every foundation begins with a geotechnical report and ends with an instrumented pour. In between, our structural team models the superstructure load take-down, sizes the reinforcement cage, and coordinates the pour with MEP cast-in openings so penetrations are not cut retrospectively.",
+      "Pile caps and rafts are delivered with continuous third-party inspection — cube tests at prescribed ages, rebound hammer and ultrasonic readings on key pours, and crack-monitoring protocols during backfill. Deep excavations are shored with design-specific retention systems rather than generic steel sheet piles."
+    ],
+    "approach_paragraphs": [
+      "Design follows IS 456, IS 875 and IS 1893 with seismic zone-specific detailing. Reinforcement bar-bending schedules are model-derived and reconciled with the architectural and MEP federated model before fabrication, eliminating field surprises.",
+      "Pours are pre-mobilised with batching schedule, transit-mixer routing and pump positioning agreed against the structural inspection plan. Concrete cubes are sampled at agreed intervals and tested by NABL-accredited labs."
+    ],
+    "systems": [
+      {
+        "name": "Pile foundations",
+        "description": "Driven, bored and cast-in-situ piles sized to soil bearing capacity and load take-down. Pile integrity tests on every pour.",
+        "specs": [
+          { "k": "Design", "v": "IS 2911" },
+          { "k": "Tests", "v": "Pile integrity + load test" },
+          { "k": "Diameter", "v": "300 – 1500 mm" }
+        ]
+      },
+      {
+        "name": "Raft & combined footings",
+        "description": "Mat foundations for high column-load buildings and combined footings for asymmetric load patterns. Cast in instrumented continuous strips.",
+        "specs": [
+          { "k": "Concrete grade", "v": "M25 – M60" },
+          { "k": "Cover", "v": "Per IS 456 / exposure" },
+          { "k": "Cure", "v": "Continuous + 28-day" }
+        ]
+      },
+      {
+        "name": "Substructure & retaining",
+        "description": "Basement walls, retaining structures and shoring for deep excavations. Water-stop detailing at construction joints; sealed against groundwater intrusion.",
+        "specs": [
+          { "k": "Water-stop", "v": "PVC + hydrophilic" },
+          { "k": "Shoring", "v": "Design-specific" },
+          { "k": "Waterproof", "v": "Membrane + crystalline" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-civil-facade",
+      "cat-civil-retrofit",
+      "cat-plumbing-water-treatment"
+    ],
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "cat-civil-facade",
+    "service_id": "svc-civil",
+    "slug": "facades-envelope",
+    "num": "02",
+    "name": "Façades & Envelope",
+    "category_type": "system_layer",
+    "short_blurb": "Unitised and stick-system curtain walls, ACP cladding and structural glazing sealed against the building envelope.",
+    "intro_paragraphs": [
+      "Façades are engineered for wind load, seismic drift, thermal movement and water tightness — in that order. Our façade desk works from the architect's elevation, runs a wind-tunnel-backed pressure grid, and sizes the mullion-transom rhythm accordingly.",
+      "Every panel is factory-glazed where possible. Site joints are backer-rod-and-sealant details, water-tested in mock-up before mass production, and inspected in lift-by-lift hose-test batches. Anchorage is to a shear-connector bracket — never direct to the slab edge."
+    ],
+    "approach_paragraphs": [
+      "Performance is verified on a full-scale mock-up before mass production: AAMA 501 water penetration, AAMA 502 field hose test, and structural deflection per ASCE 7. Thermal performance is measured to ISO 12567.",
+      "Anchorage drawings are stamped by our structural team and verified against the as-built slab edge — corrections are detailed at the bracket, never at the panel."
+    ],
+    "systems": [
+      {
+        "name": "Unitised curtain walls",
+        "description": "Factory-glazed, factory-sealed panels lifted to the slab edge as complete units. Faster install, tighter quality, fewer site joints.",
+        "specs": [
+          { "k": "System types", "v": "Unitised · Stick · SSG" },
+          { "k": "Wind test", "v": "AAMA 501 + site hose" },
+          { "k": "Thermal class", "v": "U ≤ 1.8 W/m²K" }
+        ]
+      },
+      {
+        "name": "Stick-system glazing",
+        "description": "Site-assembled mullion-and-transom systems for buildings with complex geometry or constrained access where unitised lifts aren't feasible.",
+        "specs": [
+          { "k": "Assembly", "v": "Site-built" },
+          { "k": "Seal", "v": "Backer rod + structural sealant" },
+          { "k": "Test", "v": "Lift-by-lift hose" }
+        ]
+      },
+      {
+        "name": "ACP & metal cladding",
+        "description": "Aluminium composite panels, zinc and copper rainscreen systems on through-fastened or hidden-fixing rails. Fire-rated cores per local code.",
+        "specs": [
+          { "k": "Core", "v": "FR-class per code" },
+          { "k": "Fixing", "v": "Through / hidden" },
+          { "k": "Coating", "v": "PVDF Kynar 70%" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-civil-foundations",
+      "cat-civil-interiors",
+      "cat-hvac-comfort-cooling"
+    ],
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "cat-civil-flooring",
+    "service_id": "svc-civil",
+    "slug": "industrial-flooring",
+    "num": "03",
+    "name": "Industrial Flooring",
+    "category_type": "application",
+    "short_blurb": "Trimix, vacuum-dewatered and epoxy-resin floors designed for point loads, abrasion and chemical exposure.",
+    "intro_paragraphs": [
+      "An industrial floor is a structural element, not a finish. Our floor specification picks slab thickness, joint spacing, reinforcement type and surface treatment against the expected wheel load, turning radius and chemical contact — not off a generic manufacturer cut-sheet.",
+      "Pours are laser-screeded in continuous strips to minimise cold joints. Surface hardeners are broadcast wet-on-wet; post-cure, joints are saw-cut on schedule and filled with semi-rigid joint filler so pallet trucks do not spall the arrises."
+    ],
+    "approach_paragraphs": [
+      "Slab design follows TR 34 (UK) or ACI 360 (US) — pick depends on the operator. Reinforcement is typically steel fibre + post-tension where joint count must be minimised; conventional rebar where simpler logistics matter more.",
+      "Flatness is verified on the day of pour to FF/FL Class per ASTM E1155. Defects identified in the verification walk are diamond-ground before handover, not painted over."
+    ],
+    "systems": [
+      {
+        "name": "Power-floated concrete",
+        "description": "Trimix and vacuum-dewatered concrete floors with broadcast surface hardeners. The volume workhorse for warehouses and factory halls.",
+        "specs": [
+          { "k": "Flatness class", "v": "FF 35 / FL 25" },
+          { "k": "Thickness", "v": "150 – 300 mm" },
+          { "k": "Abrasion", "v": "AR1 per BS 8204-2" }
+        ]
+      },
+      {
+        "name": "Epoxy & PU resin floors",
+        "description": "Self-levelling epoxy and polyurethane systems for cleanroom, pharma, food processing and laboratory environments.",
+        "specs": [
+          { "k": "Thickness", "v": "2 – 6 mm" },
+          { "k": "Chemical", "v": "Resistant to operator's spec" },
+          { "k": "Cleanroom", "v": "ISO-compatible" }
+        ]
+      },
+      {
+        "name": "Joint-free pours",
+        "description": "Post-tension and steel-fibre floors that minimise joint count for high-MHE-traffic facilities — fewer joints means fewer maintenance failures.",
+        "specs": [
+          { "k": "Technology", "v": "Post-tension / SFRC" },
+          { "k": "Joint spacing", "v": "≥ 30 m typical" },
+          { "k": "MHE", "v": "VNA-rated" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-civil-foundations",
+      "cat-hvac-industrial-cooling"
+    ],
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "cat-civil-interiors",
+    "service_id": "svc-civil",
+    "slug": "corporate-interiors",
+    "num": "04",
+    "name": "Corporate Interiors",
+    "category_type": "application",
+    "short_blurb": "Tenant fit-out delivered to the developer's warm-shell handover — ceilings, partitions, joinery, flooring and finishes.",
+    "intro_paragraphs": [
+      "Corporate interiors sit at the intersection of three trades — ceiling and partition systems, MEP services feeding them, and the bespoke joinery that reads as the client's brand. We detail all three against a single reflected ceiling plan so grid, diffuser and light fitting lines agree.",
+      "Finishes are sample-approved before production, mocked up on a pilot bay, and sealed against the as-built drawing. Snag-list resolution is tracked on a floor-by-floor register and signed off before the client commissioning walk."
+    ],
+    "approach_paragraphs": [
+      "We work from a coordinated reflected ceiling plan that resolves MEP, lighting, ceiling grid and sprinkler heads in a single drawing. Acoustic and FF&E specs are signed off against the project brief at scheme stage, not retrofit-corrected at handover.",
+      "Joinery is shop-fabricated against approved samples; site installation is dry-fit before final fix to identify dimensional creep early."
+    ],
+    "systems": [
+      {
+        "name": "Ceiling & partition systems",
+        "description": "T-bar, gypsum, plank-ceilings and metal-pan systems with integrated MEP coordination. Demountable partitions where workplace flexibility matters.",
+        "specs": [
+          { "k": "Typical fit-out", "v": "40 – 180 K sq.ft" },
+          { "k": "Ceiling grade", "v": "T-bar · Gypsum · Metal" },
+          { "k": "Partition", "v": "Drywall · demountable" }
+        ]
+      },
+      {
+        "name": "Joinery & FF&E",
+        "description": "Bespoke reception desks, pantry counters, meeting-room storage and acoustic feature walls fabricated in-house and finished to sample approval.",
+        "specs": [
+          { "k": "Finish review", "v": "Mock-up + sample" },
+          { "k": "Fabrication", "v": "Shop + site final-fix" },
+          { "k": "Hardware", "v": "Hettich / Hafele tier" }
+        ]
+      },
+      {
+        "name": "Flooring & finishes",
+        "description": "Carpet tile, vinyl plank, engineered timber and stone finishes selected for acoustic, slip-resistance and maintenance profile.",
+        "specs": [
+          { "k": "Carpet", "v": "BS EN 1307 Class 33" },
+          { "k": "Vinyl", "v": "Slip R10+" },
+          { "k": "Stone", "v": "Sealed + crystallised" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-civil-facade",
+      "cat-hvac-comfort-cooling",
+      "cat-electrical-critical-cleanroom-lighting"
+    ],
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "cat-civil-retrofit",
+    "service_id": "svc-civil",
+    "slug": "retrofitting-strengthening",
+    "num": "05",
+    "name": "Retrofitting & Strengthening",
+    "category_type": "specialised",
+    "short_blurb": "Structural strengthening, façade replacement and MEP modernisation for ageing or repurposed building stock.",
+    "intro_paragraphs": [
+      "Retrofitting is the discipline of rebuilding without demolishing — strengthening a structure, replacing a façade, upgrading MEP services in a building that must remain partially or fully operational. The constraints are tighter than new-build: load paths must transition smoothly, occupants must be protected, and the historical record of the asset becomes the design baseline.",
+      "We have delivered retrofit work for IT-park BMS upgrades, healthcare facility expansions, and façade replacements on operating commercial buildings. Each engagement begins with a forensic survey and an MEP system condition audit."
+    ],
+    "approach_paragraphs": [
+      "Forensic surveys use non-destructive testing — rebound hammer, ultrasonic pulse velocity, half-cell potential — to map structural condition before strengthening. Designs use carbon-fibre wrap, jacketing or steel collars depending on the load case.",
+      "Operational continuity is engineered into the works programme. Floor-by-floor or shift-based phasing keeps the asset producing revenue while the upgrade proceeds."
+    ],
+    "systems": [
+      {
+        "name": "Structural strengthening",
+        "description": "Carbon-fibre wrap, RCC jacketing, steel collars and base-isolation retrofits for buildings requiring increased load capacity or seismic upgrade.",
+        "specs": [
+          { "k": "Methods", "v": "CFRP · jacket · collar" },
+          { "k": "Diagnosis", "v": "NDT + load test" },
+          { "k": "Design code", "v": "IS 13935" }
+        ]
+      },
+      {
+        "name": "Façade replacement",
+        "description": "Replacing curtain-wall or cladding systems while the building remains occupied. Phased lift-by-lift removal and re-glazing with weather-protection screens.",
+        "specs": [
+          { "k": "Phasing", "v": "Lift-by-lift" },
+          { "k": "Protection", "v": "Polythene screens" },
+          { "k": "Programme", "v": "Floor-by-floor" }
+        ]
+      },
+      {
+        "name": "MEP modernisation",
+        "description": "BMS upgrade, chiller-plant replacement, lighting retrofit and fire-system upgrade for operating buildings — designed for minimum disruption.",
+        "specs": [
+          { "k": "Scope", "v": "BMS · plant · lighting · fire" },
+          { "k": "Sequencing", "v": "Operational continuity" },
+          { "k": "Audit", "v": "Pre-works condition" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-civil-foundations",
+      "cat-civil-facade",
+      "cat-bms-energy-management"
+    ],
+    "sort_order": 5,
+    "published": true
+  },
+
+  {
+    "id": "cat-electrical-ht-lt",
+    "service_id": "svc-electrical",
+    "slug": "ht-lt-distribution",
+    "num": "01",
+    "name": "HT & LT Distribution",
+    "category_type": "system_layer",
+    "short_blurb": "High-tension to low-tension distribution — 33/22/11 kV systems, transformers, LV switchgear and the cable management that ties them.",
+    "intro_paragraphs": [
+      "Electrical distribution is engineered, not assembled. Single-line diagrams, short-circuit analysis, protection coordination and arc-flash modelling are run end-to-end before the first cable is pulled. Cable trays and bus trunking are routed in the coordinated MEPF model so service voids stay congestion-free.",
+      "Our HT/LT scope spans the full voltage hierarchy — from 33 kV HV reception through transformers, LV switchgear, busbar trunking, and feeder cabling to the final distribution panel. The same team that engineers it tests and commissions it."
+    ],
+    "approach_paragraphs": [
+      "Short-circuit analysis and protection coordination are run in ETAP or DigSILENT against the operator's grid impedance. Relay settings are commissioned via primary injection — never by setting the dial blind.",
+      "Cable routes are coordinated in Revit with all other MEPF services and structural openings. Cable trays are sized for 30% future-load growth as a baseline."
+    ],
+    "systems": [
+      {
+        "name": "HT reception & ring main",
+        "description": "33 / 22 / 11 kV HT systems with ring-main units, vacuum circuit breakers, and SCADA-integrated metering at the point of reception.",
+        "specs": [
+          { "k": "Voltage", "v": "33 / 22 / 11 kV" },
+          { "k": "Topology", "v": "Ring / radial" },
+          { "k": "Protection", "v": "Numerical relays" }
+        ]
+      },
+      {
+        "name": "LV switchgear & MCC",
+        "description": "Form-2b/3b/4 LV switchgear, motor control centres, intelligent breakers with networked trip units, and BMS-integrated metering.",
+        "specs": [
+          { "k": "Form factor", "v": "Form 2b/3b/4" },
+          { "k": "ICW rating", "v": "50 – 100 kA / 1 s" },
+          { "k": "Metering", "v": "BMS-tied" }
+        ]
+      },
+      {
+        "name": "Cable distribution",
+        "description": "MV/LV cable distribution on cable trays, ladders and direct burial. Fire-resistant cable for life-safety circuits; XLPE for the rest.",
+        "specs": [
+          { "k": "Insulation", "v": "XLPE · FRLS · MICC" },
+          { "k": "Routing", "v": "Tray / ladder / buried" },
+          { "k": "Spare capacity", "v": "30% baseline" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-electrical-substations",
+      "cat-electrical-bus-trunking-switchgear",
+      "cat-electrical-epms"
+    ],
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "cat-electrical-substations",
+    "service_id": "svc-electrical",
+    "slug": "substations-transformers",
+    "num": "02",
+    "name": "Substations & Transformers",
+    "category_type": "system_layer",
+    "short_blurb": "Indoor and outdoor substations, dry-type and oil-immersed transformers, sized to the load profile and the operator's reliability target.",
+    "intro_paragraphs": [
+      "Substations are where the building meets the grid. Our work covers indoor and outdoor substations, package substations, transformer foundations, oil containment pits, and the protection coordination that integrates them with both upstream utility and downstream load.",
+      "Transformer selection is driven by load profile, harmonic distortion, ambient temperature and the operator's preference for dry-type vs oil-immersed. We don't default — every project gets its own thermal and harmonic analysis."
+    ],
+    "approach_paragraphs": [
+      "Transformer sizing considers the actual load profile, not just nameplate kVA. Harmonic content is modelled where IT, VFD or LED loads dominate; K-factor or harmonic mitigation specified accordingly.",
+      "Oil containment is sized for full transformer oil volume + 10%, with hydrocarbon-trap drainage. Outdoor substations are detailed for monsoon ingress and rodent protection."
+    ],
+    "systems": [
+      {
+        "name": "Indoor & outdoor substations",
+        "description": "Compact indoor substations for urban sites, outdoor package substations for industrial campuses, with full protection and metering integration.",
+        "specs": [
+          { "k": "Type", "v": "Indoor · outdoor · package" },
+          { "k": "Capacity", "v": "500 kVA – 5 MVA" },
+          { "k": "Protection", "v": "IEC 62271" }
+        ]
+      },
+      {
+        "name": "Dry-type transformers",
+        "description": "Cast-resin and VPI dry-type transformers for indoor applications, IT loads, and where fire/oil-containment risk must be avoided.",
+        "specs": [
+          { "k": "Insulation class", "v": "F / H" },
+          { "k": "Cooling", "v": "AN / AF" },
+          { "k": "K-factor", "v": "K4 / K13 for IT" }
+        ]
+      },
+      {
+        "name": "Oil-immersed transformers",
+        "description": "ONAN/ONAF transformers for outdoor installations, with oil containment, Buchholz protection, and BMS-integrated temperature monitoring.",
+        "specs": [
+          { "k": "Cooling", "v": "ONAN / ONAF" },
+          { "k": "Containment", "v": "100% + 10% oil volume" },
+          { "k": "Protection", "v": "Buchholz · OTI · WTI" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-electrical-ht-lt",
+      "cat-electrical-backup-power",
+      "cat-electrical-epms"
+    ],
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "cat-electrical-backup-power",
+    "service_id": "svc-electrical",
+    "slug": "backup-power",
+    "num": "03",
+    "name": "Backup Power (DG & UPS)",
+    "category_type": "application",
+    "short_blurb": "Diesel generation, static UPS and battery rooms for ride-through, brownout protection and tier-3/4 data-centre uptime.",
+    "intro_paragraphs": [
+      "Backup power keeps the building producing when the grid stops. We deliver diesel generation sized for full IT + cooling block load, day tanks and bulk fuel skids, modular static UPS systems with ventilated battery rooms, and the protection logic that orchestrates failover automatically.",
+      "For data centres and semiconductor fabs, the topology is concurrent-maintainable or fault-tolerant — designed against the Uptime Institute Tier rating the operator targets, and commissioned with load-bank testing to prove it."
+    ],
+    "approach_paragraphs": [
+      "DG sizing accounts for motor inrush (typically 6× FLA for non-soft-started loads), step-loading sequence, and harmonic content from VFDs and rectifiers. Load step verification is part of commissioning, not assumed at design.",
+      "UPS battery rooms are ventilated to limit hydrogen accumulation per IEEE 1187 — with BMS-integrated H₂ sensing on every site. Failover paths are designed concurrent-maintainable where the Tier requires it."
+    ],
+    "systems": [
+      {
+        "name": "Diesel generation",
+        "description": "DG sets sized for full IT + cooling block load, with day tanks, bulk fuel storage, UL-certified fuel transfer and polishing skids, and explosion-proof control stations.",
+        "specs": [
+          { "k": "Capacity", "v": "100 kVA – 3 MVA per set" },
+          { "k": "Fuel", "v": "Day + bulk + transfer skid" },
+          { "k": "Test", "v": "Load bank at FAT + SAT" }
+        ]
+      },
+      {
+        "name": "Modular UPS",
+        "description": "Static modular UPS topologies sized for IT load with N+1 or 2N redundancy. VRLA or Li-ion battery rooms with BMS-integrated monitoring.",
+        "specs": [
+          { "k": "Topology", "v": "Modular · N+1 / 2N" },
+          { "k": "Battery", "v": "VRLA · Li-ion" },
+          { "k": "Bypass", "v": "Concurrent-maintainable" }
+        ]
+      },
+      {
+        "name": "ATS & synchronisation",
+        "description": "Automatic transfer switches with break-before-make or closed-transition logic. DG paralleling with active power management for multi-set installations.",
+        "specs": [
+          { "k": "Logic", "v": "Open / closed transition" },
+          { "k": "Paralleling", "v": "Active load-share" },
+          { "k": "Test", "v": "Black-start commissioned" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-electrical-substations",
+      "cat-hvac-data-center-cooling",
+      "cat-bms-energy-management"
+    ],
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "cat-electrical-bus-trunking-switchgear",
+    "service_id": "svc-electrical",
+    "slug": "bus-trunking-switchgear",
+    "num": "04",
+    "name": "Bus Trunking & Switchgear",
+    "category_type": "system_layer",
+    "short_blurb": "Sandwich-construction busbar trunking, panel manufacturing and the LV distribution that powers every downstream load.",
+    "intro_paragraphs": [
+      "Busbar trunking is the workhorse of high-rise and high-density power distribution. Sandwich-construction BBT delivers higher fault current rating, lower impedance, and faster reconfiguration than equivalent cable runs. Our scope covers the BBT itself and the LV distribution panels it feeds.",
+      "Panels are built to Form 2b/3b/4 segregation per IEC 61439, with ICW ratings sized to the upstream fault level. Every panel is type-tested or design-verified — never assembled to a generic single-line without engineering review."
+    ],
+    "approach_paragraphs": [
+      "BBT routing is coordinated with structural slab openings and service voids during BIM coordination, not site-adapted. Fire-rated penetrations use UL-certified sleeves and intumescent collars.",
+      "Panel manufacturing uses Schneider, ABB, Siemens or L&T component sets per the operator's standard. ICW ratings are coordinated with the upstream fault level and breaker selectivity verified by analysis."
+    ],
+    "systems": [
+      {
+        "name": "Sandwich BBT",
+        "description": "High-fault-rating sandwich busbar trunking for risers and horizontal runs. Modular tap-off boxes for flexibility in fit-out and future loads.",
+        "specs": [
+          { "k": "Rating", "v": "630 – 6300 A" },
+          { "k": "ICW", "v": "50 – 100 kA / 1 s" },
+          { "k": "Tap-off", "v": "Plug-in modular" }
+        ]
+      },
+      {
+        "name": "LV distribution panels",
+        "description": "Main LT panels, sub-distribution boards, motor control centres — built to Form 2b/3b/4 segregation, type-tested or design-verified.",
+        "specs": [
+          { "k": "Form", "v": "Form 2b/3b/4" },
+          { "k": "Standard", "v": "IEC 61439" },
+          { "k": "Components", "v": "Schneider · ABB · Siemens" }
+        ]
+      },
+      {
+        "name": "Final distribution",
+        "description": "Sub-panels, distribution boards and final-circuit MCBs. Selectivity coordination so faults clear at the closest upstream device, not the main breaker.",
+        "specs": [
+          { "k": "Selectivity", "v": "Verified by analysis" },
+          { "k": "Protection", "v": "MCB · RCBO · RCD" },
+          { "k": "Standard", "v": "IS 8623 / IEC 60898" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-electrical-ht-lt",
+      "cat-electrical-substations",
+      "cat-hvac-industrial-cooling"
+    ],
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "cat-electrical-critical-cleanroom-lighting",
+    "service_id": "svc-electrical",
+    "slug": "critical-cleanroom-lighting",
+    "num": "05",
+    "name": "Critical & Cleanroom Lighting",
+    "category_type": "specialised",
+    "short_blurb": "Cleanroom-rated LED, emergency egress, life-safety lighting and DALI / KNX-controlled architectural systems.",
+    "intro_paragraphs": [
+      "Lighting in critical environments is more than illumination. Cleanroom luminaires must be flush-glazed, sealed against contamination, and rated for in-situ HEPA leak testing. Emergency lighting must hold the egress lumens through a defined battery duration. Architectural lighting must be DALI-addressable and tunable.",
+      "Our lighting scope spans cleanroom-rated LED arrays, life-safety emergency systems, architectural DALI/KNX controls, and the photometric design that ties them to the room's task and acoustic budget."
+    ],
+    "approach_paragraphs": [
+      "Photometric design is run in DIALux or AGi32 against the room's task plane illuminance target. Glare is verified by UGR calculation; acoustic impact by NC rating. Cleanroom luminaires are selected for HEPA-compatibility and IP rating per the zone class.",
+      "Emergency egress lighting is sized for 1.0 lux average on the centre-line of egress paths with 90-minute battery duration. Test logic is monthly self-test, annual discharge, BMS-monitored where present."
+    ],
+    "systems": [
+      {
+        "name": "Cleanroom LED",
+        "description": "Sealed cleanroom-rated LED arrays compatible with HEPA grid layouts. IP65+ rating, gasket-sealed housings, and zero air infiltration through fitting.",
+        "specs": [
+          { "k": "IP rating", "v": "IP65+" },
+          { "k": "Class", "v": "ISO 5 / 6 / 7 compatible" },
+          { "k": "Lifetime", "v": "L70 @ 50,000 hrs" }
+        ]
+      },
+      {
+        "name": "Emergency & egress lighting",
+        "description": "Self-contained and centrally-monitored emergency luminaires with 90-minute battery duration. BMS-tied test reporting where present.",
+        "specs": [
+          { "k": "Duration", "v": "90 min minimum" },
+          { "k": "Standard", "v": "IS 9583 / EN 1838" },
+          { "k": "Test", "v": "Self-test + BMS" }
+        ]
+      },
+      {
+        "name": "Architectural & DALI control",
+        "description": "DALI / KNX-addressable luminaires with scene control, daylight harvesting, occupancy sensing and BMS integration for energy management.",
+        "specs": [
+          { "k": "Protocol", "v": "DALI-2 · KNX" },
+          { "k": "Sensing", "v": "PIR + daylight" },
+          { "k": "Integration", "v": "BMS-tied scenes" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-hvac-process-cooling",
+      "cat-hvac-comfort-cooling",
+      "cat-bms-energy-management"
+    ],
+    "sort_order": 5,
+    "published": true
+  },
+  {
+    "id": "cat-electrical-epms",
+    "service_id": "svc-electrical",
+    "slug": "epms",
+    "num": "06",
+    "name": "EPMS — Electrical Power Monitoring",
+    "category_type": "specialised",
+    "short_blurb": "Electrical Power Monitoring Systems across HV/LV/UPS/DG with per-rack PDU telemetry and arc-flash event capture.",
+    "intro_paragraphs": [
+      "EPMS is the metering and monitoring layer that tells the operator what their electrical system is actually doing. We deliver per-feeder, per-panel and per-rack metering integrated into a unified historian — so power quality, energy consumption and event capture are observable in real time.",
+      "For data centres and tier-1 industrial facilities, EPMS feeds both the BMS and the operator's DCIM. Open feeds (Modbus, BACnet, SNMP) ensure the data is portable, not vendor-locked."
+    ],
+    "approach_paragraphs": [
+      "Metering granularity follows the operator's billing, allocation or analytics need — feeder-level for buildings, branch-circuit for premium colocation, per-rack PDU for high-density IT.",
+      "Power quality monitoring captures harmonics, voltage sag/swell and arc-flash events. Trend logging into a historian with 1-second resolution where the operator's PQ window demands it."
+    ],
+    "systems": [
+      {
+        "name": "Feeder & branch metering",
+        "description": "Class-1 energy meters at every panel feeder, with branch-circuit monitoring where allocation matters. Communications via Modbus RTU/TCP or BACnet.",
+        "specs": [
+          { "k": "Class", "v": "Class 0.5 / 1" },
+          { "k": "Comms", "v": "Modbus · BACnet" },
+          { "k": "Resolution", "v": "1-second trend" }
+        ]
+      },
+      {
+        "name": "Power quality monitoring",
+        "description": "PQ analyzers at the LV main and critical feeders capturing harmonics, sag/swell, transients and flicker. EN 50160 compliant reporting.",
+        "specs": [
+          { "k": "Standard", "v": "EN 50160 · IEC 61000-4-30 Class A" },
+          { "k": "Capture", "v": "Harmonics · sag · transients" },
+          { "k": "Resolution", "v": "Cycle-by-cycle" }
+        ]
+      },
+      {
+        "name": "Per-rack PDU & DCIM tie-in",
+        "description": "Intelligent rack PDUs with per-outlet metering, environmental sensing, and SNMP/Modbus feeds into the operator's DCIM.",
+        "specs": [
+          { "k": "Granularity", "v": "Per-outlet" },
+          { "k": "Comms", "v": "SNMP · Modbus" },
+          { "k": "Integration", "v": "DCIM open feed" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-electrical-ht-lt",
+      "cat-electrical-backup-power",
+      "cat-bms-dcim-integration"
+    ],
+    "sort_order": 6,
+    "published": true
+  },
+
+  {
+    "id": "cat-plumbing-water-treatment",
+    "service_id": "svc-plumbing",
+    "slug": "water-treatment",
+    "num": "01",
+    "name": "Water Treatment (WTP/STP/ETP)",
+    "category_type": "specialised",
+    "short_blurb": "Water treatment plants, sewage treatment plants and effluent treatment plants sized to source-water analysis and discharge consent.",
+    "intro_paragraphs": [
+      "Water treatment plants are sized against the source-water analysis, consumer demand, and discharge consent — not as a generic 'WTP block' on the BOQ. Membrane systems, multi-grade filters, softeners and dosing skids are specified to a clear treatment objective.",
+      "Our scope covers raw-water treatment for cooling-tower make-up and process water, sewage treatment for building blackwater, and effluent treatment for industrial process discharge. Sludge management and dewatering close the loop."
+    ],
+    "approach_paragraphs": [
+      "Source-water analysis is the starting point — TDS, hardness, iron, silica, coliforms — and the treatment train is built to remove what's actually present. Membrane configuration (RO + NF + UF) is sized to the recovery target.",
+      "Sewage and effluent treatment use MBBR, SBR or membrane bioreactor processes depending on footprint, BOD/COD load, and discharge requirement. Online instrumentation (pH, ORP, turbidity) feeds the BMS for trend logging and alarms."
+    ],
+    "systems": [
+      {
+        "name": "Water treatment plant (WTP)",
+        "description": "RO-based and conventional WTPs for cooling-tower make-up, process water and potable water. Multi-grade + activated carbon + softener pre-treatment as required.",
+        "specs": [
+          { "k": "Capacity", "v": "5 – 500 KLD typical" },
+          { "k": "Technology", "v": "RO · UF · MGF · softener" },
+          { "k": "Recovery", "v": "60 – 80% RO" }
+        ]
+      },
+      {
+        "name": "Sewage treatment plant (STP)",
+        "description": "MBBR / SBR / MBR plants for building blackwater. Treated water reused for flushing and landscape irrigation per IGBC/LEED guidelines.",
+        "specs": [
+          { "k": "Technology", "v": "MBBR · SBR · MBR" },
+          { "k": "Reuse", "v": "Flushing + landscape" },
+          { "k": "Standard", "v": "CPCB discharge norms" }
+        ]
+      },
+      {
+        "name": "Effluent treatment plant (ETP)",
+        "description": "Industrial effluent treatment sized to the operator's BOD/COD load. Physical-chemical pre-treatment + biological + tertiary polishing for ZLD where required.",
+        "specs": [
+          { "k": "Discharge", "v": "Per CPCB / state PCB" },
+          { "k": "ZLD", "v": "Available on spec" },
+          { "k": "Sludge", "v": "Dewatering + disposal" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-plumbing-industrial-piping",
+      "cat-plumbing-rainwater"
+    ],
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "cat-plumbing-industrial-piping",
+    "service_id": "svc-plumbing",
+    "slug": "industrial-piping",
+    "num": "02",
+    "name": "Industrial Piping",
+    "category_type": "system_layer",
+    "short_blurb": "High-purity SS 316 / PP-H piping for semiconductor, pharma and laboratory process water, conductivity-monitored end-to-end.",
+    "intro_paragraphs": [
+      "Industrial piping is the discipline that delivers fluids — water, chemicals, gases, steam — through a building's process layer. Pipe material, jointing method, slope and supports are picked against the fluid, the pressure, the temperature and the cleanliness requirement of the downstream load.",
+      "We have delivered SS 316 PCW networks for Foxconn cleanroom, JSW EV battery-line cooling, and SAEL solar-cell process loops. Every joint is welded, leak-tested, and conductivity-tapped for monitoring."
+    ],
+    "approach_paragraphs": [
+      "Pipe routing is coordinated in Revit (LOD 400) with all other MEPF services. Slope and support intervals follow ASME B31.3 for process piping; isometric drawings are signed off pre-fabrication.",
+      "Welding is qualified to ASME IX with continuous third-party inspection on critical SS 316 and PP-H joints. Hydrostatic and pneumatic tests are witnessed by the operator; conductivity taps allow real-time leak monitoring in production."
+    ],
+    "systems": [
+      {
+        "name": "Process cooling water (PCW)",
+        "description": "Closed-loop SS 316 / PP-H PCW networks with primary-secondary distribution, plate heat exchanger isolation, hydro + pneumatic testing, conductivity monitoring.",
+        "specs": [
+          { "k": "Material", "v": "SS 316 · PP-H" },
+          { "k": "Standard", "v": "ASME B31.3" },
+          { "k": "Test", "v": "Hydro + pneumatic + leak tap" }
+        ]
+      },
+      {
+        "name": "Compressed Dry Air (CDA)",
+        "description": "Oil-free compressor + dryer skids feeding multi-stage filtration to dew-point and particulate class. SS and aluminium distribution with POU regulators.",
+        "specs": [
+          { "k": "Class", "v": "ISO 8573 quality" },
+          { "k": "Distribution", "v": "SS · Aluminium" },
+          { "k": "Test", "v": "Leak + dew-point" }
+        ]
+      },
+      {
+        "name": "Specialty gases (N₂ · Vacuum)",
+        "description": "Nitrogen, vacuum and process-gas distribution with strict slope control, leak testing, OEM-validated POU hookups. Delivered at Foxconn and Tata Dholera.",
+        "specs": [
+          { "k": "References", "v": "Foxconn · Tata Dholera" },
+          { "k": "Material", "v": "SS · electropolished where required" },
+          { "k": "POU", "v": "OEM-validated" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-hvac-process-cooling",
+      "cat-plumbing-water-treatment",
+      "cat-plumbing-steam-boilers"
+    ],
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "cat-plumbing-hydropneumatic",
+    "service_id": "svc-plumbing",
+    "slug": "hydropneumatic-systems",
+    "num": "03",
+    "name": "Hydropneumatic Systems",
+    "category_type": "application",
+    "short_blurb": "Variable-frequency pump banks with pressure-vessel control for constant-pressure water supply across high-rise and large-format buildings.",
+    "intro_paragraphs": [
+      "Hydropneumatic systems deliver constant water pressure across multi-level buildings without overhead tanks on every zone. VFD-controlled pump banks ride a pressure vessel buffer, maintaining setpoint pressure regardless of demand.",
+      "Our designs use duty-standby logic with sequencing for high-demand events, pressure-reducing zones for low-floor pressure management, and BMS integration so the building operator can see pump-run hours, suction pressure and fault status in real time."
+    ],
+    "approach_paragraphs": [
+      "Pump sizing follows the calculated peak simultaneous demand with simultaneity factors per IS 1172. VFD curves are tuned during commissioning to the actual building hydraulics, not the catalogue duty point.",
+      "Pressure-reducing valves protect lower-floor fixtures from over-pressure; air-relief valves at high points prevent waterhammer. The whole system is BMS-monitored with trended pressure profiles."
+    ],
+    "systems": [
+      {
+        "name": "VFD pump banks",
+        "description": "Duty-standby or N+1 VFD pump banks with pressure-vessel buffer and PLC-driven sequencing logic. Soft-start and ramp-down to eliminate waterhammer.",
+        "specs": [
+          { "k": "Topology", "v": "Duty-standby · N+1" },
+          { "k": "Control", "v": "VFD + pressure-vessel" },
+          { "k": "Integration", "v": "BMS-tied" }
+        ]
+      },
+      {
+        "name": "Pressure management",
+        "description": "Zoned PRVs to manage pressure across building stack. Air-relief valves at high points. Pipe network sized to AFT Fathom hydraulic model.",
+        "specs": [
+          { "k": "PRV zones", "v": "Per stack / floor" },
+          { "k": "Modelling", "v": "AFT Fathom" },
+          { "k": "Standard", "v": "IS 1172 / ISPC" }
+        ]
+      },
+      {
+        "name": "Hot water systems",
+        "description": "Heat-pump or boiler-fed hot water with circulation loops, thermostatic mixing valves and Legionella-compliant temperature control.",
+        "specs": [
+          { "k": "Source", "v": "Heat pump · boiler" },
+          { "k": "Storage", "v": "Insulated, stratified" },
+          { "k": "Legionella", "v": "≥ 60 °C storage / 50 °C return" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-plumbing-water-treatment",
+      "cat-plumbing-sanitary",
+      "cat-bms-energy-management"
+    ],
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "cat-plumbing-sanitary",
+    "service_id": "svc-plumbing",
+    "slug": "sanitary-plumbing",
+    "num": "04",
+    "name": "Sanitary & Plumbing",
+    "category_type": "application",
+    "short_blurb": "Soil, waste, vent and water-supply piping with fixture-grade finishes for corporate, hospitality, healthcare and residential buildings.",
+    "intro_paragraphs": [
+      "Sanitary plumbing covers the building's water-supply and drainage layers — cold and hot water distribution, soil and waste stacks, vent piping and the fixture-grade finishes the occupant sees. The discipline rewards quiet execution: occupants notice when it's wrong, not when it's right.",
+      "We deliver to IPC, ISPC and CPHEEO standards, with traps and venting sized per stack height. Pipe materials are CPVC for water supply, PVC-DWV or HDPE for drainage, with fixture-grade sanitaryware per the operator's spec (Kohler, TOTO, Roca, Grohe)."
+    ],
+    "approach_paragraphs": [
+      "Hydraulic design follows fixture-unit calculation per IPC/ISPC. Stack venting is sized to prevent siphonage and back-pressure across the full stack height. Drainage gradients are verified on-site, not assumed.",
+      "Sanitaryware is installed against architect-approved templates with finish-level integration to floor and wall tile lines. Joinery and counter mountings are coordinated with the interior fit-out."
+    ],
+    "systems": [
+      {
+        "name": "Water supply",
+        "description": "CPVC or PEX water-supply piping for cold and hot lines. Sized to fixture-unit demand with simultaneity factors. Isolation at every wet wall.",
+        "specs": [
+          { "k": "Material", "v": "CPVC · PEX · GI for risers" },
+          { "k": "Pressure test", "v": "1.5× operating, 24 hr" },
+          { "k": "Isolation", "v": "Wet-wall + floor" }
+        ]
+      },
+      {
+        "name": "Soil, waste & vent",
+        "description": "PVC-DWV or HDPE stacks with full vent system per IPC/ISPC. Cleanouts at every change of direction; floor traps with primer connections.",
+        "specs": [
+          { "k": "Material", "v": "uPVC · HDPE silent" },
+          { "k": "Standard", "v": "IPC / ISPC" },
+          { "k": "Test", "v": "Smoke + air pressure" }
+        ]
+      },
+      {
+        "name": "Fixtures & sanitaryware",
+        "description": "Architect-approved fixture installations from premium OEMs. Concealed flush plates and wall-hung WCs supported on Geberit-class frames.",
+        "specs": [
+          { "k": "Brands", "v": "Kohler · TOTO · Roca · Grohe" },
+          { "k": "Mounting", "v": "Wall-hung on system frames" },
+          { "k": "Flow rate", "v": "WELS / IGBC compliant" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-plumbing-hydropneumatic",
+      "cat-civil-interiors"
+    ],
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "cat-plumbing-steam-boilers",
+    "service_id": "svc-plumbing",
+    "slug": "steam-boilers",
+    "num": "05",
+    "name": "Steam Boilers",
+    "category_type": "specialised",
+    "short_blurb": "Process steam generation, distribution and condensate recovery for hospitality, pharma, laundry and process-load applications.",
+    "intro_paragraphs": [
+      "Steam is the working fluid for laundry, kitchen, sterilisation and many pharma process loads. Our scope covers oil-fired, gas-fired and electric boilers, steam distribution piping, pressure-reducing stations and condensate recovery — sized to the operator's peak and average load.",
+      "Distribution is to ASME B31.1 with insulated, traced piping where heat loss matters. Condensate return reduces fresh-water make-up and recovers thermal energy; condensate-quality monitoring protects the boiler from contamination."
+    ],
+    "approach_paragraphs": [
+      "Boiler sizing accounts for peak instantaneous demand with diversity, not just averaged daily load. Combustion efficiency is tuned at commissioning and verified annually with stack-O₂ measurement.",
+      "Condensate recovery is engineered with deaerator, feed pumps and conductivity-controlled blowdown. Steam traps are surveyed annually — leaking traps are the largest source of steam-system energy loss."
+    ],
+    "systems": [
+      {
+        "name": "Steam generation",
+        "description": "Fire-tube and water-tube boilers, oil-fired, gas-fired or electric per fuel availability. Modular installations for redundancy and turn-down.",
+        "specs": [
+          { "k": "Type", "v": "Fire-tube · water-tube · electric" },
+          { "k": "Capacity", "v": "500 kg/hr – 10 TPH" },
+          { "k": "Standard", "v": "IBR / ASME" }
+        ]
+      },
+      {
+        "name": "Steam distribution",
+        "description": "Insulated steam mains with drip-leg drainage, pressure-reducing stations at usage points, and full ASME B31.1 compliance.",
+        "specs": [
+          { "k": "Standard", "v": "ASME B31.1" },
+          { "k": "Insulation", "v": "Mineral wool + jacket" },
+          { "k": "Traps", "v": "Mechanical + thermostatic" }
+        ]
+      },
+      {
+        "name": "Condensate recovery",
+        "description": "Deaerator + feed-pump skids returning condensate to the boiler. Conductivity-controlled blowdown protects boiler from contamination.",
+        "specs": [
+          { "k": "Recovery", "v": "≥ 70% typical" },
+          { "k": "Deaerator", "v": "Spray / tray type" },
+          { "k": "Blowdown", "v": "Conductivity-controlled" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-plumbing-water-treatment",
+      "cat-plumbing-industrial-piping"
+    ],
+    "sort_order": 5,
+    "published": true
+  },
+  {
+    "id": "cat-plumbing-rainwater",
+    "service_id": "svc-plumbing",
+    "slug": "rainwater-harvesting",
+    "num": "06",
+    "name": "Rainwater Harvesting",
+    "category_type": "application",
+    "short_blurb": "Rooftop collection, storage and ground-water recharge systems compliant with IGBC, LEED and CGWB groundwater regulations.",
+    "intro_paragraphs": [
+      "Rainwater harvesting captures and either stores or recharges runoff from rooftop and paved-area collection. Storage systems use the water for landscape irrigation or non-potable supply; recharge systems return it to the aquifer through borewell or pit infiltration.",
+      "Designs follow CGWB guidelines and local municipal requirements, with first-flush diversion, sand-and-charcoal filtration, and overflow management for high-intensity rainfall events."
+    ],
+    "approach_paragraphs": [
+      "Collection area is calculated against catchment runoff coefficient and design storm intensity. Storage volume is sized for the operator's intended use; recharge pits are sized to local soil percolation rate.",
+      "First-flush diverters protect storage from the dirty initial runoff. Filtration is sized to maintain water quality for the intended end-use — finer for non-potable supply, coarser for landscape only."
+    ],
+    "systems": [
+      {
+        "name": "Rooftop collection",
+        "description": "Roof drains, gutters, downcomers and collection chambers with first-flush diversion. Routed to storage tank or recharge pit per design.",
+        "specs": [
+          { "k": "First-flush", "v": "Auto-diverter" },
+          { "k": "Storage", "v": "Polyethylene / RCC" },
+          { "k": "Standard", "v": "CGWB / IGBC" }
+        ]
+      },
+      {
+        "name": "Storage & reuse",
+        "description": "Polyethylene or RCC storage tanks with filtration train (sand + carbon + UV) for non-potable reuse — flushing, landscape, cooling-tower make-up.",
+        "specs": [
+          { "k": "Filtration", "v": "Sand + carbon + UV" },
+          { "k": "Reuse", "v": "Flushing · landscape" },
+          { "k": "Capacity", "v": "5 – 500 KL" }
+        ]
+      },
+      {
+        "name": "Groundwater recharge",
+        "description": "Recharge pits and borewell injection systems returning surplus runoff to the aquifer. Sized to local soil percolation and depth-to-water.",
+        "specs": [
+          { "k": "Method", "v": "Pit · trench · borewell" },
+          { "k": "Sizing", "v": "Per CGWB" },
+          { "k": "Filter media", "v": "Pebble · charcoal · sand" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-plumbing-water-treatment",
+      "cat-solar-leed-igbc-compliance"
+    ],
+    "sort_order": 6,
+    "published": true
+  },
+
+  {
+    "id": "cat-firefighting-hydrant",
+    "service_id": "svc-firefighting",
+    "slug": "hydrant-systems",
+    "num": "01",
+    "name": "Fire Hydrant Systems",
+    "category_type": "system_layer",
+    "short_blurb": "Wet and dry riser hydrant systems with electric, diesel and jockey pump sets to NBC 2016 and IS 13039.",
+    "intro_paragraphs": [
+      "Fire hydrants are the building's first-response wet supply. Yard hydrants for external attack, wet-riser hydrants for internal attack from staircase landings — each sized for the building's classification, height and floor area per NBC 2016.",
+      "Pump-set design is electric main + diesel standby + jockey, with auto-changeover sequenced for grid failure. Static and pumping pressure are hydraulically modelled to verify pressure and flow at the most-remote hydrant."
+    ],
+    "approach_paragraphs": [
+      "Static tank sizing follows NBC 2016 for the building's occupancy class. Pump curves are selected against the calculated most-remote hydrant flow and pressure — not over-sized to a default.",
+      "Commissioning runs full flow tests with the local fire authority witness. NOC and Form A are obtained before handover, not as an afterthought."
+    ],
+    "systems": [
+      {
+        "name": "Hydrant network",
+        "description": "Yard and landing hydrants on MS or galvanised piping with isolation valves at every branch. Hose cabinets stocked per IS 884.",
+        "specs": [
+          { "k": "Pipe", "v": "MS C-Class" },
+          { "k": "Standard", "v": "NBC 2016 · IS 13039" },
+          { "k": "Hose", "v": "IS 636 + nozzle" }
+        ]
+      },
+      {
+        "name": "Pump house",
+        "description": "Electric main + diesel standby + jockey pump set with auto-changeover and remote alarm to BMS. Suction from underground or overhead static tank.",
+        "specs": [
+          { "k": "Topology", "v": "Electric + diesel + jockey" },
+          { "k": "Auto-change", "v": "On grid fail" },
+          { "k": "BMS", "v": "Status + fault" }
+        ]
+      },
+      {
+        "name": "Static water storage",
+        "description": "Underground or overhead static tank sized per NBC 2016 for the building's occupancy. Make-up from municipal or borewell with float valves.",
+        "specs": [
+          { "k": "Sizing", "v": "Per NBC 2016" },
+          { "k": "Make-up", "v": "Municipal / borewell" },
+          { "k": "Material", "v": "RCC / GI sectional" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-firefighting-sprinkler",
+      "cat-firefighting-compliance",
+      "cat-plumbing-hydropneumatic"
+    ],
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "cat-firefighting-sprinkler",
+    "service_id": "svc-firefighting",
+    "slug": "sprinkler-systems",
+    "num": "02",
+    "name": "Sprinkler Systems",
+    "category_type": "system_layer",
+    "short_blurb": "Wet-pipe, dry-pipe and pre-action sprinkler systems designed to NFPA 13 hydraulic calculation for the building's hazard class.",
+    "intro_paragraphs": [
+      "Sprinkler systems are designed to NFPA 13 with explicit hydraulic calculation — density, area of operation, K-factor, most-remote-head pressure all locked at design freeze. Generic schematic systems get rejected at the fire-authority NOC stage; ours don't.",
+      "Wet-pipe is the volume workhorse. Dry-pipe goes into unheated zones (loading docks, garages). Pre-action systems with UL/FM-listed valves go into data halls and museum stores where false-trip prevention matters."
+    ],
+    "approach_paragraphs": [
+      "Hydraulic calculations are performed in HASS, Elite or Sprink-CALC against the building's hazard class (Light, OH-1 to OH-3, EH). K-factor and density are picked deliberately — not defaulted.",
+      "On data-centre projects, pre-action systems use cross-zoned detection (smoke + heat) for release, with electric supervisory air on the dry-pilot line. Discharge testing is performed during commissioning."
+    ],
+    "systems": [
+      {
+        "name": "Wet-pipe sprinklers",
+        "description": "Standard wet-pipe systems for heated, fully-occupied spaces. K-factor and density per hazard class. Hydraulic calculation in HASS/Sprink-CALC.",
+        "specs": [
+          { "k": "Code", "v": "NFPA 13" },
+          { "k": "Coverage", "v": "Per hazard class" },
+          { "k": "Heads", "v": "QR · standard · ESFR" }
+        ]
+      },
+      {
+        "name": "Pre-action systems",
+        "description": "Double-interlocked pre-action systems with UL/FM-listed valves for data halls. Cross-zoned smoke + heat detection for release; electric supervisory air.",
+        "specs": [
+          { "k": "Reference", "v": "CtrlS Mahape — 823 heads/floor pair" },
+          { "k": "Standard", "v": "NFPA 13 · UL / FM listed" },
+          { "k": "Release", "v": "Cross-zoned detection" }
+        ]
+      },
+      {
+        "name": "Dry-pipe sprinklers",
+        "description": "Dry-pipe systems for unheated areas — loading docks, parking garages — with air-compressor supervisory pressure and rapid-fill on activation.",
+        "specs": [
+          { "k": "Use", "v": "Unheated / freeze risk" },
+          { "k": "Standard", "v": "NFPA 13" },
+          { "k": "Supervisory", "v": "Air compressor" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-firefighting-hydrant",
+      "cat-firefighting-detection",
+      "cat-firefighting-gas-suppression"
+    ],
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "cat-firefighting-gas-suppression",
+    "service_id": "svc-firefighting",
+    "slug": "gas-suppression",
+    "num": "03",
+    "name": "Gas Suppression",
+    "category_type": "specialised",
+    "short_blurb": "Clean-agent gas suppression (NOVEC 1230, FM-200, IG-541) for server rooms, switchgear and equipment-protection applications.",
+    "intro_paragraphs": [
+      "Gas suppression protects equipment where water would cause secondary damage — server rooms, switchgear rooms, museum storage, battery rooms. Clean-agent systems (NOVEC 1230, FM-200, IG-541) discharge a non-conductive, residue-free agent that knocks down fire and dissipates.",
+      "Sizing follows NFPA 2001 with leakage compensation per the room's enclosure integrity test (ROOM-INT). Detection is cross-zoned for release; ventilation is interlocked for shut-down; doors are interlocked closed during discharge."
+    ],
+    "approach_paragraphs": [
+      "Enclosure integrity is verified by a door-fan pressurisation test (ROOM-INT, NFPA 2001 Annex C). Agent quantity is sized for the actual envelope leakage — not the textbook room volume.",
+      "Release logic is cross-zoned (smoke + heat) to prevent false trips. Manual abort and manual release stations are positioned per operator workflow. Discharge testing is performed at commissioning where the spec demands it."
+    ],
+    "systems": [
+      {
+        "name": "NOVEC 1230",
+        "description": "Hydrofluoroketone clean-agent system for server rooms and high-value electronics. Zero ozone depletion, very low GWP, immediate dissipation post-discharge.",
+        "specs": [
+          { "k": "Agent", "v": "NOVEC 1230 (FK-5-1-12)" },
+          { "k": "Design density", "v": "4.5 – 5.9%" },
+          { "k": "Discharge", "v": "≤ 10 sec" }
+        ]
+      },
+      {
+        "name": "FM-200 (HFC-227ea)",
+        "description": "HFC clean-agent system, established standard for data halls and switchgear protection. Low residue, fast knock-down, NFPA 2001 compliant.",
+        "specs": [
+          { "k": "Agent", "v": "HFC-227ea (FM-200)" },
+          { "k": "Design density", "v": "6.25 – 9%" },
+          { "k": "Discharge", "v": "≤ 10 sec" }
+        ]
+      },
+      {
+        "name": "Inert gas (IG-541)",
+        "description": "Inergen / IG-541 inert-gas system for occupied spaces and environmentally-sensitive applications. Zero GWP; design discharge longer than HFC.",
+        "specs": [
+          { "k": "Agent", "v": "IG-541 (N₂/Ar/CO₂)" },
+          { "k": "Discharge", "v": "60 – 120 sec" },
+          { "k": "Occupied use", "v": "Acceptable" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-firefighting-detection",
+      "cat-firefighting-sprinkler",
+      "cat-hvac-data-center-cooling"
+    ],
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "cat-firefighting-detection",
+    "service_id": "svc-firefighting",
+    "slug": "detection-alarm",
+    "num": "04",
+    "name": "Detection & Alarm",
+    "category_type": "system_layer",
+    "short_blurb": "Smoke detection, heat detection, VESDA aspirating systems and addressable fire alarm panels with PA / voice evacuation.",
+    "intro_paragraphs": [
+      "Fire detection is the first signal that triggers everything else — sprinkler release for pre-action, gas-suppression activation, AHU shutdown, dampers, lift recall and PA evacuation. The detection layer must be sized, located and tested deliberately.",
+      "Our scope covers spot-type smoke and heat detection, VESDA aspirating smoke detection for data halls and atria, manual call points and addressable fire-alarm panels with PA integration. Detection logic is cross-zoned where the building's actions depend on dual confirmation."
+    ],
+    "approach_paragraphs": [
+      "Detector spacing follows NFPA 72 with adjustments for ceiling height, beam pockets and HVAC airflow. Air-sampling systems (VESDA) are designed for very-early-warning in high-value spaces.",
+      "Panels are addressable, with point-level fault reporting. Logic for sprinkler release, gas suppression, fan shutdown and lift recall is sequenced in the panel programming and witness-tested at commissioning."
+    ],
+    "systems": [
+      {
+        "name": "Spot detection",
+        "description": "Photo-electric and ionisation smoke detectors, fixed-temperature and rate-of-rise heat detectors. Spacing per NFPA 72 with ceiling-height and airflow adjustments.",
+        "specs": [
+          { "k": "Standard", "v": "NFPA 72 · IS 2189" },
+          { "k": "Types", "v": "Smoke · heat · multi-criteria" },
+          { "k": "Test", "v": "Functional + sensitivity" }
+        ]
+      },
+      {
+        "name": "VESDA aspirating",
+        "description": "Air-sampling smoke detection for data halls, atria and high-value storage. Very-early-warning sensitivity with sequenced alert / action / fire levels.",
+        "specs": [
+          { "k": "Levels", "v": "Alert · Action · Fire" },
+          { "k": "Application", "v": "Data hall · atrium · museum" },
+          { "k": "Sensitivity", "v": "% obscuration/m" }
+        ]
+      },
+      {
+        "name": "Panel & PA integration",
+        "description": "Addressable fire-alarm panels with full point-level addressing, BMS integration, and PA / voice-evacuation interlock.",
+        "specs": [
+          { "k": "Addressing", "v": "Point-level" },
+          { "k": "Integration", "v": "BMS · PA · lift recall" },
+          { "k": "Standard", "v": "EN 54 / UL 864" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-firefighting-sprinkler",
+      "cat-firefighting-gas-suppression",
+      "cat-bms-fire-alarm-pa"
+    ],
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "cat-firefighting-smoke-management",
+    "service_id": "svc-firefighting",
+    "slug": "smoke-management",
+    "num": "05",
+    "name": "Smoke Management",
+    "category_type": "application",
+    "short_blurb": "Stairwell pressurisation, smoke extraction, atrium smoke control and the dampers that compartmentalise fire spread.",
+    "intro_paragraphs": [
+      "Smoke management keeps egress paths tenable while occupants evacuate. Stairwell pressurisation maintains positive pressure in escape stairs; smoke extraction removes products of combustion from the affected zone; atrium smoke control prevents stratification in tall lobby volumes.",
+      "Our scope covers fans, dampers, controls and the CFD-backed design that proves the system works under the design fire scenario."
+    ],
+    "approach_paragraphs": [
+      "Stairwell pressurisation is designed against the door-opening scenario most adverse — typically all doors closed (max pressure) and one door open (min pressure). Per NFPA 92.",
+      "Atrium smoke control uses CFD modelling (Ansys Fluent) where the volume, geometry and stratification matter. Make-up air sources are interlocked to prevent smoke being pushed back into the protected zone."
+    ],
+    "systems": [
+      {
+        "name": "Stairwell pressurisation",
+        "description": "Fan-and-damper systems maintaining 50 Pa positive pressure in escape stairs. Variable-speed fans with relief dampers to prevent over-pressurisation.",
+        "specs": [
+          { "k": "Standard", "v": "NFPA 92 · NBC 2016" },
+          { "k": "Pressure", "v": "≥ 50 Pa with doors closed" },
+          { "k": "Fan control", "v": "VFD + relief damper" }
+        ]
+      },
+      {
+        "name": "Smoke extraction",
+        "description": "Mechanical smoke extract fans on affected zones, with motorised dampers releasing on alarm. Sized to clear smoke layer above the egress plane.",
+        "specs": [
+          { "k": "Activation", "v": "On detection" },
+          { "k": "Dampers", "v": "Motorised + fire-rated" },
+          { "k": "Standard", "v": "NFPA 92 / BS EN 12101" }
+        ]
+      },
+      {
+        "name": "Fire & smoke dampers",
+        "description": "UL-listed fire dampers and smoke dampers in HVAC ductwork at fire-compartment boundaries. Motorised closure on alarm; fail-safe spring-return.",
+        "specs": [
+          { "k": "Rating", "v": "1, 2 or 3 hr fire" },
+          { "k": "Standard", "v": "UL 555 / 555S" },
+          { "k": "Closure", "v": "Spring-return on alarm" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-firefighting-detection",
+      "cat-hvac-low-side",
+      "cat-bms-ddc-field-controls"
+    ],
+    "sort_order": 5,
+    "published": true
+  },
+  {
+    "id": "cat-firefighting-compliance",
+    "service_id": "svc-firefighting",
+    "slug": "compliance-noc",
+    "num": "06",
+    "name": "Compliance & NOC",
+    "category_type": "specialised",
+    "short_blurb": "NBC 2016, NFPA 13/72, local fire-authority NOC, Form A — compliance documentation and approval delivered as part of scope.",
+    "intro_paragraphs": [
+      "Fire compliance is the discipline that closes the loop from design through operation. Code review against NBC 2016 (India), NFPA 13/72/2001 (US), or BS 9999/EN 12101 (UK/EU); occupant-load and egress capacity calculations; fire-authority liaison through plan submission, inspection and final NOC.",
+      "We treat compliance as part of scope, not a subcontracted afterthought. The same team that designs the sprinkler system writes the hydraulic-calculation submission and walks the inspector through the witness-test."
+    ],
+    "approach_paragraphs": [
+      "Code review happens at scheme stage so the building's egress, compartmentation and suppression strategy is set before architectural drawings freeze. Late code-driven changes are the most expensive kind.",
+      "Inspections are scheduled and rehearsed. Common failure modes (missing signage, unsealed penetrations, blocked egress) are caught in a pre-inspection walk so the formal inspection is a confirmation, not a discovery."
+    ],
+    "systems": [
+      {
+        "name": "Code review & submission",
+        "description": "Compliance review against NBC 2016, state fire prevention rules, local municipal code. Plan submission to the local fire authority with full calculation backup.",
+        "specs": [
+          { "k": "Codes", "v": "NBC 2016 · NFPA · state rules" },
+          { "k": "Submission", "v": "Plans + calculations" },
+          { "k": "Liaison", "v": "Fire authority direct" }
+        ]
+      },
+      {
+        "name": "Witness testing & NOC",
+        "description": "Hydraulic flow tests, smoke-detection sensitivity tests, gas-suppression discharge tests — all witnessed by the local fire authority and operator's QA team.",
+        "specs": [
+          { "k": "Tests", "v": "Flow · sensitivity · discharge" },
+          { "k": "Witness", "v": "Fire authority + operator" },
+          { "k": "Output", "v": "NOC + Form A" }
+        ]
+      },
+      {
+        "name": "Documentation handover",
+        "description": "Full as-built drawings, hydraulic calculations, equipment cut-sheets, maintenance manuals and training records handed over in the operator's required format.",
+        "specs": [
+          { "k": "Format", "v": "Hard-copy + digital" },
+          { "k": "Content", "v": "As-builts · calcs · cut-sheets · O&M" },
+          { "k": "Training", "v": "Operator team certified" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-firefighting-hydrant",
+      "cat-firefighting-sprinkler",
+      "cat-firefighting-detection"
+    ],
+    "sort_order": 6,
+    "published": true
+  },
+
+  {
+    "id": "cat-solar-rooftop",
+    "service_id": "svc-solar",
+    "slug": "rooftop-solar",
+    "num": "01",
+    "name": "Rooftop Solar",
+    "category_type": "application",
+    "short_blurb": "Rooftop PV systems for corporate campuses, warehouses, mixed-use developments and industrial estates — net-metered and BMS-monitored.",
+    "intro_paragraphs": [
+      "Rooftop solar is the most accessible renewable generation for commercial and industrial buildings. Our scope covers structural assessment of the host roof, mounting design for wind and seismic load, module and inverter selection, string sizing, DC and AC cabling, net-metering hardware, and SCADA monitoring.",
+      "We have delivered rooftop solar as part of the Ingka (IKEA) mixed-use mandate in Noida, integrated with PNG distribution and the wider MEPF scope. Generation is metered, monitored and reported through the building's BMS or a dedicated solar SCADA."
+    ],
+    "approach_paragraphs": [
+      "Generation is modelled in PVsyst against site-specific irradiance, tilt, azimuth and shading. Module degradation, temperature derating, and inverter clipping are accounted for in the energy yield estimate.",
+      "Structural assessment of the host roof is part of design — not a sign-off at the end. Mounting structures are designed to local wind and seismic load, with anchorage detailed to the as-built roof condition."
+    ],
+    "systems": [
+      {
+        "name": "Module & mounting",
+        "description": "Mono-PERC or bifacial modules on aluminium / GI mounting structures. Ballasted, penetrating or rail-mount options per host-roof condition.",
+        "specs": [
+          { "k": "Modules", "v": "Mono-PERC · bifacial" },
+          { "k": "Mounting", "v": "Ballasted · penetrating · rail" },
+          { "k": "Design", "v": "Local wind / seismic" }
+        ]
+      },
+      {
+        "name": "Inverters & strings",
+        "description": "String inverters for distributed designs, central inverters for high-density rooftops. String sizing to inverter MPPT window with margin for temperature and degradation.",
+        "specs": [
+          { "k": "Topology", "v": "String · central" },
+          { "k": "Sizing", "v": "MPPT window + margin" },
+          { "k": "Brands", "v": "Sungrow · SMA · Huawei" }
+        ]
+      },
+      {
+        "name": "Monitoring & metering",
+        "description": "Net-metering hardware coordinated with the DISCOM, plus inverter-level SCADA monitoring with PR (performance ratio) reporting and alarms.",
+        "specs": [
+          { "k": "Metering", "v": "Net / gross per DISCOM" },
+          { "k": "SCADA", "v": "Inverter-level telemetry" },
+          { "k": "Reporting", "v": "PR + irradiance" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-solar-net-metering",
+      "cat-solar-energy-audits",
+      "cat-solar-leed-igbc-compliance"
+    ],
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "cat-solar-ground-mounted",
+    "service_id": "svc-solar",
+    "slug": "ground-mounted-solar",
+    "num": "02",
+    "name": "Ground-Mounted Solar",
+    "category_type": "application",
+    "short_blurb": "Utility-scale and captive ground-mounted PV plants on fixed-tilt or single-axis tracking structures with HT evacuation.",
+    "intro_paragraphs": [
+      "Ground-mounted solar is where utility-scale generation lives — captive plants for industrial estates, captive-use PPAs for corporate offtake, or simply purpose-built plants for commercial energy supply. The scope is broader: civil foundations, mounting structures, modules, inverters, HT step-up and grid evacuation.",
+      "We deliver from technical due diligence through commissioning and handover to the asset owner's O&M team. Site selection, irradiance modelling, soil testing and grid-connection feasibility are upfront work, not retrofitted to a fixed budget."
+    ],
+    "approach_paragraphs": [
+      "Site assessment includes soil bearing capacity (for foundation type), irradiance modelling against multiple TMY datasets, and grid feasibility with the local DISCOM. The energy yield estimate drives the financial model.",
+      "Foundation type — concrete pier, ground screw or rammed pile — is chosen against soil condition and project economics. Mounting structures are galvanised steel; modules are mono-PERC with 25-year warranty."
+    ],
+    "systems": [
+      {
+        "name": "Civil & foundations",
+        "description": "Concrete pier, ground screw or rammed pile foundations for module mounting structures. Drainage, site grading and access roads.",
+        "specs": [
+          { "k": "Foundation", "v": "Pier · screw · pile" },
+          { "k": "Standard", "v": "Soil-condition-driven" },
+          { "k": "Site", "v": "Grading + drainage + access" }
+        ]
+      },
+      {
+        "name": "Fixed-tilt & tracking",
+        "description": "Fixed-tilt structures sized to site latitude. Single-axis tracking systems where the additional yield (typically 15-20%) justifies the capex.",
+        "specs": [
+          { "k": "Type", "v": "Fixed-tilt · single-axis tracking" },
+          { "k": "Tilt", "v": "Site latitude or optimised" },
+          { "k": "Tracking yield", "v": "+15–20%" }
+        ]
+      },
+      {
+        "name": "HT evacuation",
+        "description": "Inverter step-up via 33 kV / 11 kV transformer, HT switchgear, and evacuation line to the DISCOM's substation. Protection coordinated with grid impedance.",
+        "specs": [
+          { "k": "Voltage", "v": "33 / 11 kV" },
+          { "k": "Protection", "v": "Grid-coordinated relays" },
+          { "k": "Metering", "v": "DISCOM-spec ABT meters" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-solar-rooftop",
+      "cat-solar-net-metering",
+      "cat-electrical-substations"
+    ],
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "cat-solar-net-metering",
+    "service_id": "svc-solar",
+    "slug": "net-metering-grid-integration",
+    "num": "03",
+    "name": "Net Metering & Grid Integration",
+    "category_type": "specialised",
+    "short_blurb": "DISCOM-coordinated net metering, gross metering, captive PPAs and the grid-protection layer that ties solar to the utility.",
+    "intro_paragraphs": [
+      "Net metering is the discipline that turns generation into bill credits. Hardware, protection, metering, and the DISCOM application/approval process are all in scope. The same team that engineers the solar plant runs the DISCOM coordination — not a separate consultant.",
+      "Grid protection ensures the solar inverter disconnects safely on grid loss (anti-islanding per IEEE 1547 / CEA regulations) and protects both plant and utility from fault current. Hardware selection follows the DISCOM's approved-vendor list."
+    ],
+    "approach_paragraphs": [
+      "DISCOM application is filed at design freeze with full single-line diagram, protection coordination report and inverter datasheets. Approval timelines are tracked as critical-path items in the project schedule.",
+      "Protection logic is verified by primary injection at commissioning, with anti-islanding tested per the DISCOM's witness protocol. ABT-class meters are sealed and commissioned with the DISCOM inspector present."
+    ],
+    "systems": [
+      {
+        "name": "Net metering hardware",
+        "description": "Bi-directional ABT-class energy meters per DISCOM specification. Sealed by the DISCOM inspector at commissioning. Trend data accessible via Modbus.",
+        "specs": [
+          { "k": "Meter class", "v": "ABT / Class 0.5" },
+          { "k": "Direction", "v": "Bi-directional" },
+          { "k": "Comms", "v": "Modbus / IEC 62056" }
+        ]
+      },
+      {
+        "name": "Grid protection",
+        "description": "Anti-islanding protection per IEEE 1547 / CEA, over/under-frequency and voltage protection, ROCOF and vector-shift relays where required.",
+        "specs": [
+          { "k": "Standard", "v": "IEEE 1547 / CEA" },
+          { "k": "Functions", "v": "Anti-island · U/O F · U/O V" },
+          { "k": "Test", "v": "Primary injection at COD" }
+        ]
+      },
+      {
+        "name": "DISCOM coordination",
+        "description": "Application, approval, hardware compliance verification, and witness testing with the DISCOM. Final approval letter retained in the project handover dossier.",
+        "specs": [
+          { "k": "Application", "v": "At design freeze" },
+          { "k": "Witness", "v": "DISCOM inspector" },
+          { "k": "Handover", "v": "Approval letter retained" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-solar-rooftop",
+      "cat-solar-ground-mounted",
+      "cat-electrical-epms"
+    ],
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "cat-solar-energy-audits",
+    "service_id": "svc-solar",
+    "slug": "energy-audits",
+    "num": "04",
+    "name": "Energy Audits",
+    "category_type": "specialised",
+    "short_blurb": "BEE-certified energy audits, ASHRAE Level 1/2/3 audits and retro-commissioning to identify and prove savings opportunities.",
+    "intro_paragraphs": [
+      "Energy audits identify where a building is losing energy and how much it would cost to fix. We deliver BEE-certified Type-2 / Type-3 audits for industrial facilities and ASHRAE Level 1, 2 and 3 audits for commercial buildings.",
+      "Findings are quantified with measurement (current loggers, BTU meters, flow meters) — not estimated from nameplate data. ECMs are ranked by simple payback and lifecycle savings, with implementation roadmap and verification plan."
+    ],
+    "approach_paragraphs": [
+      "Pre-audit data collection covers 12 months of utility bills, the as-built MEP drawings and the BMS trend store. The on-site survey uses calibrated instruments — power loggers, BTU meters, flow meters, IR thermography.",
+      "ECMs are quantified using calibrated energy models (eQuest, TRACE or IES VE) where the savings warrant it. Measurement and verification follows IPMVP Option B or C post-implementation."
+    ],
+    "systems": [
+      {
+        "name": "BEE-certified audits",
+        "description": "BEE-approved auditors deliver Type-2 / Type-3 audits for industrial mandates. PAT cycle reporting and SEC tracking.",
+        "specs": [
+          { "k": "Auditor", "v": "BEE-certified" },
+          { "k": "Type", "v": "Type-2 / Type-3" },
+          { "k": "Output", "v": "PAT-aligned report" }
+        ]
+      },
+      {
+        "name": "ASHRAE Level 1/2/3",
+        "description": "Walk-through to investment-grade audits per ASHRAE 211. Level depends on the operator's depth of decision-making.",
+        "specs": [
+          { "k": "Standard", "v": "ASHRAE 211" },
+          { "k": "Levels", "v": "1 / 2 / 3" },
+          { "k": "Output", "v": "ECM register + IRR" }
+        ]
+      },
+      {
+        "name": "M&V (post-implementation)",
+        "description": "Measurement and verification per IPMVP Options A / B / C / D to confirm savings against baseline. Trend data analysed quarterly.",
+        "specs": [
+          { "k": "Protocol", "v": "IPMVP" },
+          { "k": "Options", "v": "A / B / C / D" },
+          { "k": "Cadence", "v": "Quarterly review" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-solar-leed-igbc-compliance",
+      "cat-bms-energy-management",
+      "cat-hvac-high-side"
+    ],
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "cat-solar-leed-igbc-compliance",
+    "service_id": "svc-solar",
+    "slug": "leed-igbc-compliance",
+    "num": "05",
+    "name": "LEED / IGBC Compliance",
+    "category_type": "specialised",
+    "short_blurb": "Green-building certification — LEED, IGBC and GRIHA — from design intent through documentation and final award.",
+    "intro_paragraphs": [
+      "Green-building certification rewards measured performance — energy efficiency, water conservation, indoor air quality, materials sourcing. We deliver the engineering and documentation that earn LEED, IGBC and GRIHA credits, from design through final award.",
+      "Our work on the Common Central Secretariat (IGBC Gold) and Nalanda University (net-zero) shows what's achievable when sustainability is baked into the engineering from concept — not retrofitted at handover."
+    ],
+    "approach_paragraphs": [
+      "Credit targeting happens at scheme stage with the architect and operator. ASHRAE 90.1 baseline modelling, water-use reduction calculations, and material EPDs are all sequenced into the design programme so credits are evidence-backed, not aspirational.",
+      "Documentation hand-over is dossier-ready for the rating-body review. Pre-submission audit catches gaps before formal submission."
+    ],
+    "systems": [
+      {
+        "name": "LEED",
+        "description": "USGBC LEED v4 / v4.1 certification — Energy & Atmosphere, Water Efficiency, Indoor Air Quality, Materials & Resources credit categories.",
+        "specs": [
+          { "k": "Standard", "v": "LEED v4 / v4.1 BD+C" },
+          { "k": "Levels", "v": "Certified · Silver · Gold · Platinum" },
+          { "k": "Documentation", "v": "Pre-audit + final submission" }
+        ]
+      },
+      {
+        "name": "IGBC",
+        "description": "Indian Green Building Council certification under New Construction, Existing Building or Factory Buildings rating systems. Local Indian-context calibration.",
+        "specs": [
+          { "k": "Reference", "v": "Central Secretariat — IGBC Gold" },
+          { "k": "Levels", "v": "Certified · Silver · Gold · Platinum" },
+          { "k": "Local context", "v": "India-calibrated" }
+        ]
+      },
+      {
+        "name": "GRIHA",
+        "description": "TERI's GRIHA rating for buildings in the Indian climate — five-star scale based on energy, water, materials and indoor environmental quality.",
+        "specs": [
+          { "k": "Standard", "v": "GRIHA v2019" },
+          { "k": "Scale", "v": "1–5 stars" },
+          { "k": "Context", "v": "Indian climate" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-solar-energy-audits",
+      "cat-solar-rooftop",
+      "cat-plumbing-rainwater"
+    ],
+    "sort_order": 5,
+    "published": true
+  },
+
+  {
+    "id": "cat-bms-ddc-field-controls",
+    "service_id": "svc-bms",
+    "slug": "ddc-field-controls",
+    "num": "01",
+    "name": "DDC & Field Controls",
+    "category_type": "system_layer",
+    "short_blurb": "Distributed Direct Digital Control panels and field devices for HVAC, plumbing, electrical and fire-system integration.",
+    "intro_paragraphs": [
+      "DDC is the field-level intelligence that turns mechanical and electrical equipment into a controllable, observable system. Our DDC panels run BTL-certified controllers with point-level addressing, vendor-neutral protocols (BACnet, Modbus) and BMS-tied trend logging from day one.",
+      "Sensor and actuator selection is part of design — not delegated to an installer. Pressure sensors, temperature probes, control valves and damper actuators are specified for the application's response time, accuracy and BMS protocol."
+    ],
+    "approach_paragraphs": [
+      "Point lists are signed off pre-commissioning with the operator's facility team. Tag dictionaries follow a published convention so downstream DCIM or CMMS integration is painless.",
+      "Control sequences are written in IEC 61131 Structured Text or vendor-equivalent graphical logic. Sequences are commissioned with witness sign-off — not assumed working after panel power-up."
+    ],
+    "systems": [
+      {
+        "name": "BACnet DDC panels",
+        "description": "BTL-certified DDC controllers with BACnet/IP and MS/TP communication. Point counts sized for HVAC, plumbing and electrical integration with 20% spare capacity.",
+        "specs": [
+          { "k": "Certification", "v": "BTL-certified" },
+          { "k": "Protocol", "v": "BACnet IP · MS/TP" },
+          { "k": "Spare", "v": "20% point capacity" }
+        ]
+      },
+      {
+        "name": "Field sensors & actuators",
+        "description": "Temperature, humidity, pressure, flow and energy sensors with the right response time and accuracy. Control valves, damper actuators and VSDs specified per application.",
+        "specs": [
+          { "k": "Sensors", "v": "T / RH / P / Flow / kWh" },
+          { "k": "Actuators", "v": "Modulating · spring-return" },
+          { "k": "Comms", "v": "BACnet MS/TP · 0–10 V" }
+        ]
+      },
+      {
+        "name": "Control sequences",
+        "description": "Sequences for chilled-water plant staging, AHU setpoint reset, demand-controlled ventilation, lighting and energy management. Commissioned with witness sign-off.",
+        "specs": [
+          { "k": "Language", "v": "IEC 61131 ST / graphical" },
+          { "k": "Witness", "v": "Operator sign-off" },
+          { "k": "Documentation", "v": "As-commissioned sequences" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-bms-scada-head-end",
+      "cat-bms-energy-management",
+      "cat-hvac-high-side"
+    ],
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "cat-bms-scada-head-end",
+    "service_id": "svc-bms",
+    "slug": "scada-head-end",
+    "num": "02",
+    "name": "SCADA & Head-End",
+    "category_type": "system_layer",
+    "short_blurb": "BMS head-end servers, SCADA dashboards, historian and the alarm hierarchy that turns DDC into operator-actionable intelligence.",
+    "intro_paragraphs": [
+      "The SCADA head-end is where DDC data becomes operator intelligence. We deliver redundant head-end servers, real-time dashboards, historian with multi-year trend retention, and alarm hierarchies pre-agreed with the facility team.",
+      "Reports are scheduled to land in the operator's inbox without further intervention. Trend retention follows the operator's analytics or compliance need — typically 3 years for energy, 7 years for regulated environments."
+    ],
+    "approach_paragraphs": [
+      "Dashboards are designed against the operator's workflow — operator console, supervisor view, executive summary. Each layer surfaces only what's actionable at that role.",
+      "Alarms are categorised (operator / supervisor / critical) with escalation rules. False-alarm tuning happens in the first 30 days of operation, not deferred."
+    ],
+    "systems": [
+      {
+        "name": "Head-end servers",
+        "description": "Redundant BMS head-end servers (active-passive or active-active) hosted on the operator's infrastructure or as a managed service.",
+        "specs": [
+          { "k": "Topology", "v": "Active-passive / active-active" },
+          { "k": "Hosting", "v": "Operator infra / managed" },
+          { "k": "Vendors", "v": "Honeywell · Johnson · Siemens · ABB" }
+        ]
+      },
+      {
+        "name": "Dashboards & historian",
+        "description": "Role-based dashboards with historian for trend logging and analysis. Multi-year retention per operator's compliance need.",
+        "specs": [
+          { "k": "Retention", "v": "3–7 years typical" },
+          { "k": "Resolution", "v": "1-min trends" },
+          { "k": "Roles", "v": "Operator · supervisor · executive" }
+        ]
+      },
+      {
+        "name": "Alarm management",
+        "description": "Categorised alarms with escalation rules, suppression for known maintenance events, and analytics for nuisance-alarm tuning.",
+        "specs": [
+          { "k": "Categories", "v": "Operator · supervisor · critical" },
+          { "k": "Escalation", "v": "Time + severity based" },
+          { "k": "Tuning", "v": "First-30-day review" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-bms-ddc-field-controls",
+      "cat-bms-dcim-integration",
+      "cat-electrical-epms"
+    ],
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "cat-bms-fire-alarm-pa",
+    "service_id": "svc-bms",
+    "slug": "fire-alarm-pa",
+    "num": "03",
+    "name": "Fire Alarm & PA",
+    "category_type": "system_layer",
+    "short_blurb": "Addressable fire-alarm panels with PA / voice-evacuation integration, lift recall logic and BMS interlocks.",
+    "intro_paragraphs": [
+      "Fire-alarm and PA integration sits at the intersection of life-safety code and operator usability. We deliver addressable panels with full point-level addressing, EN 54 / UL 864 compliance, and PA / voice-evacuation integration that delivers clear pre-recorded messaging during evacuation.",
+      "Interlock logic with the BMS sequences AHU shutdown, smoke damper actuation and lift recall on alarm — verified by witness testing at commissioning."
+    ],
+    "approach_paragraphs": [
+      "Panel architecture follows EN 54 with point-level addressing. Detection logic for sprinkler release, gas-suppression discharge and PA evacuation is sequenced in panel programming, not in a separate controller.",
+      "Voice messages are pre-recorded with the operator's preferred language and tone. Manual call points are interlocked for tier-1 release where the building's evacuation plan demands it."
+    ],
+    "systems": [
+      {
+        "name": "Addressable panels",
+        "description": "EN 54 / UL 864 addressable fire-alarm panels with point-level addressing, full BMS / PA / lift integration.",
+        "specs": [
+          { "k": "Standard", "v": "EN 54 · UL 864" },
+          { "k": "Addressing", "v": "Point-level" },
+          { "k": "Brands", "v": "Honeywell · Siemens · Notifier · Edwards" }
+        ]
+      },
+      {
+        "name": "PA & voice evacuation",
+        "description": "PA / voice-evacuation systems with pre-recorded messages, microphone override, and EN 54-16 compliance for life-safety voice alarm.",
+        "specs": [
+          { "k": "Standard", "v": "EN 54-16" },
+          { "k": "Messages", "v": "Pre-recorded + override" },
+          { "k": "Zoning", "v": "Per fire compartment" }
+        ]
+      },
+      {
+        "name": "Interlock logic",
+        "description": "BMS interlocks for AHU shutdown, smoke-damper actuation, lift recall, magnetic door release and access-control unlock on alarm.",
+        "specs": [
+          { "k": "Integrations", "v": "AHU · damper · lift · door" },
+          { "k": "Logic", "v": "Panel-programmed" },
+          { "k": "Witness", "v": "Tested at commissioning" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-firefighting-detection",
+      "cat-bms-ddc-field-controls",
+      "cat-firefighting-smoke-management"
+    ],
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "cat-bms-cctv-access-control",
+    "service_id": "svc-bms",
+    "slug": "cctv-access-control",
+    "num": "04",
+    "name": "CCTV & Access Control",
+    "category_type": "system_layer",
+    "short_blurb": "IP CCTV, access-control panels, biometric and card-reader integration with VMS and the building's identity-management system.",
+    "intro_paragraphs": [
+      "Security systems sit alongside fire and BMS as a third controls layer. Our scope covers IP CCTV (cameras, NVR/VMS, analytics), access-control panels (card readers, biometric, controller), and the integration that lets a single operator workflow span all three.",
+      "VMS is selected against the operator's preferred platform (Genetec, Milestone, Avigilon, Bosch). Cameras are picked for the scene — wide-angle for atria, narrow for entries, low-light for car parks."
+    ],
+    "approach_paragraphs": [
+      "Camera coverage is planned in iVMS or equivalent against the operator's surveillance objectives. Storage is sized to the retention window and per-camera frame rate.",
+      "Access control follows the operator's identity policy — card, biometric, or both. Anti-passback, mantrap and tailgating-prevention logic is configured for sensitive zones (data halls, treasury, equipment rooms)."
+    ],
+    "systems": [
+      {
+        "name": "IP CCTV",
+        "description": "IP cameras (fixed dome, PTZ, multi-sensor) on Cat-6A PoE distribution with NVR or VMS recording. Edge analytics for motion, line-cross and people-count.",
+        "specs": [
+          { "k": "Resolution", "v": "2–8 MP typical" },
+          { "k": "Storage", "v": "30-day default + per-camera" },
+          { "k": "Analytics", "v": "Motion · line · people" }
+        ]
+      },
+      {
+        "name": "Access control",
+        "description": "Card-reader and biometric access-control with controller panels, electric strikes, magnetic locks and request-to-exit sensors.",
+        "specs": [
+          { "k": "Credentials", "v": "Mifare / DESFire / biometric" },
+          { "k": "Topology", "v": "Distributed controllers" },
+          { "k": "Logic", "v": "APB · mantrap · time-zone" }
+        ]
+      },
+      {
+        "name": "Integration & VMS",
+        "description": "VMS (Genetec, Milestone, Bosch) integrated with access control for unified surveillance, alarm-on-event recording, and operator workflow.",
+        "specs": [
+          { "k": "VMS", "v": "Genetec · Milestone · Avigilon · Bosch" },
+          { "k": "Integration", "v": "ACS + VMS + BMS" },
+          { "k": "Workflow", "v": "Single operator console" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-bms-fire-alarm-pa",
+      "cat-bms-scada-head-end"
+    ],
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "cat-bms-energy-management",
+    "service_id": "svc-bms",
+    "slug": "energy-management",
+    "num": "05",
+    "name": "Energy Management",
+    "category_type": "application",
+    "short_blurb": "Sub-metering, energy dashboards, demand-response logic and the analytics that prove operational efficiency.",
+    "intro_paragraphs": [
+      "Energy management turns sub-meter data into operational decisions. We deliver granular sub-metering across HVAC, lighting, IT, plug and process loads, with dashboards that show consumption by zone, sub-system and time-of-day.",
+      "Analytics overlay benchmarks against ASHRAE 90.1 or operator-specific KPIs (EUI, PUE, kWh per occupant, kWh per m²). Demand-response logic shifts loads off-peak where the utility tariff makes it worthwhile."
+    ],
+    "approach_paragraphs": [
+      "Sub-metering granularity follows what the operator can act on — feeder-level for buildings, branch-level for premium tenants, per-equipment for energy-intensive zones.",
+      "Dashboards are designed for two audiences — facility operator (daily) and sustainability lead (monthly). Each gets the visualisation that drives their decision."
+    ],
+    "systems": [
+      {
+        "name": "Sub-metering",
+        "description": "Class-1 sub-meters at feeder, branch and per-equipment level. Communications via Modbus / BACnet into the BMS for trend logging.",
+        "specs": [
+          { "k": "Class", "v": "Class 0.5 / 1" },
+          { "k": "Granularity", "v": "Feeder · branch · equipment" },
+          { "k": "Comms", "v": "Modbus · BACnet" }
+        ]
+      },
+      {
+        "name": "Energy dashboards",
+        "description": "Real-time and historical dashboards showing consumption by zone, sub-system and time-of-day. Benchmarked against operator KPIs.",
+        "specs": [
+          { "k": "KPIs", "v": "EUI · PUE · kWh / m²" },
+          { "k": "Cadence", "v": "Real-time + monthly" },
+          { "k": "Audience", "v": "Operator · sustainability lead" }
+        ]
+      },
+      {
+        "name": "Demand response & DR",
+        "description": "Load-shifting logic for chillers, lighting and HVAC during peak tariff windows. Integration with utility DR programmes where available.",
+        "specs": [
+          { "k": "Trigger", "v": "Tariff · utility signal" },
+          { "k": "Loads shifted", "v": "Chiller · lighting · HVAC" },
+          { "k": "Verification", "v": "IPMVP M&V" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-bms-ddc-field-controls",
+      "cat-solar-energy-audits",
+      "cat-electrical-epms"
+    ],
+    "sort_order": 5,
+    "published": true
+  },
+  {
+    "id": "cat-bms-dcim-integration",
+    "service_id": "svc-bms",
+    "slug": "dcim-integration",
+    "num": "06",
+    "name": "DCIM Integration",
+    "category_type": "specialised",
+    "short_blurb": "Data Centre Infrastructure Management integration with open feeds (Modbus, BACnet, SNMP) into the operator's chosen DCIM platform.",
+    "intro_paragraphs": [
+      "Data centre operators run on DCIM — the platform that consolidates power, cooling, space and IT into one operational view. We deliver the integration layer that feeds BMS, EPMS, fire and security data into the operator's DCIM via open feeds (Modbus, BACnet, SNMP).",
+      "The objective is portability. Standardised tag dictionaries, documented point lists, and joint witness-tests on integration mean the operator inherits a working system — not a vendor lock-in."
+    ],
+    "approach_paragraphs": [
+      "Tag dictionaries are signed off pre-commissioning with the operator's DCIM team. Point lists are documented in the format required by the chosen DCIM (Sunbird, Schneider EcoStruxure, Vertiv Trellis).",
+      "Witness tests on the BMS-DCIM hand-off prove every tag is mapped, scaled and timestamped correctly. Edge cases — comms loss, partial reads, stale data — are tested before sign-off."
+    ],
+    "systems": [
+      {
+        "name": "Open-protocol feeds",
+        "description": "Modbus, BACnet and SNMP feeds from BMS, EPMS, fire and security systems into the operator's DCIM. Vendor-neutral by design.",
+        "specs": [
+          { "k": "Protocols", "v": "Modbus · BACnet · SNMP" },
+          { "k": "Topology", "v": "Vendor-neutral" },
+          { "k": "Update rate", "v": "1 – 60 sec configurable" }
+        ]
+      },
+      {
+        "name": "Tag dictionary & point lists",
+        "description": "Standardised naming conventions for every point, with units, scaling and operational role. Documented format per DCIM vendor requirement.",
+        "specs": [
+          { "k": "Convention", "v": "Operator-aligned naming" },
+          { "k": "Documentation", "v": "DCIM-format point list" },
+          { "k": "Sign-off", "v": "Pre-commissioning" }
+        ]
+      },
+      {
+        "name": "Witness integration tests",
+        "description": "Joint witness tests on the BMS-DCIM hand-off — point-by-point verification, edge-case (comms loss, partial reads) coverage, signed acceptance.",
+        "specs": [
+          { "k": "Coverage", "v": "Every tagged point" },
+          { "k": "Edge cases", "v": "Comms loss · partial · stale" },
+          { "k": "Sign-off", "v": "Operator + UEL joint" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-bms-scada-head-end",
+      "cat-electrical-epms",
+      "cat-hvac-data-center-cooling"
+    ],
+    "sort_order": 6,
+    "published": true
+  },
+
+  {
+    "id": "cat-om-fm-247",
+    "service_id": "svc-om",
+    "slug": "24-7-facility-management",
+    "num": "01",
+    "name": "24/7 Facility Management",
+    "category_type": "application",
+    "short_blurb": "Round-the-clock operations management for HVAC, electrical, plumbing, fire and BMS — single accountable team, single SLA.",
+    "intro_paragraphs": [
+      "Round-the-clock facility management means every MEP system has a qualified operator on duty, every event is logged, and every escalation follows a defined path. Our O&M contracts span all the disciplines we install — a single accountable team, a single performance SLA.",
+      "Coverage is structured by shift, with handover briefings, log-book entries, and exception-reporting into the operator's CAFM. Routine rounds verify equipment status; reactive response handles tickets in priority order."
+    ],
+    "approach_paragraphs": [
+      "Shift structure follows the operator's coverage need — typically 8/8/8 or 12/12 with weekend coverage. Senior engineers cover the morning shift; experienced technicians cover nights.",
+      "Daily handover briefings transfer open tickets, equipment status and overnight incidents. Weekly operations reviews trend KPIs (energy, downtime, ticket-close rate) with the operator."
+    ],
+    "systems": [
+      {
+        "name": "Shift operations",
+        "description": "Multi-shift cover with senior engineer on morning, experienced technicians on nights. Handover briefings, log-book and CAFM updates every shift.",
+        "specs": [
+          { "k": "Pattern", "v": "8/8/8 · 12/12" },
+          { "k": "Handover", "v": "Every shift" },
+          { "k": "Tools", "v": "CAFM + log-book" }
+        ]
+      },
+      {
+        "name": "Routine rounds",
+        "description": "Scheduled rounds verifying equipment status, plant-room conditions, sensor readings against expected ranges. Anomalies logged and ticketed.",
+        "specs": [
+          { "k": "Frequency", "v": "Per shift / equipment class" },
+          { "k": "Checklist", "v": "Equipment-specific" },
+          { "k": "Recording", "v": "Tablet-based" }
+        ]
+      },
+      {
+        "name": "Reactive ticketing",
+        "description": "Priority-based ticket queue (P1–P4) with defined response and resolution SLAs. CAFM-tracked with closure verification.",
+        "specs": [
+          { "k": "Priorities", "v": "P1 – P4" },
+          { "k": "Response SLA", "v": "Per priority" },
+          { "k": "Closure", "v": "Verified by operator" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-om-preventive",
+      "cat-om-rapid-response"
+    ],
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "cat-om-preventive",
+    "service_id": "svc-om",
+    "slug": "preventive-maintenance",
+    "num": "02",
+    "name": "Preventive Maintenance",
+    "category_type": "application",
+    "short_blurb": "OEM-aligned PM schedules loaded into CMMS from the project hand-over dossier — operational on day one of the O&M contract.",
+    "intro_paragraphs": [
+      "Preventive maintenance is the discipline of doing the work before the failure happens. PM schedules are loaded into the CMMS with full asset hierarchy, OEM-specified PM frequencies, spares lists and skill requirements — so the programme is operational from day one of the contract.",
+      "Where we installed the MEP system, the same engineering team's hand-over dossier seeds the PM plan. The asset register comes with manufacturer datasheets, warranties and spares lists already attached."
+    ],
+    "approach_paragraphs": [
+      "Schedules are loaded into CMMS (Maximo, eAM, MaintainX or operator-preferred) with full asset tagging, location hierarchy and OEM-spec frequencies. Annual schedule review tunes frequencies against actual equipment behaviour.",
+      "PM completion is tracked against compliance percentage. Skipped or overdue PMs are escalated. Spares are pre-positioned for high-frequency items."
+    ],
+    "systems": [
+      {
+        "name": "CMMS-loaded schedules",
+        "description": "PM schedules loaded with full asset tagging, OEM frequencies, work-order templates and spares lists. Operational day-one of the contract.",
+        "specs": [
+          { "k": "CMMS", "v": "Maximo · MaintainX · operator-spec" },
+          { "k": "Source", "v": "OEM datasheets + hand-over" },
+          { "k": "Coverage", "v": "Full asset hierarchy" }
+        ]
+      },
+      {
+        "name": "Skill-matched execution",
+        "description": "PMs assigned to technicians by skill match. Critical PMs (chiller overhaul, transformer testing) executed by senior specialists, not generalist staff.",
+        "specs": [
+          { "k": "Skill matrix", "v": "Per-technician" },
+          { "k": "Routing", "v": "Skill + availability" },
+          { "k": "Critical PMs", "v": "Specialist-only" }
+        ]
+      },
+      {
+        "name": "Compliance reporting",
+        "description": "PM compliance % tracked monthly, with overdue escalation, root-cause review and corrective action. KPI feeds operator's monthly ops review.",
+        "specs": [
+          { "k": "KPI", "v": "PM compliance %" },
+          { "k": "Cadence", "v": "Monthly" },
+          { "k": "Escalation", "v": "Defined trigger" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-om-fm-247",
+      "cat-om-predictive",
+      "cat-om-asset-lifecycle"
+    ],
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "cat-om-predictive",
+    "service_id": "svc-om",
+    "slug": "predictive-maintenance",
+    "num": "03",
+    "name": "Predictive Maintenance",
+    "category_type": "specialised",
+    "short_blurb": "BMS-trend analytics, vibration monitoring, IR thermography and harmonic analysis to spot drift before it becomes failure.",
+    "intro_paragraphs": [
+      "Predictive maintenance overlays the BMS trend store with analytics to spot drift before it becomes failure. Chiller approach temperatures, motor vibration where instrumented, harmonic distortion on critical feeders, refrigerant superheat — all signals that something is wrong before the alarm sounds.",
+      "Diagnostics include vibration spectrum analysis on rotating equipment, IR thermography on switchgear and motor terminations, and refrigerant-cycle analysis on chillers."
+    ],
+    "approach_paragraphs": [
+      "Trend baselines are established in the first 30 days of operation. Drift thresholds are set per equipment class with operator sign-off.",
+      "Quarterly diagnostic surveys cover IR thermography, vibration sampling and refrigerant-cycle review. Findings are scheduled into the PM workorder pipeline."
+    ],
+    "systems": [
+      {
+        "name": "Trend analytics",
+        "description": "BMS historian data analysed for approach temperatures, fan/pump curve drift, valve authority degradation and other early-warning signals.",
+        "specs": [
+          { "k": "Source", "v": "BMS historian" },
+          { "k": "Cadence", "v": "Continuous + weekly review" },
+          { "k": "Output", "v": "PM workorder triggers" }
+        ]
+      },
+      {
+        "name": "IR thermography",
+        "description": "Quarterly thermal imaging of switchgear, motor terminations, cable trays and bus trunking — identifies loose connections and asymmetric loading.",
+        "specs": [
+          { "k": "Cadence", "v": "Quarterly + annual full" },
+          { "k": "Tool", "v": "Fluke / FLIR class" },
+          { "k": "Findings", "v": "Logged + photo-tagged" }
+        ]
+      },
+      {
+        "name": "Vibration & refrigerant",
+        "description": "Vibration spectrum sampling on rotating equipment, refrigerant superheat/subcooling logging on chillers — both feed equipment-specific health scores.",
+        "specs": [
+          { "k": "Vibration", "v": "ISO 10816 baseline" },
+          { "k": "Refrigerant", "v": "Superheat + subcooling" },
+          { "k": "Health score", "v": "Equipment-specific" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-om-preventive",
+      "cat-om-asset-lifecycle",
+      "cat-bms-scada-head-end"
+    ],
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "cat-om-asset-lifecycle",
+    "service_id": "svc-om",
+    "slug": "asset-lifecycle-management",
+    "num": "04",
+    "name": "Asset Lifecycle Management",
+    "category_type": "specialised",
+    "short_blurb": "Asset condition tracking, capex planning, replacement scheduling and end-of-life decommissioning over the full asset life.",
+    "intro_paragraphs": [
+      "Asset lifecycle management turns capital equipment into a planned, financially-tracked portfolio. We track condition, residual life, performance degradation and energy efficiency over the full asset life — surfacing capex needs years before they bite the operator's budget.",
+      "End-of-life decommissioning and replacement is staged into the operator's capex planning cycle, with the new equipment specified for current load profile, regulatory framework and energy-efficiency target — not just like-for-like replaced."
+    ],
+    "approach_paragraphs": [
+      "Asset register is tagged with original install date, expected life, residual-life estimate based on condition monitoring, and replacement budget. Reviewed annually with the operator's finance team.",
+      "Replacement planning identifies opportunities — not just obligations. Energy-efficiency upgrade, capacity rightsizing and digital-twin readiness are evaluated at every major replacement."
+    ],
+    "systems": [
+      {
+        "name": "Asset register & condition",
+        "description": "Full asset register with install date, expected life, residual-life estimate, condition score and replacement budget. Updated quarterly.",
+        "specs": [
+          { "k": "Source", "v": "Hand-over dossier + condition" },
+          { "k": "Update", "v": "Quarterly" },
+          { "k": "Score", "v": "Equipment-specific algorithm" }
+        ]
+      },
+      {
+        "name": "Capex planning",
+        "description": "5-year rolling capex plan aligned with operator's finance cycle. Replacement timing, vendor selection and TCO trade-offs documented.",
+        "specs": [
+          { "k": "Horizon", "v": "5-year rolling" },
+          { "k": "Cadence", "v": "Annual review" },
+          { "k": "Trade-offs", "v": "TCO + risk" }
+        ]
+      },
+      {
+        "name": "Decommissioning",
+        "description": "End-of-life decommissioning with refrigerant recovery, asbestos surveys where relevant, and material recycling per IGBC waste-stream guidelines.",
+        "specs": [
+          { "k": "Refrigerant", "v": "Recovered + tracked" },
+          { "k": "Asbestos", "v": "Survey where applicable" },
+          { "k": "Recycling", "v": "IGBC-aligned" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-om-preventive",
+      "cat-om-predictive",
+      "cat-solar-energy-audits"
+    ],
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "cat-om-rapid-response",
+    "service_id": "svc-om",
+    "slug": "rapid-response",
+    "num": "05",
+    "name": "Rapid Response Teams",
+    "category_type": "application",
+    "short_blurb": "Pre-positioned rapid-response teams with critical spares for the top-quartile-impact failure modes — keeping MTTR inside SLA.",
+    "intro_paragraphs": [
+      "Rapid response is the discipline of restoring service quickly when the failure happens anyway. We pre-position teams near major client sites, with critical spares for the top-quartile failure modes — chiller compressors, UPS batteries, breaker mechanisms, BMS controllers.",
+      "MTTR (mean-time-to-repair) is tracked per failure class. The objective is unambiguous: keep the worst-case incident inside the SLA window, every time."
+    ],
+    "approach_paragraphs": [
+      "Failure-mode analysis identifies the top 20% of failures by frequency × downtime impact. Spares for those are pre-positioned; technicians for those are pre-trained.",
+      "Response is rehearsed. Tabletop exercises and live drills cover the worst-case scenarios — chiller failure on the design-day, UPS battery cascade, fire-pump start-up failure."
+    ],
+    "systems": [
+      {
+        "name": "Pre-positioned spares",
+        "description": "Critical spares for the top-quartile failure modes held at regional offices and major sites. Inventory tracked through the CMMS spares module.",
+        "specs": [
+          { "k": "Coverage", "v": "Top 20% failures × impact" },
+          { "k": "Location", "v": "Regional + major site" },
+          { "k": "Tracking", "v": "CMMS spares module" }
+        ]
+      },
+      {
+        "name": "Trained response teams",
+        "description": "Technicians pre-trained on the equipment installed at each site. Senior specialists on call for tier-1 incidents.",
+        "specs": [
+          { "k": "Coverage", "v": "Site-specific equipment" },
+          { "k": "Escalation", "v": "Senior specialist on call" },
+          { "k": "Refresh", "v": "Annual + on change" }
+        ]
+      },
+      {
+        "name": "Drill & rehearsal",
+        "description": "Tabletop exercises quarterly, live drills annually. Worst-case scenarios — chiller failure, UPS cascade, fire-pump start failure — practised end-to-end.",
+        "specs": [
+          { "k": "Tabletop", "v": "Quarterly" },
+          { "k": "Live drill", "v": "Annual" },
+          { "k": "Scope", "v": "Worst-case scenarios" }
+        ]
+      }
+    ],
+    "related_category_ids": [
+      "cat-om-fm-247",
+      "cat-om-asset-lifecycle"
+    ],
+    "sort_order": 5,
+    "published": true
+  }
+]

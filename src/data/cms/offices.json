@@ -1,0 +1,18 @@
+[
+  {
+    "id": "off-hq",
+    "name": "Headquarters",
+    "address": "332, 3rd Floor, A-Block, Spaze IT Park, Sohna Road, Sec-49",
+    "city": "Gurugram",
+    "state": "Haryana",
+    "phone": "0124 419 2527",
+    "email": "info@uelimited.com",
+    "is_hq": true,
+    "sort_order": 1
+  },
+  { "id": "off-ahmedabad", "name": "Ahmedabad Regional Office", "address": "Regional office", "city": "Ahmedabad", "state": "Gujarat", "is_hq": false, "sort_order": 2 },
+  { "id": "off-mumbai", "name": "Mumbai Regional Office", "address": "Regional office", "city": "Mumbai", "state": "Maharashtra", "is_hq": false, "sort_order": 3 },
+  { "id": "off-hyderabad", "name": "Hyderabad Regional Office", "address": "Regional office", "city": "Hyderabad", "state": "Telangana", "is_hq": false, "sort_order": 4 },
+  { "id": "off-bangalore", "name": "Bangalore Regional Office", "address": "Regional office", "city": "Bangalore", "state": "Karnataka", "is_hq": false, "sort_order": 5 },
+  { "id": "off-kolkata", "name": "Kolkata Regional Office", "address": "Regional office", "city": "Kolkata", "state": "West Bengal", "is_hq": false, "sort_order": 6 }
+]

@@ -1,0 +1,217 @@
+[
+  {
+    "id": "svc-civil",
+    "slug": "civil-interior-contractors-in-gurgaon",
+    "num": "01",
+    "name": "Civil & Interior",
+    "short_name": "Civil",
+    "blurb": "Heavy civil foundations, corporate interiors, façade and retrofitting.",
+    "scope_unit": "sq.ft",
+    "accent": "blocks",
+    "intro_paragraphs": [
+      "Civil and interior work is where every other discipline lands. Foundations absorb the loads, façades meet the weather, finishes carry the tenant fit-out — and all of it must hold the MEPF systems that move through it. The discipline is unforgiving of shortcuts: a misaligned pour or a slack slab finish costs months to correct once downstream trades arrive.",
+      "Our civil desk runs the full arc — from soil investigation through structural shell, façade envelope, and end-user finish. Work is scheduled against the MEPF programme so openings, sleeves, cut-outs and penetrations are cast-in, not chipped-in. Handover is against a stamped bill of quantities with a full as-built set."
+    ],
+    "approach_paragraphs": [
+      "We treat the building shell as the primary clash-resolution zone for everything that follows. Structural drawings are coordinated with the MEPF model at LOD 400 before the first pour — sleeves, cast-in inserts, services risers and equipment plinths are placed deliberately, not adapted-to later.",
+      "Third-party inspection runs continuously on critical activities (rebar checks, concrete cube tests, post-tensioning, façade pull-out tests). Finishes follow a sample-mock-up-approval flow before production, so the as-built matches the design intent — not a contractor's interpretation of it."
+    ],
+    "stats": [
+      { "k": "650+", "v": "Projects across civil + interior + MEPF" },
+      { "k": "M25 – M60", "v": "Concrete grades regularly delivered" },
+      { "k": "180 K sq.ft", "v": "Typical commercial fit-out scale" }
+    ],
+    "hero_image_url": "/services/civil-hero.jpg",
+    "hero_image_alt": "Civil and interior construction interior with exposed steel structure",
+    "sort_order": 1,
+    "published": true
+  },
+  {
+    "id": "svc-hvac",
+    "slug": "hvac-company-in-gurgaon",
+    "num": "02",
+    "name": "HVAC",
+    "blurb": "Central chillers, VRF, precision cooling, ventilation, thermal storage, geothermal.",
+    "scope_unit": "TR · CFM",
+    "accent": "fan",
+    "intro_paragraphs": [
+      "HVAC is the firm's founding discipline — the practice began in 1990 as a specialist HVAC contractor and the depth shows. We engineer and install central plants, air-handling systems, terminal devices, and the controls that tie them together, across applications from luxury hotels to ISO-6 semiconductor cleanrooms.",
+      "Every job starts with a granular heat load — room-by-room, equipment-by-equipment — not a rule-of-thumb tonnage. Plant sizing, distribution hydraulics, ductwork, and controls flow from that single source of truth, and the entire system is commissioned to a measurable performance window before handover."
+    ],
+    "approach_paragraphs": [
+      "Heat loads are calculated in Carrier HAP and Trane TRACE 700, cross-validated by E-20 Form. Hydronic networks are sized in Pipe Flow Expert / AFT Fathom against an instrumented pressure drop budget. Airflow is modelled in Ansys Fluent or Autodesk CFD where the application demands it — cleanrooms, atria, white-space data halls.",
+      "Plant rooms and risers are coordinated in Revit (LOD 400) with all other MEPF trades; clashes are resolved before site release, not in the field. Commissioning runs the full L1→L5 ladder — component verification, static testing, start-up, integrated systems test, performance under load — each level signed off before the next begins."
+    ],
+    "stats": [
+      { "k": "29,250 TR", "v": "Cooling installed at SAEL · Jewar" },
+      { "k": "16,000 TR", "v": "High-efficiency plant at Central Secretariat" },
+      { "k": "5,00,000 sqm", "v": "Ducting executed at Central Secretariat" }
+    ],
+    "hero_image_url": "/services/hvac-hero.jpg",
+    "hero_image_alt": "Chiller plant room with chilled-water piping overhead",
+    "sort_order": 2,
+    "published": true
+  },
+  {
+    "id": "svc-electrical",
+    "slug": "electrical-contractors-in-gurgaon",
+    "num": "03",
+    "name": "Electrical & Lighting",
+    "short_name": "Electrical",
+    "blurb": "HT/LT distribution, substations, DG sets, UPS, bus trunking, clean-room lighting.",
+    "scope_unit": "kVA · kW",
+    "accent": "current",
+    "intro_paragraphs": [
+      "Electrical is where reliability is engineered, not specified. Our team delivers high-tension to low-tension distribution, substations and transformers, backup power, switchgear, cable management, earthing and the lighting layer on top — sized for the building it powers and the loads it serves.",
+      "Distribution diagrams are owned end-to-end. Short-circuit analysis, arc-flash modelling, harmonic studies and protection coordination are run before the first cable is pulled. Cable trays and bus trunking are routed in the coordinated MEPF model so service voids stay congestion-free across the building's life."
+    ],
+    "approach_paragraphs": [
+      "Single-line diagrams and earthing schemes are coordinated with the operator's reliability target. For tier-3/4 data centres and semiconductor fabs we design active-active topologies with fault-tolerant segregation; for offices and hotels we design for N+1 plant resilience with reasonable economics. The choice is never default — it follows the load profile.",
+      "Every installation is tested to defined acceptance criteria — insulation resistance, polarisation index, primary injection on relays, load-bank testing for DG and UPS. Documentation hands over to the operator's CMMS so the asset register starts day one with verified data."
+    ],
+    "stats": [
+      { "k": "33 / 22 / 11 kV", "v": "HT systems engineered & installed" },
+      { "k": "₹400+ Cr", "v": "Banking credit limit for procurement" },
+      { "k": "200+", "v": "T&C specialists for electrical handover" }
+    ],
+    "hero_image_url": "/services/electrical-hero.jpg",
+    "hero_image_alt": "Electrical substation interior with switchgear and bus trunking",
+    "sort_order": 3,
+    "published": true
+  },
+  {
+    "id": "svc-plumbing",
+    "slug": "plumbing-services-in-gurgaon",
+    "num": "04",
+    "name": "Plumbing & Public Health",
+    "short_name": "Plumbing",
+    "blurb": "WTP/STP/ETP plants, industrial piping, hydropneumatic, steam boilers, rainwater harvesting.",
+    "scope_unit": "LPM · KL",
+    "accent": "droplets",
+    "intro_paragraphs": [
+      "Plumbing and public health engineering covers the building's entire water and effluent story — from the borewell or municipal tap through treatment, distribution, fixture supply, drainage and effluent return. It is hidden infrastructure that defines whether a building is comfortable to occupy or a continuous source of complaints.",
+      "We deliver pressurised cold and hot water systems, treated water for cooling towers and process plants, sewage and effluent treatment, and the high-purity piping that pharma, semiconductor and laboratory environments require. Hydraulics are designed, not assumed."
+    ],
+    "approach_paragraphs": [
+      "Hydraulic networks are modelled in AFT Fathom and Pipe Flow Expert against a real demand profile — peak, average, simultaneity factors. Pump sizing is verified against duty-standby logic, VFD control curves, and head-loss budgets that include actual fitting counts. Pressure-reducing zones are deliberate, not ad-hoc.",
+      "Water-treatment plants are sized against the source-water analysis, the consumer demand and the discharge consent. Membrane systems, multi-grade filters, softeners and dosing skids are specified to a clear treatment objective — not as a generic 'WTP block' on the BOQ."
+    ],
+    "stats": [
+      { "k": "1,00,000 m", "v": "Piping executed at Central Secretariat" },
+      { "k": "WTP/STP/ETP", "v": "Full treatment trains regularly delivered" },
+      { "k": "SS 316 · PP-H", "v": "High-purity piping for semiconductor process loads" }
+    ],
+    "hero_image_url": "/services/plumbing-hero.jpg",
+    "hero_image_alt": "Industrial plumbing room with stainless steel piping arrays",
+    "sort_order": 4,
+    "published": true
+  },
+  {
+    "id": "svc-firefighting",
+    "slug": "fire-fighting-contractors-in-gurgaon",
+    "num": "05",
+    "name": "Firefighting & Safety",
+    "short_name": "Firefighting",
+    "blurb": "Hydrant, sprinkler, gas suppression, smoke detection, NBC compliance.",
+    "scope_unit": "NFPA · IS",
+    "accent": "pulse",
+    "intro_paragraphs": [
+      "Firefighting is a code-led discipline — NBC 2016, NFPA 13/72, local fire authority NOC — but its execution is everything. A sprinkler that cannot prove its flow at the most remote head is a paper system. A gas-suppression release that interlocks badly is a hazard, not a defence.",
+      "We deliver fire hydrants, automatic sprinklers, clean-agent gas suppression, smoke detection and evacuation systems across commercial, healthcare, industrial and data-centre facilities. Every system is hydraulically calculated, pressure-tested, and witness-commissioned with the local fire authority before NOC is issued."
+    ],
+    "approach_paragraphs": [
+      "Sprinkler systems are designed to NFPA 13 — density, area of operation, K-factor and most-remote-head hydraulic calculation locked at design freeze. Pre-action systems for data halls are UL/FM-listed, double-interlocked where the operator requires, and integrated with the BMS for alarm hierarchy and false-trip prevention.",
+      "Gas suppression (NOVEC 1230, FM-200, IG-541) is sized against room volume with leakage compensation per NFPA 2001. Detection is cross-zoned for release; ventilation is interlocked for shut-down; doors are interlocked closed during release. Discharge testing is performed on commissioning."
+    ],
+    "stats": [
+      { "k": "Zero", "v": "Fatalities · last 5 years" },
+      { "k": "ISO 45001", "v": "Occupational Health & Safety certified" },
+      { "k": "NFPA 13/72 · NBC 2016", "v": "Codes routinely delivered against" }
+    ],
+    "hero_image_url": "/services/firefighting-hero.jpg",
+    "hero_image_alt": "Fire pump house with red pumps and pressure piping",
+    "sort_order": 5,
+    "published": true
+  },
+  {
+    "id": "svc-solar",
+    "slug": "solar-epc-contractors-in-gurgaon",
+    "num": "06",
+    "name": "Solar & Renewable",
+    "short_name": "Solar",
+    "blurb": "Rooftop and ground-mounted solar, net metering, LEED/IGBC compliance, energy audits.",
+    "scope_unit": "kWp",
+    "accent": "sun",
+    "intro_paragraphs": [
+      "Solar is the firm's renewable energy practice — rooftop and ground-mounted PV plants engineered for irradiance, structural load, electrical safety and a measurable return. It pairs naturally with our electrical, BMS and energy-audit capability, so the generated power is metered, monitored and integrated into the building's broader energy strategy.",
+      "We have delivered solar EPC scopes from rooftop installations on warehouses and corporate campuses to integrated solar at the Ingka (IKEA) mixed-use development. Net metering, inverter selection, string sizing, and grid synchronisation are all in-house."
+    ],
+    "approach_paragraphs": [
+      "Generation is modelled in PVsyst against site-specific irradiance, tilt and shading. Mounting structures are designed to local wind and seismic load. String sizing follows inverter MPPT windows with margin for module degradation and temperature derating.",
+      "Grid synchronisation, net-metering hardware and protection schemes are coordinated with the local DISCOM. Performance is benchmarked against PR (performance ratio) and reported through the building's BMS or a dedicated solar SCADA — so the asset is monitored, not just installed."
+    ],
+    "stats": [
+      { "k": "Ingka Centre", "v": "Rooftop + integrated solar (IKEA)" },
+      { "k": "LEED · IGBC", "v": "Green-rating-aligned design" },
+      { "k": "Net metering", "v": "DISCOM coordination in-house" }
+    ],
+    "hero_image_url": "/services/solar-hero.jpg",
+    "hero_image_alt": "Utility-scale solar PV array at twilight",
+    "sort_order": 6,
+    "published": true
+  },
+  {
+    "id": "svc-bms",
+    "slug": "ibms",
+    "num": "07",
+    "name": "Building Management Systems",
+    "short_name": "BMS",
+    "blurb": "Fire alarm, CCTV, access control, DDC, energy management, SCADA integration.",
+    "scope_unit": "Points",
+    "accent": "graph",
+    "intro_paragraphs": [
+      "Building management is the controls layer that turns a building of disparate systems into an operational asset. We deliver Direct Digital Control (DDC) for HVAC and plumbing, SCADA head-ends and historians, electrical power monitoring, fire alarm and PA, CCTV, access control and IBMS integration — built to BTL-certified controllers and vendor-neutral wherever possible.",
+      "Our BMS scope deliberately includes the operator hand-off: tag dictionaries signed off pre-commissioning, point lists witnessed during integration, alarm hierarchies pre-agreed with the facility team. The system isn't installed for the contractor — it's installed for the people who will run the building for the next twenty years."
+    ],
+    "approach_paragraphs": [
+      "Field controllers are selected against the point count and the protocol mix — BACnet/IP, Modbus, KNX, LON where legacy demands it. SCADA head-ends are configured with role-based access, alarm prioritisation and trend logging from day one. Reports are scheduled to land in the operator's inbox without further intervention.",
+      "DCIM integration on data-centre projects is built on open feeds (Modbus/BACnet/SNMP) into the operator's chosen platform. Standardised tag dictionaries make the migration painless. Joint witness-tests on BMS-to-DCIM hand-off mean the operator never inherits a black box."
+    ],
+    "stats": [
+      { "k": "BTL-certified", "v": "Controllers used across HVAC/electrical/fire" },
+      { "k": "Modbus · BACnet · SNMP", "v": "Open feeds for DCIM integration" },
+      { "k": "1,450+ points", "v": "Typical IBMS scope on a medium-large building" }
+    ],
+    "hero_image_url": "/services/bms-hero.jpg",
+    "hero_image_alt": "BMS SCADA control room with video wall and dashboards",
+    "sort_order": 7,
+    "published": true
+  },
+  {
+    "id": "svc-om",
+    "slug": "operations-maintenance",
+    "num": "08",
+    "name": "Integrated O&M",
+    "short_name": "O&M",
+    "blurb": "24/7 facility management, preventive + predictive maintenance, asset lifecycle, rapid response.",
+    "scope_unit": "SLA · MTTR",
+    "accent": "graph",
+    "intro_paragraphs": [
+      "Operations and maintenance is the discipline that pays off the engineering decisions made during construction. We deliver integrated facility management contracts that span all the systems we install — HVAC, electrical, plumbing, fire, BMS, civil — under one accountable team, with a single performance SLA.",
+      "Our O&M model is built around preventive schedules generated from OEM datasheets, predictive analytics layered on top of BMS data, and rapid-response teams pre-positioned near major client sites. The objective is unchanged: keep the asset producing the comfort, the process condition or the uptime it was designed for, for its full economic life."
+    ],
+    "approach_paragraphs": [
+      "Preventive schedules are loaded into a CMMS with full asset hierarchy from day one — the same hand-over dossier we provide at construction completion seeds the maintenance plan. Equipment-specific PM frequencies, spares lists and skill requirements are pre-tagged so the schedule is operational from the first day of the contract.",
+      "Predictive maintenance overlays the BMS trend store — chiller approach temperatures, motor vibration where instrumented, harmonic distortion on critical feeders — to spot drift before it becomes a failure. Rapid-response teams hold spares for the top-quartile-impact failures, so MTTR on the worst-case incidents stays inside the SLA."
+    ],
+    "stats": [
+      { "k": "24/7", "v": "Facility management coverage" },
+      { "k": "ISO 45001", "v": "Safety-led O&M operations" },
+      { "k": "100+", "v": "T&C and service specialists across active sites" }
+    ],
+    "hero_image_url": "/services/om-hero.jpg",
+    "hero_image_alt": "Engineer walking through industrial plant corridor",
+    "sort_order": 8,
+    "published": true
+  }
+]
