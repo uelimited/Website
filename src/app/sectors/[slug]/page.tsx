@@ -7,6 +7,8 @@ import {
   getAllServices,
   getSectorWithProjects,
   getLedgerBySector,
+  getCaseStudyHrefsByLedgerId,
+  getSectorSlugById,
 } from "@/lib/cms";
 import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
@@ -54,6 +56,8 @@ export default async function SectorDetailPage({
   const serviceFilter = services
     .filter((s) => usedServiceIds.has(s.id))
     .map((s) => ({ id: s.id, name: s.short_name ?? s.name }));
+  const caseStudyHrefs = getCaseStudyHrefsByLedgerId();
+  const sectorSlugById = getSectorSlugById();
 
   return (
     <>
@@ -290,13 +294,15 @@ export default async function SectorDetailPage({
               showSectorTag={false}
               enableSearch={ledger.length > 10}
               initialCount={12}
+              caseStudyHrefs={caseStudyHrefs}
+              sectorSlugById={sectorSlugById}
             />
             <div style={{ marginTop: 36 }}>
               <Link
-                href="/track-record"
+                href={`/work?sector=${sector.slug}`}
                 className="inline-flex items-center gap-2 text-[14px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
               >
-                Browse the full multi-sector track record
+                Explore {sector.name.toLowerCase()} in the full project hub
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>

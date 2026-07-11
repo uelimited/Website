@@ -40,7 +40,7 @@ export function ArticleStickyBar({
               return (
                 <Link
                   key={p.code}
-                  href="/projects"
+                  href="/work"
                   className="ue-article-bar__card"
                 >
                   <span

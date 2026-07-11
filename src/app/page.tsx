@@ -29,8 +29,8 @@ export default function HomePage() {
                 asChild
                 className="rounded-full h-11 px-6 text-[15px] font-medium"
               >
-                <Link href="/projects">
-                  Review projects
+                <Link href="/work">
+                  Explore the work
                   <ArrowRight className="size-4 ml-1" aria-hidden />
                 </Link>
               </Button>

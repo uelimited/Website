@@ -7,7 +7,10 @@ import {
   getAllSectors,
   getServiceWithCategoriesAndProjects,
   getLedgerByService,
+  getCaseStudyHrefsByLedgerId,
+  getSectorSlugById,
 } from "@/lib/cms";
+import { serviceParamFromId } from "@/lib/ledger-filters";
 import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
 import { ProjectLedger } from "@/components/site/project-ledger";
@@ -62,6 +65,8 @@ export default async function ServiceLandingPage({
   const ledgerSectorFilter = sectors
     .filter((s) => usedSectorIds.has(s.id))
     .map((s) => ({ id: s.id, name: s.name }));
+  const caseStudyHrefs = getCaseStudyHrefsByLedgerId();
+  const sectorSlugById = getSectorSlugById();
 
   const subServices = categories.map((c) => ({
     slug: c.slug,
@@ -386,13 +391,15 @@ export default async function ServiceLandingPage({
               showSectorTag
               enableSearch={serviceLedger.length > 10}
               initialCount={12}
+              caseStudyHrefs={caseStudyHrefs}
+              sectorSlugById={sectorSlugById}
             />
             <div style={{ marginTop: 36 }}>
               <Link
-                href="/track-record"
+                href={`/work?service=${serviceParamFromId(service.id)}`}
                 className="inline-flex items-center gap-2 text-[14px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
               >
-                Browse the full track record
+                Explore every {inlineName(service.name)} project in the hub
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>

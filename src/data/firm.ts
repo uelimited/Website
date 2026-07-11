@@ -560,13 +560,13 @@ export const PROJECT_CATEGORIES = [
  * Primary navigation — collapsed to four peers + the Contact CTA (the
  * wordmark is the home link). "Capabilities" and "Sectors" open
  * mega-menus in the header. "Work" is the unified case-study + order-book
- * hub; it points at /projects until the /work hub ships (Phase 3), then
- * repoints to /work. Approach + Culture fold into The firm / footer.
+ * hub at /work (merges the former /projects + /track-record). Approach +
+ * Culture fold into The firm / footer.
  */
 export const NAV = [
   { href: "/services", label: "Capabilities", menu: "capabilities" as const },
   { href: "/sectors",  label: "Sectors",      menu: "sectors" as const },
-  { href: "/projects", label: "Work" },
+  { href: "/work",     label: "Work" },
   { href: "/firm",     label: "The firm" },
 ];
 

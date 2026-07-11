@@ -151,7 +151,7 @@ export function LandmarkProjects() {
         </div>
 
         <div className="ue-landmark__foot">
-          <Link href="/projects" className="ue-landmark__more">
+          <Link href="/work" className="ue-landmark__more">
             Review full project record
             <ArrowRight className="size-4" aria-hidden />
           </Link>

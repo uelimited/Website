@@ -107,7 +107,7 @@ export default async function ProjectDetailPage({
         <div className="ue-container">
           <Breadcrumb
             items={[
-              { label: "Projects", href: "/projects" },
+              { label: "Work", href: "/work" },
               {
                 label: primarySector?.name ?? project.project_type,
                 href: primarySector
