@@ -23,6 +23,12 @@
   --paper:      #FFFFFF;
   --paper-soft: #FAFAFB;
 
+  /* ---------- LAYOUT ---------- */
+  /* Height of the sticky glass header. Pinned (position: sticky)
+     sections offset by this so their content never sits under the
+     nav while pinned. */
+  --header-h: 64px;
+
   /* ---------- COLOR — the one accent (muted system blue) ---------- */
   --accent-700: #1E40AF;
   --accent-600: #2D55C8;

@@ -19,9 +19,15 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Menu, ArrowRight } from "lucide-react";
-import { NAV, DISCIPLINES } from "@/data/firm";
+import { NAV, SECTOR_NAV, DISCIPLINES } from "@/data/firm";
 import { Wordmark } from "./wordmark";
 import { cn } from "@/lib/utils";
+
+type NavItem = {
+  href: string;
+  label: string;
+  menu?: "capabilities" | "sectors";
+};
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -43,28 +49,28 @@ export function SiteHeader() {
       className={cn("ue-header", scrolled && "ue-header--scrolled")}
     >
       <div className="inner">
-        <Link href="/" className="brand">
+        <Link href="/" className="brand" aria-label="Unique Engineers — home">
           <Wordmark />
         </Link>
 
-        {/* Desktop nav — shadcn NavigationMenu. Preserves sitemap order
-            (Home, Services, Projects, Firm, Contact), with Services
-            as the dropdown trigger. */}
+        {/* Desktop nav — four peers (Capabilities, Sectors, Work, The firm).
+            Capabilities and Sectors open mega-menus; the rest are links.
+            The wordmark is the home link, so Home is not repeated. */}
         <NavigationMenu className="hidden md:flex ml-auto" align="start">
           <NavigationMenuList className="gap-0">
-            {NAV.map((item) =>
-              item.href === "/services" ? (
+            {(NAV as NavItem[]).map((item) =>
+              item.menu ? (
                 <NavigationMenuItem key={item.href}>
                   <NavigationMenuTrigger
                     className={cn(
                       "ue-nav-link",
-                      isActive("/services") && "ue-nav-link--active",
+                      isActive(item.href) && "ue-nav-link--active",
                     )}
                   >
-                    Services
+                    {item.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="p-0">
-                    <ServicesMenu />
+                    {item.menu === "sectors" ? <SectorsMenu /> : <CapabilitiesMenu />}
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               ) : (
@@ -99,7 +105,7 @@ export function SiteHeader() {
   );
 }
 
-function ServicesMenu() {
+function CapabilitiesMenu() {
   return (
     <div className="ue-services-menu">
       <div className="ue-services-menu__head">
@@ -110,7 +116,7 @@ function ServicesMenu() {
           className="text-[color:var(--ink-500)]"
           style={{ fontSize: 14, margin: "8px 0 0", maxWidth: "36ch" }}
         >
-          Six disciplines under one delivery standard.
+          Eight disciplines under one delivery standard.
         </p>
       </div>
       <div className="ue-services-menu__grid">
@@ -140,7 +146,49 @@ function ServicesMenu() {
   );
 }
 
+function SectorsMenu() {
+  return (
+    <div className="ue-services-menu">
+      <div className="ue-services-menu__head">
+        <div className="ue-eyebrow" style={{ margin: 0 }}>
+          Sectors
+        </div>
+        <p
+          className="text-[color:var(--ink-500)]"
+          style={{ fontSize: 14, margin: "8px 0 0", maxWidth: "36ch" }}
+        >
+          Nine industries — led by data centres, semiconductor and airports.
+        </p>
+      </div>
+      <div className="ue-services-menu__grid">
+        {SECTOR_NAV.map((s, i) => (
+          <NavigationMenuLink
+            key={s.slug}
+            render={<Link href={`/sectors/${s.slug}`} />}
+            className="ue-services-menu__item group"
+          >
+            <span className="num">{String(i + 1).padStart(2, "0")}</span>
+            <span className="body">
+              <span className="name">{s.name}</span>
+              <span className="blurb">{s.blurb}</span>
+            </span>
+          </NavigationMenuLink>
+        ))}
+      </div>
+      <div className="ue-services-menu__foot">
+        <Link
+          href="/sectors"
+          className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
+        >
+          View all sectors <ArrowRight className="size-3.5" aria-hidden />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 function MobileMenu() {
+  const primary = NAV as NavItem[];
   return (
     <div className="md:hidden">
       <Sheet>
@@ -152,11 +200,11 @@ function MobileMenu() {
         </SheetTrigger>
         <SheetContent
           side="right"
-          className="bg-[color:var(--paper)] border-l-[color:var(--border-color)]"
+          className="bg-[color:var(--paper)] border-l-[color:var(--border-color)] overflow-y-auto"
         >
           <SheetTitle className="sr-only">Navigation</SheetTitle>
           <div className="pt-12 px-6 flex flex-col gap-1">
-            {NAV.map((item) => (
+            {primary.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -165,6 +213,25 @@ function MobileMenu() {
                 {item.label}
               </Link>
             ))}
+            {/* Sector quick-links — surface the high-value verticals directly */}
+            <div className="pt-5 pb-1 text-[12px] font-medium tracking-[0.02em] text-[color:var(--ink-400)]">
+              Sectors
+            </div>
+            {SECTOR_NAV.slice(0, 4).map((s) => (
+              <Link
+                key={s.slug}
+                href={`/sectors/${s.slug}`}
+                className="py-2 text-[15px] text-[color:var(--ink-700)]"
+              >
+                {s.name}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              className="mt-4 inline-flex items-center justify-center rounded-full bg-[color:var(--accent-500)] px-5 h-11 text-[15px] font-medium text-white"
+            >
+              Contact
+            </Link>
           </div>
         </SheetContent>
       </Sheet>

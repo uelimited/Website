@@ -23,6 +23,7 @@ import type {
   ProjectService,
   ProjectServiceCategory,
   ProjectSector,
+  LedgerEntry,
 } from "@/data/cms/types";
 
 import servicesJson from "@/data/cms/services.json";
@@ -38,6 +39,7 @@ import journeyJson from "@/data/cms/journey.json";
 import testimonialsJson from "@/data/cms/testimonials.json";
 import certificationsJson from "@/data/cms/certifications.json";
 import officesJson from "@/data/cms/offices.json";
+import projectLedgerJson from "@/data/cms/project_ledger.json";
 
 // -----------------------------------------------------------------
 // Type-safe casts of the raw JSON imports
@@ -57,6 +59,7 @@ const JOURNEY = journeyJson as JourneyMilestone[];
 const TESTIMONIALS = testimonialsJson as Testimonial[];
 const CERTIFICATIONS = certificationsJson as Certification[];
 const OFFICES = officesJson as Office[];
+const PROJECT_LEDGER = projectLedgerJson as LedgerEntry[];
 
 // -----------------------------------------------------------------
 // Simple comparators
@@ -373,6 +376,69 @@ export function getSectorWithProjects(slug: string): {
     .map((id) => CLIENTS.find((c) => c.id === id))
     .filter((c): c is Client => Boolean(c));
   return { sector, projects, clients };
+}
+
+// -----------------------------------------------------------------
+// Project ledger — the full 10-year order book (consolidated)
+// -----------------------------------------------------------------
+
+const byLedgerValueDesc = (a: LedgerEntry, b: LedgerEntry) =>
+  b.value_cr - a.value_cr;
+
+export type LedgerStats = {
+  count: number;
+  total_cr: number;
+  total_display: string;
+};
+
+/** Format a crore figure the way the ledger displays values. */
+function formatCr(cr: number): string {
+  if (cr >= 10) return `₹${Math.round(cr).toLocaleString("en-IN")} Cr`;
+  if (cr >= 1) return `₹${cr.toFixed(1)} Cr`;
+  return `₹${Math.round(cr * 100)} L`;
+}
+
+function statsFor(entries: LedgerEntry[]): LedgerStats {
+  const total = entries.reduce((sum, e) => sum + e.value_cr, 0);
+  return {
+    count: entries.length,
+    total_cr: total,
+    total_display: formatCr(total),
+  };
+}
+
+/** Every ledger project, highest value first. */
+export function getProjectLedger(): LedgerEntry[] {
+  return PROJECT_LEDGER.slice().sort(byLedgerValueDesc);
+}
+
+/** Ledger projects in one sector (industry), highest value first. */
+export function getLedgerBySector(sectorId: string): LedgerEntry[] {
+  return PROJECT_LEDGER.filter((e) => e.sector_id === sectorId)
+    .slice()
+    .sort(byLedgerValueDesc);
+}
+
+/** Ledger projects with a given service in scope, highest value first. */
+export function getLedgerByService(serviceId: string): LedgerEntry[] {
+  return PROJECT_LEDGER.filter((e) => e.service_ids.includes(serviceId))
+    .slice()
+    .sort(byLedgerValueDesc);
+}
+
+/** Headline count + cumulative value across the whole ledger. */
+export function getLedgerStats(): LedgerStats {
+  return statsFor(PROJECT_LEDGER);
+}
+
+/** Headline count + cumulative value for one sector's ledger. */
+export function getLedgerStatsForSector(sectorId: string): LedgerStats {
+  return statsFor(PROJECT_LEDGER.filter((e) => e.sector_id === sectorId));
+}
+
+/** Headline count + cumulative value for one service's ledger. */
+export function getLedgerStatsForService(serviceId: string): LedgerStats {
+  return statsFor(PROJECT_LEDGER.filter((e) => e.service_ids.includes(serviceId)));
 }
 
 /**

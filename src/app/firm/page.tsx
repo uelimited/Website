@@ -20,8 +20,8 @@ const RECORD: [string, string][] = [
   ["Operating region", "India + SAARC"],
   ["Years in practice", `${YEARS_IN_PRACTICE}+`],
   ["States executed", "23"],
-  ["Net worth", "~₹1,800 Cr"],
-  ["Project handling capacity", "₹1,000+ Cr"],
+  ["Current order book", "~₹450 Cr"],
+  ["Certifications", "ISO 9001 · 14001 · 45001"],
 ];
 
 const VALUES = [
@@ -68,10 +68,10 @@ export default function FirmPage() {
             >
               <p style={{ margin: 0 }}>
                 {FIRM.legalName} was founded in 1990 in Gurugram as a
-                specialist HVAC contractor, by two mechanical engineers
-                with a shared discipline for technical depth. Thirty-five
-                years later, the firm operates across India and delivers
-                select engagements in neighbouring countries.
+                specialist HVAC contractor, by a group of mechanical
+                engineers with a shared discipline for technical depth.
+                Thirty-five years later, the firm operates across India
+                and delivers select engagements in neighbouring countries.
               </p>
               <p style={{ marginTop: 24 }}>
                 Work is undertaken by in-house engineers, not brokered.

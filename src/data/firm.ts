@@ -12,7 +12,10 @@
 export const FIRM = {
   legalName: "Unique Engineers Limited",
   brand: "Unique Engineers",
-  foundedYear: 1992,
+  // Operationally founded 1990 (the founding partnership); the entity was
+  // legally incorporated in 1992. Client-confirmed canonical year: 1990.
+  foundedYear: 1990,
+  incorporatedYear: 1992,
   website: "uniqueengineersltd.com",
   linkedIn: "https://www.linkedin.com/company/uniqueengineers",
   blog: "https://beta.uniqueengineersltd.com/blog",
@@ -29,7 +32,7 @@ export const FIRM = {
   hours: "Mon–Fri · 09:30–18:30 IST",
 };
 
-// Hard-coded to match the company deck (FY 24/25). Founded 1992.
+// Years in practice, from the 1990 founding ("35+ years").
 export const YEARS_IN_PRACTICE = 35;
 
 export const HERO = {
@@ -41,20 +44,27 @@ export const HERO = {
 
 /**
  * Company overview block — lead paragraph + six headline figures.
- * Source: the company's FY 24/25 deck.
+ *
+ * Figures are engineering-scale and independently defensible only.
+ * Ledger-derived counts (170 projects, ₹3,422 Cr cumulative contract
+ * value) come from project_ledger.json and match the /work hub. The
+ * TR figure aggregates the flagship cooling plants (Central Secretariat
+ * 16,000 + Tabreed 30,000 + SAEL 29,250). Contested deck financials
+ * (₹534 Cr turnover, ₹1,800 Cr net worth) are deliberately NOT shown —
+ * they conflict with the audited Infomerics rating report.
  */
 export const OVERVIEW = {
   eyebrow: "Company overview",
   title: "A multi-disciplinary general contractor.",
   lead:
-    "Unique Engineers Limited is a premier multi-disciplinary general contracting company delivering complex EPC projects across India, with in-house capabilities across civil construction, MEPF services, solar projects and integrated building and infrastructure systems.",
+    "Unique Engineers Limited is a multi-disciplinary general contractor delivering complex EPC projects across India, with in-house teams for civil construction, MEPF services, solar and integrated building systems — from data centres and semiconductor cleanrooms to airports, hospitals and district cooling.",
   stats: [
-    { n: "35",         unit: "",    l: "Years of experience" },
-    { n: "534",        unit: "₹ Cr", l: "Turnover · FY 24/25" },
-    { n: "650",        unit: "",    l: "Projects completed" },
-    { n: "2,500",      unit: "",    l: "Workforce strength" },
-    { n: "1,000",      unit: "₹ Cr", l: "Project handling capacity" },
-    { n: "10",         unit: "days", l: "Pan-India mobilisation" },
+    { n: "35",     unit: "+",    l: "Years, since 1990" },
+    { n: "170",    unit: "+",    l: "Projects delivered · last decade" },
+    { n: "3,422",  unit: "₹ Cr", l: "Cumulative contract value" },
+    { n: "75,000", unit: "TR",   l: "Cooling engineered · flagships" },
+    { n: "23",     unit: "",     l: "States executed" },
+    { n: "9",      unit: "",     l: "Industries served" },
   ],
 };
 
@@ -341,18 +351,18 @@ export const PILLARS = [
   },
   {
     num: "03",
-    title: "Financial Strength",
-    lead: "Balance-sheet depth for large, multi-year mandates.",
+    title: "Scale & standing",
+    lead: "Order-book depth and reach for large, multi-year mandates.",
     points: [
-      { k: "₹1,800 Cr", l: "Approx. company net worth" },
-      { k: "₹400+ Cr", l: "Banking credit limit" },
-      { k: "₹300+ Cr", l: "Procurement budget" },
+      { k: "₹450 Cr", l: "Current order book" },
+      { k: "₹3,422 Cr", l: "Delivered · last decade" },
+      { k: "BBB-", l: "Infomerics credit rating" },
     ],
   },
   {
     num: "04",
     title: "Exceptional Team",
-    lead: "Domain-deep engineers, led by founder-directors since 1992.",
+    lead: "Domain-deep engineers, led by founder-directors since 1990.",
     points: [
       { k: "275+", l: "Managers & engineers" },
       { k: "15+ yrs", l: "Average manager experience" },
@@ -546,12 +556,30 @@ export const PROJECT_CATEGORIES = [
   "Data Centre",
 ];
 
+/**
+ * Primary navigation — collapsed to four peers + the Contact CTA (the
+ * wordmark is the home link). "Capabilities" and "Sectors" open
+ * mega-menus in the header. "Work" is the unified case-study + order-book
+ * hub; it points at /projects until the /work hub ships (Phase 3), then
+ * repoints to /work. Approach + Culture fold into The firm / footer.
+ */
 export const NAV = [
-  { href: "/",         label: "Home" },
-  { href: "/services", label: "Capabilities" },
-  { href: "/sectors",  label: "Sectors" },
-  { href: "/projects", label: "Projects" },
-  { href: "/approach", label: "Approach" },
-  { href: "/firm",     label: "Firm" },
-  { href: "/contact",  label: "Contact" },
+  { href: "/services", label: "Capabilities", menu: "capabilities" as const },
+  { href: "/sectors",  label: "Sectors",      menu: "sectors" as const },
+  { href: "/projects", label: "Work" },
+  { href: "/firm",     label: "The firm" },
+];
+
+/** Sectors mega-menu — lead with the high-value verticals (data centre,
+ *  semiconductor, airport, government) per the sector-first IA. */
+export const SECTOR_NAV = [
+  { slug: "data-centre",             name: "Data Centre",                blurb: "Mission-critical MEPF for colocation & hyperscale." },
+  { slug: "semiconductor-cleanroom", name: "Semiconductor & Cleanroom",  blurb: "ISO 6/7/8 cleanrooms, process gases, precision utilities." },
+  { slug: "airport-public-venues",   name: "Airport & Public Venues",    blurb: "Full-scope MEPF for airports and large venues." },
+  { slug: "healthcare",              name: "Healthcare",                 blurb: "Hospitals and multi-specialty campuses." },
+  { slug: "industrial-manufacturing", name: "Industrial & Manufacturing", blurb: "Factory floors, process plants, district cooling." },
+  { slug: "education-research",       name: "Education & Research",       blurb: "Universities and research institutes, incl. net-zero." },
+  { slug: "corporate-retail",         name: "Corporate & Retail",         blurb: "Towers, malls and mixed-use developments." },
+  { slug: "hospitality",              name: "Hospitality",                blurb: "Five-star hotels and resort campuses." },
+  { slug: "residential",              name: "Residential",                blurb: "Premium and luxury residential developments." },
 ];

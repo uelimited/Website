@@ -32,7 +32,9 @@ export function SiteFooter() {
           <h6>Firm</h6>
           <ul>
             <li><Link href="/firm">The firm</Link></li>
+            <li><Link href="/careers">Why join us</Link></li>
             <li><Link href="/projects">Projects</Link></li>
+            <li><Link href="/track-record">Track record</Link></li>
             <li><Link href="/services">Capabilities</Link></li>
             <li><Link href="/contact">Contact</Link></li>
             <li>

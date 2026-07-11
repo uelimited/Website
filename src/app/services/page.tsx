@@ -1,5 +1,8 @@
-import Link from "next/link";
 import { getAllServices } from "@/lib/cms";
+import {
+  ServicesExplorer,
+  type ExplorerService,
+} from "@/components/site/services-explorer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,33 +12,28 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesIndexPage() {
-  const services = getAllServices();
+  const services: ExplorerService[] = getAllServices().map((s) => ({
+    slug: s.slug,
+    num: s.num,
+    name: s.name,
+    blurb: s.blurb,
+    tagline: s.tagline ?? s.blurb,
+    hero_image_url: s.hero_image_url ?? null,
+  }));
 
   return (
     <section className="ue-section">
       <div className="ue-container">
-        <p className="ue-eyebrow">Capabilities</p>
+        <p className="ue-eyebrow">What we do</p>
         <h1 className="ue-h1" style={{ maxWidth: "15ch" }}>
           Eight disciplines. One delivery standard.
         </h1>
         <p className="ue-lead" style={{ marginTop: 32 }}>
-          Every discipline is delivered by in-house engineers. Design is not brokered.
+          Every discipline is delivered by in-house engineers — the people who
+          design it are the people who build it.
         </p>
 
-        <div style={{ marginTop: 72, borderTop: "1px solid var(--border-color)" }}>
-          {services.map((d) => (
-            <Link
-              key={d.slug}
-              href={`/services/${d.slug}`}
-              className="ue-service-row"
-            >
-              <span className="num">{d.num}</span>
-              <span className="name">{d.name}</span>
-              <span className="desc">{d.blurb}</span>
-              <span className="scope">{d.scope_unit}</span>
-            </Link>
-          ))}
-        </div>
+        <ServicesExplorer services={services} />
       </div>
     </section>
   );

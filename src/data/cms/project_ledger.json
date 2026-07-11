@@ -1,0 +1,2945 @@
+[
+  {
+    "id": "ingka-sector-51-noida",
+    "name": "Ingka (IKEA), Sector 51 Noida",
+    "client": "Ingka (IKEA)",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting",
+      "svc-solar"
+    ],
+    "value_cr": 347.42,
+    "value_display": "₹347 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "common-central-secretariat",
+    "name": "Common Central Secretariat, New Delhi",
+    "client": "CPWD (Common Central Secretariat)",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac",
+      "svc-firefighting"
+    ],
+    "value_cr": 224.23,
+    "value_display": "₹224 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "foxconn-a3-building",
+    "name": "Foxconn A3 Building",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 119.47,
+    "value_display": "₹119 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-b2-building",
+    "name": "Foxconn B2 Building (GF, 1F, 2F)",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 115.59,
+    "value_display": "₹116 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 4
+  },
+  {
+    "id": "mopa-airport",
+    "name": "Mopa International Airport, Goa",
+    "client": "Mopa International Airport",
+    "city": "Mopa",
+    "state": "Goa",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 112.13,
+    "value_display": "₹112 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "jswml-ev-project",
+    "name": "JSW EV Project (JSWML)",
+    "client": "JSW Motors",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 94.35,
+    "value_display": "₹94 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "m3m-mansion-sec-113",
+    "name": "M3M Mansion, Sector 113",
+    "client": "M3M",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 82.19,
+    "value_display": "₹82 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "igh-dwarka",
+    "name": "IGH Hospital, Dwarka",
+    "client": "Indira Gandhi Hospital",
+    "city": "Dwarka",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 68.44,
+    "value_display": "₹68 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "shishta-buildwell",
+    "name": "Shishta Buildwell",
+    "client": "Shishta Buildwell LLP",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 64.05,
+    "value_display": "₹64 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-a2-building",
+    "name": "Foxconn A2 Building",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-civil",
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting",
+      "svc-bms"
+    ],
+    "value_cr": 62.91,
+    "value_display": "₹63 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "safdarjung-hospital",
+    "name": "Safdarjung Hospital",
+    "client": "Safdarjung Hospital",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 61.53,
+    "value_display": "₹62 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "scb-medical-college-cuttack",
+    "name": "SCB Medical College, Cuttack",
+    "client": "SCB Medical College",
+    "city": "Cuttack",
+    "state": "Odisha",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 59.59,
+    "value_display": "₹60 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "nalanda-university",
+    "name": "Nalanda University",
+    "client": "Nalanda University",
+    "city": "Rajgir",
+    "state": "Bihar",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac",
+      "svc-bms"
+    ],
+    "value_cr": 59.45,
+    "value_display": "₹59 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-a5-building",
+    "name": "Foxconn A5 Building (Ground Floor)",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 54.91,
+    "value_display": "₹55 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "ms-rewari",
+    "name": "M.S. Rewari",
+    "client": "M.S. Rewari",
+    "city": "Rewari",
+    "state": "Haryana",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 53.71,
+    "value_display": "₹54 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "aiims-jammu",
+    "name": "AIIMS Jammu",
+    "client": "AIIMS",
+    "city": "Jammu",
+    "state": "Jammu & Kashmir",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 53.0,
+    "value_display": "₹53 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "lady-hardinge-medical-college",
+    "name": "Lady Hardinge Medical College",
+    "client": "Lady Hardinge Medical College",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 52.89,
+    "value_display": "₹53 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "vatika-one-on-one",
+    "name": "Vatika One On One",
+    "client": "Vatika",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 52.62,
+    "value_display": "₹53 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "receptive-buildwell",
+    "name": "Receptive Buildwell",
+    "client": "Receptive Buildwell LLP",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 49.0,
+    "value_display": "₹49 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "kolkata-atc-tower",
+    "name": "ATC Tower, Kolkata Airport",
+    "client": "Airports Authority of India",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 45.74,
+    "value_display": "₹46 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "bharti-aerocity",
+    "name": "Bharti Aerocity",
+    "client": "Bharti (Alborz Developers)",
+    "city": "Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 45.21,
+    "value_display": "₹45 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "bitsom",
+    "name": "BITSoM, Mumbai",
+    "client": "BITS School of Management (BITSoM)",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 44.33,
+    "value_display": "₹44 Cr",
+    "year_start": 2022,
+    "year_end": 2026,
+    "year_display": "2022–2026",
+    "order_count": 8
+  },
+  {
+    "id": "tata-semiconductor-dholera",
+    "name": "Tata Semiconductor Fab, Dholera",
+    "client": "Tata Semiconductor",
+    "city": "Dholera",
+    "state": "Gujarat",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-civil",
+      "svc-electrical",
+      "svc-plumbing"
+    ],
+    "value_cr": 44.3,
+    "value_display": "₹44 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "samsung-electronics-flats",
+    "name": "Samsung India Electronics",
+    "client": "Samsung India Electronics",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 39.82,
+    "value_display": "₹40 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "medical-college-raebareli",
+    "name": "Medical College, Raebareli",
+    "client": "Medical College Raebareli",
+    "city": "Raebareli",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 34.01,
+    "value_display": "₹34 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-bangalore-misc",
+    "name": "Foxconn Balance MEP Works",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 33.7,
+    "value_display": "₹34 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "tata-semiconductor-morigaon-assam",
+    "name": "Tata Semiconductor, Morigaon (Assam)",
+    "client": "Tata Electronics",
+    "city": "Morigaon",
+    "state": "Assam",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-civil",
+      "svc-electrical",
+      "svc-plumbing"
+    ],
+    "value_cr": 30.95,
+    "value_display": "₹31 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "chennai-airport",
+    "name": "Chennai Airport",
+    "client": "Chennai Airport (AAI)",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 30.68,
+    "value_display": "₹31 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "iit-bhilai",
+    "name": "IIT Bhilai",
+    "client": "IIT Bhilai",
+    "city": "Durg",
+    "state": "Chhattisgarh",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 30.52,
+    "value_display": "₹31 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-b11-building",
+    "name": "Foxconn B11 Building",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 29.74,
+    "value_display": "₹30 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "asi-noida",
+    "name": "ASI, Noida",
+    "client": "Archaeological Survey of India",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 29.6,
+    "value_display": "₹30 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "stt-data-centre",
+    "name": "STT Global Data Centre",
+    "client": "STT Global Data Centres",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-data-centre",
+    "service_ids": [
+      "svc-hvac",
+      "svc-om"
+    ],
+    "value_cr": 29.28,
+    "value_display": "₹29 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "asthetic-township-bharti-realty",
+    "name": "Asthetic Township, Bharti Realty",
+    "client": "Bharti Realty",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 28.54,
+    "value_display": "₹29 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "ssh-warangal",
+    "name": "Super Speciality Hospital, Warangal",
+    "client": "Super Speciality Hospital, Warangal",
+    "city": "Warangal",
+    "state": "Telangana",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 27.54,
+    "value_display": "₹28 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-b21-building",
+    "name": "Foxconn B21 Building (GF, 1F, 2F, RF)",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 27.52,
+    "value_display": "₹28 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "amity-university-hyderabad",
+    "name": "Amity University, Hyderabad",
+    "client": "Amity University",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 25.64,
+    "value_display": "₹26 Cr",
+    "year_start": 2023,
+    "year_end": 2024,
+    "year_display": "2023–2024",
+    "order_count": 2
+  },
+  {
+    "id": "amity-university-mumbai",
+    "name": "Amity University, Mumbai",
+    "client": "Amity University",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 25.52,
+    "value_display": "₹26 Cr",
+    "year_start": 2018,
+    "year_end": 2026,
+    "year_display": "2018–2026",
+    "order_count": 23
+  },
+  {
+    "id": "stt-data-centre-navi-mumbai",
+    "name": "STT Global Data Centre, Navi Mumbai",
+    "client": "STT Global Data Centres",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "sector_id": "sec-data-centre",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 23.6,
+    "value_display": "₹24 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "executive-enclave",
+    "name": "Executive Enclave",
+    "client": "CPWD (Government of India)",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-firefighting"
+    ],
+    "value_cr": 22.61,
+    "value_display": "₹23 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "goa-medical-college",
+    "name": "Goa Medical College",
+    "client": "Goa Medical College",
+    "city": "Bambolim",
+    "state": "Goa",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 22.57,
+    "value_display": "₹23 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "pnb-dwarka",
+    "name": "PNB, Dwarka",
+    "client": "Punjab National Bank",
+    "city": "Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 22.0,
+    "value_display": "₹22 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "rec-gurgaon",
+    "name": "REC, Gurgaon",
+    "client": "Rural Electrification Corporation",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 21.21,
+    "value_display": "₹21 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "hindustan-coca-cola-gujarat",
+    "name": "Hindustan Coca-Cola Beverages, Gujarat",
+    "client": "Hindustan Coca-Cola Beverages",
+    "city": "",
+    "state": "Gujarat",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 20.83,
+    "value_display": "₹21 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "bits-pilani-goa",
+    "name": "BITS Pilani, Goa Campus",
+    "client": "BITS Pilani",
+    "city": "Zuarinagar",
+    "state": "Goa",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 20.64,
+    "value_display": "₹21 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "iim-rohtak",
+    "name": "IIM Rohtak",
+    "client": "IIM Rohtak",
+    "city": "Rohtak",
+    "state": "Haryana",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 19.19,
+    "value_display": "₹19 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "sky-mansion",
+    "name": "Sky Mansion",
+    "client": "Risland (Country Garden)",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical"
+    ],
+    "value_cr": 19.17,
+    "value_display": "₹19 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "bits-pilani-rajasthan",
+    "name": "BITS Pilani, Rajasthan",
+    "client": "BITS Pilani",
+    "city": "Pilani",
+    "state": "Rajasthan",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-civil",
+      "svc-hvac",
+      "svc-electrical"
+    ],
+    "value_cr": 18.7,
+    "value_display": "₹19 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "safdarjung-airport",
+    "name": "Safdarjung Airport",
+    "client": "Airports Authority of India",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 17.2,
+    "value_display": "₹17 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "iit-palakkad",
+    "name": "IIT Palakkad",
+    "client": "IIT Palakkad",
+    "city": "Palakkad",
+    "state": "Kerala",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-electrical"
+    ],
+    "value_cr": 17.09,
+    "value_display": "₹17 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "iit-indore",
+    "name": "IIT Indore",
+    "client": "IIT Indore",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 16.82,
+    "value_display": "₹17 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "cnci-kolkata",
+    "name": "Chittaranjan National Cancer Institute, Kolkata",
+    "client": "CNCI",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 16.7,
+    "value_display": "₹17 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "nci-aiims-jhajjar",
+    "name": "National Cancer Institute, AIIMS Jhajjar",
+    "client": "AIIMS",
+    "city": "Jhajjar",
+    "state": "Haryana",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 16.64,
+    "value_display": "₹17 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "200-bedded-hospital-burari",
+    "name": "200 Bedded Hospital, Burari",
+    "client": "200 Bedded Hospital, Burari",
+    "city": "Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 16.24,
+    "value_display": "₹16 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "provence-estate-krrish",
+    "name": "Provence Estate, Krrish Housing",
+    "client": "Krrish Group",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 16.24,
+    "value_display": "₹16 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "milan-mela-kolkata",
+    "name": "Milan Mela, Kolkata",
+    "client": "Milan Mela",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 15.86,
+    "value_display": "₹16 Cr",
+    "year_start": 2018,
+    "year_end": 2019,
+    "year_display": "2018–2019",
+    "order_count": 1
+  },
+  {
+    "id": "south-asian-university",
+    "name": "South Asian University",
+    "client": "South Asian University",
+    "city": "Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 15.66,
+    "value_display": "₹16 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "guntur-medical-college",
+    "name": "Guntur Medical College",
+    "client": "Guntur Medical College",
+    "city": "Guntur",
+    "state": "Andhra Pradesh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 15.63,
+    "value_display": "₹16 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "shristi-hotel",
+    "name": "Shristi Hotel",
+    "client": "Shristi Infrastructure Development Corporation",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-hospitality",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 15.28,
+    "value_display": "₹15 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "sabarmati-hsr-terminal",
+    "name": "Sabarmati High Speed Rail Terminal, Ahmedabad",
+    "client": "NHSRCL",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 15.1,
+    "value_display": "₹15 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "pgi-chandigarh",
+    "name": "Nehru Hospital, PGI Chandigarh",
+    "client": "PGIMER Chandigarh",
+    "city": "Chandigarh",
+    "state": "Chandigarh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 15.03,
+    "value_display": "₹15 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "aiims-geriatrics-block",
+    "name": "AIIMS Geriatrics Block",
+    "client": "AIIMS",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 14.79,
+    "value_display": "₹15 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "aiims-kalyani",
+    "name": "AIIMS Kalyani",
+    "client": "AIIMS",
+    "city": "Kalyani",
+    "state": "West Bengal",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 14.79,
+    "value_display": "₹15 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "icc-patna",
+    "name": "International Convention Centre, Patna",
+    "client": "International Convention Centre, Patna",
+    "city": "Patna",
+    "state": "Bihar",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 14.24,
+    "value_display": "₹14 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "risland-the-icon",
+    "name": "Risland The Icon",
+    "client": "Risland",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-electrical"
+    ],
+    "value_cr": 13.6,
+    "value_display": "₹14 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 4
+  },
+  {
+    "id": "dehradun-airport",
+    "name": "Dehradun Airport",
+    "client": "Dehradun Airport",
+    "city": "Dehradun",
+    "state": "Uttarakhand",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 13.49,
+    "value_display": "₹13 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "police-bhawan-patna",
+    "name": "Police Bhawan, Patna",
+    "client": "Police Bhawan, Patna",
+    "city": "Patna",
+    "state": "Bihar",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 13.35,
+    "value_display": "₹13 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "sgpgi-lucknow",
+    "name": "SGPGI, Lucknow",
+    "client": "SGPGIMS",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 12.69,
+    "value_display": "₹13 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "burn-ward-block",
+    "name": "Burn Ward Block",
+    "client": "Burn Ward Block",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 12.34,
+    "value_display": "₹12 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "amity-university-ranchi",
+    "name": "Amity University, Ranchi",
+    "client": "Amity University",
+    "city": "Ranchi",
+    "state": "Jharkhand",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 12.29,
+    "value_display": "₹12 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "jaipur-central-electrical-division",
+    "name": "Jaipur Central Electrical Division (Maintenance)",
+    "client": "CPWD",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-electrical",
+      "svc-om"
+    ],
+    "value_cr": 12.0,
+    "value_display": "₹12 Cr",
+    "year_start": 2019,
+    "year_end": 2020,
+    "year_display": "2019–2020",
+    "order_count": 1
+  },
+  {
+    "id": "nicl-corporate-office-kolkata",
+    "name": "NICL Corporate Office, Kolkata",
+    "client": "National Insurance Company Ltd",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 11.92,
+    "value_display": "₹12 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "elan-miracle",
+    "name": "Elan Miracle, Sector 84",
+    "client": "Elan",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 11.83,
+    "value_display": "₹12 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "aiims-nagpur",
+    "name": "AIIMS Nagpur",
+    "client": "AIIMS",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 11.78,
+    "value_display": "₹12 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "harrow-international-school-bangalore",
+    "name": "Harrow International School, Bangalore",
+    "client": "Harrow International School",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 11.33,
+    "value_display": "₹11 Cr",
+    "year_start": 2025,
+    "year_end": 2026,
+    "year_display": "2025–2026",
+    "order_count": 2
+  },
+  {
+    "id": "amity-international-school-airoli-mumbai",
+    "name": "Amity International School, Airoli, Mumbai",
+    "client": "Amity International School",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 11.23,
+    "value_display": "₹11 Cr",
+    "year_start": 2025,
+    "year_end": 2026,
+    "year_display": "2025–2026",
+    "order_count": 1
+  },
+  {
+    "id": "microsoft-noida",
+    "name": "Microsoft Office, Noida",
+    "client": "Microsoft",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 11.11,
+    "value_display": "₹11 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "selfie-square",
+    "name": "Selfie Square, Sector 37D",
+    "client": "VS Real Projects",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 10.83,
+    "value_display": "₹11 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "vatika-v-lante",
+    "name": "Vatika V Lante",
+    "client": "Vatika",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 10.77,
+    "value_display": "₹11 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-gwalior",
+    "name": "Gajra Raja Medical College (GRMC), Gwalior",
+    "client": "Medical College, Gwalior",
+    "city": "Gwalior",
+    "state": "Madhya Pradesh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical"
+    ],
+    "value_cr": 10.15,
+    "value_display": "₹10 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 4
+  },
+  {
+    "id": "central-electrical-division-ajmer",
+    "name": "Central Electrical Division, Ajmer (Maintenance)",
+    "client": "CPWD",
+    "city": "Ajmer",
+    "state": "Rajasthan",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-civil",
+      "svc-electrical",
+      "svc-om"
+    ],
+    "value_cr": 10.07,
+    "value_display": "₹10 Cr",
+    "year_start": 2019,
+    "year_end": 2020,
+    "year_display": "2019–2020",
+    "order_count": 1
+  },
+  {
+    "id": "forensic-science-lab-rajarhat",
+    "name": "Forensic Science Laboratory, Rajarhat, Kolkata",
+    "client": "Forensic Science Laboratory (West Bengal)",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 10.07,
+    "value_display": "₹10 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "vatika-mindscapes-faridabad",
+    "name": "Vatika Mindscapes, Faridabad",
+    "client": "Vatika Limited",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 10.06,
+    "value_display": "₹10 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "corenthum-tower",
+    "name": "The Corenthum Iconic Tower, Noida",
+    "client": "Corenthum",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 9.18,
+    "value_display": "₹9.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "amity-university-kolkata",
+    "name": "Amity University, Kolkata",
+    "client": "Amity University",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 9.12,
+    "value_display": "₹9.1 Cr",
+    "year_start": 2018,
+    "year_end": 2026,
+    "year_display": "2018–2026",
+    "order_count": 11
+  },
+  {
+    "id": "bits-pilani-hyderabad",
+    "name": "BITS Pilani, Hyderabad Campus",
+    "client": "BITS Pilani",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 8.65,
+    "value_display": "₹8.7 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "amity-university",
+    "name": "Amity University",
+    "client": "Amity University",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 8.37,
+    "value_display": "₹8.4 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "vatika-india-next",
+    "name": "Vatika India Next, Sector 84 & 85",
+    "client": "Vatika",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 8.07,
+    "value_display": "₹8.1 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "indian-pharmacopoeia-commission",
+    "name": "Indian Pharmacopoeia Commission",
+    "client": "Indian Pharmacopoeia Commission",
+    "city": "Ghaziabad",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 8.02,
+    "value_display": "₹8.0 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "jabalpur-airport",
+    "name": "Jabalpur Airport",
+    "client": "Airports Authority of India (Jabalpur Airport)",
+    "city": "Jabalpur",
+    "state": "Madhya Pradesh",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 7.91,
+    "value_display": "₹7.9 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "itc-baddi",
+    "name": "ITC Baddi",
+    "client": "ITC",
+    "city": "Baddi",
+    "state": "Himachal Pradesh",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 7.62,
+    "value_display": "₹7.6 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "time-arcade",
+    "name": "Time Arcade",
+    "client": "Dhoot Infrastructure Projects",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 7.43,
+    "value_display": "₹7.4 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "natgrid",
+    "name": "NATGRID",
+    "client": "NATGRID",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-electrical"
+    ],
+    "value_cr": 7.35,
+    "value_display": "₹7.3 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "igmc-shimla",
+    "name": "Indira Gandhi Medical College, Shimla",
+    "client": "Indira Gandhi Medical College",
+    "city": "Shimla",
+    "state": "Himachal Pradesh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 7.24,
+    "value_display": "₹7.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "srhc-hospital-narela",
+    "name": "SRHC Hospital, Narela",
+    "client": "SRHC",
+    "city": "Narela",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 7.2,
+    "value_display": "₹7.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "vatika-sovereign-park",
+    "name": "Vatika Sovereign Park",
+    "client": "Vatika",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 7.18,
+    "value_display": "₹7.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "idco-odisha",
+    "name": "Odisha Industrial Infrastructure Development Corporation (IDCO)",
+    "client": "IDCO",
+    "city": "",
+    "state": "Odisha",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 7.15,
+    "value_display": "₹7.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "aiims-vvip-ward",
+    "name": "AIIMS VVIP Ward",
+    "client": "AIIMS",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 6.9,
+    "value_display": "₹6.9 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "amity-international-school-mohali",
+    "name": "Amity International School, Mohali",
+    "client": "Amity International School",
+    "city": "Mohali",
+    "state": "Punjab",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 6.83,
+    "value_display": "₹6.8 Cr",
+    "year_start": 2024,
+    "year_end": 2025,
+    "year_display": "2024–2025",
+    "order_count": 6
+  },
+  {
+    "id": "district-court-dwarka",
+    "name": "District Court, Sector 10 Dwarka",
+    "client": "District Court, Dwarka",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 6.45,
+    "value_display": "₹6.5 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-aurangabad",
+    "name": "Medical College, Aurangabad",
+    "client": "Medical College, Aurangabad",
+    "city": "Aurangabad",
+    "state": "Maharashtra",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 6.36,
+    "value_display": "₹6.4 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "rtm-hospital-jaffarpur",
+    "name": "RTM Hospital, Jaffarpur",
+    "client": "RTM Hospital",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-electrical"
+    ],
+    "value_cr": 6.34,
+    "value_display": "₹6.3 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "candor-ashoka",
+    "name": "Candor TechSpace (Ashoka)",
+    "client": "Candor TechSpace",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 6.17,
+    "value_display": "₹6.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "klj-square",
+    "name": "KLJ Square",
+    "client": "KLJ Realtech",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 6.09,
+    "value_display": "₹6.1 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "niab-hyderabad",
+    "name": "National Institute of Animal Biotechnology, Hyderabad",
+    "client": "NIAB",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.98,
+    "value_display": "₹6.0 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "suncity-bungalows-ahmedabad",
+    "name": "Suncity Bungalows Amenity Block, Ahmedabad",
+    "client": "Essel Group (Suncity)",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.8,
+    "value_display": "₹5.8 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "esic-hospital-howrah",
+    "name": "ESIC Hospital, Howrah",
+    "client": "ESIC",
+    "city": "Howrah",
+    "state": "West Bengal",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.64,
+    "value_display": "₹5.6 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "supreme-court",
+    "name": "Supreme Court of India",
+    "client": "Supreme Court of India",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.57,
+    "value_display": "₹5.6 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "nimr-dwarka",
+    "name": "National Institute of Malaria Research, Sector-8 Dwarka",
+    "client": "NIMR (ICMR)",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.51,
+    "value_display": "₹5.5 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "spaze-corporate-park",
+    "name": "Spaze Corporate Park",
+    "client": "Spaze Towers",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.47,
+    "value_display": "₹5.5 Cr",
+    "year_start": 2017,
+    "year_end": 2018,
+    "year_display": "2017–2018",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-dibrugarh",
+    "name": "Medical College, Dibrugarh",
+    "client": "Assam Medical College, Dibrugarh",
+    "city": "Dibrugarh",
+    "state": "Assam",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.4,
+    "value_display": "₹5.4 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-burla",
+    "name": "Medical College, Burla (VIMSAR)",
+    "client": "VIMSAR, Burla",
+    "city": "Burla",
+    "state": "Odisha",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.3,
+    "value_display": "₹5.3 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "stt-global-data-centre",
+    "name": "STT Global Data Centres India",
+    "client": "STT Global Data Centres",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-data-centre",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.25,
+    "value_display": "₹5.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "elan-epic-sector-70",
+    "name": "Elan Epic, Sector 70",
+    "client": "Elan",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.2,
+    "value_display": "₹5.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "city-park-kapashera",
+    "name": "City Park, Kapashera",
+    "client": "City Park",
+    "city": "Kapashera",
+    "state": "Delhi",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.14,
+    "value_display": "₹5.1 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-latur",
+    "name": "Medical College, Latur",
+    "client": "Medical College, Latur",
+    "city": "Latur",
+    "state": "Maharashtra",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.13,
+    "value_display": "₹5.1 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-kolkata",
+    "name": "Medical College, Kolkata",
+    "client": "Medical College, Kolkata",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.1,
+    "value_display": "₹5.1 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-allahabad",
+    "name": "Medical College, Allahabad",
+    "client": "Moti Lal Nehru Medical College",
+    "city": "Prayagraj",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 5.05,
+    "value_display": "₹5.0 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-udaipur",
+    "name": "Medical College, Udaipur",
+    "client": "RNT Medical College",
+    "city": "Udaipur",
+    "state": "Rajasthan",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 4.84,
+    "value_display": "₹4.8 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-jhansi",
+    "name": "Medical College, Jhansi",
+    "client": "Medical College, Jhansi",
+    "city": "Jhansi",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 4.68,
+    "value_display": "₹4.7 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "bptp-discovery-park-sector-80",
+    "name": "BPTP Discovery Park, Sector 80",
+    "client": "BPTP",
+    "city": "Faridabad",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-electrical"
+    ],
+    "value_cr": 4.65,
+    "value_display": "₹4.7 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-a41-building",
+    "name": "Foxconn A41 Building",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 4.56,
+    "value_display": "₹4.6 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "medical-college-behrampur",
+    "name": "Medical College, Berhampur",
+    "client": "Medical College, Berhampur",
+    "city": "Berhampur",
+    "state": "Odisha",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 4.3,
+    "value_display": "₹4.3 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "james-hotel-chandigarh",
+    "name": "James Hotel, Chandigarh",
+    "client": "James Hotel Ltd.",
+    "city": "Chandigarh",
+    "state": "Chandigarh",
+    "sector_id": "sec-hospitality",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 4.27,
+    "value_display": "₹4.3 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "sapphire-90",
+    "name": "Sapphire 90",
+    "client": "Crown Probuild",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 4.13,
+    "value_display": "₹4.1 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "aiims-ansari-nagar",
+    "name": "AIIMS Ansari Nagar, Surgical Block",
+    "client": "AIIMS",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 3.75,
+    "value_display": "₹3.8 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "essel-platinum-tower",
+    "name": "Essel Platinum Tower",
+    "client": "Essel Housing Projects",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 3.56,
+    "value_display": "₹3.6 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "igi-stadium",
+    "name": "Indira Gandhi Stadium, New Delhi",
+    "client": "Indira Gandhi Stadium",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac",
+      "svc-plumbing"
+    ],
+    "value_cr": 3.53,
+    "value_display": "₹3.5 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 4
+  },
+  {
+    "id": "vrc-patiala",
+    "name": "VRC Project, Patiala",
+    "client": "VRC Constructions",
+    "city": "Patiala",
+    "state": "Punjab",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 3.47,
+    "value_display": "₹3.5 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "esic-hospital-raipur",
+    "name": "ESIC Hospital, Raipur",
+    "client": "ESIC",
+    "city": "Raipur",
+    "state": "Chhattisgarh",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 3.38,
+    "value_display": "₹3.4 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "msme-pudi-visakhapatnam",
+    "name": "MSME Technology Centre, Pudi, Visakhapatnam",
+    "client": "MSME",
+    "city": "Visakhapatnam",
+    "state": "Andhra Pradesh",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 3.16,
+    "value_display": "₹3.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "iiser-kolkata",
+    "name": "IISER Kolkata",
+    "client": "IISER Kolkata",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 3.04,
+    "value_display": "₹3.0 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "amazon-farrukhnagar",
+    "name": "Amazon Fulfilment Centre, Farrukhnagar",
+    "client": "Amazon",
+    "city": "Farrukhnagar",
+    "state": "Haryana",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 2.91,
+    "value_display": "₹2.9 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "elan-town-centre-sector-67",
+    "name": "Elan Town Centre, Sector 67",
+    "client": "Elan",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 2.89,
+    "value_display": "₹2.9 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "hsam-agro-mall-hisar",
+    "name": "HSAM Board Agro Mall, Hisar",
+    "client": "HSAM Board (Haryana State Agricultural Marketing Board)",
+    "city": "Hisar",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac",
+      "svc-firefighting"
+    ],
+    "value_cr": 2.75,
+    "value_display": "₹2.8 Cr",
+    "year_start": 2022,
+    "year_end": 2023,
+    "year_display": "2022–2023",
+    "order_count": 9
+  },
+  {
+    "id": "anant-raj-cloud",
+    "name": "Anant Raj Cloud Data Centre",
+    "client": "Anant Raj Cloud",
+    "city": "",
+    "state": "Haryana",
+    "sector_id": "sec-data-centre",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 2.57,
+    "value_display": "₹2.6 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "dial-expansion-bnf",
+    "name": "DIAL Expansion Project (BNF), Delhi Airport",
+    "client": "DIAL (Delhi Airport)",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-electrical"
+    ],
+    "value_cr": 2.53,
+    "value_display": "₹2.5 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "foxconn-b1-building",
+    "name": "Foxconn B1 Building",
+    "client": "Foxconn",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-electrical"
+    ],
+    "value_cr": 2.4,
+    "value_display": "₹2.4 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "harrow-international-school-bangalore-hostel",
+    "name": "Harrow International School, Bangalore - Hostel Block",
+    "client": "Harrow International School",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 2.38,
+    "value_display": "₹2.4 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 2
+  },
+  {
+    "id": "mdc-national-stadium",
+    "name": "Major Dhyan Chand National Stadium",
+    "client": "Major Dhyan Chand National Stadium",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 2.26,
+    "value_display": "₹2.3 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "nit-durgapur",
+    "name": "NIT Durgapur",
+    "client": "NIT Durgapur",
+    "city": "Durgapur",
+    "state": "West Bengal",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 2.21,
+    "value_display": "₹2.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-a1-building",
+    "name": "Foxconn A1 Building",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-electrical"
+    ],
+    "value_cr": 2.17,
+    "value_display": "₹2.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "vatika-city-centre",
+    "name": "Vatika City Centre",
+    "client": "Vatika",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 2.02,
+    "value_display": "₹2.0 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 3
+  },
+  {
+    "id": "vatika-engineering-studio",
+    "name": "Vatika Engineering Studio",
+    "client": "Vatika",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 2.02,
+    "value_display": "₹2.0 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "vatika-town-square-2",
+    "name": "Vatika Town Square-2",
+    "client": "Vatika",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 2.02,
+    "value_display": "₹2.0 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "punjab-national-bank",
+    "name": "Punjab National Bank",
+    "client": "Punjab National Bank",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.93,
+    "value_display": "₹1.9 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "vatika-44-plot-66",
+    "name": "PD Education School, Vatika @ 44 (Plot 66)",
+    "client": "PD Education",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.84,
+    "value_display": "₹1.8 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "vatika-44-plot-75",
+    "name": "Vatika @ 44 (Plot 75)",
+    "client": "Vatika @ 44",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.84,
+    "value_display": "₹1.8 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "florence-estate-gurgaon",
+    "name": "Florence Estate, Sector 70, Gurgaon",
+    "client": "Florence Estate",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "sector_id": "sec-residential",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.83,
+    "value_display": "₹1.8 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "iit-jodhpur",
+    "name": "IIT Jodhpur",
+    "client": "IIT Jodhpur",
+    "city": "Jodhpur",
+    "state": "Rajasthan",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.81,
+    "value_display": "₹1.8 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "aiims-brairch",
+    "name": "AIIMS Dr. BRAIRCH",
+    "client": "AIIMS",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.75,
+    "value_display": "₹1.8 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "britannia-industries",
+    "name": "Britannia Industries",
+    "client": "Britannia Industries",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.6,
+    "value_display": "₹1.6 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "amazon-ncru-jamalpur",
+    "name": "Amazon Fulfilment Centre, Jamalpur",
+    "client": "Amazon",
+    "city": "Jamalpur",
+    "state": "",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.5,
+    "value_display": "₹1.5 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "coca-cola-hyderabad",
+    "name": "Hindustan Coca-Cola, Hyderabad",
+    "client": "Hindustan Coca-Cola Beverages",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.46,
+    "value_display": "₹1.5 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "klj",
+    "name": "KLJ Project",
+    "client": "KLJ Group",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [],
+    "value_cr": 1.41,
+    "value_display": "₹1.4 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "itc-rajarhat-kolkata",
+    "name": "ITC Mixed Use Development, Rajarhat, Kolkata",
+    "client": "ITC Limited",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.32,
+    "value_display": "₹1.3 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "nsg",
+    "name": "NSG (National Security Guard)",
+    "client": "NSG (National Security Guard)",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 1.22,
+    "value_display": "₹1.2 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "foxconn-a4t-building",
+    "name": "Foxconn A4T Building",
+    "client": "Foxconn",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "sector_id": "sec-semiconductor",
+    "service_ids": [
+      "svc-hvac",
+      "svc-electrical",
+      "svc-plumbing",
+      "svc-firefighting"
+    ],
+    "value_cr": 1.0,
+    "value_display": "₹1.0 Cr",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "baba-group",
+    "name": "Baba Group",
+    "client": "Baba Group",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [],
+    "value_cr": 0.95,
+    "value_display": "₹95 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "deep-chand-hospital",
+    "name": "Deep Chand Hospital",
+    "client": "Deep Chand Hospital",
+    "city": "Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 0.94,
+    "value_display": "₹94 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "infinity-warehouse",
+    "name": "Infinity Warehouse",
+    "client": "Infinity Warehouse",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 0.91,
+    "value_display": "₹91 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "amity-university-noida",
+    "name": "Amity University, Noida",
+    "client": "Amity University",
+    "city": "Noida",
+    "state": "Uttar Pradesh",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 0.83,
+    "value_display": "₹83 L",
+    "year_start": 2017,
+    "year_end": 2017,
+    "year_display": "2017",
+    "order_count": 1
+  },
+  {
+    "id": "cbi",
+    "name": "Central Bureau of Investigation (AMC)",
+    "client": "CBI",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 0.74,
+    "value_display": "₹74 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "surya-ring-road",
+    "name": "Ring Road Project",
+    "client": "Surya Maintenance Agency",
+    "city": "Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 0.74,
+    "value_display": "₹74 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "surya-maintenance-ndm",
+    "name": "Surya Maintenance Agency (NDM)",
+    "client": "Surya Maintenance Agency",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 0.74,
+    "value_display": "₹74 L",
+    "year_start": 2022,
+    "year_end": 2023,
+    "year_display": "2022–2023",
+    "order_count": 2
+  },
+  {
+    "id": "bose-institute-kolkata",
+    "name": "Bose Institute, Kolkata",
+    "client": "Bose Institute",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "sector_id": "sec-education",
+    "service_ids": [
+      "svc-om"
+    ],
+    "value_cr": 0.7,
+    "value_display": "₹70 L",
+    "year_start": 2022,
+    "year_end": 2023,
+    "year_display": "2022–2023",
+    "order_count": 1
+  },
+  {
+    "id": "rg-cancer-institute",
+    "name": "RG Cancer Institute",
+    "client": "Rajiv Gandhi Cancer Institute",
+    "city": "Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-healthcare",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 0.65,
+    "value_display": "₹65 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "state-trading-corporation",
+    "name": "State Trading Corporation of India (STC)",
+    "client": "State Trading Corporation of India",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 0.64,
+    "value_display": "₹64 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "klj-plasticizers",
+    "name": "KLJ Plasticizers",
+    "client": "KLJ Plasticizers",
+    "city": "",
+    "state": "",
+    "sector_id": "sec-industrial",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 0.59,
+    "value_display": "₹59 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "indira-paryavaran-bhawan",
+    "name": "Indira Paryavaran Bhawan",
+    "client": "Ministry of Environment, Forest and Climate Change",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-corporate-retail",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 0.57,
+    "value_display": "₹57 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  },
+  {
+    "id": "jln-stadium-delhi",
+    "name": "JLN Stadium, New Delhi",
+    "client": "JLN Stadium (Sports Authority of India)",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "sector_id": "sec-airport",
+    "service_ids": [
+      "svc-hvac"
+    ],
+    "value_cr": 0.51,
+    "value_display": "₹51 L",
+    "year_start": null,
+    "year_end": null,
+    "year_display": "",
+    "order_count": 1
+  }
+]

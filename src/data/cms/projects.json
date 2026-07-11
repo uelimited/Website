@@ -19,7 +19,16 @@
       "Despite aggressive schedules, Unique Engineers delivered two floors of 14,000 sq m each within three months by deploying a workforce of 1,500+. The project was completed ahead of schedule and recognised with a performance bonus of ₹12 Cr for early delivery.",
       "Clean-room execution required high-precision installation of process utility piping including CDA (Compressed Dry Air) system, Nitrogen and Vacuum networks. Systems were routed with strict slope control, leak-tested to stringent standards, and integrated without compromising contamination zones."
     ],
-    "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical", "Clean Room", "CDA", "Nitrogen", "Vacuum"],
+    "scope_tags": [
+      "HVAC",
+      "Firefighting",
+      "Plumbing",
+      "Electrical",
+      "Clean Room",
+      "CDA",
+      "Nitrogen",
+      "Vacuum"
+    ],
     "status": "completed",
     "featured": true,
     "landmark_order": 2,
@@ -27,10 +36,22 @@
     "hero_image_alt": "Foxconn semiconductor cleanroom interior with process piping and lighting array",
     "accent": "pulse",
     "key_metrics": [
-      { "k": "Workforce peak", "v": "1,500+" },
-      { "k": "Floor area delivered", "v": "2 × 14,000 sqm" },
-      { "k": "Schedule", "v": "3 months" },
-      { "k": "Early-delivery bonus", "v": "₹12 Cr" }
+      {
+        "k": "Workforce peak",
+        "v": "1,500+"
+      },
+      {
+        "k": "Floor area delivered",
+        "v": "2 × 14,000 sqm"
+      },
+      {
+        "k": "Schedule",
+        "v": "3 months"
+      },
+      {
+        "k": "Early-delivery bonus",
+        "v": "₹12 Cr"
+      }
     ],
     "execution_snapshots": [
       {
@@ -64,7 +85,14 @@
       "The project is delivered against a fully coordinated multi-disciplinary BIM model at LOD 400 across HVAC, Firefighting, Plumbing, Electrical, Solar and PNG systems. All services are integrated into a federated 3D environment where real-time clash detection and inter-trade coordination are completed before site installation.",
       "Shop drawings are generated directly from the coordinated model to ensure execution accuracy and minimise rework. The modelling process is creating a digital twin of the project, enabling constructability validation, accurate material take-offs, prefabrication planning and lifecycle-ready asset data."
     ],
-    "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical", "Solar", "PNG"],
+    "scope_tags": [
+      "HVAC",
+      "Firefighting",
+      "Plumbing",
+      "Electrical",
+      "Solar",
+      "PNG"
+    ],
     "status": "active",
     "featured": true,
     "landmark_order": 1,
@@ -72,9 +100,18 @@
     "hero_image_alt": "Ingka Centre IKEA mixed-use tower in Noida at twilight",
     "accent": "blocks",
     "key_metrics": [
-      { "k": "BIM LOD", "v": "400" },
-      { "k": "Pipeline phase 2", "v": "₹450 Cr" },
-      { "k": "Scope", "v": "MEPF · Solar · PNG" }
+      {
+        "k": "BIM LOD",
+        "v": "400"
+      },
+      {
+        "k": "Pipeline phase 2",
+        "v": "₹450 Cr"
+      },
+      {
+        "k": "Scope",
+        "v": "MEPF · Solar · PNG"
+      }
     ],
     "execution_snapshots": [
       {
@@ -107,7 +144,10 @@
       "Delivered as a high-performance government office complex with IGBC Gold certification, with sustainability embedded into the mechanical and fire systems from design through execution.",
       "A 16,000 TR high-efficiency HVAC plant was installed with optimised air distribution across 5,00,000 sqm of ducting and 1,00,000 metres of piping. The system uses energy-efficient chillers, optimised airflow balancing, reduced pumping losses and intelligent zoning to improve lifecycle performance while supporting long-term carbon reduction targets."
     ],
-    "scope_tags": ["HVAC", "Firefighting"],
+    "scope_tags": [
+      "HVAC",
+      "Firefighting"
+    ],
     "status": "completed",
     "featured": true,
     "landmark_order": 3,
@@ -115,12 +155,26 @@
     "hero_image_alt": "Kartavya Bhavan Central Secretariat building in New Delhi",
     "accent": "fan",
     "key_metrics": [
-      { "k": "Plant capacity", "v": "16,000 TR" },
-      { "k": "Ducting executed", "v": "5,00,000 sqm" },
-      { "k": "Piping executed", "v": "1,00,000 m" },
-      { "k": "Certification", "v": "IGBC Gold" }
+      {
+        "k": "Plant capacity",
+        "v": "16,000 TR"
+      },
+      {
+        "k": "Ducting executed",
+        "v": "5,00,000 sqm"
+      },
+      {
+        "k": "Piping executed",
+        "v": "1,00,000 m"
+      },
+      {
+        "k": "Certification",
+        "v": "IGBC Gold"
+      }
     ],
-    "certifications": ["IGBC Gold"],
+    "certifications": [
+      "IGBC Gold"
+    ],
     "execution_snapshots": [
       {
         "title": "Sustainable Engineering",
@@ -152,7 +206,12 @@
       "The project required full-scale MEPF delivery in a developing, logistically constrained location. Unique Engineers mobilised manpower, plant, and supply chains to maintain schedule discipline under compressed timelines.",
       "Structured material planning and parallel work fronts enabled seamless execution, demonstrating our ability to deliver high-value infrastructure in geographically challenging environments."
     ],
-    "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical"],
+    "scope_tags": [
+      "HVAC",
+      "Firefighting",
+      "Plumbing",
+      "Electrical"
+    ],
     "status": "completed",
     "featured": true,
     "landmark_order": 4,
@@ -160,9 +219,18 @@
     "hero_image_alt": "Mopa International Airport control tower at dusk",
     "accent": "graph",
     "key_metrics": [
-      { "k": "Scope", "v": "Full MEPF" },
-      { "k": "Schedule", "v": "1 year" },
-      { "k": "Sector", "v": "Aviation infrastructure" }
+      {
+        "k": "Scope",
+        "v": "Full MEPF"
+      },
+      {
+        "k": "Schedule",
+        "v": "1 year"
+      },
+      {
+        "k": "Sector",
+        "v": "Aviation infrastructure"
+      }
     ],
     "execution_snapshots": [
       {
@@ -196,7 +264,12 @@
       "The campus incorporated energy-efficient HVAC technologies including thermal energy storage for peak-load optimisation, brine chillers for enhanced heat transfer efficiency, geothermal water-cooled VRV systems, and advanced evaporative cooling strategies.",
       "An Integrated Building Management System (IBMS) was implemented to monitor and control HVAC operations, energy consumption, and system performance in real time. This ensured centralised visibility, optimised load management, and sustained energy efficiency across academic and residential blocks. The combined mechanical and digital infrastructure supports long-term carbon reduction while maintaining occupant comfort and operational reliability."
     ],
-    "scope_tags": ["HVAC", "IBMS", "Thermal storage", "Geothermal VRV"],
+    "scope_tags": [
+      "HVAC",
+      "IBMS",
+      "Thermal storage",
+      "Geothermal VRV"
+    ],
     "status": "completed",
     "featured": true,
     "landmark_order": 5,
@@ -204,9 +277,18 @@
     "hero_image_alt": "Nalanda University campus in Rajgir, Bihar",
     "accent": "sun",
     "key_metrics": [
-      { "k": "Distinction", "v": "India's first net-zero campus" },
-      { "k": "HVAC systems", "v": "Thermal storage + geothermal VRV" },
-      { "k": "Controls", "v": "IBMS-integrated" }
+      {
+        "k": "Distinction",
+        "v": "India's first net-zero campus"
+      },
+      {
+        "k": "HVAC systems",
+        "v": "Thermal storage + geothermal VRV"
+      },
+      {
+        "k": "Controls",
+        "v": "IBMS-integrated"
+      }
     ],
     "execution_snapshots": [
       {
@@ -240,18 +322,39 @@
       "Hydronics and controls scope includes 29,250 TR of installed cooling, primary-secondary distribution, dual 5.05 MW SS316 plate heat exchangers for process cooling water, and a unified BMS + SCADA + historian. 1,400+ sensors and instruments across the facility tie into the controls plane.",
       "Air-side delivery includes 13,656 fan filter units, 217 air-handling units and 130 make-up air units. The project is being executed against the SAEL PMO's tier-1 commissioning protocol with weekly earned-value reporting and a 3-week rolling look-ahead."
     ],
-    "scope_tags": ["HVAC", "Cleanroom", "PCW", "BMS", "SCADA"],
+    "scope_tags": [
+      "HVAC",
+      "Cleanroom",
+      "PCW",
+      "BMS",
+      "SCADA"
+    ],
     "status": "active",
     "featured": true,
-    "hero_image_url": "/projects/sael-hero.jpg",
+    "hero_image_url": null,
     "hero_image_alt": "Solar cell manufacturing cleanroom interior at SAEL",
     "accent": "sun",
     "key_metrics": [
-      { "k": "Cleanroom area", "v": "66,000+ sqm" },
-      { "k": "Installed cooling", "v": "29,250 TR" },
-      { "k": "FFUs", "v": "13,656" },
-      { "k": "AHUs / MAUs", "v": "217 / 130" },
-      { "k": "Sensors", "v": "1,400+" }
+      {
+        "k": "Cleanroom area",
+        "v": "66,000+ sqm"
+      },
+      {
+        "k": "Installed cooling",
+        "v": "29,250 TR"
+      },
+      {
+        "k": "FFUs",
+        "v": "13,656"
+      },
+      {
+        "k": "AHUs / MAUs",
+        "v": "217 / 130"
+      },
+      {
+        "k": "Sensors",
+        "v": "1,400+"
+      }
     ],
     "published": true
   },
@@ -275,16 +378,30 @@
       "Construction scope covers civil and MEPF execution, chilled-water distribution across multiple kilometres, energy transfer stations at consumer buildings, TAB and operational commissioning. Long-term O&M under discussion.",
       "30,000 TR of central-plant capacity, multi-kilometre CHW distribution, 5+ ETS at consumer buildings — all delivered under a single accountable design-build contract."
     ],
-    "scope_tags": ["District Cooling", "HVAC", "Civil", "BMS"],
+    "scope_tags": [
+      "District Cooling",
+      "HVAC",
+      "Civil",
+      "BMS"
+    ],
     "status": "planning",
     "featured": false,
-    "hero_image_url": "/projects/tabreed-hero.jpg",
+    "hero_image_url": null,
     "hero_image_alt": "Conceptual rendering of district cooling plant",
     "accent": "fan",
     "key_metrics": [
-      { "k": "Central plant", "v": "30,000 TR" },
-      { "k": "ETS buildings", "v": "5+" },
-      { "k": "Distribution", "v": "Multi-km CHW" }
+      {
+        "k": "Central plant",
+        "v": "30,000 TR"
+      },
+      {
+        "k": "ETS buildings",
+        "v": "5+"
+      },
+      {
+        "k": "Distribution",
+        "v": "Multi-km CHW"
+      }
     ],
     "published": true
   },
@@ -308,14 +425,27 @@
       "Design-build scope covers underground piping, electrical infrastructure, and civil excavation — engineered and executed under one contract, supporting the upcoming fab build.",
       "Currently executing at approximately ₹50 Cr, with scope expected to expand toward ₹500 Cr as further packages are awarded."
     ],
-    "scope_tags": ["Underground Piping", "Electrical", "Civil"],
+    "scope_tags": [
+      "Underground Piping",
+      "Electrical",
+      "Civil"
+    ],
     "status": "active",
     "featured": false,
     "accent": "blocks",
     "key_metrics": [
-      { "k": "Packages awarded", "v": "3 design-build" },
-      { "k": "Pipeline", "v": "~₹500 Cr expected" },
-      { "k": "Sector", "v": "Semiconductor fab" }
+      {
+        "k": "Packages awarded",
+        "v": "3 design-build"
+      },
+      {
+        "k": "Pipeline",
+        "v": "~₹500 Cr expected"
+      },
+      {
+        "k": "Sector",
+        "v": "Semiconductor fab"
+      }
     ],
     "published": true
   },
@@ -338,14 +468,28 @@
       "Industrial MEPF services delivered for an electric-vehicle manufacturing facility — automotive electric-vehicle manufacturing for the JSW Group.",
       "Scope includes full MEPF and ISO 7/8 battery-assembly cleanroom zones within the broader manufacturing facility. PCW distribution to battery-line equipment with plate heat exchanger interface to primary cooling. Compressed-air distribution for battery-line pneumatics and tooling."
     ],
-    "scope_tags": ["MEPF", "Cleanroom", "PCW", "CDA"],
+    "scope_tags": [
+      "MEPF",
+      "Cleanroom",
+      "PCW",
+      "CDA"
+    ],
     "status": "active",
     "featured": false,
     "accent": "current",
     "key_metrics": [
-      { "k": "Scope", "v": "Complete MEPF + cleanroom" },
-      { "k": "Cleanroom class", "v": "ISO 7 / 8" },
-      { "k": "Sector", "v": "EV manufacturing" }
+      {
+        "k": "Scope",
+        "v": "Complete MEPF + cleanroom"
+      },
+      {
+        "k": "Cleanroom class",
+        "v": "ISO 7 / 8"
+      },
+      {
+        "k": "Sector",
+        "v": "EV manufacturing"
+      }
     ],
     "published": true
   },
@@ -369,14 +513,25 @@
       "Testing and commissioning included full T&C and performance verification per the operator's commissioning protocol, NABL-calibrated instrumentation and witnessed records.",
       "Coordination model: direct interface with the STT project team, weekly site reviews, single-window accountability across the HVAC scope."
     ],
-    "scope_tags": ["HVAC"],
+    "scope_tags": [
+      "HVAC"
+    ],
     "status": "completed",
     "featured": false,
     "accent": "fan",
     "key_metrics": [
-      { "k": "Capacity", "v": "9 MW" },
-      { "k": "Floors", "v": "Ground + 1st + terrace" },
-      { "k": "Operator", "v": "STT GDC India" }
+      {
+        "k": "Capacity",
+        "v": "9 MW"
+      },
+      {
+        "k": "Floors",
+        "v": "Ground + 1st + terrace"
+      },
+      {
+        "k": "Operator",
+        "v": "STT GDC India"
+      }
     ],
     "published": true
   },
@@ -400,14 +555,30 @@
       "HVAC: TFAs, AHUs (CW & DX), HACs, dehumidifiers, VRF/VRV, CW piping (25-350 mm), ventilation, BMS DDC integration. Electrical & ELV: 22 kV HT (bus duct to CSS), LT to rack sockets, cable trays, earthing, FAS / VESDA / WLD / LLD / PA, BMS (DDC + H₂ sensing), access control, CCTV.",
       "Fire fighting & plumbing: Pre-action (UL/FM), 823 sprinklers per floor pair (K80/K115), MS piping 25-150 NB, NFPA-13 compliant, domestic water, UPVC/CPVC piping. Full GC MEP scope across four floors."
     ],
-    "scope_tags": ["HVAC", "Electrical", "ELV", "Firefighting", "Plumbing", "BMS"],
+    "scope_tags": [
+      "HVAC",
+      "Electrical",
+      "ELV",
+      "Firefighting",
+      "Plumbing",
+      "BMS"
+    ],
     "status": "completed",
     "featured": false,
     "accent": "current",
     "key_metrics": [
-      { "k": "Capacity", "v": "20 MW" },
-      { "k": "Floors", "v": "4 (Fl 6-9)" },
-      { "k": "Sprinklers per floor pair", "v": "823" }
+      {
+        "k": "Capacity",
+        "v": "20 MW"
+      },
+      {
+        "k": "Floors",
+        "v": "4 (Fl 6-9)"
+      },
+      {
+        "k": "Sprinklers per floor pair",
+        "v": "823"
+      }
     ],
     "published": true
   },
@@ -430,14 +601,27 @@
       "Mechanical scope: desiccant dehumidifiers (~2,700 CFM, 42 kW), fans, CW piping (Ø80mm-Ø450mm), 33+ VRF indoor units, 26 stratified tanks, 24 CW pumps, GI ductwork, 110+ motorised damper actuators.",
       "Seismic supports: 900+ Mason spring isolators, seismic snubbers, flexible connectors, cable/pipe bracing — NV5-compliant seismic design across MEP services."
     ],
-    "scope_tags": ["Mechanical", "Seismic", "HSD Fuel"],
+    "scope_tags": [
+      "Mechanical",
+      "Seismic",
+      "HSD Fuel"
+    ],
     "status": "completed",
     "featured": false,
     "accent": "fan",
     "key_metrics": [
-      { "k": "Capacity", "v": "48 MW" },
-      { "k": "Spring isolators", "v": "900+" },
-      { "k": "VRF indoor units", "v": "33+" }
+      {
+        "k": "Capacity",
+        "v": "48 MW"
+      },
+      {
+        "k": "Spring isolators",
+        "v": "900+"
+      },
+      {
+        "k": "VRF indoor units",
+        "v": "33+"
+      }
     ],
     "published": true
   }

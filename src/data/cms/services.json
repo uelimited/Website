@@ -17,14 +17,28 @@
       "Third-party inspection runs continuously on critical activities (rebar checks, concrete cube tests, post-tensioning, façade pull-out tests). Finishes follow a sample-mock-up-approval flow before production, so the as-built matches the design intent — not a contractor's interpretation of it."
     ],
     "stats": [
-      { "k": "650+", "v": "Projects across civil + interior + MEPF" },
-      { "k": "M25 – M60", "v": "Concrete grades regularly delivered" },
-      { "k": "180 K sq.ft", "v": "Typical commercial fit-out scale" }
+      {
+        "k": "650+",
+        "v": "Projects across civil + interior + MEPF"
+      },
+      {
+        "k": "M25 – M60",
+        "v": "Concrete grades regularly delivered"
+      },
+      {
+        "k": "180 K sq.ft",
+        "v": "Typical commercial fit-out scale"
+      }
     ],
     "hero_image_url": "/services/civil-hero.jpg",
     "hero_image_alt": "Civil and interior construction interior with exposed steel structure",
     "sort_order": 1,
-    "published": true
+    "published": true,
+    "tagline": "Spaces built right, from the ground up.",
+    "approach_plain": [
+      "Everything that will ever pass through the structure — pipes, cables, ducts, equipment — is planned into it before the first pour. Nothing gets cut, patched or improvised later.",
+      "Independent inspectors check the critical work as it happens, and every finish is approved from a physical sample before production. What you signed off is what gets built."
+    ]
   },
   {
     "id": "svc-hvac",
@@ -43,14 +57,28 @@
       "Plant rooms and risers are coordinated in Revit (LOD 400) with all other MEPF trades; clashes are resolved before site release, not in the field. Commissioning runs the full L1→L5 ladder — component verification, static testing, start-up, integrated systems test, performance under load — each level signed off before the next begins."
     ],
     "stats": [
-      { "k": "29,250 TR", "v": "Cooling installed at SAEL · Jewar" },
-      { "k": "16,000 TR", "v": "High-efficiency plant at Central Secretariat" },
-      { "k": "5,00,000 sqm", "v": "Ducting executed at Central Secretariat" }
+      {
+        "k": "29,250 TR",
+        "v": "Cooling installed at SAEL · Jewar"
+      },
+      {
+        "k": "16,000 TR",
+        "v": "High-efficiency plant at Central Secretariat"
+      },
+      {
+        "k": "5,00,000 sqm",
+        "v": "Ducting executed at Central Secretariat"
+      }
     ],
     "hero_image_url": "/services/hvac-hero.jpg",
     "hero_image_alt": "Chiller plant room with chilled-water piping overhead",
     "sort_order": 2,
-    "published": true
+    "published": true,
+    "tagline": "Air you never have to think about.",
+    "approach_plain": [
+      "We size every system by working out what the building actually needs — room by room, machine by machine — never by rule of thumb. Then we check the numbers a second way before anything is ordered.",
+      "Before handover, the plant runs under real load and has to prove its performance, stage by stage. If it doesn't hit the numbers, it doesn't hand over."
+    ]
   },
   {
     "id": "svc-electrical",
@@ -70,14 +98,28 @@
       "Every installation is tested to defined acceptance criteria — insulation resistance, polarisation index, primary injection on relays, load-bank testing for DG and UPS. Documentation hands over to the operator's CMMS so the asset register starts day one with verified data."
     ],
     "stats": [
-      { "k": "33 / 22 / 11 kV", "v": "HT systems engineered & installed" },
-      { "k": "₹400+ Cr", "v": "Banking credit limit for procurement" },
-      { "k": "200+", "v": "T&C specialists for electrical handover" }
+      {
+        "k": "33 / 22 / 11 kV",
+        "v": "HT systems engineered & installed"
+      },
+      {
+        "k": "₹400+ Cr",
+        "v": "Banking credit limit for procurement"
+      },
+      {
+        "k": "200+",
+        "v": "T&C specialists for electrical handover"
+      }
     ],
     "hero_image_url": "/services/electrical-hero.jpg",
     "hero_image_alt": "Electrical substation interior with switchgear and bus trunking",
     "sort_order": 3,
-    "published": true
+    "published": true,
+    "tagline": "Power that never misses a beat.",
+    "approach_plain": [
+      "We design to how much downtime you can live with. A data centre gets a network that rides through any single failure; a hotel gets dependable power at sensible cost.",
+      "Every installation passes written acceptance tests before it goes live, and your operations team receives verified records of all of it — facts, not guesses, from day one."
+    ]
   },
   {
     "id": "svc-plumbing",
@@ -97,14 +139,28 @@
       "Water-treatment plants are sized against the source-water analysis, the consumer demand and the discharge consent. Membrane systems, multi-grade filters, softeners and dosing skids are specified to a clear treatment objective — not as a generic 'WTP block' on the BOQ."
     ],
     "stats": [
-      { "k": "1,00,000 m", "v": "Piping executed at Central Secretariat" },
-      { "k": "WTP/STP/ETP", "v": "Full treatment trains regularly delivered" },
-      { "k": "SS 316 · PP-H", "v": "High-purity piping for semiconductor process loads" }
+      {
+        "k": "1,00,000 m",
+        "v": "Piping executed at Central Secretariat"
+      },
+      {
+        "k": "WTP/STP/ETP",
+        "v": "Full treatment trains regularly delivered"
+      },
+      {
+        "k": "SS 316 · PP-H",
+        "v": "High-purity piping for semiconductor process loads"
+      }
     ],
     "hero_image_url": "/services/plumbing-hero.jpg",
     "hero_image_alt": "Industrial plumbing room with stainless steel piping arrays",
     "sort_order": 4,
-    "published": true
+    "published": true,
+    "tagline": "Water, moving exactly as it should.",
+    "approach_plain": [
+      "Systems are sized against how the building really uses water — the peak-hour rush and the quiet night — so pressure and supply hold steady at both.",
+      "Treatment plants are designed backwards from three facts: the water you have, the water you need, and what you're allowed to discharge."
+    ]
   },
   {
     "id": "svc-firefighting",
@@ -124,14 +180,28 @@
       "Gas suppression (NOVEC 1230, FM-200, IG-541) is sized against room volume with leakage compensation per NFPA 2001. Detection is cross-zoned for release; ventilation is interlocked for shut-down; doors are interlocked closed during release. Discharge testing is performed on commissioning."
     ],
     "stats": [
-      { "k": "Zero", "v": "Fatalities · last 5 years" },
-      { "k": "ISO 45001", "v": "Occupational Health & Safety certified" },
-      { "k": "NFPA 13/72 · NBC 2016", "v": "Codes routinely delivered against" }
+      {
+        "k": "Zero",
+        "v": "Fatalities · last 5 years"
+      },
+      {
+        "k": "ISO 45001",
+        "v": "Occupational Health & Safety certified"
+      },
+      {
+        "k": "NFPA 13/72 · NBC 2016",
+        "v": "Codes routinely delivered against"
+      }
     ],
     "hero_image_url": "/services/firefighting-hero.jpg",
     "hero_image_alt": "Fire pump house with red pumps and pressure piping",
     "sort_order": 5,
-    "published": true
+    "published": true,
+    "tagline": "Protection engineered before it's ever needed.",
+    "approach_plain": [
+      "Every system is designed to code and then proven physically — flow-tested at the furthest sprinkler head, discharge-tested before sign-off. If it can't demonstrate protection, it isn't finished.",
+      "In an emergency, detection, ventilation and doors act together automatically. We test that choreography end to end, not component by component."
+    ]
   },
   {
     "id": "svc-solar",
@@ -151,14 +221,28 @@
       "Grid synchronisation, net-metering hardware and protection schemes are coordinated with the local DISCOM. Performance is benchmarked against PR (performance ratio) and reported through the building's BMS or a dedicated solar SCADA — so the asset is monitored, not just installed."
     ],
     "stats": [
-      { "k": "Ingka Centre", "v": "Rooftop + integrated solar (IKEA)" },
-      { "k": "LEED · IGBC", "v": "Green-rating-aligned design" },
-      { "k": "Net metering", "v": "DISCOM coordination in-house" }
+      {
+        "k": "Ingka Centre",
+        "v": "Rooftop + integrated solar (IKEA)"
+      },
+      {
+        "k": "LEED · IGBC",
+        "v": "Green-rating-aligned design"
+      },
+      {
+        "k": "Net metering",
+        "v": "DISCOM coordination in-house"
+      }
     ],
     "hero_image_url": "/services/solar-hero.jpg",
     "hero_image_alt": "Utility-scale solar PV array at twilight",
     "sort_order": 6,
-    "published": true
+    "published": true,
+    "tagline": "Clean energy that pays for itself.",
+    "approach_plain": [
+      "Every plant starts with a generation forecast for your exact roof, sun and shading — the return is calculated before a single panel is ordered.",
+      "We handle the grid connection and the paperwork, and the plant reports its own output — so you always know it's earning what was promised."
+    ]
   },
   {
     "id": "svc-bms",
@@ -178,14 +262,28 @@
       "DCIM integration on data-centre projects is built on open feeds (Modbus/BACnet/SNMP) into the operator's chosen platform. Standardised tag dictionaries make the migration painless. Joint witness-tests on BMS-to-DCIM hand-off mean the operator never inherits a black box."
     ],
     "stats": [
-      { "k": "BTL-certified", "v": "Controllers used across HVAC/electrical/fire" },
-      { "k": "Modbus · BACnet · SNMP", "v": "Open feeds for DCIM integration" },
-      { "k": "1,450+ points", "v": "Typical IBMS scope on a medium-large building" }
+      {
+        "k": "BTL-certified",
+        "v": "Controllers used across HVAC/electrical/fire"
+      },
+      {
+        "k": "Modbus · BACnet · SNMP",
+        "v": "Open feeds for DCIM integration"
+      },
+      {
+        "k": "1,450+ points",
+        "v": "Typical IBMS scope on a medium-large building"
+      }
     ],
     "hero_image_url": "/services/bms-hero.jpg",
     "hero_image_alt": "BMS SCADA control room with video wall and dashboards",
     "sort_order": 7,
-    "published": true
+    "published": true,
+    "tagline": "Every system in the building, one brain.",
+    "approach_plain": [
+      "We make every system in the building speak one language, whatever brand each one is — and give your team a single screen with clear priorities instead of a wall of alarms.",
+      "Handover is built for the people who run the building: every data point is named, tested and witnessed with your team before we leave. No black boxes."
+    ]
   },
   {
     "id": "svc-om",
@@ -205,13 +303,27 @@
       "Predictive maintenance overlays the BMS trend store — chiller approach temperatures, motor vibration where instrumented, harmonic distortion on critical feeders — to spot drift before it becomes a failure. Rapid-response teams hold spares for the top-quartile-impact failures, so MTTR on the worst-case incidents stays inside the SLA."
     ],
     "stats": [
-      { "k": "24/7", "v": "Facility management coverage" },
-      { "k": "ISO 45001", "v": "Safety-led O&M operations" },
-      { "k": "100+", "v": "T&C and service specialists across active sites" }
+      {
+        "k": "24/7",
+        "v": "Facility management coverage"
+      },
+      {
+        "k": "ISO 45001",
+        "v": "Safety-led O&M operations"
+      },
+      {
+        "k": "100+",
+        "v": "T&C and service specialists across active sites"
+      }
     ],
     "hero_image_url": "/services/om-hero.jpg",
     "hero_image_alt": "Engineer walking through industrial plant corridor",
     "sort_order": 8,
-    "published": true
+    "published": true,
+    "tagline": "We stay long after the ribbon is cut.",
+    "approach_plain": [
+      "Maintenance starts on day one with a complete plan built from each machine's own documentation — what to service, when, and with which spares on the shelf.",
+      "We watch the building's data for early signs of trouble and keep critical spares close by, so small drifts get fixed before they become breakdowns."
+    ]
   }
 ]

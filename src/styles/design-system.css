@@ -71,6 +71,10 @@
    Base — Apple-clean body, inherited across the app
    ============================================================ */
 html, body {
+  /* Positioned so scroll-linked animation targets (motion useScroll)
+     can resolve offsets against the document — with static html/body
+     the offsetParent walk dead-ends and motion logs a warning. */
+  position: relative;
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-body);
@@ -251,42 +255,316 @@ html, body {
   margin-top: 14px;
 }
 
-/* Service row — tabular list */
-.ue-service-row {
-  display: grid; grid-template-columns: 56px 280px 1fr 140px;
-  gap: 32px; padding: 28px 0;
-  border-bottom: 1px solid var(--border-color);
+/* ============================================================
+   Services explorer — interactive index (hover-to-preview)
+   ============================================================ */
+.ue-svcx {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+  margin-top: 72px;
+}
+.ue-svcx__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border-color);
+}
+.ue-svcx__row {
+  display: flex;
   align-items: baseline;
-  transition: background 160ms var(--ease-std);
+  gap: 24px;
+  padding: 26px 8px 26px 0;
+  border-bottom: 1px solid var(--border-color);
+  text-decoration: none;
+  color: inherit;
 }
-.ue-service-row:hover { background: var(--paper-soft); }
-.ue-service-row .num {
-  font-family: var(--font-mono); font-size: 13px;
-  color: var(--fg-muted); font-variant-numeric: tabular-nums;
-}
-.ue-service-row .name {
-  font-family: var(--font-display); font-weight: var(--w-medium);
-  font-size: 24px; letter-spacing: -0.018em;
-  color: var(--ink-950);
-}
-.ue-service-row .desc {
-  font-size: 15px; line-height: 1.55; color: var(--ink-500);
-  max-width: 56ch;
-}
-.ue-service-row .scope {
-  font-family: var(--font-mono); font-size: 12px;
-  color: var(--fg-muted); text-align: right;
+.ue-svcx__row-media { display: none; }
+.ue-svcx__row-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fg-muted);
   font-variant-numeric: tabular-nums;
+  flex: 0 0 32px;
+  transition: color var(--dur-2) var(--ease-std);
 }
-@media (max-width: 820px) {
-  .ue-service-row {
-    grid-template-columns: 40px 1fr;
-    gap: 16px;
+.ue-svcx__row-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.ue-svcx__row-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: clamp(24px, 2.4vw, 34px);
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+  color: var(--ink-950);
+  opacity: 0.38;
+  transform: translateX(0);
+  transition: opacity var(--dur-2) var(--ease-std),
+              transform var(--dur-2) var(--ease-std);
+}
+.ue-svcx__row-arrow {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-500);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity var(--dur-2) var(--ease-std),
+              transform var(--dur-2) var(--ease-std);
+}
+.ue-svcx__row-tagline {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-500);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity var(--dur-2) var(--ease-std),
+              max-height var(--dur-3, 0.4s) var(--ease-std);
+}
+.ue-svcx__row[data-active] .ue-svcx__row-name {
+  opacity: 1;
+  transform: translateX(4px);
+}
+.ue-svcx__row[data-active] .ue-svcx__row-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+.ue-svcx__row[data-active] .ue-svcx__row-tagline {
+  opacity: 1;
+  max-height: 3em;
+}
+.ue-svcx__row[data-active] .ue-svcx__row-num { color: var(--accent-500); }
+.ue-svcx__row:focus-visible {
+  outline: 2px solid var(--accent-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Right pane — sticky image preview with crossfade */
+.ue-svcx__preview {
+  position: sticky;
+  top: calc(var(--header-h) + 32px);
+}
+.ue-svcx__frame {
+  position: relative;
+  aspect-ratio: 4 / 4.6;
+  max-height: min(72vh, 680px);
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--ink-950);
+  box-shadow: var(--shadow-md);
+}
+.ue-svcx__img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: opacity, transform;
+}
+.ue-svcx__frame-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,12,16,0) 46%, rgba(10,12,16,0.72) 100%);
+  pointer-events: none;
+}
+.ue-svcx__caption {
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 28px;
+  color: var(--paper);
+}
+.ue-svcx__caption-tagline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: 21px;
+  letter-spacing: -0.018em;
+  line-height: 1.25;
+}
+.ue-svcx__caption-blurb {
+  margin: 8px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.72);
+}
+
+@media (max-width: 900px) {
+  .ue-svcx {
+    display: block;
+    margin-top: 48px;
   }
-  .ue-service-row .scope { display: none; }
-  .ue-service-row .name { grid-column: 2; font-size: 20px; }
-  .ue-service-row .desc { grid-column: 2; }
+  .ue-svcx__preview { display: none; }
+  .ue-svcx__list { border-top: 0; }
+  .ue-svcx__row {
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px 0;
+  }
+  .ue-svcx__row-media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--ink-100);
+  }
+  .ue-svcx__row-num { display: none; }
+  .ue-svcx__row-name { opacity: 1; font-size: 24px; transform: none !important; }
+  .ue-svcx__row-tagline { opacity: 1; max-height: none; }
+  .ue-svcx__row-arrow { display: none; }
 }
+
+/* ============================================================
+   Sub-services accordion — service detail page
+   ============================================================ */
+.ue-subx {
+  border-top: 1px solid var(--border-color);
+}
+.ue-subx__item {
+  border-bottom: 1px solid var(--border-color);
+}
+.ue-subx__head {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 4px;
+  text-align: left;
+  color: inherit;
+}
+.ue-subx__num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fg-muted);
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 32px;
+  transition: color var(--dur-2) var(--ease-std);
+}
+.ue-subx__name {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: clamp(21px, 2.2vw, 28px);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink-950);
+  opacity: 0.55;
+  transition: opacity var(--dur-2) var(--ease-std);
+}
+.ue-subx__head:hover .ue-subx__name,
+.ue-subx__item[data-open] .ue-subx__name { opacity: 1; }
+.ue-subx__item[data-open] .ue-subx__num { color: var(--accent-500); }
+.ue-subx__icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  color: var(--ink-500);
+  transition: transform var(--dur-3, 0.4s) var(--ease-std),
+              border-color var(--dur-2) var(--ease-std),
+              color var(--dur-2) var(--ease-std),
+              background var(--dur-2) var(--ease-std);
+}
+.ue-subx__icon svg { width: 15px; height: 15px; }
+.ue-subx__head:hover .ue-subx__icon { border-color: var(--border-strong); }
+.ue-subx__item[data-open] .ue-subx__icon {
+  transform: rotate(45deg);
+  background: var(--ink-950);
+  border-color: var(--ink-950);
+  color: var(--paper);
+}
+.ue-subx__body { overflow: hidden; }
+.ue-subx__body-inner {
+  padding: 2px 60px 30px 56px;
+  max-width: 72ch;
+}
+.ue-subx__blurb {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-500);
+}
+.ue-subx__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  color: var(--accent-500);
+  text-decoration: none;
+}
+.ue-subx__link:hover { color: var(--accent-700); }
+@media (max-width: 700px) {
+  .ue-subx__head { gap: 16px; padding: 22px 0; }
+  .ue-subx__num { flex-basis: 24px; }
+  .ue-subx__body-inner { padding: 0 0 26px 40px; }
+}
+
+/* "For the engineers" disclosure — technical copy tucked away */
+.ue-tech-details {
+  margin-top: 32px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--paper-soft);
+  overflow: hidden;
+}
+.ue-tech-details summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  color: var(--ink-700);
+  user-select: none;
+}
+.ue-tech-details summary::-webkit-details-marker { display: none; }
+.ue-tech-details summary::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--ink-400);
+  border-bottom: 1.5px solid var(--ink-400);
+  transform: rotate(-45deg);
+  transition: transform var(--dur-2) var(--ease-std);
+  flex: 0 0 auto;
+}
+.ue-tech-details[open] summary::before { transform: rotate(45deg); }
+.ue-tech-details summary:hover { color: var(--ink-950); }
+.ue-tech-details__body {
+  padding: 4px 20px 20px;
+}
+.ue-tech-details__body p {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-500);
+}
+.ue-tech-details__body p:last-child { margin-bottom: 0; }
 
 /* Project card */
 .ue-proj { background: transparent; border: 0; cursor: pointer; display: flex; flex-direction: column; }
@@ -503,20 +781,20 @@ html, body {
   background: var(--paper);
 }
 
-/* Outer wrapper — (n-1) transitions × ~130vh so each pane gets
-   a generous scroll budget. */
+/* Outer wrapper — (n-1) transitions × ~110vh so each pane gets
+   a generous scroll budget. 8 disciplines → 7 transitions. */
 .ue-svc-scroll__outer {
   position: relative;
-  height: calc(100vh * 6 * 1.3);
+  height: calc(100vh * 7 * 1.1);
 }
 .ue-svc-scroll__pin {
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 48px 0 24px;
+  padding: 24px 0;
 }
 .ue-svc-scroll__pin > .ue-container {
   width: 100%;
@@ -612,12 +890,16 @@ html, body {
   overflow: hidden;
   will-change: opacity, transform;
 }
-/* Text layer — viewport clips, track translates up through it. */
+/* Text layer — viewport clips, track translates up through it.
+   The mask fades text out near the card's top/bottom edges so a
+   pane mid-transition dissolves instead of hard-clipping mid-word. */
 .ue-svc-scroll__text-viewport {
   position: absolute;
   inset: 0;
   z-index: 2;
   overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
 }
 .ue-svc-scroll__text-track {
   display: flex;
@@ -1018,12 +1300,12 @@ html, body {
 }
 .ue-why__pin {
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 48px 0;
+  padding: 24px 0;
 }
 .ue-why__head {
   max-width: 640px;
@@ -2784,12 +3066,12 @@ html, body {
 }
 .ue-sec-scroll__pin {
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 48px 0 24px;
+  padding: 24px 0;
 }
 .ue-sec-scroll__pin > .ue-container {
   width: 100%;
@@ -3015,6 +3297,22 @@ html, body {
   .ue-sec-scroll__stats {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* ============================================================
+   Project ledger — full order-book list rows
+   ============================================================ */
+.ue-ledger-row {
+  transition: background var(--dur-1) var(--ease-std),
+    padding-left var(--dur-1) var(--ease-std);
+}
+.ue-ledger-row:hover {
+  background: var(--paper-soft);
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  border-radius: 8px;
 }
 
 /* ============================================================

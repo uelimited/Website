@@ -8,6 +8,7 @@ import {
   useMotionValueEvent,
   useScroll,
   useTransform,
+  type MotionValue,
 } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import sectorsJson from "@/data/cms/sectors.json";
@@ -93,10 +94,12 @@ export function SectorsScroll() {
 
   // Active sector — flips at the midpoint between slides with a
   // hysteresis band so scroll jitter can't toggle state rapidly.
+  // 0.48 keeps the tab underline in step with the visible slide
+  // (the content crossfade below also pivots at the midpoint).
   useMotionValueEvent(trackPos, "change", (v) => {
     const candidate = Math.min(n - 1, Math.max(0, Math.round(v)));
     setActive((prev) => {
-      if (candidate !== prev && Math.abs(v - candidate) < 0.42) {
+      if (candidate !== prev && Math.abs(v - candidate) < 0.48) {
         return candidate;
       }
       return prev;
@@ -152,45 +155,8 @@ export function SectorsScroll() {
                   className="ue-sec-scroll__track"
                   style={{ transform: trackTransform }}
                 >
-                  {sectors.map((s) => (
-                    <div key={s.id} className="ue-sec-scroll__slide">
-                      <div
-                        className="ue-sec-scroll__bg"
-                        style={{
-                          backgroundImage: s.hero_image_url
-                            ? `url(${s.hero_image_url})`
-                            : undefined,
-                        }}
-                      />
-                      <div className="ue-sec-scroll__tint" aria-hidden />
-                      <div className="ue-sec-scroll__content">
-                        <div className="ue-sec-scroll__meta">
-                          {String(s.sort_order).padStart(2, "0")} ·{" "}
-                          {s.deep_page ? "Deep capability" : "Active sector"}
-                        </div>
-                        <h3 className="ue-sec-scroll__name">{s.name}</h3>
-                        <p className="ue-sec-scroll__desc">
-                          {s.short_description}
-                        </p>
-                        <dl className="ue-sec-scroll__stats">
-                          <div>
-                            <dt>Projects</dt>
-                            <dd>{s.projects_count_override ?? "—"}</dd>
-                          </div>
-                          <div>
-                            <dt>Cumulative revenue</dt>
-                            <dd>{s.revenue_cr_override ?? "—"}</dd>
-                          </div>
-                        </dl>
-                        <Link
-                          href={`/sectors/${s.slug}`}
-                          className="ue-sec-scroll__cta"
-                        >
-                          Explore sector
-                          <ArrowUpRight className="size-4" aria-hidden />
-                        </Link>
-                      </div>
-                    </div>
+                  {sectors.map((s, i) => (
+                    <Slide key={s.id} sector={s} index={i} trackPos={trackPos} />
                   ))}
                 </motion.div>
               </div>
@@ -207,5 +173,68 @@ export function SectorsScroll() {
         </div>
       </div>
     </section>
+  );
+}
+
+/**
+ * One sector slide. The image rides the track at full opacity, but
+ * the text block crossfades on its distance from centre — so copy
+ * from a neighbouring slide never bleeds half-clipped into the card
+ * frame while a transition is in flight.
+ */
+function Slide({
+  sector: s,
+  index,
+  trackPos,
+}: {
+  sector: Sector;
+  index: number;
+  trackPos: MotionValue<number>;
+}) {
+  // 1 at rest, → 0 by the transition midpoint.
+  const contentOpacity = useTransform(trackPos, (v) =>
+    Math.max(0, 1 - Math.abs(v - index) * 2),
+  );
+  const contentY = useTransform(trackPos, (v) =>
+    Math.min(24, Math.abs(v - index) * 48),
+  );
+
+  return (
+    <div className="ue-sec-scroll__slide">
+      <div
+        className="ue-sec-scroll__bg"
+        style={{
+          backgroundImage: s.hero_image_url
+            ? `url(${s.hero_image_url})`
+            : undefined,
+        }}
+      />
+      <div className="ue-sec-scroll__tint" aria-hidden />
+      <motion.div
+        className="ue-sec-scroll__content"
+        style={{ opacity: contentOpacity, y: contentY }}
+      >
+        <div className="ue-sec-scroll__meta">
+          {String(s.sort_order).padStart(2, "0")} ·{" "}
+          {s.deep_page ? "Deep capability" : "Active sector"}
+        </div>
+        <h3 className="ue-sec-scroll__name">{s.name}</h3>
+        <p className="ue-sec-scroll__desc">{s.short_description}</p>
+        <dl className="ue-sec-scroll__stats">
+          <div>
+            <dt>Projects</dt>
+            <dd>{s.projects_count_override ?? "—"}</dd>
+          </div>
+          <div>
+            <dt>Cumulative revenue</dt>
+            <dd>{s.revenue_cr_override ?? "—"}</dd>
+          </div>
+        </dl>
+        <Link href={`/sectors/${s.slug}`} className="ue-sec-scroll__cta">
+          Explore sector
+          <ArrowUpRight className="size-4" aria-hidden />
+        </Link>
+      </motion.div>
+    </div>
   );
 }

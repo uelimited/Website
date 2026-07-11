@@ -1,13 +1,17 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   getAllServices,
+  getAllSectors,
   getServiceWithCategoriesAndProjects,
+  getLedgerByService,
 } from "@/lib/cms";
 import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
+import { ProjectLedger } from "@/components/site/project-ledger";
+import { SubServicesList } from "@/components/site/sub-services-list";
 import type { Metadata } from "next";
 
 type Params = { slug: string };
@@ -32,17 +36,9 @@ export async function generateMetadata({
   };
 }
 
-const TYPE_LABELS = {
-  system_layer: "System layer",
-  application: "Application",
-  specialised: "Specialised",
-} as const;
-
-const GROUP_KICKERS = {
-  system_layer: "The engineering decomposition — central plant and the air-side equipment that feeds it.",
-  application: "Application-led delivery — sized to the building's use, occupancy and operating window.",
-  specialised: "Mission-critical disciplines — data centre, semiconductor and process environments.",
-} as const;
+/** "HVAC" stays as-is mid-sentence; "Civil & Interior" reads better lowercased. */
+const inlineName = (name: string) =>
+  name === name.toUpperCase() ? name : name.toLowerCase();
 
 export default async function ServiceLandingPage({
   params,
@@ -56,11 +52,31 @@ export default async function ServiceLandingPage({
   }
   const { service, categories, projects } = data;
 
-  const grouped = {
-    system_layer: categories.filter((c) => c.category_type === "system_layer"),
-    application: categories.filter((c) => c.category_type === "application"),
-    specialised: categories.filter((c) => c.category_type === "specialised"),
-  };
+  // Order-book projects where this service is an evidenced scope.
+  // Only surfaced when there's a substantive list to show.
+  const serviceLedger = getLedgerByService(service.id);
+  const showLedger = serviceLedger.length >= 5;
+  const sectors = getAllSectors();
+  const sectorLabels = Object.fromEntries(sectors.map((s) => [s.id, s.name]));
+  const usedSectorIds = new Set(serviceLedger.map((e) => e.sector_id));
+  const ledgerSectorFilter = sectors
+    .filter((s) => usedSectorIds.has(s.id))
+    .map((s) => ({ id: s.id, name: s.name }));
+
+  const subServices = categories.map((c) => ({
+    slug: c.slug,
+    num: c.num,
+    name: c.name,
+    blurb: c.short_blurb,
+    href: `/services/${service.slug}/${c.slug}`,
+  }));
+
+  // Plain-language lead; the original technical copy stays available
+  // behind the "for the engineers" disclosure below it.
+  const approachLead = service.approach_plain ?? service.approach_paragraphs;
+  const approachTechnical = service.approach_plain
+    ? service.approach_paragraphs
+    : [];
 
   return (
     <>
@@ -127,7 +143,7 @@ export default async function ServiceLandingPage({
               maxWidth: "60ch",
             }}
           >
-            {service.blurb}
+            {service.tagline ?? service.blurb}
           </p>
         </div>
       </section>
@@ -234,7 +250,7 @@ export default async function ServiceLandingPage({
         </section>
       )}
 
-      {/* What we cover — friendly sub-discipline grid */}
+      {/* What we cover — one clean accordion, no internal taxonomy */}
       <section
         style={{
           padding: "96px 0 112px",
@@ -244,8 +260,8 @@ export default async function ServiceLandingPage({
         }}
       >
         <div className="ue-container">
-          <header style={{ marginBottom: 56, maxWidth: 720 }}>
-            <p className="ue-eyebrow">What this discipline covers</p>
+          <header style={{ marginBottom: 40, maxWidth: 720 }}>
+            <p className="ue-eyebrow">What&apos;s inside</p>
             <h2
               style={{
                 fontFamily: "var(--font-display)",
@@ -257,8 +273,7 @@ export default async function ServiceLandingPage({
                 color: "var(--ink-950)",
               }}
             >
-              {categories.length} ways we deliver{" "}
-              {service.name.toLowerCase()}.
+              {service.name}, piece by piece.
             </h2>
             <p
               style={{
@@ -268,179 +283,17 @@ export default async function ServiceLandingPage({
                 margin: 0,
               }}
             >
-              We split {service.name} into focused sub-disciplines so you can
-              see exactly which slice of the work matches your project. Click
-              any one to read more.
+              Every project draws on a different slice of the discipline. Open
+              any part to see what it covers.
             </p>
           </header>
 
-          {(["system_layer", "application", "specialised"] as const).map(
-            (type) =>
-              grouped[type].length > 0 && (
-                <div key={type} style={{ marginBottom: 64 }}>
-                  <header
-                    style={{
-                      display: "flex",
-                      alignItems: "baseline",
-                      gap: 16,
-                      marginBottom: 24,
-                      paddingBottom: 12,
-                      borderBottom: "1px solid var(--border-color)",
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        fontWeight: 500,
-                        fontSize: 22,
-                        letterSpacing: "-0.018em",
-                        margin: 0,
-                        color: "var(--ink-950)",
-                      }}
-                    >
-                      {TYPE_LABELS[type]}s
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: 14,
-                        color: "var(--ink-500)",
-                        margin: 0,
-                        flex: 1,
-                        maxWidth: "60ch",
-                      }}
-                    >
-                      {GROUP_KICKERS[type]}
-                    </p>
-                  </header>
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns:
-                        "repeat(auto-fit, minmax(300px, 1fr))",
-                      gap: 16,
-                    }}
-                  >
-                    {grouped[type].map((c) => (
-                      <Link
-                        key={c.id}
-                        href={`/services/${service.slug}/${c.slug}`}
-                        className="group"
-                        style={{
-                          display: "block",
-                          borderRadius: 18,
-                          border: "1px solid var(--border-color)",
-                          background: "var(--paper)",
-                          overflow: "hidden",
-                          textDecoration: "none",
-                          color: "inherit",
-                          transition:
-                            "border-color var(--dur-2) var(--ease-std)",
-                        }}
-                      >
-                        <div
-                          style={{
-                            aspectRatio: "16 / 9",
-                            background: c.hero_image_url
-                              ? `linear-gradient(180deg, rgba(10,12,16,0.10) 0%, rgba(10,12,16,0.45) 100%), url(${c.hero_image_url}) center/cover no-repeat`
-                              : service.hero_image_url
-                              ? `linear-gradient(180deg, rgba(10,12,16,0.20) 0%, rgba(10,12,16,0.55) 100%), url(${service.hero_image_url}) center/cover no-repeat`
-                              : "var(--ink-100)",
-                            position: "relative",
-                            borderBottom: "1px solid var(--border-color)",
-                          }}
-                        >
-                          <div
-                            style={{
-                              position: "absolute",
-                              top: 18,
-                              left: 18,
-                              right: 18,
-                              display: "flex",
-                              justifyContent: "space-between",
-                              alignItems: "baseline",
-                              color: "var(--paper)",
-                            }}
-                          >
-                            <span
-                              style={{
-                                fontFamily: "var(--font-mono)",
-                                fontSize: 11,
-                                letterSpacing: "0.05em",
-                                opacity: 0.85,
-                              }}
-                            >
-                              {c.num}
-                            </span>
-                            <span
-                              style={{
-                                fontFamily: "var(--font-mono)",
-                                fontSize: 10,
-                                textTransform: "uppercase",
-                                letterSpacing: "0.05em",
-                                padding: "3px 10px",
-                                borderRadius: 999,
-                                background: "rgba(255,255,255,0.18)",
-                                backdropFilter: "blur(8px)",
-                              }}
-                            >
-                              {TYPE_LABELS[c.category_type]}
-                            </span>
-                          </div>
-                        </div>
-                        <div style={{ padding: "22px 24px 24px" }}>
-                          <h4
-                            style={{
-                              fontFamily: "var(--font-display)",
-                              fontWeight: 500,
-                              fontSize: 22,
-                              letterSpacing: "-0.018em",
-                              lineHeight: 1.15,
-                              margin: 0,
-                              color: "var(--ink-950)",
-                            }}
-                          >
-                            {c.name}
-                          </h4>
-                          <p
-                            style={{
-                              marginTop: 10,
-                              marginBottom: 18,
-                              fontSize: 14,
-                              lineHeight: 1.55,
-                              color: "var(--ink-500)",
-                            }}
-                          >
-                            {c.short_blurb}
-                          </p>
-                          <div
-                            style={{
-                              display: "inline-flex",
-                              alignItems: "center",
-                              gap: 6,
-                              fontSize: 13,
-                              fontWeight: 500,
-                              color: "var(--accent-500)",
-                            }}
-                            className="group-hover:text-[color:var(--accent-700)]"
-                          >
-                            Read more
-                            <ArrowUpRight
-                              className="size-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                              aria-hidden
-                            />
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ),
-          )}
+          <SubServicesList items={subServices} />
         </div>
       </section>
 
       {/* How we approach the discipline overall */}
-      {service.approach_paragraphs.length > 0 && (
+      {approachLead.length > 0 && (
         <section style={{ padding: "96px 0" }}>
           <div className="ue-container">
             <div
@@ -460,11 +313,11 @@ export default async function ServiceLandingPage({
                     maxWidth: "16ch",
                   }}
                 >
-                  How we engineer {service.name.toLowerCase()}.
+                  How we engineer {inlineName(service.name)}.
                 </h2>
               </div>
               <div>
-                {service.approach_paragraphs.map((p, i) => (
+                {approachLead.map((p, i) => (
                   <p
                     key={i}
                     style={{
@@ -478,6 +331,17 @@ export default async function ServiceLandingPage({
                     {p}
                   </p>
                 ))}
+
+                {approachTechnical.length > 0 && (
+                  <details className="ue-tech-details">
+                    <summary>For the engineers — the technical version</summary>
+                    <div className="ue-tech-details__body">
+                      {approachTechnical.map((p, i) => (
+                        <p key={i}>{p}</p>
+                      ))}
+                    </div>
+                  </details>
+                )}
               </div>
             </div>
           </div>
@@ -499,6 +363,39 @@ export default async function ServiceLandingPage({
               eyebrow="Where you'll see this work"
               heading={`${service.name} — in delivery.`}
             />
+          </div>
+        </section>
+      )}
+
+      {/* Full order-book record for this discipline */}
+      {showLedger && (
+        <section
+          className="ue-section"
+          style={{
+            borderTop: "1px solid var(--border-color)",
+          }}
+        >
+          <div className="ue-container">
+            <ProjectLedger
+              entries={serviceLedger}
+              sectorLabels={sectorLabels}
+              eyebrow="Where this scope was delivered"
+              heading={`${service.name} — the project record.`}
+              intro="Projects from the last decade with documented scope in this discipline, across every industry we serve."
+              sectorFilter={ledgerSectorFilter}
+              showSectorTag
+              enableSearch={serviceLedger.length > 10}
+              initialCount={12}
+            />
+            <div style={{ marginTop: 36 }}>
+              <Link
+                href="/track-record"
+                className="inline-flex items-center gap-2 text-[14px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
+              >
+                Browse the full track record
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            </div>
           </div>
         </section>
       )}

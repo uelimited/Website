@@ -11,10 +11,10 @@ import { FIRM, HERO, HERO_VIDEO, YEARS_IN_PRACTICE } from "@/data/firm";
  *   │                                    │
  *   │          (video plays)             │
  *   │                                    │
- *   │  Design-build MEPF · since 1992    │
+ *   │  Design-build MEPF · since 1990    │
  *   │  Unique Engineers.    (animated)   │
  *   │  Engineered to specification.      │
- *   │  [UE · 1992 · MEPF …] mono row     │
+ *   │  [UE · 1990 · MEPF …] mono row     │
  *   └────────────────────────────────────┘
  */
 export function HeroVideo() {

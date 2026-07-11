@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Unique Engineers — MEPF, BMS and civil contracting",
   description:
-    "Unique Engineers Limited delivers mechanical, electrical, plumbing, firefighting, building management and civil contracting. Since 1992. Gurugram.",
+    "Unique Engineers Limited delivers mechanical, electrical, plumbing, firefighting, building management and civil contracting. Since 1990. Gurugram.",
   metadataBase: new URL("https://www.uniqueengineersltd.com"),
 };
 

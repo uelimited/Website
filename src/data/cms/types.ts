@@ -36,10 +36,12 @@ export type Service = {
   name: string;                     // "HVAC"
   short_name?: string;              // optional shorter form for nav
   blurb: string;                    // one-liner for nav menus
+  tagline?: string;                 // human one-liner ("Air you never have to think about.")
   scope_unit: string;               // "TR · CFM"
   accent: Accent;
   intro_paragraphs: string[];       // landing-page overview
-  approach_paragraphs: string[];    // how UEL approaches this discipline
+  approach_paragraphs: string[];    // how UEL approaches this discipline (technical)
+  approach_plain?: string[];        // plain-language version shown first
   stats?: Spec[];                   // headline figures (e.g. "29,250 TR installed at SAEL")
   hero_image_url?: string;
   hero_image_alt?: string;
@@ -170,6 +172,32 @@ export type Project = {
   seo_title?: string;
   seo_description?: string;
   published: boolean;
+};
+
+// -----------------------------------------------------------------
+// project_ledger — the full 10-year order book, consolidated
+//
+// Distinct from `projects` (the curated case studies). Every entry is
+// a real facility/site delivered over the last decade, categorised by
+// sector and (where evidenced) service. Compiled from the order book;
+// repeat purchase orders are consolidated per site, tiny sub-contracts
+// (< ₹0.5 Cr) are excluded. Sector/service ids match the tables above.
+// -----------------------------------------------------------------
+
+export type LedgerEntry = {
+  id: string;
+  name: string;
+  client: string;
+  city: string;
+  state: string;
+  sector_id: string;            // FK → sectors.id
+  service_ids: string[];        // FK → services.id (may be empty)
+  value_cr: number;             // aggregated contract value, exact
+  value_display: string;        // "₹347 Cr" / "₹6.5 Cr" / "₹80 L"
+  year_start: number | null;
+  year_end: number | null;
+  year_display: string;         // "2018–2024" / "2023" / ""
+  order_count: number;          // purchase-order line items consolidated
 };
 
 // -----------------------------------------------------------------

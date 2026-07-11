@@ -4,10 +4,13 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   getAllSectors,
+  getAllServices,
   getSectorWithProjects,
+  getLedgerBySector,
 } from "@/lib/cms";
 import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
+import { ProjectLedger } from "@/components/site/project-ledger";
 import { SystemCard } from "@/components/site/system-card";
 import type { Metadata } from "next";
 
@@ -40,6 +43,17 @@ export default async function SectorDetailPage({
   const data = getSectorWithProjects(slug);
   if (!data) notFound();
   const { sector, projects, clients } = data;
+
+  // Full order-book record for this sector (last 10 years).
+  const ledger = getLedgerBySector(sector.id);
+  const services = getAllServices();
+  const serviceLabels = Object.fromEntries(
+    services.map((s) => [s.id, s.short_name ?? s.name]),
+  );
+  const usedServiceIds = new Set(ledger.flatMap((e) => e.service_ids));
+  const serviceFilter = services
+    .filter((s) => usedServiceIds.has(s.id))
+    .map((s) => ({ id: s.id, name: s.short_name ?? s.name }));
 
   return (
     <>
@@ -251,6 +265,41 @@ export default async function SectorDetailPage({
               eyebrow="Sector record"
               heading={`${sector.name} — selected projects.`}
             />
+          </div>
+        </section>
+      )}
+
+      {/* Full order-book record for this sector */}
+      {ledger.length > 0 && (
+        <section
+          className="ue-section"
+          style={{
+            background: "var(--paper-soft)",
+            borderTop: "1px solid var(--border-color)",
+            borderBottom: "1px solid var(--border-color)",
+          }}
+        >
+          <div className="ue-container">
+            <ProjectLedger
+              entries={ledger}
+              serviceLabels={serviceLabels}
+              eyebrow="Full record · last 10 years"
+              heading={`Every ${sector.name.toLowerCase()} project.`}
+              intro="The complete list from our order book — consolidated by site, largest first."
+              serviceFilter={serviceFilter}
+              showSectorTag={false}
+              enableSearch={ledger.length > 10}
+              initialCount={12}
+            />
+            <div style={{ marginTop: 36 }}>
+              <Link
+                href="/track-record"
+                className="inline-flex items-center gap-2 text-[14px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
+              >
+                Browse the full multi-sector track record
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            </div>
           </div>
         </section>
       )}

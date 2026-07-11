@@ -180,7 +180,7 @@ export function ServicesScroll() {
                     <div key={d.slug} className="ue-svc-scroll__text-pane">
                       <div className="ue-svc-scroll__overlay-inner">
                         <span className="ue-svc-scroll__o-meta">
-                          {d.num} / 07
+                          {d.num} / {String(n).padStart(2, "0")}
                         </span>
                         <h3 className="ue-svc-scroll__o-name">{d.name}</h3>
                         <Link

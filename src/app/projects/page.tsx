@@ -43,6 +43,18 @@ export default function ProjectsIndexPage() {
           education, corporate and residential — delivered by in-house engineers.
         </p>
 
+        <p style={{ marginTop: 20, fontSize: 15, color: "var(--ink-500)" }}>
+          These are the featured case studies. For every project we&apos;ve
+          delivered over the last decade,{" "}
+          <Link
+            href="/track-record"
+            className="font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
+          >
+            browse the full track record
+          </Link>
+          .
+        </p>
+
         <div
           className="flex flex-wrap"
           style={{ gap: 8, marginTop: 64, marginBottom: 48 }}
