@@ -34,7 +34,7 @@ export function ServiceMedia({ videoSrc, poster, accent, label }: Props) {
         <ServiceDiagram accent={accent} label={label} />
       )}
       <div className="ue-service-media__caption">
-        <span className="ue-service-media__mono">{label.toUpperCase()}</span>
+        <span className="ue-service-media__mono">{label}</span>
         <span className="dot">·</span>
         <span>System diagram</span>
       </div>

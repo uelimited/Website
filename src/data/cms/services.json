@@ -10,16 +10,16 @@
     "accent": "blocks",
     "intro_paragraphs": [
       "Civil and interior work is where every other discipline lands. Foundations absorb the loads, façades meet the weather, finishes carry the tenant fit-out — and all of it must hold the MEPF systems that move through it. The discipline is unforgiving of shortcuts: a misaligned pour or a slack slab finish costs months to correct once downstream trades arrive.",
-      "Our civil desk runs the full arc — from soil investigation through structural shell, façade envelope, and end-user finish. Work is scheduled against the MEPF programme so openings, sleeves, cut-outs and penetrations are cast-in, not chipped-in. Handover is against a stamped bill of quantities with a full as-built set."
+      "The civil desk runs the full arc — from soil investigation through structural shell, façade envelope, and end-user finish. Work is scheduled against the MEPF programme so openings, sleeves, cut-outs and penetrations are cast-in, not chipped-in. Handover is against a stamped bill of quantities with a full as-built set."
     ],
     "approach_paragraphs": [
-      "We treat the building shell as the primary clash-resolution zone for everything that follows. Structural drawings are coordinated with the MEPF model at LOD 400 before the first pour — sleeves, cast-in inserts, services risers and equipment plinths are placed deliberately, not adapted-to later.",
+      "The building shell is treated as the primary clash-resolution zone for everything that follows. Structural drawings are coordinated with the MEPF model at LOD 400 before the first pour — sleeves, cast-in inserts, services risers and equipment plinths are placed deliberately, not adapted-to later.",
       "Third-party inspection runs continuously on critical activities (rebar checks, concrete cube tests, post-tensioning, façade pull-out tests). Finishes follow a sample-mock-up-approval flow before production, so the as-built matches the design intent — not a contractor's interpretation of it."
     ],
     "stats": [
       {
-        "k": "650+",
-        "v": "Projects across civil + interior + MEPF"
+        "k": "IS 456 · IS 875 · IS 1893",
+        "v": "Structural design codes governing every foundation pour"
       },
       {
         "k": "M25 – M60",
@@ -37,7 +37,8 @@
     "tagline": "Spaces built right, from the ground up.",
     "approach_plain": [
       "Everything that will ever pass through the structure — pipes, cables, ducts, equipment — is planned into it before the first pour. Nothing gets cut, patched or improvised later.",
-      "Independent inspectors check the critical work as it happens, and every finish is approved from a physical sample before production. What you signed off is what gets built."
+      "Independent inspectors check the critical work as it happens, and every finish is approved from a physical sample before production. What you signed off is what gets built.",
+      "It shows up as the civil excavation package at Tata Electronics' semiconductor campus in Dholera, and the structural civil scope behind Tabreed's 30,000 TR district-cooling plant in Amravati — foundations sized for the machinery that will eventually sit on them."
     ]
   },
   {
@@ -49,7 +50,7 @@
     "scope_unit": "TR · CFM",
     "accent": "fan",
     "intro_paragraphs": [
-      "HVAC is the firm's founding discipline — the practice began in 1990 as a specialist HVAC contractor and the depth shows. We engineer and install central plants, air-handling systems, terminal devices, and the controls that tie them together, across applications from luxury hotels to ISO-6 semiconductor cleanrooms.",
+      "HVAC is the firm's founding discipline — the practice began in 1990 as a specialist HVAC contractor and the depth shows. Central plants, air-handling systems, terminal devices, and the controls that tie them together are engineered and installed across applications from luxury hotels to ISO-6 semiconductor cleanrooms.",
       "Every job starts with a granular heat load — room-by-room, equipment-by-equipment — not a rule-of-thumb tonnage. Plant sizing, distribution hydraulics, ductwork, and controls flow from that single source of truth, and the entire system is commissioned to a measurable performance window before handover."
     ],
     "approach_paragraphs": [
@@ -58,26 +59,28 @@
     ],
     "stats": [
       {
-        "k": "29,250 TR",
-        "v": "Cooling installed at SAEL · Jewar"
+        "k": "30,000 TR",
+        "v": "District-cooling plant delivered for Tabreed · Amravati"
       },
       {
         "k": "16,000 TR",
-        "v": "High-efficiency plant at Central Secretariat"
+        "v": "High-efficiency plant at Common Central Secretariat"
       },
       {
-        "k": "5,00,000 sqm",
-        "v": "Ducting executed at Central Secretariat"
+        "k": "29,250 TR",
+        "v": "Cooling installed at SAEL · Jewar"
       }
     ],
+    "hero_scale": "up to 30,000 TR",
     "hero_image_url": "/services/hvac-hero.jpg",
     "hero_image_alt": "Chiller plant room with chilled-water piping overhead",
     "sort_order": 2,
     "published": true,
     "tagline": "Air you never have to think about.",
     "approach_plain": [
-      "We size every system by working out what the building actually needs — room by room, machine by machine — never by rule of thumb. Then we check the numbers a second way before anything is ordered.",
-      "Before handover, the plant runs under real load and has to prove its performance, stage by stage. If it doesn't hit the numbers, it doesn't hand over."
+      "Every system is sized by working out what the building actually needs — room by room, machine by machine — never by rule of thumb. The numbers are checked a second way before anything is ordered.",
+      "Before handover, the plant runs under real load and has to prove its performance, stage by stage. If it doesn't hit the numbers, it doesn't hand over.",
+      "The scale runs from a 16,000 TR high-efficiency plant and 5,00,000 sqm of ducting at the Common Central Secretariat in Delhi, to a 30,000 TR district-cooling network built for Tabreed in Amravati, down to a geothermal VRV system drawing on borehole heat at Nalanda University's net-zero campus in Bihar."
     ]
   },
   {
@@ -90,7 +93,7 @@
     "scope_unit": "kVA · kW",
     "accent": "current",
     "intro_paragraphs": [
-      "Electrical is where reliability is engineered, not specified. Our team delivers high-tension to low-tension distribution, substations and transformers, backup power, switchgear, cable management, earthing and the lighting layer on top — sized for the building it powers and the loads it serves.",
+      "Electrical is where reliability is engineered, not specified. High-tension to low-tension distribution, substations and transformers, backup power, switchgear, cable management, earthing and the lighting layer on top are delivered — sized for the building it powers and the loads it serves.",
       "Distribution diagrams are owned end-to-end. Short-circuit analysis, arc-flash modelling, harmonic studies and protection coordination are run before the first cable is pulled. Cable trays and bus trunking are routed in the coordinated MEPF model so service voids stay congestion-free across the building's life."
     ],
     "approach_paragraphs": [
@@ -103,22 +106,24 @@
         "v": "HT systems engineered & installed"
       },
       {
-        "k": "₹400+ Cr",
-        "v": "Banking credit limit for procurement"
+        "k": "ETAP short-circuit + AF",
+        "v": "Protection study run before any cable is pulled"
       },
       {
-        "k": "200+",
-        "v": "T&C specialists for electrical handover"
+        "k": "IR · PI · Load-bank",
+        "v": "Acceptance tests run on every installation before energisation"
       }
     ],
+    "hero_scale": "up to 33 kV HT",
     "hero_image_url": "/services/electrical-hero.jpg",
     "hero_image_alt": "Electrical substation interior with switchgear and bus trunking",
     "sort_order": 3,
     "published": true,
     "tagline": "Power that never misses a beat.",
     "approach_plain": [
-      "We design to how much downtime you can live with. A data centre gets a network that rides through any single failure; a hotel gets dependable power at sensible cost.",
-      "Every installation passes written acceptance tests before it goes live, and your operations team receives verified records of all of it — facts, not guesses, from day one."
+      "Systems are designed to how much downtime the operation can live with. A data centre gets a network that rides through any single failure; a hotel gets dependable power at sensible cost.",
+      "Every installation passes written acceptance tests before it goes live, and your operations team receives verified records of all of it — facts, not guesses, from day one.",
+      "The same discipline that distributes 22 kV HT down to rack-level PDUs inside CtrlS Mahape's 20 MW Rated-4 data hall also keeps a mixed-use development the size of Ingka Centre running without a flicker."
     ]
   },
   {
@@ -132,7 +137,7 @@
     "accent": "droplets",
     "intro_paragraphs": [
       "Plumbing and public health engineering covers the building's entire water and effluent story — from the borewell or municipal tap through treatment, distribution, fixture supply, drainage and effluent return. It is hidden infrastructure that defines whether a building is comfortable to occupy or a continuous source of complaints.",
-      "We deliver pressurised cold and hot water systems, treated water for cooling towers and process plants, sewage and effluent treatment, and the high-purity piping that pharma, semiconductor and laboratory environments require. Hydraulics are designed, not assumed."
+      "Pressurised cold and hot water systems, treated water for cooling towers and process plants, sewage and effluent treatment, and the high-purity piping that pharma, semiconductor and laboratory environments require are delivered. Hydraulics are designed, not assumed."
     ],
     "approach_paragraphs": [
       "Hydraulic networks are modelled in AFT Fathom and Pipe Flow Expert against a real demand profile — peak, average, simultaneity factors. Pump sizing is verified against duty-standby logic, VFD control curves, and head-loss budgets that include actual fitting counts. Pressure-reducing zones are deliberate, not ad-hoc.",
@@ -152,6 +157,7 @@
         "v": "High-purity piping for semiconductor process loads"
       }
     ],
+    "hero_scale": "up to 5,000 KLD treatment",
     "hero_image_url": "/services/plumbing-hero.jpg",
     "hero_image_alt": "Industrial plumbing room with stainless steel piping arrays",
     "sort_order": 4,
@@ -159,7 +165,8 @@
     "tagline": "Water, moving exactly as it should.",
     "approach_plain": [
       "Systems are sized against how the building really uses water — the peak-hour rush and the quiet night — so pressure and supply hold steady at both.",
-      "Treatment plants are designed backwards from three facts: the water you have, the water you need, and what you're allowed to discharge."
+      "Treatment plants are designed backwards from three facts: the water you have, the water you need, and what you're allowed to discharge.",
+      "The same team routes compressed dry air, nitrogen and vacuum lines through Foxconn's cleanroom floors, and lays the process-cooling-water headers feeding SAEL's solar-cell plant in Jewar."
     ]
   },
   {
@@ -173,7 +180,7 @@
     "accent": "pulse",
     "intro_paragraphs": [
       "Firefighting is a code-led discipline — NBC 2016, NFPA 13/72, local fire authority NOC — but its execution is everything. A sprinkler that cannot prove its flow at the most remote head is a paper system. A gas-suppression release that interlocks badly is a hazard, not a defence.",
-      "We deliver fire hydrants, automatic sprinklers, clean-agent gas suppression, smoke detection and evacuation systems across commercial, healthcare, industrial and data-centre facilities. Every system is hydraulically calculated, pressure-tested, and witness-commissioned with the local fire authority before NOC is issued."
+      "Fire hydrants, automatic sprinklers, clean-agent gas suppression, smoke detection and evacuation systems are delivered across commercial, healthcare, industrial and data-centre facilities. Every system is hydraulically calculated, pressure-tested, and witness-commissioned with the local fire authority before NOC is issued."
     ],
     "approach_paragraphs": [
       "Sprinkler systems are designed to NFPA 13 — density, area of operation, K-factor and most-remote-head hydraulic calculation locked at design freeze. Pre-action systems for data halls are UL/FM-listed, double-interlocked where the operator requires, and integrated with the BMS for alarm hierarchy and false-trip prevention.",
@@ -193,6 +200,7 @@
         "v": "Codes routinely delivered against"
       }
     ],
+    "hero_scale": "up to 4,560 LPM hydrant flow",
     "hero_image_url": "/services/firefighting-hero.jpg",
     "hero_image_alt": "Fire pump house with red pumps and pressure piping",
     "sort_order": 5,
@@ -200,7 +208,8 @@
     "tagline": "Protection engineered before it's ever needed.",
     "approach_plain": [
       "Every system is designed to code and then proven physically — flow-tested at the furthest sprinkler head, discharge-tested before sign-off. If it can't demonstrate protection, it isn't finished.",
-      "In an emergency, detection, ventilation and doors act together automatically. We test that choreography end to end, not component by component."
+      "In an emergency, detection, ventilation and doors act together automatically. That choreography is tested end to end, not component by component.",
+      "It's pre-action suppression engineered to UL/FM listing inside CtrlS Mahape's data hall, and the full fire-protection package at Mopa International Airport in Goa — the same hydraulic discipline, sized to a different building each time."
     ]
   },
   {
@@ -214,7 +223,7 @@
     "accent": "sun",
     "intro_paragraphs": [
       "Solar is the firm's renewable energy practice — rooftop and ground-mounted PV plants engineered for irradiance, structural load, electrical safety and a measurable return. It pairs naturally with our electrical, BMS and energy-audit capability, so the generated power is metered, monitored and integrated into the building's broader energy strategy.",
-      "We have delivered solar EPC scopes from rooftop installations on warehouses and corporate campuses to integrated solar at the Ingka (IKEA) mixed-use development. Net metering, inverter selection, string sizing, and grid synchronisation are all in-house."
+      "Solar EPC scopes have been delivered from rooftop installations on warehouses and corporate campuses to integrated solar at the Ingka (IKEA) mixed-use development. Net metering, inverter selection, string sizing, and grid synchronisation are all in-house."
     ],
     "approach_paragraphs": [
       "Generation is modelled in PVsyst against site-specific irradiance, tilt and shading. Mounting structures are designed to local wind and seismic load. String sizing follows inverter MPPT windows with margin for module degradation and temperature derating.",
@@ -234,6 +243,7 @@
         "v": "DISCOM coordination in-house"
       }
     ],
+    "hero_scale": "up to 20 MWp",
     "hero_image_url": "/services/solar-hero.jpg",
     "hero_image_alt": "Utility-scale solar PV array at twilight",
     "sort_order": 6,
@@ -241,7 +251,8 @@
     "tagline": "Clean energy that pays for itself.",
     "approach_plain": [
       "Every plant starts with a generation forecast for your exact roof, sun and shading — the return is calculated before a single panel is ordered.",
-      "We handle the grid connection and the paperwork, and the plant reports its own output — so you always know it's earning what was promised."
+      "The grid connection and the paperwork are handled in-house, and the plant reports its own output — so the client always knows it's earning what was promised.",
+      "At Ingka Centre, that includes rooftop generation woven into the same building's PNG distribution — one more system the in-house team owns end to end."
     ]
   },
   {
@@ -254,8 +265,8 @@
     "scope_unit": "Points",
     "accent": "graph",
     "intro_paragraphs": [
-      "Building management is the controls layer that turns a building of disparate systems into an operational asset. We deliver Direct Digital Control (DDC) for HVAC and plumbing, SCADA head-ends and historians, electrical power monitoring, fire alarm and PA, CCTV, access control and IBMS integration — built to BTL-certified controllers and vendor-neutral wherever possible.",
-      "Our BMS scope deliberately includes the operator hand-off: tag dictionaries signed off pre-commissioning, point lists witnessed during integration, alarm hierarchies pre-agreed with the facility team. The system isn't installed for the contractor — it's installed for the people who will run the building for the next twenty years."
+      "Building management is the controls layer that turns a building of disparate systems into an operational asset. Direct Digital Control (DDC) for HVAC and plumbing, SCADA head-ends and historians, electrical power monitoring, fire alarm and PA, CCTV, access control and IBMS integration are delivered — built to BTL-certified controllers and vendor-neutral wherever possible.",
+      "The BMS scope deliberately includes the operator hand-off: tag dictionaries signed off pre-commissioning, point lists witnessed during integration, alarm hierarchies pre-agreed with the facility team. The system isn't installed for the contractor — it's installed for the people who will run the building for the next twenty years."
     ],
     "approach_paragraphs": [
       "Field controllers are selected against the point count and the protocol mix — BACnet/IP, Modbus, KNX, LON where legacy demands it. SCADA head-ends are configured with role-based access, alarm prioritisation and trend logging from day one. Reports are scheduled to land in the operator's inbox without further intervention.",
@@ -275,14 +286,16 @@
         "v": "Typical IBMS scope on a medium-large building"
       }
     ],
+    "hero_scale": "1,450+ IBMS points",
     "hero_image_url": "/services/bms-hero.jpg",
     "hero_image_alt": "BMS SCADA control room with video wall and dashboards",
     "sort_order": 7,
     "published": true,
     "tagline": "Every system in the building, one brain.",
     "approach_plain": [
-      "We make every system in the building speak one language, whatever brand each one is — and give your team a single screen with clear priorities instead of a wall of alarms.",
-      "Handover is built for the people who run the building: every data point is named, tested and witnessed with your team before we leave. No black boxes."
+      "Every system in the building is made to speak one language, whatever brand each one is — leaving the facility team a single screen with clear priorities instead of a wall of alarms.",
+      "Handover is built for the people who run the building: every data point is named, tested and witnessed with the facility team before handover is complete. No black boxes.",
+      "It ties Nalanda University's geothermal plant into a single IBMS, layers SCADA and a historian over SAEL's cleanroom utilities, and adds hydrogen sensing to the DDC package inside CtrlS Mahape's data hall."
     ]
   },
   {
@@ -295,8 +308,8 @@
     "scope_unit": "SLA · MTTR",
     "accent": "graph",
     "intro_paragraphs": [
-      "Operations and maintenance is the discipline that pays off the engineering decisions made during construction. We deliver integrated facility management contracts that span all the systems we install — HVAC, electrical, plumbing, fire, BMS, civil — under one accountable team, with a single performance SLA.",
-      "Our O&M model is built around preventive schedules generated from OEM datasheets, predictive analytics layered on top of BMS data, and rapid-response teams pre-positioned near major client sites. The objective is unchanged: keep the asset producing the comfort, the process condition or the uptime it was designed for, for its full economic life."
+      "Operations and maintenance is the discipline that pays off the engineering decisions made during construction. Integrated facility management contracts span all the systems installed — HVAC, electrical, plumbing, fire, BMS, civil — under one accountable team, with a single performance SLA.",
+      "The O&M model is built around preventive schedules generated from OEM datasheets, predictive analytics layered on top of BMS data, and rapid-response teams pre-positioned near major client sites. The objective is unchanged: keep the asset producing the comfort, the process condition or the uptime it was designed for, for its full economic life."
     ],
     "approach_paragraphs": [
       "Preventive schedules are loaded into a CMMS with full asset hierarchy from day one — the same hand-over dossier we provide at construction completion seeds the maintenance plan. Equipment-specific PM frequencies, spares lists and skill requirements are pre-tagged so the schedule is operational from the first day of the contract.",
@@ -320,10 +333,11 @@
     "hero_image_alt": "Engineer walking through industrial plant corridor",
     "sort_order": 8,
     "published": true,
-    "tagline": "We stay long after the ribbon is cut.",
+    "tagline": "On site long after the ribbon is cut.",
     "approach_plain": [
       "Maintenance starts on day one with a complete plan built from each machine's own documentation — what to service, when, and with which spares on the shelf.",
-      "We watch the building's data for early signs of trouble and keep critical spares close by, so small drifts get fixed before they become breakdowns."
+      "The building's data is watched for early signs of trouble, with critical spares kept close by, so small drifts get fixed before they become breakdowns.",
+      "It is the same specialists who commissioned the chiller plant, the substation or the fire pump house who stay on to run it — one contract, one accountable team, for the life of the asset."
     ]
   }
 ]

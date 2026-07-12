@@ -1,13 +1,24 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { StatsGrid } from "@/components/site/stat-counter";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Approach — Unique Engineers",
   description:
-    "How we engineer and deliver — design-build model, BIM LOD 400, project controls, commissioning L1-L5, EHS, sustainability and the vendor ecosystem behind every mandate.",
+    "How it's engineered and delivered — design-build model, BIM LOD 400, project controls, commissioning L1-L5, EHS, sustainability and the vendor ecosystem behind every mandate.",
 };
+
+// Quick-read entry strip — three figures pulled straight from the
+// sections below, so the page gives up something scannable before
+// asking for nine sections of specification-grade reading.
+const APPROACH_STATS = [
+  { n: "9", l: "Layers of discipline, design-build to vendor ecosystem" },
+  { n: "35", unit: "%", l: "Schedule compression vs bid-build, at the high end" },
+  { n: "98", unit: "%", l: "First-inspection test acceptance across QA/QC audits" },
+];
 
 const SECTIONS = [
   {
@@ -29,7 +40,7 @@ const SECTIONS = [
     title: "BIM & Virtual Construction",
     eyebrow: "Digital engineering",
     paragraphs: [
-      "We develop fully coordinated multi-disciplinary BIM models at LOD 400 across HVAC, Firefighting, Plumbing, Electrical, Solar and PNG systems. All services are integrated into a federated 3D environment where real-time clash detection and inter-trade coordination are completed before site installation.",
+      "Every discipline is modelled before it's ever built on site. Fully coordinated multi-disciplinary BIM runs at LOD 400 across HVAC, Firefighting, Plumbing, Electrical, Solar and PNG systems — all services integrated into a federated 3D environment where real-time clash detection and inter-trade coordination are completed before site installation.",
       "Shop drawings are generated directly from the coordinated model to ensure execution accuracy and minimise rework. The modelling process creates a digital twin of the project — enabling constructability validation, accurate material take-offs, prefabrication planning and lifecycle-ready asset data.",
     ],
     tiles: [
@@ -43,7 +54,7 @@ const SECTIONS = [
     title: "Design stack",
     eyebrow: "Toolchain",
     paragraphs: [
-      "40+ in-house MEPF design engineers running a full stack from heat load through CFD. Tooling is picked for fidelity, not because it's free — Carrier HAP for thermal load, Pipe Flow Expert / AFT Fathom for hydraulic, Trane TRACE 700 / IES VE for energy modelling, Ansys Fluent / Autodesk CFD for airflow.",
+      "Every load is calculated before it's ever installed. 40+ in-house MEPF design engineers run a full stack from heat load through CFD, and tooling is picked for fidelity, not because it's free — Carrier HAP for thermal load, Pipe Flow Expert / AFT Fathom for hydraulic, Trane TRACE 700 / IES VE for energy modelling, Ansys Fluent / Autodesk CFD for airflow.",
       "Layout and coordination live in AutoCAD MEP and Revit (LOD 400). Controls programming uses vendor PLC, DDC and SCADA toolchains. Every workstream has a defined deliverable that signs off at design freeze.",
     ],
     tiles: [
@@ -60,7 +71,7 @@ const SECTIONS = [
     title: "Project controls",
     eyebrow: "Schedule discipline",
     paragraphs: [
-      "Master schedule lives in Primavera P6 — resource-loaded, baseline-locked, L1 to L5 hierarchy. Every milestone tied to the operator's commissioning sequence. Microsoft Project surfaces executive dashboards and interface-management trackers across MEP / civil / OEM equipment.",
+      "Nothing on site moves without a plan behind it. The master schedule lives in Primavera P6 — resource-loaded, baseline-locked, L1 to L5 hierarchy — with every milestone tied to the operator's commissioning sequence. Microsoft Project surfaces executive dashboards and interface-management trackers across MEP / civil / OEM equipment.",
       "An AI scenario layer overlays the schedule — deep-scheduling heuristics, resource-levelling optimisation, what-if impact of design change, weather or LLI slippage modelled before decisions are made. 3-week rolling look-ahead drives daily site deployment; weekly earned-value drives the operator's PMO review.",
     ],
     tiles: [
@@ -75,7 +86,7 @@ const SECTIONS = [
     title: "Commissioning · L1 → L5",
     eyebrow: "Validation",
     paragraphs: [
-      "Aligned to Uptime Institute Cx and ASHRAE / AABC / NEBB protocols. L1 component verification (OEM datasheet check, serial / tag verification, physical integrity, receipt inspection). L2 static testing (insulation resistance, pressure / leak tests, cleanliness flushes). L3 component start-up (powered functional tests on individual components against design parameters).",
+      "Nothing goes live until it's proven, five times over. Aligned to Uptime Institute Cx and ASHRAE / AABC / NEBB protocols: L1 component verification (OEM datasheet check, serial / tag verification, physical integrity, receipt inspection). L2 static testing (insulation resistance, pressure / leak tests, cleanliness flushes). L3 component start-up (powered functional tests on individual components against design parameters).",
       "L4 integrated systems test (end-to-end systems with BMS, failover sequences proven, alarm matrix verified, interlocks witnessed). L5 performance and operational (full-load IST under load banks, concurrent maintainability and fault-tolerance scenarios, steady-state operations test for the operator's PQ window). Each level signed off — operator-witnessed where required — before the next is initiated.",
     ],
     tiles: [
@@ -136,8 +147,8 @@ const SECTIONS = [
     title: "Vendor ecosystem",
     eyebrow: "Supply chain depth",
     paragraphs: [
-      "We operate within a robust network of OEM partners, technical consultants, PMCs and verified vendors across India. Standing rate contracts with Carrier, Trane, Vertiv, Schneider, Siemens, ABB and Honeywell mean equipment is mobilised at design freeze — not chased at the last minute.",
-      "Long-standing manufacturing partnerships extend to AHU and Air Washer Unit fabrication (in-house since 2005), giving us schedule control on the largest single line item in most HVAC projects. ₹300+ Cr annual procurement budget; ₹400+ Cr banking credit limit for working capital depth.",
+      "Unique Engineers operates within a robust network of OEM partners, technical consultants, PMCs and verified vendors across India. Standing rate contracts with Carrier, Trane, Vertiv, Schneider, Siemens, ABB and Honeywell mean equipment is mobilised at design freeze — not chased at the last minute.",
+      "Long-standing manufacturing partnerships extend to AHU and Air Washer Unit fabrication (in-house since 2005), giving the firm schedule control on the largest single line item in most HVAC projects. ₹300+ Cr annual procurement budget; ₹400+ Cr banking credit limit for working capital depth.",
     ],
     tiles: [
       { k: "OEM partners", v: "Carrier · Trane · Vertiv · Schneider · Siemens · ABB · Honeywell" },
@@ -154,8 +165,8 @@ export default function ApproachPage() {
       <section className="ue-section">
         <div className="ue-container">
           <p className="ue-eyebrow">Approach</p>
-          <h1 className="ue-h1" style={{ maxWidth: "16ch" }}>
-            How we engineer it. How we deliver it.
+          <h1 className="ue-h1" style={{ maxWidth: "17ch" }}>
+            How it&apos;s engineered. How it&apos;s delivered.
           </h1>
           <p className="ue-lead" style={{ marginTop: 32, maxWidth: "62ch" }}>
             Nine layers of discipline — from design-build contracting and
@@ -163,6 +174,8 @@ export default function ApproachPage() {
             safety, sustainability and the vendor ecosystem behind every
             mandate. None of them are accidental.
           </p>
+          <hr className="ue-rule" style={{ margin: "56px 0 48px" }} />
+          <StatsGrid items={APPROACH_STATS} />
         </div>
       </section>
 
@@ -170,8 +183,8 @@ export default function ApproachPage() {
         <div className="ue-container">
           <div style={{ borderTop: "1px solid var(--border-color)" }}>
             {SECTIONS.map((s) => (
+              <Fragment key={s.num}>
               <article
-                key={s.num}
                 style={{
                   padding: "64px 0",
                   borderBottom: "1px solid var(--border-color)",
@@ -272,6 +285,29 @@ export default function ApproachPage() {
                   </div>
                 </div>
               </article>
+              {s.num === "05" && (
+                <div
+                  style={{
+                    padding: "72px 0",
+                    borderBottom: "1px solid var(--border-color)",
+                  }}
+                >
+                  <p
+                    className="ue-eyebrow"
+                    style={{ color: "var(--accent-500)" }}
+                  >
+                    On site
+                  </p>
+                  <div className="ue-stat" style={{ marginTop: 16 }}>
+                    <div className="n">Zero</div>
+                    <div className="l" style={{ maxWidth: "40ch" }}>
+                      Fatalities in the last five years, across 5M+ safe
+                      man-hours logged in FY 24-25 alone.
+                    </div>
+                  </div>
+                </div>
+              )}
+              </Fragment>
             ))}
           </div>
         </div>
@@ -304,7 +340,7 @@ export default function ApproachPage() {
               maxWidth: "18ch",
             }}
           >
-            Want to see this in delivery? Let&apos;s talk.
+            See this discipline in delivery, not just on paper.
           </h2>
           <Button
             asChild

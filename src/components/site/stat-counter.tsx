@@ -41,7 +41,13 @@ function StatCounter({
   reduce,
 }: StatItem & { start: boolean; reduce: boolean }) {
   const target = parseFloat(n.replace(/,/g, ""));
-  const [display, setDisplay] = useState(reduce ? n : "0");
+  // Always rest at the real value — this is what SSR/no-JS clients and
+  // crawlers see permanently. useReducedMotion() returns null on the
+  // server, so gating the initial state on `reduce` used to render the
+  // literal string "0" for every visitor until client JS hydrated and
+  // the element scrolled into view. The count-up below is a client-only
+  // enhancement layered on top of an already-correct rest state.
+  const [display, setDisplay] = useState(n);
 
   useEffect(() => {
     if (!start || reduce) return;

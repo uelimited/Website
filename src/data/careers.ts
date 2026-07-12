@@ -40,7 +40,7 @@ export const CULTURE_PILLARS = [
     num: "01",
     title: "Your growth is the plan, not an afterthought.",
     body:
-      "We align your goals with the firm's from day one — structured mentorship under engineers with decades on the tools, real ownership early, and a clear line from where you are to where you want to be. We grow when you grow, so we make sure you do.",
+      "Your goals are aligned with the firm's from day one — structured mentorship under engineers with decades on the tools, real ownership early, and a clear line from where you are to where you want to be. The firm grows when you do, so your growth stays a priority, not an afterthought.",
   },
   {
     num: "02",
@@ -77,7 +77,7 @@ export const CAREERS_OFFERS = [
   {
     title: "Ownership, early",
     body:
-      "We hand real packages to people who are ready, not people who've simply waited long enough. Show us you can lead, and you will.",
+      "Real packages go to people who are ready, not people who've simply waited long enough. Show the firm you can lead, and you will.",
   },
   {
     title: "The country as your classroom",
@@ -91,7 +91,7 @@ export const CAREERS_GROWTH = {
   eyebrow: "Room to rise",
   title: "A firm on the way up — with room for you on it.",
   body:
-    "We entered the data-centre vertical in 2023 and semiconductors in 2024, and we handle mandates up to ₹1,000 Cr. New fronts open every year — and the people who open them are the ones already here.",
+    "The firm entered the data-centre vertical in 2023 and semiconductors in 2024, and now handles mandates up to ₹1,000 Cr. New fronts open every year — and the people who open them are the ones already here.",
   stats: [
     { n: "2,500+", l: "People on the team" },
     { n: "275+", l: "Managers & engineers" },

@@ -12,21 +12,30 @@ export type ExplorerService = {
   blurb: string;
   tagline: string;
   hero_image_url: string | null;
+  /** Live "N projects · ₹X Cr" proof line — omitted when the sample is too thin to be meaningful. */
+  proof?: string | null;
+  /** Flags the founding discipline (HVAC) for a quiet prominence cue. */
+  founding?: boolean;
 };
 
 /**
  * Services index explorer — Apple-style interactive list.
  *
- * Left: the eight disciplines set in large display type. Hovering
+ * Left: the eight disciplines set in large display type, each with a
+ * live ledger proof number where the sample size earns it. Hovering
  * (or focusing) a row previews it on the right — the image
  * crossfades with a gentle settle-scale, and the caption swaps to
  * that discipline's tagline. Clicking goes to the discipline page.
+ *
+ * The founding discipline (HVAC) opens active by default, so it's
+ * the first thing visitors see previewed.
  *
  * Below the desktop breakpoint the preview pane disappears and each
  * row becomes a self-contained image card.
  */
 export function ServicesExplorer({ services }: { services: ExplorerService[] }) {
-  const [active, setActive] = useState(0);
+  const foundingIndex = services.findIndex((s) => s.founding);
+  const [active, setActive] = useState(foundingIndex >= 0 ? foundingIndex : 0);
   const prefersReduced = useReducedMotion();
   const current = services[active];
 
@@ -56,8 +65,25 @@ export function ServicesExplorer({ services }: { services: ExplorerService[] }) 
               <span className="ue-svcx__row-body">
                 <span className="ue-svcx__row-name">
                   {s.name}
+                  {s.founding && (
+                    <span className="ue-chip ue-chip--accent">
+                      Founding discipline · 1990
+                    </span>
+                  )}
                   <ArrowRight className="ue-svcx__row-arrow" aria-hidden />
                 </span>
+                {s.proof && (
+                  <span
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: 12,
+                      letterSpacing: "0.01em",
+                      color: "var(--ink-500)",
+                    }}
+                  >
+                    {s.proof}
+                  </span>
+                )}
                 <span className="ue-svcx__row-tagline">{s.tagline}</span>
               </span>
             </Link>
@@ -104,7 +130,17 @@ export function ServicesExplorer({ services }: { services: ExplorerService[] }) 
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="ue-svcx__caption-tagline">{current.tagline}</p>
-              <p className="ue-svcx__caption-blurb">{current.blurb}</p>
+              <p className="ue-svcx__caption-blurb">
+                {current.blurb}
+                {current.proof && (
+                  <>
+                    {" "}
+                    <span style={{ color: "rgba(255,255,255,0.95)" }}>
+                      {current.proof}
+                    </span>
+                  </>
+                )}
+              </p>
             </motion.div>
           </AnimatePresence>
         </div>

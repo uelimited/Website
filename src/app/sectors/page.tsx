@@ -1,28 +1,53 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getAllSectors, getProjectsBySector } from "@/lib/cms";
+import { getAllSectors, getLedgerStatsForSector } from "@/lib/cms";
+import type { Sector } from "@/data/cms/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Sectors — Unique Engineers",
   description:
-    "Nine verticals delivered with cross-sector engineering depth — data centre, semiconductor, industrial, airport, education, corporate, healthcare, hospitality and residential.",
+    "Nine sectors, proven by the order book — data centre, semiconductor & cleanroom, airport & public venues, healthcare and more, engineered to one delivery standard.",
 };
 
+/**
+ * Lead with the highest-value, deepest-capability verticals; the rest
+ * follow in their existing catalogue order. This is a page-local
+ * presentation order only — it does not touch `sort_order` in the CMS,
+ * which other surfaces (nav, home) still rely on.
+ */
+const PRIORITY_SLUGS = [
+  "data-centre",
+  "semiconductor-cleanroom",
+  "airport-public-venues",
+  "healthcare",
+];
+
+function withPriorityFirst(sectors: Sector[]): Sector[] {
+  const bySlug = new Map(sectors.map((s) => [s.slug, s]));
+  const priority = PRIORITY_SLUGS.map((slug) => bySlug.get(slug)).filter(
+    (s): s is Sector => Boolean(s),
+  );
+  const rest = sectors.filter((s) => !PRIORITY_SLUGS.includes(s.slug));
+  return [...priority, ...rest];
+}
+
 export default function SectorsIndexPage() {
-  const sectors = getAllSectors();
+  const sectors = withPriorityFirst(getAllSectors());
 
   return (
     <section className="ue-section">
       <div className="ue-container">
         <p className="ue-eyebrow">Sectors</p>
-        <h1 className="ue-h1" style={{ maxWidth: "16ch" }}>
-          Nine verticals. One engineering practice.
+        <h1 className="ue-h1" style={{ maxWidth: "18ch" }}>
+          Nine sectors, one delivery standard.
         </h1>
-        <p className="ue-lead" style={{ marginTop: 32 }}>
-          Cross-sector engineering depth — from mission-critical data centres
-          and semiconductor cleanrooms to airports, healthcare and
-          mixed-use developments. The same delivery standard everywhere.
+        <p className="ue-lead" style={{ marginTop: 32, maxWidth: "62ch" }}>
+          Data centres holding Tier-4 uptime, semiconductor cleanrooms built
+          to ISO 6, airports finished inside compressed windows — Unique
+          Engineers carries the same MEPF discipline into every sector it
+          serves. Each page below opens with proof pulled straight from the
+          order book.
         </p>
 
         <div
@@ -33,8 +58,8 @@ export default function SectorsIndexPage() {
             gap: 24,
           }}
         >
-          {sectors.map((s) => {
-            const projects = getProjectsBySector(s.id);
+          {sectors.map((s, i) => {
+            const stats = getLedgerStatsForSector(s.id);
             return (
               <Link
                 key={s.id}
@@ -77,7 +102,7 @@ export default function SectorsIndexPage() {
                       color: "var(--fg-muted)",
                     }}
                   >
-                    {String(s.sort_order).padStart(2, "0")}
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                   {s.deep_page && (
                     <span
@@ -117,69 +142,23 @@ export default function SectorsIndexPage() {
                 >
                   {s.short_description}
                 </p>
-                <dl
+                {/* Live proof number, pulled from the order-book ledger —
+                    e.g. "4 projects · ₹61 Cr". Never the marketing overrides. */}
+                <p
                   style={{
-                    display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
-                    gap: 0,
                     margin: 0,
-                    borderTop: "1px solid var(--border-color)",
                     paddingTop: 14,
+                    borderTop: "1px solid var(--border-color)",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: 15,
+                    letterSpacing: "-0.006em",
+                    color: "var(--ink-950)",
                   }}
                 >
-                  <div>
-                    <dt
-                      style={{
-                        fontFamily: "var(--font-mono)",
-                        fontSize: 10,
-                        color: "var(--fg-muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: 0.4,
-                      }}
-                    >
-                      Projects
-                    </dt>
-                    <dd
-                      style={{
-                        margin: 0,
-                        marginTop: 4,
-                        fontFamily: "var(--font-display)",
-                        fontWeight: 500,
-                        fontSize: 18,
-                        letterSpacing: "-0.012em",
-                        color: "var(--ink-950)",
-                      }}
-                    >
-                      {s.projects_count_override ?? String(projects.length)}
-                    </dd>
-                  </div>
-                  <div>
-                    <dt
-                      style={{
-                        fontFamily: "var(--font-mono)",
-                        fontSize: 10,
-                        color: "var(--fg-muted)",
-                        textTransform: "uppercase",
-                        letterSpacing: 0.4,
-                      }}
-                    >
-                      Revenue
-                    </dt>
-                    <dd
-                      style={{
-                        margin: 0,
-                        marginTop: 4,
-                        fontFamily: "var(--font-display)",
-                        fontWeight: 500,
-                        fontSize: 18,
-                        letterSpacing: "-0.012em",
-                        color: "var(--ink-950)",
-                      }}
-                    >
-                      {s.revenue_cr_override ?? "—"}
-                    </dd>
-                  </div>
-                </dl>
+                  {stats.count} project{stats.count === 1 ? "" : "s"}
+                  <span style={{ color: "var(--fg-muted)" }}> · </span>
+                  {stats.total_display}
+                </p>
                 <div
                   style={{
                     marginTop: 22,

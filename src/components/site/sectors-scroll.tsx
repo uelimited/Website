@@ -1,18 +1,19 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   motion,
   useMotionTemplate,
   useMotionValueEvent,
+  useReducedMotion,
   useScroll,
   useTransform,
   type MotionValue,
 } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
-import sectorsJson from "@/data/cms/sectors.json";
 import type { Sector } from "@/data/cms/types";
+import type { LedgerStats } from "@/lib/cms";
 
 /**
  * Home sectors carousel — vertical-scroll-driven horizontal slide.
@@ -28,20 +29,18 @@ import type { Sector } from "@/data/cms/types";
  * hysteresis band so jitter can't toggle rapidly. Per-segment
  * smoothstep gives each slide a brief "dwell" at rest.
  */
-export function SectorsScroll() {
-  const sectors = useMemo(
-    () =>
-      (sectorsJson as Sector[])
-        .filter((s) => s.published)
-        .slice()
-        .sort((a, b) => a.sort_order - b.sort_order),
-    [],
-  );
-
+export function SectorsScroll({
+  sectors,
+  sectorStats,
+}: {
+  sectors: Sector[];
+  sectorStats: Record<string, LedgerStats>;
+}) {
   const n = sectors.length;
   const [active, setActive] = useState(0);
   const outerRef = useRef<HTMLDivElement>(null);
   const tabsRef = useRef<HTMLDivElement>(null);
+  const prefersReduced = !!useReducedMotion();
 
   // Keep the active tab visible in the horizontal tab strip.
   useEffect(() => {
@@ -114,7 +113,10 @@ export function SectorsScroll() {
     const scrollable = el.scrollHeight - window.innerHeight;
     const denom = Math.max(1, n - 1);
     const v = i === 0 ? 0.02 : i === n - 1 ? 0.98 : i / denom;
-    window.scrollTo({ top: start + v * scrollable, behavior: "smooth" });
+    window.scrollTo({
+      top: start + v * scrollable,
+      behavior: prefersReduced ? "auto" : "smooth",
+    });
   };
 
   return (
@@ -156,7 +158,14 @@ export function SectorsScroll() {
                   style={{ transform: trackTransform }}
                 >
                   {sectors.map((s, i) => (
-                    <Slide key={s.id} sector={s} index={i} trackPos={trackPos} />
+                    <Slide
+                      key={s.id}
+                      sector={s}
+                      stats={sectorStats[s.id]}
+                      index={i}
+                      trackPos={trackPos}
+                      prefersReduced={prefersReduced}
+                    />
                   ))}
                 </motion.div>
               </div>
@@ -177,27 +186,40 @@ export function SectorsScroll() {
 }
 
 /**
- * One sector slide. The image rides the track at full opacity, but
- * the text block crossfades on its distance from centre — so copy
- * from a neighbouring slide never bleeds half-clipped into the card
- * frame while a transition is in flight.
+ * One sector slide. The image rides the track at full opacity. The
+ * text block is visible by default — every slide's copy resolves to
+ * opacity 1 at rest (whether it's the active slide or parked
+ * off-frame, which is also the value on first paint before any
+ * scroll has happened). Only the pair of slides actively crossing
+ * the frame mid-transition dip briefly as a layered enhancement —
+ * never a gate on the base content, so SSR/no-JS/crawler/reduced-
+ * motion clients always render full copy at full opacity.
  */
 function Slide({
   sector: s,
+  stats,
   index,
   trackPos,
+  prefersReduced,
 }: {
   sector: Sector;
+  stats: LedgerStats;
   index: number;
   trackPos: MotionValue<number>;
+  prefersReduced: boolean;
 }) {
-  // 1 at rest, → 0 by the transition midpoint.
-  const contentOpacity = useTransform(trackPos, (v) =>
-    Math.max(0, 1 - Math.abs(v - index) * 2),
-  );
-  const contentY = useTransform(trackPos, (v) =>
-    Math.min(24, Math.abs(v - index) * 48),
-  );
+  const contentOpacity = useTransform(trackPos, (v) => {
+    if (prefersReduced) return 1;
+    const distance = Math.abs(v - index);
+    if (distance >= 1) return 1;
+    // Gentle bump-down that returns to 1 at both ends of the
+    // transition (distance 0 and distance 1) — never a hard cut to 0.
+    return 1 - Math.sin(distance * Math.PI) * 0.55;
+  });
+  const contentY = useTransform(trackPos, (v) => {
+    if (prefersReduced) return 0;
+    return Math.min(24, Math.abs(v - index) * 48);
+  });
 
   return (
     <div className="ue-sec-scroll__slide">
@@ -222,12 +244,12 @@ function Slide({
         <p className="ue-sec-scroll__desc">{s.short_description}</p>
         <dl className="ue-sec-scroll__stats">
           <div>
-            <dt>Projects</dt>
-            <dd>{s.projects_count_override ?? "—"}</dd>
+            <dt>Projects in the order book</dt>
+            <dd>{stats.count}</dd>
           </div>
           <div>
-            <dt>Cumulative revenue</dt>
-            <dd>{s.revenue_cr_override ?? "—"}</dd>
+            <dt>Cumulative contract value</dt>
+            <dd>{stats.total_display}</dd>
           </div>
         </dl>
         <Link href={`/sectors/${s.slug}`} className="ue-sec-scroll__cta">

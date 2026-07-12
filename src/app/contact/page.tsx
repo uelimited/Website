@@ -36,25 +36,24 @@ export default function ContactPage() {
     // client pre-filled — a real, working path with zero server. Swap this
     // for a POST to an endpoint once the firm provides one.
     const subject = `${topic} — website enquiry (${ref})`;
-    const body = [
+    const body: (string | null)[] = [
       `Name: ${name}`,
-      company && `Company: ${company}`,
+      company ? `Company: ${company}` : null,
       `Email: ${email}`,
-      phone && `Phone: ${phone}`,
+      phone ? `Phone: ${phone}` : null,
       `Topic: ${topic}`,
       "",
       message.trim(),
       "",
       `— Sent from ${FIRM.website} · ${ref}`,
-    ]
-      .filter((line) => line !== false)
-      .join("\n");
+    ];
+    const bodyText = body.filter((line): line is string => line !== null).join("\n");
 
     setReference(ref);
     setSent(true);
     window.location.href = `mailto:${FIRM.contactEmail}?subject=${encodeURIComponent(
       subject,
-    )}&body=${encodeURIComponent(body)}`;
+    )}&body=${encodeURIComponent(bodyText)}`;
   };
 
   return (
@@ -135,9 +134,12 @@ export default function ContactPage() {
               </div>
               <div className="grid gap-2">
                 <Label className="text-[13px] text-[color:var(--ink-700)]">
-                  What's this about?
+                  What&apos;s this about?
                 </Label>
-                <Select value={topic} onValueChange={setTopic}>
+                <Select
+                  value={topic}
+                  onValueChange={(value) => setTopic(value ?? topic)}
+                >
                   <SelectTrigger
                     className={fieldInputClass + " w-full data-[size=default]:h-12"}
                   >

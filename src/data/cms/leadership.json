@@ -18,5 +18,14 @@
     "bio": "Co-founded Unique Engineers in 1990. Director — Project Execution. Hands-on technical leadership across HVAC, cleanroom and process-cooling delivery.",
     "portrait_url": "/firm/manmohan-jindal.jpg",
     "sort_order": 2
+  },
+  {
+    "id": "ldr-rajiv",
+    "name": "Rajiv Kumar Gupta",
+    "role": "Founding Director — Sales & Marketing",
+    "credential": "B.Tech Electrical Engineering",
+    "experience": "35+ years in the MEPF industry",
+    "bio": "Co-founded Unique Engineers in 1990, in partnership after meeting his co-founders on an NTPC project. Director — Sales & Marketing. Electrical engineer by training, responsible for the client relationships and commercial strategy behind the firm's order book.",
+    "sort_order": 3
   }
 ]

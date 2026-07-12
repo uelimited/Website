@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   getAllServices,
   getAllSectors,
   getServiceWithCategoriesAndProjects,
   getLedgerByService,
+  getLedgerStatsForService,
   getCaseStudyHrefsByLedgerId,
   getSectorSlugById,
 } from "@/lib/cms";
@@ -15,6 +15,8 @@ import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
 import { ProjectLedger } from "@/components/site/project-ledger";
 import { SubServicesList } from "@/components/site/sub-services-list";
+import { ServiceMedia } from "@/components/site/service-media";
+import { ContactCTA } from "@/components/site/contact-cta";
 import type { Metadata } from "next";
 
 type Params = { slug: string };
@@ -59,6 +61,16 @@ export default async function ServiceLandingPage({
   // Only surfaced when there's a substantive list to show.
   const serviceLedger = getLedgerByService(service.id);
   const showLedger = serviceLedger.length >= 5;
+
+  // Live headline stat for the hero. Only stated once the ledger sample
+  // for this discipline is large enough to be a credible claim — the
+  // ledger's service tagging is still being backfilled for a few
+  // disciplines, and a thin count would undersell real delivery history.
+  const ledgerStats = getLedgerStatsForService(service.id);
+  const showHeroStat = ledgerStats.count >= 3;
+  // Curated, discipline-specific ceiling figure ("up to 30,000 TR") —
+  // stored directly on the service record; not every discipline has one.
+  const heroScale = service.hero_scale;
   const sectors = getAllSectors();
   const sectorLabels = Object.fromEntries(sectors.map((s) => [s.id, s.name]));
   const usedSectorIds = new Set(serviceLedger.map((e) => e.sector_id));
@@ -150,6 +162,21 @@ export default async function ServiceLandingPage({
           >
             {service.tagline ?? service.blurb}
           </p>
+          {(showHeroStat || heroScale) && (
+            <p
+              style={{
+                marginTop: 24,
+                fontFamily: "var(--font-mono)",
+                fontSize: 15,
+                letterSpacing: "0.005em",
+                color: "var(--accent-400)",
+              }}
+            >
+              {showHeroStat
+                ? `${ledgerStats.count} projects delivered · ${ledgerStats.total_display} in contract value${heroScale ? ` · ${heroScale}` : ""}`
+                : heroScale}
+            </p>
+          )}
         </div>
       </section>
 
@@ -202,6 +229,15 @@ export default async function ServiceLandingPage({
               {p}
             </p>
           ))}
+        </div>
+      </section>
+
+      {/* Decorative engineering motif — purely illustrative, page text and
+          data stand on their own without it. Renders at rest (no scroll
+          wiring), so there is nothing gated behind JS or reduced motion. */}
+      <section style={{ padding: "0 0 80px" }}>
+        <div className="ue-container">
+          <ServiceMedia accent={service.accent} label={service.name} />
         </div>
       </section>
 
@@ -399,7 +435,7 @@ export default async function ServiceLandingPage({
                 href={`/work?service=${serviceParamFromId(service.id)}`}
                 className="inline-flex items-center gap-2 text-[14px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
               >
-                Explore every {inlineName(service.name)} project in the hub
+                See all {serviceLedger.length} {inlineName(service.name)} projects
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>
@@ -408,59 +444,7 @@ export default async function ServiceLandingPage({
       )}
 
       {/* CTA */}
-      <section
-        className="ue-section"
-        style={{ background: "var(--ink-950)", color: "var(--paper)" }}
-      >
-        <div
-          className="ue-container"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 24,
-            alignItems: "flex-start",
-          }}
-        >
-          <p className="ue-eyebrow" style={{ color: "var(--accent-400)" }}>
-            Working on a project?
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 500,
-              fontSize: "clamp(36px, 4vw, 48px)",
-              letterSpacing: "-0.022em",
-              lineHeight: 1.05,
-              margin: 0,
-              maxWidth: "20ch",
-            }}
-          >
-            Tell us about it. We&apos;ll listen properly.
-          </h2>
-          <p
-            style={{
-              fontSize: 17,
-              lineHeight: 1.55,
-              color: "rgba(255,255,255,0.7)",
-              margin: 0,
-              maxWidth: "56ch",
-            }}
-          >
-            Share a scope and we&apos;ll come back with a proposal, a
-            programme, and the name of the engineer who&apos;ll lead it. No
-            sales rep in between.
-          </p>
-          <Button
-            asChild
-            className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--paper)] text-[color:var(--ink-950)] hover:bg-[color:var(--ink-100)]"
-          >
-            <Link href="/contact">
-              Start a conversation
-              <ArrowRight className="size-4 ml-1" aria-hidden />
-            </Link>
-          </Button>
-        </div>
-      </section>
+      <ContactCTA />
     </>
   );
 }

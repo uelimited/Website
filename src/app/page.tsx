@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { OVERVIEW } from "@/data/firm";
+import { getAllSectors, getLedgerStatsForSector } from "@/lib/cms";
 import { HeroVideo } from "@/components/site/hero-video";
 import { StatsGrid } from "@/components/site/stat-counter";
 import { ServicesScroll } from "@/components/site/services-scroll";
@@ -14,6 +15,15 @@ import { TestimonialsBand } from "@/components/site/testimonials-band";
 import { ContactCTA } from "@/components/site/contact-cta";
 
 export default function HomePage() {
+  // Live ledger stats, computed server-side, so the sectors carousel shows
+  // real order-book figures instead of the legacy marketing overrides
+  // (projects_count_override / revenue_cr_override) that don't reconcile
+  // with the ₹3,422 Cr ledger total shown everywhere else on the site.
+  const sectors = getAllSectors();
+  const sectorStats = Object.fromEntries(
+    sectors.map((s) => [s.id, getLedgerStatsForSector(s.id)]),
+  );
+
   return (
     <>
       <HeroVideo />
@@ -52,7 +62,7 @@ export default function HomePage() {
       <ServicesScroll />
 
       {/* Sectors — pinned card with scroll-driven horizontal carousel */}
-      <SectorsScroll />
+      <SectorsScroll sectors={sectors} sectorStats={sectorStats} />
 
       {/* Why Unique */}
       <WhyPillars />

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getLandmarkProjects, getClientById, getSectorsForProject } from "@/lib/cms";
+import { getLandmarkProjects, getClientById } from "@/lib/cms";
 
 /**
  * "Landmark projects" — home-page showcase of flagship mandates.

@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   getAllSectors,
   getAllServices,
   getSectorWithProjects,
   getLedgerBySector,
+  getLedgerStatsForSector,
   getCaseStudyHrefsByLedgerId,
   getSectorSlugById,
 } from "@/lib/cms";
@@ -14,6 +14,7 @@ import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
 import { ProjectLedger } from "@/components/site/project-ledger";
 import { SystemCard } from "@/components/site/system-card";
+import { ContactCTA } from "@/components/site/contact-cta";
 import type { Metadata } from "next";
 
 type Params = { slug: string };
@@ -46,8 +47,10 @@ export default async function SectorDetailPage({
   if (!data) notFound();
   const { sector, projects, clients } = data;
 
-  // Full order-book record for this sector (last 10 years).
+  // Full order-book record for this sector (last 10 years) — the
+  // live proof numbers used in the hero, the hub CTA and the ledger below.
   const ledger = getLedgerBySector(sector.id);
+  const stats = getLedgerStatsForSector(sector.id);
   const services = getAllServices();
   const serviceLabels = Object.fromEntries(
     services.map((s) => [s.id, s.short_name ?? s.name]),
@@ -90,38 +93,28 @@ export default async function SectorDetailPage({
             {sector.short_description}
           </p>
 
-          {(sector.projects_count_override ||
-            sector.revenue_cr_override) && (
-            <div
-              style={{
-                marginTop: 48,
-                display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
-                gap: 0,
-                borderTop: "1px solid var(--border-color)",
-                borderBottom: "1px solid var(--border-color)",
-              }}
-            >
-              <Stat
-                label="Projects delivered"
-                value={
-                  sector.projects_count_override ?? String(projects.length)
-                }
-              />
-              <Stat
-                label="Cumulative revenue"
-                value={sector.revenue_cr_override ?? "—"}
-              />
-              <Stat
-                label="Active clients"
-                value={String(clients.length || "—")}
-              />
-            </div>
-          )}
+          {/* Ledger stat headline — live proof, not the marketing overrides. */}
+          <div
+            style={{
+              marginTop: 48,
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: 0,
+              borderTop: "1px solid var(--border-color)",
+              borderBottom: "1px solid var(--border-color)",
+            }}
+          >
+            <Stat label="Projects in the order book" value={String(stats.count)} />
+            <Stat label="Cumulative contract value" value={stats.total_display} />
+            <Stat
+              label="Active clients"
+              value={String(clients.length || "—")}
+            />
+          </div>
         </div>
       </section>
 
-      {/* Long description */}
+      {/* Narrative — threads named projects with real specs. */}
       <section style={{ padding: "48px 0 0" }}>
         <div className="ue-container" style={{ maxWidth: 820 }}>
           <p className="ue-eyebrow">Sector overview</p>
@@ -137,6 +130,19 @@ export default async function SectorDetailPage({
           </p>
         </div>
       </section>
+
+      {/* Featured case studies — project-led, ahead of the technical detail. */}
+      {projects.length > 0 && (
+        <section className="ue-section">
+          <div className="ue-container">
+            <RelatedProjects
+              projects={projects}
+              eyebrow="Featured work"
+              heading={`${sector.name} — case studies.`}
+            />
+          </div>
+        </section>
+      )}
 
       {/* Sections (for deep_page sectors) */}
       {sector.sections && sector.sections.length > 0 && (
@@ -260,19 +266,6 @@ export default async function SectorDetailPage({
         </section>
       )}
 
-      {/* Projects in this sector */}
-      {projects.length > 0 && (
-        <section className="ue-section">
-          <div className="ue-container">
-            <RelatedProjects
-              projects={projects}
-              eyebrow="Sector record"
-              heading={`${sector.name} — selected projects.`}
-            />
-          </div>
-        </section>
-      )}
-
       {/* Full order-book record for this sector */}
       {ledger.length > 0 && (
         <section
@@ -302,7 +295,7 @@ export default async function SectorDetailPage({
                 href={`/work?sector=${sector.slug}`}
                 className="inline-flex items-center gap-2 text-[14px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
               >
-                Explore {sector.name.toLowerCase()} in the full project hub
+                See all {stats.count} {sector.name.toLowerCase()} projects
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>
@@ -310,47 +303,7 @@ export default async function SectorDetailPage({
         </section>
       )}
 
-      {/* CTA */}
-      <section
-        className="ue-section"
-        style={{ background: "var(--ink-950)", color: "var(--paper)" }}
-      >
-        <div
-          className="ue-container"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 24,
-            alignItems: "flex-start",
-          }}
-        >
-          <p className="ue-eyebrow" style={{ color: "var(--accent-400)" }}>
-            Sector enquiry
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 500,
-              fontSize: 44,
-              letterSpacing: "-0.022em",
-              lineHeight: 1.05,
-              margin: 0,
-              maxWidth: "20ch",
-            }}
-          >
-            Building in {sector.name.toLowerCase()}? Let&apos;s talk.
-          </h2>
-          <Button
-            asChild
-            className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--paper)] text-[color:var(--ink-950)] hover:bg-[color:var(--ink-100)]"
-          >
-            <Link href="/contact">
-              Talk to an engineer
-              <ArrowRight className="size-4 ml-1" aria-hidden />
-            </Link>
-          </Button>
-        </div>
-      </section>
+      <ContactCTA />
     </>
   );
 }

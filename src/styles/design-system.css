@@ -3580,6 +3580,320 @@ html, body {
 .ue-ledger-row--link:hover .ue-ledger-row__arrow { opacity: 1; transform: translate(0, 1px); }
 
 /* ============================================================
+   /firm — interactive company profile
+   ------------------------------------------------------------
+   Journey timeline, guiding-principle cards, leadership grid and
+   pan-India presence map. Namespaced ue-firm-* per the v2 build
+   spec's file-scope grant. Every element here defaults to fully
+   legible content; motion only ever enhances position/scale or a
+   purely decorative fill — never base opacity gated on scroll.
+   ============================================================ */
+
+/* ---------- Journey timeline ---------- */
+.ue-firm-timeline {
+  padding: 120px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.ue-firm-timeline__head { margin-bottom: 56px; }
+.ue-firm-timeline__title { margin-top: 8px; max-width: 24ch; }
+.ue-firm-timeline__kicker {
+  margin: 16px 0 0;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-500);
+  max-width: 58ch;
+}
+
+.ue-firm-timeline__rail {
+  position: relative;
+  padding-left: 40px;
+}
+.ue-firm-timeline__track {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--ink-200);
+  border-radius: 999px;
+}
+.ue-firm-timeline__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--accent-500);
+  border-radius: 999px;
+  transform-origin: top center;
+  will-change: transform;
+}
+.ue-firm-timeline__list { list-style: none; margin: 0; padding: 0; }
+.ue-firm-timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border-color);
+  align-items: baseline;
+}
+.ue-firm-timeline__item:first-child { padding-top: 4px; }
+.ue-firm-timeline__item:last-child { border-bottom: none; }
+.ue-firm-timeline__dot {
+  position: absolute;
+  left: -45px;
+  top: 33px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--ink-300);
+  box-shadow: 0 0 0 4px var(--paper);
+  transition: background var(--dur-2) var(--ease-std), box-shadow var(--dur-2) var(--ease-std);
+}
+.ue-firm-timeline__item[data-active] .ue-firm-timeline__dot {
+  background: var(--accent-500);
+  box-shadow: 0 0 0 4px var(--accent-100);
+}
+.ue-firm-timeline__year {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: 24px;
+  letter-spacing: -0.018em;
+  color: var(--ink-950);
+  font-variant-numeric: tabular-nums;
+  transition: color var(--dur-2) var(--ease-std);
+}
+.ue-firm-timeline__item[data-active] .ue-firm-timeline__year { color: var(--accent-600); }
+.ue-firm-timeline__label {
+  margin: 0 0 4px;
+  font-family: var(--font-body);
+  font-weight: var(--w-medium);
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  color: var(--ink-950);
+}
+.ue-firm-timeline__desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-700);
+  max-width: 62ch;
+}
+@media (max-width: 720px) {
+  .ue-firm-timeline__item { grid-template-columns: 1fr; gap: 6px; }
+  .ue-firm-timeline__rail { padding-left: 28px; }
+  .ue-firm-timeline__track { left: 0; }
+  .ue-firm-timeline__dot { left: -28px; top: 29px; }
+  .ue-firm-timeline__year { font-size: 18px; }
+}
+
+/* ---------- Guiding-principle value cards ---------- */
+.ue-firm-values {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.ue-firm-values__card {
+  padding: 20px 18px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+}
+.ue-firm-values__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: 16px;
+  letter-spacing: -0.012em;
+  color: var(--ink-950);
+}
+.ue-firm-values__body {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-500);
+}
+@media (max-width: 560px) {
+  .ue-firm-values { grid-template-columns: 1fr; }
+}
+
+/* ---------- Leadership grid ---------- */
+.ue-firm-leaders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+.ue-firm-leaders__card {
+  background: var(--paper);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.ue-firm-leaders__portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--ink-100);
+  border-bottom: 1px solid var(--border-color);
+}
+.ue-firm-leaders__body { padding: 24px 26px 28px; }
+.ue-firm-leaders__role {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--w-medium);
+  font-size: 13px;
+  letter-spacing: -0.005em;
+  color: var(--accent-500);
+}
+.ue-firm-leaders__name {
+  margin: 8px 0 0;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: 24px;
+  letter-spacing: -0.018em;
+  color: var(--ink-950);
+}
+.ue-firm-leaders__meta {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: var(--ink-500);
+  line-height: 1.55;
+}
+.ue-firm-leaders__bio {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-700);
+}
+
+/* ---------- Pan-India presence map ---------- */
+.ue-firm-map__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: 56px;
+  align-items: start;
+}
+.ue-firm-map__stage {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+.ue-firm-map__svg { width: 100%; height: 100%; object-fit: contain; }
+.ue-firm-map__markers { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; }
+.ue-firm-map__marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.ue-firm-map__marker-dot {
+  position: relative;
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--accent-400);
+  box-shadow: 0 0 0 3px rgba(93, 137, 234, 0.28);
+}
+.ue-firm-map__marker[data-hq] .ue-firm-map__marker-dot {
+  width: 13px;
+  height: 13px;
+  background: var(--accent-400);
+  box-shadow: 0 0 0 4px rgba(93, 137, 234, 0.32);
+}
+.ue-firm-map__marker-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  border: 1.5px solid var(--accent-400);
+  animation: ue-firm-pulse 2.4s var(--ease-std) infinite;
+}
+@keyframes ue-firm-pulse {
+  0% { transform: scale(0.7); opacity: 0.6; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ue-firm-map__marker-pulse { animation: none; opacity: 0; }
+}
+.ue-firm-map__marker-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--w-medium);
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: -0.005em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.ue-firm-map__marker-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--accent-400);
+  border: 1px solid rgba(93, 137, 234, 0.4);
+  border-radius: 999px;
+  padding: 1px 5px;
+}
+
+.ue-firm-map__side { display: flex; flex-direction: column; gap: 40px; }
+.ue-firm-map__offices {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+.ue-firm-map__office {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+}
+.ue-firm-map__office-kind {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: var(--accent-400);
+}
+.ue-firm-map__office-city {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: 17px;
+  letter-spacing: -0.012em;
+  color: var(--paper);
+}
+.ue-firm-map__office-state { font-size: 12.5px; color: rgba(255, 255, 255, 0.6); }
+.ue-firm-map__office-phone { font-family: var(--font-mono); font-size: 12px; color: rgba(255, 255, 255, 0.65); margin-top: 4px; }
+
+.ue-firm-map__states-label {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.ue-firm-map__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.ue-firm-map__chip.ue-firm-map__chip {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+}
+.ue-firm-map__chip.ue-firm-map__chip--accent {
+  background: rgba(93, 137, 234, 0.18);
+  color: var(--accent-400);
+}
+
+@media (max-width: 860px) {
+  .ue-firm-map__layout { grid-template-columns: 1fr; gap: 40px; }
+  .ue-firm-map__stage { max-width: 480px; margin: 0 auto; }
+}
+
+/* ============================================================
    Reduced motion
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {

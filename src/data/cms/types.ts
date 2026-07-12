@@ -43,6 +43,7 @@ export type Service = {
   approach_paragraphs: string[];    // how UEL approaches this discipline (technical)
   approach_plain?: string[];        // plain-language version shown first
   stats?: Spec[];                   // headline figures (e.g. "29,250 TR installed at SAEL")
+  hero_scale?: string;              // curated ceiling figure, e.g. "up to 30,000 TR"
   hero_image_url?: string;
   hero_image_alt?: string;
   seo_title?: string;

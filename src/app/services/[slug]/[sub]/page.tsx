@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 import {
   getAllServices,
   getCategoriesForService,
@@ -10,6 +9,7 @@ import {
 } from "@/lib/cms";
 import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
+import { ContactCTA } from "@/components/site/contact-cta";
 import type { Metadata } from "next";
 
 type Params = { slug: string; sub: string };
@@ -537,59 +537,7 @@ export default async function SubCategoryDetailPage({
       )}
 
       {/* CTA */}
-      <section
-        className="ue-section"
-        style={{ background: "var(--ink-950)", color: "var(--paper)" }}
-      >
-        <div
-          className="ue-container"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 24,
-            alignItems: "flex-start",
-          }}
-        >
-          <p className="ue-eyebrow" style={{ color: "var(--accent-400)" }}>
-            Working on a project?
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 500,
-              fontSize: "clamp(36px, 4vw, 48px)",
-              letterSpacing: "-0.022em",
-              lineHeight: 1.05,
-              margin: 0,
-              maxWidth: "20ch",
-            }}
-          >
-            Tell us about it. We&apos;ll listen properly.
-          </h2>
-          <p
-            style={{
-              fontSize: 17,
-              lineHeight: 1.55,
-              color: "rgba(255,255,255,0.7)",
-              margin: 0,
-              maxWidth: "56ch",
-            }}
-          >
-            Share a scope and we&apos;ll come back with a proposal, a
-            programme, and the name of the engineer who&apos;ll lead it.
-            No sales rep in between.
-          </p>
-          <Button
-            asChild
-            className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--paper)] text-[color:var(--ink-950)] hover:bg-[color:var(--ink-100)]"
-          >
-            <Link href="/contact">
-              Start a conversation
-              <ArrowRight className="size-4 ml-1" aria-hidden />
-            </Link>
-          </Button>
-        </div>
-      </section>
+      <ContactCTA />
     </>
   );
 }

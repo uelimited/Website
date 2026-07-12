@@ -5,6 +5,7 @@ import {
   AnimatePresence,
   motion,
   useMotionValueEvent,
+  useReducedMotion,
   useScroll,
   useTransform,
   type MotionValue,
@@ -26,6 +27,7 @@ export function WhyPillars() {
   const n = PILLARS.length;
   const [active, setActive] = useState(0);
   const outerRef = useRef<HTMLDivElement>(null);
+  const prefersReduced = !!useReducedMotion();
 
   const { scrollYProgress } = useScroll({
     target: outerRef,
@@ -50,7 +52,10 @@ export function WhyPillars() {
     const scrollable = el.scrollHeight - window.innerHeight;
     // Land slightly inside the segment so the active state resolves to i.
     const target = start + ((i + 0.25) / n) * scrollable;
-    window.scrollTo({ top: target, behavior: "smooth" });
+    window.scrollTo({
+      top: target,
+      behavior: prefersReduced ? "auto" : "smooth",
+    });
   };
 
   const current = PILLARS[active];
@@ -86,14 +91,22 @@ export function WhyPillars() {
               </aside>
 
               <div className="ue-why__content">
-                <AnimatePresence mode="wait">
+                {/* initial={false} — content resolves to its visible,
+                    at-rest state (opacity 1) on first mount/SSR; the
+                    crossfade below is a layered enhancement that only
+                    plays on later pillar changes, never a gate that
+                    can leave copy stuck invisible. */}
+                <AnimatePresence mode="wait" initial={false}>
                   <motion.div
                     key={current.num}
                     className="ue-why__content-inner"
                     initial={{ opacity: 0, y: 14 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{
+                      duration: prefersReduced ? 0 : 0.4,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
                   >
                     <span className="ue-why__content-num">
                       {current.num} / 04
