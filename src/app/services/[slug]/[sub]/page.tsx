@@ -176,7 +176,7 @@ export default async function SubCategoryDetailPage({
         </div>
       </section>
 
-      {/* What we deliver — softer, more visual systems grid */}
+      {/* What is delivered — softer, more visual systems grid */}
       {category.systems.length > 0 && (
         <section
           style={{
@@ -188,7 +188,7 @@ export default async function SubCategoryDetailPage({
         >
           <div className="ue-container">
             <header style={{ marginBottom: 56, maxWidth: 640 }}>
-              <p className="ue-eyebrow">What we deliver</p>
+              <p className="ue-eyebrow">What&apos;s delivered</p>
               <h2
                 style={{
                   fontFamily: "var(--font-display)",
@@ -211,7 +211,7 @@ export default async function SubCategoryDetailPage({
                 }}
               >
                 Each of the systems below is engineered, installed and
-                commissioned by our in-house team — handed over with
+                commissioned by the in-house team — handed over with
                 documentation, training and a number you can call.
               </p>
             </header>
@@ -341,7 +341,7 @@ export default async function SubCategoryDetailPage({
         </section>
       )}
 
-      {/* How we work — editorial, image + text side by side */}
+      {/* The approach — editorial, image + text side by side */}
       {category.approach_paragraphs.length > 0 && (
         <section style={{ padding: "96px 0" }}>
           <div className="ue-container">
@@ -355,7 +355,7 @@ export default async function SubCategoryDetailPage({
               className="md:grid"
             >
               <div>
-                <p className="ue-eyebrow">How we work</p>
+                <p className="ue-eyebrow">The approach</p>
                 <h2
                   style={{
                     fontFamily: "var(--font-display)",
@@ -368,7 +368,7 @@ export default async function SubCategoryDetailPage({
                     maxWidth: "16ch",
                   }}
                 >
-                  Our way of approaching it.
+                  The way it&apos;s approached.
                 </h2>
                 {heroImage && (
                   <div
@@ -415,7 +415,7 @@ export default async function SubCategoryDetailPage({
           <div className="ue-container">
             <RelatedProjects
               projects={projects}
-              eyebrow="Where we've delivered this"
+              eyebrow="Where this has been delivered"
               heading={`${category.name}, in real buildings.`}
             />
           </div>
@@ -450,7 +450,7 @@ export default async function SubCategoryDetailPage({
                 }}
               >
                 Engineering rarely happens one discipline at a time. These
-                are the disciplines we typically deliver alongside{" "}
+                are the disciplines typically delivered alongside{" "}
                 {category.name.toLowerCase()}.
               </p>
             </header>

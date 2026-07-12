@@ -33,7 +33,7 @@ export function FirmJourneyTimeline({
     <section className="ue-firm-timeline" aria-labelledby="firm-timeline-heading">
       <div className="ue-container">
         <header className="ue-firm-timeline__head">
-          <p className="ue-eyebrow">Our journey</p>
+          <p className="ue-eyebrow">The journey</p>
           <h2 id="firm-timeline-heading" className="ue-h2 ue-firm-timeline__title">
             Thirty-five years, ten inflection points.
           </h2>

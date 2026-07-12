@@ -49,7 +49,7 @@ export default function HomePage() {
                 variant="outline"
                 className="rounded-full h-11 px-6 text-[15px] font-medium border-[color:var(--border-strong)] text-[color:var(--ink-950)] bg-transparent hover:bg-[color:var(--ink-50)]"
               >
-                <Link href="/services">Explore what we do</Link>
+                <Link href="/services">Explore the capabilities</Link>
               </Button>
             </div>
           </div>

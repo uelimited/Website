@@ -167,7 +167,7 @@ export default function ContactPage() {
                   rows={6}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="A few lines on what you're working on — location, scope, timeline if you have them. We'll take it from there."
+                  placeholder="A few lines on what you're working on — location, scope, timeline if you have them."
                   className="rounded-xl border-[color:var(--border-color)] bg-[color:var(--paper)] text-[15px] text-[color:var(--ink-950)] leading-[1.55] focus-visible:border-[color:var(--accent-500)] focus-visible:ring-[color:var(--accent-500)]/20"
                 />
               </div>
@@ -202,7 +202,7 @@ export default function ContactPage() {
                 Your message is ready to send.
               </h3>
               <p style={{ color: "var(--ink-500)", margin: 0, fontSize: 15, lineHeight: 1.55 }}>
-                We&apos;ve opened a pre-filled email to our team — just press
+                A pre-filled email to the team is ready — just press
                 send in your mail app. Prefer to write directly?{" "}
                 <a
                   href={`mailto:${FIRM.contactEmail}`}

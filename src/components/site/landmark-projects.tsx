@@ -26,9 +26,9 @@ export function LandmarkProjects() {
             </h2>
           </div>
           <p className="ue-landmark__kicker">
-            A select group of mandates that defined our evolution — precision
-            engineering, disciplined execution, and large-scale coordination
-            across sectors.
+            A select group of mandates that defined the firm&apos;s evolution —
+            precision engineering, disciplined execution, and large-scale
+            coordination across sectors.
           </p>
         </div>
 

@@ -9,7 +9,7 @@
     "short_blurb": "Central plant — chillers, cooling towers, primary distribution, thermal storage and the hydronic backbone that feeds every air-side device.",
     "intro_paragraphs": [
       "High side is the central plant — the chillers, cooling towers, pumps, hydronic piping and thermal storage that produce the chilled water and circulate it through the building. It is where most of the energy is consumed, and where most of the lifetime cost is decided.",
-      "We design and execute air-cooled and water-cooled plants from a few hundred TR up to 16,000+ TR installed (Common Central Secretariat, New Delhi). Plant topology — parallel chillers, primary-secondary distribution, variable-primary, N+1 or 2N — follows the building's reliability target and the operator's standard. The choice is never default."
+      "Air-cooled and water-cooled plants are designed and executed from a few hundred TR up to 16,000+ TR installed (Common Central Secretariat, New Delhi). Plant topology — parallel chillers, primary-secondary distribution, variable-primary, N+1 or 2N — follows the building's reliability target and the operator's standard. The choice is never default."
     ],
     "approach_paragraphs": [
       "Chiller selection is driven by the part-load profile, not the design-day peak. Most buildings operate below 60% of peak load for the majority of operating hours, so plants are staged for high IPLV (integrated part-load value) and tuned through the BMS for optimised setpoints once running.",
@@ -91,7 +91,7 @@
     "short_blurb": "Air-side equipment — AHUs, FCUs, VRF, terminal units, ducting and the diffusion strategy that delivers conditioned air to the space.",
     "intro_paragraphs": [
       "Low side is everything between the chilled-water pipe and the occupant — air handling units, fan coil units, VRF/VRV indoor units, dedicated outdoor air systems, terminal devices, ducting, dampers and diffusers. It is the part of the system the occupant actually experiences.",
-      "Our low-side work spans the full range — from a single 500 CFM FCU in a hotel room to a 217-AHU plus 130-MAU installation at the SAEL solar-cell facility in Jewar. Every AHU is sized against the room's heat load and ventilation requirement, every duct route is coordinated in the federated BIM model, and every diffuser is selected for throw, drop and noise."
+      "Low-side work spans the full range — from a single 500 CFM FCU in a hotel room to a 217-AHU plus 130-MAU installation at the SAEL solar-cell facility in Jewar. Every AHU is sized against the room's heat load and ventilation requirement, every duct route is coordinated in the federated BIM model, and every diffuser is selected for throw, drop and noise."
     ],
     "approach_paragraphs": [
       "Air-handling units are selected from the heat-load calculation, the supply-air temperature schedule, and the room's acoustic limit. Coil rows, face velocity and bypass factor are picked deliberately — not from a default AHU configurator. DX, chilled-water and dual-coil arrangements coexist on most projects, sized for their loads.",
@@ -172,7 +172,7 @@
     "short_blurb": "Offices, hotels, retail, hospitality and residential — conditioning sized to ASHRAE 62.1/90.1 with occupancy-driven controls and BMS tie-in.",
     "intro_paragraphs": [
       "Comfort cooling is the discipline of conditioning spaces designed for human occupancy — corporate offices, hotels, retail malls, hospitality and residential. The performance window is set by ASHRAE 55 (thermal comfort), ASHRAE 62.1 (ventilation) and ASHRAE 90.1 (energy). The objective is invisible: occupants notice when the system is wrong, not when it is right.",
-      "We have delivered comfort cooling across the full range — five-star hotels (Westin, Radisson, Marriott, Crowne Plaza, Holiday Inn), corporate towers (Bharti, Vatika, Spaze), mixed-use developments (Ingka/IKEA Centre, Noida), retail malls, and high-end residential (M3M, DLF, Vatika)."
+      "Comfort cooling has been delivered across the full range — five-star hotels (Westin, Radisson, Marriott, Crowne Plaza, Holiday Inn), corporate towers (Bharti, Vatika, Spaze), mixed-use developments (Ingka/IKEA Centre, Noida), retail malls, and high-end residential (M3M, DLF, Vatika)."
     ],
     "approach_paragraphs": [
       "Heat loads are calculated room-by-room against occupancy schedules, fabric U-values, solar gains by orientation and time-of-day, and equipment dissipation. ASHRAE 62.1 ventilation rates are added with simultaneity factors and demand-controlled ventilation where occupancy is dynamic.",
@@ -234,7 +234,7 @@
     "short_blurb": "Factory floors, manufacturing halls and warehouses — high-volume air distribution, process-exhaust make-up and equipment cooling at industrial scale.",
     "intro_paragraphs": [
       "Industrial cooling serves the manufacturing floor — large open volumes, high equipment dissipation, process exhausts that pull large quantities of make-up air, and operators who need stable conditions for the product, not just for themselves. The discipline blurs into process cooling at one end and comfort cooling at the other.",
-      "We have delivered industrial HVAC for JSW EV manufacturing (Bangalore), Coca-Cola plants, Unilever, BMW, Hyundai, ITC and the IKEA Noida mixed-use development. Scope ranges from large AHU farms feeding factory halls to spot cooling and high-velocity destratification on shed-roof floors."
+      "Industrial HVAC has been delivered for JSW EV manufacturing (Bangalore), Coca-Cola plants, Unilever, BMW, Hyundai, ITC and the IKEA Noida mixed-use development. Scope ranges from large AHU farms feeding factory halls to spot cooling and high-velocity destratification on shed-roof floors."
     ],
     "approach_paragraphs": [
       "Heat loads include process equipment dissipation, internal occupancy, solar gain through skylights, infiltration and exhaust make-up. Make-up air for process exhaust is sized to maintain a defined building pressure relative to outside — typically slightly positive to keep dust out, slightly negative where contaminants need containment.",
@@ -296,7 +296,7 @@
     "category_type": "specialised",
     "short_blurb": "White-space conditioning for colocation, hyperscale and HPC — aisle containment, CRAH/InRow/RDHX, liquid-ready paths and Tier 3/4-ready resilience.",
     "intro_paragraphs": [
-      "Data centre cooling is a discipline of its own. The load is dense, the resilience target is uncompromising, the supply-air window is narrow, and the operator's commissioning protocol is exact. We have delivered MEPF for 10+ data centres including STT GDC (Mumbai), CtrlS (Navi Mumbai), Digital Edge (BOM01), Anant Raj Cloud, STPI, ASF Insignia, TTSL, NISM and UIDAI — ₹400+ Cr cumulative DC revenue.",
+      "Data centre cooling is a discipline of its own. The load is dense, the resilience target is uncompromising, the supply-air window is narrow, and the operator's commissioning protocol is exact. MEPF has been delivered for data centres including STT GDC (Mumbai), CtrlS (Navi Mumbai), Digital Edge (BOM01), Anant Raj Cloud and STPI.",
       "Every white-space layout is built around supply-air temperature management to ASHRAE TC 9.9, contained aisles, redundant cooling distribution, and a clear migration path to liquid for AI/HPC density. The cooling plant — chillers, towers, hydronics — is engineered for concurrent maintainability, with all faults discovered in commissioning rather than during the operator's first failover drill."
     ],
     "approach_paragraphs": [
@@ -378,7 +378,7 @@
     "short_blurb": "Cleanroom HVAC (ISO 6/7/8), process cooling water, pressure cascade and HEPA-filtered air for semiconductor, pharma and laboratory environments.",
     "intro_paragraphs": [
       "Process cooling is the most exacting discipline in the HVAC stack. The performance window is set by the process — ISO 14644-1 cleanroom class, pressure cascade between zones, supply-air ACPH, temperature and humidity tolerance — and the system is engineered against the tighter of the tender spec and the governing standard.",
-      "We have executed Class 10,000 / 100,000 (ISO 7/8) cleanrooms at scale for Foxconn (Apple) in Bangalore — wall and ceiling PUF panelling, epoxy flooring, HEPA-filtered AHUs, return-air risers, cleanroom doors and view panels — and the SAEL Jewar 5.75 GW solar-cell facility, with ISO 6/7/8 zones across 66,000+ sqm, 13,656 FFUs, 217 AHUs and 130 MAUs."
+      "Class 10,000 / 100,000 (ISO 7/8) cleanrooms have been executed at scale for Foxconn (Apple) in Bangalore — wall and ceiling PUF panelling, epoxy flooring, HEPA-filtered AHUs, return-air risers, cleanroom doors and view panels — and the SAEL Jewar 5.75 GW solar-cell facility, with ISO 6/7/8 zones across 66,000+ sqm, 13,656 FFUs, 217 AHUs and 130 MAUs."
     ],
     "approach_paragraphs": [
       "Cleanroom design follows a deliberate workflow: concept zoning by ISO class and pressure strategy; room-by-room heat-load with tool dissipation per OEM datasheet; FFU and HEPA banding; pressure cascade with door-interlock logic; federated BIM at LOD 400 with all clashes resolved before shop release. Validation tests particle count, recovery time, ACPH, ΔP, T/RH, noise and lighting against ISO 14644-3 test methods.",
@@ -432,9 +432,9 @@
       },
       {
         "name": "Pharma & lab process cooling",
-        "description": "USP / EP-grade water systems, controlled-temperature process loops, dehumidification and reheat for tight RH-tolerant manufacturing — cosmetics, pharmaceutical, lens (Luxotica), animal biotech (NAIB).",
+        "description": "USP / EP-grade water systems, controlled-temperature process loops, dehumidification and reheat for tight RH-tolerant manufacturing — cosmetics, pharmaceutical, lens and animal-biotech facilities, including NIAB Hyderabad.",
         "specs": [
-          { "k": "References", "v": "Belco Pharma · NAIB · Luxotica" },
+          { "k": "Reference", "v": "NIAB Hyderabad" },
           { "k": "RH stability", "v": "±5% process-dependent" },
           { "k": "Treatment", "v": "USP / EP water systems" }
         ]
@@ -513,7 +513,7 @@
     "category_type": "system_layer",
     "short_blurb": "Unitised and stick-system curtain walls, ACP cladding and structural glazing sealed against the building envelope.",
     "intro_paragraphs": [
-      "Façades are engineered for wind load, seismic drift, thermal movement and water tightness — in that order. Our façade desk works from the architect's elevation, runs a wind-tunnel-backed pressure grid, and sizes the mullion-transom rhythm accordingly.",
+      "Façades are engineered for wind load, seismic drift, thermal movement and water tightness — in that order. The façade desk works from the architect's elevation, runs a wind-tunnel-backed pressure grid, and sizes the mullion-transom rhythm accordingly.",
       "Every panel is factory-glazed where possible. Site joints are backer-rod-and-sealant details, water-tested in mock-up before mass production, and inspected in lift-by-lift hose-test batches. Anchorage is to a shear-connector bracket — never direct to the slab edge."
     ],
     "approach_paragraphs": [
@@ -566,7 +566,7 @@
     "category_type": "application",
     "short_blurb": "Trimix, vacuum-dewatered and epoxy-resin floors designed for point loads, abrasion and chemical exposure.",
     "intro_paragraphs": [
-      "An industrial floor is a structural element, not a finish. Our floor specification picks slab thickness, joint spacing, reinforcement type and surface treatment against the expected wheel load, turning radius and chemical contact — not off a generic manufacturer cut-sheet.",
+      "An industrial floor is a structural element, not a finish. Floor specification picks slab thickness, joint spacing, reinforcement type and surface treatment against the expected wheel load, turning radius and chemical contact — not off a generic manufacturer cut-sheet.",
       "Pours are laser-screeded in continuous strips to minimise cold joints. Surface hardeners are broadcast wet-on-wet; post-cure, joints are saw-cut on schedule and filled with semi-rigid joint filler so pallet trucks do not spall the arrises."
     ],
     "approach_paragraphs": [
@@ -618,11 +618,11 @@
     "category_type": "application",
     "short_blurb": "Tenant fit-out delivered to the developer's warm-shell handover — ceilings, partitions, joinery, flooring and finishes.",
     "intro_paragraphs": [
-      "Corporate interiors sit at the intersection of three trades — ceiling and partition systems, MEP services feeding them, and the bespoke joinery that reads as the client's brand. We detail all three against a single reflected ceiling plan so grid, diffuser and light fitting lines agree.",
+      "Corporate interiors sit at the intersection of three trades — ceiling and partition systems, MEP services feeding them, and the bespoke joinery that reads as the client's brand. All three are detailed against a single reflected ceiling plan so grid, diffuser and light fitting lines agree.",
       "Finishes are sample-approved before production, mocked up on a pilot bay, and sealed against the as-built drawing. Snag-list resolution is tracked on a floor-by-floor register and signed off before the client commissioning walk."
     ],
     "approach_paragraphs": [
-      "We work from a coordinated reflected ceiling plan that resolves MEP, lighting, ceiling grid and sprinkler heads in a single drawing. Acoustic and FF&E specs are signed off against the project brief at scheme stage, not retrofit-corrected at handover.",
+      "The team works from a coordinated reflected ceiling plan that resolves MEP, lighting, ceiling grid and sprinkler heads in a single drawing. Acoustic and FF&E specs are signed off against the project brief at scheme stage, not retrofit-corrected at handover.",
       "Joinery is shop-fabricated against approved samples; site installation is dry-fit before final fix to identify dimensional creep early."
     ],
     "systems": [
@@ -672,7 +672,7 @@
     "short_blurb": "Structural strengthening, façade replacement and MEP modernisation for ageing or repurposed building stock.",
     "intro_paragraphs": [
       "Retrofitting is the discipline of rebuilding without demolishing — strengthening a structure, replacing a façade, upgrading MEP services in a building that must remain partially or fully operational. The constraints are tighter than new-build: load paths must transition smoothly, occupants must be protected, and the historical record of the asset becomes the design baseline.",
-      "We have delivered retrofit work for IT-park BMS upgrades, healthcare facility expansions, and façade replacements on operating commercial buildings. Each engagement begins with a forensic survey and an MEP system condition audit."
+      "Retrofit work has been delivered for IT-park BMS upgrades, healthcare facility expansions, and façade replacements on operating commercial buildings. Each engagement begins with a forensic survey and an MEP system condition audit."
     ],
     "approach_paragraphs": [
       "Forensic surveys use non-destructive testing — rebound hammer, ultrasonic pulse velocity, half-cell potential — to map structural condition before strengthening. Designs use carbon-fibre wrap, jacketing or steel collars depending on the load case.",
@@ -726,7 +726,7 @@
     "short_blurb": "High-tension to low-tension distribution — 33/22/11 kV systems, transformers, LV switchgear and the cable management that ties them.",
     "intro_paragraphs": [
       "Electrical distribution is engineered, not assembled. Single-line diagrams, short-circuit analysis, protection coordination and arc-flash modelling are run end-to-end before the first cable is pulled. Cable trays and bus trunking are routed in the coordinated MEPF model so service voids stay congestion-free.",
-      "Our HT/LT scope spans the full voltage hierarchy — from 33 kV HV reception through transformers, LV switchgear, busbar trunking, and feeder cabling to the final distribution panel. The same team that engineers it tests and commissions it."
+      "HT/LT scope spans the full voltage hierarchy — from 33 kV HV reception through transformers, LV switchgear, busbar trunking, and feeder cabling to the final distribution panel. The same team that engineers it tests and commissions it."
     ],
     "approach_paragraphs": [
       "Short-circuit analysis and protection coordination are run in ETAP or DigSILENT against the operator's grid impedance. Relay settings are commissioned via primary injection — never by setting the dial blind.",
@@ -778,8 +778,8 @@
     "category_type": "system_layer",
     "short_blurb": "Indoor and outdoor substations, dry-type and oil-immersed transformers, sized to the load profile and the operator's reliability target.",
     "intro_paragraphs": [
-      "Substations are where the building meets the grid. Our work covers indoor and outdoor substations, package substations, transformer foundations, oil containment pits, and the protection coordination that integrates them with both upstream utility and downstream load.",
-      "Transformer selection is driven by load profile, harmonic distortion, ambient temperature and the operator's preference for dry-type vs oil-immersed. We don't default — every project gets its own thermal and harmonic analysis."
+      "Substations are where the building meets the grid. The scope covers indoor and outdoor substations, package substations, transformer foundations, oil containment pits, and the protection coordination that integrates them with both upstream utility and downstream load.",
+      "Transformer selection is driven by load profile, harmonic distortion, ambient temperature and the operator's preference for dry-type vs oil-immersed — never defaulted; every project gets its own thermal and harmonic analysis."
     ],
     "approach_paragraphs": [
       "Transformer sizing considers the actual load profile, not just nameplate kVA. Harmonic content is modelled where IT, VFD or LED loads dominate; K-factor or harmonic mitigation specified accordingly.",
@@ -831,7 +831,7 @@
     "category_type": "application",
     "short_blurb": "Diesel generation, static UPS and battery rooms for ride-through, brownout protection and tier-3/4 data-centre uptime.",
     "intro_paragraphs": [
-      "Backup power keeps the building producing when the grid stops. We deliver diesel generation sized for full IT + cooling block load, day tanks and bulk fuel skids, modular static UPS systems with ventilated battery rooms, and the protection logic that orchestrates failover automatically.",
+      "Backup power keeps the building producing when the grid stops. Diesel generation is delivered sized for full IT + cooling block load, day tanks and bulk fuel skids, modular static UPS systems with ventilated battery rooms, and the protection logic that orchestrates failover automatically.",
       "For data centres and semiconductor fabs, the topology is concurrent-maintainable or fault-tolerant — designed against the Uptime Institute Tier rating the operator targets, and commissioned with load-bank testing to prove it."
     ],
     "approach_paragraphs": [
@@ -884,7 +884,7 @@
     "category_type": "system_layer",
     "short_blurb": "Sandwich-construction busbar trunking, panel manufacturing and the LV distribution that powers every downstream load.",
     "intro_paragraphs": [
-      "Busbar trunking is the workhorse of high-rise and high-density power distribution. Sandwich-construction BBT delivers higher fault current rating, lower impedance, and faster reconfiguration than equivalent cable runs. Our scope covers the BBT itself and the LV distribution panels it feeds.",
+      "Busbar trunking is the workhorse of high-rise and high-density power distribution. Sandwich-construction BBT delivers higher fault current rating, lower impedance, and faster reconfiguration than equivalent cable runs. The scope covers the BBT itself and the LV distribution panels it feeds.",
       "Panels are built to Form 2b/3b/4 segregation per IEC 61439, with ICW ratings sized to the upstream fault level. Every panel is type-tested or design-verified — never assembled to a generic single-line without engineering review."
     ],
     "approach_paragraphs": [
@@ -938,7 +938,7 @@
     "short_blurb": "Cleanroom-rated LED, emergency egress, life-safety lighting and DALI / KNX-controlled architectural systems.",
     "intro_paragraphs": [
       "Lighting in critical environments is more than illumination. Cleanroom luminaires must be flush-glazed, sealed against contamination, and rated for in-situ HEPA leak testing. Emergency lighting must hold the egress lumens through a defined battery duration. Architectural lighting must be DALI-addressable and tunable.",
-      "Our lighting scope spans cleanroom-rated LED arrays, life-safety emergency systems, architectural DALI/KNX controls, and the photometric design that ties them to the room's task and acoustic budget."
+      "Lighting scope spans cleanroom-rated LED arrays, life-safety emergency systems, architectural DALI/KNX controls, and the photometric design that ties them to the room's task and acoustic budget."
     ],
     "approach_paragraphs": [
       "Photometric design is run in DIALux or AGi32 against the room's task plane illuminance target. Glare is verified by UGR calculation; acoustic impact by NC rating. Cleanroom luminaires are selected for HEPA-compatibility and IP rating per the zone class.",
@@ -990,7 +990,7 @@
     "category_type": "specialised",
     "short_blurb": "Electrical Power Monitoring Systems across HV/LV/UPS/DG with per-rack PDU telemetry and arc-flash event capture.",
     "intro_paragraphs": [
-      "EPMS is the metering and monitoring layer that tells the operator what their electrical system is actually doing. We deliver per-feeder, per-panel and per-rack metering integrated into a unified historian — so power quality, energy consumption and event capture are observable in real time.",
+      "EPMS is the metering and monitoring layer that tells the operator what their electrical system is actually doing. Per-feeder, per-panel and per-rack metering is delivered, integrated into a unified historian — so power quality, energy consumption and event capture are observable in real time.",
       "For data centres and tier-1 industrial facilities, EPMS feeds both the BMS and the operator's DCIM. Open feeds (Modbus, BACnet, SNMP) ensure the data is portable, not vendor-locked."
     ],
     "approach_paragraphs": [
@@ -1045,7 +1045,7 @@
     "short_blurb": "Water treatment plants, sewage treatment plants and effluent treatment plants sized to source-water analysis and discharge consent.",
     "intro_paragraphs": [
       "Water treatment plants are sized against the source-water analysis, consumer demand, and discharge consent — not as a generic 'WTP block' on the BOQ. Membrane systems, multi-grade filters, softeners and dosing skids are specified to a clear treatment objective.",
-      "Our scope covers raw-water treatment for cooling-tower make-up and process water, sewage treatment for building blackwater, and effluent treatment for industrial process discharge. Sludge management and dewatering close the loop."
+      "The scope covers raw-water treatment for cooling-tower make-up and process water, sewage treatment for building blackwater, and effluent treatment for industrial process discharge. Sludge management and dewatering close the loop."
     ],
     "approach_paragraphs": [
       "Source-water analysis is the starting point — TDS, hardness, iron, silica, coliforms — and the treatment train is built to remove what's actually present. Membrane configuration (RO + NF + UF) is sized to the recovery target.",
@@ -1097,7 +1097,7 @@
     "short_blurb": "High-purity SS 316 / PP-H piping for semiconductor, pharma and laboratory process water, conductivity-monitored end-to-end.",
     "intro_paragraphs": [
       "Industrial piping is the discipline that delivers fluids — water, chemicals, gases, steam — through a building's process layer. Pipe material, jointing method, slope and supports are picked against the fluid, the pressure, the temperature and the cleanliness requirement of the downstream load.",
-      "We have delivered SS 316 PCW networks for Foxconn cleanroom, JSW EV battery-line cooling, and SAEL solar-cell process loops. Every joint is welded, leak-tested, and conductivity-tapped for monitoring."
+      "SS 316 PCW networks have been delivered for Foxconn cleanroom, JSW EV battery-line cooling, and SAEL solar-cell process loops. Every joint is welded, leak-tested, and conductivity-tapped for monitoring."
     ],
     "approach_paragraphs": [
       "Pipe routing is coordinated in Revit (LOD 400) with all other MEPF services. Slope and support intervals follow ASME B31.3 for process piping; isometric drawings are signed off pre-fabrication.",
@@ -1150,7 +1150,7 @@
     "short_blurb": "Variable-frequency pump banks with pressure-vessel control for constant-pressure water supply across high-rise and large-format buildings.",
     "intro_paragraphs": [
       "Hydropneumatic systems deliver constant water pressure across multi-level buildings without overhead tanks on every zone. VFD-controlled pump banks ride a pressure vessel buffer, maintaining setpoint pressure regardless of demand.",
-      "Our designs use duty-standby logic with sequencing for high-demand events, pressure-reducing zones for low-floor pressure management, and BMS integration so the building operator can see pump-run hours, suction pressure and fault status in real time."
+      "Designs use duty-standby logic with sequencing for high-demand events, pressure-reducing zones for low-floor pressure management, and BMS integration so the building operator can see pump-run hours, suction pressure and fault status in real time."
     ],
     "approach_paragraphs": [
       "Pump sizing follows the calculated peak simultaneous demand with simultaneity factors per IS 1172. VFD curves are tuned during commissioning to the actual building hydraulics, not the catalogue duty point.",
@@ -1203,7 +1203,7 @@
     "short_blurb": "Soil, waste, vent and water-supply piping with fixture-grade finishes for corporate, hospitality, healthcare and residential buildings.",
     "intro_paragraphs": [
       "Sanitary plumbing covers the building's water-supply and drainage layers — cold and hot water distribution, soil and waste stacks, vent piping and the fixture-grade finishes the occupant sees. The discipline rewards quiet execution: occupants notice when it's wrong, not when it's right.",
-      "We deliver to IPC, ISPC and CPHEEO standards, with traps and venting sized per stack height. Pipe materials are CPVC for water supply, PVC-DWV or HDPE for drainage, with fixture-grade sanitaryware per the operator's spec (Kohler, TOTO, Roca, Grohe)."
+      "Systems are delivered to IPC, ISPC and CPHEEO standards, with traps and venting sized per stack height. Pipe materials are CPVC for water supply, PVC-DWV or HDPE for drainage, with fixture-grade sanitaryware per the operator's spec (Kohler, TOTO, Roca, Grohe)."
     ],
     "approach_paragraphs": [
       "Hydraulic design follows fixture-unit calculation per IPC/ISPC. Stack venting is sized to prevent siphonage and back-pressure across the full stack height. Drainage gradients are verified on-site, not assumed.",
@@ -1254,7 +1254,7 @@
     "category_type": "specialised",
     "short_blurb": "Process steam generation, distribution and condensate recovery for hospitality, pharma, laundry and process-load applications.",
     "intro_paragraphs": [
-      "Steam is the working fluid for laundry, kitchen, sterilisation and many pharma process loads. Our scope covers oil-fired, gas-fired and electric boilers, steam distribution piping, pressure-reducing stations and condensate recovery — sized to the operator's peak and average load.",
+      "Steam is the working fluid for laundry, kitchen, sterilisation and many pharma process loads. The scope covers oil-fired, gas-fired and electric boilers, steam distribution piping, pressure-reducing stations and condensate recovery — sized to the operator's peak and average load.",
       "Distribution is to ASME B31.1 with insulated, traced piping where heat loss matters. Condensate return reduces fresh-water make-up and recovers thermal energy; condensate-quality monitoring protects the boiler from contamination."
     ],
     "approach_paragraphs": [
@@ -1519,7 +1519,7 @@
     "short_blurb": "Smoke detection, heat detection, VESDA aspirating systems and addressable fire alarm panels with PA / voice evacuation.",
     "intro_paragraphs": [
       "Fire detection is the first signal that triggers everything else — sprinkler release for pre-action, gas-suppression activation, AHU shutdown, dampers, lift recall and PA evacuation. The detection layer must be sized, located and tested deliberately.",
-      "Our scope covers spot-type smoke and heat detection, VESDA aspirating smoke detection for data halls and atria, manual call points and addressable fire-alarm panels with PA integration. Detection logic is cross-zoned where the building's actions depend on dual confirmation."
+      "The scope covers spot-type smoke and heat detection, VESDA aspirating smoke detection for data halls and atria, manual call points and addressable fire-alarm panels with PA integration. Detection logic is cross-zoned where the building's actions depend on dual confirmation."
     ],
     "approach_paragraphs": [
       "Detector spacing follows NFPA 72 with adjustments for ceiling height, beam pockets and HVAC airflow. Air-sampling systems (VESDA) are designed for very-early-warning in high-value spaces.",
@@ -1572,7 +1572,7 @@
     "short_blurb": "Stairwell pressurisation, smoke extraction, atrium smoke control and the dampers that compartmentalise fire spread.",
     "intro_paragraphs": [
       "Smoke management keeps egress paths tenable while occupants evacuate. Stairwell pressurisation maintains positive pressure in escape stairs; smoke extraction removes products of combustion from the affected zone; atrium smoke control prevents stratification in tall lobby volumes.",
-      "Our scope covers fans, dampers, controls and the CFD-backed design that proves the system works under the design fire scenario."
+      "The scope covers fans, dampers, controls and the CFD-backed design that proves the system works under the design fire scenario."
     ],
     "approach_paragraphs": [
       "Stairwell pressurisation is designed against the door-opening scenario most adverse — typically all doors closed (max pressure) and one door open (min pressure). Per NFPA 92.",
@@ -1625,7 +1625,7 @@
     "short_blurb": "NBC 2016, NFPA 13/72, local fire-authority NOC, Form A — compliance documentation and approval delivered as part of scope.",
     "intro_paragraphs": [
       "Fire compliance is the discipline that closes the loop from design through operation. Code review against NBC 2016 (India), NFPA 13/72/2001 (US), or BS 9999/EN 12101 (UK/EU); occupant-load and egress capacity calculations; fire-authority liaison through plan submission, inspection and final NOC.",
-      "We treat compliance as part of scope, not a subcontracted afterthought. The same team that designs the sprinkler system writes the hydraulic-calculation submission and walks the inspector through the witness-test."
+      "Compliance is treated as part of scope, not a subcontracted afterthought. The same team that designs the sprinkler system writes the hydraulic-calculation submission and walks the inspector through the witness-test."
     ],
     "approach_paragraphs": [
       "Code review happens at scheme stage so the building's egress, compartmentation and suppression strategy is set before architectural drawings freeze. Late code-driven changes are the most expensive kind.",
@@ -1678,8 +1678,8 @@
     "category_type": "application",
     "short_blurb": "Rooftop PV systems for corporate campuses, warehouses, mixed-use developments and industrial estates — net-metered and BMS-monitored.",
     "intro_paragraphs": [
-      "Rooftop solar is the most accessible renewable generation for commercial and industrial buildings. Our scope covers structural assessment of the host roof, mounting design for wind and seismic load, module and inverter selection, string sizing, DC and AC cabling, net-metering hardware, and SCADA monitoring.",
-      "We have delivered rooftop solar as part of the Ingka (IKEA) mixed-use mandate in Noida, integrated with PNG distribution and the wider MEPF scope. Generation is metered, monitored and reported through the building's BMS or a dedicated solar SCADA."
+      "Rooftop solar is the most accessible renewable generation for commercial and industrial buildings. The scope covers structural assessment of the host roof, mounting design for wind and seismic load, module and inverter selection, string sizing, DC and AC cabling, net-metering hardware, and SCADA monitoring.",
+      "Rooftop solar has been delivered as part of the Ingka (IKEA) mixed-use mandate in Noida, integrated with PNG distribution and the wider MEPF scope. Generation is metered, monitored and reported through the building's BMS or a dedicated solar SCADA."
     ],
     "approach_paragraphs": [
       "Generation is modelled in PVsyst against site-specific irradiance, tilt, azimuth and shading. Module degradation, temperature derating, and inverter clipping are accounted for in the energy yield estimate.",
@@ -1732,7 +1732,7 @@
     "short_blurb": "Utility-scale and captive ground-mounted PV plants on fixed-tilt or single-axis tracking structures with HT evacuation.",
     "intro_paragraphs": [
       "Ground-mounted solar is where utility-scale generation lives — captive plants for industrial estates, captive-use PPAs for corporate offtake, or simply purpose-built plants for commercial energy supply. The scope is broader: civil foundations, mounting structures, modules, inverters, HT step-up and grid evacuation.",
-      "We deliver from technical due diligence through commissioning and handover to the asset owner's O&M team. Site selection, irradiance modelling, soil testing and grid-connection feasibility are upfront work, not retrofitted to a fixed budget."
+      "Delivery spans technical due diligence through commissioning and handover to the asset owner's O&M team. Site selection, irradiance modelling, soil testing and grid-connection feasibility are upfront work, not retrofitted to a fixed budget."
     ],
     "approach_paragraphs": [
       "Site assessment includes soil bearing capacity (for foundation type), irradiance modelling against multiple TMY datasets, and grid feasibility with the local DISCOM. The energy yield estimate drives the financial model.",
@@ -1837,7 +1837,7 @@
     "category_type": "specialised",
     "short_blurb": "BEE-certified energy audits, ASHRAE Level 1/2/3 audits and retro-commissioning to identify and prove savings opportunities.",
     "intro_paragraphs": [
-      "Energy audits identify where a building is losing energy and how much it would cost to fix. We deliver BEE-certified Type-2 / Type-3 audits for industrial facilities and ASHRAE Level 1, 2 and 3 audits for commercial buildings.",
+      "Energy audits identify where a building is losing energy and how much it would cost to fix. BEE-certified Type-2 / Type-3 audits are delivered for industrial facilities, alongside ASHRAE Level 1, 2 and 3 audits for commercial buildings.",
       "Findings are quantified with measurement (current loggers, BTU meters, flow meters) — not estimated from nameplate data. ECMs are ranked by simple payback and lifecycle savings, with implementation roadmap and verification plan."
     ],
     "approach_paragraphs": [
@@ -1890,8 +1890,8 @@
     "category_type": "specialised",
     "short_blurb": "Green-building certification — LEED, IGBC and GRIHA — from design intent through documentation and final award.",
     "intro_paragraphs": [
-      "Green-building certification rewards measured performance — energy efficiency, water conservation, indoor air quality, materials sourcing. We deliver the engineering and documentation that earn LEED, IGBC and GRIHA credits, from design through final award.",
-      "Our work on the Common Central Secretariat (IGBC Gold) and Nalanda University (net-zero) shows what's achievable when sustainability is baked into the engineering from concept — not retrofitted at handover."
+      "Green-building certification rewards measured performance — energy efficiency, water conservation, indoor air quality, materials sourcing. The engineering and documentation that earn LEED, IGBC and GRIHA credits are delivered from design through final award.",
+      "The Common Central Secretariat (IGBC Gold) and Nalanda University (net-zero) show what's achievable when sustainability is baked into the engineering from concept — not retrofitted at handover."
     ],
     "approach_paragraphs": [
       "Credit targeting happens at scheme stage with the architect and operator. ASHRAE 90.1 baseline modelling, water-use reduction calculations, and material EPDs are all sequenced into the design programme so credits are evidence-backed, not aspirational.",
@@ -1944,7 +1944,7 @@
     "category_type": "system_layer",
     "short_blurb": "Distributed Direct Digital Control panels and field devices for HVAC, plumbing, electrical and fire-system integration.",
     "intro_paragraphs": [
-      "DDC is the field-level intelligence that turns mechanical and electrical equipment into a controllable, observable system. Our DDC panels run BTL-certified controllers with point-level addressing, vendor-neutral protocols (BACnet, Modbus) and BMS-tied trend logging from day one.",
+      "DDC is the field-level intelligence that turns mechanical and electrical equipment into a controllable, observable system. DDC panels run BTL-certified controllers with point-level addressing, vendor-neutral protocols (BACnet, Modbus) and BMS-tied trend logging from day one.",
       "Sensor and actuator selection is part of design — not delegated to an installer. Pressure sensors, temperature probes, control valves and damper actuators are specified for the application's response time, accuracy and BMS protocol."
     ],
     "approach_paragraphs": [
@@ -1997,7 +1997,7 @@
     "category_type": "system_layer",
     "short_blurb": "BMS head-end servers, SCADA dashboards, historian and the alarm hierarchy that turns DDC into operator-actionable intelligence.",
     "intro_paragraphs": [
-      "The SCADA head-end is where DDC data becomes operator intelligence. We deliver redundant head-end servers, real-time dashboards, historian with multi-year trend retention, and alarm hierarchies pre-agreed with the facility team.",
+      "The SCADA head-end is where DDC data becomes operator intelligence. Redundant head-end servers, real-time dashboards, a historian with multi-year trend retention, and alarm hierarchies pre-agreed with the facility team are delivered together.",
       "Reports are scheduled to land in the operator's inbox without further intervention. Trend retention follows the operator's analytics or compliance need — typically 3 years for energy, 7 years for regulated environments."
     ],
     "approach_paragraphs": [
@@ -2050,7 +2050,7 @@
     "category_type": "system_layer",
     "short_blurb": "Addressable fire-alarm panels with PA / voice-evacuation integration, lift recall logic and BMS interlocks.",
     "intro_paragraphs": [
-      "Fire-alarm and PA integration sits at the intersection of life-safety code and operator usability. We deliver addressable panels with full point-level addressing, EN 54 / UL 864 compliance, and PA / voice-evacuation integration that delivers clear pre-recorded messaging during evacuation.",
+      "Fire-alarm and PA integration sits at the intersection of life-safety code and operator usability. Addressable panels are delivered with full point-level addressing, EN 54 / UL 864 compliance, and PA / voice-evacuation integration that provides clear pre-recorded messaging during evacuation.",
       "Interlock logic with the BMS sequences AHU shutdown, smoke damper actuation and lift recall on alarm — verified by witness testing at commissioning."
     ],
     "approach_paragraphs": [
@@ -2103,7 +2103,7 @@
     "category_type": "system_layer",
     "short_blurb": "IP CCTV, access-control panels, biometric and card-reader integration with VMS and the building's identity-management system.",
     "intro_paragraphs": [
-      "Security systems sit alongside fire and BMS as a third controls layer. Our scope covers IP CCTV (cameras, NVR/VMS, analytics), access-control panels (card readers, biometric, controller), and the integration that lets a single operator workflow span all three.",
+      "Security systems sit alongside fire and BMS as a third controls layer. The scope covers IP CCTV (cameras, NVR/VMS, analytics), access-control panels (card readers, biometric, controller), and the integration that lets a single operator workflow span all three.",
       "VMS is selected against the operator's preferred platform (Genetec, Milestone, Avigilon, Bosch). Cameras are picked for the scene — wide-angle for atria, narrow for entries, low-light for car parks."
     ],
     "approach_paragraphs": [
@@ -2155,7 +2155,7 @@
     "category_type": "application",
     "short_blurb": "Sub-metering, energy dashboards, demand-response logic and the analytics that prove operational efficiency.",
     "intro_paragraphs": [
-      "Energy management turns sub-meter data into operational decisions. We deliver granular sub-metering across HVAC, lighting, IT, plug and process loads, with dashboards that show consumption by zone, sub-system and time-of-day.",
+      "Energy management turns sub-meter data into operational decisions. Granular sub-metering is delivered across HVAC, lighting, IT, plug and process loads, with dashboards that show consumption by zone, sub-system and time-of-day.",
       "Analytics overlay benchmarks against ASHRAE 90.1 or operator-specific KPIs (EUI, PUE, kWh per occupant, kWh per m²). Demand-response logic shifts loads off-peak where the utility tariff makes it worthwhile."
     ],
     "approach_paragraphs": [
@@ -2208,7 +2208,7 @@
     "category_type": "specialised",
     "short_blurb": "Data Centre Infrastructure Management integration with open feeds (Modbus, BACnet, SNMP) into the operator's chosen DCIM platform.",
     "intro_paragraphs": [
-      "Data centre operators run on DCIM — the platform that consolidates power, cooling, space and IT into one operational view. We deliver the integration layer that feeds BMS, EPMS, fire and security data into the operator's DCIM via open feeds (Modbus, BACnet, SNMP).",
+      "Data centre operators run on DCIM — the platform that consolidates power, cooling, space and IT into one operational view. The integration layer feeding BMS, EPMS, fire and security data into the operator's DCIM via open feeds (Modbus, BACnet, SNMP) is delivered as standard scope.",
       "The objective is portability. Standardised tag dictionaries, documented point lists, and joint witness-tests on integration mean the operator inherits a working system — not a vendor lock-in."
     ],
     "approach_paragraphs": [
@@ -2262,7 +2262,7 @@
     "category_type": "application",
     "short_blurb": "Round-the-clock operations management for HVAC, electrical, plumbing, fire and BMS — single accountable team, single SLA.",
     "intro_paragraphs": [
-      "Round-the-clock facility management means every MEP system has a qualified operator on duty, every event is logged, and every escalation follows a defined path. Our O&M contracts span all the disciplines we install — a single accountable team, a single performance SLA.",
+      "Round-the-clock facility management means every MEP system has a qualified operator on duty, every event is logged, and every escalation follows a defined path. O&M contracts span every discipline Unique Engineers installs — a single accountable team, a single performance SLA.",
       "Coverage is structured by shift, with handover briefings, log-book entries, and exception-reporting into the operator's CAFM. Routine rounds verify equipment status; reactive response handles tickets in priority order."
     ],
     "approach_paragraphs": [
@@ -2420,7 +2420,7 @@
     "category_type": "specialised",
     "short_blurb": "Asset condition tracking, capex planning, replacement scheduling and end-of-life decommissioning over the full asset life.",
     "intro_paragraphs": [
-      "Asset lifecycle management turns capital equipment into a planned, financially-tracked portfolio. We track condition, residual life, performance degradation and energy efficiency over the full asset life — surfacing capex needs years before they bite the operator's budget.",
+      "Asset lifecycle management turns capital equipment into a planned, financially-tracked portfolio. Condition, residual life, performance degradation and energy efficiency are tracked over the full asset life — surfacing capex needs years before they bite the operator's budget.",
       "End-of-life decommissioning and replacement is staged into the operator's capex planning cycle, with the new equipment specified for current load profile, regulatory framework and energy-efficiency target — not just like-for-like replaced."
     ],
     "approach_paragraphs": [
@@ -2473,7 +2473,7 @@
     "category_type": "application",
     "short_blurb": "Pre-positioned rapid-response teams with critical spares for the top-quartile-impact failure modes — keeping MTTR inside SLA.",
     "intro_paragraphs": [
-      "Rapid response is the discipline of restoring service quickly when the failure happens anyway. We pre-position teams near major client sites, with critical spares for the top-quartile failure modes — chiller compressors, UPS batteries, breaker mechanisms, BMS controllers.",
+      "Rapid response is the discipline of restoring service quickly when the failure happens anyway. Teams are pre-positioned near major client sites, with critical spares for the top-quartile failure modes — chiller compressors, UPS batteries, breaker mechanisms, BMS controllers.",
       "MTTR (mean-time-to-repair) is tracked per failure class. The objective is unambiguous: keep the worst-case incident inside the SLA window, every time."
     ],
     "approach_paragraphs": [

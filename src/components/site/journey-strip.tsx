@@ -22,7 +22,7 @@ export function JourneyStrip() {
     <section className="ue-section">
       <div className="ue-container">
         <header style={{ marginBottom: 40 }}>
-          <p className="ue-eyebrow">Our journey</p>
+          <p className="ue-eyebrow">The journey</p>
           <h2
             className="ue-h2"
             style={{ marginTop: 8, maxWidth: "22ch" }}

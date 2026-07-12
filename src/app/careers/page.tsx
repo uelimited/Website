@@ -273,7 +273,7 @@ export default function CareersPage() {
                 color: "var(--ink-950)",
               }}
             >
-              The parts we can put in writing.
+              The parts that can be put in writing.
             </h2>
           </header>
           <div
@@ -510,7 +510,7 @@ export default function CareersPage() {
                   maxWidth: "16ch",
                 }}
               >
-                We hire for strength, across disciplines.
+                Hiring for strength, across disciplines.
               </h2>
               <p
                 style={{
@@ -600,9 +600,9 @@ export default function CareersPage() {
               maxWidth: "52ch",
             }}
           >
-            Tell us about yourself and what you want to build. We read every
-            message — and if there&apos;s a fit, you&apos;ll hear from an
-            engineer, not a bot.
+            Share a little about yourself and what you want to build. Every
+            message is read — and if there&apos;s a fit, you&apos;ll hear from
+            an engineer, not a bot.
           </p>
           <Button
             asChild

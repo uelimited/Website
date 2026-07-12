@@ -282,7 +282,7 @@ export default async function SectorDetailPage({
               serviceLabels={serviceLabels}
               eyebrow="Full record · last 10 years"
               heading={`Every ${sector.name.toLowerCase()} project.`}
-              intro="The complete list from our order book — consolidated by site, largest first."
+              intro="The complete list from the order book — consolidated by site, largest first."
               serviceFilter={serviceFilter}
               showSectorTag={false}
               enableSearch={ledger.length > 10}

@@ -291,7 +291,7 @@ export default async function ServiceLandingPage({
         </section>
       )}
 
-      {/* What we cover — one clean accordion, no internal taxonomy */}
+      {/* What the discipline covers — one clean accordion, no internal taxonomy */}
       <section
         style={{
           padding: "96px 0 112px",
@@ -333,7 +333,7 @@ export default async function ServiceLandingPage({
         </div>
       </section>
 
-      {/* How we approach the discipline overall */}
+      {/* How the discipline is approached overall */}
       {approachLead.length > 0 && (
         <section style={{ padding: "96px 0" }}>
           <div className="ue-container">
@@ -341,7 +341,7 @@ export default async function ServiceLandingPage({
               className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-10 md:gap-16"
             >
               <div>
-                <p className="ue-eyebrow">How we work</p>
+                <p className="ue-eyebrow">The approach</p>
                 <h2
                   style={{
                     fontFamily: "var(--font-display)",
@@ -354,7 +354,7 @@ export default async function ServiceLandingPage({
                     maxWidth: "16ch",
                   }}
                 >
-                  How we engineer {inlineName(service.name)}.
+                  How {inlineName(service.name)} is engineered.
                 </h2>
               </div>
               <div>
@@ -422,7 +422,7 @@ export default async function ServiceLandingPage({
               sectorLabels={sectorLabels}
               eyebrow="Where this scope was delivered"
               heading={`${service.name} — the project record.`}
-              intro="Projects from the last decade with documented scope in this discipline, across every industry we serve."
+              intro="Projects from the last decade with documented scope in this discipline, across every industry served."
               sectorFilter={ledgerSectorFilter}
               showSectorTag
               enableSearch={serviceLedger.length > 10}

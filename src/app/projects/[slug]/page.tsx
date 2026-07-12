@@ -390,7 +390,7 @@ export default async function ProjectDetailPage({
                   maxWidth: "20ch",
                 }}
               >
-                What we engineered, where it lands.
+                What was engineered, where it lands.
               </h2>
             </header>
             <div className="grid md:grid-cols-2 gap-10">

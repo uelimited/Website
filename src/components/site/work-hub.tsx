@@ -203,7 +203,7 @@ export function WorkHub({
           <p className="ue-eyebrow" style={{ margin: 0 }}>
             Work
           </p>
-          <h1 className="ue-work-hero__title">Every project we&apos;ve delivered.</h1>
+          <h1 className="ue-work-hero__title">Every project, delivered.</h1>
           <p className="ue-work-hero__lead">
             {stats.count} projects across {industries} industries, delivered over
             the last decade. Filter by sector, system, contract value or location
