@@ -19,13 +19,42 @@ const fieldInputClass =
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [reference, setReference] = useState("");
+  const [topic, setTopic] = useState("Project enquiry");
   const [message, setMessage] = useState("");
-
-  const reference = `UE-${Math.floor(Math.random() * 9000 + 1000)}`;
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const ref = `UE-${Math.floor(Math.random() * 9000 + 1000)}`;
+    const name = String(data.get("name") ?? "").trim();
+    const company = String(data.get("company") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
+
+    // No backend is wired yet, so hand the enquiry to the visitor's mail
+    // client pre-filled — a real, working path with zero server. Swap this
+    // for a POST to an endpoint once the firm provides one.
+    const subject = `${topic} — website enquiry (${ref})`;
+    const body = [
+      `Name: ${name}`,
+      company && `Company: ${company}`,
+      `Email: ${email}`,
+      phone && `Phone: ${phone}`,
+      `Topic: ${topic}`,
+      "",
+      message.trim(),
+      "",
+      `— Sent from ${FIRM.website} · ${ref}`,
+    ]
+      .filter((line) => line !== false)
+      .join("\n");
+
+    setReference(ref);
     setSent(true);
+    window.location.href = `mailto:${FIRM.contactEmail}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -108,7 +137,7 @@ export default function ContactPage() {
                 <Label className="text-[13px] text-[color:var(--ink-700)]">
                   What's this about?
                 </Label>
-                <Select defaultValue="Project enquiry">
+                <Select value={topic} onValueChange={setTopic}>
                   <SelectTrigger
                     className={fieldInputClass + " w-full data-[size=default]:h-12"}
                   >
@@ -158,7 +187,7 @@ export default function ContactPage() {
                 background: "var(--paper-soft)",
               }}
             >
-              <div className="ue-chip ue-chip--accent">Received</div>
+              <div className="ue-chip ue-chip--accent">Draft ready · {reference}</div>
               <h3
                 style={{
                   fontFamily: "var(--font-display)",
@@ -168,11 +197,18 @@ export default function ContactPage() {
                   margin: "16px 0 8px",
                 }}
               >
-                Thanks — we'll be in touch · {reference}
+                Your message is ready to send.
               </h3>
               <p style={{ color: "var(--ink-500)", margin: 0, fontSize: 15, lineHeight: 1.55 }}>
-                The right person at Unique Engineers will respond within two
-                business days.
+                We&apos;ve opened a pre-filled email to our team — just press
+                send in your mail app. Prefer to write directly?{" "}
+                <a
+                  href={`mailto:${FIRM.contactEmail}`}
+                  style={{ color: "var(--accent-500)" }}
+                >
+                  {FIRM.contactEmail}
+                </a>
+                . The right person will respond within two business days.
               </p>
             </div>
           )}
