@@ -27,7 +27,7 @@ export const CAREERS_PITCH = {
   title: "Ambition needs the right room.",
   body: [
     "Talented engineers usually stall for the same three reasons: teams that don't talk to each other, cultures that reward politics over work, and roles with no ceiling to push against.",
-    "We've spent three decades building the opposite — an in-house practice where engineers design and build side by side, where credit is shared, and where your growth is written into how we plan. Align your goals with ours, and the firm becomes the fastest way to get where you're going.",
+    "Three decades have gone into building the opposite — an in-house practice where engineers design and build side by side, where credit is shared, and where your growth is written into the plan. Align your goals with the firm's, and it becomes the fastest way to get where you're going.",
   ],
 };
 

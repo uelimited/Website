@@ -46,7 +46,7 @@
       {
         "heading": "Tier-3 / Tier-4 readiness",
         "body": [
-          "Designed to Uptime Institute Tier topology. Concurrent maintainability and (for Tier IV) fault-tolerant topologies engineered across mechanical, electrical, fire and BMS — verified in our commissioning protocol.",
+          "Designed to Uptime Institute Tier topology. Concurrent maintainability and (for Tier IV) fault-tolerant topologies engineered across mechanical, electrical, fire and BMS — verified in the commissioning protocol.",
           "Annual outage allowance ≤ 1.6 hr for Tier III and ≤ 0.4 hr for Tier IV. SPOF audit at design freeze and at every change-control event. 2-hour fire-rated MEP / electrical / battery compartments, pen-sealed and witnessed."
         ]
       },

@@ -97,7 +97,7 @@
       "Distribution diagrams are owned end-to-end. Short-circuit analysis, arc-flash modelling, harmonic studies and protection coordination are run before the first cable is pulled. Cable trays and bus trunking are routed in the coordinated MEPF model so service voids stay congestion-free across the building's life."
     ],
     "approach_paragraphs": [
-      "Single-line diagrams and earthing schemes are coordinated with the operator's reliability target. For tier-3/4 data centres and semiconductor fabs we design active-active topologies with fault-tolerant segregation; for offices and hotels we design for N+1 plant resilience with reasonable economics. The choice is never default — it follows the load profile.",
+      "Single-line diagrams and earthing schemes are coordinated with the operator's reliability target. For tier-3/4 data centres and semiconductor fabs, active-active topologies with fault-tolerant segregation are designed; for offices and hotels, the design targets N+1 plant resilience with reasonable economics. The choice is never default — it follows the load profile.",
       "Every installation is tested to defined acceptance criteria — insulation resistance, polarisation index, primary injection on relays, load-bank testing for DG and UPS. Documentation hands over to the operator's CMMS so the asset register starts day one with verified data."
     ],
     "stats": [
@@ -222,7 +222,7 @@
     "scope_unit": "kWp",
     "accent": "sun",
     "intro_paragraphs": [
-      "Solar is the firm's renewable energy practice — rooftop and ground-mounted PV plants engineered for irradiance, structural load, electrical safety and a measurable return. It pairs naturally with our electrical, BMS and energy-audit capability, so the generated power is metered, monitored and integrated into the building's broader energy strategy.",
+      "Solar is the firm's renewable energy practice — rooftop and ground-mounted PV plants engineered for irradiance, structural load, electrical safety and a measurable return. It pairs naturally with the firm's electrical, BMS and energy-audit capability, so the generated power is metered, monitored and integrated into the building's broader energy strategy.",
       "Solar EPC scopes have been delivered from rooftop installations on warehouses and corporate campuses to integrated solar at the Ingka (IKEA) mixed-use development. Net metering, inverter selection, string sizing, and grid synchronisation are all in-house."
     ],
     "approach_paragraphs": [
@@ -312,7 +312,7 @@
       "The O&M model is built around preventive schedules generated from OEM datasheets, predictive analytics layered on top of BMS data, and rapid-response teams pre-positioned near major client sites. The objective is unchanged: keep the asset producing the comfort, the process condition or the uptime it was designed for, for its full economic life."
     ],
     "approach_paragraphs": [
-      "Preventive schedules are loaded into a CMMS with full asset hierarchy from day one — the same hand-over dossier we provide at construction completion seeds the maintenance plan. Equipment-specific PM frequencies, spares lists and skill requirements are pre-tagged so the schedule is operational from the first day of the contract.",
+      "Preventive schedules are loaded into a CMMS with full asset hierarchy from day one — the same hand-over dossier provided at construction completion seeds the maintenance plan. Equipment-specific PM frequencies, spares lists and skill requirements are pre-tagged so the schedule is operational from the first day of the contract.",
       "Predictive maintenance overlays the BMS trend store — chiller approach temperatures, motor vibration where instrumented, harmonic distortion on critical feeders — to spot drift before it becomes a failure. Rapid-response teams hold spares for the top-quartile-impact failures, so MTTR on the worst-case incidents stays inside the SLA."
     ],
     "stats": [

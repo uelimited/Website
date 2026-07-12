@@ -447,7 +447,7 @@ export const LANDMARK_PROJECTS = [
     value: "₹411 Cr",
     scope: ["HVAC", "Firefighting", "Plumbing", "Electrical", "Solar", "PNG"],
     summary:
-      "Our biggest single-order mandate to date — full MEPF and solar services, with PNG. A ₹450 Cr second phase for office and hotel floors is in the pipeline.",
+      "The firm's biggest single-order mandate to date — full MEPF and solar services, with PNG. A ₹450 Cr second phase for office and hotel floors is in the pipeline.",
     accent: "blocks" as const,
   },
   {

@@ -460,7 +460,7 @@
     "category_type": "system_layer",
     "short_blurb": "Raft, pile and combined foundations engineered against soil investigation, load take-down and seismic zone.",
     "intro_paragraphs": [
-      "Every foundation begins with a geotechnical report and ends with an instrumented pour. In between, our structural team models the superstructure load take-down, sizes the reinforcement cage, and coordinates the pour with MEP cast-in openings so penetrations are not cut retrospectively.",
+      "Every foundation begins with a geotechnical report and ends with an instrumented pour. In between, the structural team models the superstructure load take-down, sizes the reinforcement cage, and coordinates the pour with MEP cast-in openings so penetrations are not cut retrospectively.",
       "Pile caps and rafts are delivered with continuous third-party inspection — cube tests at prescribed ages, rebound hammer and ultrasonic readings on key pours, and crack-monitoring protocols during backfill. Deep excavations are shored with design-specific retention systems rather than generic steel sheet piles."
     ],
     "approach_paragraphs": [
@@ -518,7 +518,7 @@
     ],
     "approach_paragraphs": [
       "Performance is verified on a full-scale mock-up before mass production: AAMA 501 water penetration, AAMA 502 field hose test, and structural deflection per ASCE 7. Thermal performance is measured to ISO 12567.",
-      "Anchorage drawings are stamped by our structural team and verified against the as-built slab edge — corrections are detailed at the bracket, never at the panel."
+      "Anchorage drawings are stamped by the structural team and verified against the as-built slab edge — corrections are detailed at the bracket, never at the panel."
     ],
     "systems": [
       {
@@ -1412,7 +1412,7 @@
     "category_type": "system_layer",
     "short_blurb": "Wet-pipe, dry-pipe and pre-action sprinkler systems designed to NFPA 13 hydraulic calculation for the building's hazard class.",
     "intro_paragraphs": [
-      "Sprinkler systems are designed to NFPA 13 with explicit hydraulic calculation — density, area of operation, K-factor, most-remote-head pressure all locked at design freeze. Generic schematic systems get rejected at the fire-authority NOC stage; ours don't.",
+      "Sprinkler systems are designed to NFPA 13 with explicit hydraulic calculation — density, area of operation, K-factor, most-remote-head pressure all locked at design freeze. Generic schematic systems get rejected at the fire-authority NOC stage — properly engineered ones don't.",
       "Wet-pipe is the volume workhorse. Dry-pipe goes into unheated zones (loading docks, garages). Pre-action systems with UL/FM-listed valves go into data halls and museum stores where false-trip prevention matters."
     ],
     "approach_paragraphs": [
@@ -2315,7 +2315,7 @@
     "short_blurb": "OEM-aligned PM schedules loaded into CMMS from the project hand-over dossier — operational on day one of the O&M contract.",
     "intro_paragraphs": [
       "Preventive maintenance is the discipline of doing the work before the failure happens. PM schedules are loaded into the CMMS with full asset hierarchy, OEM-specified PM frequencies, spares lists and skill requirements — so the programme is operational from day one of the contract.",
-      "Where we installed the MEP system, the same engineering team's hand-over dossier seeds the PM plan. The asset register comes with manufacturer datasheets, warranties and spares lists already attached."
+      "Where the MEP system was installed by the same team, the hand-over dossier seeds the PM plan. The asset register comes with manufacturer datasheets, warranties and spares lists already attached."
     ],
     "approach_paragraphs": [
       "Schedules are loaded into CMMS (Maximo, eAM, MaintainX or operator-preferred) with full asset tagging, location hierarchy and OEM-spec frequencies. Annual schedule review tunes frequencies against actual equipment behaviour.",
