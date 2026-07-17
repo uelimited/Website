@@ -30,11 +30,17 @@ export function FirmJourneyTimeline({
   });
 
   return (
-    <section className="ue-firm-timeline" aria-labelledby="firm-timeline-heading">
+    <section
+      className="ue-firm-timeline"
+      aria-labelledby="firm-timeline-heading"
+    >
       <div className="ue-container">
         <header className="ue-firm-timeline__head">
           <p className="ue-eyebrow">The journey</p>
-          <h2 id="firm-timeline-heading" className="ue-h2 ue-firm-timeline__title">
+          <h2
+            id="firm-timeline-heading"
+            className="ue-h2 ue-firm-timeline__title"
+          >
             Thirty-five years, ten inflection points.
           </h2>
           <p className="ue-firm-timeline__kicker">
@@ -85,7 +91,11 @@ function TimelineItem({
       whileInView={reduced ? undefined : { y: 0 }}
       viewport={{ once: true, margin: "-12% 0px -12% 0px" }}
       onViewportEnter={() => setActive(true)}
-      transition={{ duration: 0.5, ease: EASE, delay: Math.min(index, 4) * 0.03 }}
+      transition={{
+        duration: 0.5,
+        ease: EASE,
+        delay: Math.min(index, 4) * 0.03,
+      }}
     >
       <span className="ue-firm-timeline__dot" aria-hidden="true" />
       <div className="ue-firm-timeline__year">{milestone.year}</div>

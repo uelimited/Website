@@ -50,10 +50,7 @@ export function ContactCTA() {
                   <ArrowRight className="size-4 ml-1" aria-hidden />
                 </Link>
               </Button>
-              <a
-                href={`mailto:${FIRM.contactEmail}`}
-                className="ue-cta__mail"
-              >
+              <a href={`mailto:${FIRM.contactEmail}`} className="ue-cta__mail">
                 {FIRM.contactEmail}
               </a>
             </div>

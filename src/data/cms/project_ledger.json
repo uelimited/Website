@@ -27,10 +27,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac",
-      "svc-firefighting"
-    ],
+    "service_ids": ["svc-hvac", "svc-firefighting"],
     "value_cr": 224.23,
     "value_display": "₹224 Cr",
     "year_start": null,
@@ -125,9 +122,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 82.19,
     "value_display": "₹82 Cr",
     "year_start": null,
@@ -142,9 +137,7 @@
     "city": "Dwarka",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 68.44,
     "value_display": "₹68 Cr",
     "year_start": null,
@@ -159,9 +152,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 64.05,
     "value_display": "₹64 Cr",
     "year_start": null,
@@ -198,9 +189,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 61.53,
     "value_display": "₹62 Cr",
     "year_start": null,
@@ -215,9 +204,7 @@
     "city": "Cuttack",
     "state": "Odisha",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 59.59,
     "value_display": "₹60 Cr",
     "year_start": null,
@@ -232,10 +219,7 @@
     "city": "Rajgir",
     "state": "Bihar",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac",
-      "svc-bms"
-    ],
+    "service_ids": ["svc-hvac", "svc-bms"],
     "value_cr": 59.45,
     "value_display": "₹59 Cr",
     "year_start": null,
@@ -270,9 +254,7 @@
     "city": "Rewari",
     "state": "Haryana",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 53.71,
     "value_display": "₹54 Cr",
     "year_start": null,
@@ -287,9 +269,7 @@
     "city": "Jammu",
     "state": "Jammu & Kashmir",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 53.0,
     "value_display": "₹53 Cr",
     "year_start": null,
@@ -304,9 +284,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 52.89,
     "value_display": "₹53 Cr",
     "year_start": null,
@@ -321,9 +299,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 52.62,
     "value_display": "₹53 Cr",
     "year_start": null,
@@ -338,9 +314,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 49.0,
     "value_display": "₹49 Cr",
     "year_start": null,
@@ -355,9 +329,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 45.74,
     "value_display": "₹46 Cr",
     "year_start": null,
@@ -372,9 +344,7 @@
     "city": "Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 45.21,
     "value_display": "₹45 Cr",
     "year_start": null,
@@ -389,9 +359,7 @@
     "city": "Mumbai",
     "state": "Maharashtra",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 44.33,
     "value_display": "₹44 Cr",
     "year_start": 2022,
@@ -406,11 +374,7 @@
     "city": "Dholera",
     "state": "Gujarat",
     "sector_id": "sec-semiconductor",
-    "service_ids": [
-      "svc-civil",
-      "svc-electrical",
-      "svc-plumbing"
-    ],
+    "service_ids": ["svc-civil", "svc-electrical", "svc-plumbing"],
     "value_cr": 44.3,
     "value_display": "₹44 Cr",
     "year_start": null,
@@ -425,9 +389,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 39.82,
     "value_display": "₹40 Cr",
     "year_start": null,
@@ -442,9 +404,7 @@
     "city": "Raebareli",
     "state": "Uttar Pradesh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 34.01,
     "value_display": "₹34 Cr",
     "year_start": null,
@@ -479,11 +439,7 @@
     "city": "Morigaon",
     "state": "Assam",
     "sector_id": "sec-semiconductor",
-    "service_ids": [
-      "svc-civil",
-      "svc-electrical",
-      "svc-plumbing"
-    ],
+    "service_ids": ["svc-civil", "svc-electrical", "svc-plumbing"],
     "value_cr": 30.95,
     "value_display": "₹31 Cr",
     "year_start": null,
@@ -498,9 +454,7 @@
     "city": "Chennai",
     "state": "Tamil Nadu",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 30.68,
     "value_display": "₹31 Cr",
     "year_start": null,
@@ -515,9 +469,7 @@
     "city": "Durg",
     "state": "Chhattisgarh",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 30.52,
     "value_display": "₹31 Cr",
     "year_start": null,
@@ -552,9 +504,7 @@
     "city": "Noida",
     "state": "Uttar Pradesh",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 29.6,
     "value_display": "₹30 Cr",
     "year_start": null,
@@ -569,10 +519,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-data-centre",
-    "service_ids": [
-      "svc-hvac",
-      "svc-om"
-    ],
+    "service_ids": ["svc-hvac", "svc-om"],
     "value_cr": 29.28,
     "value_display": "₹29 Cr",
     "year_start": null,
@@ -587,9 +534,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 28.54,
     "value_display": "₹29 Cr",
     "year_start": null,
@@ -604,9 +549,7 @@
     "city": "Warangal",
     "state": "Telangana",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 27.54,
     "value_display": "₹28 Cr",
     "year_start": null,
@@ -641,9 +584,7 @@
     "city": "Hyderabad",
     "state": "Telangana",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 25.64,
     "value_display": "₹26 Cr",
     "year_start": 2023,
@@ -658,9 +599,7 @@
     "city": "Mumbai",
     "state": "Maharashtra",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 25.52,
     "value_display": "₹26 Cr",
     "year_start": 2018,
@@ -675,9 +614,7 @@
     "city": "Navi Mumbai",
     "state": "Maharashtra",
     "sector_id": "sec-data-centre",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 23.6,
     "value_display": "₹24 Cr",
     "year_start": null,
@@ -692,9 +629,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-firefighting"
-    ],
+    "service_ids": ["svc-firefighting"],
     "value_cr": 22.61,
     "value_display": "₹23 Cr",
     "year_start": null,
@@ -709,9 +644,7 @@
     "city": "Bambolim",
     "state": "Goa",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 22.57,
     "value_display": "₹23 Cr",
     "year_start": null,
@@ -726,9 +659,7 @@
     "city": "Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 22.0,
     "value_display": "₹22 Cr",
     "year_start": null,
@@ -743,9 +674,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 21.21,
     "value_display": "₹21 Cr",
     "year_start": null,
@@ -760,9 +689,7 @@
     "city": "",
     "state": "Gujarat",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 20.83,
     "value_display": "₹21 Cr",
     "year_start": null,
@@ -777,11 +704,7 @@
     "city": "Zuarinagar",
     "state": "Goa",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-electrical",
-      "svc-plumbing",
-      "svc-firefighting"
-    ],
+    "service_ids": ["svc-electrical", "svc-plumbing", "svc-firefighting"],
     "value_cr": 20.64,
     "value_display": "₹21 Cr",
     "year_start": null,
@@ -796,9 +719,7 @@
     "city": "Rohtak",
     "state": "Haryana",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 19.19,
     "value_display": "₹19 Cr",
     "year_start": null,
@@ -813,10 +734,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac",
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-hvac", "svc-electrical"],
     "value_cr": 19.17,
     "value_display": "₹19 Cr",
     "year_start": null,
@@ -831,11 +749,7 @@
     "city": "Pilani",
     "state": "Rajasthan",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-civil",
-      "svc-hvac",
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-civil", "svc-hvac", "svc-electrical"],
     "value_cr": 18.7,
     "value_display": "₹19 Cr",
     "year_start": null,
@@ -850,9 +764,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 17.2,
     "value_display": "₹17 Cr",
     "year_start": null,
@@ -867,9 +779,7 @@
     "city": "Palakkad",
     "state": "Kerala",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-electrical"],
     "value_cr": 17.09,
     "value_display": "₹17 Cr",
     "year_start": null,
@@ -884,9 +794,7 @@
     "city": "Indore",
     "state": "Madhya Pradesh",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 16.82,
     "value_display": "₹17 Cr",
     "year_start": null,
@@ -901,9 +809,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 16.7,
     "value_display": "₹17 Cr",
     "year_start": null,
@@ -918,9 +824,7 @@
     "city": "Jhajjar",
     "state": "Haryana",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 16.64,
     "value_display": "₹17 Cr",
     "year_start": null,
@@ -935,9 +839,7 @@
     "city": "Delhi",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 16.24,
     "value_display": "₹16 Cr",
     "year_start": null,
@@ -952,9 +854,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 16.24,
     "value_display": "₹16 Cr",
     "year_start": null,
@@ -969,9 +869,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 15.86,
     "value_display": "₹16 Cr",
     "year_start": 2018,
@@ -986,9 +884,7 @@
     "city": "Delhi",
     "state": "Delhi",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 15.66,
     "value_display": "₹16 Cr",
     "year_start": null,
@@ -1003,9 +899,7 @@
     "city": "Guntur",
     "state": "Andhra Pradesh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 15.63,
     "value_display": "₹16 Cr",
     "year_start": null,
@@ -1020,9 +914,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-hospitality",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 15.28,
     "value_display": "₹15 Cr",
     "year_start": null,
@@ -1037,9 +929,7 @@
     "city": "Ahmedabad",
     "state": "Gujarat",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 15.1,
     "value_display": "₹15 Cr",
     "year_start": null,
@@ -1054,9 +944,7 @@
     "city": "Chandigarh",
     "state": "Chandigarh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 15.03,
     "value_display": "₹15 Cr",
     "year_start": null,
@@ -1071,9 +959,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 14.79,
     "value_display": "₹15 Cr",
     "year_start": null,
@@ -1088,9 +974,7 @@
     "city": "Kalyani",
     "state": "West Bengal",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 14.79,
     "value_display": "₹15 Cr",
     "year_start": null,
@@ -1105,9 +989,7 @@
     "city": "Patna",
     "state": "Bihar",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 14.24,
     "value_display": "₹14 Cr",
     "year_start": null,
@@ -1122,9 +1004,7 @@
     "city": "Noida",
     "state": "Uttar Pradesh",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-electrical"],
     "value_cr": 13.6,
     "value_display": "₹14 Cr",
     "year_start": null,
@@ -1139,9 +1019,7 @@
     "city": "Dehradun",
     "state": "Uttarakhand",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 13.49,
     "value_display": "₹13 Cr",
     "year_start": null,
@@ -1156,9 +1034,7 @@
     "city": "Patna",
     "state": "Bihar",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 13.35,
     "value_display": "₹13 Cr",
     "year_start": null,
@@ -1173,9 +1049,7 @@
     "city": "Lucknow",
     "state": "Uttar Pradesh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 12.69,
     "value_display": "₹13 Cr",
     "year_start": null,
@@ -1190,9 +1064,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 12.34,
     "value_display": "₹12 Cr",
     "year_start": null,
@@ -1207,9 +1079,7 @@
     "city": "Ranchi",
     "state": "Jharkhand",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 12.29,
     "value_display": "₹12 Cr",
     "year_start": null,
@@ -1224,10 +1094,7 @@
     "city": "Jaipur",
     "state": "Rajasthan",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-electrical",
-      "svc-om"
-    ],
+    "service_ids": ["svc-electrical", "svc-om"],
     "value_cr": 12.0,
     "value_display": "₹12 Cr",
     "year_start": 2019,
@@ -1242,9 +1109,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 11.92,
     "value_display": "₹12 Cr",
     "year_start": null,
@@ -1259,9 +1124,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 11.83,
     "value_display": "₹12 Cr",
     "year_start": null,
@@ -1276,9 +1139,7 @@
     "city": "Nagpur",
     "state": "Maharashtra",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 11.78,
     "value_display": "₹12 Cr",
     "year_start": null,
@@ -1293,9 +1154,7 @@
     "city": "Bangalore",
     "state": "Karnataka",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 11.33,
     "value_display": "₹11 Cr",
     "year_start": 2025,
@@ -1310,9 +1169,7 @@
     "city": "Mumbai",
     "state": "Maharashtra",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 11.23,
     "value_display": "₹11 Cr",
     "year_start": 2025,
@@ -1327,9 +1184,7 @@
     "city": "Noida",
     "state": "Uttar Pradesh",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 11.11,
     "value_display": "₹11 Cr",
     "year_start": null,
@@ -1344,9 +1199,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 10.83,
     "value_display": "₹11 Cr",
     "year_start": null,
@@ -1361,9 +1214,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 10.77,
     "value_display": "₹11 Cr",
     "year_start": null,
@@ -1378,10 +1229,7 @@
     "city": "Gwalior",
     "state": "Madhya Pradesh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac",
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-hvac", "svc-electrical"],
     "value_cr": 10.15,
     "value_display": "₹10 Cr",
     "year_start": null,
@@ -1396,11 +1244,7 @@
     "city": "Ajmer",
     "state": "Rajasthan",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-civil",
-      "svc-electrical",
-      "svc-om"
-    ],
+    "service_ids": ["svc-civil", "svc-electrical", "svc-om"],
     "value_cr": 10.07,
     "value_display": "₹10 Cr",
     "year_start": 2019,
@@ -1415,9 +1259,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 10.07,
     "value_display": "₹10 Cr",
     "year_start": null,
@@ -1432,9 +1274,7 @@
     "city": "Faridabad",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 10.06,
     "value_display": "₹10 Cr",
     "year_start": null,
@@ -1449,9 +1289,7 @@
     "city": "Noida",
     "state": "Uttar Pradesh",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 9.18,
     "value_display": "₹9.2 Cr",
     "year_start": null,
@@ -1466,9 +1304,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 9.12,
     "value_display": "₹9.1 Cr",
     "year_start": 2018,
@@ -1483,9 +1319,7 @@
     "city": "Hyderabad",
     "state": "Telangana",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 8.65,
     "value_display": "₹8.7 Cr",
     "year_start": null,
@@ -1500,9 +1334,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 8.37,
     "value_display": "₹8.4 Cr",
     "year_start": null,
@@ -1517,9 +1349,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 8.07,
     "value_display": "₹8.1 Cr",
     "year_start": null,
@@ -1534,9 +1364,7 @@
     "city": "Ghaziabad",
     "state": "Uttar Pradesh",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 8.02,
     "value_display": "₹8.0 Cr",
     "year_start": null,
@@ -1551,9 +1379,7 @@
     "city": "Jabalpur",
     "state": "Madhya Pradesh",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 7.91,
     "value_display": "₹7.9 Cr",
     "year_start": null,
@@ -1568,9 +1394,7 @@
     "city": "Baddi",
     "state": "Himachal Pradesh",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 7.62,
     "value_display": "₹7.6 Cr",
     "year_start": null,
@@ -1585,9 +1409,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 7.43,
     "value_display": "₹7.4 Cr",
     "year_start": null,
@@ -1602,9 +1424,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-electrical"],
     "value_cr": 7.35,
     "value_display": "₹7.3 Cr",
     "year_start": null,
@@ -1619,9 +1439,7 @@
     "city": "Shimla",
     "state": "Himachal Pradesh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 7.24,
     "value_display": "₹7.2 Cr",
     "year_start": null,
@@ -1636,9 +1454,7 @@
     "city": "Narela",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 7.2,
     "value_display": "₹7.2 Cr",
     "year_start": null,
@@ -1653,9 +1469,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 7.18,
     "value_display": "₹7.2 Cr",
     "year_start": null,
@@ -1670,9 +1484,7 @@
     "city": "",
     "state": "Odisha",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 7.15,
     "value_display": "₹7.2 Cr",
     "year_start": null,
@@ -1687,9 +1499,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 6.9,
     "value_display": "₹6.9 Cr",
     "year_start": null,
@@ -1704,9 +1514,7 @@
     "city": "Mohali",
     "state": "Punjab",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 6.83,
     "value_display": "₹6.8 Cr",
     "year_start": 2024,
@@ -1721,9 +1529,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 6.45,
     "value_display": "₹6.5 Cr",
     "year_start": null,
@@ -1738,9 +1544,7 @@
     "city": "Aurangabad",
     "state": "Maharashtra",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 6.36,
     "value_display": "₹6.4 Cr",
     "year_start": null,
@@ -1755,9 +1559,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-electrical"],
     "value_cr": 6.34,
     "value_display": "₹6.3 Cr",
     "year_start": null,
@@ -1772,9 +1574,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 6.17,
     "value_display": "₹6.2 Cr",
     "year_start": null,
@@ -1789,9 +1589,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 6.09,
     "value_display": "₹6.1 Cr",
     "year_start": null,
@@ -1806,9 +1604,7 @@
     "city": "Hyderabad",
     "state": "Telangana",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.98,
     "value_display": "₹6.0 Cr",
     "year_start": null,
@@ -1823,9 +1619,7 @@
     "city": "Ahmedabad",
     "state": "Gujarat",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.8,
     "value_display": "₹5.8 Cr",
     "year_start": null,
@@ -1840,9 +1634,7 @@
     "city": "Howrah",
     "state": "West Bengal",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.64,
     "value_display": "₹5.6 Cr",
     "year_start": null,
@@ -1857,9 +1649,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.57,
     "value_display": "₹5.6 Cr",
     "year_start": null,
@@ -1874,9 +1664,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.51,
     "value_display": "₹5.5 Cr",
     "year_start": null,
@@ -1891,9 +1679,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.47,
     "value_display": "₹5.5 Cr",
     "year_start": 2017,
@@ -1908,9 +1694,7 @@
     "city": "Dibrugarh",
     "state": "Assam",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.4,
     "value_display": "₹5.4 Cr",
     "year_start": null,
@@ -1925,9 +1709,7 @@
     "city": "Burla",
     "state": "Odisha",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.3,
     "value_display": "₹5.3 Cr",
     "year_start": null,
@@ -1942,9 +1724,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-data-centre",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.25,
     "value_display": "₹5.2 Cr",
     "year_start": null,
@@ -1959,9 +1739,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.2,
     "value_display": "₹5.2 Cr",
     "year_start": null,
@@ -1976,9 +1754,7 @@
     "city": "Kapashera",
     "state": "Delhi",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.14,
     "value_display": "₹5.1 Cr",
     "year_start": null,
@@ -1993,9 +1769,7 @@
     "city": "Latur",
     "state": "Maharashtra",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.13,
     "value_display": "₹5.1 Cr",
     "year_start": null,
@@ -2010,9 +1784,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.1,
     "value_display": "₹5.1 Cr",
     "year_start": null,
@@ -2027,9 +1799,7 @@
     "city": "Prayagraj",
     "state": "Uttar Pradesh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 5.05,
     "value_display": "₹5.0 Cr",
     "year_start": null,
@@ -2044,9 +1814,7 @@
     "city": "Udaipur",
     "state": "Rajasthan",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 4.84,
     "value_display": "₹4.8 Cr",
     "year_start": null,
@@ -2061,9 +1829,7 @@
     "city": "Jhansi",
     "state": "Uttar Pradesh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 4.68,
     "value_display": "₹4.7 Cr",
     "year_start": null,
@@ -2078,9 +1844,7 @@
     "city": "Faridabad",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-electrical"],
     "value_cr": 4.65,
     "value_display": "₹4.7 Cr",
     "year_start": null,
@@ -2115,9 +1879,7 @@
     "city": "Berhampur",
     "state": "Odisha",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 4.3,
     "value_display": "₹4.3 Cr",
     "year_start": null,
@@ -2132,9 +1894,7 @@
     "city": "Chandigarh",
     "state": "Chandigarh",
     "sector_id": "sec-hospitality",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 4.27,
     "value_display": "₹4.3 Cr",
     "year_start": null,
@@ -2149,9 +1909,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 4.13,
     "value_display": "₹4.1 Cr",
     "year_start": null,
@@ -2166,9 +1924,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 3.75,
     "value_display": "₹3.8 Cr",
     "year_start": null,
@@ -2183,9 +1939,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 3.56,
     "value_display": "₹3.6 Cr",
     "year_start": null,
@@ -2200,10 +1954,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac",
-      "svc-plumbing"
-    ],
+    "service_ids": ["svc-hvac", "svc-plumbing"],
     "value_cr": 3.53,
     "value_display": "₹3.5 Cr",
     "year_start": null,
@@ -2218,9 +1969,7 @@
     "city": "Patiala",
     "state": "Punjab",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 3.47,
     "value_display": "₹3.5 Cr",
     "year_start": null,
@@ -2235,9 +1984,7 @@
     "city": "Raipur",
     "state": "Chhattisgarh",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 3.38,
     "value_display": "₹3.4 Cr",
     "year_start": null,
@@ -2252,9 +1999,7 @@
     "city": "Visakhapatnam",
     "state": "Andhra Pradesh",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 3.16,
     "value_display": "₹3.2 Cr",
     "year_start": null,
@@ -2269,9 +2014,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 3.04,
     "value_display": "₹3.0 Cr",
     "year_start": null,
@@ -2286,9 +2029,7 @@
     "city": "Farrukhnagar",
     "state": "Haryana",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 2.91,
     "value_display": "₹2.9 Cr",
     "year_start": null,
@@ -2303,9 +2044,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 2.89,
     "value_display": "₹2.9 Cr",
     "year_start": null,
@@ -2320,10 +2059,7 @@
     "city": "Hisar",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac",
-      "svc-firefighting"
-    ],
+    "service_ids": ["svc-hvac", "svc-firefighting"],
     "value_cr": 2.75,
     "value_display": "₹2.8 Cr",
     "year_start": 2022,
@@ -2338,9 +2074,7 @@
     "city": "",
     "state": "Haryana",
     "sector_id": "sec-data-centre",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 2.57,
     "value_display": "₹2.6 Cr",
     "year_start": null,
@@ -2355,9 +2089,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-electrical"],
     "value_cr": 2.53,
     "value_display": "₹2.5 Cr",
     "year_start": null,
@@ -2372,9 +2104,7 @@
     "city": "Bengaluru",
     "state": "Karnataka",
     "sector_id": "sec-semiconductor",
-    "service_ids": [
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-electrical"],
     "value_cr": 2.4,
     "value_display": "₹2.4 Cr",
     "year_start": null,
@@ -2389,9 +2119,7 @@
     "city": "Bangalore",
     "state": "Karnataka",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 2.38,
     "value_display": "₹2.4 Cr",
     "year_start": null,
@@ -2406,9 +2134,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 2.26,
     "value_display": "₹2.3 Cr",
     "year_start": null,
@@ -2423,9 +2149,7 @@
     "city": "Durgapur",
     "state": "West Bengal",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 2.21,
     "value_display": "₹2.2 Cr",
     "year_start": null,
@@ -2440,9 +2164,7 @@
     "city": "Bangalore",
     "state": "Karnataka",
     "sector_id": "sec-semiconductor",
-    "service_ids": [
-      "svc-electrical"
-    ],
+    "service_ids": ["svc-electrical"],
     "value_cr": 2.17,
     "value_display": "₹2.2 Cr",
     "year_start": null,
@@ -2457,9 +2179,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 2.02,
     "value_display": "₹2.0 Cr",
     "year_start": null,
@@ -2474,9 +2194,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 2.02,
     "value_display": "₹2.0 Cr",
     "year_start": null,
@@ -2491,9 +2209,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 2.02,
     "value_display": "₹2.0 Cr",
     "year_start": null,
@@ -2508,9 +2224,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.93,
     "value_display": "₹1.9 Cr",
     "year_start": null,
@@ -2525,9 +2239,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.84,
     "value_display": "₹1.8 Cr",
     "year_start": null,
@@ -2542,9 +2254,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.84,
     "value_display": "₹1.8 Cr",
     "year_start": null,
@@ -2559,9 +2269,7 @@
     "city": "Gurgaon",
     "state": "Haryana",
     "sector_id": "sec-residential",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.83,
     "value_display": "₹1.8 Cr",
     "year_start": null,
@@ -2576,9 +2284,7 @@
     "city": "Jodhpur",
     "state": "Rajasthan",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.81,
     "value_display": "₹1.8 Cr",
     "year_start": null,
@@ -2593,9 +2299,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.75,
     "value_display": "₹1.8 Cr",
     "year_start": null,
@@ -2610,9 +2314,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.6,
     "value_display": "₹1.6 Cr",
     "year_start": null,
@@ -2627,9 +2329,7 @@
     "city": "Jamalpur",
     "state": "",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.5,
     "value_display": "₹1.5 Cr",
     "year_start": null,
@@ -2644,9 +2344,7 @@
     "city": "Hyderabad",
     "state": "Telangana",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.46,
     "value_display": "₹1.5 Cr",
     "year_start": null,
@@ -2676,9 +2374,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.32,
     "value_display": "₹1.3 Cr",
     "year_start": null,
@@ -2693,9 +2389,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 1.22,
     "value_display": "₹1.2 Cr",
     "year_start": null,
@@ -2745,9 +2439,7 @@
     "city": "Delhi",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 0.94,
     "value_display": "₹94 L",
     "year_start": null,
@@ -2762,9 +2454,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 0.91,
     "value_display": "₹91 L",
     "year_start": null,
@@ -2779,9 +2469,7 @@
     "city": "Noida",
     "state": "Uttar Pradesh",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 0.83,
     "value_display": "₹83 L",
     "year_start": 2017,
@@ -2796,9 +2484,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 0.74,
     "value_display": "₹74 L",
     "year_start": null,
@@ -2813,9 +2499,7 @@
     "city": "Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 0.74,
     "value_display": "₹74 L",
     "year_start": null,
@@ -2830,9 +2514,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 0.74,
     "value_display": "₹74 L",
     "year_start": 2022,
@@ -2847,9 +2529,7 @@
     "city": "Kolkata",
     "state": "West Bengal",
     "sector_id": "sec-education",
-    "service_ids": [
-      "svc-om"
-    ],
+    "service_ids": ["svc-om"],
     "value_cr": 0.7,
     "value_display": "₹70 L",
     "year_start": 2022,
@@ -2864,9 +2544,7 @@
     "city": "Delhi",
     "state": "Delhi",
     "sector_id": "sec-healthcare",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 0.65,
     "value_display": "₹65 L",
     "year_start": null,
@@ -2881,9 +2559,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 0.64,
     "value_display": "₹64 L",
     "year_start": null,
@@ -2898,9 +2574,7 @@
     "city": "",
     "state": "",
     "sector_id": "sec-industrial",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 0.59,
     "value_display": "₹59 L",
     "year_start": null,
@@ -2915,9 +2589,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-corporate-retail",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 0.57,
     "value_display": "₹57 L",
     "year_start": null,
@@ -2932,9 +2604,7 @@
     "city": "New Delhi",
     "state": "Delhi",
     "sector_id": "sec-airport",
-    "service_ids": [
-      "svc-hvac"
-    ],
+    "service_ids": ["svc-hvac"],
     "value_cr": 0.51,
     "value_display": "₹51 L",
     "year_start": null,

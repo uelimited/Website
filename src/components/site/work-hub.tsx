@@ -184,7 +184,11 @@ export function WorkHub({
   };
 
   const heroStats = [
-    { n: String(stats.count), unit: "+", l: "Projects delivered · last decade" },
+    {
+      n: String(stats.count),
+      unit: "+",
+      l: "Projects delivered · last decade",
+    },
     {
       n: Math.round(stats.total_cr).toLocaleString("en-IN"),
       unit: "₹ Cr",
@@ -205,9 +209,9 @@ export function WorkHub({
           </p>
           <h1 className="ue-work-hero__title">Every project, delivered.</h1>
           <p className="ue-work-hero__lead">
-            {stats.count} projects across {industries} industries, delivered over
-            the last decade. Filter by sector, system, contract value or location
-            to find the work that matches yours.
+            {stats.count} projects across {industries} industries, delivered
+            over the last decade. Filter by sector, system, contract value or
+            location to find the work that matches yours.
           </p>
           <div className="ue-work-hero__stats">
             <StatsGrid items={heroStats} />
@@ -226,7 +230,10 @@ export function WorkHub({
                 value={filters.band}
                 onChange={(v) => commit({ band: v === "all" ? null : v })}
                 allLabel="Any value"
-                options={VALUE_BANDS.map((b) => ({ value: b.key, label: b.label }))}
+                options={VALUE_BANDS.map((b) => ({
+                  value: b.key,
+                  label: b.label,
+                }))}
               />
               {states.length > 0 && (
                 <LedgerSelect
@@ -246,7 +253,10 @@ export function WorkHub({
               options={sectorOptions.map((o) => ({ id: o.id, name: o.name }))}
               value={filters.sector}
               onChange={(id) =>
-                commit({ sector: id === "all" ? null : maps.sectorParamById[id] ?? null })
+                commit({
+                  sector:
+                    id === "all" ? null : (maps.sectorParamById[id] ?? null),
+                })
               }
             />
             <ChipRow
@@ -254,7 +264,10 @@ export function WorkHub({
               options={serviceOptions.map((o) => ({ id: o.id, name: o.name }))}
               value={filters.service}
               onChange={(id) =>
-                commit({ service: id === "all" ? null : maps.serviceParamById[id] ?? null })
+                commit({
+                  service:
+                    id === "all" ? null : (maps.serviceParamById[id] ?? null),
+                })
               }
             />
           </div>
@@ -293,8 +306,8 @@ export function WorkHub({
             </p>
             <h2 className="ue-work-section-title">Every project, one list.</h2>
             <p className="ue-work-section-lead">
-              Repeat purchase orders for the same site are consolidated; contract
-              values are aggregated. Largest first.
+              Repeat purchase orders for the same site are consolidated;
+              contract values are aggregated. Largest first.
             </p>
           </header>
 
@@ -307,11 +320,19 @@ export function WorkHub({
             </p>
             <div className="ue-work-results__actions">
               {active && (
-                <button type="button" className="ue-work-clear" onClick={clearAll}>
+                <button
+                  type="button"
+                  className="ue-work-clear"
+                  onClick={clearAll}
+                >
                   Clear filters
                 </button>
               )}
-              <div className="ue-work-toggle" role="group" aria-label="View mode">
+              <div
+                className="ue-work-toggle"
+                role="group"
+                aria-label="View mode"
+              >
                 <button
                   type="button"
                   aria-pressed={view === "list"}
@@ -360,9 +381,19 @@ export function WorkHub({
           )}
 
           {filteredLedger.length === 0 && (
-            <p style={{ padding: "40px 0", fontSize: 15, color: "var(--ink-500)" }}>
+            <p
+              style={{
+                padding: "40px 0",
+                fontSize: 15,
+                color: "var(--ink-500)",
+              }}
+            >
               No projects match these filters.{" "}
-              <button type="button" className="ue-work-clear" onClick={clearAll}>
+              <button
+                type="button"
+                className="ue-work-clear"
+                onClick={clearAll}
+              >
                 Clear filters
               </button>
               .

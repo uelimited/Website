@@ -16,10 +16,7 @@ export function TestimonialsBand() {
       <div className="ue-container">
         <header style={{ marginBottom: 32 }}>
           <p className="ue-eyebrow">Client voice</p>
-          <h2
-            className="ue-h2"
-            style={{ marginTop: 8, maxWidth: "20ch" }}
-          >
+          <h2 className="ue-h2" style={{ marginTop: 8, maxWidth: "20ch" }}>
             In their words.
           </h2>
         </header>
@@ -61,9 +58,7 @@ export function TestimonialsBand() {
                   color: "var(--ink-500)",
                 }}
               >
-                <strong
-                  style={{ color: "var(--ink-950)", fontWeight: 500 }}
-                >
+                <strong style={{ color: "var(--ink-950)", fontWeight: 500 }}>
                   {t.author_name}
                 </strong>{" "}
                 · {t.author_role}, {t.author_company}

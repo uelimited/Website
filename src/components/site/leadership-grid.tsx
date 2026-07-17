@@ -41,7 +41,10 @@ export function LeadershipGrid({ leaders }: { leaders: Leader[] }) {
                 style={{ objectFit: "cover" }}
               />
             ) : (
-              <div className="ue-photo ue-photo--4x5" style={{ position: "absolute", inset: 0, borderRadius: 0 }} />
+              <div
+                className="ue-photo ue-photo--4x5"
+                style={{ position: "absolute", inset: 0, borderRadius: 0 }}
+              />
             )}
           </div>
           <div className="ue-firm-leaders__body">

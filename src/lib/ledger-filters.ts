@@ -132,7 +132,8 @@ export function filterFeatured(
     if (f.state !== "all" && c.state !== f.state) return false;
     if (test && !test(c.value_cr)) return false;
     if (q) {
-      const hay = `${c.name} ${c.city} ${c.state} ${c.primarySectorName}`.toLowerCase();
+      const hay =
+        `${c.name} ${c.city} ${c.state} ${c.primarySectorName}`.toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;

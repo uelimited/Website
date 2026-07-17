@@ -1,46 +1,310 @@
 [
-  { "id": "cli-foxconn", "name": "Foxconn", "primary_sector_id": "sec-semiconductor", "featured_on_home": true, "sort_order": 1 },
-  { "id": "cli-tata-electronics", "name": "Tata Electronics", "primary_sector_id": "sec-semiconductor", "featured_on_home": true, "sort_order": 2 },
-  { "id": "cli-ikea", "name": "INGKA / IKEA", "primary_sector_id": "sec-corporate-retail", "featured_on_home": true, "sort_order": 3 },
-  { "id": "cli-gmr", "name": "GMR Group", "primary_sector_id": "sec-airport", "featured_on_home": true, "sort_order": 4 },
-  { "id": "cli-jsw", "name": "JSW Group", "primary_sector_id": "sec-industrial", "featured_on_home": true, "sort_order": 5 },
-  { "id": "cli-sael", "name": "SAEL Industries", "primary_sector_id": "sec-semiconductor", "featured_on_home": true, "sort_order": 6 },
-  { "id": "cli-stt", "name": "STT GDC India", "primary_sector_id": "sec-data-centre", "featured_on_home": true, "sort_order": 7 },
-  { "id": "cli-ctrls", "name": "CtrlS", "primary_sector_id": "sec-data-centre", "featured_on_home": true, "sort_order": 8 },
-  { "id": "cli-digital-edge", "name": "Digital Edge", "primary_sector_id": "sec-data-centre", "featured_on_home": false, "sort_order": 9 },
-  { "id": "cli-anant-raj", "name": "Anant Raj Cloud", "primary_sector_id": "sec-data-centre", "featured_on_home": false, "sort_order": 10 },
-  { "id": "cli-stpi", "name": "STPI", "primary_sector_id": "sec-data-centre", "featured_on_home": false, "sort_order": 11 },
-  { "id": "cli-tabreed", "name": "Tabreed", "primary_sector_id": "sec-industrial", "featured_on_home": false, "sort_order": 12 },
-  { "id": "cli-coca-cola", "name": "Coca-Cola", "primary_sector_id": "sec-industrial", "featured_on_home": true, "sort_order": 13 },
-  { "id": "cli-unilever", "name": "Unilever", "primary_sector_id": "sec-industrial", "featured_on_home": true, "sort_order": 14 },
-  { "id": "cli-bmw", "name": "BMW", "primary_sector_id": "sec-industrial", "featured_on_home": false, "sort_order": 15 },
-  { "id": "cli-hyundai", "name": "Hyundai", "primary_sector_id": "sec-industrial", "featured_on_home": false, "sort_order": 16 },
-  { "id": "cli-itc", "name": "ITC", "primary_sector_id": "sec-industrial", "featured_on_home": true, "sort_order": 17 },
-  { "id": "cli-aiims", "name": "AIIMS", "primary_sector_id": "sec-healthcare", "featured_on_home": true, "sort_order": 18 },
-  { "id": "cli-cghs", "name": "CGHS", "primary_sector_id": "sec-healthcare", "featured_on_home": false, "sort_order": 19 },
-  { "id": "cli-hites", "name": "HITES", "primary_sector_id": "sec-healthcare", "featured_on_home": false, "sort_order": 20 },
-  { "id": "cli-lhmc", "name": "Lady Hardinge Medical College", "primary_sector_id": "sec-healthcare", "featured_on_home": false, "sort_order": 21 },
-  { "id": "cli-iit", "name": "IIT", "primary_sector_id": "sec-education", "featured_on_home": false, "sort_order": 22 },
-  { "id": "cli-bits", "name": "BITS Pilani", "primary_sector_id": "sec-education", "featured_on_home": false, "sort_order": 23 },
-  { "id": "cli-amity", "name": "Amity University", "primary_sector_id": "sec-education", "featured_on_home": false, "sort_order": 24 },
-  { "id": "cli-nalanda", "name": "Nalanda University", "primary_sector_id": "sec-education", "featured_on_home": false, "sort_order": 25 },
-  { "id": "cli-sau", "name": "South Asian University", "primary_sector_id": "sec-education", "featured_on_home": false, "sort_order": 26 },
-  { "id": "cli-shiv-nadar", "name": "Shiv Nadar School", "primary_sector_id": "sec-education", "featured_on_home": false, "sort_order": 27 },
-  { "id": "cli-bharti", "name": "Bharti Enterprises", "primary_sector_id": "sec-corporate-retail", "featured_on_home": false, "sort_order": 28 },
-  { "id": "cli-vatika", "name": "Vatika", "primary_sector_id": "sec-corporate-retail", "featured_on_home": false, "sort_order": 29 },
-  { "id": "cli-spaze", "name": "Spaze", "primary_sector_id": "sec-corporate-retail", "featured_on_home": false, "sort_order": 30 },
-  { "id": "cli-elan", "name": "Elan", "primary_sector_id": "sec-corporate-retail", "featured_on_home": false, "sort_order": 31 },
-  { "id": "cli-kjl", "name": "KJL", "primary_sector_id": "sec-corporate-retail", "featured_on_home": false, "sort_order": 32 },
-  { "id": "cli-westin", "name": "Westin", "primary_sector_id": "sec-hospitality", "featured_on_home": false, "sort_order": 33 },
-  { "id": "cli-marriott", "name": "Marriott", "primary_sector_id": "sec-hospitality", "featured_on_home": true, "sort_order": 34 },
-  { "id": "cli-radisson", "name": "Radisson", "primary_sector_id": "sec-hospitality", "featured_on_home": false, "sort_order": 35 },
-  { "id": "cli-crowne-plaza", "name": "Crowne Plaza", "primary_sector_id": "sec-hospitality", "featured_on_home": false, "sort_order": 36 },
-  { "id": "cli-holiday-inn", "name": "Holiday Inn", "primary_sector_id": "sec-hospitality", "featured_on_home": false, "sort_order": 37 },
-  { "id": "cli-m3m", "name": "M3M", "primary_sector_id": "sec-residential", "featured_on_home": false, "sort_order": 38 },
-  { "id": "cli-dlf", "name": "DLF", "primary_sector_id": "sec-residential", "featured_on_home": true, "sort_order": 39 },
-  { "id": "cli-suncity", "name": "Suncity", "primary_sector_id": "sec-residential", "featured_on_home": false, "sort_order": 40 },
-  { "id": "cli-itpo", "name": "ITPO", "primary_sector_id": "sec-airport", "featured_on_home": false, "sort_order": 41 },
-  { "id": "cli-aai", "name": "Airports Authority of India", "primary_sector_id": "sec-airport", "featured_on_home": false, "sort_order": 42 },
-  { "id": "cli-goi", "name": "Government of India", "primary_sector_id": "sec-corporate-retail", "featured_on_home": false, "sort_order": 43 },
-  { "id": "cli-mea", "name": "Ministry of External Affairs", "primary_sector_id": "sec-education", "featured_on_home": false, "sort_order": 44 }
+  {
+    "id": "cli-foxconn",
+    "name": "Foxconn",
+    "primary_sector_id": "sec-semiconductor",
+    "featured_on_home": true,
+    "sort_order": 1
+  },
+  {
+    "id": "cli-tata-electronics",
+    "name": "Tata Electronics",
+    "primary_sector_id": "sec-semiconductor",
+    "featured_on_home": true,
+    "sort_order": 2
+  },
+  {
+    "id": "cli-ikea",
+    "name": "INGKA / IKEA",
+    "primary_sector_id": "sec-corporate-retail",
+    "featured_on_home": true,
+    "sort_order": 3
+  },
+  {
+    "id": "cli-gmr",
+    "name": "GMR Group",
+    "primary_sector_id": "sec-airport",
+    "featured_on_home": true,
+    "sort_order": 4
+  },
+  {
+    "id": "cli-jsw",
+    "name": "JSW Group",
+    "primary_sector_id": "sec-industrial",
+    "featured_on_home": true,
+    "sort_order": 5
+  },
+  {
+    "id": "cli-sael",
+    "name": "SAEL Industries",
+    "primary_sector_id": "sec-semiconductor",
+    "featured_on_home": true,
+    "sort_order": 6
+  },
+  {
+    "id": "cli-stt",
+    "name": "STT GDC India",
+    "primary_sector_id": "sec-data-centre",
+    "featured_on_home": true,
+    "sort_order": 7
+  },
+  {
+    "id": "cli-ctrls",
+    "name": "CtrlS",
+    "primary_sector_id": "sec-data-centre",
+    "featured_on_home": true,
+    "sort_order": 8
+  },
+  {
+    "id": "cli-digital-edge",
+    "name": "Digital Edge",
+    "primary_sector_id": "sec-data-centre",
+    "featured_on_home": false,
+    "sort_order": 9
+  },
+  {
+    "id": "cli-anant-raj",
+    "name": "Anant Raj Cloud",
+    "primary_sector_id": "sec-data-centre",
+    "featured_on_home": false,
+    "sort_order": 10
+  },
+  {
+    "id": "cli-stpi",
+    "name": "STPI",
+    "primary_sector_id": "sec-data-centre",
+    "featured_on_home": false,
+    "sort_order": 11
+  },
+  {
+    "id": "cli-tabreed",
+    "name": "Tabreed",
+    "primary_sector_id": "sec-industrial",
+    "featured_on_home": false,
+    "sort_order": 12
+  },
+  {
+    "id": "cli-coca-cola",
+    "name": "Coca-Cola",
+    "primary_sector_id": "sec-industrial",
+    "featured_on_home": true,
+    "sort_order": 13
+  },
+  {
+    "id": "cli-unilever",
+    "name": "Unilever",
+    "primary_sector_id": "sec-industrial",
+    "featured_on_home": true,
+    "sort_order": 14
+  },
+  {
+    "id": "cli-bmw",
+    "name": "BMW",
+    "primary_sector_id": "sec-industrial",
+    "featured_on_home": false,
+    "sort_order": 15
+  },
+  {
+    "id": "cli-hyundai",
+    "name": "Hyundai",
+    "primary_sector_id": "sec-industrial",
+    "featured_on_home": false,
+    "sort_order": 16
+  },
+  {
+    "id": "cli-itc",
+    "name": "ITC",
+    "primary_sector_id": "sec-industrial",
+    "featured_on_home": true,
+    "sort_order": 17
+  },
+  {
+    "id": "cli-aiims",
+    "name": "AIIMS",
+    "primary_sector_id": "sec-healthcare",
+    "featured_on_home": true,
+    "sort_order": 18
+  },
+  {
+    "id": "cli-cghs",
+    "name": "CGHS",
+    "primary_sector_id": "sec-healthcare",
+    "featured_on_home": false,
+    "sort_order": 19
+  },
+  {
+    "id": "cli-hites",
+    "name": "HITES",
+    "primary_sector_id": "sec-healthcare",
+    "featured_on_home": false,
+    "sort_order": 20
+  },
+  {
+    "id": "cli-lhmc",
+    "name": "Lady Hardinge Medical College",
+    "primary_sector_id": "sec-healthcare",
+    "featured_on_home": false,
+    "sort_order": 21
+  },
+  {
+    "id": "cli-iit",
+    "name": "IIT",
+    "primary_sector_id": "sec-education",
+    "featured_on_home": false,
+    "sort_order": 22
+  },
+  {
+    "id": "cli-bits",
+    "name": "BITS Pilani",
+    "primary_sector_id": "sec-education",
+    "featured_on_home": false,
+    "sort_order": 23
+  },
+  {
+    "id": "cli-amity",
+    "name": "Amity University",
+    "primary_sector_id": "sec-education",
+    "featured_on_home": false,
+    "sort_order": 24
+  },
+  {
+    "id": "cli-nalanda",
+    "name": "Nalanda University",
+    "primary_sector_id": "sec-education",
+    "featured_on_home": false,
+    "sort_order": 25
+  },
+  {
+    "id": "cli-sau",
+    "name": "South Asian University",
+    "primary_sector_id": "sec-education",
+    "featured_on_home": false,
+    "sort_order": 26
+  },
+  {
+    "id": "cli-shiv-nadar",
+    "name": "Shiv Nadar School",
+    "primary_sector_id": "sec-education",
+    "featured_on_home": false,
+    "sort_order": 27
+  },
+  {
+    "id": "cli-bharti",
+    "name": "Bharti Enterprises",
+    "primary_sector_id": "sec-corporate-retail",
+    "featured_on_home": false,
+    "sort_order": 28
+  },
+  {
+    "id": "cli-vatika",
+    "name": "Vatika",
+    "primary_sector_id": "sec-corporate-retail",
+    "featured_on_home": false,
+    "sort_order": 29
+  },
+  {
+    "id": "cli-spaze",
+    "name": "Spaze",
+    "primary_sector_id": "sec-corporate-retail",
+    "featured_on_home": false,
+    "sort_order": 30
+  },
+  {
+    "id": "cli-elan",
+    "name": "Elan",
+    "primary_sector_id": "sec-corporate-retail",
+    "featured_on_home": false,
+    "sort_order": 31
+  },
+  {
+    "id": "cli-kjl",
+    "name": "KJL",
+    "primary_sector_id": "sec-corporate-retail",
+    "featured_on_home": false,
+    "sort_order": 32
+  },
+  {
+    "id": "cli-westin",
+    "name": "Westin",
+    "primary_sector_id": "sec-hospitality",
+    "featured_on_home": false,
+    "sort_order": 33
+  },
+  {
+    "id": "cli-marriott",
+    "name": "Marriott",
+    "primary_sector_id": "sec-hospitality",
+    "featured_on_home": true,
+    "sort_order": 34
+  },
+  {
+    "id": "cli-radisson",
+    "name": "Radisson",
+    "primary_sector_id": "sec-hospitality",
+    "featured_on_home": false,
+    "sort_order": 35
+  },
+  {
+    "id": "cli-crowne-plaza",
+    "name": "Crowne Plaza",
+    "primary_sector_id": "sec-hospitality",
+    "featured_on_home": false,
+    "sort_order": 36
+  },
+  {
+    "id": "cli-holiday-inn",
+    "name": "Holiday Inn",
+    "primary_sector_id": "sec-hospitality",
+    "featured_on_home": false,
+    "sort_order": 37
+  },
+  {
+    "id": "cli-m3m",
+    "name": "M3M",
+    "primary_sector_id": "sec-residential",
+    "featured_on_home": false,
+    "sort_order": 38
+  },
+  {
+    "id": "cli-dlf",
+    "name": "DLF",
+    "primary_sector_id": "sec-residential",
+    "featured_on_home": true,
+    "sort_order": 39
+  },
+  {
+    "id": "cli-suncity",
+    "name": "Suncity",
+    "primary_sector_id": "sec-residential",
+    "featured_on_home": false,
+    "sort_order": 40
+  },
+  {
+    "id": "cli-itpo",
+    "name": "ITPO",
+    "primary_sector_id": "sec-airport",
+    "featured_on_home": false,
+    "sort_order": 41
+  },
+  {
+    "id": "cli-aai",
+    "name": "Airports Authority of India",
+    "primary_sector_id": "sec-airport",
+    "featured_on_home": false,
+    "sort_order": 42
+  },
+  {
+    "id": "cli-goi",
+    "name": "Government of India",
+    "primary_sector_id": "sec-corporate-retail",
+    "featured_on_home": false,
+    "sort_order": 43
+  },
+  {
+    "id": "cli-mea",
+    "name": "Ministry of External Affairs",
+    "primary_sector_id": "sec-education",
+    "featured_on_home": false,
+    "sort_order": 44
+  }
 ]

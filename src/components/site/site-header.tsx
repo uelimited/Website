@@ -70,7 +70,11 @@ export function SiteHeader() {
                     {item.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="p-0">
-                    {item.menu === "sectors" ? <SectorsMenu /> : <CapabilitiesMenu />}
+                    {item.menu === "sectors" ? (
+                      <SectorsMenu />
+                    ) : (
+                      <CapabilitiesMenu />
+                    )}
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               ) : (

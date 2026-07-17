@@ -23,10 +23,7 @@ export function JourneyStrip() {
       <div className="ue-container">
         <header style={{ marginBottom: 40 }}>
           <p className="ue-eyebrow">The journey</p>
-          <h2
-            className="ue-h2"
-            style={{ marginTop: 8, maxWidth: "22ch" }}
-          >
+          <h2 className="ue-h2" style={{ marginTop: 8, maxWidth: "22ch" }}>
             From specialist HVAC to multi-discipline EPC.
           </h2>
         </header>

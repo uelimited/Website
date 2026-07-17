@@ -104,8 +104,14 @@ export default async function SectorDetailPage({
               borderBottom: "1px solid var(--border-color)",
             }}
           >
-            <Stat label="Projects in the order book" value={String(stats.count)} />
-            <Stat label="Cumulative contract value" value={stats.total_display} />
+            <Stat
+              label="Projects in the order book"
+              value={String(stats.count)}
+            />
+            <Stat
+              label="Cumulative contract value"
+              value={stats.total_display}
+            />
             <Stat
               label="Active clients"
               value={String(clients.length || "—")}
@@ -237,8 +243,7 @@ export default async function SectorDetailPage({
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns:
-                  "repeat(auto-fit, minmax(160px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
                 gap: 16,
               }}
             >

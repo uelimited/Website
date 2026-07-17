@@ -52,7 +52,8 @@ export function HeroVideo() {
 
           {/* Live badge, top-right */}
           <div className="ue-hero-v2__badge" aria-hidden>
-            <span className="ue-hero-v2__live" /> Live site — {YEARS_IN_PRACTICE}+ yrs
+            <span className="ue-hero-v2__live" /> Live site —{" "}
+            {YEARS_IN_PRACTICE}+ yrs
           </div>
 
           {/* Overlay caption — bottom-left, headline-as-video-credit */}
@@ -68,8 +69,12 @@ export function HeroVideo() {
 
             <motion.h1
               className="ue-h1 ue-h1--huge ue-hero-v2__title"
-              initial={noAnim ? false : { opacity: 0, y: 40, filter: "blur(10px)" }}
-              animate={noAnim ? false : { opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={
+                noAnim ? false : { opacity: 0, y: 40, filter: "blur(10px)" }
+              }
+              animate={
+                noAnim ? false : { opacity: 1, y: 0, filter: "blur(0px)" }
+              }
               transition={{ duration: 1.1, delay: 0.6, ease }}
             >
               {HERO.title}
@@ -107,7 +112,6 @@ export function HeroVideo() {
             </motion.div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );
@@ -136,7 +140,8 @@ function HeroFallback() {
           {[0, 60, 120, 180, 240, 300].map((a) => (
             <line
               key={a}
-              x1={860} y1={340}
+              x1={860}
+              y1={340}
               x2={860 + 80 * Math.cos((a * Math.PI) / 180)}
               y2={340 + 80 * Math.sin((a * Math.PI) / 180)}
               stroke="rgba(255,255,255,0.16)"

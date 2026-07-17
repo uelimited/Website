@@ -160,6 +160,12 @@ export function ServicesScroll() {
                       transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
                     }}
                   >
+                    {/* Deliberate raw <img>, not next/image: this is a
+                        decorative crossfading Ken-Burns background layer
+                        keyed per-discipline inside AnimatePresence. next/image's
+                        `fill` layout fights the parent's scale animation, so a
+                        plain <img> (styled by .ue-svc-scroll__bg img) is used. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={current.images[0]}
                       alt={current.name}

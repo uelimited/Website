@@ -47,7 +47,9 @@ export default function ContactPage() {
       "",
       `— Sent from ${FIRM.website} · ${ref}`,
     ];
-    const bodyText = body.filter((line): line is string => line !== null).join("\n");
+    const bodyText = body
+      .filter((line): line is string => line !== null)
+      .join("\n");
 
     setReference(ref);
     setSent(true);
@@ -60,10 +62,12 @@ export default function ContactPage() {
     <section className="ue-section">
       <div className="ue-container">
         <p className="ue-eyebrow">Contact</p>
-        <h1 className="ue-h1" style={{ maxWidth: "12ch" }}>Get in touch.</h1>
+        <h1 className="ue-h1" style={{ maxWidth: "12ch" }}>
+          Get in touch.
+        </h1>
         <p className="ue-lead" style={{ marginTop: 32 }}>
-          Project enquiry, partnership, or a general question — drop us a
-          note and the right person will respond within two business days.
+          Project enquiry, partnership, or a general question — drop us a note
+          and the right person will respond within two business days.
         </p>
 
         <div
@@ -122,7 +126,10 @@ export default function ContactPage() {
                     htmlFor="phone"
                     className="text-[13px] text-[color:var(--ink-700)]"
                   >
-                    Phone <span className="text-[color:var(--fg-muted)]">(optional)</span>
+                    Phone{" "}
+                    <span className="text-[color:var(--fg-muted)]">
+                      (optional)
+                    </span>
                   </Label>
                   <Input
                     id="phone"
@@ -141,16 +148,24 @@ export default function ContactPage() {
                   onValueChange={(value) => setTopic(value ?? topic)}
                 >
                   <SelectTrigger
-                    className={fieldInputClass + " w-full data-[size=default]:h-12"}
+                    className={
+                      fieldInputClass + " w-full data-[size=default]:h-12"
+                    }
                   >
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Project enquiry">Project enquiry</SelectItem>
+                    <SelectItem value="Project enquiry">
+                      Project enquiry
+                    </SelectItem>
                     <SelectItem value="Partnership">Partnership</SelectItem>
                     <SelectItem value="Careers">Careers</SelectItem>
-                    <SelectItem value="Media or press">Media or press</SelectItem>
-                    <SelectItem value="General question">General question</SelectItem>
+                    <SelectItem value="Media or press">
+                      Media or press
+                    </SelectItem>
+                    <SelectItem value="General question">
+                      General question
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -189,7 +204,9 @@ export default function ContactPage() {
                 background: "var(--paper-soft)",
               }}
             >
-              <div className="ue-chip ue-chip--accent">Draft ready · {reference}</div>
+              <div className="ue-chip ue-chip--accent">
+                Draft ready · {reference}
+              </div>
               <h3
                 style={{
                   fontFamily: "var(--font-display)",
@@ -201,9 +218,16 @@ export default function ContactPage() {
               >
                 Your message is ready to send.
               </h3>
-              <p style={{ color: "var(--ink-500)", margin: 0, fontSize: 15, lineHeight: 1.55 }}>
-                A pre-filled email to the team is ready — just press
-                send in your mail app. Prefer to write directly?{" "}
+              <p
+                style={{
+                  color: "var(--ink-500)",
+                  margin: 0,
+                  fontSize: 15,
+                  lineHeight: 1.55,
+                }}
+              >
+                A pre-filled email to the team is ready — just press send in
+                your mail app. Prefer to write directly?{" "}
                 <a
                   href={`mailto:${FIRM.contactEmail}`}
                   style={{ color: "var(--accent-500)" }}
@@ -217,15 +241,12 @@ export default function ContactPage() {
 
           <aside>
             <div style={{ borderTop: "1px solid var(--border-color)" }}>
-              <ContactItem label={FIRM.headquarters.label} value={FIRM.headquarters.address} />
               <ContactItem
-                label="Email"
-                value={FIRM.contactEmail}
+                label={FIRM.headquarters.label}
+                value={FIRM.headquarters.address}
               />
-              <ContactItem
-                label="Phone"
-                value={FIRM.headquarters.phone}
-              />
+              <ContactItem label="Email" value={FIRM.contactEmail} />
+              <ContactItem label="Phone" value={FIRM.headquarters.phone} />
               <ContactItem label="Hours" value={FIRM.hours} />
             </div>
           </aside>
@@ -243,7 +264,9 @@ function ContactItem({ label, value }: { label: string; value: string }) {
         borderBottom: "1px solid var(--border-color)",
       }}
     >
-      <div style={{ fontSize: 13, color: "var(--fg-muted)", marginBottom: 8 }}>{label}</div>
+      <div style={{ fontSize: 13, color: "var(--fg-muted)", marginBottom: 8 }}>
+        {label}
+      </div>
       <div
         style={{
           whiteSpace: "pre-line",

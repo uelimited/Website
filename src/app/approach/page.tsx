@@ -16,8 +16,16 @@ export const metadata: Metadata = {
 // asking for nine sections of specification-grade reading.
 const APPROACH_STATS = [
   { n: "9", l: "Layers of discipline, design-build to vendor ecosystem" },
-  { n: "35", unit: "%", l: "Schedule compression vs bid-build, at the high end" },
-  { n: "98", unit: "%", l: "First-inspection test acceptance across QA/QC audits" },
+  {
+    n: "35",
+    unit: "%",
+    l: "Schedule compression vs bid-build, at the high end",
+  },
+  {
+    n: "98",
+    unit: "%",
+    l: "First-inspection test acceptance across QA/QC audits",
+  },
 ];
 
 const SECTIONS = [
@@ -151,7 +159,10 @@ const SECTIONS = [
       "Long-standing manufacturing partnerships extend to AHU and Air Washer Unit fabrication (in-house since 2005), giving the firm schedule control on the largest single line item in most HVAC projects. ₹300+ Cr annual procurement budget; ₹400+ Cr banking credit limit for working capital depth.",
     ],
     tiles: [
-      { k: "OEM partners", v: "Carrier · Trane · Vertiv · Schneider · Siemens · ABB · Honeywell" },
+      {
+        k: "OEM partners",
+        v: "Carrier · Trane · Vertiv · Schneider · Siemens · ABB · Honeywell",
+      },
       { k: "Procurement budget", v: "₹300+ Cr / year" },
       { k: "Credit limit", v: "₹400+ Cr" },
       { k: "In-house mfg", v: "AHU + AWU since 2005" },
@@ -169,10 +180,10 @@ export default function ApproachPage() {
             How it&apos;s engineered. How it&apos;s delivered.
           </h1>
           <p className="ue-lead" style={{ marginTop: 32, maxWidth: "62ch" }}>
-            Nine layers of discipline — from design-build contracting and
-            BIM coordination through project controls, commissioning, QA,
-            safety, sustainability and the vendor ecosystem behind every
-            mandate. None of them are accidental.
+            Nine layers of discipline — from design-build contracting and BIM
+            coordination through project controls, commissioning, QA, safety,
+            sustainability and the vendor ecosystem behind every mandate. None
+            of them are accidental.
           </p>
           <hr className="ue-rule" style={{ margin: "56px 0 48px" }} />
           <StatsGrid items={APPROACH_STATS} />
@@ -184,129 +195,131 @@ export default function ApproachPage() {
           <div style={{ borderTop: "1px solid var(--border-color)" }}>
             {SECTIONS.map((s) => (
               <Fragment key={s.num}>
-              <article
-                style={{
-                  padding: "64px 0",
-                  borderBottom: "1px solid var(--border-color)",
-                }}
-              >
-                <div className="grid md:grid-cols-[160px_minmax(0,1fr)] gap-8 md:gap-12 items-start">
+                <article
+                  style={{
+                    padding: "64px 0",
+                    borderBottom: "1px solid var(--border-color)",
+                  }}
+                >
+                  <div className="grid md:grid-cols-[160px_minmax(0,1fr)] gap-8 md:gap-12 items-start">
+                    <div
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: 13,
+                        color: "var(--fg-muted)",
+                      }}
+                    >
+                      {s.num}
+                    </div>
+                    <div>
+                      <p
+                        className="ue-eyebrow"
+                        style={{ color: "var(--accent-500)" }}
+                      >
+                        {s.eyebrow}
+                      </p>
+                      <h2
+                        style={{
+                          marginTop: 8,
+                          fontFamily: "var(--font-display)",
+                          fontWeight: 500,
+                          fontSize: 36,
+                          letterSpacing: "-0.022em",
+                          lineHeight: 1.1,
+                          color: "var(--ink-950)",
+                          maxWidth: "20ch",
+                        }}
+                      >
+                        {s.title}.
+                      </h2>
+                      <div
+                        style={{
+                          marginTop: 24,
+                          display: "grid",
+                          gridTemplateColumns:
+                            "minmax(0, 1.4fr) minmax(0, 1fr)",
+                          gap: 32,
+                        }}
+                        className="md:grid"
+                      >
+                        <div>
+                          {s.paragraphs.map((p, i) => (
+                            <p
+                              key={i}
+                              style={{
+                                fontSize: 17,
+                                lineHeight: 1.6,
+                                color: "var(--ink-700)",
+                                marginTop: i > 0 ? 18 : 0,
+                                marginBottom: 0,
+                              }}
+                            >
+                              {p}
+                            </p>
+                          ))}
+                        </div>
+                        <dl
+                          style={{
+                            margin: 0,
+                            borderTop: "1px solid var(--border-color)",
+                            alignSelf: "start",
+                          }}
+                        >
+                          {s.tiles.map((t) => (
+                            <div
+                              key={t.k}
+                              style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "baseline",
+                                padding: "10px 0",
+                                borderBottom: "1px solid var(--border-color)",
+                                fontFamily: "var(--font-mono)",
+                                fontSize: 12,
+                                gap: 16,
+                              }}
+                            >
+                              <dt style={{ color: "var(--fg-muted)" }}>
+                                {t.k}
+                              </dt>
+                              <dd
+                                style={{
+                                  margin: 0,
+                                  color: "var(--ink-950)",
+                                  textAlign: "right",
+                                }}
+                              >
+                                {t.v}
+                              </dd>
+                            </div>
+                          ))}
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                {s.num === "05" && (
                   <div
                     style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: 13,
-                      color: "var(--fg-muted)",
+                      padding: "72px 0",
+                      borderBottom: "1px solid var(--border-color)",
                     }}
                   >
-                    {s.num}
-                  </div>
-                  <div>
                     <p
                       className="ue-eyebrow"
                       style={{ color: "var(--accent-500)" }}
                     >
-                      {s.eyebrow}
+                      On site
                     </p>
-                    <h2
-                      style={{
-                        marginTop: 8,
-                        fontFamily: "var(--font-display)",
-                        fontWeight: 500,
-                        fontSize: 36,
-                        letterSpacing: "-0.022em",
-                        lineHeight: 1.1,
-                        color: "var(--ink-950)",
-                        maxWidth: "20ch",
-                      }}
-                    >
-                      {s.title}.
-                    </h2>
-                    <div
-                      style={{
-                        marginTop: 24,
-                        display: "grid",
-                        gridTemplateColumns:
-                          "minmax(0, 1.4fr) minmax(0, 1fr)",
-                        gap: 32,
-                      }}
-                      className="md:grid"
-                    >
-                      <div>
-                        {s.paragraphs.map((p, i) => (
-                          <p
-                            key={i}
-                            style={{
-                              fontSize: 17,
-                              lineHeight: 1.6,
-                              color: "var(--ink-700)",
-                              marginTop: i > 0 ? 18 : 0,
-                              marginBottom: 0,
-                            }}
-                          >
-                            {p}
-                          </p>
-                        ))}
+                    <div className="ue-stat" style={{ marginTop: 16 }}>
+                      <div className="n">Zero</div>
+                      <div className="l" style={{ maxWidth: "40ch" }}>
+                        Fatalities in the last five years, across 5M+ safe
+                        man-hours logged in FY 24-25 alone.
                       </div>
-                      <dl
-                        style={{
-                          margin: 0,
-                          borderTop: "1px solid var(--border-color)",
-                          alignSelf: "start",
-                        }}
-                      >
-                        {s.tiles.map((t) => (
-                          <div
-                            key={t.k}
-                            style={{
-                              display: "flex",
-                              justifyContent: "space-between",
-                              alignItems: "baseline",
-                              padding: "10px 0",
-                              borderBottom: "1px solid var(--border-color)",
-                              fontFamily: "var(--font-mono)",
-                              fontSize: 12,
-                              gap: 16,
-                            }}
-                          >
-                            <dt style={{ color: "var(--fg-muted)" }}>{t.k}</dt>
-                            <dd
-                              style={{
-                                margin: 0,
-                                color: "var(--ink-950)",
-                                textAlign: "right",
-                              }}
-                            >
-                              {t.v}
-                            </dd>
-                          </div>
-                        ))}
-                      </dl>
                     </div>
                   </div>
-                </div>
-              </article>
-              {s.num === "05" && (
-                <div
-                  style={{
-                    padding: "72px 0",
-                    borderBottom: "1px solid var(--border-color)",
-                  }}
-                >
-                  <p
-                    className="ue-eyebrow"
-                    style={{ color: "var(--accent-500)" }}
-                  >
-                    On site
-                  </p>
-                  <div className="ue-stat" style={{ marginTop: 16 }}>
-                    <div className="n">Zero</div>
-                    <div className="l" style={{ maxWidth: "40ch" }}>
-                      Fatalities in the last five years, across 5M+ safe
-                      man-hours logged in FY 24-25 alone.
-                    </div>
-                  </div>
-                </div>
-              )}
+                )}
               </Fragment>
             ))}
           </div>

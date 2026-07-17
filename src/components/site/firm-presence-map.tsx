@@ -47,7 +47,9 @@ export function FirmPresenceMap({
       const pos = o.state ? OFFICE_STATE_POSITION[o.state] : undefined;
       return pos ? { office: o, pos } : null;
     })
-    .filter((m): m is { office: Office; pos: { x: number; y: number } } => Boolean(m));
+    .filter((m): m is { office: Office; pos: { x: number; y: number } } =>
+      Boolean(m),
+    );
 
   return (
     <div className="ue-firm-map__layout">
@@ -77,11 +79,18 @@ export function FirmPresenceMap({
                 viewport={{ once: true, margin: "-10%" }}
                 transition={{ duration: 0.5, delay: i * 0.08, ease: EASE }}
               >
-                {office.is_hq && <span className="ue-firm-map__marker-pulse" aria-hidden="true" />}
+                {office.is_hq && (
+                  <span
+                    className="ue-firm-map__marker-pulse"
+                    aria-hidden="true"
+                  />
+                )}
               </motion.span>
               <span className="ue-firm-map__marker-label">
                 {office.city}
-                {office.is_hq && <span className="ue-firm-map__marker-tag">HQ</span>}
+                {office.is_hq && (
+                  <span className="ue-firm-map__marker-tag">HQ</span>
+                )}
               </span>
             </li>
           ))}
@@ -96,14 +105,20 @@ export function FirmPresenceMap({
                 {o.is_hq ? "Headquarters" : "Regional office"}
               </span>
               <span className="ue-firm-map__office-city">{o.city}</span>
-              {o.state && <span className="ue-firm-map__office-state">{o.state}</span>}
-              {o.phone && <span className="ue-firm-map__office-phone">{o.phone}</span>}
+              {o.state && (
+                <span className="ue-firm-map__office-state">{o.state}</span>
+              )}
+              {o.phone && (
+                <span className="ue-firm-map__office-phone">{o.phone}</span>
+              )}
             </li>
           ))}
         </ul>
 
         <div className="ue-firm-map__states">
-          <p className="ue-firm-map__states-label">States executed · {statesExecuted.length}</p>
+          <p className="ue-firm-map__states-label">
+            States executed · {statesExecuted.length}
+          </p>
           <div className="ue-firm-map__chips">
             {statesExecuted.map((s) => (
               <span key={s} className="ue-chip ue-firm-map__chip">
@@ -117,7 +132,10 @@ export function FirmPresenceMap({
           <p className="ue-firm-map__states-label">Beyond India</p>
           <div className="ue-firm-map__chips">
             {NEIGHBOURS.map((n) => (
-              <span key={n} className="ue-chip ue-firm-map__chip ue-firm-map__chip--accent">
+              <span
+                key={n}
+                className="ue-chip ue-firm-map__chip ue-firm-map__chip--accent"
+              >
                 {n}
               </span>
             ))}

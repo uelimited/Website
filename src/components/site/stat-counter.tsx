@@ -18,7 +18,13 @@ type StatItem = {
  * Prefix ("₹") shares the number's font, size and colour — suffix units
  * ("Cr", "days") stay small and muted, matching typical financial setting.
  */
-export function StatsGrid({ items, children }: { items: StatItem[]; children?: ReactNode }) {
+export function StatsGrid({
+  items,
+  children,
+}: {
+  items: StatItem[];
+  children?: ReactNode;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-15%" });
   const prefersReduced = useReducedMotion();
@@ -26,7 +32,14 @@ export function StatsGrid({ items, children }: { items: StatItem[]; children?: R
   return (
     <div ref={ref} className="ue-overview__grid">
       {items.map((s) => (
-        <StatCounter key={s.l} n={s.n} unit={s.unit} l={s.l} start={inView} reduce={!!prefersReduced} />
+        <StatCounter
+          key={s.l}
+          n={s.n}
+          unit={s.unit}
+          l={s.l}
+          start={inView}
+          reduce={!!prefersReduced}
+        />
       ))}
       {children}
     </div>

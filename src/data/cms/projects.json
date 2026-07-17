@@ -144,10 +144,7 @@
       "Delivered as a high-performance government office complex with IGBC Gold certification, with sustainability embedded into the mechanical and fire systems from design through execution.",
       "A 16,000 TR high-efficiency HVAC plant was installed with optimised air distribution across 5,00,000 sqm of ducting and 1,00,000 metres of piping. The system uses energy-efficient chillers, optimised airflow balancing, reduced pumping losses and intelligent zoning to improve lifecycle performance while supporting long-term carbon reduction targets."
     ],
-    "scope_tags": [
-      "HVAC",
-      "Firefighting"
-    ],
+    "scope_tags": ["HVAC", "Firefighting"],
     "status": "completed",
     "featured": true,
     "landmark_order": 3,
@@ -172,9 +169,7 @@
         "v": "IGBC Gold"
       }
     ],
-    "certifications": [
-      "IGBC Gold"
-    ],
+    "certifications": ["IGBC Gold"],
     "execution_snapshots": [
       {
         "title": "Sustainable Engineering",
@@ -206,12 +201,7 @@
       "The project required full-scale MEPF delivery in a developing, logistically constrained location. Unique Engineers mobilised manpower, plant, and supply chains to maintain schedule discipline under compressed timelines.",
       "Structured material planning and parallel work fronts enabled seamless execution, demonstrating the firm's ability to deliver high-value infrastructure in geographically challenging environments."
     ],
-    "scope_tags": [
-      "HVAC",
-      "Firefighting",
-      "Plumbing",
-      "Electrical"
-    ],
+    "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical"],
     "status": "completed",
     "featured": true,
     "landmark_order": 4,
@@ -264,12 +254,7 @@
       "The campus incorporated energy-efficient HVAC technologies including thermal energy storage for peak-load optimisation, brine chillers for enhanced heat transfer efficiency, geothermal water-cooled VRV systems, and advanced evaporative cooling strategies.",
       "An Integrated Building Management System (IBMS) was implemented to monitor and control HVAC operations, energy consumption, and system performance in real time. This ensured centralised visibility, optimised load management, and sustained energy efficiency across academic and residential blocks. The combined mechanical and digital infrastructure supports long-term carbon reduction while maintaining occupant comfort and operational reliability."
     ],
-    "scope_tags": [
-      "HVAC",
-      "IBMS",
-      "Thermal storage",
-      "Geothermal VRV"
-    ],
+    "scope_tags": ["HVAC", "IBMS", "Thermal storage", "Geothermal VRV"],
     "status": "completed",
     "featured": true,
     "landmark_order": 5,
@@ -322,13 +307,7 @@
       "Hydronics and controls scope includes 29,250 TR of installed cooling, primary-secondary distribution, dual 5.05 MW SS316 plate heat exchangers for process cooling water, and a unified BMS + SCADA + historian. 1,400+ sensors and instruments across the facility tie into the controls plane.",
       "Air-side delivery includes 13,656 fan filter units, 217 air-handling units and 130 make-up air units. The project is being executed against the SAEL PMO's tier-1 commissioning protocol with weekly earned-value reporting and a 3-week rolling look-ahead."
     ],
-    "scope_tags": [
-      "HVAC",
-      "Cleanroom",
-      "PCW",
-      "BMS",
-      "SCADA"
-    ],
+    "scope_tags": ["HVAC", "Cleanroom", "PCW", "BMS", "SCADA"],
     "status": "active",
     "featured": true,
     "hero_image_url": null,
@@ -378,12 +357,7 @@
       "Construction scope covers civil and MEPF execution, chilled-water distribution across multiple kilometres, energy transfer stations at consumer buildings, TAB and operational commissioning. Long-term O&M under discussion.",
       "30,000 TR of central-plant capacity, multi-kilometre CHW distribution, 5+ ETS at consumer buildings — all delivered under a single accountable design-build contract."
     ],
-    "scope_tags": [
-      "District Cooling",
-      "HVAC",
-      "Civil",
-      "BMS"
-    ],
+    "scope_tags": ["District Cooling", "HVAC", "Civil", "BMS"],
     "status": "planning",
     "featured": false,
     "hero_image_url": null,
@@ -425,11 +399,7 @@
       "Design-build scope covers underground piping, electrical infrastructure, and civil excavation — engineered and executed under one contract, supporting the upcoming fab build.",
       "Currently executing at approximately ₹50 Cr, with scope expected to expand toward ₹500 Cr as further packages are awarded."
     ],
-    "scope_tags": [
-      "Underground Piping",
-      "Electrical",
-      "Civil"
-    ],
+    "scope_tags": ["Underground Piping", "Electrical", "Civil"],
     "status": "active",
     "featured": false,
     "accent": "blocks",
@@ -468,12 +438,7 @@
       "Industrial MEPF services delivered for an electric-vehicle manufacturing facility — automotive electric-vehicle manufacturing for the JSW Group.",
       "Scope includes full MEPF and ISO 7/8 battery-assembly cleanroom zones within the broader manufacturing facility. PCW distribution to battery-line equipment with plate heat exchanger interface to primary cooling. Compressed-air distribution for battery-line pneumatics and tooling."
     ],
-    "scope_tags": [
-      "MEPF",
-      "Cleanroom",
-      "PCW",
-      "CDA"
-    ],
+    "scope_tags": ["MEPF", "Cleanroom", "PCW", "CDA"],
     "status": "active",
     "featured": false,
     "accent": "current",
@@ -513,9 +478,7 @@
       "Testing and commissioning included full T&C and performance verification per the operator's commissioning protocol, NABL-calibrated instrumentation and witnessed records.",
       "Coordination model: direct interface with the STT project team, weekly site reviews, single-window accountability across the HVAC scope."
     ],
-    "scope_tags": [
-      "HVAC"
-    ],
+    "scope_tags": ["HVAC"],
     "status": "completed",
     "featured": false,
     "accent": "fan",
@@ -601,11 +564,7 @@
       "Mechanical scope: desiccant dehumidifiers (~2,700 CFM, 42 kW), fans, CW piping (Ø80mm-Ø450mm), 33+ VRF indoor units, 26 stratified tanks, 24 CW pumps, GI ductwork, 110+ motorised damper actuators.",
       "Seismic supports: 900+ Mason spring isolators, seismic snubbers, flexible connectors, cable/pipe bracing — NV5-compliant seismic design across MEP services."
     ],
-    "scope_tags": [
-      "Mechanical",
-      "Seismic",
-      "HSD Fuel"
-    ],
+    "scope_tags": ["Mechanical", "Seismic", "HSD Fuel"],
     "status": "completed",
     "featured": false,
     "accent": "fan",

@@ -118,7 +118,12 @@ export function ChipRow({
     <div
       role="group"
       aria-label={label}
-      style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 8,
+        alignItems: "center",
+      }}
     >
       <span
         style={{
@@ -239,7 +244,12 @@ export function LedgerRow({
             <ArrowUpRight
               className="ue-ledger-row__arrow"
               aria-hidden
-              style={{ width: 14, height: 14, color: "var(--accent-500)", flexShrink: 0 }}
+              style={{
+                width: 14,
+                height: 14,
+                color: "var(--accent-500)",
+                flexShrink: 0,
+              }}
             />
           )}
         </div>
@@ -314,7 +324,9 @@ export function LedgerRow({
           {entry.value_display}
         </div>
         {entry.year_display && (
-          <div style={{ marginTop: 3, fontSize: 11.5, color: "var(--ink-400)" }}>
+          <div
+            style={{ marginTop: 3, fontSize: 11.5, color: "var(--ink-400)" }}
+          >
             {entry.year_display}
           </div>
         )}
@@ -452,7 +464,11 @@ export function LedgerCardItem({
 
   if (href) {
     return (
-      <Link href={href} role="listitem" className="ue-ledger-card ue-ledger-card--link">
+      <Link
+        href={href}
+        role="listitem"
+        className="ue-ledger-card ue-ledger-card--link"
+      >
         {body}
       </Link>
     );
@@ -479,7 +495,9 @@ export function FeaturedCardView({ card }: { card: FeaturedCard }) {
             : "var(--ink-100)",
         }}
       >
-        {!card.heroImageUrl && <span className="ue-work-card__cover-label">Photography</span>}
+        {!card.heroImageUrl && (
+          <span className="ue-work-card__cover-label">Photography</span>
+        )}
       </div>
       <div className="ue-work-card__body">
         <div className="ue-work-card__meta">

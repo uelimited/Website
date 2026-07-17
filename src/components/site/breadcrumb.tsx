@@ -41,7 +41,9 @@ export function Breadcrumb({ items }: { items: Crumb[] }) {
                 {item.label}
               </Link>
             ) : (
-              <span style={{ color: isLast ? "var(--ink-950)" : "var(--fg-muted)" }}>
+              <span
+                style={{ color: isLast ? "var(--ink-950)" : "var(--fg-muted)" }}
+              >
                 {item.label}
               </span>
             )}

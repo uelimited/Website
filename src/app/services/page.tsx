@@ -1,4 +1,8 @@
-import { getAllServices, getLedgerStats, getLedgerStatsForService } from "@/lib/cms";
+import {
+  getAllServices,
+  getLedgerStats,
+  getLedgerStatsForService,
+} from "@/lib/cms";
 import {
   ServicesExplorer,
   type ExplorerService,
@@ -51,8 +55,8 @@ export default function ServicesIndexPage() {
           <p className="ue-lead" style={{ marginTop: 32, maxWidth: "58ch" }}>
             Unique Engineers designs, builds and commissions every discipline
             in-house — the engineers who model the load are the ones on site
-            when it&apos;s tested. HVAC has led since the firm&apos;s first
-            job in 1990; the other seven grew up around it.
+            when it&apos;s tested. HVAC has led since the firm&apos;s first job
+            in 1990; the other seven grew up around it.
           </p>
           <p
             style={{
@@ -63,8 +67,8 @@ export default function ServicesIndexPage() {
               color: "var(--ink-500)",
             }}
           >
-            {firmStats.count} projects · {firmStats.total_display} in
-            cumulative contract value across the disciplines below
+            {firmStats.count} projects · {firmStats.total_display} in cumulative
+            contract value across the disciplines below
           </p>
 
           <ServicesExplorer services={services} />

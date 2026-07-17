@@ -1,17 +1,73 @@
 [
-  { "project_id": "prj-foxconn", "sector_id": "sec-semiconductor", "is_primary": true },
-  { "project_id": "prj-ingka", "sector_id": "sec-corporate-retail", "is_primary": true },
-  { "project_id": "prj-ingka", "sector_id": "sec-hospitality", "is_primary": false },
-  { "project_id": "prj-central-secretariat", "sector_id": "sec-corporate-retail", "is_primary": true },
+  {
+    "project_id": "prj-foxconn",
+    "sector_id": "sec-semiconductor",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-ingka",
+    "sector_id": "sec-corporate-retail",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-ingka",
+    "sector_id": "sec-hospitality",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-central-secretariat",
+    "sector_id": "sec-corporate-retail",
+    "is_primary": true
+  },
   { "project_id": "prj-mopa", "sector_id": "sec-airport", "is_primary": true },
-  { "project_id": "prj-nalanda", "sector_id": "sec-education", "is_primary": true },
-  { "project_id": "prj-sael", "sector_id": "sec-semiconductor", "is_primary": true },
-  { "project_id": "prj-sael", "sector_id": "sec-industrial", "is_primary": false },
-  { "project_id": "prj-tabreed", "sector_id": "sec-industrial", "is_primary": true },
-  { "project_id": "prj-tata-dholera", "sector_id": "sec-semiconductor", "is_primary": true },
-  { "project_id": "prj-jsw-ev", "sector_id": "sec-industrial", "is_primary": true },
-  { "project_id": "prj-jsw-ev", "sector_id": "sec-semiconductor", "is_primary": false },
-  { "project_id": "prj-stt", "sector_id": "sec-data-centre", "is_primary": true },
-  { "project_id": "prj-ctrls", "sector_id": "sec-data-centre", "is_primary": true },
-  { "project_id": "prj-digital-edge", "sector_id": "sec-data-centre", "is_primary": true }
+  {
+    "project_id": "prj-nalanda",
+    "sector_id": "sec-education",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-sael",
+    "sector_id": "sec-semiconductor",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-sael",
+    "sector_id": "sec-industrial",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-tabreed",
+    "sector_id": "sec-industrial",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-tata-dholera",
+    "sector_id": "sec-semiconductor",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-jsw-ev",
+    "sector_id": "sec-industrial",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-jsw-ev",
+    "sector_id": "sec-semiconductor",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-stt",
+    "sector_id": "sec-data-centre",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-ctrls",
+    "sector_id": "sec-data-centre",
+    "is_primary": true
+  },
+  {
+    "project_id": "prj-digital-edge",
+    "sector_id": "sec-data-centre",
+    "is_primary": true
+  }
 ]

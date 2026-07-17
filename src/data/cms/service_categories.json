@@ -2139,10 +2139,7 @@
         ]
       }
     ],
-    "related_category_ids": [
-      "cat-bms-fire-alarm-pa",
-      "cat-bms-scada-head-end"
-    ],
+    "related_category_ids": ["cat-bms-fire-alarm-pa", "cat-bms-scada-head-end"],
     "sort_order": 4,
     "published": true
   },
@@ -2298,10 +2295,7 @@
         ]
       }
     ],
-    "related_category_ids": [
-      "cat-om-preventive",
-      "cat-om-rapid-response"
-    ],
+    "related_category_ids": ["cat-om-preventive", "cat-om-rapid-response"],
     "sort_order": 1,
     "published": true
   },
@@ -2509,10 +2503,7 @@
         ]
       }
     ],
-    "related_category_ids": [
-      "cat-om-fm-247",
-      "cat-om-asset-lifecycle"
-    ],
+    "related_category_ids": ["cat-om-fm-247", "cat-om-asset-lifecycle"],
     "sort_order": 5,
     "published": true
   }

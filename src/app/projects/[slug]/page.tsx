@@ -2,10 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  getAllProjects,
-  getProjectWithContext,
-} from "@/lib/cms";
+import { getAllProjects, getProjectWithContext } from "@/lib/cms";
 import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
 import type { Metadata } from "next";
@@ -25,9 +22,7 @@ export async function generateMetadata({
   const data = getProjectWithContext(slug);
   if (!data) return {};
   return {
-    title:
-      data.project.seo_title ??
-      `${data.project.name} — Unique Engineers`,
+    title: data.project.seo_title ?? `${data.project.name} — Unique Engineers`,
     description: data.project.seo_description ?? data.project.summary,
   };
 }
@@ -103,7 +98,10 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* Breadcrumb + metadata row */}
-      <section className="ue-section" style={{ paddingTop: 40, paddingBottom: 48 }}>
+      <section
+        className="ue-section"
+        style={{ paddingTop: 40, paddingBottom: 48 }}
+      >
         <div className="ue-container">
           <Breadcrumb
             items={[
@@ -127,7 +125,10 @@ export default async function ProjectDetailPage({
               gap: 24,
             }}
           >
-            <Meta label="Client" value={client?.name ?? project.client_name_display ?? "—"} />
+            <Meta
+              label="Client"
+              value={client?.name ?? project.client_name_display ?? "—"}
+            />
             <Meta
               label="Location"
               value={[project.location_city, project.location_state]
@@ -278,99 +279,102 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* Execution snapshots */}
-      {project.execution_snapshots && project.execution_snapshots.length > 0 && (
-        <section
-          className="ue-section"
-          style={{
-            background: "var(--paper-soft)",
-            borderTop: "1px solid var(--border-color)",
-            borderBottom: "1px solid var(--border-color)",
-          }}
-        >
-          <div className="ue-container">
-            <header style={{ marginBottom: 48 }}>
-              <p className="ue-eyebrow">Execution snapshots</p>
-              <h2
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 500,
-                  fontSize: 40,
-                  letterSpacing: "-0.022em",
-                  lineHeight: 1.1,
-                  margin: "8px 0 0",
-                  color: "var(--ink-950)",
-                  maxWidth: "20ch",
-                }}
-              >
-                How the work was delivered.
-              </h2>
-            </header>
-            <div style={{ display: "flex", flexDirection: "column", gap: 64 }}>
-              {project.execution_snapshots.map((s, i) => (
-                <article
-                  key={i}
-                  className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 md:gap-16 items-start"
+      {project.execution_snapshots &&
+        project.execution_snapshots.length > 0 && (
+          <section
+            className="ue-section"
+            style={{
+              background: "var(--paper-soft)",
+              borderTop: "1px solid var(--border-color)",
+              borderBottom: "1px solid var(--border-color)",
+            }}
+          >
+            <div className="ue-container">
+              <header style={{ marginBottom: 48 }}>
+                <p className="ue-eyebrow">Execution snapshots</p>
+                <h2
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontWeight: 500,
+                    fontSize: 40,
+                    letterSpacing: "-0.022em",
+                    lineHeight: 1.1,
+                    margin: "8px 0 0",
+                    color: "var(--ink-950)",
+                    maxWidth: "20ch",
+                  }}
                 >
-                  <div>
-                    {s.image_url ? (
-                      <div
-                        style={{
-                          aspectRatio: "4 / 3",
-                          background: `url(${s.image_url}) center/cover no-repeat`,
-                          borderRadius: 12,
-                          border: "1px solid var(--border-color)",
-                        }}
-                      />
-                    ) : (
-                      <div
-                        style={{
-                          aspectRatio: "4 / 3",
-                          background: "var(--ink-100)",
-                          borderRadius: 12,
-                        }}
-                      />
-                    )}
-                  </div>
-                  <div>
-                    <p className="ue-eyebrow">
-                      {String(i + 1).padStart(2, "0")} · {s.title}
-                    </p>
-                    <h3
-                      style={{
-                        marginTop: 8,
-                        fontFamily: "var(--font-display)",
-                        fontWeight: 500,
-                        fontSize: 28,
-                        letterSpacing: "-0.018em",
-                        lineHeight: 1.15,
-                        color: "var(--ink-950)",
-                      }}
-                    >
-                      {s.title}.
-                    </h3>
-                    <div style={{ marginTop: 16 }}>
-                      {s.body.map((p, j) => (
-                        <p
-                          key={j}
+                  How the work was delivered.
+                </h2>
+              </header>
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: 64 }}
+              >
+                {project.execution_snapshots.map((s, i) => (
+                  <article
+                    key={i}
+                    className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 md:gap-16 items-start"
+                  >
+                    <div>
+                      {s.image_url ? (
+                        <div
                           style={{
-                            fontSize: 17,
-                            lineHeight: 1.6,
-                            color: "var(--ink-700)",
-                            marginTop: j > 0 ? 16 : 0,
-                            marginBottom: 0,
+                            aspectRatio: "4 / 3",
+                            background: `url(${s.image_url}) center/cover no-repeat`,
+                            borderRadius: 12,
+                            border: "1px solid var(--border-color)",
                           }}
-                        >
-                          {p}
-                        </p>
-                      ))}
+                        />
+                      ) : (
+                        <div
+                          style={{
+                            aspectRatio: "4 / 3",
+                            background: "var(--ink-100)",
+                            borderRadius: 12,
+                          }}
+                        />
+                      )}
                     </div>
-                  </div>
-                </article>
-              ))}
+                    <div>
+                      <p className="ue-eyebrow">
+                        {String(i + 1).padStart(2, "0")} · {s.title}
+                      </p>
+                      <h3
+                        style={{
+                          marginTop: 8,
+                          fontFamily: "var(--font-display)",
+                          fontWeight: 500,
+                          fontSize: 28,
+                          letterSpacing: "-0.018em",
+                          lineHeight: 1.15,
+                          color: "var(--ink-950)",
+                        }}
+                      >
+                        {s.title}.
+                      </h3>
+                      <div style={{ marginTop: 16 }}>
+                        {s.body.map((p, j) => (
+                          <p
+                            key={j}
+                            style={{
+                              fontSize: 17,
+                              lineHeight: 1.6,
+                              color: "var(--ink-700)",
+                              marginTop: j > 0 ? 16 : 0,
+                              marginBottom: 0,
+                            }}
+                          >
+                            {p}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
       {/* Disciplines & sectors — cross-link */}
       {(services.length > 0 || sectors.length > 0) && (

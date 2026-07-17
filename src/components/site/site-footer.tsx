@@ -8,8 +8,12 @@ export function SiteFooter() {
     <footer className="ue-footer">
       <div className="inner">
         <div>
-          <div className="wmbig"><Wordmark /></div>
-          <div className="wmsub">Design-build MEPF · since {FIRM.foundedYear}</div>
+          <div className="wmbig">
+            <Wordmark />
+          </div>
+          <div className="wmsub">
+            Design-build MEPF · since {FIRM.foundedYear}
+          </div>
           <p
             className="text-[color:var(--ink-500)] m-0"
             style={{ maxWidth: "38ch", fontSize: 14, lineHeight: 1.55 }}
@@ -31,11 +35,21 @@ export function SiteFooter() {
         <div>
           <h6>Firm</h6>
           <ul>
-            <li><Link href="/firm">The firm</Link></li>
-            <li><Link href="/careers">Why join us</Link></li>
-            <li><Link href="/work">Work</Link></li>
-            <li><Link href="/services">Capabilities</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li>
+              <Link href="/firm">The firm</Link>
+            </li>
+            <li>
+              <Link href="/careers">Why join us</Link>
+            </li>
+            <li>
+              <Link href="/work">Work</Link>
+            </li>
+            <li>
+              <Link href="/services">Capabilities</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
             <li>
               <a href={FIRM.linkedIn} target="_blank" rel="noreferrer">
                 LinkedIn
@@ -52,7 +66,9 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="bottom">
-        <span>© {year} {FIRM.legalName} · Since {FIRM.foundedYear}</span>
+        <span>
+          © {year} {FIRM.legalName} · Since {FIRM.foundedYear}
+        </span>
         <span>Privacy · Terms · Grievance</span>
       </div>
     </footer>

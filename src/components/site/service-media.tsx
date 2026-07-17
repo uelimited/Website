@@ -111,14 +111,21 @@ function BlocksMotif({ progress }: MotifProps) {
     <>
       {/* Ground rule */}
       <line
-        x1={120} x2={880} y1={820} y2={820}
-        stroke="rgba(255,255,255,0.3)" strokeWidth={1.5}
+        x1={120}
+        x2={880}
+        y1={820}
+        y2={820}
+        stroke="rgba(255,255,255,0.3)"
+        strokeWidth={1.5}
       />
       {/* Stacked blocks — always visible */}
       {blocks.map((b, i) => (
         <rect
           key={i}
-          x={b.x} y={b.y} width={b.w} height={b.h}
+          x={b.x}
+          y={b.y}
+          width={b.w}
+          height={b.h}
           rx={3}
           fill="rgba(59,111,224,0.06)"
           stroke="rgba(255,255,255,0.5)"
@@ -127,11 +134,18 @@ function BlocksMotif({ progress }: MotifProps) {
       ))}
       {/* Crane hoist: line from top + box that bobs with scroll */}
       <line
-        x1={700} x2={700} y1={160} y2={300}
-        stroke="rgba(255,255,255,0.45)" strokeWidth={1.5}
+        x1={700}
+        x2={700}
+        y1={160}
+        y2={300}
+        stroke="rgba(255,255,255,0.45)"
+        strokeWidth={1.5}
       />
       <motion.rect
-        x={680} width={40} height={14} rx={2}
+        x={680}
+        width={40}
+        height={14}
+        rx={2}
         fill="var(--accent-400)"
         style={{ y: hookY }}
       />
@@ -149,7 +163,9 @@ function FanMotif({ progress }: MotifProps) {
       {[280, 340, 400].map((r) => (
         <motion.circle
           key={r}
-          cx={500} cy={500} r={r}
+          cx={500}
+          cy={500}
+          r={r}
           fill="none"
           stroke="rgba(255,255,255,0.18)"
           strokeWidth={1}
@@ -188,22 +204,34 @@ function CurrentMotif({ progress }: MotifProps) {
     <>
       {/* Left rail */}
       <rect
-        x={160} y={280} width={60} height={440}
+        x={160}
+        y={280}
+        width={60}
+        height={440}
         rx={8}
-        stroke="rgba(255,255,255,0.5)" strokeWidth={2} fill="rgba(59,111,224,0.04)"
+        stroke="rgba(255,255,255,0.5)"
+        strokeWidth={2}
+        fill="rgba(59,111,224,0.04)"
       />
       {/* Right rail */}
       <rect
-        x={780} y={280} width={60} height={440}
+        x={780}
+        y={280}
+        width={60}
+        height={440}
         rx={8}
-        stroke="rgba(255,255,255,0.5)" strokeWidth={2} fill="rgba(59,111,224,0.04)"
+        stroke="rgba(255,255,255,0.5)"
+        strokeWidth={2}
+        fill="rgba(59,111,224,0.04)"
       />
       {/* Bus bars between rails — always visible */}
       {[0, 1, 2, 3, 4].map((i) => (
         <line
           key={`bar-${i}`}
-          x1={220} x2={780}
-          y1={350 + i * 75} y2={350 + i * 75}
+          x1={220}
+          x2={780}
+          y1={350 + i * 75}
+          y2={350 + i * 75}
           stroke="rgba(255,255,255,0.25)"
           strokeWidth={1.5}
         />
@@ -216,7 +244,13 @@ function CurrentMotif({ progress }: MotifProps) {
   );
 }
 
-function CurrentPulse({ i, progress }: { i: number; progress: MotionValue<number> }) {
+function CurrentPulse({
+  i,
+  progress,
+}: {
+  i: number;
+  progress: MotionValue<number>;
+}) {
   const cx = useTransform(progress, (v) => {
     const phase = (v * 1.6 + i * 0.23) % 1;
     return 220 + phase * 560;
@@ -255,8 +289,12 @@ function DropletsMotif({ progress }: MotifProps) {
       {drops.map((x) => (
         <line
           key={`t-${x}`}
-          x1={x} x2={x} y1={240} y2={360}
-          stroke="rgba(255,255,255,0.32)" strokeWidth={2}
+          x1={x}
+          x2={x}
+          y1={240}
+          y2={360}
+          stroke="rgba(255,255,255,0.32)"
+          strokeWidth={2}
         />
       ))}
       {drops.map((x, i) => (
@@ -264,14 +302,26 @@ function DropletsMotif({ progress }: MotifProps) {
       ))}
       {/* Reservoir line at bottom */}
       <line
-        x1={180} x2={820} y1={800} y2={800}
-        stroke="rgba(59,111,224,0.45)" strokeWidth={2}
+        x1={180}
+        x2={820}
+        y1={800}
+        y2={800}
+        stroke="rgba(59,111,224,0.45)"
+        strokeWidth={2}
       />
     </>
   );
 }
 
-function Droplet({ x, i, progress }: { x: number; i: number; progress: MotionValue<number> }) {
+function Droplet({
+  x,
+  i,
+  progress,
+}: {
+  x: number;
+  i: number;
+  progress: MotionValue<number>;
+}) {
   const cy = useTransform(progress, (v) => {
     const phase = (v * 1.4 + i * 0.17) % 1;
     return 360 + phase * 440;
@@ -284,7 +334,8 @@ function Droplet({ x, i, progress }: { x: number; i: number; progress: MotionVal
   });
   return (
     <motion.circle
-      cx={x} r={8}
+      cx={x}
+      r={8}
       fill="var(--accent-400)"
       style={{ cy, opacity }}
     />
@@ -296,20 +347,47 @@ function PulseMotif({ progress }: MotifProps) {
   return (
     <>
       {/* Cross-hair guides */}
-      <line x1={200} x2={800} y1={500} y2={500} stroke="rgba(255,255,255,0.08)" strokeWidth={1} />
-      <line x1={500} x2={500} y1={200} y2={800} stroke="rgba(255,255,255,0.08)" strokeWidth={1} />
+      <line
+        x1={200}
+        x2={800}
+        y1={500}
+        y2={500}
+        stroke="rgba(255,255,255,0.08)"
+        strokeWidth={1}
+      />
+      <line
+        x1={500}
+        x2={500}
+        y1={200}
+        y2={800}
+        stroke="rgba(255,255,255,0.08)"
+        strokeWidth={1}
+      />
       {/* Expanding rings driven by scroll — continuous loop */}
       {[0, 1, 2].map((i) => (
         <PulseRing key={i} i={i} progress={progress} />
       ))}
       {/* Core — always visible */}
       <circle cx={500} cy={500} r={26} fill="rgba(227,93,61,0.9)" />
-      <circle cx={500} cy={500} r={44} fill="none" stroke="rgba(227,93,61,0.5)" strokeWidth={2} />
+      <circle
+        cx={500}
+        cy={500}
+        r={44}
+        fill="none"
+        stroke="rgba(227,93,61,0.5)"
+        strokeWidth={2}
+      />
     </>
   );
 }
 
-function PulseRing({ i, progress }: { i: number; progress: MotionValue<number> }) {
+function PulseRing({
+  i,
+  progress,
+}: {
+  i: number;
+  progress: MotionValue<number>;
+}) {
   const scale = useTransform(progress, (v) => {
     const phase = (v * 1.3 + i * 0.33) % 1;
     return 0.3 + phase * 2.5;
@@ -320,7 +398,9 @@ function PulseRing({ i, progress }: { i: number; progress: MotionValue<number> }
   });
   return (
     <motion.circle
-      cx={500} cy={500} r={100}
+      cx={500}
+      cy={500}
+      r={100}
       fill="none"
       stroke="#E35D3D"
       strokeWidth={2}
@@ -348,8 +428,10 @@ function SunMotif({ progress }: MotifProps) {
           [0, 1, 2, 3].map((col) => (
             <g key={`${row}-${col}`}>
               <rect
-                x={col * 130} y={row * 60}
-                width={110} height={48}
+                x={col * 130}
+                y={row * 60}
+                width={110}
+                height={48}
                 rx={3}
                 fill="rgba(59,111,224,0.08)"
                 stroke="rgba(255,255,255,0.4)"
@@ -377,7 +459,11 @@ function SunMotif({ progress }: MotifProps) {
           fill="none"
           stroke="rgba(255,255,255,0.22)"
           strokeWidth={1.5}
-          style={{ scale: ringScale, opacity: ringOpacity, transformOrigin: "0px 0px" }}
+          style={{
+            scale: ringScale,
+            opacity: ringOpacity,
+            transformOrigin: "0px 0px",
+          }}
         />
         <circle r={74} fill="rgba(59,111,224,0.4)" />
         <circle r={48} fill="var(--accent-400)" />
@@ -404,10 +490,18 @@ function SunMotif({ progress }: MotifProps) {
 function GraphMotif({ progress }: MotifProps) {
   // Trend line is always fully drawn; a marker dot travels along it.
   const pts = [
-    [180, 720], [280, 640], [380, 680], [480, 560],
-    [580, 600], [680, 440], [780, 480], [820, 320],
+    [180, 720],
+    [280, 640],
+    [380, 680],
+    [480, 560],
+    [580, 600],
+    [680, 440],
+    [780, 480],
+    [820, 320],
   ] as const;
-  const d = pts.map(([x, y], i) => `${i === 0 ? "M" : "L"} ${x} ${y}`).join(" ");
+  const d = pts
+    .map(([x, y], i) => `${i === 0 ? "M" : "L"} ${x} ${y}`)
+    .join(" ");
   const markerCx = useTransform(progress, (v) => {
     const t = v * (pts.length - 1);
     const i = Math.min(pts.length - 2, Math.floor(t));
@@ -426,7 +520,8 @@ function GraphMotif({ progress }: MotifProps) {
       {[0, 1, 2, 3, 4].map((i) => (
         <line
           key={`h-${i}`}
-          x1={160} x2={840}
+          x1={160}
+          x2={840}
           y1={340 + i * 90}
           y2={340 + i * 90}
           stroke="rgba(255,255,255,0.08)"
@@ -438,7 +533,8 @@ function GraphMotif({ progress }: MotifProps) {
           key={`v-${i}`}
           x1={160 + i * 170}
           x2={160 + i * 170}
-          y1={340} y2={700}
+          y1={340}
+          y2={700}
           stroke="rgba(255,255,255,0.05)"
           strokeWidth={1}
         />
@@ -455,7 +551,9 @@ function GraphMotif({ progress }: MotifProps) {
       {pts.map(([x, y], i) => (
         <circle
           key={i}
-          cx={x} cy={y} r={3}
+          cx={x}
+          cy={y}
+          r={3}
           fill="var(--accent-400)"
           opacity={0.6}
         />

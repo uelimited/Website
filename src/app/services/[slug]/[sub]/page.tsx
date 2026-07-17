@@ -89,9 +89,7 @@ export default async function SubCategoryDetailPage({
               marginBottom: 28,
             }}
           >
-            <span style={{ color: "var(--accent-400)" }}>
-              {service.num}
-            </span>
+            <span style={{ color: "var(--accent-400)" }}>{service.num}</span>
             <span style={{ opacity: 0.5 }}>·</span>
             <span>{service.name}</span>
           </div>
@@ -324,9 +322,7 @@ export default async function SubCategoryDetailPage({
                             >
                               {sp.k}
                             </dt>
-                            <dd
-                              style={{ margin: 0, textAlign: "right" }}
-                            >
+                            <dd style={{ margin: 0, textAlign: "right" }}>
                               {sp.v}
                             </dd>
                           </div>
@@ -449,8 +445,8 @@ export default async function SubCategoryDetailPage({
                   margin: 0,
                 }}
               >
-                Engineering rarely happens one discipline at a time. These
-                are the disciplines typically delivered alongside{" "}
+                Engineering rarely happens one discipline at a time. These are
+                the disciplines typically delivered alongside{" "}
                 {category.name.toLowerCase()}.
               </p>
             </header>

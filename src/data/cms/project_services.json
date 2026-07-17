@@ -1,51 +1,207 @@
 [
-  { "project_id": "prj-foxconn", "service_id": "svc-hvac", "is_primary": true, "scope_note": "Cleanroom HVAC + process gases" },
-  { "project_id": "prj-foxconn", "service_id": "svc-electrical", "is_primary": false },
-  { "project_id": "prj-foxconn", "service_id": "svc-plumbing", "is_primary": false, "scope_note": "Process piping (CDA, N₂, Vacuum)" },
-  { "project_id": "prj-foxconn", "service_id": "svc-firefighting", "is_primary": false },
-  { "project_id": "prj-foxconn", "service_id": "svc-bms", "is_primary": false, "scope_note": "PLC + BMS integration (advanced pipeline)" },
+  {
+    "project_id": "prj-foxconn",
+    "service_id": "svc-hvac",
+    "is_primary": true,
+    "scope_note": "Cleanroom HVAC + process gases"
+  },
+  {
+    "project_id": "prj-foxconn",
+    "service_id": "svc-electrical",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-foxconn",
+    "service_id": "svc-plumbing",
+    "is_primary": false,
+    "scope_note": "Process piping (CDA, N₂, Vacuum)"
+  },
+  {
+    "project_id": "prj-foxconn",
+    "service_id": "svc-firefighting",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-foxconn",
+    "service_id": "svc-bms",
+    "is_primary": false,
+    "scope_note": "PLC + BMS integration (advanced pipeline)"
+  },
 
   { "project_id": "prj-ingka", "service_id": "svc-hvac", "is_primary": true },
-  { "project_id": "prj-ingka", "service_id": "svc-firefighting", "is_primary": false },
-  { "project_id": "prj-ingka", "service_id": "svc-plumbing", "is_primary": false },
-  { "project_id": "prj-ingka", "service_id": "svc-electrical", "is_primary": false },
-  { "project_id": "prj-ingka", "service_id": "svc-solar", "is_primary": false, "scope_note": "Rooftop + PNG distribution" },
+  {
+    "project_id": "prj-ingka",
+    "service_id": "svc-firefighting",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-ingka",
+    "service_id": "svc-plumbing",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-ingka",
+    "service_id": "svc-electrical",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-ingka",
+    "service_id": "svc-solar",
+    "is_primary": false,
+    "scope_note": "Rooftop + PNG distribution"
+  },
 
-  { "project_id": "prj-central-secretariat", "service_id": "svc-hvac", "is_primary": true, "scope_note": "16,000 TR plant" },
-  { "project_id": "prj-central-secretariat", "service_id": "svc-firefighting", "is_primary": false },
+  {
+    "project_id": "prj-central-secretariat",
+    "service_id": "svc-hvac",
+    "is_primary": true,
+    "scope_note": "16,000 TR plant"
+  },
+  {
+    "project_id": "prj-central-secretariat",
+    "service_id": "svc-firefighting",
+    "is_primary": false
+  },
 
   { "project_id": "prj-mopa", "service_id": "svc-hvac", "is_primary": true },
-  { "project_id": "prj-mopa", "service_id": "svc-firefighting", "is_primary": false },
-  { "project_id": "prj-mopa", "service_id": "svc-plumbing", "is_primary": false },
-  { "project_id": "prj-mopa", "service_id": "svc-electrical", "is_primary": false },
+  {
+    "project_id": "prj-mopa",
+    "service_id": "svc-firefighting",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-mopa",
+    "service_id": "svc-plumbing",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-mopa",
+    "service_id": "svc-electrical",
+    "is_primary": false
+  },
 
-  { "project_id": "prj-nalanda", "service_id": "svc-hvac", "is_primary": true, "scope_note": "Geothermal VRV + thermal storage" },
-  { "project_id": "prj-nalanda", "service_id": "svc-bms", "is_primary": false, "scope_note": "IBMS" },
+  {
+    "project_id": "prj-nalanda",
+    "service_id": "svc-hvac",
+    "is_primary": true,
+    "scope_note": "Geothermal VRV + thermal storage"
+  },
+  {
+    "project_id": "prj-nalanda",
+    "service_id": "svc-bms",
+    "is_primary": false,
+    "scope_note": "IBMS"
+  },
 
-  { "project_id": "prj-sael", "service_id": "svc-hvac", "is_primary": true, "scope_note": "Cleanroom HVAC + PCW" },
-  { "project_id": "prj-sael", "service_id": "svc-bms", "is_primary": false, "scope_note": "BMS + SCADA + historian" },
-  { "project_id": "prj-sael", "service_id": "svc-plumbing", "is_primary": false, "scope_note": "PCW headers" },
+  {
+    "project_id": "prj-sael",
+    "service_id": "svc-hvac",
+    "is_primary": true,
+    "scope_note": "Cleanroom HVAC + PCW"
+  },
+  {
+    "project_id": "prj-sael",
+    "service_id": "svc-bms",
+    "is_primary": false,
+    "scope_note": "BMS + SCADA + historian"
+  },
+  {
+    "project_id": "prj-sael",
+    "service_id": "svc-plumbing",
+    "is_primary": false,
+    "scope_note": "PCW headers"
+  },
 
-  { "project_id": "prj-tabreed", "service_id": "svc-hvac", "is_primary": true, "scope_note": "30,000 TR district cooling" },
-  { "project_id": "prj-tabreed", "service_id": "svc-civil", "is_primary": false },
+  {
+    "project_id": "prj-tabreed",
+    "service_id": "svc-hvac",
+    "is_primary": true,
+    "scope_note": "30,000 TR district cooling"
+  },
+  {
+    "project_id": "prj-tabreed",
+    "service_id": "svc-civil",
+    "is_primary": false
+  },
   { "project_id": "prj-tabreed", "service_id": "svc-bms", "is_primary": false },
 
-  { "project_id": "prj-tata-dholera", "service_id": "svc-plumbing", "is_primary": true, "scope_note": "Underground piping" },
-  { "project_id": "prj-tata-dholera", "service_id": "svc-electrical", "is_primary": false },
-  { "project_id": "prj-tata-dholera", "service_id": "svc-civil", "is_primary": false, "scope_note": "Civil excavation" },
+  {
+    "project_id": "prj-tata-dholera",
+    "service_id": "svc-plumbing",
+    "is_primary": true,
+    "scope_note": "Underground piping"
+  },
+  {
+    "project_id": "prj-tata-dholera",
+    "service_id": "svc-electrical",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-tata-dholera",
+    "service_id": "svc-civil",
+    "is_primary": false,
+    "scope_note": "Civil excavation"
+  },
 
-  { "project_id": "prj-jsw-ev", "service_id": "svc-hvac", "is_primary": true, "scope_note": "Battery-line cleanroom" },
-  { "project_id": "prj-jsw-ev", "service_id": "svc-electrical", "is_primary": false },
-  { "project_id": "prj-jsw-ev", "service_id": "svc-plumbing", "is_primary": false, "scope_note": "PCW + CDA" },
-  { "project_id": "prj-jsw-ev", "service_id": "svc-firefighting", "is_primary": false },
+  {
+    "project_id": "prj-jsw-ev",
+    "service_id": "svc-hvac",
+    "is_primary": true,
+    "scope_note": "Battery-line cleanroom"
+  },
+  {
+    "project_id": "prj-jsw-ev",
+    "service_id": "svc-electrical",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-jsw-ev",
+    "service_id": "svc-plumbing",
+    "is_primary": false,
+    "scope_note": "PCW + CDA"
+  },
+  {
+    "project_id": "prj-jsw-ev",
+    "service_id": "svc-firefighting",
+    "is_primary": false
+  },
 
-  { "project_id": "prj-stt", "service_id": "svc-hvac", "is_primary": true, "scope_note": "Precision air-conditioning" },
+  {
+    "project_id": "prj-stt",
+    "service_id": "svc-hvac",
+    "is_primary": true,
+    "scope_note": "Precision air-conditioning"
+  },
 
   { "project_id": "prj-ctrls", "service_id": "svc-hvac", "is_primary": true },
-  { "project_id": "prj-ctrls", "service_id": "svc-electrical", "is_primary": false, "scope_note": "22 kV HT to rack PDU" },
-  { "project_id": "prj-ctrls", "service_id": "svc-firefighting", "is_primary": false, "scope_note": "Pre-action UL/FM" },
-  { "project_id": "prj-ctrls", "service_id": "svc-plumbing", "is_primary": false },
-  { "project_id": "prj-ctrls", "service_id": "svc-bms", "is_primary": false, "scope_note": "DDC + H₂ sensing" },
+  {
+    "project_id": "prj-ctrls",
+    "service_id": "svc-electrical",
+    "is_primary": false,
+    "scope_note": "22 kV HT to rack PDU"
+  },
+  {
+    "project_id": "prj-ctrls",
+    "service_id": "svc-firefighting",
+    "is_primary": false,
+    "scope_note": "Pre-action UL/FM"
+  },
+  {
+    "project_id": "prj-ctrls",
+    "service_id": "svc-plumbing",
+    "is_primary": false
+  },
+  {
+    "project_id": "prj-ctrls",
+    "service_id": "svc-bms",
+    "is_primary": false,
+    "scope_note": "DDC + H₂ sensing"
+  },
 
-  { "project_id": "prj-digital-edge", "service_id": "svc-hvac", "is_primary": true, "scope_note": "Mechanical + seismic" }
+  {
+    "project_id": "prj-digital-edge",
+    "service_id": "svc-hvac",
+    "is_primary": true,
+    "scope_note": "Mechanical + seismic"
+  }
 ]

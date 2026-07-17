@@ -25,10 +25,7 @@ import type {
   ProjectSector,
   LedgerEntry,
 } from "@/data/cms/types";
-import {
-  serviceParamFromId,
-  type FeaturedCard,
-} from "@/lib/ledger-filters";
+import { serviceParamFromId, type FeaturedCard } from "@/lib/ledger-filters";
 
 import servicesJson from "@/data/cms/services.json";
 import serviceCategoriesJson from "@/data/cms/service_categories.json";
@@ -86,7 +83,9 @@ const byLandmarkOrder = (a: Project, b: Project) =>
 // -----------------------------------------------------------------
 
 export function getAllServices(): Service[] {
-  return SERVICES.filter((s) => s.published).slice().sort(bySortOrder);
+  return SERVICES.filter((s) => s.published)
+    .slice()
+    .sort(bySortOrder);
 }
 
 export function getServiceBySlug(slug: string): Service | null {
@@ -118,9 +117,7 @@ export function getServiceCategoryBySlug(
   return (
     SERVICE_CATEGORIES.find(
       (c) =>
-        c.service_id === service.id &&
-        c.slug === categorySlug &&
-        c.published,
+        c.service_id === service.id && c.slug === categorySlug && c.published,
     ) ?? null
   );
 }
@@ -143,7 +140,9 @@ export function getRelatedServiceCategories(
 // -----------------------------------------------------------------
 
 export function getAllSectors(): Sector[] {
-  return SECTORS.filter((s) => s.published).slice().sort(bySortOrder);
+  return SECTORS.filter((s) => s.published)
+    .slice()
+    .sort(bySortOrder);
 }
 
 export function getSectorBySlug(slug: string): Sector | null {
@@ -159,7 +158,9 @@ export function getSectorById(id: string): Sector | null {
 // -----------------------------------------------------------------
 
 export function getAllProjects(): Project[] {
-  return PROJECTS.filter((p) => p.published).slice().sort(byValueDesc);
+  return PROJECTS.filter((p) => p.published)
+    .slice()
+    .sort(byValueDesc);
 }
 
 export function getProjectBySlug(slug: string): Project | null {
@@ -221,9 +222,9 @@ export function getProjectsBySector(
   sectorId: string,
   opts: { limit?: number } = {},
 ): Project[] {
-  const projectIds = PROJECT_SECTORS.filter((j) => j.sector_id === sectorId).map(
-    (j) => j.project_id,
-  );
+  const projectIds = PROJECT_SECTORS.filter(
+    (j) => j.sector_id === sectorId,
+  ).map((j) => j.project_id);
 
   const projects = PROJECTS.filter(
     (p) => p.published && projectIds.includes(p.id),
@@ -251,7 +252,9 @@ export function getServicesForProject(projectId: string): {
       };
     })
     .filter((x): x is NonNullable<typeof x> => x !== null)
-    .sort((a, b) => Number(b.is_primary ?? false) - Number(a.is_primary ?? false));
+    .sort(
+      (a, b) => Number(b.is_primary ?? false) - Number(a.is_primary ?? false),
+    );
 }
 
 export function getSectorsForProject(projectId: string): {
@@ -266,7 +269,9 @@ export function getSectorsForProject(projectId: string): {
       return { sector, is_primary: j.is_primary };
     })
     .filter((x): x is NonNullable<typeof x> => x !== null)
-    .sort((a, b) => Number(b.is_primary ?? false) - Number(a.is_primary ?? false));
+    .sort(
+      (a, b) => Number(b.is_primary ?? false) - Number(a.is_primary ?? false),
+    );
 }
 
 // -----------------------------------------------------------------
@@ -282,7 +287,9 @@ export function getClientById(id: string): Client | null {
 }
 
 export function getFeaturedClients(): Client[] {
-  return CLIENTS.filter((c) => c.featured_on_home).slice().sort(bySortOrder);
+  return CLIENTS.filter((c) => c.featured_on_home)
+    .slice()
+    .sort(bySortOrder);
 }
 
 // -----------------------------------------------------------------
@@ -352,9 +359,7 @@ export function getCategoryWithContextAndProjects(
   if (!service) return null;
   const category = SERVICE_CATEGORIES.find(
     (c) =>
-      c.service_id === service.id &&
-      c.slug === categorySlug &&
-      c.published,
+      c.service_id === service.id && c.slug === categorySlug && c.published,
   );
   if (!category) return null;
   return {
@@ -442,7 +447,9 @@ export function getLedgerStatsForSector(sectorId: string): LedgerStats {
 
 /** Headline count + cumulative value for one service's ledger. */
 export function getLedgerStatsForService(serviceId: string): LedgerStats {
-  return statsFor(PROJECT_LEDGER.filter((e) => e.service_ids.includes(serviceId)));
+  return statsFor(
+    PROJECT_LEDGER.filter((e) => e.service_ids.includes(serviceId)),
+  );
 }
 
 /**

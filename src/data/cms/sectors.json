@@ -9,7 +9,14 @@
     "revenue_cr_override": "₹400+ Cr",
     "hero_image_url": "/sectors/data-centre-hero.jpg",
     "hero_image_alt": "Data centre white-space hot-aisle interior with server racks",
-    "featured_client_ids": ["cli-stt", "cli-ctrls", "cli-digital-edge", "cli-anant-raj", "cli-stpi", "cli-tata-electronics"],
+    "featured_client_ids": [
+      "cli-stt",
+      "cli-ctrls",
+      "cli-digital-edge",
+      "cli-anant-raj",
+      "cli-stpi",
+      "cli-tata-electronics"
+    ],
     "deep_page": true,
     "sections": [
       {
@@ -19,9 +26,18 @@
           "Supply-air temperature is managed to ASHRAE TC 9.9 with the operator's risk tolerance. Free-cooling hours are calculated against the site's wet-bulb profile; chiller staging, pump VFDs and tower fan VFDs are sequenced for low part-load energy."
         ],
         "systems": [
-          { "name": "Aisle containment & SAT management", "description": "Hot- or cold-aisle containment with brush seals and blanking panels. Supply-air temperature monitored to ASHRAE TC 9.9 across every aisle." },
-          { "name": "CRAH / InRow / RDHX", "description": "Perimeter CRAH for general halls, InRow for medium-high density, rear-door HX for AI/HPC zones up to 30 kW/rack." },
-          { "name": "Liquid-ready architecture", "description": "Reserved liquid manifolds and CDU drops for non-disruptive migration to direct liquid cooling." }
+          {
+            "name": "Aisle containment & SAT management",
+            "description": "Hot- or cold-aisle containment with brush seals and blanking panels. Supply-air temperature monitored to ASHRAE TC 9.9 across every aisle."
+          },
+          {
+            "name": "CRAH / InRow / RDHX",
+            "description": "Perimeter CRAH for general halls, InRow for medium-high density, rear-door HX for AI/HPC zones up to 30 kW/rack."
+          },
+          {
+            "name": "Liquid-ready architecture",
+            "description": "Reserved liquid manifolds and CDU drops for non-disruptive migration to direct liquid cooling."
+          }
         ]
       },
       {
@@ -31,9 +47,18 @@
           "DG sets sized for full IT + cooling block load; modular static UPS with ventilated battery rooms and BMS-integrated H₂ sensing. Earthing, harmonic mitigation and TVSS specified end-to-end."
         ],
         "systems": [
-          { "name": "HV / LV distribution", "description": "33/22/11 kV HT, transformers, LV switchgear, busbar trunking. Main-tie-main and ring topologies per spec." },
-          { "name": "Diesel generation", "description": "Full block-load DG sizing, day + bulk fuel, UL-certified polishing skids, explosion-proof control." },
-          { "name": "UPS & battery rooms", "description": "Modular static UPS, ventilated battery rooms, BMS-integrated H₂ sensing, concurrent-maintainable bypass." }
+          {
+            "name": "HV / LV distribution",
+            "description": "33/22/11 kV HT, transformers, LV switchgear, busbar trunking. Main-tie-main and ring topologies per spec."
+          },
+          {
+            "name": "Diesel generation",
+            "description": "Full block-load DG sizing, day + bulk fuel, UL-certified polishing skids, explosion-proof control."
+          },
+          {
+            "name": "UPS & battery rooms",
+            "description": "Modular static UPS, ventilated battery rooms, BMS-integrated H₂ sensing, concurrent-maintainable bypass."
+          }
         ]
       },
       {
@@ -71,7 +96,12 @@
     "revenue_cr_override": "₹750+ Cr",
     "hero_image_url": "/sectors/semiconductor-hero.jpg",
     "hero_image_alt": "Semiconductor cleanroom interior with FFU array and fab equipment",
-    "featured_client_ids": ["cli-foxconn", "cli-tata-electronics", "cli-jsw", "cli-sael"],
+    "featured_client_ids": [
+      "cli-foxconn",
+      "cli-tata-electronics",
+      "cli-jsw",
+      "cli-sael"
+    ],
     "deep_page": true,
     "sections": [
       {
@@ -81,9 +111,23 @@
           "Engineering delta to ISO 6 fully understood: higher air change rates (60-90 ACPH vs 20-40 for ISO 7/8), semi/fully-directional airflow with FFU assistance, HEPA H13/H14 terminal filtration in gel-seal housings with in-situ leak testing, tighter pressure cascade (≥15 Pa between zones), controlled return-air architecture with low-level returns for particle sweep-out, and ±1 °C / ±5% RH stability."
         ],
         "systems": [
-          { "name": "PUF panel cleanroom", "description": "Wall + ceiling PUF panelling, epoxy flooring, HEPA-filtered AHUs, return-air risers, cleanroom doors and view panels.", "specs": [ { "k": "ISO class", "v": "6 / 7 / 8" }, { "k": "ACPH", "v": "20–90" }, { "k": "Pressure cascade", "v": "≥ 15 Pa" } ] },
-          { "name": "FFU array (HEPA H13/H14)", "description": "Ceiling-grid FFU layout with terminal HEPA filtration. 13,656 FFUs installed at SAEL alone." },
-          { "name": "Process gas distribution", "description": "CDA, N₂ and Vacuum networks routed with strict slope control, leak-tested to stringent standards. SS / aluminium / electropolished as spec demands." }
+          {
+            "name": "PUF panel cleanroom",
+            "description": "Wall + ceiling PUF panelling, epoxy flooring, HEPA-filtered AHUs, return-air risers, cleanroom doors and view panels.",
+            "specs": [
+              { "k": "ISO class", "v": "6 / 7 / 8" },
+              { "k": "ACPH", "v": "20–90" },
+              { "k": "Pressure cascade", "v": "≥ 15 Pa" }
+            ]
+          },
+          {
+            "name": "FFU array (HEPA H13/H14)",
+            "description": "Ceiling-grid FFU layout with terminal HEPA filtration. 13,656 FFUs installed at SAEL alone."
+          },
+          {
+            "name": "Process gas distribution",
+            "description": "CDA, N₂ and Vacuum networks routed with strict slope control, leak-tested to stringent standards. SS / aluminium / electropolished as spec demands."
+          }
         ]
       },
       {
@@ -114,7 +158,14 @@
     "revenue_cr_override": "₹550+ Cr",
     "hero_image_url": "/sectors/industrial-hero.jpg",
     "hero_image_alt": "Modern automotive factory floor with robotic assembly equipment",
-    "featured_client_ids": ["cli-coca-cola", "cli-unilever", "cli-bmw", "cli-itc", "cli-hyundai", "cli-jsw"],
+    "featured_client_ids": [
+      "cli-coca-cola",
+      "cli-unilever",
+      "cli-bmw",
+      "cli-itc",
+      "cli-hyundai",
+      "cli-jsw"
+    ],
     "deep_page": true,
     "sections": [
       {
@@ -167,7 +218,13 @@
     "revenue_cr_override": "₹600+ Cr",
     "hero_image_url": "/sectors/education-hero.jpg",
     "hero_image_alt": "Modern university campus exterior at dusk",
-    "featured_client_ids": ["cli-iit", "cli-bits", "cli-amity", "cli-nalanda", "cli-sau"],
+    "featured_client_ids": [
+      "cli-iit",
+      "cli-bits",
+      "cli-amity",
+      "cli-nalanda",
+      "cli-sau"
+    ],
     "deep_page": false,
     "sort_order": 5,
     "published": true
@@ -182,7 +239,14 @@
     "revenue_cr_override": "₹800+ Cr",
     "hero_image_url": "/sectors/corporate-hero.jpg",
     "hero_image_alt": "Premium corporate office tower atrium lobby interior",
-    "featured_client_ids": ["cli-ikea", "cli-bharti", "cli-vatika", "cli-spaze", "cli-elan", "cli-kjl"],
+    "featured_client_ids": [
+      "cli-ikea",
+      "cli-bharti",
+      "cli-vatika",
+      "cli-spaze",
+      "cli-elan",
+      "cli-kjl"
+    ],
     "deep_page": false,
     "sort_order": 6,
     "published": true
@@ -212,7 +276,12 @@
     "revenue_cr_override": "₹400+ Cr",
     "hero_image_url": "/sectors/hospitality-hero.jpg",
     "hero_image_alt": "Luxury five-star hotel grand lobby with marble atrium",
-    "featured_client_ids": ["cli-westin", "cli-marriott", "cli-radisson", "cli-crowne-plaza"],
+    "featured_client_ids": [
+      "cli-westin",
+      "cli-marriott",
+      "cli-radisson",
+      "cli-crowne-plaza"
+    ],
     "deep_page": false,
     "sort_order": 8,
     "published": true

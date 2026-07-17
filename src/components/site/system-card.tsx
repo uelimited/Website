@@ -63,7 +63,9 @@ export function SystemCard({ system }: { system: ServiceCategorySystem }) {
                 gap: 12,
               }}
             >
-              <dt style={{ color: "var(--fg-muted)", whiteSpace: "nowrap" }}>{s.k}</dt>
+              <dt style={{ color: "var(--fg-muted)", whiteSpace: "nowrap" }}>
+                {s.k}
+              </dt>
               <dd style={{ margin: 0, textAlign: "right" }}>{s.v}</dd>
             </div>
           ))}

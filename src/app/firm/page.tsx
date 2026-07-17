@@ -20,10 +20,22 @@ export const metadata: Metadata = {
 };
 
 const VALUES = [
-  { title: "Safety first", body: "Zero-tolerance permits, daily toolbox, ISO 45001 — non-negotiable on every site." },
-  { title: "Uncompromising integrity", body: "Transparent execution, owned outcomes, no hidden subcontracting." },
-  { title: "Environmental sustainability", body: "IGBC / LEED-aligned design, lifecycle energy modelling, measurable efficiency." },
-  { title: "Engineering innovation", body: "BIM LOD 400, AI scenario planning, digital twins — innovation as productivity." },
+  {
+    title: "Safety first",
+    body: "Zero-tolerance permits, daily toolbox, ISO 45001 — non-negotiable on every site.",
+  },
+  {
+    title: "Uncompromising integrity",
+    body: "Transparent execution, owned outcomes, no hidden subcontracting.",
+  },
+  {
+    title: "Environmental sustainability",
+    body: "IGBC / LEED-aligned design, lifecycle energy modelling, measurable efficiency.",
+  },
+  {
+    title: "Engineering innovation",
+    body: "BIM LOD 400, AI scenario planning, digital twins — innovation as productivity.",
+  },
 ];
 
 const ISO_CERTS = ["ISO 9001:2015", "ISO 14001:2015", "ISO 45001:2018"];
@@ -40,7 +52,11 @@ export default function FirmPage() {
   const statesExecuted = getLedgerStates().filter((s) => s !== "Chandigarh");
 
   const heroStats = [
-    { n: String(YEARS_IN_PRACTICE), unit: "+", l: `Years in practice, since ${FIRM.foundedYear}` },
+    {
+      n: String(YEARS_IN_PRACTICE),
+      unit: "+",
+      l: `Years in practice, since ${FIRM.foundedYear}`,
+    },
     { n: "23", unit: "", l: "States executed" },
     { n: "450", unit: "₹ Cr", l: "Current order book · audited" },
   ];
@@ -49,18 +65,19 @@ export default function FirmPage() {
     ["Founded", `${FIRM.foundedYear} · ${headquarters?.city ?? "Gurugram"}`],
     [
       "Headquarters",
-      headquarters ? `${headquarters.city}, ${headquarters.state ?? ""}` : "Gurugram, Haryana",
+      headquarters
+        ? `${headquarters.city}, ${headquarters.state ?? ""}`
+        : "Gurugram, Haryana",
     ],
     ["Operating region", "India + SAARC"],
   ];
 
-  const certsByCategory = certifications.reduce<Record<string, typeof certifications>>(
-    (acc, c) => {
-      (acc[c.category] ??= []).push(c);
-      return acc;
-    },
-    {},
-  );
+  const certsByCategory = certifications.reduce<
+    Record<string, typeof certifications>
+  >((acc, c) => {
+    (acc[c.category] ??= []).push(c);
+    return acc;
+  }, {});
 
   return (
     <>
@@ -75,19 +92,21 @@ export default function FirmPage() {
             className="grid md:grid-cols-[1.1fr_1fr] gap-10 md:gap-24 items-start"
             style={{ marginTop: 64 }}
           >
-            <div style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-700)" }}>
+            <div
+              style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-700)" }}
+            >
               <p style={{ margin: 0 }}>
-                {FIRM.legalName} was founded in {FIRM.foundedYear} in Gurugram as
-                a specialist HVAC contractor, by three engineer co-founders with
-                a shared discipline for technical depth. Thirty-five years
+                {FIRM.legalName} was founded in {FIRM.foundedYear} in Gurugram
+                as a specialist HVAC contractor, by three engineer co-founders
+                with a shared discipline for technical depth. Thirty-five years
                 later, the firm operates across India and delivers select
                 engagements in Bangladesh, Nepal and the Maldives.
               </p>
               <p style={{ marginTop: 24, marginBottom: 0 }}>
                 Work is undertaken by in-house engineers, not brokered. Site
-                supervision is continuous; documentation is continuous;
-                quality audits are quarterly. The firm does not subcontract
-                design — every drawing leaves the office stamped.
+                supervision is continuous; documentation is continuous; quality
+                audits are quarterly. The firm does not subcontract design —
+                every drawing leaves the office stamped.
               </p>
 
               {/*
@@ -101,13 +120,19 @@ export default function FirmPage() {
               <div className="ue-overview__grid" style={{ marginTop: 40 }}>
                 {heroStats.map((s) => {
                   const hasRupee = s.unit?.startsWith("₹");
-                  const post = hasRupee ? s.unit!.slice(2).trim() : s.unit?.trim();
+                  const post = hasRupee
+                    ? s.unit!.slice(2).trim()
+                    : s.unit?.trim();
                   return (
                     <div key={s.l} className="ue-stat ue-overview__stat">
                       <div className="n">
-                        {hasRupee && <span className="ue-overview__unit--pre">₹</span>}
+                        {hasRupee && (
+                          <span className="ue-overview__unit--pre">₹</span>
+                        )}
                         {s.n}
-                        {post && <span className="ue-overview__unit"> {post}</span>}
+                        {post && (
+                          <span className="ue-overview__unit"> {post}</span>
+                        )}
                       </div>
                       <div className="l">{s.l}</div>
                     </div>
@@ -144,7 +169,9 @@ export default function FirmPage() {
                       gap: 16,
                     }}
                   >
-                    <span style={{ fontSize: 13, color: "var(--fg-muted)" }}>{k}</span>
+                    <span style={{ fontSize: 13, color: "var(--fg-muted)" }}>
+                      {k}
+                    </span>
                     <span
                       style={{
                         fontFamily: "var(--font-display)",
@@ -185,24 +212,49 @@ export default function FirmPage() {
                   marginBottom: 32,
                 }}
               >
-                <p className="ue-eyebrow" style={{ color: "var(--accent-500)" }}>
+                <p
+                  className="ue-eyebrow"
+                  style={{ color: "var(--accent-500)" }}
+                >
                   Vision
                 </p>
-                <p style={{ marginTop: 8, fontSize: 17, lineHeight: 1.55, color: "var(--ink-700)" }}>
-                  To lead India&apos;s infrastructure evolution as the
-                  preferred single-window partner for critical engineering
-                  systems — setting the benchmark for reliability,
-                  sustainability and scale.
+                <p
+                  style={{
+                    marginTop: 8,
+                    fontSize: 17,
+                    lineHeight: 1.55,
+                    color: "var(--ink-700)",
+                  }}
+                >
+                  To lead India&apos;s infrastructure evolution as the preferred
+                  single-window partner for critical engineering systems —
+                  setting the benchmark for reliability, sustainability and
+                  scale.
                 </p>
               </div>
-              <div style={{ borderLeft: "3px solid var(--accent-500)", paddingLeft: 24 }}>
-                <p className="ue-eyebrow" style={{ color: "var(--accent-500)" }}>
+              <div
+                style={{
+                  borderLeft: "3px solid var(--accent-500)",
+                  paddingLeft: 24,
+                }}
+              >
+                <p
+                  className="ue-eyebrow"
+                  style={{ color: "var(--accent-500)" }}
+                >
                   Mission
                 </p>
-                <p style={{ marginTop: 8, fontSize: 17, lineHeight: 1.55, color: "var(--ink-700)" }}>
+                <p
+                  style={{
+                    marginTop: 8,
+                    fontSize: 17,
+                    lineHeight: 1.55,
+                    color: "var(--ink-700)",
+                  }}
+                >
                   To de-risk complex infrastructure projects through precision
-                  planning, transparent execution and future-ready technology
-                  — so every project delivered operates at peak potential.
+                  planning, transparent execution and future-ready technology —
+                  so every project delivered operates at peak potential.
                 </p>
               </div>
             </div>
@@ -229,7 +281,15 @@ export default function FirmPage() {
             <h2 className="ue-h2" style={{ marginTop: 8, maxWidth: "22ch" }}>
               The people behind the practice.
             </h2>
-            <p style={{ marginTop: 16, fontSize: 17, lineHeight: 1.55, color: "var(--ink-700)", maxWidth: "60ch" }}>
+            <p
+              style={{
+                marginTop: 16,
+                fontSize: 17,
+                lineHeight: 1.55,
+                color: "var(--ink-700)",
+                maxWidth: "60ch",
+              }}
+            >
               Founded and led by three engineers with decades of hands-on
               delivery in the MEPF industry — directly engaged on tier-1
               mandates across data centre, semiconductor and large-format
@@ -241,14 +301,22 @@ export default function FirmPage() {
       </section>
 
       {/* 5 — Pan-India presence */}
-      <section className="ue-section" style={{ background: "var(--ink-950)", color: "var(--paper)" }}>
+      <section
+        className="ue-section"
+        style={{ background: "var(--ink-950)", color: "var(--paper)" }}
+      >
         <div className="ue-container">
           <p className="ue-eyebrow" style={{ color: "var(--accent-400)" }}>
             Pan-India presence
           </p>
           <h2
             className="ue-h2"
-            style={{ marginTop: 12, marginBottom: 24, color: "var(--paper)", maxWidth: "20ch" }}
+            style={{
+              marginTop: 12,
+              marginBottom: 24,
+              color: "var(--paper)",
+              maxWidth: "20ch",
+            }}
           >
             Rooted in India. Read internationally.
           </h2>
@@ -275,7 +343,14 @@ export default function FirmPage() {
         <div className="ue-container">
           <header style={{ marginBottom: 32 }}>
             <p className="ue-eyebrow">Certifications</p>
-            <h2 className="ue-h2" style={{ marginTop: 8, maxWidth: "26ch", fontSize: "clamp(28px, 3.2vw, 40px)" }}>
+            <h2
+              className="ue-h2"
+              style={{
+                marginTop: 8,
+                maxWidth: "26ch",
+                fontSize: "clamp(28px, 3.2vw, 40px)",
+              }}
+            >
               Quality, environment, safety — independently certified.
             </h2>
           </header>
@@ -293,7 +368,14 @@ export default function FirmPage() {
                 >
                   {cat}
                 </p>
-                <ul style={{ margin: 0, padding: 0, listStyle: "none", borderTop: "1px solid var(--border-color)" }}>
+                <ul
+                  style={{
+                    margin: 0,
+                    padding: 0,
+                    listStyle: "none",
+                    borderTop: "1px solid var(--border-color)",
+                  }}
+                >
                   {items.map((c) => (
                     <li
                       key={c.id}

@@ -33,7 +33,11 @@ export type ExplorerService = {
  * Below the desktop breakpoint the preview pane disappears and each
  * row becomes a self-contained image card.
  */
-export function ServicesExplorer({ services }: { services: ExplorerService[] }) {
+export function ServicesExplorer({
+  services,
+}: {
+  services: ExplorerService[];
+}) {
   const foundingIndex = services.findIndex((s) => s.founding);
   const [active, setActive] = useState(foundingIndex >= 0 ? foundingIndex : 0);
   const prefersReduced = useReducedMotion();

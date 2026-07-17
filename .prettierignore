@@ -1,0 +1,16 @@
+# Dependencies & build output
+node_modules
+.next
+.vercel
+out
+
+# Lockfiles & generated files
+pnpm-lock.yaml
+next-env.d.ts
+*.tsbuildinfo
+
+# Static assets
+public
+
+# Docs & content prose (kept exactly as authored)
+*.md

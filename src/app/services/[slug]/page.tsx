@@ -34,10 +34,8 @@ export async function generateMetadata({
   const data = getServiceWithCategoriesAndProjects(slug);
   if (!data) return {};
   return {
-    title:
-      data.service.seo_title ?? `${data.service.name} — Unique Engineers`,
-    description:
-      data.service.seo_description ?? data.service.blurb,
+    title: data.service.seo_title ?? `${data.service.name} — Unique Engineers`,
+    description: data.service.seo_description ?? data.service.blurb,
   };
 }
 
@@ -131,9 +129,7 @@ export default async function ServiceLandingPage({
               marginBottom: 28,
             }}
           >
-            <span style={{ color: "var(--accent-400)" }}>
-              {service.num}
-            </span>
+            <span style={{ color: "var(--accent-400)" }}>{service.num}</span>
             <span style={{ opacity: 0.5 }}>·</span>
             <span>One of eight disciplines</span>
           </div>
@@ -337,9 +333,7 @@ export default async function ServiceLandingPage({
       {approachLead.length > 0 && (
         <section style={{ padding: "96px 0" }}>
           <div className="ue-container">
-            <div
-              className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-10 md:gap-16"
-            >
+            <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-10 md:gap-16">
               <div>
                 <p className="ue-eyebrow">The approach</p>
                 <h2
@@ -435,7 +429,8 @@ export default async function ServiceLandingPage({
                 href={`/work?service=${serviceParamFromId(service.id)}`}
                 className="inline-flex items-center gap-2 text-[14px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
               >
-                See all {serviceLedger.length} {inlineName(service.name)} projects
+                See all {serviceLedger.length} {inlineName(service.name)}{" "}
+                projects
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>
