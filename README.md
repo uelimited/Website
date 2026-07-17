@@ -89,8 +89,9 @@ git commit -m "Update the Foxconn case study"
 git push          # → live shortly after
 ```
 
-- Push to a **different branch** to get a private preview URL (great for reviewing
-  before it's public) — Vercel comments the link on the pull request.
+- Want to **review on a private preview URL before it goes public?** Push to a branch
+  instead — see **[CONTRIBUTING.md](CONTRIBUTING.md)** for the safe, step-by-step flow
+  (and how to roll back if needed).
 - Repo: https://github.com/sudo-prakhar/unique-engineers-website
 - Hosting: [Vercel](https://vercel.com) (Next.js auto-detected, no config needed).
 
