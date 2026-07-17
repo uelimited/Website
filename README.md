@@ -1,78 +1,110 @@
 # Unique Engineers — Website
 
-Marketing website for Unique Engineers (MEPF, BMS, and civil contracting), built with
-[Next.js 16](https://nextjs.org) (App Router), React 19, Tailwind CSS 4, and shadcn/ui.
+The marketing website for **Unique Engineers Limited**, an MEPF, BMS and civil
+contracting firm. Built with Next.js 16, React 19, TypeScript and Tailwind CSS 4.
 
-## Tech stack
+**Live:** https://unique-engineers-website.vercel.app
 
-- **Framework:** Next.js 16 (App Router, Turbopack)
-- **Language:** TypeScript
-- **UI:** React 19, Tailwind CSS 4, shadcn/ui, lucide-react, motion
-- **Package manager:** pnpm
+---
+
+## Quick start
+
+You need [Node.js](https://nodejs.org) 20.9+ and [pnpm](https://pnpm.io)
+(`npm install -g pnpm`).
+
+```bash
+pnpm install     # install dependencies (first time only)
+pnpm dev         # start the local site at http://localhost:3000
+```
+
+Leave `pnpm dev` running and edit files — the site reloads automatically as you
+save. That's the whole loop.
+
+---
+
+## 📝 Editing the site
+
+**Almost everything you'll want to change — the words, the projects, the colours,
+the photos — lives in plain data and style files. You rarely need to touch React
+components.** Start here:
+
+| I want to change…                        | Read this                                              |
+| ---------------------------------------- | ------------------------------------------------------ |
+| Copy, projects, sectors, services, logos | **[docs/editing-content.md](docs/editing-content.md)** |
+| Colours, type, spacing, the brand voice  | **[docs/design-system.md](docs/design-system.md)**     |
+| How the code is put together (for devs)  | **[docs/architecture.md](docs/architecture.md)**       |
+
+A 30-second map of where things live:
+
+- **Words & data** → `src/data/` (mostly `.json` files — see the editing guide)
+- **Colours, type, spacing** → `src/styles/design-tokens.css`
+- **Photos & video** → `public/`
+- **Page layouts** → `src/app/` (one folder per page)
+
+---
 
 ## Pages
 
-- `/` — Home
-- `/firm` — About the firm
-- `/approach` — Our approach
-- `/services`, `/services/[slug]`, `/services/[slug]/[sub]` — Services
-- `/sectors`, `/sectors/[slug]` — Sectors served
-- `/projects`, `/projects/[slug]` — Project case studies
-- `/contact` — Contact
+| URL                         | What it is                                                  |
+| --------------------------- | ----------------------------------------------------------- |
+| `/`                         | Home                                                        |
+| `/work`                     | Every project — filterable by sector, service, value, state |
+| `/services` · `/services/…` | Capabilities (8 disciplines, each with sub-disciplines)     |
+| `/sectors` · `/sectors/…`   | Sectors served (data centre, semiconductor, airport, …)     |
+| `/projects/[slug]`          | Individual case-study pages                                 |
+| `/firm`                     | The firm — interactive company profile                     |
+| `/approach`                 | How the firm engineers and delivers                        |
+| `/careers`                  | Culture / why join                                         |
+| `/contact`                  | Contact form + details                                     |
 
-## Prerequisites
+> The old `/projects` and `/track-record` pages now redirect to `/work`, which
+> merged them into one place.
 
-- **Node.js 20.9+** (Node 18.18+ also works; this repo was developed on Node 24)
-- **pnpm** — install with `npm install -g pnpm` if you don't have it
+---
 
-## Getting started
+## Commands
 
-Install dependencies:
+| Command             | What it does                                           |
+| ------------------- | ------------------------------------------------------ |
+| `pnpm dev`          | Run the site locally (hot-reloads on save)             |
+| `pnpm build`        | Production build — the real test that everything works |
+| `pnpm start`        | Serve the production build (run after `pnpm build`)    |
+| `pnpm lint`         | Check code for problems                                |
+| `pnpm format`       | Auto-format all code with Prettier                     |
+| `pnpm format:check` | Check formatting without changing files                |
 
-```bash
-pnpm install
-```
+Before pushing a bigger change, `pnpm build` is the best confidence check — if it
+passes, the site works.
 
-Run the development server:
+---
 
-```bash
-pnpm dev
-```
+## Publishing changes
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. Pages hot-reload as
-you edit files under `src/app`.
-
-## Available scripts
-
-| Command       | Description                                  |
-| ------------- | -------------------------------------------- |
-| `pnpm dev`    | Start the local development server           |
-| `pnpm build`  | Create a production build                    |
-| `pnpm start`  | Serve the production build (run after build) |
-| `pnpm lint`   | Run ESLint                                   |
-
-## Production build
+The site **auto-deploys**: every push to the `main` branch builds and goes live at
+https://unique-engineers-website.vercel.app within a minute or two.
 
 ```bash
-pnpm build
-pnpm start
+git add -A
+git commit -m "Update the Foxconn case study"
+git push          # → live shortly after
 ```
 
-This serves the optimized build on [http://localhost:3000](http://localhost:3000).
+- Push to a **different branch** to get a private preview URL (great for reviewing
+  before it's public) — Vercel comments the link on the pull request.
+- Repo: https://github.com/sudo-prakhar/unique-engineers-website
+- Hosting: [Vercel](https://vercel.com) (Next.js auto-detected, no config needed).
 
-## Project structure
+---
 
-```
-src/
-  app/         Routes (App Router pages and layouts)
-  components/  Reusable UI — site/ (page sections) and ui/ (shadcn primitives)
-  data/        Content/data used to render pages
-  lib/         Helpers (e.g. cms.ts)
-  styles/      Global styles
-public/         Static assets (images, video, SVGs)
-```
+## Tech stack
 
-## Deployment
+- **Framework** — [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- **Language** — TypeScript
+- **UI** — React 19, [Tailwind CSS 4](https://tailwindcss.com),
+  [shadcn/ui](https://ui.shadcn.com) primitives, [lucide](https://lucide.dev)
+  icons, [motion](https://motion.dev) for animation
+- **Content** — a lightweight file-based CMS (JSON in `src/data/`) — no database
+- **Hosting** — Vercel, deployed from `main`
 
-Deploys to any Node host or to [Vercel](https://vercel.com/new). On Vercel, import the
-repo and accept the detected Next.js settings — no extra configuration required.
+> **Note for AI coding agents:** this is Next.js **16**, which differs from older
+> versions. See [`AGENTS.md`](AGENTS.md).
