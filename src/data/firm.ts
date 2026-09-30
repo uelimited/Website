@@ -29,7 +29,7 @@ export const FIRM = {
 
   // PENDING verification — placeholder email for the contact page.
   contactEmail: "info@uelimited.com",
-  hours: "Mon–Fri · 09:30–18:30 IST",
+  hours: "Mon–Sat · 09:30–18:30 IST",
 };
 
 // Years in practice, from the 1990 founding ("35+ years").

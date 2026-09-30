@@ -8,46 +8,20 @@ import { getJourney } from "@/lib/cms";
  */
 export function JourneyStrip() {
   const all = getJourney();
-  // Pick a representative subset
-  const highlights = [
-    all.find((m) => m.year === "1990"),
-    all.find((m) => m.year === "2005"),
-    all.find((m) => m.year === "2012–2018"),
-    all.find((m) => m.year === "2019"),
-    all.find((m) => m.year === "2023"),
-    all.find((m) => m.year === "2024"),
-  ].filter((m): m is NonNullable<typeof m> => Boolean(m));
+  const highlights = all.slice(0, 9);
 
   return (
     <section className="ue-section">
       <div className="ue-container">
-        <header style={{ marginBottom: 40 }}>
+        <header className="ue-journey-strip__head">
           <p className="ue-eyebrow">The journey</p>
-          <h2 className="ue-h2" style={{ marginTop: 8, maxWidth: "22ch" }}>
+          <h2 className="ue-h2 ue-journey-strip__title">
             From specialist HVAC to multi-discipline EPC.
           </h2>
         </header>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-            gap: 0,
-            borderTop: "1px solid var(--border-color)",
-            borderBottom: "1px solid var(--border-color)",
-          }}
-        >
-          {highlights.map((m, i) => (
-            <div
-              key={m.id}
-              style={{
-                padding: "24px 16px 24px 0",
-                paddingLeft: i > 0 ? 24 : 0,
-                borderRight:
-                  i < highlights.length - 1
-                    ? "1px solid var(--border-color)"
-                    : "none",
-              }}
-            >
+        <div className="ue-journey-strip__grid">
+          {highlights.map((m) => (
+            <div key={m.id} className="ue-journey-strip__item">
               <div
                 style={{
                   fontFamily: "var(--font-mono)",
@@ -83,7 +57,7 @@ export function JourneyStrip() {
             </div>
           ))}
         </div>
-        <div style={{ marginTop: 24, textAlign: "right" }}>
+        <div className="ue-journey-strip__link-wrap">
           <Link
             href="/firm"
             style={{

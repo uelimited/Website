@@ -241,16 +241,11 @@ export default async function ServiceLandingPage({
       {service.stats && service.stats.length > 0 && (
         <section style={{ padding: "32px 0 96px" }}>
           <div className="ue-container">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: `repeat(${Math.min(service.stats.length, 3)}, minmax(0, 1fr))`,
-                gap: 24,
-              }}
-            >
+            <div className="ue-service-stats">
               {service.stats.map((s) => (
                 <div
                   key={s.k}
+                  className="ue-service-stats__card"
                   style={{
                     padding: "28px 28px 32px",
                     background: "var(--paper-soft)",
