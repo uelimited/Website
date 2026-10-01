@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { FIRM, YEARS_IN_PRACTICE } from "@/data/firm";
 import {
   getLeadership,
@@ -8,7 +11,6 @@ import {
   getLedgerStates,
 } from "@/lib/cms";
 import { FirmJourneyTimeline } from "@/components/site/firm-journey-timeline";
-import { FirmValuesCards } from "@/components/site/firm-values-cards";
 import { LeadershipGrid } from "@/components/site/leadership-grid";
 import { FirmPresenceMap } from "@/components/site/firm-presence-map";
 import { ContactCTA } from "@/components/site/contact-cta";
@@ -38,8 +40,6 @@ const VALUES = [
   },
 ];
 
-const ISO_CERTS = ["ISO 9001:2015", "ISO 14001:2015", "ISO 45001:2018"];
-
 export default function FirmPage() {
   const leaders = getLeadership();
   const journey = getJourney();
@@ -51,27 +51,6 @@ export default function FirmPage() {
   // list matching the "23 states executed" figure used across the site.
   const statesExecuted = getLedgerStates().filter((s) => s !== "Chandigarh");
 
-  const heroStats = [
-    {
-      n: String(YEARS_IN_PRACTICE),
-      unit: "+",
-      l: `Years in practice, since ${FIRM.foundedYear}`,
-    },
-    { n: "23", unit: "", l: "States executed" },
-    { n: "450", unit: "₹ Cr", l: "Current order book · audited" },
-  ];
-
-  const record: [string, string][] = [
-    ["Founded", `${FIRM.foundedYear} · ${headquarters?.city ?? "Gurugram"}`],
-    [
-      "Headquarters",
-      headquarters
-        ? `${headquarters.city}, ${headquarters.state ?? ""}`
-        : "Gurugram, Haryana",
-    ],
-    ["Operating region", "India + SAARC"],
-  ];
-
   const certsByCategory = certifications.reduce<
     Record<string, typeof certifications>
   >((acc, c) => {
@@ -80,327 +59,205 @@ export default function FirmPage() {
   }, {});
 
   return (
-    <>
-      {/* 1 — Hero */}
-      <section className="ue-section">
-        <div className="ue-container">
-          <p className="ue-eyebrow">The firm</p>
-          <h1 className="ue-h1" style={{ maxWidth: "16ch" }}>
-            Engineering discipline, run as a practice, since 1990.
-          </h1>
-          <div
-            className="grid md:grid-cols-[1.1fr_1fr] gap-10 md:gap-24 items-start"
-            style={{ marginTop: 64 }}
-          >
-            <div
-              style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink-700)" }}
-            >
-              <p style={{ margin: 0 }}>
-                {FIRM.legalName} was founded in {FIRM.foundedYear} in Gurugram
-                as a specialist HVAC contractor, by three engineer co-founders
-                with a shared discipline for technical depth. Thirty-five years
-                later, the firm operates across India and delivers select
-                engagements in Bangladesh, Nepal and the Maldives.
-              </p>
-              <p style={{ marginTop: 24, marginBottom: 0 }}>
-                Work is undertaken by in-house engineers, not brokered. Site
-                supervision is continuous; documentation is continuous; quality
-                audits are quarterly. The firm does not subcontract design —
-                every drawing leaves the office stamped.
-              </p>
-
-              {/*
-                Rendered as plain static text (not <StatsGrid>/<StatCounter>)
-                so these three headline facts are present unconditionally in
-                the server-rendered HTML — StatCounter's rest state is the
-                literal string "0" until client JS hydrates and the element
-                scrolls into view, which no-JS clients and crawlers would
-                otherwise see permanently.
-              */}
-              <div className="ue-overview__grid" style={{ marginTop: 40 }}>
-                {heroStats.map((s) => {
-                  const hasRupee = s.unit?.startsWith("₹");
-                  const post = hasRupee
-                    ? s.unit!.slice(2).trim()
-                    : s.unit?.trim();
-                  return (
-                    <div key={s.l} className="ue-stat ue-overview__stat">
-                      <div className="n">
-                        {hasRupee && (
-                          <span className="ue-overview__unit--pre">₹</span>
-                        )}
-                        {s.n}
-                        {post && (
-                          <span className="ue-overview__unit"> {post}</span>
-                        )}
-                      </div>
-                      <div className="l">{s.l}</div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 8,
-                  marginTop: 40,
-                }}
+    <main className="ue-firm-redesign">
+      <section className="ue-firm-redesign__hero" aria-labelledby="firm-title">
+        <Image
+          src="/firm/team-on-site.jpg"
+          alt="Unique Engineers team coordinating work on an active project site"
+          fill
+          priority
+          sizes="100vw"
+          className="ue-firm-redesign__hero-image"
+        />
+        <div className="ue-firm-redesign__hero-shade" aria-hidden="true" />
+        <div className="ue-container ue-firm-redesign__hero-inner">
+          <div className="ue-firm-redesign__hero-copy">
+            <p className="ue-firm-redesign__eyebrow">
+              The firm <span>·</span> Gurugram <span>·</span> Since 1990
+            </p>
+            <h1 id="firm-title">
+              Engineering discipline, run as a practice.
+            </h1>
+            <p className="ue-firm-redesign__hero-lead">
+              {FIRM.legalName} delivers complex infrastructure through
+              in-house civil, MEPF, solar and building-systems teams.
+            </p>
+            <div className="ue-firm-redesign__hero-actions">
+              <Link href="/work" className="ue-firm-redesign__hero-link">
+                Explore projects <ArrowRight aria-hidden />
+              </Link>
+              <Link
+                href="/contact"
+                className="ue-firm-redesign__hero-link ue-firm-redesign__hero-link--quiet"
               >
-                {ISO_CERTS.map((c) => (
-                  <span key={c} className="ue-chip">
-                    {c}
-                  </span>
-                ))}
-              </div>
+                Contact the team
+              </Link>
+            </div>
+          </div>
+
+          <dl className="ue-firm-redesign__hero-stats">
+            <div>
+              <dd>{YEARS_IN_PRACTICE}+</dd>
+              <dt>Years in practice</dt>
             </div>
             <div>
-              <div style={{ borderTop: "1px solid var(--border-color)" }}>
-                {record.map(([k, v]) => (
-                  <div
-                    key={k}
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "170px 1fr",
-                      padding: "18px 0",
-                      borderBottom: "1px solid var(--border-color)",
-                      alignItems: "baseline",
-                      gap: 16,
-                    }}
-                  >
-                    <span style={{ fontSize: 13, color: "var(--fg-muted)" }}>
-                      {k}
-                    </span>
-                    <span
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        fontWeight: 500,
-                        fontSize: 17,
-                        letterSpacing: "-0.012em",
-                        color: "var(--ink-950)",
-                      }}
-                    >
-                      {v}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <dd>{statesExecuted.length}</dd>
+              <dt>States executed</dt>
             </div>
+            <div>
+              <dd>₹450 Cr</dd>
+              <dt>Audited order book</dt>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section className="ue-firm-redesign__record" aria-label="Company record">
+        <div className="ue-container ue-firm-redesign__record-inner">
+          <div>
+            <span>Headquarters</span>
+            <strong>
+              {headquarters
+                ? `${headquarters.city}, ${headquarters.state ?? ""}`
+                : "Gurugram, Haryana"}
+            </strong>
+          </div>
+          <div>
+            <span>Operating region</span>
+            <strong>India + SAARC</strong>
+          </div>
+          <div>
+            <span>Delivery model</span>
+            <strong>In-house engineering teams</strong>
           </div>
         </div>
       </section>
 
-      {/* 2 — Journey timeline (centerpiece) */}
       <FirmJourneyTimeline milestones={journey} />
 
-      {/* 3 — Guiding principles */}
-      <section className="ue-section">
+      <section className="ue-firm-redesign__practice">
         <div className="ue-container">
-          <header style={{ marginBottom: 48 }}>
-            <p className="ue-eyebrow">Guiding principles</p>
-            <h2 className="ue-h2" style={{ marginTop: 8, maxWidth: "22ch" }}>
-              How the firm thinks before it builds.
-            </h2>
-          </header>
-          <div className="grid md:grid-cols-2 gap-10">
+          <header className="ue-firm-redesign__section-head">
             <div>
-              <div
-                style={{
-                  borderLeft: "3px solid var(--accent-500)",
-                  paddingLeft: 24,
-                  marginBottom: 32,
-                }}
-              >
-                <p
-                  className="ue-eyebrow"
-                  style={{ color: "var(--accent-500)" }}
-                >
-                  Vision
-                </p>
-                <p
-                  style={{
-                    marginTop: 8,
-                    fontSize: 17,
-                    lineHeight: 1.55,
-                    color: "var(--ink-700)",
-                  }}
-                >
+              <p className="ue-eyebrow">Guiding principles</p>
+              <h2>How the firm thinks before it builds.</h2>
+            </div>
+            <p>
+              Planning, execution and accountability are held to the same
+              standard on every site.
+            </p>
+          </header>
+
+          <div className="ue-firm-redesign__practice-grid">
+            <div className="ue-firm-redesign__purpose">
+              <article>
+                <p className="ue-firm-redesign__label">Vision</p>
+                <p>
                   To lead India&apos;s infrastructure evolution as the preferred
                   single-window partner for critical engineering systems —
                   setting the benchmark for reliability, sustainability and
                   scale.
                 </p>
-              </div>
-              <div
-                style={{
-                  borderLeft: "3px solid var(--accent-500)",
-                  paddingLeft: 24,
-                }}
-              >
-                <p
-                  className="ue-eyebrow"
-                  style={{ color: "var(--accent-500)" }}
-                >
-                  Mission
-                </p>
-                <p
-                  style={{
-                    marginTop: 8,
-                    fontSize: 17,
-                    lineHeight: 1.55,
-                    color: "var(--ink-700)",
-                  }}
-                >
+              </article>
+              <article>
+                <p className="ue-firm-redesign__label">Mission</p>
+                <p>
                   To de-risk complex infrastructure projects through precision
                   planning, transparent execution and future-ready technology —
                   so every project delivered operates at peak potential.
                 </p>
-              </div>
+              </article>
+              <figure>
+                <Image
+                  src="/firm/execution-excellence.jpg"
+                  alt="Engineers verifying execution quality on site"
+                  width={1000}
+                  height={650}
+                  sizes="(max-width: 800px) 100vw, 40vw"
+                />
+                <figcaption>Quality is verified at every inspection.</figcaption>
+              </figure>
             </div>
-            <div>
-              <p className="ue-eyebrow">Core values</p>
-              <FirmValuesCards values={VALUES} />
+
+            <div className="ue-firm-redesign__values">
+              <p className="ue-firm-redesign__label">Core values</p>
+              <ol>
+                {VALUES.map((value, i) => (
+                  <li key={value.title}>
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h3>{value.title}</h3>
+                      <p>{value.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4 — Leadership */}
-      <section
-        className="ue-section"
-        style={{
-          background: "var(--paper-soft)",
-          borderTop: "1px solid var(--border-color)",
-          borderBottom: "1px solid var(--border-color)",
-        }}
-      >
+      <section className="ue-firm-redesign__leadership">
         <div className="ue-container">
-          <header style={{ marginBottom: 48 }}>
-            <p className="ue-eyebrow">Leadership</p>
-            <h2 className="ue-h2" style={{ marginTop: 8, maxWidth: "22ch" }}>
-              The people behind the practice.
-            </h2>
-            <p
-              style={{
-                marginTop: 16,
-                fontSize: 17,
-                lineHeight: 1.55,
-                color: "var(--ink-700)",
-                maxWidth: "60ch",
-              }}
-            >
-              Founded and led by three engineers with decades of hands-on
-              delivery in the MEPF industry — directly engaged on tier-1
-              mandates across data centre, semiconductor and large-format
-              mixed-use projects.
+          <header className="ue-firm-redesign__section-head">
+            <div>
+              <p className="ue-eyebrow">Leadership</p>
+              <h2>The people behind the practice.</h2>
+            </div>
+            <p>
+              Founded and led by engineers with decades of hands-on MEPF
+              delivery, directly engaged on the firm&apos;s tier-one mandates.
             </p>
           </header>
           <LeadershipGrid leaders={leaders} />
         </div>
       </section>
 
-      {/* 5 — Pan-India presence */}
-      <section
-        className="ue-section"
-        style={{ background: "var(--ink-950)", color: "var(--paper)" }}
-      >
+      <section className="ue-firm-redesign__presence">
         <div className="ue-container">
-          <p className="ue-eyebrow" style={{ color: "var(--accent-400)" }}>
-            Pan-India presence
-          </p>
-          <h2
-            className="ue-h2"
-            style={{
-              marginTop: 12,
-              marginBottom: 24,
-              color: "var(--paper)",
-              maxWidth: "20ch",
-            }}
-          >
-            Rooted in India. Read internationally.
-          </h2>
-          <p
-            style={{
-              fontSize: 17,
-              lineHeight: 1.55,
-              color: "rgba(255,255,255,0.75)",
-              maxWidth: "56ch",
-              marginBottom: 48,
-            }}
-          >
-            Operating across {statesExecuted.length} states with registrations
-            in 16. Active projects in Bangladesh, Nepal and the Maldives.
-            Regional offices in Ahmedabad, Mumbai, Hyderabad, Bangalore and
-            Kolkata — supporting a 10-day pan-India mobilisation benchmark.
-          </p>
+          <header className="ue-firm-redesign__presence-head">
+            <p className="ue-firm-redesign__eyebrow">
+              Offices, projects and reach
+            </p>
+            <h2>Rooted in India. Read internationally.</h2>
+            <p>
+              Operating across {statesExecuted.length} states, with active
+              projects in Bangladesh, Nepal and the Maldives. Regional offices
+              support a 10-day pan-India mobilisation benchmark.
+            </p>
+          </header>
           <FirmPresenceMap offices={offices} statesExecuted={statesExecuted} />
         </div>
       </section>
 
-      {/* 6 — Certifications */}
-      <section className="ue-section">
+      <section className="ue-firm-redesign__certifications">
         <div className="ue-container">
-          <header style={{ marginBottom: 32 }}>
-            <p className="ue-eyebrow">Certifications</p>
-            <h2
-              className="ue-h2"
-              style={{
-                marginTop: 8,
-                maxWidth: "26ch",
-                fontSize: "clamp(28px, 3.2vw, 40px)",
-              }}
-            >
-              Quality, environment, safety — independently certified.
-            </h2>
+          <header className="ue-firm-redesign__section-head">
+            <div>
+              <p className="ue-eyebrow">Credentials</p>
+              <h2>Quality, environment and safety — independently certified.</h2>
+            </div>
+            <p>
+              Management systems and empanelments that support delivery across
+              regulated, high-accountability environments.
+            </p>
           </header>
-          <div className="grid md:grid-cols-3 gap-10">
-            {Object.entries(certsByCategory).map(([cat, items]) => (
-              <div key={cat}>
-                <p
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontWeight: 500,
-                    fontSize: 13,
-                    color: "var(--fg-muted)",
-                    margin: "0 0 12px",
-                  }}
-                >
-                  {cat}
-                </p>
-                <ul
-                  style={{
-                    margin: 0,
-                    padding: 0,
-                    listStyle: "none",
-                    borderTop: "1px solid var(--border-color)",
-                  }}
-                >
-                  {items.map((c) => (
-                    <li
-                      key={c.id}
-                      style={{
-                        padding: "12px 0",
-                        borderBottom: "1px solid var(--border-color)",
-                        fontFamily: "var(--font-display)",
-                        fontWeight: 500,
-                        fontSize: 16,
-                        letterSpacing: "-0.012em",
-                        color: "var(--ink-950)",
-                      }}
-                    >
-                      {c.name}
-                    </li>
+          <div className="ue-firm-redesign__cert-grid">
+            {Object.entries(certsByCategory).map(([category, items]) => (
+              <section key={category} aria-label={category}>
+                <h3>{category}</h3>
+                <ul>
+                  {items.map((certification) => (
+                    <li key={certification.id}>{certification.name}</li>
                   ))}
                 </ul>
-              </div>
+              </section>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 7 — Contact */}
       <ContactCTA />
-    </>
+    </main>
   );
 }

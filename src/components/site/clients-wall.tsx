@@ -30,7 +30,7 @@ export function ClientsWall() {
             const sector = c.primary_sector_id
               ? sectorById.get(c.primary_sector_id)
               : undefined;
-            const image = sector?.hero_image_url ?? null;
+            const image = c.hero_image_url ?? sector?.hero_image_url ?? null;
 
             return (
               <div

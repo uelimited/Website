@@ -124,6 +124,7 @@ export type Client = {
   id: string;
   name: string;
   logo_url?: string;
+  hero_image_url?: string;
   primary_sector_id?: string;
   website?: string;
   featured_on_home: boolean;

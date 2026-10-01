@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getAllSectors, getLedgerStatsForSector } from "@/lib/cms";
+import {
+  getAllSectors,
+  getJourney,
+  getLedgerStatsForSector,
+} from "@/lib/cms";
+import { FirmJourneyTimeline } from "@/components/site/firm-journey-timeline";
 import type { Sector } from "@/data/cms/types";
 import type { Metadata } from "next";
 
@@ -34,10 +39,12 @@ function withPriorityFirst(sectors: Sector[]): Sector[] {
 
 export default function SectorsIndexPage() {
   const sectors = withPriorityFirst(getAllSectors());
+  const journey = getJourney();
 
   return (
-    <section className="ue-section">
-      <div className="ue-container">
+    <>
+      <section className="ue-section">
+        <div className="ue-container">
         <p className="ue-eyebrow">Sectors</p>
         <h1 className="ue-h1" style={{ maxWidth: "18ch" }}>
           Nine sectors, one delivery standard.
@@ -181,7 +188,9 @@ export default function SectorsIndexPage() {
             );
           })}
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+      <FirmJourneyTimeline milestones={journey} />
+    </>
   );
 }

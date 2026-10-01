@@ -6,7 +6,7 @@
  * No React, no data imports — safe to import from server and client.
  *
  * URL param convention (the `/work` hub):
- *   ?q=<text>&sector=<sector-slug>&service=<short-key>&state=<name>&band=<key>
+ *   ?q=<text>&sector=<sector-slug>&sector=<sector-slug>&service=<short-key>&state=<name>&band=<key>
  * Sectors are keyed by their (clean) slug; services by the id with the
  * `svc-` prefix stripped (`svc-hvac` → `hvac`), which reads well in URLs.
  */
@@ -15,19 +15,19 @@ import type { LedgerEntry } from "@/data/cms/types";
 
 export type ViewMode = "list" | "cards";
 
-/** Canonical filter state. Ids are resolved (sector/service = cms id or "all"). */
+/** Canonical filter state. Sector/service contain selected CMS ids. */
 export type LedgerFilters = {
   q: string;
-  sector: string; // sector id, or "all"
-  service: string; // service id, or "all"
+  sector: string[];
+  service: string[];
   state: string; // state name, or "all"
   band: string; // value-band key, or "all"
 };
 
 export const EMPTY_FILTERS: LedgerFilters = {
   q: "",
-  sector: "all",
-  service: "all",
+  sector: [],
+  service: [],
   state: "all",
   band: "all",
 };
@@ -68,8 +68,8 @@ export function formatCr(cr: number): string {
 export function isFiltered(f: LedgerFilters): boolean {
   return (
     f.q.trim() !== "" ||
-    f.sector !== "all" ||
-    f.service !== "all" ||
+    f.sector.length > 0 ||
+    f.service.length > 0 ||
     f.state !== "all" ||
     f.band !== "all"
   );
@@ -83,8 +83,8 @@ export function filterLedger(
   const test = f.band !== "all" ? bandTest(f.band) : undefined;
   const q = f.q.trim().toLowerCase();
   return entries.filter((e) => {
-    if (f.sector !== "all" && e.sector_id !== f.sector) return false;
-    if (f.service !== "all" && !e.service_ids.includes(f.service)) return false;
+    if (f.sector.length > 0 && !f.sector.includes(e.sector_id)) return false;
+    if (f.service.length > 0 && !f.service.some((id) => e.service_ids.includes(id))) return false;
     if (f.state !== "all" && e.state !== f.state) return false;
     if (test && !test(e.value_cr)) return false;
     if (q) {
@@ -116,6 +116,7 @@ export type FeaturedCard = {
   serviceIds: string[];
   scopeTags: string[];
   heroImageUrl: string | null;
+  isRepresentativeImage: boolean;
   projectType: string;
 };
 
@@ -127,8 +128,8 @@ export function filterFeatured(
   const test = f.band !== "all" ? bandTest(f.band) : undefined;
   const q = f.q.trim().toLowerCase();
   return cards.filter((c) => {
-    if (f.sector !== "all" && !c.sectorIds.includes(f.sector)) return false;
-    if (f.service !== "all" && !c.serviceIds.includes(f.service)) return false;
+    if (f.sector.length > 0 && !f.sector.some((id) => c.sectorIds.includes(id))) return false;
+    if (f.service.length > 0 && !f.service.some((id) => c.serviceIds.includes(id))) return false;
     if (f.state !== "all" && c.state !== f.state) return false;
     if (test && !test(c.value_cr)) return false;
     if (q) {

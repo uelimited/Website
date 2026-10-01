@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getProjectHeroImage } from "@/lib/cms";
 import type { Project } from "@/data/cms/types";
 
 export function RelatedProjects({
@@ -45,31 +46,40 @@ export function RelatedProjects({
           gap: 24,
         }}
       >
-        {projects.map((p) => (
-          <Link
-            key={p.id}
-            href={`/projects/${p.slug}`}
-            className="group"
-            style={{
-              display: "block",
-              border: "1px solid var(--border-color)",
-              borderRadius: 12,
-              background: "var(--paper)",
-              textDecoration: "none",
-              color: "inherit",
-              overflow: "hidden",
-              transition: "border-color var(--dur-2) var(--ease-std)",
-            }}
-          >
+        {projects.map((p) => {
+          const image = getProjectHeroImage(p);
+          return (
+            <Link
+              key={p.id}
+              href={`/projects/${p.slug}`}
+              className="group"
+              style={{
+                display: "block",
+                border: "1px solid var(--border-color)",
+                borderRadius: 12,
+                background: "var(--paper)",
+                textDecoration: "none",
+                color: "inherit",
+                overflow: "hidden",
+                transition: "border-color var(--dur-2) var(--ease-std)",
+              }}
+            >
             <div
               style={{
                 aspectRatio: "16 / 10",
-                background: p.hero_image_url
-                  ? `url(${p.hero_image_url}) center/cover no-repeat`
+                position: "relative",
+                background: image
+                  ? `url(${image}) center/cover no-repeat`
                   : "var(--ink-100)",
                 borderBottom: "1px solid var(--border-color)",
               }}
-            />
+            >
+              {!p.hero_image_url && image && (
+                <span className="ue-work-card__cover-label">
+                  Representative image
+                </span>
+              )}
+            </div>
             <div style={{ padding: "20px 22px 24px" }}>
               <div
                 style={{
@@ -125,8 +135,9 @@ export function RelatedProjects({
                 />
               </div>
             </div>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

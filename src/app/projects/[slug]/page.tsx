@@ -2,7 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getAllProjects, getProjectWithContext } from "@/lib/cms";
+import {
+  getAllProjects,
+  getProjectHeroImage,
+  getProjectWithContext,
+} from "@/lib/cms";
 import { Breadcrumb } from "@/components/site/breadcrumb";
 import { RelatedProjects } from "@/components/site/related-projects";
 import type { Metadata } from "next";
@@ -37,6 +41,7 @@ export default async function ProjectDetailPage({
   if (!data) notFound();
   const { project, services, sectors, client, related } = data;
   const primarySector = sectors.find((s) => s.is_primary)?.sector;
+  const heroImage = getProjectHeroImage(project);
 
   return (
     <>
@@ -45,8 +50,8 @@ export default async function ProjectDetailPage({
         style={{
           position: "relative",
           minHeight: "60vh",
-          background: project.hero_image_url
-            ? `linear-gradient(180deg, rgba(10,12,16,0.15) 0%, rgba(10,12,16,0.7) 100%), url(${project.hero_image_url}) center/cover no-repeat`
+          background: heroImage
+            ? `linear-gradient(180deg, rgba(10,12,16,0.15) 0%, rgba(10,12,16,0.7) 100%), url(${heroImage}) center/cover no-repeat`
             : "var(--ink-950)",
           color: "var(--paper)",
           display: "flex",
@@ -55,6 +60,23 @@ export default async function ProjectDetailPage({
           paddingTop: 96,
         }}
       >
+        {!project.hero_image_url && heroImage && (
+          <span
+            style={{
+              position: "absolute",
+              top: 24,
+              right: 24,
+              padding: "6px 10px",
+              border: "1px solid rgba(255,255,255,0.45)",
+              borderRadius: 999,
+              background: "rgba(10,12,16,0.45)",
+              color: "var(--paper)",
+              fontSize: 11,
+            }}
+          >
+            Representative image
+          </span>
+        )}
         <div className="ue-container" style={{ width: "100%" }}>
           <div
             style={{

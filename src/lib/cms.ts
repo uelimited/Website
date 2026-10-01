@@ -274,6 +274,11 @@ export function getSectorsForProject(projectId: string): {
     );
 }
 
+export function getProjectHeroImage(project: Project): string | null {
+  if (project.hero_image_url) return project.hero_image_url;
+  return getSectorsForProject(project.id)[0]?.sector.hero_image_url ?? null;
+}
+
 // -----------------------------------------------------------------
 // Clients
 // -----------------------------------------------------------------
@@ -591,6 +596,7 @@ export function getWorkHubData(): {
     const secs = getSectorsForProject(p.id);
     const svcs = getServicesForProject(p.id);
     const primary = secs.find((s) => s.is_primary) ?? secs[0];
+    const heroImageUrl = getProjectHeroImage(p);
     return {
       slug: p.slug,
       name: p.name,
@@ -602,7 +608,8 @@ export function getWorkHubData(): {
       sectorIds: secs.map((s) => s.sector.id),
       serviceIds: svcs.map((s) => s.service.id),
       scopeTags: p.scope_tags.slice(0, 4),
-      heroImageUrl: p.hero_image_url ?? null,
+      heroImageUrl,
+      isRepresentativeImage: !p.hero_image_url && Boolean(heroImageUrl),
       projectType: p.project_type,
     };
   });

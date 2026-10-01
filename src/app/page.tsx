@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { OVERVIEW } from "@/data/firm";
-import { getAllSectors, getLedgerStatsForSector } from "@/lib/cms";
+import { getAllSectors, getJourney, getLedgerStatsForSector } from "@/lib/cms";
 import { HeroVideo } from "@/components/site/hero-video";
 import { StatsGrid } from "@/components/site/stat-counter";
 import { ServicesScroll } from "@/components/site/services-scroll";
@@ -10,7 +10,7 @@ import { SectorsScroll } from "@/components/site/sectors-scroll";
 import { WhyPillars } from "@/components/site/why-pillars";
 import { LandmarkProjects } from "@/components/site/landmark-projects";
 import { ClientsWall } from "@/components/site/clients-wall";
-import { JourneyStrip } from "@/components/site/journey-strip";
+import { FirmJourneyTimeline } from "@/components/site/firm-journey-timeline";
 import { TestimonialsBand } from "@/components/site/testimonials-band";
 import { ContactCTA } from "@/components/site/contact-cta";
 
@@ -20,6 +20,7 @@ export default function HomePage() {
   // (projects_count_override / revenue_cr_override) that don't reconcile
   // with the ₹3,422 Cr ledger total shown everywhere else on the site.
   const sectors = getAllSectors();
+  const journey = getJourney();
   const sectorStats = Object.fromEntries(
     sectors.map((s) => [s.id, getLedgerStatsForSector(s.id)]),
   );
@@ -40,7 +41,7 @@ export default function HomePage() {
                 className="rounded-full h-11 px-6 text-[15px] font-medium"
               >
                 <Link href="/work">
-                  Explore the work
+                  Explore the projects
                   <ArrowRight className="size-4 ml-1" aria-hidden />
                 </Link>
               </Button>
@@ -73,8 +74,8 @@ export default function HomePage() {
       {/* Clients wall */}
       <ClientsWall />
 
-      {/* Compressed journey strip */}
-      <JourneyStrip />
+      {/* Firm journey timeline */}
+      <FirmJourneyTimeline milestones={journey} />
 
       {/* Testimonials */}
       <TestimonialsBand />

@@ -327,7 +327,8 @@ export const PILLARS = [
 export const NAV = [
   { href: "/services", label: "Capabilities", menu: "capabilities" as const },
   { href: "/sectors", label: "Sectors", menu: "sectors" as const },
-  { href: "/work", label: "Work" },
+  { href: "/work", label: "Projects" },
+  { href: "/firm/culture", label: "Culture" },
   { href: "/firm", label: "The firm" },
 ];
 

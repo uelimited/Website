@@ -62,8 +62,8 @@ export function ServicesScroll() {
     const scaled = v * (n - 1);
     const idx = Math.min(n - 2, Math.max(0, Math.floor(scaled)));
     const localP = scaled - idx;
-    const dwellIn = 0.1;
-    const dwellOut = 0.9;
+    const dwellIn = 0.18;
+    const dwellOut = 0.82;
     let eased: number;
     if (localP <= dwellIn) {
       eased = 0;
@@ -145,10 +145,10 @@ export function ServicesScroll() {
                   <motion.div
                     key={current.slug}
                     className="ue-svc-scroll__bg"
-                    initial={{ opacity: 0, scale: 1.18 }}
+                    initial={{ opacity: 0, scale: 1.08 }}
                     animate={{
                       opacity: 1,
-                      scale: 1.06,
+                      scale: 1.02,
                       transition: {
                         opacity: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
                         scale: { duration: 4.5, ease: "easeOut" },
@@ -156,7 +156,7 @@ export function ServicesScroll() {
                     }}
                     exit={{
                       opacity: 0,
-                      scale: 1.12,
+                      scale: 1.04,
                       transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
                     }}
                   >

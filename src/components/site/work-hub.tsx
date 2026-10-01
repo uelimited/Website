@@ -83,20 +83,18 @@ export function WorkHub({
 
   // The URL is the single source of truth for the resolved filter state.
   const filters: LedgerFilters = useMemo(() => {
-    const sectorParam = searchParams.get("sector");
-    const serviceParam = searchParams.get("service");
+    const sectorParams = searchParams.getAll("sector");
+    const serviceParams = searchParams.getAll("service");
     const stateParam = searchParams.get("state");
     const bandParam = searchParams.get("band");
     return {
       q: searchParams.get("q") ?? "",
-      sector:
-        sectorParam && maps.sectorIdByParam[sectorParam]
-          ? maps.sectorIdByParam[sectorParam]
-          : "all",
-      service:
-        serviceParam && maps.serviceIdByParam[serviceParam]
-          ? maps.serviceIdByParam[serviceParam]
-          : "all",
+      sector: sectorParams
+        .map((param) => maps.sectorIdByParam[param])
+        .filter((id): id is string => Boolean(id)),
+      service: serviceParams
+        .map((param) => maps.serviceIdByParam[param])
+        .filter((id): id is string => Boolean(id)),
       state: stateParam && states.includes(stateParam) ? stateParam : "all",
       band:
         bandParam && VALUE_BANDS.some((b) => b.key === bandParam)
@@ -109,11 +107,15 @@ export function WorkHub({
 
   // --- URL writers (replace, never push — filters shouldn't spam history) ---
   const commit = useCallback(
-    (patch: Record<string, string | null>) => {
+    (patch: Record<string, string | string[] | null>) => {
       const p = new URLSearchParams(searchParams.toString());
       for (const [k, val] of Object.entries(patch)) {
-        if (val === null || val === "") p.delete(k);
-        else p.set(k, val);
+        p.delete(k);
+        if (Array.isArray(val)) {
+          val.forEach((item) => p.append(k, item));
+        } else if (val !== null && val !== "") {
+          p.set(k, val);
+        }
       }
       const qs = p.toString();
       router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
@@ -205,7 +207,7 @@ export function WorkHub({
       <section className="ue-work-hero">
         <div className="ue-container">
           <p className="ue-eyebrow" style={{ margin: 0 }}>
-            Work
+            Projects
           </p>
           <h1 className="ue-work-hero__title">Every project, delivered.</h1>
           <p className="ue-work-hero__lead">
@@ -252,10 +254,13 @@ export function WorkHub({
               label="Sector"
               options={sectorOptions.map((o) => ({ id: o.id, name: o.name }))}
               value={filters.sector}
-              onChange={(id) =>
+              onChange={(ids) =>
                 commit({
-                  sector:
-                    id === "all" ? null : (maps.sectorParamById[id] ?? null),
+                  sector: ids.flatMap((id) =>
+                    maps.sectorParamById[id]
+                      ? [maps.sectorParamById[id]]
+                      : [],
+                  ),
                 })
               }
             />
@@ -263,10 +268,13 @@ export function WorkHub({
               label="Service"
               options={serviceOptions.map((o) => ({ id: o.id, name: o.name }))}
               value={filters.service}
-              onChange={(id) =>
+              onChange={(ids) =>
                 commit({
-                  service:
-                    id === "all" ? null : (maps.serviceParamById[id] ?? null),
+                  service: ids.flatMap((id) =>
+                    maps.serviceParamById[id]
+                      ? [maps.serviceParamById[id]]
+                      : [],
+                  ),
                 })
               }
             />

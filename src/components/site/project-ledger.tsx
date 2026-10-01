@@ -61,8 +61,8 @@ export function ProjectLedger({
   sectorSlugById,
 }: ProjectLedgerProps) {
   const [query, setQuery] = useState("");
-  const [sector, setSector] = useState<string>("all");
-  const [service, setService] = useState<string>("all");
+  const [sector, setSector] = useState<string[]>([]);
+  const [service, setService] = useState<string[]>([]);
   const [expanded, setExpanded] = useState(false);
 
   const filters: LedgerFilters = useMemo(

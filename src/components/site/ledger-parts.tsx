@@ -97,7 +97,7 @@ export function LedgerSearch({
 }
 
 // -----------------------------------------------------------------
-// Chip row — single-select toggle chips with aria-pressed
+// Chip row — multi-select toggle chips with aria-pressed
 // -----------------------------------------------------------------
 
 export function ChipRow({
@@ -109,8 +109,8 @@ export function ChipRow({
 }: {
   label: string;
   options: ChipOption[];
-  value: string;
-  onChange: (v: string) => void;
+  value: string[];
+  onChange: (v: string[]) => void;
   includeAll?: boolean;
 }) {
   const opts = includeAll ? [{ id: "all", name: "All" }, ...options] : options;
@@ -138,13 +138,21 @@ export function ChipRow({
         {label}
       </span>
       {opts.map((o) => {
-        const active = value === o.id;
+        const active = o.id === "all" ? value.length === 0 : value.includes(o.id);
         return (
           <button
             key={o.id}
             type="button"
             aria-pressed={active}
-            onClick={() => onChange(o.id)}
+            onClick={() =>
+              onChange(
+                o.id === "all"
+                  ? []
+                  : active
+                    ? value.filter((id) => id !== o.id)
+                    : [...value, o.id],
+              )
+            }
             className="ue-filter-chip"
             data-active={active ? "" : undefined}
           >
@@ -495,8 +503,10 @@ export function FeaturedCardView({ card }: { card: FeaturedCard }) {
             : "var(--ink-100)",
         }}
       >
-        {!card.heroImageUrl && (
-          <span className="ue-work-card__cover-label">Photography</span>
+        {(card.isRepresentativeImage || !card.heroImageUrl) && (
+          <span className="ue-work-card__cover-label">
+            {card.isRepresentativeImage ? "Representative image" : "Photography"}
+          </span>
         )}
       </div>
       <div className="ue-work-card__body">
