@@ -5135,6 +5135,19 @@ body {
   background: var(--paper-soft);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+.ue-mobile-firm-links {
+  display: grid;
+  gap: 4px;
+  padding: 8px 0 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+.ue-mobile-firm-links a {
+  padding: 8px 0;
+  color: var(--ink-700);
+  font-size: 15px;
+  text-decoration: none;
 }
 .ue-firm-redesign__presence {
   padding: 112px 0;

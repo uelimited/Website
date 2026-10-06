@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils";
 type NavItem = {
   href: string;
   label: string;
-  menu?: "capabilities" | "sectors";
+  menu?: "capabilities" | "sectors" | "firm";
 };
 
 export function SiteHeader() {
@@ -53,8 +53,8 @@ export function SiteHeader() {
           <Wordmark />
         </Link>
 
-        {/* Desktop nav — four peers (Capabilities, Sectors, Work, The firm).
-            Capabilities and Sectors open mega-menus; the rest are links.
+        {/* Desktop nav — Capabilities, Sectors, and The firm open menus;
+          Projects and Culture remain direct links.
             The wordmark is the home link, so Home is not repeated. */}
         <NavigationMenu className="hidden md:flex ml-auto" align="start">
           <NavigationMenuList className="gap-0">
@@ -72,8 +72,10 @@ export function SiteHeader() {
                   <NavigationMenuContent className="p-0">
                     {item.menu === "sectors" ? (
                       <SectorsMenu />
-                    ) : (
+                    ) : item.menu === "capabilities" ? (
                       <CapabilitiesMenu />
+                    ) : (
+                      <FirmMenu />
                     )}
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -191,6 +193,80 @@ function SectorsMenu() {
   );
 }
 
+function FirmMenu() {
+  return (
+    <div className="ue-services-menu">
+      <div className="ue-services-menu__head">
+        <div className="ue-eyebrow" style={{ margin: 0 }}>
+          The firm
+        </div>
+        <p
+          className="text-[color:var(--ink-500)]"
+          style={{ fontSize: 14, margin: "8px 0 0", maxWidth: "36ch" }}
+        >
+          Meet the people and explore opportunities at Unique Engineers.
+        </p>
+      </div>
+      <div className="ue-services-menu__grid">
+        <NavigationMenuLink
+          render={<Link href="/careers" />}
+          className="ue-services-menu__item group"
+        >
+          <span className="num">01</span>
+          <span className="body">
+            <span className="name">Careers</span>
+            <span className="blurb">
+              Build critical infrastructure with the team.
+            </span>
+          </span>
+        </NavigationMenuLink>
+        <NavigationMenuLink
+          render={<Link href="/firm#our-story" />}
+          className="ue-services-menu__item group"
+        >
+          <span className="num">02</span>
+          <span className="body">
+            <span className="name">Our Story</span>
+            <span className="blurb">See the history and momentum behind the firm.</span>
+          </span>
+        </NavigationMenuLink>
+        <NavigationMenuLink
+          render={<Link href="/firm#how-we-deliver" />}
+          className="ue-services-menu__item group"
+        >
+          <span className="num">03</span>
+          <span className="body">
+            <span className="name">How We Deliver</span>
+            <span className="blurb">
+              Precision planning, execution and accountability on every site.
+            </span>
+          </span>
+        </NavigationMenuLink>
+        <NavigationMenuLink
+          render={<Link href="/firm#leadership" />}
+          className="ue-services-menu__item group"
+        >
+          <span className="num">04</span>
+          <span className="body">
+            <span className="name">Our Leadership</span>
+            <span className="blurb">
+              Meet the engineers behind the practice.
+            </span>
+          </span>
+        </NavigationMenuLink>
+      </div>
+      <div className="ue-services-menu__foot">
+        <Link
+          href="/firm"
+          className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
+        >
+          Firm overview <ArrowRight className="size-3.5" aria-hidden />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 function MobileMenu() {
   const primary = NAV as NavItem[];
   return (
@@ -209,13 +285,22 @@ function MobileMenu() {
           <SheetTitle className="sr-only">Navigation</SheetTitle>
           <div className="pt-12 px-6 flex flex-col gap-1">
             {primary.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="py-3 text-[17px] font-medium text-[color:var(--ink-950)] border-b border-[color:var(--border-color)]"
-              >
-                {item.label}
-              </Link>
+              <div key={item.href}>
+                <Link
+                  href={item.href}
+                  className="block py-3 text-[17px] font-medium text-[color:var(--ink-950)] border-b border-[color:var(--border-color)]"
+                >
+                  {item.label}
+                </Link>
+                {item.menu === "firm" && (
+                  <div className="ue-mobile-firm-links">
+                    <Link href="/careers">Careers</Link>
+                    <Link href="/firm#our-story">Our Story</Link>
+                    <Link href="/firm#how-we-deliver">How We Deliver</Link>
+                    <Link href="/firm#leadership">Our Leadership</Link>
+                  </div>
+                )}
+              </div>
             ))}
             {/* Sector quick-links — surface the high-value verticals directly */}
             <div className="pt-5 pb-1 text-[12px] font-medium tracking-[0.02em] text-[color:var(--ink-400)]">

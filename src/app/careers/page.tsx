@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/site/breadcrumb";
+import { FIRM } from "@/data/firm";
 import {
   CAREERS_HERO,
   CAREERS_PITCH,
@@ -11,7 +12,6 @@ import {
   CAREERS_GROWTH,
   CAREERS_LIFE_IMAGES,
   CAREERS_PATHS,
-  EMPLOYEE_VOICES,
 } from "@/data/careers";
 
 export const metadata: Metadata = {
@@ -322,92 +322,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Employee voices */}
-      <section style={{ padding: "96px 0" }}>
-        <div className="ue-container">
-          <header style={{ marginBottom: 40 }}>
-            <p className="ue-eyebrow">In their words</p>
-            <h2
-              style={{
-                fontFamily: "var(--font-display)",
-                fontWeight: 500,
-                fontSize: "clamp(28px, 3vw, 38px)",
-                letterSpacing: "-0.022em",
-                lineHeight: 1.1,
-                margin: "8px 0 0",
-                color: "var(--ink-950)",
-                maxWidth: "22ch",
-              }}
-            >
-              From the people who build here.
-            </h2>
-          </header>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-              gap: 20,
-            }}
-          >
-            {EMPLOYEE_VOICES.map((v, i) => (
-              <figure
-                key={i}
-                style={{
-                  margin: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  padding: "28px 28px 26px",
-                  border: "1px solid var(--border-color)",
-                  borderRadius: 14,
-                  background: "var(--paper)",
-                }}
-              >
-                <blockquote
-                  style={{
-                    margin: 0,
-                    flex: 1,
-                    fontFamily: "var(--font-display)",
-                    fontSize: 18,
-                    fontWeight: 450,
-                    lineHeight: 1.5,
-                    letterSpacing: "-0.012em",
-                    color: "var(--ink-950)",
-                  }}
-                >
-                  &ldquo;{v.quote}&rdquo;
-                </blockquote>
-                <figcaption
-                  style={{
-                    marginTop: 22,
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 12,
-                  }}
-                >
-                  <Avatar name={v.name} photo={v.photo} />
-                  <div>
-                    <div
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        fontWeight: 500,
-                        fontSize: 15,
-                        letterSpacing: "-0.01em",
-                        color: "var(--ink-950)",
-                      }}
-                    >
-                      {v.name}
-                    </div>
-                    <div style={{ fontSize: 13, color: "var(--ink-500)" }}>
-                      {v.role} · {v.tenure}
-                    </div>
-                  </div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Growth band */}
       <section
         className="ue-section"
@@ -522,7 +436,7 @@ export default function CareersPage() {
                 }}
               >
                 Fresh out of college or fifteen years in — if you&apos;re good
-                and you want to get better, there&apos;s a bench for you.
+                and you want to get better, a bench is waiting for you.
               </p>
             </div>
             <ul
@@ -554,101 +468,88 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section
-        className="ue-section"
-        style={{
-          background: "var(--accent-500)",
-          color: "var(--paper)",
-        }}
-      >
-        <div
-          className="ue-container"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 24,
-            alignItems: "flex-start",
-          }}
-        >
-          <p
-            className="ue-eyebrow"
-            style={{ color: "rgba(255,255,255,0.85)", margin: 0 }}
-          >
-            Think you&apos;d fit
-          </p>
-          <h2
+      {/* CV submission */}
+      <section style={{ padding: "88px 0" }}>
+        <div className="ue-container">
+          <div
             style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 500,
-              fontSize: "clamp(36px, 4.5vw, 56px)",
-              letterSpacing: "-0.026em",
-              lineHeight: 1.02,
-              margin: 0,
-              maxWidth: "18ch",
-              color: "var(--paper)",
+              position: "relative",
+              border: "1px solid var(--border-color)",
+              borderRadius: 22,
+              background:
+                "linear-gradient(135deg, rgba(242,245,248,0.96) 0%, rgba(255,255,255,0.98) 100%)",
+              padding: "34px clamp(20px, 4vw, 46px)",
+              display: "grid",
+              gap: 22,
+              boxShadow: "0 18px 40px rgba(14, 25, 35, 0.06)",
             }}
           >
-            Let&apos;s see where you could go here.
-          </h2>
-          <p
-            style={{
-              fontSize: 17,
-              lineHeight: 1.55,
-              color: "rgba(255,255,255,0.9)",
-              margin: 0,
-              maxWidth: "52ch",
-            }}
-          >
-            Share a little about yourself and what you want to build. Every
-            message is read — and if there&apos;s a fit, you&apos;ll hear from
-            an engineer, not a bot.
-          </p>
-          <Button
-            asChild
-            className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--paper)] text-[color:var(--accent-700)] hover:bg-[color:var(--ink-100)]"
-          >
-            <Link href="/contact">
-              Start a conversation
-              <ArrowRight className="size-4 ml-1" aria-hidden />
-            </Link>
-          </Button>
+            <div style={{ display: "grid", gap: 12 }}>
+              <p className="ue-eyebrow">Working at UNIQUE</p>
+              <h2
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 500,
+                  fontSize: "clamp(30px, 3.3vw, 44px)",
+                  letterSpacing: "-0.022em",
+                  lineHeight: 1.08,
+                  margin: 0,
+                  color: "var(--ink-950)",
+                  maxWidth: "16ch",
+                }}
+              >
+                Build the work that changes the skyline.
+              </h2>
+            </div>
+            <p
+              style={{
+                margin: 0,
+                fontSize: 17,
+                lineHeight: 1.7,
+                color: "var(--ink-700)",
+                maxWidth: "60ch",
+              }}
+            >
+              For engineers who want more than a title — a room to grow, a team
+              that values execution, and projects that make a real difference.
+              Share your CV and we&apos;ll be in touch when there&apos;s a fit.
+            </p>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 16,
+                alignItems: "center",
+              }}
+            >
+              <Button
+                asChild
+                className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--accent-500)] text-[color:var(--paper)] hover:bg-[color:var(--accent-600)] shadow-[0_12px_26px_rgba(194,46,30,0.25)]"
+              >
+                <a
+                  href={`mailto:${FIRM.contactEmail}?subject=${encodeURIComponent("Career enquiry")}`}
+                >
+                  Working at UNIQUE
+                  <ArrowRight className="size-4 ml-1" aria-hidden />
+                </a>
+              </Button>
+              <a
+                href={`mailto:${FIRM.contactEmail}`}
+                style={{
+                  fontSize: 15,
+                  color: "var(--accent-700)",
+                  fontWeight: 500,
+                  textDecoration: "underline",
+                  textUnderlineOffset: 3,
+                }}
+              >
+                {FIRM.contactEmail}
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-    </>
-  );
-}
 
-/** Round headshot; falls back to a clean initials chip when photo is "". */
-function Avatar({ name, photo }: { name: string; photo: string }) {
-  const initials = name
-    .replace(/^Sample.*$/i, "UE")
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((w) => w[0]?.toUpperCase() ?? "")
-    .join("");
-  return (
-    <div
-      aria-hidden
-      style={{
-        width: 44,
-        height: 44,
-        borderRadius: 999,
-        flexShrink: 0,
-        background: photo
-          ? `url(${photo}) center/cover no-repeat`
-          : "var(--accent-50)",
-        border: "1px solid var(--border-color)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: "var(--font-display)",
-        fontWeight: 500,
-        fontSize: 14,
-        color: "var(--accent-700)",
-      }}
-    >
-      {!photo && initials}
-    </div>
+    </>
   );
 }

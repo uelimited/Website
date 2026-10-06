@@ -329,7 +329,7 @@ export const NAV = [
   { href: "/sectors", label: "Sectors", menu: "sectors" as const },
   { href: "/work", label: "Projects" },
   { href: "/firm/culture", label: "Culture" },
-  { href: "/firm", label: "The firm" },
+  { href: "/firm", label: "The firm", menu: "firm" as const },
 ];
 
 /** Sectors mega-menu — lead with the high-value verticals (data centre,

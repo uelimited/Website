@@ -133,9 +133,11 @@ export default function FirmPage() {
         </div>
       </section>
 
-      <FirmJourneyTimeline milestones={journey} />
+      <section id="our-story" style={{ scrollMarginTop: "calc(var(--header-h) + 24px)" }}>
+        <FirmJourneyTimeline milestones={journey} />
+      </section>
 
-      <section className="ue-firm-redesign__practice">
+      <section id="how-we-deliver" className="ue-firm-redesign__practice" style={{ scrollMarginTop: "calc(var(--header-h) + 24px)" }}>
         <div className="ue-container">
           <header className="ue-firm-redesign__section-head">
             <div>
@@ -197,12 +199,19 @@ export default function FirmPage() {
         </div>
       </section>
 
-      <section className="ue-firm-redesign__leadership">
+      <section
+        id="leadership"
+        className="ue-firm-redesign__leadership"
+        aria-labelledby="firm-leadership-heading"
+        style={{ scrollMarginTop: "calc(var(--header-h) + 24px)" }}
+      >
         <div className="ue-container">
           <header className="ue-firm-redesign__section-head">
             <div>
               <p className="ue-eyebrow">Leadership</p>
-              <h2>The people behind the practice.</h2>
+              <h2 id="firm-leadership-heading">
+                The people behind the practice.
+              </h2>
             </div>
             <p>
               Founded and led by engineers with decades of hands-on MEPF
