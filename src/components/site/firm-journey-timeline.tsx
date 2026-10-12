@@ -41,11 +41,12 @@ export function FirmJourneyTimeline({
             id="firm-timeline-heading"
             className="ue-h2 ue-firm-timeline__title"
           >
-            Thirty-five years, ten inflection points.
+            Thirty-five years of engineering precision, built step by step.
           </h2>
           <p className="ue-firm-timeline__kicker">
-            From a specialist HVAC contractor in 1990 to a multi-discipline EPC
-            firm executing data centre and semiconductor mandates today.
+            From a focused HVAC practice to a multi-disciplinary EPC firm trusted
+            on India&apos;s most demanding infrastructure and mission-critical
+            projects.
           </p>
         </header>
 

@@ -2,71 +2,71 @@
   {
     "id": "j-1990",
     "year": "1990",
-    "title": "Foundation",
-    "description": "Establishment of the company in Gurugram by three engineer co-founders, as a specialist HVAC contractor.",
+    "title": "Founded with focus",
+    "description": "Established in Gurugram by three engineers with a clear objective: deliver HVAC systems with precision and integrity.",
     "sort_order": 1
   },
   {
     "id": "j-1993",
     "year": "1993",
-    "title": "National Recognition",
-    "description": "Expanded operations across the nation, taking on HVAC mandates beyond the National Capital Region.",
+    "title": "Growing reach",
+    "description": "Expanded beyond NCR, building trust for HVAC work across India and strengthening delivery capability.",
     "sort_order": 2
   },
   {
     "id": "j-1995",
     "year": "1995",
-    "title": "Global Recognition",
-    "description": "HVAC partner for NTPC and BHEL, awarded by Rolls Royce Power Engineering Group, UK.",
+    "title": "Industry recognition",
+    "description": "Earned credibility with major power and industrial clients, including partnerships with leading national and global engineering teams.",
     "sort_order": 3
   },
   {
     "id": "j-2005",
     "year": "2005",
-    "title": "Vertical Integration",
-    "description": "Started in-house manufacturing of Air Handling Units (AHUs) and Air Washer Units.",
+    "title": "Vertical integration",
+    "description": "Brought AHU and air washer manufacturing in-house to improve performance, quality control and project certainty.",
     "sort_order": 4
   },
   {
     "id": "j-2010",
     "year": "2010",
-    "title": "Commonwealth Projects",
-    "description": "HVAC service provider for stadiums and hotels supporting the 2010 Commonwealth Games in Delhi.",
+    "title": "A national stage",
+    "description": "Supported stadium and hospitality HVAC works for the 2010 Commonwealth Games in Delhi, demonstrating large-scale execution under pressure.",
     "sort_order": 5
   },
   {
     "id": "j-2012-18",
     "year": "2012–2018",
-    "title": "Expansion into MEPF",
-    "description": "Scaled from specialised HVAC service to comprehensive multi-discipline MEPF solutions, strengthening nationwide execution capacity.",
+    "title": "MEPF expansion",
+    "description": "Extended from specialist HVAC into a broader MEPF capability, creating the integrated delivery model used today.",
     "sort_order": 6
   },
   {
     "id": "j-2019",
     "year": "2019",
-    "title": "Large-Scale MEPF Milestone",
-    "description": "Awarded MEPF contract for Mopa International Airport — a significant step into high-value, large-scale infrastructure execution.",
+    "title": "Airport scale",
+    "description": "Delivered major MEPF works for Mopa International Airport, marking a significant step into large infrastructure execution.",
     "sort_order": 7
   },
   {
     "id": "j-2020",
     "year": "2020",
-    "title": "Critical Pandemic Support",
-    "description": "Led pandemic-support operations through continuous HVAC O&M across NCR hospitals — uninterrupted facility uptime under the most demanding conditions.",
+    "title": "Critical continuity",
+    "description": "Maintained essential HVAC operations across NCR hospitals and healthcare facilities, ensuring uninterrupted service during the pandemic.",
     "sort_order": 8
   },
   {
     "id": "j-2023",
     "year": "2023",
-    "title": "Entered Data Centre Vertical",
-    "description": "Entered the data centre sector with STT Mumbai (₹30+ Cr), expanding into high-uptime, mission-critical infrastructure.",
+    "title": "Data centre entry",
+    "description": "Entered the data centre sector with mission-critical projects, bringing uptime-first engineering to a new vertical.",
     "sort_order": 9
   },
   {
     "id": "j-2024",
     "year": "2024",
-    "title": "Entered Semiconductor Vertical",
-    "description": "Entered the semiconductor industry, executing Class 1000 cleanroom infrastructure projects for Foxconn (Apple) in Bangalore.",
+    "title": "Semiconductor growth",
+    "description": "Expanded into semiconductor infrastructure, delivering cleanroom and support systems for advanced electronics manufacturing.",
     "sort_order": 10
   }
 ]

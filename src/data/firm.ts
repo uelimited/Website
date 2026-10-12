@@ -318,16 +318,15 @@ export const PILLARS = [
 ];
 
 /**
- * Primary navigation — collapsed to four peers + the Contact CTA (the
- * wordmark is the home link). "Capabilities" and "Sectors" open
- * mega-menus in the header. "Work" is the unified case-study + order-book
- * hub at /work (merges the former /projects + /track-record). Approach +
- * Culture fold into The firm / footer.
+ * Primary navigation — the wordmark is the home link. "Capabilities" and
+ * "Sectors" open mega-menus; "Work" is the unified case-study + order-book
+ * hub at /work (merges the former /projects + /track-record).
  */
 export const NAV = [
   { href: "/services", label: "Capabilities", menu: "capabilities" as const },
   { href: "/sectors", label: "Sectors", menu: "sectors" as const },
   { href: "/work", label: "Projects" },
+  { href: "/investors", label: "Investors" },
   { href: "/firm/culture", label: "Culture" },
   { href: "/firm", label: "The firm", menu: "firm" as const },
 ];

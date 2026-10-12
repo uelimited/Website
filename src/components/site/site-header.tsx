@@ -56,7 +56,7 @@ export function SiteHeader() {
         {/* Desktop nav — Capabilities, Sectors, and The firm open menus;
           Projects and Culture remain direct links.
             The wordmark is the home link, so Home is not repeated. */}
-        <NavigationMenu className="hidden md:flex ml-auto" align="start">
+        <NavigationMenu className="hidden lg:flex ml-auto" align="start">
           <NavigationMenuList className="gap-0">
             {(NAV as NavItem[]).map((item) =>
               item.menu ? (
@@ -97,7 +97,7 @@ export function SiteHeader() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="ml-auto md:ml-4 flex items-center gap-2">
+        <div className="ml-auto lg:ml-4 flex items-center gap-2">
           <Button
             asChild
             className="rounded-full px-5 h-9 text-[14px] font-medium"
@@ -227,7 +227,9 @@ function FirmMenu() {
           <span className="num">02</span>
           <span className="body">
             <span className="name">Our Story</span>
-            <span className="blurb">See the history and momentum behind the firm.</span>
+            <span className="blurb">
+              See the history and momentum behind the firm.
+            </span>
           </span>
         </NavigationMenuLink>
         <NavigationMenuLink
@@ -270,7 +272,7 @@ function FirmMenu() {
 function MobileMenu() {
   const primary = NAV as NavItem[];
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <Sheet>
         <SheetTrigger
           aria-label="Open menu"

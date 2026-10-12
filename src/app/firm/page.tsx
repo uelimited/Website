@@ -40,6 +40,82 @@ const VALUES = [
   },
 ];
 
+const EXECUTIVE_LEADERSHIP = [
+  {
+    name: "Brajesh Kumar Gupta",
+    role: "Chief Financial Officer (CFO)",
+    image: "/firm/team-on-site.jpg",
+    imagePosition: "center center",
+    functions: [
+      "Accounts and Taxation",
+      "Treasury and FP&A",
+      "Legal",
+      "Commercial and Contracts",
+    ],
+  },
+  {
+    name: "Krishan Bhushan Pandey",
+    role: "Chief Projects Officer",
+    image: "/firm/team-on-site.jpg",
+    imagePosition: "center center",
+    functions: [
+      "Heads of Projects",
+      "Project Managers",
+      "Engineers and Supervisors",
+      "Planning and Scheduling",
+      "Monitoring and Cost Control",
+      "EHS and Safety",
+      "QA/QC",
+      "Testing and Commissioning",
+    ],
+  },
+  {
+    name: "Neeraj Sharma",
+    role: "Chief Operating Officer (COO)",
+    image: "/firm/team-on-site.jpg",
+    imagePosition: "center center",
+    functions: ["Procurement", "Stores and Logistics", "O&M Engineering Core"],
+  },
+  {
+    name: "Sanjeev Kumar",
+    role: "Chief Human Resources Officer (CHRO)",
+    image: "/firm/team-on-site.jpg",
+    imagePosition: "center center",
+    functions: [
+      "HR Operations / HRBPs",
+      "Recruitment",
+      "Payroll",
+      "Compliance",
+      "Administration",
+      "Office Support",
+    ],
+  },
+  {
+    name: "Kumar Abhijeet",
+    role: "Chief Technology Officer (CTO)",
+    image: "/firm/team-on-site.jpg",
+    imagePosition: "center center",
+    functions: [
+      "Design and Drawings",
+      "BIM",
+      "Intelligent Solutions",
+      "IT and Systems",
+    ],
+  },
+  {
+    name: "Madhur Malik",
+    role: "Head of Sales and Estimation",
+    image: "/firm/team-on-site.jpg",
+    imagePosition: "center center",
+    functions: [
+      "Business Development",
+      "Key Accounts",
+      "Estimation and Tendering",
+      "Marketing / Proposals",
+    ],
+  },
+];
+
 export default function FirmPage() {
   const leaders = getLeadership();
   const journey = getJourney();
@@ -75,12 +151,10 @@ export default function FirmPage() {
             <p className="ue-firm-redesign__eyebrow">
               The firm <span>·</span> Gurugram <span>·</span> Since 1990
             </p>
-            <h1 id="firm-title">
-              Engineering discipline, run as a practice.
-            </h1>
+            <h1 id="firm-title">Engineering discipline, run as a practice.</h1>
             <p className="ue-firm-redesign__hero-lead">
-              {FIRM.legalName} delivers complex infrastructure through
-              in-house civil, MEPF, solar and building-systems teams.
+              {FIRM.legalName} delivers complex infrastructure through in-house
+              civil, MEPF, solar and building-systems teams.
             </p>
             <div className="ue-firm-redesign__hero-actions">
               <Link href="/work" className="ue-firm-redesign__hero-link">
@@ -133,11 +207,18 @@ export default function FirmPage() {
         </div>
       </section>
 
-      <section id="our-story" style={{ scrollMarginTop: "calc(var(--header-h) + 24px)" }}>
+      <section
+        id="our-story"
+        style={{ scrollMarginTop: "calc(var(--header-h) + 24px)" }}
+      >
         <FirmJourneyTimeline milestones={journey} />
       </section>
 
-      <section id="how-we-deliver" className="ue-firm-redesign__practice" style={{ scrollMarginTop: "calc(var(--header-h) + 24px)" }}>
+      <section
+        id="how-we-deliver"
+        className="ue-firm-redesign__practice"
+        style={{ scrollMarginTop: "calc(var(--header-h) + 24px)" }}
+      >
         <div className="ue-container">
           <header className="ue-firm-redesign__section-head">
             <div>
@@ -177,7 +258,9 @@ export default function FirmPage() {
                   height={650}
                   sizes="(max-width: 800px) 100vw, 40vw"
                 />
-                <figcaption>Quality is verified at every inspection.</figcaption>
+                <figcaption>
+                  Quality is verified at every inspection.
+                </figcaption>
               </figure>
             </div>
 
@@ -219,6 +302,49 @@ export default function FirmPage() {
             </p>
           </header>
           <LeadershipGrid leaders={leaders} />
+          <div className="ue-firm-executives">
+            <header className="ue-firm-executives__head">
+              <div>
+                <p className="ue-eyebrow">Executive leadership</p>
+                <h3>Leaders across the business.</h3>
+              </div>
+              <p>
+                Functional leaders guiding finance, projects, operations,
+                people, technology and growth.
+              </p>
+            </header>
+            <div className="ue-firm-executives__grid">
+              {EXECUTIVE_LEADERSHIP.map((executive) => (
+                <article
+                  className="ue-firm-executive-card"
+                  key={executive.name}
+                >
+                  <div className="ue-firm-executive-card__portrait">
+                    <Image
+                      src={executive.image}
+                      alt={`Portrait of ${executive.name}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="ue-firm-executive-card__image"
+                      style={{ objectPosition: executive.imagePosition }}
+                    />
+                  </div>
+                  <div className="ue-firm-executive-card__body">
+                    <p className="ue-firm-leaders__role">{executive.role}</p>
+                    <h4 className="ue-firm-leaders__name">{executive.name}</h4>
+                    <p className="ue-firm-executive-card__label">
+                      Key functions
+                    </p>
+                    <ul className="ue-firm-executive-card__functions">
+                      {executive.functions.map((functionName) => (
+                        <li key={functionName}>{functionName}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -244,7 +370,9 @@ export default function FirmPage() {
           <header className="ue-firm-redesign__section-head">
             <div>
               <p className="ue-eyebrow">Credentials</p>
-              <h2>Quality, environment and safety — independently certified.</h2>
+              <h2>
+                Quality, environment and safety — independently certified.
+              </h2>
             </div>
             <p>
               Management systems and empanelments that support delivery across

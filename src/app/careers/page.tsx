@@ -322,90 +322,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Growth band */}
-      <section
-        className="ue-section"
-        style={{ background: "var(--ink-950)", color: "var(--paper)" }}
-      >
-        <div className="ue-container">
-          <p className="ue-eyebrow" style={{ color: "var(--accent-400)" }}>
-            {CAREERS_GROWTH.eyebrow}
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 500,
-              fontSize: "clamp(32px, 4vw, 48px)",
-              letterSpacing: "-0.024em",
-              lineHeight: 1.05,
-              margin: "12px 0 0",
-              maxWidth: "18ch",
-              color: "var(--paper)",
-            }}
-          >
-            {CAREERS_GROWTH.title}
-          </h2>
-          <p
-            style={{
-              marginTop: 20,
-              fontSize: 18,
-              lineHeight: 1.55,
-              color: "rgba(255,255,255,0.75)",
-              maxWidth: "58ch",
-            }}
-          >
-            {CAREERS_GROWTH.body}
-          </p>
-          <div
-            style={{
-              marginTop: 48,
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-              gap: 0,
-              borderTop: "1px solid rgba(255,255,255,0.14)",
-            }}
-          >
-            {CAREERS_GROWTH.stats.map((s, i) => (
-              <div
-                key={s.l}
-                style={{
-                  padding: "28px 20px 8px",
-                  paddingLeft: i > 0 ? 24 : 0,
-                  borderRight:
-                    i < CAREERS_GROWTH.stats.length - 1
-                      ? "1px solid rgba(255,255,255,0.14)"
-                      : "none",
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontWeight: 500,
-                    fontSize: 40,
-                    letterSpacing: "-0.024em",
-                    lineHeight: 1,
-                    color: "var(--paper)",
-                    fontVariantNumeric: "tabular-nums",
-                  }}
-                >
-                  {s.n}
-                </div>
-                <div
-                  style={{
-                    marginTop: 10,
-                    fontSize: 13,
-                    lineHeight: 1.45,
-                    color: "rgba(255,255,255,0.6)",
-                  }}
-                >
-                  {s.l}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Where you'd fit */}
       <section style={{ padding: "88px 0" }}>
         <div className="ue-container">
@@ -546,6 +462,90 @@ export default function CareersPage() {
                 {FIRM.contactEmail}
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Growth band */}
+      <section
+        className="ue-section"
+        style={{ background: "var(--ink-950)", color: "var(--paper)" }}
+      >
+        <div className="ue-container">
+          <p className="ue-eyebrow" style={{ color: "var(--accent-400)" }}>
+            {CAREERS_GROWTH.eyebrow}
+          </p>
+          <h2
+            style={{
+              fontFamily: "var(--font-display)",
+              fontWeight: 500,
+              fontSize: "clamp(32px, 4vw, 48px)",
+              letterSpacing: "-0.024em",
+              lineHeight: 1.05,
+              margin: "12px 0 0",
+              maxWidth: "18ch",
+              color: "var(--paper)",
+            }}
+          >
+            {CAREERS_GROWTH.title}
+          </h2>
+          <p
+            style={{
+              marginTop: 20,
+              fontSize: 18,
+              lineHeight: 1.55,
+              color: "rgba(255,255,255,0.75)",
+              maxWidth: "58ch",
+            }}
+          >
+            {CAREERS_GROWTH.body}
+          </p>
+          <div
+            style={{
+              marginTop: 48,
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              gap: 0,
+              borderTop: "1px solid rgba(255,255,255,0.14)",
+            }}
+          >
+            {CAREERS_GROWTH.stats.map((s, i) => (
+              <div
+                key={s.l}
+                style={{
+                  padding: "28px 20px 8px",
+                  paddingLeft: i > 0 ? 24 : 0,
+                  borderRight:
+                    i < CAREERS_GROWTH.stats.length - 1
+                      ? "1px solid rgba(255,255,255,0.14)"
+                      : "none",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontWeight: 500,
+                    fontSize: 40,
+                    letterSpacing: "-0.024em",
+                    lineHeight: 1,
+                    color: "var(--paper)",
+                    fontVariantNumeric: "tabular-nums",
+                  }}
+                >
+                  {s.n}
+                </div>
+                <div
+                  style={{
+                    marginTop: 10,
+                    fontSize: 13,
+                    lineHeight: 1.45,
+                    color: "rgba(255,255,255,0.6)",
+                  }}
+                >
+                  {s.l}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
