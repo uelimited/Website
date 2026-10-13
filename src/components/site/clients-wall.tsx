@@ -1,4 +1,5 @@
 import { getAllSectors, getFeaturedClients } from "@/lib/cms";
+import Image from "next/image";
 
 export function ClientsWall() {
   const clients = getFeaturedClients();
@@ -39,30 +40,40 @@ export function ClientsWall() {
                 style={{
                   position: "relative",
                   display: "flex",
-                  alignItems: "flex-end",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 12,
                   border: "1px solid var(--border-color)",
                   borderRadius: 14,
-                  background: image
-                    ? `linear-gradient(180deg, rgba(10,12,16,0.10) 0%, rgba(10,12,16,0.72) 100%), url(${image}) center/cover no-repeat`
-                    : "linear-gradient(135deg, rgba(18,92,63,0.10), rgba(15,23,42,0.04))",
+                  background: "var(--paper)",
                   overflow: "hidden",
                 }}
               >
+                {image ? (
+                  <div className="ue-clients-wall__image">
+                    <Image
+                      src={image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 600px) 100vw, (max-width: 900px) 33vw, 20vw"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                ) : null}
                 <div
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
-                    gap: 8,
-                    padding: "8px 12px",
-                    background: "rgba(255,255,255,0.82)",
-                    border: "1px solid rgba(255,255,255,0.7)",
-                    borderRadius: 999,
-                    backdropFilter: "blur(6px)",
+                    justifyContent: "center",
+                    textAlign: "center",
+                    minHeight: 30,
                     fontFamily: "var(--font-display)",
                     fontWeight: 500,
                     fontSize: 13,
                     letterSpacing: "-0.012em",
                     color: "var(--ink-950)",
+                    flexShrink: 0,
                   }}
                 >
                   {c.name}

@@ -47,8 +47,8 @@ export const HERO = {
  * Figures are engineering-scale and independently defensible only.
  * Ledger-derived counts (170 projects, ₹3,422 Cr cumulative contract
  * value) come from project_ledger.json and match the /work hub. The
- * TR figure aggregates the flagship cooling plants (Central Secretariat
- * 16,000 + Tabreed 30,000 + SAEL 29,250). Contested deck financials
+ * cooling headline uses the documented 16,000 TR Central Secretariat
+ * plant. Contested deck financials
  * (₹534 Cr turnover, ₹1,800 Cr net worth) are deliberately NOT shown —
  * they conflict with the audited Infomerics rating report.
  */
@@ -60,7 +60,7 @@ export const OVERVIEW = {
     { n: "35", unit: "+", l: "Years, since 1990" },
     { n: "170", unit: "+", l: "Projects delivered · last decade" },
     { n: "3,422", unit: "₹ Cr", l: "Cumulative contract value" },
-    { n: "75,000", unit: "TR", l: "Cooling engineered · flagships" },
+    { n: "16,000", unit: "TR", l: "Flagship plant capacity" },
     { n: "23", unit: "", l: "States executed" },
     { n: "9", unit: "", l: "Industries served" },
   ],

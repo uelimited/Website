@@ -42,76 +42,50 @@ const VALUES = [
 
 const EXECUTIVE_LEADERSHIP = [
   {
-    name: "Brajesh Kumar Gupta",
     role: "Chief Financial Officer (CFO)",
-    image: "/firm/team-on-site.jpg",
-    imagePosition: "center center",
     functions: [
-      "Accounts and Taxation",
+      "Finance and taxation",
       "Treasury and FP&A",
-      "Legal",
-      "Commercial and Contracts",
+      "Legal and contracts",
     ],
   },
   {
-    name: "Krishan Bhushan Pandey",
     role: "Chief Projects Officer",
-    image: "/firm/team-on-site.jpg",
-    imagePosition: "center center",
     functions: [
-      "Heads of Projects",
-      "Project Managers",
-      "Engineers and Supervisors",
-      "Planning and Scheduling",
-      "Monitoring and Cost Control",
-      "EHS and Safety",
-      "QA/QC",
+      "Project delivery",
+      "Planning and cost control",
+      "EHS and QA/QC",
       "Testing and Commissioning",
     ],
   },
   {
-    name: "Neeraj Sharma",
     role: "Chief Operating Officer (COO)",
-    image: "/firm/team-on-site.jpg",
-    imagePosition: "center center",
-    functions: ["Procurement", "Stores and Logistics", "O&M Engineering Core"],
+    functions: ["Procurement and logistics", "Operations", "O&M engineering"],
   },
   {
-    name: "Sanjeev Kumar",
     role: "Chief Human Resources Officer (CHRO)",
-    image: "/firm/team-on-site.jpg",
-    imagePosition: "center center",
     functions: [
-      "HR Operations / HRBPs",
-      "Recruitment",
+      "Talent and HR operations",
       "Payroll",
-      "Compliance",
-      "Administration",
-      "Office Support",
+      "Compliance and administration",
     ],
   },
   {
-    name: "Kumar Abhijeet",
     role: "Chief Technology Officer (CTO)",
-    image: "/firm/team-on-site.jpg",
-    imagePosition: "center center",
     functions: [
-      "Design and Drawings",
+      "Engineering design",
       "BIM",
-      "Intelligent Solutions",
-      "IT and Systems",
+      "Intelligent solutions",
+      "IT and systems",
     ],
   },
   {
-    name: "Madhur Malik",
     role: "Head of Sales and Estimation",
-    image: "/firm/team-on-site.jpg",
-    imagePosition: "center center",
     functions: [
       "Business Development",
       "Key Accounts",
       "Estimation and Tendering",
-      "Marketing / Proposals",
+      "Marketing and proposals",
     ],
   },
 ];
@@ -138,8 +112,8 @@ export default function FirmPage() {
     <main className="ue-firm-redesign">
       <section className="ue-firm-redesign__hero" aria-labelledby="firm-title">
         <Image
-          src="/firm/team-on-site.jpg"
-          alt="Unique Engineers team coordinating work on an active project site"
+          src="/firm/Unique.png"
+          alt="Unique Engineers office building"
           fill
           priority
           sizes="100vw"
@@ -313,29 +287,23 @@ export default function FirmPage() {
                 people, technology and growth.
               </p>
             </header>
-            <div className="ue-firm-executives__grid">
-              {EXECUTIVE_LEADERSHIP.map((executive) => (
+            <div className="ue-firm-executives__directory" role="list">
+              {EXECUTIVE_LEADERSHIP.map((executive, index) => (
                 <article
-                  className="ue-firm-executive-card"
-                  key={executive.name}
+                  className="ue-firm-executive-row"
+                  key={executive.role}
+                  role="listitem"
                 >
-                  <div className="ue-firm-executive-card__portrait">
-                    <Image
-                      src={executive.image}
-                      alt={`Portrait of ${executive.name}`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="ue-firm-executive-card__image"
-                      style={{ objectPosition: executive.imagePosition }}
-                    />
+                  <span className="ue-firm-executive-row__index" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="ue-firm-executive-row__role">
+                    <p>Leadership area</p>
+                    <h4>{executive.role}</h4>
                   </div>
-                  <div className="ue-firm-executive-card__body">
-                    <p className="ue-firm-leaders__role">{executive.role}</p>
-                    <h4 className="ue-firm-leaders__name">{executive.name}</h4>
-                    <p className="ue-firm-executive-card__label">
-                      Key functions
-                    </p>
-                    <ul className="ue-firm-executive-card__functions">
+                  <div className="ue-firm-executive-row__scope">
+                    <p>Responsibilities</p>
+                    <ul className="ue-firm-executive-row__functions">
                       {executive.functions.map((functionName) => (
                         <li key={functionName}>{functionName}</li>
                       ))}

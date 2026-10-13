@@ -9,7 +9,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 /**
  * Firm journey timeline — the /firm centerpiece scrollytelling moment.
  *
- * All ten milestones render in normal document flow at full opacity —
+ * Era-based milestones render in normal document flow at full opacity —
  * nothing is gated behind a viewport trigger. The signature motion is a
  * scroll-driven fill on the connecting rail (permitted per the v2 build
  * spec's animation principle) plus a per-item accent state that lights
@@ -41,12 +41,11 @@ export function FirmJourneyTimeline({
             id="firm-timeline-heading"
             className="ue-h2 ue-firm-timeline__title"
           >
-            Thirty-five years of engineering precision, built step by step.
+            From industrial HVAC roots to advanced infrastructure.
           </h2>
           <p className="ue-firm-timeline__kicker">
-            From a focused HVAC practice to a multi-disciplinary EPC firm trusted
-            on India&apos;s most demanding infrastructure and mission-critical
-            projects.
+            From industrial HVAC to complete MEPF and BMS, with the next chapter
+            extending into civil, solar and precision engineering.
           </p>
         </header>
 

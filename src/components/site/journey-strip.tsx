@@ -14,47 +14,23 @@ export function JourneyStrip() {
     <section className="ue-section">
       <div className="ue-container">
         <header className="ue-journey-strip__head">
-          <p className="ue-eyebrow">The journey</p>
+          <p className="ue-eyebrow">Our story</p>
           <h2 className="ue-h2 ue-journey-strip__title">
-            From specialist HVAC to multi-discipline EPC.
+            Built from specialist roots to a national delivery platform.
           </h2>
+          <p className="ue-journey-strip__intro">
+            What began as a focused HVAC practice evolved into a multi-discipline
+            engineering business trusted on critical infrastructure and
+            mission-critical projects across India.
+          </p>
         </header>
         <div className="ue-journey-strip__grid">
           {highlights.map((m) => (
-            <div key={m.id} className="ue-journey-strip__item">
-              <div
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: 13,
-                  color: "var(--accent-500)",
-                  marginBottom: 8,
-                }}
-              >
-                {m.year}
-              </div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 500,
-                  fontSize: 17,
-                  letterSpacing: "-0.012em",
-                  margin: 0,
-                  color: "var(--ink-950)",
-                }}
-              >
-                {m.title}
-              </h3>
-              <p
-                style={{
-                  marginTop: 6,
-                  fontSize: 13,
-                  lineHeight: 1.5,
-                  color: "var(--ink-500)",
-                }}
-              >
-                {m.description}
-              </p>
-            </div>
+            <article key={m.id} className="ue-journey-strip__item">
+              <div className="ue-journey-strip__year">{m.year}</div>
+              <h3 className="ue-journey-strip__card-title">{m.title}</h3>
+              <p className="ue-journey-strip__card-copy">{m.description}</p>
+            </article>
           ))}
         </div>
         <div className="ue-journey-strip__link-wrap">

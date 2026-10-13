@@ -42,7 +42,7 @@ export type Service = {
   intro_paragraphs: string[]; // landing-page overview
   approach_paragraphs: string[]; // how UEL approaches this discipline (technical)
   approach_plain?: string[]; // plain-language version shown first
-  stats?: Spec[]; // headline figures (e.g. "29,250 TR installed at SAEL")
+  stats?: Spec[]; // headline service figures
   hero_scale?: string; // curated ceiling figure, e.g. "up to 30,000 TR"
   hero_image_url?: string;
   hero_image_alt?: string;
@@ -237,6 +237,7 @@ export type Leader = {
   credential: string;
   experience: string;
   bio?: string;
+  responsibilities?: string[];
   portrait_url?: string;
   sort_order: number;
 };

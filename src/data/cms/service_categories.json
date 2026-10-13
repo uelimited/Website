@@ -91,7 +91,7 @@
     "short_blurb": "Air-side equipment — AHUs, FCUs, VRF, terminal units, ducting and the diffusion strategy that delivers conditioned air to the space.",
     "intro_paragraphs": [
       "Low side is everything between the chilled-water pipe and the occupant — air handling units, fan coil units, VRF/VRV indoor units, dedicated outdoor air systems, terminal devices, ducting, dampers and diffusers. It is the part of the system the occupant actually experiences.",
-      "Low-side work spans the full range — from a single 500 CFM FCU in a hotel room to a 217-AHU plus 130-MAU installation at the SAEL solar-cell facility in Jewar. Every AHU is sized against the room's heat load and ventilation requirement, every duct route is coordinated in the federated BIM model, and every diffuser is selected for throw, drop and noise."
+      "Low-side work spans the full range — from a single 500 CFM FCU in a hotel room to large-scale cleanroom installations. Every AHU is sized against the room's heat load and ventilation requirement, every duct route is coordinated in the federated BIM model, and every diffuser is selected for throw, drop and noise."
     ],
     "approach_paragraphs": [
       "Air-handling units are selected from the heat-load calculation, the supply-air temperature schedule, and the room's acoustic limit. Coil rows, face velocity and bypass factor are picked deliberately — not from a default AHU configurator. DX, chilled-water and dual-coil arrangements coexist on most projects, sized for their loads.",
@@ -145,9 +145,8 @@
       },
       {
         "name": "Fan filter units (FFUs)",
-        "description": "Ceiling-mounted FFUs for cleanroom and laboratory zones with HEPA H13/H14 terminal filtration. 13,656 FFUs installed on the SAEL Jewar project alone.",
+        "description": "Ceiling-mounted FFUs for cleanroom and laboratory zones with HEPA H13/H14 terminal filtration.",
         "specs": [
-          { "k": "Scale", "v": "13,656 FFUs at SAEL" },
           { "k": "Filter", "v": "HEPA H13 / H14 gel-seal" },
           { "k": "Test", "v": "In-situ DOP / PAO" }
         ]
@@ -378,7 +377,7 @@
     "short_blurb": "Cleanroom HVAC (ISO 6/7/8), process cooling water, pressure cascade and HEPA-filtered air for semiconductor, pharma and laboratory environments.",
     "intro_paragraphs": [
       "Process cooling is the most exacting discipline in the HVAC stack. The performance window is set by the process — ISO 14644-1 cleanroom class, pressure cascade between zones, supply-air ACPH, temperature and humidity tolerance — and the system is engineered against the tighter of the tender spec and the governing standard.",
-      "Class 10,000 / 100,000 (ISO 7/8) cleanrooms have been executed at scale for Foxconn (Apple) in Bangalore — wall and ceiling PUF panelling, epoxy flooring, HEPA-filtered AHUs, return-air risers, cleanroom doors and view panels — and the SAEL Jewar 5.75 GW solar-cell facility, with ISO 6/7/8 zones across 66,000+ sqm, 13,656 FFUs, 217 AHUs and 130 MAUs."
+      "Class 10,000 / 100,000 (ISO 7/8) cleanrooms have been executed at scale for Foxconn (Apple) in Bangalore — wall and ceiling PUF panelling, epoxy flooring, HEPA-filtered AHUs, return-air risers, cleanroom doors and view panels. Advanced manufacturing environments demand carefully controlled ISO 6/7/8 zones, pressure cascades, high-density FFUs and stable temperature and humidity."
     ],
     "approach_paragraphs": [
       "Cleanroom design follows a deliberate workflow: concept zoning by ISO class and pressure strategy; room-by-room heat-load with tool dissipation per OEM datasheet; FFU and HEPA banding; pressure cascade with door-interlock logic; federated BIM at LOD 400 with all clashes resolved before shop release. Validation tests particle count, recovery time, ACPH, ΔP, T/RH, noise and lighting against ISO 14644-3 test methods.",
@@ -396,11 +395,11 @@
       },
       {
         "name": "Fan filter units (FFUs)",
-        "description": "Ceiling-grid FFUs for unidirectional or semi-directional flow in ISO 6/7 zones. Low-turbulence supply with terminal HEPA H13/H14 gel-seal filtration. 13,656 FFUs installed at SAEL alone.",
+        "description": "Ceiling-grid FFUs for unidirectional or semi-directional flow in ISO 6/7 zones. Low-turbulence supply with terminal HEPA H13/H14 gel-seal filtration.",
         "specs": [
           { "k": "Filter class", "v": "HEPA H13 / H14" },
           { "k": "Test method", "v": "In-situ DOP / PAO" },
-          { "k": "Scale", "v": "13,656 FFUs · SAEL Jewar" }
+          { "k": "Application", "v": "High-density cleanroom arrays" }
         ]
       },
       {
@@ -408,7 +407,7 @@
         "description": "Closed-loop process-water headers with SS 316 / PP-H piping, primary-secondary interfaces, plate heat exchanger to building CHW. Conductivity and leak taps. OEM-validated hookups. Hydro + pneumatic testing.",
         "specs": [
           { "k": "Pipe", "v": "SS 316 · PP-H" },
-          { "k": "Capacity", "v": "Dual 5.05 MW PHE at SAEL" },
+          { "k": "Configuration", "v": "Primary-secondary with heat-exchanger isolation" },
           { "k": "Testing", "v": "Hydro + pneumatic" }
         ]
       },
@@ -1097,7 +1096,7 @@
     "short_blurb": "High-purity SS 316 / PP-H piping for semiconductor, pharma and laboratory process water, conductivity-monitored end-to-end.",
     "intro_paragraphs": [
       "Industrial piping is the discipline that delivers fluids — water, chemicals, gases, steam — through a building's process layer. Pipe material, jointing method, slope and supports are picked against the fluid, the pressure, the temperature and the cleanliness requirement of the downstream load.",
-      "SS 316 PCW networks have been delivered for Foxconn cleanroom, JSW EV battery-line cooling, and SAEL solar-cell process loops. Every joint is welded, leak-tested, and conductivity-tapped for monitoring."
+      "SS 316 PCW networks have been delivered for Foxconn cleanroom and JSW EV battery-line cooling. Every joint is welded, leak-tested, and conductivity-tapped for monitoring."
     ],
     "approach_paragraphs": [
       "Pipe routing is coordinated in Revit (LOD 400) with all other MEPF services. Slope and support intervals follow ASME B31.3 for process piping; isometric drawings are signed off pre-fabrication.",

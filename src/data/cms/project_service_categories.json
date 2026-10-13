@@ -70,38 +70,6 @@
   },
 
   {
-    "project_id": "prj-sael",
-    "service_category_id": "cat-hvac-process-cooling",
-    "is_primary": true,
-    "scope_note": "ISO 6/7/8 cleanroom — 66,000+ sqm, 13,656 FFUs"
-  },
-  {
-    "project_id": "prj-sael",
-    "service_category_id": "cat-hvac-high-side",
-    "is_primary": false,
-    "scope_note": "29,250 TR cooling + dual 5.05 MW PCW PHE"
-  },
-  {
-    "project_id": "prj-sael",
-    "service_category_id": "cat-hvac-low-side",
-    "is_primary": false,
-    "scope_note": "217 AHUs + 130 MAUs"
-  },
-
-  {
-    "project_id": "prj-tabreed",
-    "service_category_id": "cat-hvac-high-side",
-    "is_primary": true,
-    "scope_note": "30,000 TR central plant"
-  },
-  {
-    "project_id": "prj-tabreed",
-    "service_category_id": "cat-hvac-comfort-cooling",
-    "is_primary": false,
-    "scope_note": "ETS at consumer buildings"
-  },
-
-  {
     "project_id": "prj-jsw-ev",
     "service_category_id": "cat-hvac-process-cooling",
     "is_primary": true,

@@ -38,7 +38,7 @@
     "approach_plain": [
       "Everything that will ever pass through the structure — pipes, cables, ducts, equipment — is planned into it before the first pour. Nothing gets cut, patched or improvised later.",
       "Independent inspectors check the critical work as it happens, and every finish is approved from a physical sample before production. What you signed off is what gets built.",
-      "It shows up as the civil excavation package at Tata Electronics' semiconductor campus in Dholera, and the structural civil scope behind Tabreed's 30,000 TR district-cooling plant in Amravati — foundations sized for the machinery that will eventually sit on them."
+      "It shows up as the civil excavation package at Tata Electronics' semiconductor campus in Dholera, with foundations sized for the machinery that will eventually sit on them."
     ]
   },
   {
@@ -59,19 +59,11 @@
     ],
     "stats": [
       {
-        "k": "30,000 TR",
-        "v": "District-cooling plant delivered for Tabreed · Amravati"
-      },
-      {
         "k": "16,000 TR",
         "v": "High-efficiency plant at Common Central Secretariat"
-      },
-      {
-        "k": "29,250 TR",
-        "v": "Cooling installed at SAEL · Jewar"
       }
     ],
-    "hero_scale": "up to 30,000 TR",
+    "hero_scale": "16,000 TR flagship plant",
     "hero_image_url": "/services/hvac-hero.jpg",
     "hero_image_alt": "Chiller plant room with chilled-water piping overhead",
     "sort_order": 2,
@@ -80,7 +72,7 @@
     "approach_plain": [
       "Every system is sized by working out what the building actually needs — room by room, machine by machine — never by rule of thumb. The numbers are checked a second way before anything is ordered.",
       "Before handover, the plant runs under real load and has to prove its performance, stage by stage. If it doesn't hit the numbers, it doesn't hand over.",
-      "The scale runs from a 16,000 TR high-efficiency plant and 5,00,000 sqm of ducting at the Common Central Secretariat in Delhi, to a 30,000 TR district-cooling network built for Tabreed in Amravati, down to a geothermal VRV system drawing on borehole heat at Nalanda University's net-zero campus in Bihar."
+      "The scale runs from a 16,000 TR high-efficiency plant and 5,00,000 sqm of ducting at the Common Central Secretariat in Delhi, to a geothermal VRV system drawing on borehole heat at Nalanda University's net-zero campus in Bihar."
     ]
   },
   {
@@ -166,7 +158,7 @@
     "approach_plain": [
       "Systems are sized against how the building really uses water — the peak-hour rush and the quiet night — so pressure and supply hold steady at both.",
       "Treatment plants are designed backwards from three facts: the water you have, the water you need, and what you're allowed to discharge.",
-      "The same team routes compressed dry air, nitrogen and vacuum lines through Foxconn's cleanroom floors, and lays the process-cooling-water headers feeding SAEL's solar-cell plant in Jewar."
+      "The same team routes compressed dry air, nitrogen and vacuum lines through Foxconn's cleanroom floors, and lays process-cooling-water headers for advanced manufacturing environments."
     ]
   },
   {
@@ -295,7 +287,7 @@
     "approach_plain": [
       "Every system in the building is made to speak one language, whatever brand each one is — leaving the facility team a single screen with clear priorities instead of a wall of alarms.",
       "Handover is built for the people who run the building: every data point is named, tested and witnessed with the facility team before handover is complete. No black boxes.",
-      "It ties Nalanda University's geothermal plant into a single IBMS, layers SCADA and a historian over SAEL's cleanroom utilities, and adds hydrogen sensing to the DDC package inside CtrlS Mahape's data hall."
+      "It ties Nalanda University's geothermal plant into a single IBMS and adds hydrogen sensing to the DDC package inside CtrlS Mahape's data hall."
     ]
   },
   {

@@ -90,8 +90,8 @@
     "id": "sec-semiconductor",
     "slug": "semiconductor-cleanroom",
     "name": "Semiconductor & Cleanroom",
-    "short_description": "Cleanroom MEPF, process gases and high-precision utilities for semiconductor fabs and solar-cell manufacturing.",
-    "long_description": "Active across India's semiconductor frontier — Foxconn (Apple) in Bangalore (₹650+ Cr across 10+ work packages), Tata Electronics at Dholera and Assam, and the SAEL solar-cell facility at Jewar (5.75 GW, 66,000 sqm of ISO 6/7/8 cleanroom, 29,250 TR of process cooling). Class 10K/100K (ISO 7/8) executed at scale, with the engineering delta to ISO 6 fully understood. CDA, nitrogen, vacuum and PCW networks delivered with strict slope control, leak-tested to stringent standards, integrated without compromising contamination zones.",
+    "short_description": "Cleanroom MEPF, process gases and high-precision utilities for semiconductor fabs and advanced manufacturing.",
+    "long_description": "Active across India's semiconductor frontier — Foxconn (Apple) in Bangalore (₹650+ Cr across 10+ work packages), and Tata Electronics at Dholera and Assam. Class 10K/100K (ISO 7/8) executed at scale, with the engineering delta to ISO 6 fully understood. CDA, nitrogen, vacuum and PCW networks delivered with strict slope control, leak-tested to stringent standards, integrated without compromising contamination zones.",
     "projects_count_override": "8+",
     "revenue_cr_override": "₹750+ Cr",
     "hero_image_url": "/sectors/semiconductor-hero.jpg",
@@ -99,8 +99,7 @@
     "featured_client_ids": [
       "cli-foxconn",
       "cli-tata-electronics",
-      "cli-jsw",
-      "cli-sael"
+      "cli-jsw"
     ],
     "deep_page": true,
     "sections": [
@@ -122,7 +121,7 @@
           },
           {
             "name": "FFU array (HEPA H13/H14)",
-            "description": "Ceiling-grid FFU layout with terminal HEPA filtration. 13,656 FFUs installed at SAEL alone."
+            "description": "Ceiling-grid FFU layouts with terminal HEPA filtration for cleanroom environments."
           },
           {
             "name": "Process gas distribution",
@@ -133,7 +132,7 @@
       {
         "heading": "Process cooling water",
         "body": [
-          "Closed-loop SS 316 / PP-H PCW networks with primary-secondary distribution, plate heat exchanger isolation, conductivity and leak taps for real-time monitoring, OEM-validated POU hookups. Delivered for Foxconn India, JSW EV battery-line cooling, and the SAEL solar-cell facility (dual 5.05 MW SS316 PHE).",
+          "Closed-loop SS 316 / PP-H PCW networks with primary-secondary distribution, plate heat exchanger isolation, conductivity and leak taps for real-time monitoring, OEM-validated POU hookups. Delivered for Foxconn India and JSW EV battery-line cooling.",
           "Hydronics design follows ASME B31.3 with hydro and pneumatic testing on every closed loop. Welding qualified to ASME IX with continuous third-party inspection on critical joints."
         ]
       },
@@ -178,7 +177,7 @@
       {
         "heading": "Sector breadth",
         "body": [
-          "Active across automotive (JSW EV, MG Motor, BMW, Hyundai), FMCG (Coca-Cola, Unilever, ITC), district cooling (Tabreed Amravati — 30,000 TR), and mixed-use industrial (IKEA Noida — ₹411 Cr).",
+          "Active across automotive (JSW EV, MG Motor, BMW, Hyundai), FMCG (Coca-Cola, Unilever, ITC), and mixed-use industrial developments such as IKEA Noida (₹411 Cr).",
           "Pan-India delivery with 23 states executed, 16 states registered, regional offices in Gurugram (HQ), Ahmedabad, Mumbai, Hyderabad, Bangalore and Kolkata. 3-day NCR mobilisation; 10-day pan-India."
         ]
       },

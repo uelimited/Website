@@ -25,6 +25,28 @@ const DELIVERY_AREAS = [
   "Solar and integrated building systems",
 ];
 
+const INVESTOR_PILLARS = [
+  {
+    title: "Integrated delivery model",
+    body: "In-house capability across civil, MEPF, solar and building systems reduces coordination risk, compresses interfaces and supports tighter execution control on complex projects.",
+  },
+  {
+    title: "Sectoral diversification",
+    body: "Exposure across data centres, airports, semiconductor infrastructure, healthcare, commercial real estate and industrial facilities supports a broader demand base and reduces concentration risk.",
+  },
+  {
+    title: "Execution discipline",
+    body: "Project delivery is anchored on structured planning, QA/QC, site supervision and lifecycle asset performance, creating repeatable operational quality across portfolios.",
+  },
+];
+
+const INVESTOR_QUALIFIERS = [
+  "Multi-disciplinary engineering and contracting capability",
+  "Pan-India mobilization with in-house teams",
+  "Repeat client relationships across regulated sectors",
+  "Clear project and sector visibility through the work ledger",
+];
+
 export default function InvestorsPage() {
   return (
     <main className="ue-investors">
@@ -38,6 +60,11 @@ export default function InvestorsPage() {
               contracting practice operating across India since{" "}
               {FIRM.foundedYear}.
             </p>
+            <div className="ue-investors__hero-badges" aria-label="Company highlights">
+              <span>35+ years</span>
+              <span>23 states</span>
+              <span>India + SAARC</span>
+            </div>
             <div className="ue-investors__actions">
               <Button asChild size="lg">
                 <Link href="/work">
@@ -51,8 +78,8 @@ export default function InvestorsPage() {
           </div>
           <figure className="ue-investors__hero-figure">
             <Image
-              src="/firm/team-on-site.jpg"
-              alt="Unique Engineers team coordinating work at an active project site"
+              src="/Investor.jpg"
+              alt="Engineer reviewing a project plan marked with the Unique Engineers logo"
               fill
               priority
               sizes="(max-width: 760px) 100vw, 48vw"
@@ -94,6 +121,41 @@ export default function InvestorsPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="ue-investors__strengths">
+        <div className="ue-container">
+          <header className="ue-investors__section-head">
+            <p className="ue-eyebrow">Investment profile</p>
+            <h2>Why the platform is positioned for scale.</h2>
+          </header>
+          <div className="ue-investors__value-grid">
+            {INVESTOR_PILLARS.map((pillar) => (
+              <article key={pillar.title} className="ue-investors__value-card">
+                <p className="ue-investors__value-kicker">Capability</p>
+                <h3>{pillar.title}</h3>
+                <p>{pillar.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="ue-investors__profile">
+        <div className="ue-container ue-investors__profile-grid">
+          <div>
+            <p className="ue-eyebrow">Operating strengths</p>
+            <h2>Built for complex, time-sensitive infrastructure delivery.</h2>
+          </div>
+          <div className="ue-investors__qualifiers">
+            {INVESTOR_QUALIFIERS.map((item) => (
+              <div key={item} className="ue-investors__qualifier">
+                <span aria-hidden="true">•</span>
+                <p>{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

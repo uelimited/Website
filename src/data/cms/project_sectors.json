@@ -26,21 +26,6 @@
     "is_primary": true
   },
   {
-    "project_id": "prj-sael",
-    "sector_id": "sec-semiconductor",
-    "is_primary": true
-  },
-  {
-    "project_id": "prj-sael",
-    "sector_id": "sec-industrial",
-    "is_primary": false
-  },
-  {
-    "project_id": "prj-tabreed",
-    "sector_id": "sec-industrial",
-    "is_primary": true
-  },
-  {
     "project_id": "prj-tata-dholera",
     "sector_id": "sec-semiconductor",
     "is_primary": true

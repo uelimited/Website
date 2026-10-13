@@ -94,38 +94,6 @@
   },
 
   {
-    "project_id": "prj-sael",
-    "service_id": "svc-hvac",
-    "is_primary": true,
-    "scope_note": "Cleanroom HVAC + PCW"
-  },
-  {
-    "project_id": "prj-sael",
-    "service_id": "svc-bms",
-    "is_primary": false,
-    "scope_note": "BMS + SCADA + historian"
-  },
-  {
-    "project_id": "prj-sael",
-    "service_id": "svc-plumbing",
-    "is_primary": false,
-    "scope_note": "PCW headers"
-  },
-
-  {
-    "project_id": "prj-tabreed",
-    "service_id": "svc-hvac",
-    "is_primary": true,
-    "scope_note": "30,000 TR district cooling"
-  },
-  {
-    "project_id": "prj-tabreed",
-    "service_id": "svc-civil",
-    "is_primary": false
-  },
-  { "project_id": "prj-tabreed", "service_id": "svc-bms", "is_primary": false },
-
-  {
     "project_id": "prj-tata-dholera",
     "service_id": "svc-plumbing",
     "is_primary": true,

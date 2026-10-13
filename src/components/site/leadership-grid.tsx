@@ -1,10 +1,20 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import type { Leader } from "@/data/cms/types";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
+
+function getLeaderInitials(name: string) {
+  const nameParts = name.trim().split(/\s+/).filter(Boolean);
+  const firstInitial = nameParts[0]?.[0] ?? "";
+  const lastInitial =
+    nameParts.length > 1
+      ? (nameParts.at(-1)?.[0] ?? "")
+      : (nameParts[0]?.[1] ?? "");
+
+  return `${firstInitial}${lastInitial}`.toUpperCase();
+}
 
 /**
  * Leadership grid — founders + directors, animated on mount.
@@ -12,9 +22,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
  * The reveal is an unconditional mount fade (matches the hero blur-in
  * pattern already used in hero-video.tsx): it always resolves within
  * ~1s regardless of scroll position, so it's never a precondition for
- * reading the content. A leader with no portrait_url renders the
- * site's existing quiet "Photography" placeholder (.ue-photo) rather
- * than a broken image or a fabricated face.
+ * reading the content. Portraits display initials rather than photos.
  */
 export function LeadershipGrid({ leaders }: { leaders: Leader[] }) {
   const prefersReduced = useReducedMotion();
@@ -29,23 +37,16 @@ export function LeadershipGrid({ leaders }: { leaders: Leader[] }) {
           className="ue-firm-leaders__card"
           initial={noAnim ? false : { opacity: 0, y: 18 }}
           animate={noAnim ? false : { opacity: 1, y: 0 }}
+          whileHover={noAnim ? undefined : { y: -4 }}
           transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
         >
-          <div className="ue-firm-leaders__portrait">
-            {p.portrait_url ? (
-              <Image
-                src={p.portrait_url}
-                alt={p.name}
-                fill
-                sizes="(max-width: 720px) 100vw, 33vw"
-                style={{ objectFit: "cover" }}
-              />
-            ) : (
-              <div
-                className="ue-photo ue-photo--4x5"
-                style={{ position: "absolute", inset: 0, borderRadius: 0 }}
-              />
-            )}
+          <div className="ue-firm-leaders__portrait" aria-hidden="true">
+            <span className="ue-firm-leaders__index">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <span className="ue-firm-leaders__initials">
+              {getLeaderInitials(p.name)}
+            </span>
           </div>
           <div className="ue-firm-leaders__body">
             <p className="ue-firm-leaders__role">{p.role}</p>
@@ -55,6 +56,16 @@ export function LeadershipGrid({ leaders }: { leaders: Leader[] }) {
               <li>{p.experience}</li>
             </ul>
             {p.bio && <p className="ue-firm-leaders__bio">{p.bio}</p>}
+            {p.responsibilities && p.responsibilities.length > 0 && (
+              <div className="ue-firm-leaders__responsibilities">
+                <p>Responsibilities</p>
+                <ul>
+                  {p.responsibilities.map((responsibility) => (
+                    <li key={responsibility}>{responsibility}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </motion.article>
       ))}

@@ -1,72 +1,44 @@
 [
   {
-    "id": "j-1990",
-    "year": "1990",
-    "title": "Founded with focus",
-    "description": "Established in Gurugram by three engineers with a clear objective: deliver HVAC systems with precision and integrity.",
+    "id": "j-1992-foundation",
+    "year": "1992",
+    "title": "Foundation",
+    "description": "Founded in Gurugram by Pradeep Sharma, Manmohan Jindal and the late Rajeev Gupta.",
     "sort_order": 1
   },
   {
-    "id": "j-1993",
-    "year": "1993",
-    "title": "Growing reach",
-    "description": "Expanded beyond NCR, building trust for HVAC work across India and strengthening delivery capability.",
+    "id": "j-1992-2000",
+    "year": "1992 to 2000",
+    "title": "Industrial HVAC",
+    "description": "Established Unique as an industrial HVAC engineering and contracting firm, with works for NTPC, BHEL and Rolls-Royce Power Engineering.",
     "sort_order": 2
   },
   {
-    "id": "j-1995",
-    "year": "1995",
-    "title": "Industry recognition",
-    "description": "Earned credibility with major power and industrial clients, including partnerships with leading national and global engineering teams.",
+    "id": "j-2000-2010",
+    "year": "2000 to 2010",
+    "title": "Beyond North India",
+    "description": "Expanded beyond North India, adding AHU and air-washer manufacturing and delivering projects for stadiums, hotels and Commonwealth Games infrastructure. Unique became recognised nationwide for HVAC.",
     "sort_order": 3
   },
   {
-    "id": "j-2005",
-    "year": "2005",
-    "title": "Vertical integration",
-    "description": "Brought AHU and air washer manufacturing in-house to improve performance, quality control and project certainty.",
+    "id": "j-2010-2020",
+    "year": "2010 to 2020",
+    "title": "Complete MEPF and BMS",
+    "description": "Expanded into complete MEPF and BMS, supporting industrial plants for Coca-Cola, Barco, Oriflame, Belco Pharma, ITC and Luxottica; healthcare campuses under AIIMS and PMSSY; and Mopa International Airport.",
     "sort_order": 4
   },
   {
-    "id": "j-2010",
-    "year": "2010",
-    "title": "A national stage",
-    "description": "Supported stadium and hospitality HVAC works for the 2010 Commonwealth Games in Delhi, demonstrating large-scale execution under pressure.",
+    "id": "j-2020-2025",
+    "year": "2020 to 2025",
+    "title": "Advanced industry",
+    "description": "Established a foothold in advanced industries with complete MEPF and BMS for Foxconn and Tata Electronics, and for STT, CtrlS and AdaniConneX data centres.",
     "sort_order": 5
   },
   {
-    "id": "j-2012-18",
-    "year": "2012–2018",
-    "title": "MEPF expansion",
-    "description": "Extended from specialist HVAC into a broader MEPF capability, creating the integrated delivery model used today.",
+    "id": "j-2025-2030",
+    "year": "2025 to 2030",
+    "title": "The next foothold",
+    "description": "Establish the same foothold in civil, solar and precision engineering, alongside 33 active programmes across data centres, semiconductors and commercial MEP.",
     "sort_order": 6
-  },
-  {
-    "id": "j-2019",
-    "year": "2019",
-    "title": "Airport scale",
-    "description": "Delivered major MEPF works for Mopa International Airport, marking a significant step into large infrastructure execution.",
-    "sort_order": 7
-  },
-  {
-    "id": "j-2020",
-    "year": "2020",
-    "title": "Critical continuity",
-    "description": "Maintained essential HVAC operations across NCR hospitals and healthcare facilities, ensuring uninterrupted service during the pandemic.",
-    "sort_order": 8
-  },
-  {
-    "id": "j-2023",
-    "year": "2023",
-    "title": "Data centre entry",
-    "description": "Entered the data centre sector with mission-critical projects, bringing uptime-first engineering to a new vertical.",
-    "sort_order": 9
-  },
-  {
-    "id": "j-2024",
-    "year": "2024",
-    "title": "Semiconductor growth",
-    "description": "Expanded into semiconductor infrastructure, delivering cleanroom and support systems for advanced electronics manufacturing.",
-    "sort_order": 10
   }
 ]
