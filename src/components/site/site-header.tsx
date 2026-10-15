@@ -41,7 +41,11 @@ export function SiteHeader() {
   }, []);
 
   const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+    href === "/"
+      ? pathname === "/"
+      : href === "/firm"
+        ? pathname === "/firm"
+        : pathname.startsWith(href);
 
   return (
     <header
@@ -54,7 +58,7 @@ export function SiteHeader() {
         </Link>
 
         {/* Desktop nav — Capabilities, Sectors, and The firm open menus;
-          Projects and Culture remain direct links.
+          Projects and Careers remain direct links.
             The wordmark is the home link, so Home is not repeated. */}
         <NavigationMenu className="hidden lg:flex ml-auto" align="start">
           <NavigationMenuList className="gap-0">
@@ -97,13 +101,22 @@ export function SiteHeader() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="ml-auto lg:ml-4 flex items-center gap-2">
-          <Button
-            asChild
-            className="rounded-full px-5 h-9 text-[14px] font-medium"
-          >
-            <Link href="/contact">Contact</Link>
-          </Button>
+        <div className="ml-auto flex items-center gap-2 lg:ml-4">
+          <div className="hidden items-center gap-2 lg:flex">
+            <Button
+              asChild
+              className="rounded-full px-5 h-9 text-[14px] font-medium"
+            >
+              <Link href="/contact">Contact</Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full px-5 h-9 text-[14px] font-medium"
+            >
+              <Link href="/registration">Registration</Link>
+            </Button>
+          </div>
           <MobileMenu />
         </div>
       </div>
@@ -209,22 +222,10 @@ function FirmMenu() {
       </div>
       <div className="ue-services-menu__grid">
         <NavigationMenuLink
-          render={<Link href="/careers" />}
-          className="ue-services-menu__item group"
-        >
-          <span className="num">01</span>
-          <span className="body">
-            <span className="name">Careers</span>
-            <span className="blurb">
-              Build critical infrastructure with the team.
-            </span>
-          </span>
-        </NavigationMenuLink>
-        <NavigationMenuLink
           render={<Link href="/firm#our-story" />}
           className="ue-services-menu__item group"
         >
-          <span className="num">02</span>
+          <span className="num">01</span>
           <span className="body">
             <span className="name">Our Story</span>
             <span className="blurb">
@@ -236,7 +237,7 @@ function FirmMenu() {
           render={<Link href="/firm#how-we-deliver" />}
           className="ue-services-menu__item group"
         >
-          <span className="num">03</span>
+          <span className="num">02</span>
           <span className="body">
             <span className="name">How We Deliver</span>
             <span className="blurb">
@@ -248,12 +249,32 @@ function FirmMenu() {
           render={<Link href="/firm#leadership" />}
           className="ue-services-menu__item group"
         >
-          <span className="num">04</span>
+          <span className="num">03</span>
           <span className="body">
             <span className="name">Our Leadership</span>
             <span className="blurb">
               Meet the engineers behind the practice.
             </span>
+          </span>
+        </NavigationMenuLink>
+        <NavigationMenuLink
+          render={<Link href="/firm/culture" />}
+          className="ue-services-menu__item group"
+        >
+          <span className="num">04</span>
+          <span className="body">
+            <span className="name">Culture</span>
+            <span className="blurb">Meet the people and values behind the work.</span>
+          </span>
+        </NavigationMenuLink>
+        <NavigationMenuLink
+          render={<Link href="/investors" />}
+          className="ue-services-menu__item group"
+        >
+          <span className="num">05</span>
+          <span className="body">
+            <span className="name">Investors</span>
+            <span className="blurb">Company profile, scale and project record.</span>
           </span>
         </NavigationMenuLink>
       </div>
@@ -296,10 +317,11 @@ function MobileMenu() {
                 </Link>
                 {item.menu === "firm" && (
                   <div className="ue-mobile-firm-links">
-                    <Link href="/careers">Careers</Link>
                     <Link href="/firm#our-story">Our Story</Link>
                     <Link href="/firm#how-we-deliver">How We Deliver</Link>
                     <Link href="/firm#leadership">Our Leadership</Link>
+                    <Link href="/firm/culture">Culture</Link>
+                    <Link href="/investors">Investors</Link>
                   </div>
                 )}
               </div>
@@ -322,6 +344,12 @@ function MobileMenu() {
               className="mt-4 inline-flex items-center justify-center rounded-full bg-[color:var(--accent-500)] px-5 h-11 text-[15px] font-medium text-white"
             >
               Contact
+            </Link>
+            <Link
+              href="/registration"
+              className="inline-flex items-center justify-center rounded-full border border-[color:var(--border-color)] px-5 h-11 text-[15px] font-medium text-[color:var(--ink-950)]"
+            >
+              Registration
             </Link>
           </div>
         </SheetContent>

@@ -10,7 +10,6 @@ import {
   CULTURE_PILLARS,
   CAREERS_OFFERS,
   CAREERS_GROWTH,
-  CAREERS_LIFE_IMAGES,
   CAREERS_PATHS,
 } from "@/data/careers";
 
@@ -68,15 +67,29 @@ export default function CareersPage() {
           >
             {CAREERS_HERO.lead}
           </p>
-          <div style={{ marginTop: 34 }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 12,
+              marginTop: 34,
+            }}
+          >
             <Button
               asChild
               className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--paper)] text-[color:var(--ink-950)] hover:bg-[color:var(--ink-100)]"
             >
-              <Link href="/contact">
-                See yourself here? Let&apos;s talk
+              <Link href="/careers/openings">
+                Open hiring
                 <ArrowRight className="size-4 ml-1" aria-hidden />
               </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="h-12 rounded-full border-white/50 bg-white/10 px-7 text-[15px] font-medium text-white hover:bg-white/20 hover:text-white"
+            >
+              <Link href="/careers/apply">Apply directly</Link>
             </Button>
           </div>
         </div>
@@ -201,50 +214,6 @@ export default function CareersPage() {
                   {p.body}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Life on site — photo strip */}
-      <section style={{ padding: "80px 0 88px" }}>
-        <div className="ue-container">
-          <header style={{ marginBottom: 32 }}>
-            <p className="ue-eyebrow">On the ground</p>
-            <h2
-              style={{
-                fontFamily: "var(--font-display)",
-                fontWeight: 500,
-                fontSize: "clamp(28px, 3vw, 38px)",
-                letterSpacing: "-0.022em",
-                lineHeight: 1.1,
-                margin: "8px 0 0",
-                color: "var(--ink-950)",
-                maxWidth: "22ch",
-              }}
-            >
-              Where the work actually happens.
-            </h2>
-          </header>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: 14,
-            }}
-          >
-            {CAREERS_LIFE_IMAGES.map((img) => (
-              <div
-                key={img.src}
-                role="img"
-                aria-label={img.alt}
-                style={{
-                  aspectRatio: "4 / 5",
-                  borderRadius: 12,
-                  background: `url(${img.src}) center/cover no-repeat`,
-                  border: "1px solid var(--border-color)",
-                }}
-              />
             ))}
           </div>
         </div>
@@ -401,7 +370,7 @@ export default function CareersPage() {
             }}
           >
             <div style={{ display: "grid", gap: 12 }}>
-              <p className="ue-eyebrow">Working at UNIQUE</p>
+              <p className="ue-eyebrow">Why join us · Working at Unique</p>
               <h2
                 style={{
                   fontFamily: "var(--font-display)",
@@ -414,7 +383,7 @@ export default function CareersPage() {
                   maxWidth: "16ch",
                 }}
               >
-                Build the work that changes the skyline.
+                Bring your skills to a bigger kind of work.
               </h2>
             </div>
             <p
@@ -426,9 +395,10 @@ export default function CareersPage() {
                 maxWidth: "60ch",
               }}
             >
-              For engineers who want more than a title — a room to grow, a team
-              that values execution, and projects that make a real difference.
-              Share your CV and we&apos;ll be in touch when there&apos;s a fit.
+              Join an in-house team that values execution, invests in growth,
+              and delivers landmark projects across India. Explore the
+              disciplines we hire for and submit your profile through our
+              application form.
             </p>
             <div
               style={{
@@ -442,12 +412,10 @@ export default function CareersPage() {
                 asChild
                 className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--accent-500)] text-[color:var(--paper)] hover:bg-[color:var(--accent-600)] shadow-[0_12px_26px_rgba(194,46,30,0.25)]"
               >
-                <a
-                  href={`mailto:${FIRM.contactEmail}?subject=${encodeURIComponent("Career enquiry")}`}
-                >
-                  Working at UNIQUE
+                <Link href="/careers/openings">
+                  Open hiring
                   <ArrowRight className="size-4 ml-1" aria-hidden />
-                </a>
+                </Link>
               </Button>
               <a
                 href={`mailto:${FIRM.contactEmail}`}
@@ -459,7 +427,7 @@ export default function CareersPage() {
                   textUnderlineOffset: 3,
                 }}
               >
-                {FIRM.contactEmail}
+                Questions? {FIRM.contactEmail}
               </a>
             </div>
           </div>
