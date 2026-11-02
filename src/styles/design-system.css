@@ -221,6 +221,23 @@ body {
   padding: 64px 0;
 }
 
+@media (max-width: 639px) {
+  .ue-container > .grid:has(> form:has(#candidate-name)) {
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  form:has(#candidate-name) {
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  form:has(#candidate-name) > .grid {
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* Hairline rule */
 .ue-rule {
   height: 1px;
