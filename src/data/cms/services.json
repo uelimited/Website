@@ -7,7 +7,6 @@
     "short_name": "Civil",
     "blurb": "Heavy civil foundations, corporate interiors, façade and retrofitting.",
     "scope_unit": "sq.ft",
-    "accent": "blocks",
     "intro_paragraphs": [
       "Civil and interior work is where every other discipline lands. Foundations absorb the loads, façades meet the weather, finishes carry the tenant fit-out — and all of it must hold the MEPF systems that move through it. The discipline is unforgiving of shortcuts: a misaligned pour or a slack slab finish costs months to correct once downstream trades arrive.",
       "The civil desk runs the full arc — from soil investigation through structural shell, façade envelope, and end-user finish. Work is scheduled against the MEPF programme so openings, sleeves, cut-outs and penetrations are cast-in, not chipped-in. Handover is against a stamped bill of quantities with a full as-built set."
@@ -48,7 +47,6 @@
     "name": "HVAC",
     "blurb": "Central chillers, VRF, precision cooling, ventilation, thermal storage, geothermal.",
     "scope_unit": "TR · CFM",
-    "accent": "fan",
     "intro_paragraphs": [
       "HVAC is the firm's founding discipline — the practice began in 1990 as a specialist HVAC contractor and the depth shows. Central plants, air-handling systems, terminal devices, and the controls that tie them together are engineered and installed across applications from luxury hotels to ISO-6 semiconductor cleanrooms.",
       "Every job starts with a granular heat load — room-by-room, equipment-by-equipment — not a rule-of-thumb tonnage. Plant sizing, distribution hydraulics, ductwork, and controls flow from that single source of truth, and the entire system is commissioned to a measurable performance window before handover."
@@ -91,7 +89,6 @@
     "short_name": "Electrical",
     "blurb": "HT/LT distribution, substations, DG sets, UPS, bus trunking, clean-room lighting.",
     "scope_unit": "kVA · kW",
-    "accent": "current",
     "intro_paragraphs": [
       "Electrical is where reliability is engineered, not specified. High-tension to low-tension distribution, substations and transformers, backup power, switchgear, cable management, earthing and the lighting layer on top are delivered — sized for the building it powers and the loads it serves.",
       "Distribution diagrams are owned end-to-end. Short-circuit analysis, arc-flash modelling, harmonic studies and protection coordination are run before the first cable is pulled. Cable trays and bus trunking are routed in the coordinated MEPF model so service voids stay congestion-free across the building's life."
@@ -134,7 +131,6 @@
     "short_name": "Plumbing",
     "blurb": "WTP/STP/ETP plants, industrial piping, hydropneumatic, steam boilers, rainwater harvesting.",
     "scope_unit": "LPM · KL",
-    "accent": "droplets",
     "intro_paragraphs": [
       "Plumbing and public health engineering covers the building's entire water and effluent story — from the borewell or municipal tap through treatment, distribution, fixture supply, drainage and effluent return. It is hidden infrastructure that defines whether a building is comfortable to occupy or a continuous source of complaints.",
       "Pressurised cold and hot water systems, treated water for cooling towers and process plants, sewage and effluent treatment, and the high-purity piping that pharma, semiconductor and laboratory environments require are delivered. Hydraulics are designed, not assumed."
@@ -177,7 +173,6 @@
     "short_name": "Firefighting",
     "blurb": "Hydrant, sprinkler, gas suppression, smoke detection, NBC compliance.",
     "scope_unit": "NFPA · IS",
-    "accent": "pulse",
     "intro_paragraphs": [
       "Firefighting is a code-led discipline — NBC 2016, NFPA 13/72, local fire authority NOC — but its execution is everything. A sprinkler that cannot prove its flow at the most remote head is a paper system. A gas-suppression release that interlocks badly is a hazard, not a defence.",
       "Fire hydrants, automatic sprinklers, clean-agent gas suppression, smoke detection and evacuation systems are delivered across commercial, healthcare, industrial and data-centre facilities. Every system is hydraulically calculated, pressure-tested, and witness-commissioned with the local fire authority before NOC is issued."
@@ -220,7 +215,6 @@
     "short_name": "Solar",
     "blurb": "Rooftop and ground-mounted solar, net metering, LEED/IGBC compliance, energy audits.",
     "scope_unit": "kWp",
-    "accent": "sun",
     "intro_paragraphs": [
       "Solar is the firm's renewable energy practice — rooftop and ground-mounted PV plants engineered for irradiance, structural load, electrical safety and a measurable return. It pairs naturally with the firm's electrical, BMS and energy-audit capability, so the generated power is metered, monitored and integrated into the building's broader energy strategy.",
       "Solar EPC scopes have been delivered from rooftop installations on warehouses and corporate campuses to integrated solar at the Ingka (IKEA) mixed-use development. Net metering, inverter selection, string sizing, and grid synchronisation are all in-house."
@@ -263,7 +257,6 @@
     "short_name": "BMS",
     "blurb": "Fire alarm, CCTV, access control, DDC, energy management, SCADA integration.",
     "scope_unit": "Points",
-    "accent": "graph",
     "intro_paragraphs": [
       "Building management is the controls layer that turns a building of disparate systems into an operational asset. Direct Digital Control (DDC) for HVAC and plumbing, SCADA head-ends and historians, electrical power monitoring, fire alarm and PA, CCTV, access control and IBMS integration are delivered — built to BTL-certified controllers and vendor-neutral wherever possible.",
       "The BMS scope deliberately includes the operator hand-off: tag dictionaries signed off pre-commissioning, point lists witnessed during integration, alarm hierarchies pre-agreed with the facility team. The system isn't installed for the contractor — it's installed for the people who will run the building for the next twenty years."
@@ -306,7 +299,6 @@
     "short_name": "O&M",
     "blurb": "24/7 facility management, preventive + predictive maintenance, asset lifecycle, rapid response.",
     "scope_unit": "SLA · MTTR",
-    "accent": "graph",
     "intro_paragraphs": [
       "Operations and maintenance is the discipline that pays off the engineering decisions made during construction. Integrated facility management contracts span all the systems installed — HVAC, electrical, plumbing, fire, BMS, civil — under one accountable team, with a single performance SLA.",
       "The O&M model is built around preventive schedules generated from OEM datasheets, predictive analytics layered on top of BMS data, and rapid-response teams pre-positioned near major client sites. The objective is unchanged: keep the asset producing the comfort, the process condition or the uptime it was designed for, for its full economic life."
@@ -339,5 +331,19 @@
       "The building's data is watched for early signs of trouble, with critical spares kept close by, so small drifts get fixed before they become breakdowns.",
       "It is the same specialists who commissioned the chiller plant, the substation or the fire pump house who stay on to run it — one contract, one accountable team, for the life of the asset."
     ]
+  },
+  {
+    "id": "svc-process",
+    "slug": "precision-process-engineering",
+    "num": "09",
+    "name": "Precision & Process Engineering",
+    "short_name": "Process engineering",
+    "blurb": "Specialist utilities and piping for advanced manufacturing and cleanrooms.",
+    "scope_unit": "",
+    "intro_paragraphs": [],
+    "approach_paragraphs": [],
+    "hero_image_url": "/project-archive/ctrls-mahape-mumbai/gallery-05.jpg",
+    "sort_order": 9,
+    "published": true
   }
 ]

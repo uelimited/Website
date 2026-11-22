@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "last_reviewed": "2026-08-26",
+  "review_guidance": "Public website facts",
+  "company": {
+    "legal_name": "Unique Engineers Limited",
+    "brand_name": "Unique Engineers",
+    "operational_founded_year": 1992,
+    "incorporated_year": 1992,
+    "website": "uniqueengineersltd.com",
+    "linkedin": "https://www.linkedin.com/company/uniqueengineers",
+    "contact_email": "info@uelimited.com",
+    "office_hours": "Mon-Fri | 09:30-18:30 IST",
+    "headquarters": {
+      "label": "Gurugram - HQ",
+      "address_lines": [
+        "332, 3rd Floor, A-Block, Spaze IT Park",
+        "Sohna Road, Sec-49",
+        "Gurugram, Haryana 122001"
+      ],
+      "phone": "0124 419 2527"
+    }
+  },
+  "facts": [
+    {
+      "id": "years_in_practice",
+      "category": "company_scale",
+      "label": "Years in practice",
+      "value": 30,
+      "unit": "years",
+      "display": "30+ years",
+      "stat_value": "30",
+      "stat_unit": "+",
+      "period": "Since 1992",
+      "as_of": "2026-08-26",
+      "verification_status": "derived",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "projects_last_decade",
+      "category": "company_scale",
+      "label": "Projects delivered",
+      "value": 170,
+      "unit": "projects",
+      "display": "170+",
+      "stat_value": "170",
+      "stat_unit": "+",
+      "period": "Last decade",
+      "as_of": "2026-08-26",
+      "verification_status": "derived",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "cumulative_contract_value_last_decade",
+      "category": "company_scale",
+      "label": "Cumulative contract value",
+      "value": 3422.5,
+      "unit": "INR crore",
+      "display": "INR 3,422 Cr",
+      "stat_value": "3,422",
+      "stat_unit": "₹ Cr",
+      "period": "Last decade",
+      "as_of": "2026-08-26",
+      "verification_status": "derived",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "states_executed",
+      "category": "company_scale",
+      "label": "States executed",
+      "value": 23,
+      "unit": "states",
+      "display": "23 states",
+      "stat_value": "23",
+      "stat_unit": "",
+      "period": "Project ledger coverage",
+      "as_of": "2026-08-26",
+      "verification_status": "derived",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "industries_served",
+      "category": "company_scale",
+      "label": "Industries served",
+      "value": 9,
+      "unit": "industries",
+      "display": "9 industries",
+      "stat_value": "9",
+      "stat_unit": "",
+      "period": "Current website taxonomy",
+      "as_of": "2026-08-26",
+      "verification_status": "derived",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "cooling_engineered_flagships",
+      "category": "technical_scale",
+      "label": "Cooling engineered across flagship projects",
+      "value": 75000,
+      "unit": "TR",
+      "display": "75,000 TR",
+      "stat_value": "75,000",
+      "stat_unit": "TR",
+      "period": "Selected flagship projects",
+      "as_of": "2026-08-26",
+      "verification_status": "derived",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "delivery_disciplines",
+      "category": "company_scale",
+      "label": "Integrated delivery disciplines",
+      "value": 8,
+      "unit": "disciplines",
+      "display": "8 disciplines",
+      "stat_value": "8",
+      "stat_unit": "",
+      "period": "Current website taxonomy",
+      "as_of": "2026-08-26",
+      "verification_status": "derived",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "founder_directors",
+      "category": "people",
+      "label": "Founder-directors",
+      "value": 3,
+      "unit": "people",
+      "display": "3 founder-directors",
+      "stat_value": "3",
+      "stat_unit": "",
+      "period": "Current leadership register",
+      "as_of": "2026-08-26",
+      "verification_status": "derived",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "quality_acceptance_first_inspection",
+      "category": "quality_safety",
+      "label": "Quality acceptance at first inspection",
+      "value": 98,
+      "unit": "percent",
+      "display": "98%",
+      "stat_value": "98",
+      "stat_unit": "%",
+      "period": "Company-reported current claim",
+      "as_of": "2025-03-31",
+      "verification_status": "needs_confirmation",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "projects_delivered_on_schedule",
+      "category": "delivery",
+      "label": "Projects delivered on schedule",
+      "value": 98,
+      "unit": "percent",
+      "display": "98%",
+      "stat_value": "98",
+      "stat_unit": "%",
+      "period": "Company-reported current claim",
+      "as_of": "2025-03-31",
+      "verification_status": "needs_confirmation",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "safe_man_hours_fy25",
+      "category": "quality_safety",
+      "label": "Safe man-hours",
+      "value": 5000000,
+      "unit": "man-hours",
+      "display": "5 million+",
+      "stat_value": "5M",
+      "stat_unit": "+",
+      "period": "FY2024-25",
+      "as_of": "2025-03-31",
+      "verification_status": "needs_confirmation",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    },
+    {
+      "id": "fatalities_last_five_years",
+      "category": "quality_safety",
+      "label": "Fatalities",
+      "value": 0,
+      "unit": "fatalities",
+      "display": "Zero",
+      "stat_value": "Zero",
+      "stat_unit": "",
+      "period": "Five years to FY2024-25",
+      "as_of": "2025-03-31",
+      "verification_status": "needs_confirmation",
+      "visibility": "public",
+      "website_enabled": true,
+      "owner": "",
+      "source": {
+        "file": "",
+        "detail": ""
+      },
+      "notes": ""
+    }
+  ]
+}

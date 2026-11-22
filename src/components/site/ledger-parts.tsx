@@ -502,13 +502,13 @@ export function FeaturedCardView({ card }: { card: FeaturedCard }) {
       <div className="ue-work-card__body">
         <div className="ue-work-card__meta">
           <span>{card.primarySectorName}</span>
-          {card.value_display && <span>{card.value_display}</span>}
         </div>
         <h3 className="ue-work-card__name">{card.name}</h3>
         <p className="ue-work-card__loc">
           {card.city}
           {card.state ? `, ${card.state}` : ""}
         </p>
+        <p className="ue-work-card__client">{card.clientName}</p>
         <div className="ue-work-card__tags">
           {card.scopeTags.map((t) => (
             <span key={t} className="ue-work-card__tag">
@@ -517,7 +517,7 @@ export function FeaturedCardView({ card }: { card: FeaturedCard }) {
           ))}
         </div>
         <span className="ue-work-card__cta">
-          View case study
+          View project
           <ArrowRight className="size-3.5" aria-hidden />
         </span>
       </div>

@@ -244,7 +244,7 @@ function Slide({
         <p className="ue-sec-scroll__desc">{s.short_description}</p>
         <dl className="ue-sec-scroll__stats">
           <div>
-            <dt>Projects in the order book</dt>
+            <dt>Projects in the track record</dt>
             <dd>{stats.count}</dd>
           </div>
           <div>

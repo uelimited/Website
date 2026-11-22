@@ -1,3 +1,4 @@
+import "server-only";
 /**
  * Unique Engineers — CMS query layer
  *
@@ -24,6 +25,8 @@ import type {
   ProjectServiceCategory,
   ProjectSector,
   LedgerEntry,
+  MethodStatementRegistry,
+  OrganisationRegistry,
 } from "@/data/cms/types";
 import { serviceParamFromId, type FeaturedCard } from "@/lib/ledger-filters";
 
@@ -31,6 +34,7 @@ import servicesJson from "@/data/cms/services.json";
 import serviceCategoriesJson from "@/data/cms/service_categories.json";
 import sectorsJson from "@/data/cms/sectors.json";
 import projectsJson from "@/data/cms/projects.json";
+import landmarkProjectsJson from "@/data/cms/landmark_projects.json";
 import clientsJson from "@/data/cms/clients.json";
 import projectServicesJson from "@/data/cms/project_services.json";
 import projectServiceCategoriesJson from "@/data/cms/project_service_categories.json";
@@ -41,6 +45,8 @@ import testimonialsJson from "@/data/cms/testimonials.json";
 import certificationsJson from "@/data/cms/certifications.json";
 import officesJson from "@/data/cms/offices.json";
 import projectLedgerJson from "@/data/cms/project_ledger.json";
+import methodStatementsJson from "@/data/cms/method_statements.json";
+import organisationJson from "@/data/cms/organisation.json";
 
 // -----------------------------------------------------------------
 // Type-safe casts of the raw JSON imports
@@ -49,18 +55,86 @@ import projectLedgerJson from "@/data/cms/project_ledger.json";
 const SERVICES = servicesJson as Service[];
 const SERVICE_CATEGORIES = serviceCategoriesJson as ServiceCategory[];
 const SECTORS = sectorsJson as Sector[];
-const PROJECTS = projectsJson as Project[];
+type LandmarkProjectRecord = Project & {
+  sector_ids: string[];
+  service_ids: string[];
+};
+
+const LANDMARK_PROJECTS = (
+  landmarkProjectsJson as { projects: LandmarkProjectRecord[] }
+).projects;
+const LEGACY_PROJECTS = projectsJson as Project[];
+const PROJECTS: Project[] = [
+  ...LANDMARK_PROJECTS.map((landmark) => {
+    const existing = LEGACY_PROJECTS.find((p) => p.slug === landmark.slug);
+    if (!existing) return landmark;
+    const hasPlaceholderNarrative =
+      landmark.missing_fields?.includes("project narrative");
+    return {
+      ...existing,
+      ...landmark,
+      id: existing.id,
+      summary: hasPlaceholderNarrative ? existing.summary : landmark.summary,
+      narrative: existing.narrative.length
+        ? existing.narrative
+        : landmark.narrative,
+      key_metrics: existing.key_metrics,
+      execution_snapshots: existing.execution_snapshots,
+      certifications: existing.certifications,
+    };
+  }),
+  ...LEGACY_PROJECTS.filter(
+    (project) =>
+      !LANDMARK_PROJECTS.some((landmark) => landmark.slug === project.slug),
+  ),
+];
 const CLIENTS = clientsJson as Client[];
-const PROJECT_SERVICES = projectServicesJson as ProjectService[];
+const PROJECT_SERVICES: ProjectService[] = [
+  ...(projectServicesJson as ProjectService[]),
+  ...LANDMARK_PROJECTS.flatMap((landmark) => {
+    const project = PROJECTS.find((item) => item.slug === landmark.slug);
+    return landmark.service_ids.map((serviceId, index) => ({
+      project_id: project?.id ?? landmark.id,
+      service_id: serviceId,
+      is_primary: index === 0,
+    }));
+  }),
+].filter(
+  (join, index, joins) =>
+    joins.findIndex(
+      (candidate) =>
+        candidate.project_id === join.project_id &&
+        candidate.service_id === join.service_id,
+    ) === index,
+);
 const PROJECT_SERVICE_CATEGORIES =
   projectServiceCategoriesJson as ProjectServiceCategory[];
-const PROJECT_SECTORS = projectSectorsJson as ProjectSector[];
+const PROJECT_SECTORS: ProjectSector[] = [
+  ...(projectSectorsJson as ProjectSector[]),
+  ...LANDMARK_PROJECTS.flatMap((landmark) => {
+    const project = PROJECTS.find((item) => item.slug === landmark.slug);
+    return landmark.sector_ids.map((sectorId, index) => ({
+      project_id: project?.id ?? landmark.id,
+      sector_id: sectorId,
+      is_primary: index === 0,
+    }));
+  }),
+].filter(
+  (join, index, joins) =>
+    joins.findIndex(
+      (candidate) =>
+        candidate.project_id === join.project_id &&
+        candidate.sector_id === join.sector_id,
+    ) === index,
+);
 const LEADERSHIP = leadershipJson as Leader[];
 const JOURNEY = journeyJson as JourneyMilestone[];
 const TESTIMONIALS = testimonialsJson as Testimonial[];
 const CERTIFICATIONS = certificationsJson as Certification[];
 const OFFICES = officesJson as Office[];
 const PROJECT_LEDGER = projectLedgerJson as LedgerEntry[];
+const METHOD_STATEMENTS = methodStatementsJson as MethodStatementRegistry;
+const ORGANISATION = organisationJson as OrganisationRegistry;
 
 // -----------------------------------------------------------------
 // Simple comparators
@@ -158,13 +232,18 @@ export function getSectorById(id: string): Sector | null {
 // -----------------------------------------------------------------
 
 export function getAllProjects(): Project[] {
-  return PROJECTS.filter((p) => p.published)
+  return PROJECTS.filter(
+    (p) =>
+      p.published &&
+      p.information_status !== "placeholder" &&
+      p.scope_tags.some((tag) => !/confirm|placeholder/i.test(tag)),
+  )
     .slice()
     .sort(byValueDesc);
 }
 
 export function getProjectBySlug(slug: string): Project | null {
-  return PROJECTS.find((p) => p.slug === slug && p.published) ?? null;
+  return getAllProjects().find((p) => p.slug === slug) ?? null;
 }
 
 export function getFeaturedProjects(): Project[] {
@@ -388,7 +467,7 @@ export function getSectorWithProjects(slug: string): {
 }
 
 // -----------------------------------------------------------------
-// Project ledger — the full 10-year order book (consolidated)
+// Project ledger — the full 10-year project record (consolidated)
 // -----------------------------------------------------------------
 
 const byLedgerValueDesc = (a: LedgerEntry, b: LedgerEntry) =>
@@ -478,7 +557,7 @@ export function getProjectWithContext(slug: string): {
 }
 
 // -----------------------------------------------------------------
-// Work hub — ledger ↔ case-study linking + the /work page payload
+// Project hub — ledger ↔ case-study linking + the /projects page payload
 // -----------------------------------------------------------------
 
 /**
@@ -499,6 +578,32 @@ export const CASE_STUDY_SLUG_BY_LEDGER_ID: Record<string, string> = {
   "stt-data-centre": "stt-gdc-mumbai",
   "stt-data-centre-navi-mumbai": "stt-gdc-mumbai",
   "stt-global-data-centre": "stt-gdc-mumbai",
+  "tata-semiconductor-morigaon-assam": "tata-electronics-dholera",
+  "m3m-mansion-sec-113": "m3m-mansion-113",
+  "igh-dwarka": "indira-gandhi-hospital",
+  "sky-mansion": "sky-mansion",
+  "bharti-aerocity": "bharti-airtel-aerocity",
+  "vatika-one-on-one": "vatika-one-on-one",
+  "aiims-jammu": "aiims-jammu",
+  "scb-medical-college-cuttack": "scb-medical-college-cuttack",
+  bitsom: "bitsom-mumbai",
+  "kolkata-atc-tower": "atc-tower-kolkata",
+  "ssh-warangal": "ssh-warangal",
+  "iit-palakkad": "iit-palakkad",
+  "selfie-square": "amb-selfie-square",
+  "klj-square": "klj-square",
+  "elan-miracle": "elan-miracle",
+  "amity-university-ranchi": "amity-ranchi-operations-maintenance",
+  "amity-university-kolkata": "amity-kolkata-operations-maintenance",
+  "anant-raj-cloud": "anant-raj-cloud-data-centre",
+  "chennai-airport": "chennai-airport-t3-phase-2",
+  "safdarjung-hospital": "safdarjung-hospital",
+  "asi-noida": "asi-greater-noida",
+  "bose-institute-kolkata": "bose-institute-kolkata",
+  "sabarmati-hsr-terminal": "high-speed-rail-ahmedabad",
+  "200-bedded-hospital-burari": "burari-hospital",
+  "microsoft-noida": "microsoft-noida",
+  "amity-university-hyderabad": "amity-hyderabad",
   "foxconn-a1-building": "foxconn-bangalore",
   "foxconn-a2-building": "foxconn-bangalore",
   "foxconn-a3-building": "foxconn-bangalore",
@@ -514,9 +619,7 @@ export const CASE_STUDY_SLUG_BY_LEDGER_ID: Record<string, string> = {
 
 /** ledger id → `/projects/<slug>`, only for rows whose case study is published. */
 export function getCaseStudyHrefsByLedgerId(): Record<string, string> {
-  const publishedSlugs = new Set(
-    PROJECTS.filter((p) => p.published).map((p) => p.slug),
-  );
+  const publishedSlugs = new Set(getAllProjects().map((p) => p.slug));
   const out: Record<string, string> = {};
   for (const [ledgerId, slug] of Object.entries(CASE_STUDY_SLUG_BY_LEDGER_ID)) {
     if (publishedSlugs.has(slug)) out[ledgerId] = `/projects/${slug}`;
@@ -524,7 +627,7 @@ export function getCaseStudyHrefsByLedgerId(): Record<string, string> {
   return out;
 }
 
-/** sector id → sector slug, for building `/work?sector=<slug>` links. */
+/** sector id → sector slug, for building `/projects?sector=<slug>` links. */
 export function getSectorSlugById(): Record<string, string> {
   return Object.fromEntries(
     SECTORS.filter((s) => s.published).map((s) => [s.id, s.slug]),
@@ -534,7 +637,12 @@ export function getSectorSlugById(): Record<string, string> {
 /** Distinct, sorted non-empty states across the ledger (for the state filter). */
 export function getLedgerStates(): string[] {
   return Array.from(
-    new Set(PROJECT_LEDGER.map((e) => e.state).filter(Boolean)),
+    new Set(
+      [
+        ...PROJECT_LEDGER.map((e) => e.state),
+        ...PROJECTS.map((project) => project.location_state ?? ""),
+      ].filter(Boolean),
+    ),
   ).sort((a, b) => a.localeCompare(b));
 }
 
@@ -544,7 +652,7 @@ export function getLedgerIndustryCount(): number {
 }
 
 /**
- * Complete payload for the `/work` hub. Featured case studies are
+ * Complete payload for the `/projects` hub. Featured case studies are
  * pre-flattened with their sector/service ids so the client can filter
  * them against the same axes as the ledger without importing joins.
  */
@@ -574,7 +682,12 @@ export function getWorkHubData(): {
 
   // Only offer chips for sectors / services that actually appear in the ledger.
   const usedSectorIds = new Set(ledger.map((e) => e.sector_id));
-  const usedServiceIds = new Set(ledger.flatMap((e) => e.service_ids));
+  const usedServiceIds = new Set([
+    ...ledger.flatMap((e) => e.service_ids),
+    ...projects.flatMap((p) =>
+      getServicesForProject(p.id).map((s) => s.service.id),
+    ),
+  ]);
 
   const sectorOptions = sectors
     .filter((s) => usedSectorIds.has(s.id))
@@ -587,25 +700,31 @@ export function getWorkHubData(): {
       param: serviceParamFromId(s.id),
     }));
 
-  const featured: FeaturedCard[] = projects.map((p) => {
-    const secs = getSectorsForProject(p.id);
-    const svcs = getServicesForProject(p.id);
-    const primary = secs.find((s) => s.is_primary) ?? secs[0];
-    return {
-      slug: p.slug,
-      name: p.name,
-      city: p.location_city,
-      state: p.location_state ?? "",
-      value_display: p.value_display ?? "",
-      value_cr: p.value_cr ?? 0,
-      primarySectorName: primary?.sector.name ?? p.project_type,
-      sectorIds: secs.map((s) => s.sector.id),
-      serviceIds: svcs.map((s) => s.service.id),
-      scopeTags: p.scope_tags.slice(0, 4),
-      heroImageUrl: p.hero_image_url ?? null,
-      projectType: p.project_type,
-    };
-  });
+  const featured: FeaturedCard[] = projects
+    .filter((p) => p.hero_image_url)
+    .map((p) => {
+      const secs = getSectorsForProject(p.id);
+      const svcs = getServicesForProject(p.id);
+      const primary = secs.find((s) => s.is_primary) ?? secs[0];
+      return {
+        slug: p.slug,
+        name: p.name,
+        city: /confirm|pending/i.test(p.location_city) ? "" : p.location_city,
+        state: /confirm|pending/i.test(p.location_state ?? "")
+          ? ""
+          : (p.location_state ?? ""),
+        value_display: p.value_display ?? "",
+        value_cr: p.value_cr ?? 0,
+        primarySectorName: primary?.sector.name ?? p.project_type,
+        sectorIds: secs.map((s) => s.sector.id),
+        serviceIds: svcs.map((s) => s.service.id),
+        scopeTags: p.scope_tags.slice(0, 4),
+        heroImageUrl: p.hero_image_url ?? null,
+        projectType: p.project_type,
+        clientName: p.client_name_display ?? "",
+        status: p.status,
+      };
+    });
 
   return {
     ledger,
@@ -620,4 +739,44 @@ export function getWorkHubData(): {
     caseStudyHrefs: getCaseStudyHrefsByLedgerId(),
     sectorSlugById: getSectorSlugById(),
   };
+}
+
+// -----------------------------------------------------------------
+// Controlled execution-method library
+// -----------------------------------------------------------------
+
+export function getMethodStatementRegistry(): MethodStatementRegistry {
+  return METHOD_STATEMENTS;
+}
+
+export function getOrganisationRegistry(): OrganisationRegistry {
+  return ORGANISATION;
+}
+
+export function getMethodStatementsForService(serviceId: string) {
+  const libraryByService: Record<string, string> = {
+    "svc-civil": "civil",
+    "svc-hvac": "hvac",
+    "svc-electrical": "electrical",
+    "svc-plumbing": "public-health",
+    "svc-bms": "elv-bms",
+  };
+  const libraryId = libraryByService[serviceId];
+  if (libraryId) {
+    return METHOD_STATEMENTS.statements.filter(
+      (statement) => statement.library_id === libraryId,
+    );
+  }
+
+  const patternByService: Record<string, RegExp> = {
+    "svc-firefighting": /fire|smoke|suppression|sprinkler|hydrant/i,
+    "svc-solar": /solar|photovoltaic|inverter|energy/i,
+    "svc-om": /maintenance|inspection|testing|commissioning|handover/i,
+  };
+  const pattern = patternByService[serviceId];
+  return pattern
+    ? METHOD_STATEMENTS.statements.filter((statement) =>
+        pattern.test(statement.search_text),
+      )
+    : [];
 }

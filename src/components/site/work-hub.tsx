@@ -2,9 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { StatsGrid } from "@/components/site/stat-counter";
 import {
-  ChipRow,
   FeaturedCardView,
   LedgerCardItem,
   LedgerRow,
@@ -44,14 +42,12 @@ const INITIAL_ROWS = 30;
 
 export function WorkHub({
   ledger,
-  stats,
   sectorOptions,
   serviceOptions,
   sectorLabels,
   serviceLabels,
   featured,
   states,
-  industries,
   caseStudyHrefs,
   sectorSlugById,
 }: WorkHubProps) {
@@ -180,24 +176,14 @@ export function WorkHub({
   const hrefFor = (e: LedgerEntry): string | undefined => {
     if (caseStudyHrefs[e.id]) return caseStudyHrefs[e.id];
     const slug = sectorSlugById[e.sector_id];
-    return slug ? `/work?sector=${slug}` : undefined;
+    return slug ? `/projects?sector=${slug}` : undefined;
   };
 
-  const heroStats = [
-    {
-      n: String(stats.count),
-      unit: "+",
-      l: "Projects delivered · last decade",
-    },
-    {
-      n: Math.round(stats.total_cr).toLocaleString("en-IN"),
-      unit: "₹ Cr",
-      l: "Cumulative contract value",
-    },
-    { n: String(industries), unit: "", l: "Industries served" },
-    { n: "75,000", unit: "TR", l: "Cooling engineered · flagships" },
-    { n: "23", unit: "", l: "States executed" },
-  ];
+  const [showArchive, setShowArchive] = useState(false);
+  const [projectMode, setProjectMode] = useState("gallery");
+  const galleryProjects = showArchive
+    ? filteredFeatured
+    : filteredFeatured.slice(0, 12);
 
   return (
     <>
@@ -205,16 +191,37 @@ export function WorkHub({
       <section className="ue-work-hero">
         <div className="ue-container">
           <p className="ue-eyebrow" style={{ margin: 0 }}>
-            Work
+            Projects
           </p>
-          <h1 className="ue-work-hero__title">Every project, delivered.</h1>
+          <h1 className="ue-work-hero__title">
+            India-scale MEPF, project by project.
+          </h1>
           <p className="ue-work-hero__lead">
-            {stats.count} projects across {industries} industries, delivered
-            over the last decade. Filter by sector, system, contract value or
-            location to find the work that matches yours.
+            Explore our projects by industry and service, or browse the
+            historical project record.
           </p>
-          <div className="ue-work-hero__stats">
-            <StatsGrid items={heroStats} />
+          <div
+            className="ue-work-toggle"
+            role="group"
+            aria-label="Project collections"
+            style={{ marginTop: 28, display: "inline-flex" }}
+          >
+            <button
+              type="button"
+              aria-pressed={projectMode === "gallery"}
+              data-active={projectMode === "gallery" ? "" : undefined}
+              onClick={() => setProjectMode("gallery")}
+            >
+              Project gallery
+            </button>
+            <button
+              type="button"
+              aria-pressed={projectMode === "record"}
+              data-active={projectMode === "record" ? "" : undefined}
+              onClick={() => setProjectMode("record")}
+            >
+              Project record
+            </button>
           </div>
         </div>
       </section>
@@ -225,16 +232,18 @@ export function WorkHub({
           <div className="ue-work-filters__top">
             <LedgerSearch value={queryInput} onChange={onSearchInput} />
             <div className="ue-work-filters__selects">
-              <LedgerSelect
-                label="Value"
-                value={filters.band}
-                onChange={(v) => commit({ band: v === "all" ? null : v })}
-                allLabel="Any value"
-                options={VALUE_BANDS.map((b) => ({
-                  value: b.key,
-                  label: b.label,
-                }))}
-              />
+              {projectMode === "record" && (
+                <LedgerSelect
+                  label="Value"
+                  value={filters.band}
+                  onChange={(v) => commit({ band: v === "all" ? null : v })}
+                  allLabel="Any value"
+                  options={VALUE_BANDS.map((b) => ({
+                    value: b.key,
+                    label: b.label,
+                  }))}
+                />
+              )}
               {states.length > 0 && (
                 <LedgerSelect
                   label="State"
@@ -247,67 +256,112 @@ export function WorkHub({
             </div>
           </div>
 
-          <div className="ue-work-filters__chips">
-            <ChipRow
-              label="Sector"
-              options={sectorOptions.map((o) => ({ id: o.id, name: o.name }))}
+          <div
+            className="ue-work-filters__selects"
+            style={{
+              marginTop: 16,
+              justifyContent: "flex-start",
+              flexWrap: "wrap",
+            }}
+          >
+            <LedgerSelect
+              label="Industry"
               value={filters.sector}
+              allLabel="All industries"
+              options={sectorOptions.map((o) => ({
+                value: o.id,
+                label: o.name,
+              }))}
               onChange={(id) =>
                 commit({
-                  sector:
-                    id === "all" ? null : (maps.sectorParamById[id] ?? null),
+                  sector: id === "all" ? null : maps.sectorParamById[id],
                 })
               }
             />
-            <ChipRow
+            <LedgerSelect
               label="Service"
-              options={serviceOptions.map((o) => ({ id: o.id, name: o.name }))}
               value={filters.service}
+              allLabel="All services"
+              options={serviceOptions.map((o) => ({
+                value: o.id,
+                label: o.name,
+              }))}
               onChange={(id) =>
                 commit({
-                  service:
-                    id === "all" ? null : (maps.serviceParamById[id] ?? null),
+                  service: id === "all" ? null : maps.serviceParamById[id],
                 })
               }
             />
+            {active && (
+              <button
+                type="button"
+                className="ue-work-clear"
+                onClick={clearAll}
+              >
+                Clear filters
+              </button>
+            )}
           </div>
         </div>
       </section>
 
-      {/* Featured case studies — respond to the same filter context */}
-      {filteredFeatured.length > 0 && (
-        <section className="ue-work-featured">
+      {/* Landmark project archive — responds to the same filter context */}
+      {projectMode === "gallery" && (
+        <section className="ue-work-featured" id="landmark-projects">
           <div className="ue-container">
             <header className="ue-work-section-head">
               <p className="ue-eyebrow" style={{ margin: 0 }}>
-                Featured case studies
+                Project gallery
               </p>
               <h2 className="ue-work-section-title">
                 {active
-                  ? `${filteredFeatured.length} featured ${filteredFeatured.length === 1 ? "project" : "projects"} in view.`
-                  : "The mandates that defined the firm."}
+                  ? `${filteredFeatured.length} landmark ${filteredFeatured.length === 1 ? "project" : "projects"} in view.`
+                  : "Selected projects, across India."}
               </h2>
             </header>
             <div className="ue-work-grid">
-              {filteredFeatured.map((c) => (
+              {galleryProjects.map((c) => (
                 <FeaturedCardView key={c.slug} card={c} />
               ))}
             </div>
+            {filteredFeatured.length === 0 && (
+              <p className="ue-lead" role="status">
+                No projects match these filters. Try a different search or clear
+                the filters.
+              </p>
+            )}
+            {!showArchive && filteredFeatured.length > 12 && (
+              <button
+                type="button"
+                className="ue-work-clear"
+                style={{ marginTop: 28 }}
+                onClick={() => setShowArchive(true)}
+              >
+                Show all {filteredFeatured.length} projects
+              </button>
+            )}
           </div>
         </section>
       )}
 
-      {/* The full order book */}
-      <section className="ue-work-orderbook">
+      {/* The full project record */}
+      <section
+        className="ue-work-orderbook"
+        id="project-record"
+        hidden={projectMode !== "record"}
+      >
         <div className="ue-container">
           <header className="ue-work-section-head">
             <p className="ue-eyebrow" style={{ margin: 0 }}>
-              The full order book
+              The project record
             </p>
-            <h2 className="ue-work-section-title">Every project, one list.</h2>
+            <h2 className="ue-work-section-title">
+              Our historical project record.
+            </h2>
             <p className="ue-work-section-lead">
-              Repeat purchase orders for the same site are consolidated;
-              contract values are aggregated. Largest first.
+              Recorded contracts from the last decade. Values reflect the
+              historical register and may differ from the scope of a current
+              project.
             </p>
           </header>
 

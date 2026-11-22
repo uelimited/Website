@@ -43,3 +43,6 @@ next-env.d.ts
 # claude code local config
 /.claude/
 .gstack/
+
+# internal fact register with confidential figures, kept local (see docs/facts-and-figures.md)
+/src/data/cms/company_facts.json

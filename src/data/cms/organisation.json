@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "last_reviewed": "2026-08-26",
+    "publication_rule": "Descriptions may be published. Headcounts, percentages and operating claims remain placeholders until the named owner validates them with an as-of date."
+  },
+  "functions": [
+    {
+      "id": "engineering-design",
+      "name": "Engineering & Design",
+      "description": "Calculations, design development, technical submissions, constructability and discipline coordination.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "Engineering",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "bim-digital",
+      "name": "BIM & Digital Delivery",
+      "description": "Federated coordination, clash-led reviews, shop drawings, quantities and structured asset information.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "Engineering / Digital",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "planning-controls",
+      "name": "Planning & Project Controls",
+      "description": "Baseline programmes, rolling look-aheads, progress measurement, interfaces, risk and change control.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "Project Controls",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "procurement",
+      "name": "Procurement & Purchase",
+      "description": "Approved vendors, long-lead planning, technical-commercial alignment, expediting and logistics.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "Procurement",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "site-execution",
+      "name": "Project Management & Site Execution",
+      "description": "Work-front planning, supervision, resource coordination, installation control and client interfaces.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "Operations",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "quality",
+      "name": "Quality Assurance & Quality Control",
+      "description": "Inspection and test plans, material traceability, hold points, non-conformance control and records.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "Quality",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "hse",
+      "name": "Health, Safety & Environment",
+      "description": "Site controls, permits, training, observation, incident prevention and environmental compliance.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "HSE",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "commissioning",
+      "name": "Testing & Commissioning",
+      "description": "Pre-commissioning, functional proving, integrated testing, witness records and operator handover.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "Commissioning",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "commercial",
+      "name": "Commercial & Contracts",
+      "description": "Bid governance, contracts, measurement, change, cost visibility and commercial close-out.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "Commercial",
+      "status": "awaiting_validation"
+    },
+    {
+      "id": "people-corporate",
+      "name": "People, Finance & Corporate Services",
+      "description": "Workforce systems, finance, compliance, administration and the support infrastructure behind delivery.",
+      "count": null,
+      "count_label": "Headcount to be confirmed",
+      "owner": "HR / Finance / Corporate",
+      "status": "awaiting_validation"
+    }
+  ],
+  "culture": {
+    "principles": [
+      {
+        "title": "Engineers close to the work",
+        "body": "Design, construction and commissioning teams solve problems together, with senior review available when decisions matter."
+      },
+      {
+        "title": "Ownership over hierarchy",
+        "body": "Responsibility follows the work package. Decisions, actions and handover records have visible owners."
+      },
+      {
+        "title": "Learn across disciplines",
+        "body": "Exposure to multiple systems, industries and project stages turns individual experience into institutional capability."
+      },
+      {
+        "title": "Respect on every work front",
+        "body": "Professional conduct, safe work and dignity apply across offices, sites, partners and every level of the organisation."
+      },
+      {
+        "title": "Evidence before assertion",
+        "body": "Calculations, inspections, tests and records carry more weight than presentation language."
+      },
+      {
+        "title": "Leave the system operable",
+        "body": "The job is complete when the operator can understand, run and maintain what was built."
+      }
+    ],
+    "photo_slots": [
+      "Design review",
+      "Toolbox talk",
+      "Site coordination",
+      "Testing and commissioning",
+      "Learning and development",
+      "Project celebration",
+      "Office collaboration",
+      "Community and volunteering"
+    ]
+  },
+  "workforce": {
+    "model_layers": [
+      {
+        "title": "Core engineering and leadership",
+        "body": "Permanent technical, functional and project leadership owns standards, client accountability and delivery controls."
+      },
+      {
+        "title": "Directly supervised project teams",
+        "body": "Project managers, engineers, supervisors and site support are deployed around approved work fronts and programme priorities."
+      },
+      {
+        "title": "Qualified specialist capacity",
+        "body": "Approved specialist vendors and trade partners are integrated where a package requires certified, local or surge capability, under Unique Engineers' controls."
+      }
+    ],
+    "continuity_controls": [
+      "Role-based competency matrix and verified trade skills",
+      "Primary and backup supervision for critical work fronts",
+      "Multi-region and multilingual team composition",
+      "Staggered rotations and voluntary availability planning",
+      "Festival, weather and local-calendar look-aheads",
+      "Cross-training and documented handover between shifts",
+      "Accommodation, transport and welfare planning",
+      "No staffing decision based on religion or another protected characteristic"
+    ],
+    "metrics": [
+      {
+        "label": "Direct workforce",
+        "value": null,
+        "display": "To be confirmed",
+        "owner": "HR"
+      },
+      {
+        "label": "Project-site workforce",
+        "value": null,
+        "display": "To be confirmed",
+        "owner": "HR / Operations"
+      },
+      {
+        "label": "Approved specialist partners",
+        "value": null,
+        "display": "To be confirmed",
+        "owner": "Procurement"
+      },
+      {
+        "label": "Languages represented",
+        "value": null,
+        "display": "To be confirmed",
+        "owner": "HR"
+      }
+    ]
+  },
+  "innovation": {
+    "principles": [
+      "Human accountability remains with the named engineer or functional owner.",
+      "Client-confidential and personal data stays within approved systems and access rules.",
+      "AI output is treated as a draft or signal until checked against source evidence.",
+      "Adoption is measured by fewer errors, faster decisions or better records—not novelty."
+    ],
+    "use_cases": [
+      {
+        "title": "Technical knowledge retrieval",
+        "body": "Search controlled method statements, standards, lessons learned and approved project records by activity and context.",
+        "status": "Validate current adoption"
+      },
+      {
+        "title": "Tender and scope intelligence",
+        "body": "Map requirements, exclusions, interfaces and submission obligations for engineering and commercial review.",
+        "status": "Validate current adoption"
+      },
+      {
+        "title": "Design and coordination review",
+        "body": "Assist engineers in identifying clashes, missing inputs and repeatable checks while calculations and approvals remain human-owned.",
+        "status": "Pilot / controlled use"
+      },
+      {
+        "title": "Project-controls signals",
+        "body": "Summarise progress, procurement and risk records to surface decisions that need attention earlier.",
+        "status": "Pilot / controlled use"
+      },
+      {
+        "title": "Quality and handover records",
+        "body": "Classify inspection, testing, snag and asset documents so evidence is easier to retrieve and audit.",
+        "status": "Pilot / controlled use"
+      },
+      {
+        "title": "Lessons learned",
+        "body": "Turn closed-project observations into reusable, searchable guidance for future teams and work packages.",
+        "status": "Planned capability"
+      }
+    ]
+  },
+  "corporate_snapshot": {
+    "review_tracks": [
+      {
+        "title": "Market position and capability depth",
+        "body": "Projects, industries, disciplines, method libraries, accreditations and technical differentiation.",
+        "status": "Public evidence available"
+      },
+      {
+        "title": "Customer and project concentration",
+        "body": "Historic contract record by client, industry, geography, size and repeat engagement.",
+        "status": "Controlled project register available"
+      },
+      {
+        "title": "Organisation and management depth",
+        "body": "Founder leadership, senior functional roles, succession, engineering resources and operating model.",
+        "status": "Profiles and headcounts incomplete"
+      },
+      {
+        "title": "Financial profile and order book",
+        "body": "Audited performance, current order book, working capital, banking lines, net worth and capacity.",
+        "status": "Finance reconciliation required"
+      },
+      {
+        "title": "Quality, HSE and compliance",
+        "body": "Certifications, registrations, policies, performance metrics, claims and project assurance evidence.",
+        "status": "Evidence pack incomplete"
+      },
+      {
+        "title": "Digital and operational scalability",
+        "body": "Systems, controls, standard methods, knowledge reuse and integration readiness.",
+        "status": "Narrative available; systems evidence required"
+      }
+    ]
+  }
+}

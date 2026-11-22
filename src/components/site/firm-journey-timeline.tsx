@@ -41,7 +41,7 @@ export function FirmJourneyTimeline({
             id="firm-timeline-heading"
             className="ue-h2 ue-firm-timeline__title"
           >
-            Thirty-five years, ten inflection points.
+            From 1990, through ten inflection points.
           </h2>
           <p className="ue-firm-timeline__kicker">
             From a specialist HVAC contractor in 1990 to a multi-discipline EPC

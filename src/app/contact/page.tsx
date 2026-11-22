@@ -1,282 +1,55 @@
-"use client";
-
-import { useState, type FormEvent } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { FIRM } from "@/data/firm";
-
-const fieldInputClass =
-  "h-12 rounded-xl border-[color:var(--border-color)] bg-[color:var(--paper)] text-[15px] text-[color:var(--ink-950)] focus-visible:border-[color:var(--accent-500)] focus-visible:ring-[color:var(--accent-500)]/20";
-
-export default function ContactPage() {
-  const [sent, setSent] = useState(false);
-  const [reference, setReference] = useState("");
-  const [topic, setTopic] = useState("Project enquiry");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const ref = `UE-${Math.floor(Math.random() * 9000 + 1000)}`;
-    const name = String(data.get("name") ?? "").trim();
-    const company = String(data.get("company") ?? "").trim();
-    const email = String(data.get("email") ?? "").trim();
-    const phone = String(data.get("phone") ?? "").trim();
-
-    // No backend is wired yet, so hand the enquiry to the visitor's mail
-    // client pre-filled — a real, working path with zero server. Swap this
-    // for a POST to an endpoint once the firm provides one.
-    const subject = `${topic} — website enquiry (${ref})`;
-    const body: (string | null)[] = [
-      `Name: ${name}`,
-      company ? `Company: ${company}` : null,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : null,
-      `Topic: ${topic}`,
-      "",
-      message.trim(),
-      "",
-      `— Sent from ${FIRM.website} · ${ref}`,
-    ];
-    const bodyText = body
-      .filter((line): line is string => line !== null)
-      .join("\n");
-
-    setReference(ref);
-    setSent(true);
-    window.location.href = `mailto:${FIRM.contactEmail}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(bodyText)}`;
-  };
-
+import { InnerHero } from "@/components/site/inner-page";
+import { EmailContact } from "@/components/site/email-contact";
+import { SITE } from "@/data/site-content";
+import { pageMetadata } from "@/lib/page-metadata";
+export const metadata = pageMetadata(
+  "Contact",
+  "Contact Unique Engineers in Gurugram to discuss MEPF engineering, project requirements or partnerships.",
+  "/contact",
+);
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const topic =
+    typeof params.topic === "string"
+      ? params.topic.replace(/[\r\n]/g, " ").slice(0, 160)
+      : "Project enquiry";
   return (
-    <section className="ue-section">
-      <div className="ue-container">
-        <p className="ue-eyebrow">Contact</p>
-        <h1 className="ue-h1" style={{ maxWidth: "12ch" }}>
-          Get in touch.
-        </h1>
-        <p className="ue-lead" style={{ marginTop: 32 }}>
-          Project enquiry, partnership, or a general question — drop us a note
-          and the right person will respond within two business days.
-        </p>
-
-        <div
-          className="grid md:grid-cols-[1.4fr_1fr] gap-10 md:gap-20"
-          style={{ marginTop: 72 }}
-        >
-          {!sent ? (
-            <form onSubmit={handleSubmit} className="grid gap-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="grid gap-2">
-                  <Label
-                    htmlFor="name"
-                    className="text-[13px] text-[color:var(--ink-700)]"
-                  >
-                    Your name
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    className={fieldInputClass}
-                    required
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label
-                    htmlFor="company"
-                    className="text-[13px] text-[color:var(--ink-700)]"
-                  >
-                    Company
-                  </Label>
-                  <Input
-                    id="company"
-                    name="company"
-                    className={fieldInputClass}
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="grid gap-2">
-                  <Label
-                    htmlFor="email"
-                    className="text-[13px] text-[color:var(--ink-700)]"
-                  >
-                    Email
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    className={fieldInputClass}
-                    required
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label
-                    htmlFor="phone"
-                    className="text-[13px] text-[color:var(--ink-700)]"
-                  >
-                    Phone{" "}
-                    <span className="text-[color:var(--fg-muted)]">
-                      (optional)
-                    </span>
-                  </Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    className={fieldInputClass}
-                  />
-                </div>
-              </div>
-              <div className="grid gap-2">
-                <Label className="text-[13px] text-[color:var(--ink-700)]">
-                  What&apos;s this about?
-                </Label>
-                <Select
-                  value={topic}
-                  onValueChange={(value) => setTopic(value ?? topic)}
-                >
-                  <SelectTrigger
-                    className={
-                      fieldInputClass + " w-full data-[size=default]:h-12"
-                    }
-                  >
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="Project enquiry">
-                      Project enquiry
-                    </SelectItem>
-                    <SelectItem value="Partnership">Partnership</SelectItem>
-                    <SelectItem value="Careers">Careers</SelectItem>
-                    <SelectItem value="Media or press">
-                      Media or press
-                    </SelectItem>
-                    <SelectItem value="General question">
-                      General question
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="grid gap-2">
-                <Label
-                  htmlFor="message"
-                  className="text-[13px] text-[color:var(--ink-700)]"
-                >
-                  Message
-                </Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="A few lines on what you're working on — location, scope, timeline if you have them."
-                  className="rounded-xl border-[color:var(--border-color)] bg-[color:var(--paper)] text-[15px] text-[color:var(--ink-950)] leading-[1.55] focus-visible:border-[color:var(--accent-500)] focus-visible:ring-[color:var(--accent-500)]/20"
-                />
-              </div>
-              <div className="mt-2">
-                <Button
-                  type="submit"
-                  className="rounded-full h-11 px-6 text-[15px] font-medium"
-                >
-                  Send message
-                </Button>
-              </div>
-            </form>
-          ) : (
-            <div
-              style={{
-                padding: 32,
-                border: "1px solid var(--border-color)",
-                borderRadius: 16,
-                background: "var(--paper-soft)",
-              }}
+    <>
+      <InnerHero
+        eyebrow="Contact"
+        title="Let’s talk about your project."
+        description="For project enquiries, partnerships or a general question, reach our team by email or phone."
+      />
+      <section className="ue-section" style={{ paddingTop: 0 }}>
+        <div className="ue-container grid md:grid-cols-[1.4fr_1fr] gap-8 md:gap-16">
+          <EmailContact topic={topic} />
+          <div className="ue-inner-contact">
+            <p className="ue-eyebrow">Head office</p>
+            <h2>Gurugram.</h2>
+            <address>{SITE.address}</address>
+            <p>
+              <a href={SITE.phoneHref}>{SITE.phone}</a>
+            </p>
+            <p>
+              Monday–Friday
+              <br />
+              09:30–18:30 IST
+            </p>
+            <a
+              className="ue-inner-link"
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.address)}`}
+              target="_blank"
+              rel="noreferrer"
             >
-              <div className="ue-chip ue-chip--accent">
-                Draft ready · {reference}
-              </div>
-              <h3
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: 28,
-                  fontWeight: 500,
-                  letterSpacing: "-0.018em",
-                  margin: "16px 0 8px",
-                }}
-              >
-                Your message is ready to send.
-              </h3>
-              <p
-                style={{
-                  color: "var(--ink-500)",
-                  margin: 0,
-                  fontSize: 15,
-                  lineHeight: 1.55,
-                }}
-              >
-                A pre-filled email to the team is ready — just press send in
-                your mail app. Prefer to write directly?{" "}
-                <a
-                  href={`mailto:${FIRM.contactEmail}`}
-                  style={{ color: "var(--accent-500)" }}
-                >
-                  {FIRM.contactEmail}
-                </a>
-                . The right person will respond within two business days.
-              </p>
-            </div>
-          )}
-
-          <aside>
-            <div style={{ borderTop: "1px solid var(--border-color)" }}>
-              <ContactItem
-                label={FIRM.headquarters.label}
-                value={FIRM.headquarters.address}
-              />
-              <ContactItem label="Email" value={FIRM.contactEmail} />
-              <ContactItem label="Phone" value={FIRM.headquarters.phone} />
-              <ContactItem label="Hours" value={FIRM.hours} />
-            </div>
-          </aside>
+              View location ↗
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function ContactItem({ label, value }: { label: string; value: string }) {
-  return (
-    <div
-      style={{
-        padding: "20px 0",
-        borderBottom: "1px solid var(--border-color)",
-      }}
-    >
-      <div style={{ fontSize: 13, color: "var(--fg-muted)", marginBottom: 8 }}>
-        {label}
-      </div>
-      <div
-        style={{
-          whiteSpace: "pre-line",
-          fontSize: 15,
-          lineHeight: 1.55,
-          color: "var(--ink-950)",
-        }}
-      >
-        {value}
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

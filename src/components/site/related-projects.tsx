@@ -11,7 +11,13 @@ export function RelatedProjects({
   heading?: string;
   eyebrow?: string;
 }) {
-  if (!projects.length) return null;
+  const visible = projects.filter(
+    (p) =>
+      p.published &&
+      p.information_status !== "placeholder" &&
+      p.scope_tags.some((tag) => !/confirm|placeholder/i.test(tag)),
+  );
+  if (!visible.length) return null;
 
   return (
     <section
@@ -45,7 +51,7 @@ export function RelatedProjects({
           gap: 24,
         }}
       >
-        {projects.map((p) => (
+        {visible.map((p) => (
           <Link
             key={p.id}
             href={`/projects/${p.slug}`}
@@ -103,8 +109,9 @@ export function RelatedProjects({
                   lineHeight: 1.45,
                 }}
               >
-                {p.location_city}
-                {p.location_state ? `, ${p.location_state}` : ""}
+                {[p.location_city, p.location_state]
+                  .filter((v) => v && !/confirm|pending/i.test(v))
+                  .join(", ")}
               </p>
               <div
                 style={{

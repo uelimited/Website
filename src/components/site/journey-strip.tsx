@@ -10,7 +10,7 @@ export function JourneyStrip() {
   const all = getJourney();
   // Pick a representative subset
   const highlights = [
-    all.find((m) => m.year === "1990"),
+    all.find((m) => m.year === "1992"),
     all.find((m) => m.year === "2005"),
     all.find((m) => m.year === "2012–2018"),
     all.find((m) => m.year === "2019"),

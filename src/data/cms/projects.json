@@ -81,7 +81,7 @@
     "value_display": "₹411 Cr",
     "summary": "UEL's largest single-order project — full MEPF, solar and PNG for IKEA's flagship Indian mixed-use development.",
     "narrative": [
-      "The firm's biggest single-order mandate to date — full MEPF and solar services, with PNG. Unique Engineers Limited is handling all the MEPF and solar services along with PNG. A further ₹450 Cr second phase for office and hotel floors is in the pipeline.",
+      "The firm's biggest single-order mandate to date — full MEPF and solar services, with PNG. Unique Engineers Limited is handling the integrated services under a coordinated delivery structure.",
       "The project is delivered against a fully coordinated multi-disciplinary BIM model at LOD 400 across HVAC, Firefighting, Plumbing, Electrical, Solar and PNG systems. All services are integrated into a federated 3D environment where real-time clash detection and inter-trade coordination are completed before site installation.",
       "Shop drawings are generated directly from the coordinated model to ensure execution accuracy and minimise rework. The modelling process is creating a digital twin of the project, enabling constructability validation, accurate material take-offs, prefabrication planning and lifecycle-ready asset data."
     ],
@@ -177,7 +177,7 @@
           "The Common Central Secretariat — Executive Enclave was delivered as a high-performance government office complex with IGBC Gold certification, with sustainability embedded into the mechanical and fire systems from design through execution.",
           "A 16,000 TR high-efficiency HVAC plant was installed with optimised air distribution across 5,00,000 sqm of ducting and 1,00,000 metres of piping. The system uses energy-efficient chillers, optimised airflow balancing, reduced pumping losses and intelligent zoning to improve lifecycle performance while supporting long-term carbon reduction targets."
         ],
-        "image_url": "/projects/central-secretariat-plant.jpg"
+        "image_url": "/project-archive/common-central-secretariat/gallery-01.jpg"
       }
     ],
     "published": true
@@ -282,7 +282,7 @@
           "The campus incorporated energy-efficient HVAC technologies including thermal energy storage for peak-load optimisation, brine chillers for enhanced heat transfer efficiency, geothermal water-cooled VRV systems, and advanced evaporative cooling strategies.",
           "An Integrated Building Management System (IBMS) was implemented to monitor and control HVAC operations, energy consumption, and system performance in real time."
         ],
-        "image_url": "/projects/nalanda-plant.jpg"
+        "image_url": "/project-archive/nalanda-university/gallery-01.jpg"
       }
     ],
     "published": true
@@ -393,7 +393,7 @@
     "timeline_text": "In execution",
     "value_cr": 50,
     "value_display": "₹50 Cr+",
-    "summary": "Three design-build packages awarded for India's first commercial semiconductor fab — pipeline expected to expand toward ₹500 Cr as further packages are awarded.",
+    "summary": "Three design-build packages for a major semiconductor manufacturing programme, coordinated across high-precision utilities and MEPF interfaces.",
     "narrative": [
       "First-of-its-kind commercial semiconductor fab in India. Three packages awarded; expansion into the fab utility build expected in the next phase.",
       "Design-build scope covers underground piping, electrical infrastructure, and civil excavation — engineered and executed under one contract, supporting the upcoming fab build.",

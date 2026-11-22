@@ -75,7 +75,7 @@ export function isFiltered(f: LedgerFilters): boolean {
   );
 }
 
-/** Filter the full 170-row order book. */
+/** Filter the full 170-row project record. */
 export function filterLedger(
   entries: LedgerEntry[],
   f: LedgerFilters,
@@ -117,6 +117,8 @@ export type FeaturedCard = {
   scopeTags: string[];
   heroImageUrl: string | null;
   projectType: string;
+  clientName: string;
+  status: "planning" | "active" | "completed" | "on_hold";
 };
 
 /** Filter the featured case studies with the same filter context as the ledger. */
@@ -133,7 +135,7 @@ export function filterFeatured(
     if (test && !test(c.value_cr)) return false;
     if (q) {
       const hay =
-        `${c.name} ${c.city} ${c.state} ${c.primarySectorName}`.toLowerCase();
+        `${c.name} ${c.clientName} ${c.city} ${c.state} ${c.primarySectorName} ${c.projectType} ${c.scopeTags.join(" ")}`.toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;

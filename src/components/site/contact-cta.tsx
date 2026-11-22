@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FIRM } from "@/data/firm";
+import { getCompanyFactDisplay } from "@/data/company-facts";
 
 /**
  * Closing contact CTA — minimal black conclusion panel.
@@ -25,8 +26,6 @@ const METROS = [
   "Kolkata",
   "Ahmedabad",
 ];
-
-const NEIGHBOURS = ["Bangladesh", "Nepal", "Maldives"];
 
 export function ContactCTA() {
   return (
@@ -71,7 +70,7 @@ export function ContactCTA() {
         <div className="ue-cta__presence">
           <p className="ue-cta__presence-label">Operating across</p>
           <h3 className="ue-cta__presence-title">
-            Pan-India and neighbouring countries.
+            {getCompanyFactDisplay("states_executed")} across India.
           </h3>
           <dl className="ue-cta__presence-list">
             <div>
@@ -79,8 +78,8 @@ export function ContactCTA() {
               <dd>{METROS.join(" · ")}</dd>
             </div>
             <div>
-              <dt>Beyond India</dt>
-              <dd>{NEIGHBOURS.join(" · ")}</dd>
+              <dt>Delivery model</dt>
+              <dd>Project-led mobilisation · multidisciplinary teams</dd>
             </div>
           </dl>
         </div>
@@ -110,7 +109,7 @@ export function ContactCTA() {
           </div>
           <div>
             <dt>Mobilisation</dt>
-            <dd>10 days · nationwide</dd>
+            <dd>Planned to project scope and programme</dd>
           </div>
         </dl>
       </div>

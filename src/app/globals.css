@@ -7,3 +7,5 @@
    spacing scale, edit design-tokens.css. */
 @import "../styles/design-tokens.css";
 @import "../styles/design-system.css";
+
+@import "../styles/inner-pages.css";

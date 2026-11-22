@@ -12,11 +12,11 @@ import { getLandmarkProjects, getClientById } from "@/lib/cms";
  * links to its case-study page.
  */
 export function LandmarkProjects() {
-  const projects = getLandmarkProjects();
+  const projects = getLandmarkProjects().slice(0, 5);
   const [featured, ...rest] = projects;
 
   return (
-    <section className="ue-landmark">
+    <section id="landmark-projects" className="ue-landmark">
       <div className="ue-container">
         <div className="ue-landmark__head">
           <div>
@@ -151,7 +151,7 @@ export function LandmarkProjects() {
         </div>
 
         <div className="ue-landmark__foot">
-          <Link href="/work" className="ue-landmark__more">
+          <Link href="/projects" className="ue-landmark__more">
             Review full project record
             <ArrowRight className="size-4" aria-hidden />
           </Link>

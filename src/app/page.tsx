@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,12 +14,20 @@ import { ClientsWall } from "@/components/site/clients-wall";
 import { JourneyStrip } from "@/components/site/journey-strip";
 import { TestimonialsBand } from "@/components/site/testimonials-band";
 import { ContactCTA } from "@/components/site/contact-cta";
+import { ExecutionLibraryPreview } from "@/components/site/execution-library-preview";
+import { CompanyPlatformPreview } from "@/components/site/company-platform-preview";
+
+export const metadata = pageMetadata(
+  "MEPF engineering & contracting",
+  "Unique Engineers delivers mechanical, electrical, plumbing, fire protection and integrated building services across India.",
+  "/",
+);
 
 export default function HomePage() {
   // Live ledger stats, computed server-side, so the sectors carousel shows
-  // real order-book figures instead of the legacy marketing overrides
-  // (projects_count_override / revenue_cr_override) that don't reconcile
-  // with the ₹3,422 Cr ledger total shown everywhere else on the site.
+  // real project-record figures instead of the legacy marketing overrides
+  // (projects_count_override / revenue_cr_override) that do not reconcile
+  // with the controlled project ledger and company fact register.
   const sectors = getAllSectors();
   const sectorStats = Object.fromEntries(
     sectors.map((s) => [s.id, getLedgerStatsForSector(s.id)]),
@@ -39,8 +48,8 @@ export default function HomePage() {
                 asChild
                 className="rounded-full h-11 px-6 text-[15px] font-medium"
               >
-                <Link href="/work">
-                  Explore the work
+                <Link href="/projects">
+                  Explore the projects
                   <ArrowRight className="size-4 ml-1" aria-hidden />
                 </Link>
               </Button>
@@ -67,6 +76,9 @@ export default function HomePage() {
       {/* Why Unique */}
       <WhyPillars />
 
+      {/* Controlled methods — turns capability claims into execution evidence */}
+      <ExecutionLibraryPreview />
+
       {/* Landmark projects — each card linked to its case-study page */}
       <LandmarkProjects />
 
@@ -75,6 +87,9 @@ export default function HomePage() {
 
       {/* Compressed journey strip */}
       <JourneyStrip />
+
+      {/* The leadership, people and operating system behind delivery */}
+      <CompanyPlatformPreview />
 
       {/* Testimonials */}
       <TestimonialsBand />

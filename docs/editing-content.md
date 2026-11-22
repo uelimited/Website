@@ -29,10 +29,11 @@ headlines and always write in the third person — see
 
 | To edit…                                    | Open this file                                     |
 | ------------------------------------------- | -------------------------------------------------- |
-| Homepage hero, headline stats, nav menu     | `src/data/firm.ts`                                 |
-| Company facts (founded, address, email)     | `src/data/firm.ts` → `FIRM`                        |
-| **Case studies** (the 12 featured projects) | `src/data/cms/projects.json`                       |
-| The full project list (170 order-book rows) | `src/data/cms/project_ledger.json`                 |
+| Company facts, figures and contact details  | `src/data/cms/company_facts.json`                  |
+| Homepage hero, narrative and nav menu       | `src/data/firm.ts`                                 |
+| Landmark project archive (50 photographed projects) | `src/data/cms/landmark_projects.json`     |
+| Additional long-form project narratives    | `src/data/cms/projects.json`                       |
+| The full historic project list (170 rows)  | `src/data/cms/project_ledger.json`                 |
 | **Sector** pages (data centre, airport, …)  | `src/data/cms/sectors.json`                        |
 | **Service** pages (HVAC, electrical, …)     | `src/data/cms/services.json`                       |
 | Service sub-pages (e.g. HVAC → high-side)   | `src/data/cms/service_categories.json`             |
@@ -43,11 +44,30 @@ headlines and always write in the third person — see
 | Offices / locations                         | `src/data/cms/offices.json`                        |
 | Testimonials                                | `src/data/cms/testimonials.json`                   |
 | Careers / culture page                      | `src/data/careers.ts`                              |
+| Culture, functions, workforce, AI and diligence structure | `src/data/cms/organisation.json`       |
+| Controlled method-statement index           | `src/data/cms/method_statements.json`              |
+| Missing content and evidence register       | `src/data/cms/content_todos.json`                  |
 | Photos & the hero video                     | `public/`                                          |
 
 ---
 
 ## Common tasks
+
+### Review or change a company fact
+
+Open `src/data/cms/company_facts.json` and find the record by `id`. Every fact has:
+
+- `display` — the approved human-readable wording;
+- `period` and `as_of` — when the figure applies;
+- `verification_status` — derived, confirmed, conflicting or awaiting evidence;
+- `visibility` — public, confidential or internal;
+- `website_enabled` — the explicit public-site switch;
+- `owner`, `source` and `notes` — the review trail.
+
+Update the register first. Website pages read shared figures from it through
+`src/data/company-facts.ts`. Never enable a confidential/internal fact on the public
+site, and do not enable a conflicting or time-sensitive claim until its owner has
+approved the supporting source.
 
 ### Change a headline or paragraph
 
@@ -64,12 +84,23 @@ export const HERO = {
 
 Change `subtitle` or `lead`, save, and the homepage updates.
 
-### Add or edit a case study (featured project)
+### Add or edit a landmark project
 
-Case studies are the rich, photographed project pages at `/projects/[slug]`. They
-live in `src/data/cms/projects.json`. To **edit** one, find it by `name` and change
-its fields. To **add** one, copy an existing entry (from `{` to `}`), paste it as a
-new item in the list, and update every field. Key fields:
+The photographed project pages at `/projects/[slug]` are controlled by
+`src/data/cms/landmark_projects.json`. This file is generated from
+`uel_projects_photographs_and_videos/UEL_Project Details.xlsx` plus the matching
+media folders. Missing or disputed details remain visible as `To be confirmed`.
+
+Update the workbook or source media folder first, then run
+`scripts/import-landmark-projects.mjs` (or ask Codex to refresh the landmark project
+archive). The importer optimises the selected images and videos and rewrites the
+landmark-project JSON. Do not invent a missing value in the generated file.
+
+`src/data/cms/projects.json` is retained for the deeper narratives, metrics and
+execution notes already written for selected flagship projects. The site merges
+those richer passages with the current workbook facts and project media.
+
+Key fields in the generated landmark register:
 
 ```jsonc
 {
@@ -83,8 +114,11 @@ new item in the list, and update every field. Key fields:
   "summary": "Fast-track cleanroom MEPF for an Apple semiconductor facility…",
   "narrative": ["First paragraph…", "Second paragraph…"],
   "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical"],
-  "hero_image_url": "/projects/foxconn-hero.jpg",
-  "featured": true,                    // show on the homepage's landmark row
+  "hero_image_url": "/project-archive/foxconn-bangalore/hero.jpg",
+  "gallery": [{ "src": "/project-archive/…/gallery-01.jpg", "alt": "…" }],
+  "video_url": "/project-archive/…/project-video.mp4",
+  "featured": true,                    // eligible for the landmark archive
+  "missing_fields": [],                // unresolved fields remain listed here
   "published": true                    // set false to hide it entirely
 }
 ```
@@ -119,6 +153,11 @@ Service pages (`/services/hvac-company-in-gurgaon`, etc.) live in
 The sub-discipline pages (HVAC → high-side, low-side, …) live in
 `src/data/cms/service_categories.json`.
 
+Each service page also shows its relevant controlled execution methods. That index is
+generated from the Marketing method-statement libraries by
+`scripts/import-method-statements.mjs`. Update the controlled source documents first,
+then refresh the index rather than editing the generated JSON by hand.
+
 ### Edit the homepage headline stats
 
 In `src/data/firm.ts`, `OVERVIEW.stats` is the six-figure grid:
@@ -142,9 +181,19 @@ sectors in the "Sectors" dropdown. Reorder or relabel entries here.
 
 ### Edit the founders / leadership
 
-`src/data/cms/leadership.json` — one entry per person (`name`, `role`, `credential`,
-`bio`, `portrait_url`). If someone has no photo yet, leave `portrait_url` empty (`""`)
-and a tasteful placeholder shows instead. Order is set by `sort_order`.
+`src/data/cms/leadership.json` — one entry per person or controlled placeholder
+(`name`, `role`, `credential`, `bio`, `portrait_url`, `group`, `profile_status`). If
+someone has no photo yet, leave `portrait_url` empty and a neutral placeholder shows.
+Order is set by `sort_order`. Do not invent names or credentials for pending director
+or executive profiles.
+
+### Edit Culture, Engineering Strength, Workforce or Innovation & AI
+
+Open `src/data/cms/organisation.json`. It contains the culture principles and grey
+photo slots, functional-team register, hybrid workforce model, continuity controls,
+AI use-case status and corporate-diligence map. A `null` count deliberately renders
+as “To be confirmed”; replace it only when the named owner validates the number and
+as-of date. The associated evidence requests live in `content_todos.json`.
 
 ### Edit the company timeline
 
@@ -174,19 +223,20 @@ make sure that email is correct.
 
 ---
 
-## Two project lists — which is which?
+## Three project stores — which is which?
 
 The site has **two** sources of projects, on purpose:
 
-| File                 | What it is                                | Where it shows                          |
-| -------------------- | ----------------------------------------- | --------------------------------------- |
-| `projects.json`      | 12 rich, photographed **case studies**    | Homepage, `/projects/[slug]`, top of `/work` |
-| `project_ledger.json`| 170-row **order book** (every project)    | The filterable list on `/work`, sector/service pages |
+| File                     | What it is                               | Where it shows |
+| ------------------------ | ---------------------------------------- | -------------- |
+| `landmark_projects.json` | Media-backed landmark project records | `/projects/[slug]`, top of `/projects` |
+| `projects.json`          | Additional rich narratives and metrics   | Merged into matching landmark pages |
+| `project_ledger.json`    | 170-row historic project record          | Filterable list on `/projects`, sector/service pages |
 
-The order book (`project_ledger.json`) is bulk data, mostly generated — you usually
-won't hand-edit it. The case studies (`projects.json`) are the hero content you'll
-polish often. A ledger row automatically links to a case study when they're the same
-project.
+The landmark archive and project record are generated/controlled data, so update
+their source material first. The narrative file is the place to polish selected
+flagship stories. A ledger row automatically links to a project page when the match
+has been confirmed.
 
 ---
 

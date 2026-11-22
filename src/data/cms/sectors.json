@@ -153,7 +153,7 @@
     "slug": "industrial-manufacturing",
     "name": "Industrial & Manufacturing",
     "short_description": "Factory floors, manufacturing halls and process plants for automotive, FMCG, electronics and heavy industry.",
-    "long_description": "Industrial MEPF delivered for JSW EV manufacturing, Coca-Cola plants, Unilever, BMW, ITC, Hyundai and the IKEA Noida mixed-use development. Single-window design-build engagements where the same team that engineers the systems installs and commissions them — compressing schedule by 20-35% versus traditional bid-build.",
+    "long_description": "Industrial MEPF delivered for JSW EV manufacturing, Coca-Cola plants, Unilever, BMW, ITC, Hyundai and the IKEA Noida mixed-use development. Single-window design-build engagements keep engineering, installation and commissioning under one coordinated delivery team.",
     "projects_count_override": "15+",
     "revenue_cr_override": "₹550+ Cr",
     "hero_image_url": "/sectors/industrial-hero.jpg",
@@ -172,21 +172,21 @@
         "heading": "Why design-build for industrial",
         "body": [
           "One contract covers design and execution. The same team that engineered the system installs and commissions it — no design-vs-build finger-pointing, no clarification loops, no translation losses between architect, MEP consultant and contractor.",
-          "Design and execution overlap rather than sequence. Long-lead procurement starts at the moment the design intent freezes, compressing the schedule by 20–35% vs traditional bid-build. Value engineering happens at the design stage, when changes are cheap — not during construction, when they aren't."
+          "Design and execution can overlap rather than wait for a fully sequential release. Long-lead procurement starts when the relevant design intent freezes, while value engineering remains focused at the design stage, before change becomes disruptive on site."
         ]
       },
       {
         "heading": "Sector breadth",
         "body": [
           "Active across automotive (JSW EV, MG Motor, BMW, Hyundai), FMCG (Coca-Cola, Unilever, ITC), district cooling (Tabreed Amravati — 30,000 TR), and mixed-use industrial (IKEA Noida — ₹411 Cr).",
-          "Pan-India delivery with 23 states executed, 16 states registered, regional offices in Gurugram (HQ), Ahmedabad, Mumbai, Hyderabad, Bangalore and Kolkata. 3-day NCR mobilisation; 10-day pan-India."
+          "Delivery experience spans the firm's national project record, with project teams organised around the specific work fronts, plant interfaces, commissioning sequence and handover requirements of each facility."
         ]
       },
       {
         "heading": "Engineering depth",
         "body": [
-          "40+ in-house MEPF design engineers using Carrier HAP / E-20 for thermal, Pipe Flow Expert / AFT Fathom for hydraulic, Trane TRACE 700 / IES VE for energy modelling, Ansys Fluent / Autodesk CFD for airflow, AutoCAD MEP / Revit (LOD 400) for layout.",
-          "200+ T&C specialists across active sites. 50+ QA/QC engineers with independent reporting line. 100+ HSE personnel. Zero fatalities in last 5 years across 5M+ safe man-hours."
+          "Thermal, hydraulic, electrical and coordination models are developed against the facility load, equipment interfaces and maintainability requirements, then translated into coordinated shop drawings and work packages.",
+          "Inspection and test plans, material traceability, pre-commissioning checks, integrated testing and the final handover dossier establish a documented path from design intent to operating system."
         ]
       }
     ],
@@ -204,7 +204,44 @@
     "hero_image_url": "/sectors/airport-hero.jpg",
     "hero_image_alt": "Modern airport terminal interior with sweeping curved roof",
     "featured_client_ids": ["cli-gmr", "cli-aai", "cli-itpo"],
-    "deep_page": false,
+    "sections": [
+      {
+        "heading": "Operationally critical public infrastructure",
+        "body": [
+          "Airport and large public-venue systems are planned around passenger flow, security zoning, fire strategy, baggage and retail interfaces, long operating hours and the staged release of public areas.",
+          "The MEPF programme is divided into coordinated work fronts so plantrooms, concourses, airside areas and back-of-house zones can move through installation, inspection and commissioning without losing interface control."
+        ],
+        "systems": [
+          {
+            "name": "Terminal HVAC",
+            "description": "Central plants, air distribution, ventilation and controls coordinated for varying occupancy, solar load and operating schedules."
+          },
+          {
+            "name": "Life-safety systems",
+            "description": "Fire detection, hydrant, sprinkler, smoke-control and emergency-power interfaces verified through cause-and-effect testing."
+          },
+          {
+            "name": "Public-area utilities",
+            "description": "Electrical, plumbing and specialist service routes coordinated around architecture, passenger circulation and maintainable access."
+          }
+        ]
+      },
+      {
+        "heading": "Interface-led construction",
+        "body": [
+          "Builder's-work drawings, penetration schedules, ceiling coordination and equipment-access studies are closed before installation fronts are released.",
+          "Prefabricated assemblies and repeatable modules are used where the design, transport route and lifting plan support them, reducing congestion and improving repeatability on site."
+        ]
+      },
+      {
+        "heading": "Integrated testing and handover",
+        "body": [
+          "Commissioning moves from component checks to system proving and integrated scenarios, with testing records linked to assets and locations.",
+          "Operator demonstrations, training, as-built information and closure of snags are planned as part of the delivery programme—not left to the final weeks."
+        ]
+      }
+    ],
+    "deep_page": true,
     "sort_order": 4,
     "published": true
   },
@@ -225,7 +262,44 @@
       "cli-nalanda",
       "cli-sau"
     ],
-    "deep_page": false,
+    "sections": [
+      {
+        "heading": "Campus-scale engineering",
+        "body": [
+          "Universities and research campuses combine teaching blocks, laboratories, residences, auditoria, kitchens, utilities and landscape infrastructure—each with a different load profile and operating calendar.",
+          "Distribution is planned at campus scale while buildings remain independently controllable, maintainable and metered. Phasing anticipates future blocks and limits disruption to occupied facilities."
+        ],
+        "systems": [
+          {
+            "name": "Central and distributed cooling",
+            "description": "Central plants, VRF, ventilation and specialist environmental control selected by building use, diversity and operating hours."
+          },
+          {
+            "name": "Laboratory and research utilities",
+            "description": "Exhaust, make-up air, pressure control, power quality and specialist service routes coordinated with laboratory planning."
+          },
+          {
+            "name": "Campus monitoring",
+            "description": "Metering, BMS integration and operator interfaces structured by building, utility and maintainable asset."
+          }
+        ]
+      },
+      {
+        "heading": "High-performance campus systems",
+        "body": [
+          "Nalanda University's combination of geothermal VRV, thermal storage, brine chillers and integrated controls demonstrates how unconventional systems require the same discipline in hydraulic design, sequencing, testing and operator training as conventional plant.",
+          "Energy intent is protected through submittal review, coordinated installation, controls narratives, functional testing and a complete operating record."
+        ]
+      },
+      {
+        "heading": "Delivery in live learning environments",
+        "body": [
+          "For occupied campuses, shutdowns, temporary services, noisy work and access routes are coordinated around academic calendars and building users.",
+          "Handover is structured building by building so campus engineering teams receive usable asset records, training and closed defect lists."
+        ]
+      }
+    ],
+    "deep_page": true,
     "sort_order": 5,
     "published": true
   },
@@ -234,7 +308,7 @@
     "slug": "corporate-retail",
     "name": "Corporate & Retail",
     "short_description": "Corporate towers, retail malls and mixed-use developments — including UEL's largest single-order mandate.",
-    "long_description": "Delivered the Ingka Centre (IKEA) in Noida — a ₹411 Cr mixed-use mandate covering MEPF, solar and PNG, with a further ₹450 Cr office and hotel phase in the pipeline. Active across Elan, Bharti Enterprises, Vatika, Spaze, KJL and other developer-led mandates.",
+    "long_description": "Delivered the Ingka Centre (IKEA) in Noida — a ₹411 Cr mixed-use mandate covering MEPF, solar and PNG. Active across Elan, Bharti Enterprises, Vatika, Spaze, KJL and other developer-led mandates.",
     "projects_count_override": "75+",
     "revenue_cr_override": "₹800+ Cr",
     "hero_image_url": "/sectors/corporate-hero.jpg",
@@ -247,7 +321,44 @@
       "cli-elan",
       "cli-kjl"
     ],
-    "deep_page": false,
+    "sections": [
+      {
+        "heading": "Mixed-use systems, coordinated as one estate",
+        "body": [
+          "Corporate and retail developments combine offices, public circulation, food and beverage, parking, service yards and sometimes hospitality within one operating estate.",
+          "Central utilities and life-safety systems are coordinated with tenant boundaries, landlord provisions, energy metering and phased fit-out requirements from the start."
+        ],
+        "systems": [
+          {
+            "name": "Central utilities",
+            "description": "Cooling, electrical and water infrastructure sized and sequenced around diversified loads, resilience and phased occupation."
+          },
+          {
+            "name": "Tenant and landlord interfaces",
+            "description": "Clear demarcation, metering, isolation and fit-out connection points reduce rework as tenant packages evolve."
+          },
+          {
+            "name": "Public-realm life safety",
+            "description": "Fire alarm, suppression, smoke control, emergency power and evacuation interfaces coordinated across shared and leased spaces."
+          }
+        ]
+      },
+      {
+        "heading": "Commercial programme control",
+        "body": [
+          "Equipment approvals, long-lead procurement, riser and ceiling coordination and builder's-work requirements are managed against area-release dates.",
+          "Zone-based work fronts allow commissioning and handover to follow the development's opening sequence rather than waiting for a single final completion event."
+        ]
+      },
+      {
+        "heading": "Operational readiness",
+        "body": [
+          "Controls graphics, metering, fire cause-and-effect, water balancing, electrical testing and equipment demonstrations are integrated into the handover plan.",
+          "Asset data, warranties, training records and as-built information are organised so the facilities team can operate a complex multi-tenant estate from day one."
+        ]
+      }
+    ],
+    "deep_page": true,
     "sort_order": 6,
     "published": true
   },
@@ -262,7 +373,44 @@
     "hero_image_url": "/sectors/healthcare-hero.jpg",
     "hero_image_alt": "Modern hospital corridor interior with clinical lighting",
     "featured_client_ids": ["cli-aiims", "cli-cghs", "cli-hites", "cli-lhmc"],
-    "deep_page": false,
+    "sections": [
+      {
+        "heading": "Clinical environmental control",
+        "body": [
+          "Hospitals require environmental control by clinical risk: operating theatres, isolation rooms, critical care, diagnostics, wards, laboratories and public areas each demand a defined pressure, filtration and ventilation response.",
+          "Room data, pressure relationships, heat loads, air-change requirements and maintainable filter access are coordinated before ductwork and terminal layouts are released."
+        ],
+        "systems": [
+          {
+            "name": "Operating theatres",
+            "description": "Dedicated air systems, terminal filtration, pressure cascade, temperature and humidity control with room-by-room verification."
+          },
+          {
+            "name": "Isolation and critical care",
+            "description": "Supply, extract, pressure monitoring and alarm interfaces coordinated to the clinical infection-control strategy."
+          },
+          {
+            "name": "Essential services",
+            "description": "Emergency power, fire-life-safety, water, drainage and controls planned around continuity of clinical operation."
+          }
+        ]
+      },
+      {
+        "heading": "Construction in sensitive facilities",
+        "body": [
+          "In live hospitals, work zones, dust control, shutdowns, temporary services and infection-control measures are planned with the hospital team before access is released.",
+          "Testing and energisation are sequenced to protect critical departments and maintain clear rollback provisions for every planned interruption."
+        ]
+      },
+      {
+        "heading": "Validation and documented handover",
+        "body": [
+          "Air and water balancing, HEPA integrity where specified, pressure testing, electrical verification, fire-system testing and BMS trending establish that the installed system performs as designed.",
+          "Room-level records, calibration evidence, approved drawings, asset schedules and operator training form the basis of clinical handover."
+        ]
+      }
+    ],
+    "deep_page": true,
     "sort_order": 7,
     "published": true
   },
@@ -282,7 +430,44 @@
       "cli-radisson",
       "cli-crowne-plaza"
     ],
-    "deep_page": false,
+    "sections": [
+      {
+        "heading": "Comfort that disappears into the experience",
+        "body": [
+          "Hotel systems must deliver quiet, stable comfort while remaining accessible to the engineering team and unobtrusive to the guest.",
+          "Room-module coordination aligns fan-coil units, fresh air, drainage, fire protection, power, controls and ceiling access before repetitive floors move into production."
+        ],
+        "systems": [
+          {
+            "name": "Guest-room conditioning",
+            "description": "FCU, VRF or DX solutions selected around acoustic criteria, control response, ventilation and maintainability."
+          },
+          {
+            "name": "Ballrooms and public areas",
+            "description": "High-diversity cooling, fresh air and controls planned around changing occupancy and event loads."
+          },
+          {
+            "name": "Kitchens, laundry and spa",
+            "description": "Specialist exhaust, make-up air, hot water, drainage and humidity control coordinated with operating equipment."
+          }
+        ]
+      },
+      {
+        "heading": "Repetition with quality control",
+        "body": [
+          "Approved room mock-ups establish routing, access, acoustic treatment, insulation finish, controls and testing criteria before the typical-floor sequence begins.",
+          "Floor-by-floor inspection and progressive testing make quality visible early and prevent defects from repeating across the room inventory."
+        ]
+      },
+      {
+        "heading": "Commissioning for opening day",
+        "body": [
+          "Guest rooms, kitchens, public areas and central plant are commissioned against the hotel's operational zoning and phased opening plan.",
+          "Seasonal settings, operator training, asset data and maintenance access are resolved before areas move into guest use."
+        ]
+      }
+    ],
+    "deep_page": true,
     "sort_order": 8,
     "published": true
   },
@@ -297,7 +482,44 @@
     "hero_image_url": "/sectors/residential-hero.jpg",
     "hero_image_alt": "Premium high-rise luxury residential tower at dusk",
     "featured_client_ids": ["cli-m3m", "cli-dlf", "cli-vatika", "cli-suncity"],
-    "deep_page": false,
+    "sections": [
+      {
+        "heading": "High-rise residential infrastructure",
+        "body": [
+          "Residential towers require services to work quietly, reliably and repeatedly across hundreds of homes while common-area plant remains accessible to the facilities team.",
+          "Risers, pressure zones, electrical distribution, fire strategy, ventilation and apartment interfaces are coordinated with structure, façades and interior layouts before typical floors accelerate."
+        ],
+        "systems": [
+          {
+            "name": "Water and drainage zoning",
+            "description": "Pressure breaks, pumping, storage, hot-water and drainage systems planned for tower height, simultaneity and maintainable isolation."
+          },
+          {
+            "name": "Apartment comfort",
+            "description": "VRF, FCU or DX conditioning coordinated for acoustic performance, ventilation, condensate and service access."
+          },
+          {
+            "name": "Common-area safety",
+            "description": "Fire protection, smoke management, emergency power and detection integrated across towers, basements and amenity spaces."
+          }
+        ]
+      },
+      {
+        "heading": "Typical-floor production control",
+        "body": [
+          "A coordinated apartment and corridor mock-up sets the standard for supports, sleeves, shafts, ceiling zones, access panels and final finish.",
+          "Repeatable inspection checkpoints, pressure tests and concealed-work records keep quality consistent as multiple towers and floors advance in parallel."
+        ]
+      },
+      {
+        "heading": "Tower-by-tower handover",
+        "body": [
+          "Plant, risers, apartments and common areas move through progressive pre-commissioning before integrated tests and authority inspections.",
+          "Asset schedules, warranties, test records, as-built drawings and operator training are organised by tower and system for practical facilities management."
+        ]
+      }
+    ],
+    "deep_page": true,
     "sort_order": 9,
     "published": true
   }
