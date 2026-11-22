@@ -20,14 +20,32 @@ src/
     projects/              Unified project hub + 52 project detail pages
     services/[slug]/[sub]/ Capabilities → discipline → sub-discipline
     sectors/[slug]/        Sectors → sector detail
-    projects/[slug]/       Case-study detail
+    projects/[slug]/       Case-study detail, with the deck's facts and scope of work
+                           by service where the capability decks cover the project
+    why-unique/[slug]/     One page per value addition (DfMA, the Bhondsi yard, floor
+                           kits, AI workflows, intelligent buildings) and an index
     firm/ leadership/ culture/ engineering-strength/ workforce/ journey/
     innovation-ai/ corporate-snapshot/ approach/ careers/ contact/
   components/
     site/                  Page sections & site-specific components (~26 files)
+    capability/            Industry and service detail pages: one block renderer
+                           (capability-page.tsx) and the motion components it uses
+      building/            The scroll driven 3D models (three.js): kit.ts builds
+                           solids, parts.ts holds the shared parts (storeys,
+                           chillers, tanks, panels, sprinklers), stage.ts draws a
+                           model, building-explorer.tsx is the pinned section and
+                           packs.ts lists the models by name. dc-model.ts and
+                           dc-views.ts are the data centre; models/ holds one file
+                           per other building (fab, factory, terminal, campus,
+                           hospital, mixed-use, residential) and per technique
+                           (module, yard, floor-kits), each with its own
+                           camera stops and label points. A page downloads only
+                           the model it shows, when the section comes near.
     ui/                    shadcn/ui primitives (button, input, sheet, …)
   data/
     cms/                   The content — JSON + types.ts (the "CMS")
+    capability/            Industry and service page content, as typed block lists
+                           taken from the capability decks (types.ts explains the blocks)
     company-facts.ts       Typed access to the company fact register
     firm.ts                Narrative, capabilities, hero and navigation
     careers.ts             Careers page content
@@ -39,6 +57,7 @@ src/
   styles/
     design-tokens.css      Colours, type, spacing… (single source of truth)
     design-system.css      .ue-* utility classes
+    capability.css         .ue-cap-* classes for the industry and service pages
     globals.css            Resets + wiring
 public/                    Static assets (images, hero.mp4, india.svg)
 scripts/                   Repeatable content importers

@@ -330,6 +330,7 @@ export const NAV = [
   { href: "/services", label: "Services", menu: "capabilities" as const },
   { href: "/sectors", label: "Industries", menu: "sectors" as const },
   { href: "/projects", label: "Projects" },
+  { href: "/why-unique", label: "Why Unique", menu: "why" as const },
   { href: "/about", label: "About Unique", menu: "firm" as const },
 ];
 

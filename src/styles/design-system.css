@@ -2672,6 +2672,16 @@ video {
     color var(--dur-1) var(--ease-std),
     background var(--dur-1) var(--ease-std);
 }
+/* Five menu items: tighter between the phone layout and wide screens. */
+@media (min-width: 768px) and (max-width: 920px) {
+  .ue-header .inner {
+    padding-inline: 20px;
+    gap: 12px;
+  }
+  .ue-nav-link {
+    padding: 8px 7px !important;
+  }
+}
 .ue-nav-link:hover {
   color: var(--ink-950);
   background: var(--ink-50) !important;

@@ -21,6 +21,7 @@ import {
 import { Menu, ArrowRight } from "lucide-react";
 import { NAV, SECTOR_NAV } from "@/data/firm";
 import { SERVICES } from "@/data/site-content";
+import { WHY_PAGES } from "@/data/why-unique";
 import { Wordmark } from "./wordmark";
 import { cn } from "@/lib/utils";
 import { getCompanyFactDisplay } from "@/data/company-facts";
@@ -28,7 +29,7 @@ import { getCompanyFactDisplay } from "@/data/company-facts";
 type NavItem = {
   href: string;
   label: string;
-  menu?: "capabilities" | "sectors" | "firm";
+  menu?: "capabilities" | "sectors" | "firm" | "why";
 };
 
 export function SiteHeader() {
@@ -95,6 +96,8 @@ export function SiteHeader() {
                       <SectorsMenu />
                     ) : item.menu === "firm" ? (
                       <FirmMenu />
+                    ) : item.menu === "why" ? (
+                      <WhyMenu />
                     ) : (
                       <CapabilitiesMenu />
                     )}
@@ -190,6 +193,48 @@ function FirmMenu() {
           className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
         >
           Get to know Unique <ArrowRight className="size-3.5" aria-hidden />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function WhyMenu() {
+  return (
+    <div className="ue-services-menu">
+      <div className="ue-services-menu__head">
+        <div className="ue-eyebrow" style={{ margin: 0 }}>
+          Why Unique
+        </div>
+        <p
+          className="text-[color:var(--ink-500)]"
+          style={{ fontSize: 14, margin: "8px 0 0", maxWidth: "36ch" }}
+        >
+          Value we add beyond installing the specification.
+        </p>
+      </div>
+      <div className="ue-services-menu__grid">
+        {WHY_PAGES.map((p, index) => (
+          <NavigationMenuLink
+            key={p.slug}
+            render={<Link href={`/why-unique/${p.slug}`} />}
+            className="ue-services-menu__item group"
+          >
+            <span className="num">{String(index + 1).padStart(2, "0")}</span>
+            <span className="body">
+              <span className="name">{p.name}</span>
+              <span className="blurb">{p.text}</span>
+            </span>
+          </NavigationMenuLink>
+        ))}
+      </div>
+      <div className="ue-services-menu__foot">
+        <Link
+          href="/why-unique"
+          className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-600)]"
+        >
+          View all eight value additions{" "}
+          <ArrowRight className="size-3.5" aria-hidden />
         </Link>
       </div>
     </div>
@@ -341,6 +386,18 @@ function MobileMenu() {
                 className="py-2 text-[15px] text-[color:var(--ink-700)]"
               >
                 {item.label}
+              </Link>
+            ))}
+            <div className="pt-5 pb-1 text-[12px] font-medium tracking-[0.02em] text-[color:var(--ink-400)]">
+              Why Unique
+            </div>
+            {WHY_PAGES.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/why-unique/${p.slug}`}
+                className="py-2 text-[15px] text-[color:var(--ink-700)]"
+              >
+                {p.name}
               </Link>
             ))}
             {/* Sector quick-links — surface the high-value verticals directly */}

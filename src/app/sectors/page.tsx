@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { getAllSectors } from "@/lib/cms";
 import { InnerHero, InnerCTA } from "@/components/site/inner-page";
 import { pageMetadata } from "@/lib/page-metadata";
+import { getIndustryPage } from "@/data/capability/industries";
+import { plainSentence } from "@/data/capability/plain";
 export const metadata = pageMetadata(
   "Industries",
   "MEPF engineering for data centres, manufacturing, airports, healthcare, education, commercial and residential projects.",
@@ -37,7 +39,11 @@ export default function SectorsPage() {
               </div>
               <div className="ue-inner-card-body">
                 <h2>{s.name}</h2>
-                <p>{s.short_description}</p>
+                {/* Same sentence as the hero of the industry page. */}
+                <p>
+                  {getIndustryPage(s.slug)?.description ||
+                    plainSentence(s.short_description)}
+                </p>
                 <span className="ue-inner-link">
                   Explore industry <ArrowRight size={16} aria-hidden />
                 </span>

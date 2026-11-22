@@ -125,30 +125,87 @@ Key fields in the generated landmark register:
 
 To **hide** a project without deleting it, set `"published": false`.
 
-### Edit a sector page
+### Edit an industry or service page
 
-Sector pages (`/sectors/data-centre`, etc.) live in `src/data/cms/sectors.json`. The
-headline number of projects and contract value is **calculated automatically** from
-the project list — you don't type it. What you edit is the story:
+The industry pages (`/sectors/data-centre`, etc.) and the service pages
+(`/services/hvac-company-in-gurgaon`, etc.) are built from the capability decks in
+`Marketing/Capability PPTs/01_Capability_Decks`. Their content lives in
+`src/data/capability/`:
 
-- `short_description` — the one-liner under the title
-- `long_description` — the sector narrative (name real projects with real numbers)
-- `sections` — the deeper technical breakdown further down the page
+| To edit…                                                    | Open this file          |
+| ----------------------------------------------------------- | ----------------------- |
+| An industry page                                            | `industries.ts`         |
+| A service page                                              | `services.ts`           |
+| The Why Unique cards, and the sections behind them (DfMA, the yard, floor kits, AI, intelligent buildings, how we deliver) | `shared.ts` |
+| Which sections make up each Why Unique page (`/why-unique/...`) | `value.ts` |
+| A project's facts and scope by service (shown on its project page) | `projects.deck.ts`, `projects.ts` |
 
-> ⚠️ Only name clients and projects that are real (in `clients.json` /
-> `projects.json`). Don't invent names — the site is read by prospective clients and
-> investors.
+Each page is a list of **blocks**, shown in order. A block has a `kind` (for example
+`cards`, `showcase`, `process`, `sheets`, `tiles`, `table`, `lists`), an optional
+`eyebrow`, `title` and `lede`, and its content. To change wording, change the text
+inside the quotes. To move a section, move its block. To remove one, delete the block.
+Give a block a `nav` label to list it in the bar under the hero. The page alternates
+the white and grey backgrounds by itself.
 
-### Edit a service page
+Every block notes the deck and slide it came from in a comment. When a deck changes,
+change the matching block.
 
-Service pages (`/services/hvac-company-in-gurgaon`, etc.) live in
-`src/data/cms/services.json`. Notable fields:
+**An industry page has three sections.** What we deliver (the 3D building), Our
+experience, and Why Unique. Each subject is written in one place and the industry page
+links to it:
 
-- `tagline` — the confident line under the discipline name
-- `intro_paragraphs` — the opening
-- `approach_plain` — the plain-language "how we work" (shown by default)
-- `approach_paragraphs` — the technical version (behind a "for the engineers" toggle)
-- `stats` — the three proof figures (e.g. `"30,000 TR"` → "District-cooling plant…")
+- _Our experience_ is the `experience` block. `projects` lists project ids from
+  `projects.ts`; each shows as a card with a "Learn more" link to the project's own page
+  (`/projects/...`), which carries the facts, highlights and scope of work by service.
+  `more` lists further projects as small tiles and `also` lists client names. A project
+  with no record in the project archive still gets a page, built from its deck entry:
+  give it an `href` in `projects.deck.ts`.
+- _Why Unique_ is `whyBlock()`. Its eight cards are `WHY_VALUE_ADDITIONS` in `shared.ts`.
+  A card with an `href` opens its own page under `/why-unique/`. To change what DfMA or
+  the Bhondsi yard says, edit its section in `shared.ts`: every page that links to it
+  picks up the change.
+- Four Why Unique pages open with a 3D model of their own, built the same way as the
+  buildings: a module taken apart service by service (DfMA), the yard (prefabrication at
+  Bhondsi), a tower receiving one kit per floor (floor kits) and a building read through
+  its controls (intelligent buildings). Their stops are the `chapters` of the `building`
+  block in `value.ts`, and they follow the same rules as the building stops below.
+- The Why Unique menu in the site header, and the first five cards, read one list:
+  `src/data/why-unique.ts`. Change a name or a line there.
+- Sections taken off the industry pages in November 2026 (the data centre register, live
+  facilities, automation, commissioning and method lists; the cleanroom credentials,
+  process piping and engineering sheets) are kept at the foot of `industries.ts` in
+  `PARKED_BLOCKS`. Move one back into a page's `blocks` list to show it again.
+
+**The 3D building (What we deliver, every industry page).** The `building` block
+shows a model that stays in view while the reader scrolls: a data centre, a cleanroom
+building, a manufacturing plant, an airport terminal, a campus, a hospital, a mixed use
+development (also used for the hotel) or two residential towers. Each entry in its
+`chapters` list is one stop: a `title`, a `text`, one `stat` or `proof` line from a
+project, and the `labels` that point at parts of the model. You can reword all of these
+freely. The `key` of a chapter picks the camera view and the `anchor` of a label picks
+the point it attaches to, so leave those two as they are. Airports, education and
+healthcare share one list of chapters (`PUBLIC_CHAPTERS`) and add their own labels and
+project lines. Every page covers the same core services (HVAC, electrical, plumbing,
+fire, BMS and ELV, civil) plus that industry's own stops. Where the decks hold no project
+record for a service in an industry, the chapter uses the wording of the company services
+slide and carries no project line: add a `stat` or `proof` when there is a project to
+quote. The views, the anchors and the models themselves live in
+`src/components/capability/building/` and need a developer. Readers without 3D support,
+or who ask their device for less motion, get the still pictures in
+`public/capability/building/` in place of the model. If a developer changes a model,
+the stills for that model need to be made again.
+
+**House rules for these pages**
+
+- No dashes or hyphens in copy. Use a comma, a colon or two sentences.
+- Headings are plain statements of what the section holds.
+- Figures are placed exactly as the deck states them. Do not round, merge or recompute.
+- Do not encode meaning with a red and green pair. The pages use blue and grey only.
+
+The name, hero picture and one line description of each page still come from
+`src/data/cms/sectors.json` and `src/data/site-content.ts`. The "A closer look" list
+on a service page still comes from `src/data/cms/service_categories.json`, and the
+"From the project archive" tiles come from the project records.
 
 The sub-discipline pages (HVAC → high-side, low-side, …) live in
 `src/data/cms/service_categories.json`.
@@ -157,6 +214,9 @@ Each service page also shows its relevant controlled execution methods. That ind
 generated from the Marketing method-statement libraries by
 `scripts/import-method-statements.mjs`. Update the controlled source documents first,
 then refresh the index rather than editing the generated JSON by hand.
+
+Pictures for these pages are in `public/capability/` (`process/` for the step
+illustrations, `screens/` for the operator graphics, `projects/` for site photos).
 
 ### Edit the homepage headline stats
 

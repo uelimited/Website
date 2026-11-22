@@ -1,0 +1,2649 @@
+/* ============================================================
+   Capability pages (industries and services)
+   --------------------------------------------------------------
+   Styles for the components in src/components/capability.
+   Everything is built from design-tokens.css. Motion is a layer
+   on top of content that is already visible: reveals start from
+   the visible state on the server and without JavaScript, and
+   all of it switches off under prefers-reduced-motion.
+   ============================================================ */
+
+.ue-cap {
+  --cap-subnav-h: 52px;
+  --cap-pin-top: calc(var(--header-h) + var(--cap-subnav-h));
+  --cap-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Reveal on scroll ---------- */
+.ue-cap [data-reveal="hidden"] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+}
+.ue-cap [data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.9s var(--cap-ease),
+    transform 0.9s var(--cap-ease);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+
+/* ---------- Hero ---------- */
+.ue-cap-hero {
+  position: relative;
+  min-height: min(72vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  padding: 120px 0 72px;
+  color: var(--paper);
+  background: var(--ink-950);
+  overflow: hidden;
+  isolation: isolate;
+}
+.ue-cap-hero__media {
+  position: absolute;
+  inset: -6% 0 -6% 0;
+  z-index: -2;
+  will-change: transform;
+}
+.ue-cap-hero__media img {
+  object-fit: cover;
+  animation: capHeroSettle 1.8s var(--cap-ease) both;
+}
+.ue-cap-hero__shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 12, 16, 0.18) 0%,
+    rgba(10, 12, 16, 0.3) 40%,
+    rgba(10, 12, 16, 0.86) 100%
+  );
+}
+.ue-cap-hero__inner {
+  width: 100%;
+}
+.ue-cap-hero .ue-eyebrow {
+  color: rgba(255, 255, 255, 0.82);
+  animation: capRise 0.9s var(--cap-ease) 0.05s both;
+}
+.ue-cap-hero .ue-h1 {
+  color: var(--paper);
+  font-size: clamp(42px, 6vw, 84px);
+  max-width: 16ch;
+  animation: capRise 1s var(--cap-ease) 0.12s both;
+}
+.ue-cap-hero .ue-lead {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 24px;
+  max-width: 58ch;
+  animation: capRise 1s var(--cap-ease) 0.22s both;
+}
+@keyframes capRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes capHeroSettle {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ---------- Section nav ---------- */
+.ue-cap-subnav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--border-color);
+}
+.ue-cap-subnav__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+  height: var(--cap-subnav-h);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.ue-cap-subnav__crumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.008em;
+  white-space: nowrap;
+  color: var(--ink-950);
+}
+.ue-cap-subnav__crumb a {
+  color: var(--ink-500);
+  transition: color var(--dur-1) var(--ease-std);
+}
+.ue-cap-subnav__crumb a:hover {
+  color: var(--ink-950);
+}
+.ue-cap-subnav__crumb span[aria-hidden] {
+  color: var(--ink-300);
+}
+.ue-cap-subnav__links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  min-width: 0;
+}
+.ue-cap-subnav__links::-webkit-scrollbar {
+  display: none;
+}
+.ue-cap-subnav__link {
+  position: relative;
+  font-size: 13px;
+  color: var(--ink-500);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  transition: color var(--dur-2) var(--ease-std);
+}
+.ue-cap-subnav__link:hover {
+  color: var(--ink-950);
+}
+.ue-cap-subnav__link[data-active] {
+  color: var(--ink-950);
+}
+.ue-cap-subnav__pill {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-pill);
+  background: var(--ink-100);
+  z-index: -1;
+}
+.ue-cap-subnav__progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent-500);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+/* ---------- Sections ---------- */
+.ue-cap-section {
+  padding: 120px 0;
+  scroll-margin-top: calc(var(--cap-pin-top) - 1px);
+}
+.ue-cap-section--soft {
+  background: var(--paper-soft);
+}
+.ue-cap-section--flush-top {
+  padding-top: 0;
+  margin-top: -40px;
+}
+.ue-cap-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: end;
+  margin-bottom: 64px;
+}
+.ue-cap-head--solo {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 860px;
+}
+.ue-cap-head .ue-eyebrow {
+  margin-bottom: 16px;
+}
+.ue-cap-head .ue-h2 {
+  max-width: 20ch;
+  text-wrap: balance;
+}
+.ue-cap-head__lede {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--ink-500);
+  max-width: 54ch;
+  text-wrap: pretty;
+}
+.ue-cap-note {
+  margin: 40px 0 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-500);
+  max-width: 84ch;
+}
+.ue-cap-label {
+  margin: 0 0 20px;
+  font-size: 13px;
+  font-weight: var(--w-medium);
+  color: var(--ink-500);
+  letter-spacing: -0.005em;
+}
+
+/* ---------- Stats ---------- */
+.ue-cap-stats {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  gap: 40px 48px;
+}
+.ue-cap-stats--band {
+  padding: 72px 0 0;
+}
+.ue-cap-stat__value {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: clamp(36px, 4.4vw, 60px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-950);
+  white-space: nowrap;
+}
+.ue-cap-stat__label {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  color: var(--ink-950);
+  line-height: 1.35;
+}
+.ue-cap-stat__note {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--ink-500);
+  line-height: 1.45;
+  max-width: 30ch;
+}
+.ue-cap-stats--compact .ue-cap-stat__value {
+  font-size: clamp(28px, 3vw, 40px);
+}
+/* A row that holds a long value steps the whole row down a size, so no
+   value runs into its neighbour. */
+.ue-cap-stats[data-long] .ue-cap-stat__value {
+  font-size: clamp(30px, 3.3vw, 46px);
+}
+.ue-cap-stats--compact[data-long] .ue-cap-stat__value {
+  font-size: clamp(24px, 2.5vw, 32px);
+}
+.ue-cap-stats--compact .ue-cap-stat__label {
+  font-weight: var(--w-regular);
+  color: var(--ink-500);
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* ---------- Cards ---------- */
+.ue-cap-cards {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  gap: 16px;
+}
+.ue-cap-card {
+  padding: 28px 28px 32px;
+  border-radius: var(--radius-xl);
+  background: var(--paper-soft);
+  transition:
+    transform var(--dur-3) var(--cap-ease),
+    box-shadow var(--dur-3) var(--cap-ease),
+    background var(--dur-3) var(--cap-ease);
+}
+.ue-cap-section--soft .ue-cap-card {
+  background: var(--paper);
+}
+.ue-cap-card:hover {
+  transform: translate3d(0, -3px, 0);
+  box-shadow: var(--shadow-md);
+  background: var(--paper);
+}
+.ue-cap-card__meta {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-500);
+  margin-bottom: 28px;
+}
+.ue-cap-card__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: var(--w-medium);
+  line-height: 1.2;
+  letter-spacing: -0.016em;
+  color: var(--ink-950);
+}
+.ue-cap-card__text {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-600);
+  text-wrap: pretty;
+}
+/* A card that opens its own page. */
+.ue-cap-card--link {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+.ue-cap-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 24px;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  color: var(--accent-600);
+}
+.ue-cap-card__more svg {
+  transition: transform var(--dur-2) var(--cap-ease);
+}
+.ue-cap-card--link:hover .ue-cap-card__more svg,
+.ue-cap-project:hover .ue-cap-card__more svg {
+  transform: translate3d(3px, 0, 0);
+}
+
+.ue-cap-cards--small .ue-cap-card {
+  padding: 22px 22px 24px;
+  border-radius: var(--radius-lg);
+}
+.ue-cap-cards--small .ue-cap-card__title {
+  font-size: 17px;
+}
+.ue-cap-cards--small .ue-cap-card__text {
+  font-size: 14px;
+  margin-top: 8px;
+}
+.ue-cap-more {
+  margin-top: 56px;
+}
+
+/* ---------- Tabs (shared by showcase, sheets, gallery) ---------- */
+.ue-cap-tabs {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 48px;
+}
+.ue-cap-tabs::-webkit-scrollbar {
+  display: none;
+}
+.ue-cap-tab {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 0 0 16px;
+  white-space: nowrap;
+  color: var(--ink-950);
+  opacity: 0.42;
+  transition: opacity 0.25s;
+}
+.ue-cap-tab:hover {
+  opacity: 0.8;
+}
+.ue-cap-tab[data-active] {
+  opacity: 1;
+}
+.ue-cap-tab__num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+}
+.ue-cap-tab__name {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: 15px;
+  letter-spacing: -0.012em;
+}
+.ue-cap-tab__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--accent-500);
+}
+
+/* ---------- Project showcase ---------- */
+.ue-cap-show__panel {
+  animation: capPanel 0.6s var(--cap-ease) both;
+}
+@keyframes capPanel {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.ue-cap-show__top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 64px;
+  align-items: start;
+}
+.ue-cap-show__top[data-wide] {
+  grid-template-columns: minmax(0, 1fr);
+}
+.ue-cap-show__top[data-plain] .ue-cap-facts {
+  margin-top: 0;
+}
+.ue-cap-show__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--ink-100);
+}
+.ue-cap-show__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: capKen 7s ease-out both;
+}
+@keyframes capKen {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1.02);
+  }
+}
+.ue-cap-show__status {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(10, 12, 16, 0.56);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: var(--w-medium);
+  letter-spacing: 0.01em;
+}
+.ue-cap-show__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.024em;
+  color: var(--ink-950);
+  text-wrap: balance;
+}
+.ue-cap-show__lede {
+  margin: 12px 0 0;
+  font-size: 17px;
+  color: var(--ink-500);
+  line-height: 1.45;
+}
+.ue-cap-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 32px;
+  margin: 36px 0 0;
+}
+.ue-cap-fact dt {
+  font-size: 12px;
+  color: var(--ink-500);
+  margin-bottom: 6px;
+}
+.ue-cap-fact dd {
+  margin: 0;
+  font-size: 17px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+  color: var(--ink-950);
+}
+.ue-cap-fact dd small {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: var(--w-regular);
+  letter-spacing: 0;
+  line-height: 1.4;
+  color: var(--ink-500);
+}
+.ue-cap-show__scope {
+  margin: 36px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-700);
+  text-wrap: pretty;
+}
+.ue-cap-show__link {
+  margin-top: 28px;
+}
+.ue-cap-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 64px;
+}
+.ue-cap-show__stats {
+  margin-top: 64px;
+}
+
+/* Scope of work by service */
+.ue-cap-split {
+  margin-top: 64px;
+  padding: 36px 40px 40px;
+  border-radius: var(--radius-xl);
+  background: var(--paper-soft);
+}
+.ue-cap-section--soft .ue-cap-split {
+  background: var(--paper);
+}
+.ue-cap-split__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.ue-cap-split__head h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.016em;
+}
+.ue-cap-split__head span {
+  font-size: 13px;
+  color: var(--ink-500);
+}
+.ue-cap-split__bar {
+  display: flex;
+  gap: 3px;
+  height: 12px;
+  margin-bottom: 20px;
+}
+.ue-cap-split__seg {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 100%;
+  min-width: 6px;
+  border-radius: 3px;
+  background: var(--seg, var(--accent-500));
+  opacity: 0.34;
+  transform-origin: left center;
+  transition:
+    opacity 0.3s,
+    flex-grow 0.8s var(--cap-ease);
+}
+.ue-cap-split__seg:first-child {
+  border-radius: 6px 3px 3px 6px;
+}
+.ue-cap-split__seg:last-child {
+  border-radius: 3px 6px 6px 3px;
+}
+.ue-cap-split__seg:hover {
+  opacity: 0.7;
+}
+.ue-cap-split__seg[data-active] {
+  opacity: 1;
+}
+.ue-cap-split__keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ue-cap-key {
+  appearance: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-color);
+  background: transparent;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  color: var(--ink-700);
+  transition:
+    background var(--dur-2) var(--ease-std),
+    color var(--dur-2) var(--ease-std),
+    border-color var(--dur-2) var(--ease-std);
+}
+.ue-cap-key:hover {
+  border-color: var(--ink-400);
+}
+.ue-cap-key[data-active] {
+  background: var(--ink-950);
+  border-color: var(--ink-950);
+  color: var(--paper);
+}
+.ue-cap-key[data-off] {
+  color: var(--ink-400);
+  border-style: dashed;
+}
+.ue-cap-key[data-off][data-active] {
+  background: var(--ink-100);
+  border-color: var(--ink-200);
+  border-style: solid;
+  color: var(--ink-600);
+}
+.ue-cap-key__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--seg, var(--ink-300));
+}
+.ue-cap-key__pct {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: var(--w-regular);
+  opacity: 0.7;
+}
+.ue-cap-split__detail {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 40px;
+  margin-top: 32px;
+  min-height: 96px;
+  animation: capPanel 0.45s var(--cap-ease) both;
+}
+.ue-cap-split__share {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink-950);
+}
+.ue-cap-split__share small {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: var(--w-regular);
+  letter-spacing: 0;
+  color: var(--ink-500);
+}
+.ue-cap-split__text {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-700);
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+.ue-cap-split__note {
+  margin: 28px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-500);
+  max-width: 100ch;
+}
+.ue-cap-show__note {
+  margin: 40px 0 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--accent-500);
+  font-size: 19px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--ink-950);
+  max-width: 62ch;
+}
+
+/* ---------- Process ---------- */
+.ue-cap-proc__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 72px;
+  align-items: center;
+}
+.ue-cap-proc__list {
+  display: flex;
+  flex-direction: column;
+}
+.ue-cap-proc__item {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  display: grid;
+  grid-template-columns: 3px minmax(0, 1fr);
+  gap: 24px;
+  padding: 0;
+  color: var(--ink-950);
+}
+.ue-cap-proc__track {
+  position: relative;
+  width: 3px;
+  background: var(--ink-100);
+  overflow: hidden;
+}
+.ue-cap-proc__item:first-child .ue-cap-proc__track {
+  border-radius: 2px 2px 0 0;
+}
+.ue-cap-proc__item:last-child .ue-cap-proc__track {
+  border-radius: 0 0 2px 2px;
+}
+.ue-cap-proc__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--accent-500);
+  transform-origin: top center;
+  transform: scaleY(0);
+}
+.ue-cap-proc__item[data-done] .ue-cap-proc__fill {
+  transform: scaleY(1);
+}
+.ue-cap-proc__body {
+  padding: 16px 0;
+  opacity: 0.45;
+  transition: opacity 0.3s;
+}
+.ue-cap-proc__item:hover .ue-cap-proc__body {
+  opacity: 0.8;
+}
+.ue-cap-proc__item[data-active] .ue-cap-proc__body {
+  opacity: 1;
+}
+.ue-cap-proc__num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+}
+.ue-cap-proc__name {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: clamp(20px, 1.9vw, 26px);
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+}
+.ue-cap-proc__text {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s var(--cap-ease);
+}
+.ue-cap-proc__item[data-active] .ue-cap-proc__text {
+  grid-template-rows: 1fr;
+}
+.ue-cap-proc__text > span {
+  overflow: hidden;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink-600);
+  max-width: 44ch;
+}
+.ue-cap-proc__text > span > span {
+  display: block;
+  padding-top: 10px;
+}
+.ue-cap-proc__stage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-xl);
+  background: var(--paper);
+  overflow: hidden;
+}
+.ue-cap-section--soft .ue-cap-proc__stage {
+  box-shadow: var(--shadow-sm);
+}
+.ue-cap-proc__img {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6%;
+}
+.ue-cap-proc__img img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+@keyframes capFillY {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+.ue-cap-proc__count {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-400);
+}
+.ue-cap-proc__toggle {
+  appearance: none;
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--ink-100);
+  color: var(--ink-700);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--dur-2) var(--ease-std);
+}
+.ue-cap-proc__toggle:hover {
+  background: var(--ink-200);
+}
+.ue-cap-proc__toggle svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Pinned variant: the layout sticks while the steps advance. */
+.ue-cap-proc--pinned .ue-cap-proc__outer {
+  position: relative;
+  height: calc(100vh * var(--span, 4));
+}
+.ue-cap-proc--pinned .ue-cap-proc__pin {
+  position: sticky;
+  top: var(--cap-pin-top);
+  height: calc(100vh - var(--cap-pin-top));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 0;
+  overflow: hidden;
+}
+.ue-cap-proc--pinned .ue-cap-proc__layout {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+}
+.ue-cap-proc__pinhead {
+  margin-bottom: 24px;
+}
+.ue-cap-proc__pinhead .ue-eyebrow {
+  margin-bottom: 14px;
+}
+.ue-cap-proc__pinhead .ue-h2 {
+  font-size: clamp(26px, 2.5vw, 36px);
+  line-height: 1.1;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+.ue-cap-proc__pinhead .ue-cap-head__lede {
+  margin-top: 14px;
+  font-size: 16px;
+  max-width: 48ch;
+}
+/* The pinned list has to fit one screen, so it runs tighter than the
+   autoplay list: no step numbers (the counter on the picture carries
+   the position) and short rows. */
+.ue-cap-proc--pinned .ue-cap-proc__num {
+  display: none;
+}
+.ue-cap-proc--pinned .ue-cap-proc__body {
+  padding: 6px 0;
+}
+.ue-cap-proc--pinned .ue-cap-proc__name {
+  margin-top: 0;
+  font-size: clamp(17px, 1.5vw, 20px);
+}
+.ue-cap-proc--pinned .ue-cap-proc__text > span {
+  font-size: 15px;
+}
+.ue-cap-proc--pinned .ue-cap-proc__text > span > span {
+  padding-top: 4px;
+}
+.ue-cap-proc--pinned .ue-cap-proc__stage {
+  aspect-ratio: auto;
+  height: min(58vh, 540px);
+}
+.ue-cap-section.ue-cap-proc--pinned {
+  padding: 0;
+}
+.ue-cap-proc--pinned .ue-cap-proc__after {
+  padding: 8px 0 120px;
+}
+.ue-cap-proc--pinned .ue-cap-proc__after .ue-cap-aside:first-child {
+  margin-top: 0;
+}
+@media (max-height: 820px) {
+  .ue-cap-proc__pinhead .ue-cap-head__lede {
+    display: none;
+  }
+}
+@media (max-height: 680px) {
+  .ue-cap-proc__pinhead .ue-h2 {
+    font-size: 24px;
+  }
+  .ue-cap-proc--pinned .ue-cap-proc__body {
+    padding: 3px 0;
+  }
+}
+.ue-cap-proc__mobile {
+  display: none;
+}
+
+/* Rail: every step visible, joined by a line that draws in. */
+.ue-cap-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr));
+  gap: 0 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: rail;
+}
+.ue-cap-rail::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15px;
+  height: 1px;
+  background: var(--border-color);
+  transform-origin: left center;
+}
+.ue-cap [data-reveal="hidden"].ue-cap-rail::before {
+  transform: scaleX(0);
+}
+.ue-cap [data-reveal="shown"].ue-cap-rail::before {
+  transform: scaleX(1);
+  transition: transform 1.4s var(--cap-ease) 0.1s;
+}
+.ue-cap-rail__step {
+  position: relative;
+  padding-top: 52px;
+}
+.ue-cap-rail__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 31px;
+  height: 31px;
+  padding: 0 9px;
+  border-radius: var(--radius-pill);
+  background: var(--paper);
+  border: 1px solid var(--border-strong);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-700);
+}
+.ue-cap-section--soft .ue-cap-rail__dot {
+  background: var(--paper-soft);
+}
+.ue-cap-sheet .ue-cap-rail__dot {
+  background: var(--paper);
+}
+.ue-cap-rail__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.014em;
+  line-height: 1.25;
+  color: var(--ink-950);
+}
+.ue-cap-rail__text {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-600);
+  text-wrap: pretty;
+}
+.ue-cap-aside {
+  margin-top: 64px;
+}
+.ue-cap-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ue-cap-chips li {
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--ink-50);
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  color: var(--ink-700);
+}
+.ue-cap-section--soft .ue-cap-chips li {
+  background: var(--paper);
+}
+.ue-cap-sheet .ue-cap-chips li {
+  background: var(--ink-50);
+}
+
+/* ---------- Sheets (how we deliver, deep dives) ---------- */
+.ue-cap-sheets__overview {
+  margin-bottom: 64px;
+}
+.ue-cap-bands {
+  margin: 48px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.ue-cap-band {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px;
+  padding: 18px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.ue-cap-section:not(.ue-cap-section--soft) .ue-cap-band {
+  background: var(--paper-soft);
+}
+.ue-cap-band strong {
+  font-weight: var(--w-medium);
+  color: var(--ink-950);
+}
+.ue-cap-band span {
+  color: var(--ink-600);
+}
+.ue-cap-sheets__layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.ue-cap-sheets__nav {
+  position: sticky;
+  top: calc(var(--cap-pin-top) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ue-cap-sheets__btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 8px;
+  padding: 13px 16px;
+  border-radius: var(--radius-md);
+  color: var(--ink-600);
+  font-size: 15px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.008em;
+  transition: color var(--dur-2) var(--ease-std);
+  isolation: isolate;
+}
+.ue-cap-sheets__btn:hover {
+  color: var(--ink-950);
+}
+.ue-cap-sheets__btn[data-active] {
+  color: var(--ink-950);
+}
+.ue-cap-sheets__btn-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: var(--w-regular);
+  color: var(--ink-400);
+}
+.ue-cap-sheets__btn[data-active] .ue-cap-sheets__btn-num {
+  color: var(--accent-500);
+}
+.ue-cap-sheets__pill {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+  z-index: -1;
+}
+.ue-cap-section:not(.ue-cap-section--soft) .ue-cap-sheets__pill {
+  background: var(--ink-50);
+  box-shadow: none;
+}
+.ue-cap-sheets__sep {
+  margin: 14px 16px 6px;
+  font-size: 12px;
+  color: var(--ink-400);
+}
+.ue-cap-sheet {
+  padding: 44px 48px 48px;
+  border-radius: var(--radius-xl);
+  background: var(--paper);
+  animation: capPanel 0.55s var(--cap-ease) both;
+  min-width: 0;
+}
+.ue-cap-section:not(.ue-cap-section--soft) .ue-cap-sheet {
+  background: var(--paper-soft);
+}
+.ue-cap-section:not(.ue-cap-section--soft) .ue-cap-sheet .ue-cap-rail__dot {
+  background: var(--paper-soft);
+}
+.ue-cap-sheet[hidden] {
+  display: none;
+}
+.ue-cap-sheet__tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-500);
+}
+.ue-cap-sheet__title {
+  margin: 10px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.6vw, 36px);
+  font-weight: var(--w-medium);
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+  color: var(--ink-950);
+}
+.ue-cap-sheet__lede {
+  margin: 14px 0 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-600);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+.ue-cap-sheet__media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: center;
+}
+.ue-cap-sheet__media img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+.ue-cap-sheet .ue-cap-rail {
+  margin-top: 44px;
+  gap: 0 20px;
+}
+.ue-cap-sheet .ue-cap-rail__title {
+  font-size: 16px;
+}
+.ue-cap-sheet .ue-cap-stats {
+  margin-top: 44px;
+  gap: 28px 32px;
+}
+.ue-cap-sheet__groups {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px 48px;
+}
+.ue-cap-sheet__groups--split {
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+}
+.ue-cap-minis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ue-cap-minis--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.ue-cap-mini__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.01em;
+  color: var(--ink-950);
+  line-height: 1.3;
+}
+.ue-cap-mini__text {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-600);
+}
+.ue-cap-timings {
+  display: grid;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ue-cap-timing__value {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.024em;
+  line-height: 1.1;
+  color: var(--ink-950);
+}
+.ue-cap-timing__text {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-600);
+}
+.ue-cap-sheet__note {
+  margin: 40px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-500);
+}
+.ue-cap-sheets__pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 36px;
+}
+.ue-cap-pager {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  color: var(--accent-500);
+}
+.ue-cap-pager:hover {
+  color: var(--accent-700);
+}
+.ue-cap-pager svg {
+  width: 16px;
+  height: 16px;
+}
+.ue-cap-pager:disabled {
+  visibility: hidden;
+}
+
+/* ---------- Tiles ---------- */
+.ue-cap-tiles {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  gap: 40px 20px;
+}
+.ue-cap-tile {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.ue-cap-tile__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--ink-100);
+}
+.ue-cap-tile__media img {
+  object-fit: cover;
+  transition: transform 0.9s var(--cap-ease);
+}
+.ue-cap-tile:hover .ue-cap-tile__media img {
+  transform: scale(1.045);
+}
+.ue-cap-tile__tag {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  background: rgba(10, 12, 16, 0.56);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: var(--w-medium);
+  letter-spacing: 0.02em;
+}
+.ue-cap-tile__name {
+  margin: 16px 0 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.014em;
+  line-height: 1.25;
+  color: var(--ink-950);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.ue-cap-tile__name svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  color: var(--accent-500);
+  opacity: 0;
+  transform: translate3d(-4px, 0, 0);
+  transition:
+    opacity var(--dur-2) var(--ease-std),
+    transform var(--dur-2) var(--ease-std);
+}
+.ue-cap-tile:hover .ue-cap-tile__name svg {
+  opacity: 1;
+  transform: none;
+}
+.ue-cap-tile__place {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--ink-500);
+}
+.ue-cap-tile__scope {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-700);
+}
+.ue-cap-also {
+  margin-top: 64px;
+}
+
+/* ---------- Project cards (Our experience) ---------- */
+.ue-cap-projects {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+  gap: 28px 24px;
+}
+.ue-cap-project {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--paper-soft);
+  transition:
+    transform var(--dur-3) var(--cap-ease),
+    box-shadow var(--dur-3) var(--cap-ease),
+    background var(--dur-3) var(--cap-ease);
+}
+.ue-cap-section--soft .ue-cap-project {
+  background: var(--paper);
+}
+a.ue-cap-project:hover {
+  transform: translate3d(0, -3px, 0);
+  box-shadow: var(--shadow-md);
+  background: var(--paper);
+}
+.ue-cap-project__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--ink-100);
+}
+.ue-cap-project__media img {
+  object-fit: cover;
+  transition: transform 0.9s var(--cap-ease);
+}
+a.ue-cap-project:hover .ue-cap-project__media img {
+  transform: scale(1.04);
+}
+.ue-cap-project__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px 26px 28px;
+}
+.ue-cap-project__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: var(--w-medium);
+  color: var(--ink-950);
+}
+.ue-cap-project__meta {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--ink-500);
+}
+.ue-cap-project__what {
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-700);
+}
+.ue-cap-project__scope {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-600);
+}
+.ue-cap-project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.ue-cap-project__tags li {
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  background: var(--ink-100);
+  font-size: 12px;
+  color: var(--ink-700);
+}
+.ue-cap-section--soft .ue-cap-project__tags li {
+  background: var(--paper-soft);
+}
+.ue-cap-projects[data-count="one"] .ue-cap-project {
+  flex-direction: row;
+}
+.ue-cap-projects[data-count="one"] .ue-cap-project__media {
+  flex: 0 0 52%;
+  aspect-ratio: auto;
+  min-height: 340px;
+}
+.ue-cap-projects[data-count="one"] .ue-cap-project__body {
+  justify-content: center;
+  padding: 40px 44px;
+}
+.ue-cap-projects[data-count="one"] .ue-cap-project__name {
+  font-size: 28px;
+}
+.ue-cap-projects[data-count="one"] .ue-cap-card__more {
+  margin-top: 0;
+}
+.ue-cap-projects[data-count="one"] .ue-cap-project__tags {
+  display: none;
+}
+.ue-cap-exp__points {
+  margin-bottom: 56px;
+}
+@media (max-width: 1080px) {
+  .ue-cap-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ue-cap-projects[data-count="one"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .ue-cap-projects {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ue-cap-projects[data-count="one"] .ue-cap-project {
+    flex-direction: column;
+  }
+  .ue-cap-projects[data-count="one"] .ue-cap-project__media {
+    flex: none;
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+  }
+  .ue-cap-projects[data-count="one"] .ue-cap-project__body {
+    padding: 24px 26px 28px;
+  }
+}
+
+/* ---------- Table ---------- */
+.ue-cap-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.ue-cap-table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: var(--w-regular);
+  color: var(--ink-500);
+  padding: 0 20px 14px 0;
+  vertical-align: bottom;
+}
+.ue-cap-table td {
+  padding: 18px 20px 18px 0;
+  vertical-align: top;
+  border-top: 1px solid var(--border-color);
+  color: var(--ink-700);
+}
+.ue-cap-table td:first-child {
+  font-weight: var(--w-medium);
+  color: var(--ink-950);
+  min-width: 190px;
+}
+.ue-cap-table tr.ue-cap-table__group td {
+  padding-top: 40px;
+  padding-bottom: 12px;
+  border-top: 0;
+  font-size: 12px;
+  font-weight: var(--w-regular);
+  color: var(--ink-500);
+}
+.ue-cap-table tbody tr {
+  transition: background var(--dur-2) var(--ease-std);
+}
+
+/* ---------- Gallery ---------- */
+.ue-cap-gallery__stage {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--ink-50);
+  box-shadow: var(--shadow-lg);
+}
+.ue-cap-gallery__img {
+  position: absolute;
+  inset: 0;
+}
+.ue-cap-gallery__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ue-cap-gallery__list {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px 20px;
+}
+.ue-cap-gallery__btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  padding: 14px 0 12px;
+  position: relative;
+  color: var(--ink-950);
+  opacity: 0.5;
+  transition: opacity 0.25s;
+}
+.ue-cap-gallery__btn:hover {
+  opacity: 0.85;
+}
+.ue-cap-gallery__btn[data-active] {
+  opacity: 1;
+}
+.ue-cap-gallery__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: var(--ink-100);
+  overflow: hidden;
+  border-radius: 1px;
+}
+.ue-cap-gallery__bar i {
+  position: absolute;
+  inset: 0;
+  background: var(--accent-500);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.ue-cap-gallery__btn[data-active] .ue-cap-gallery__bar i {
+  transform: scaleX(1);
+}
+.ue-cap-gallery__btn[data-active][data-playing] .ue-cap-gallery__bar i {
+  animation: capBar var(--dwell, 5s) linear both;
+}
+@keyframes capBar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.ue-cap-gallery__title {
+  display: block;
+  font-size: 15px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.ue-cap-gallery__place {
+  display: block;
+  margin-top: 3px;
+  font-size: 13px;
+  color: var(--ink-500);
+}
+
+/* ---------- Lists ---------- */
+.ue-cap-lists {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  gap: 48px 40px;
+}
+.ue-cap-lists__stats {
+  margin-bottom: 64px;
+}
+.ue-cap-list__title {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.014em;
+  color: var(--ink-950);
+}
+.ue-cap-list ul,
+.ue-cap-list ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ue-cap-list li {
+  display: flex;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--ink-700);
+}
+.ue-cap-list li i {
+  flex: none;
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-400);
+  min-width: 20px;
+  padding-top: 2px;
+}
+
+/* ---------- Compare ---------- */
+.ue-cap-compare {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 16px;
+}
+.ue-cap-compare__col {
+  display: contents;
+}
+.ue-cap-compare__cell {
+  padding: 22px 28px;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--ink-700);
+  display: flex;
+  align-items: center;
+}
+.ue-cap-compare__cell--label {
+  padding-left: 0;
+  font-size: 15px;
+  color: var(--ink-500);
+}
+.ue-cap-compare__cell--head {
+  font-size: 13px;
+  font-weight: var(--w-medium);
+  color: var(--ink-500);
+  padding-top: 24px;
+  padding-bottom: 6px;
+}
+.ue-cap-compare__cell--a {
+  background: var(--ink-50);
+}
+.ue-cap-compare__cell--b {
+  background: var(--accent-50);
+  color: var(--ink-950);
+  font-weight: var(--w-medium);
+}
+.ue-cap-compare__cell--b.ue-cap-compare__cell--head {
+  color: var(--accent-700);
+}
+.ue-cap-compare__cell--first {
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+.ue-cap-compare__cell--last {
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  padding-bottom: 30px;
+}
+.ue-cap-section--tight-top {
+  padding-top: 0;
+}
+
+/* ---------- Ledger (one service across projects) ---------- */
+.ue-cap-ledger__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+.ue-cap-ledger__group {
+  margin: 0;
+  padding: 36px 0 14px;
+  font-size: 13px;
+  font-weight: var(--w-medium);
+  color: var(--ink-500);
+}
+.ue-cap-ledger__group:first-child {
+  padding-top: 0;
+}
+.ue-cap-ledger__row {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr) 170px;
+  gap: 32px;
+  padding: 22px 0;
+  border-top: 1px solid var(--border-color);
+  align-items: start;
+}
+.ue-cap-ledger__name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.014em;
+  line-height: 1.25;
+  color: var(--ink-950);
+}
+a.ue-cap-ledger__name:hover {
+  color: var(--accent-500);
+}
+.ue-cap-ledger__place {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: var(--w-regular);
+  letter-spacing: 0;
+  color: var(--ink-500);
+}
+.ue-cap-ledger__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-700);
+  text-wrap: pretty;
+}
+.ue-cap-ledger__share {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-500);
+  text-align: right;
+  padding-top: 4px;
+}
+.ue-cap-ledger__meter {
+  display: block;
+  height: 4px;
+  margin: 0 0 10px auto;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--ink-100);
+  overflow: hidden;
+}
+.ue-cap-ledger__meter i {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent-500);
+}
+
+/* ---------- Links row under related projects ---------- */
+.ue-cap-links {
+  margin-top: 40px;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.ue-cap-related > section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+
+/* ---------- Industries and services index cards ---------- */
+.ue-cap-index {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.ue-cap-index__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 4 / 5;
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  color: var(--paper);
+  background: var(--ink-950);
+  isolation: isolate;
+}
+.ue-cap-index__card img {
+  object-fit: cover;
+  z-index: -2;
+  transition: transform 1.2s var(--cap-ease);
+}
+.ue-cap-index__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 12, 16, 0) 30%,
+    rgba(10, 12, 16, 0.86) 100%
+  );
+}
+.ue-cap-index__card:hover img {
+  transform: scale(1.05);
+}
+.ue-cap-index__card h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+}
+.ue-cap-index__card p {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.84);
+}
+.ue-cap-index__meta {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+}
+.ue-cap-index__meta svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--dur-2) var(--ease-std);
+}
+.ue-cap-index__card:hover .ue-cap-index__meta svg {
+  transform: translate3d(4px, 0, 0);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 1080px) {
+  .ue-cap-cards {
+    --cols: 2 !important;
+  }
+  .ue-cap-tiles {
+    --cols: 3 !important;
+  }
+  .ue-cap-lists {
+    --cols: 2 !important;
+  }
+  .ue-cap-sheets__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ue-cap-sheets__nav {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 4px;
+    padding-bottom: 4px;
+  }
+  .ue-cap-sheets__nav::-webkit-scrollbar {
+    display: none;
+  }
+  .ue-cap-sheets__btn {
+    white-space: nowrap;
+    grid-template-columns: auto auto;
+  }
+  .ue-cap-sheets__sep {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .ue-cap-section {
+    padding: 88px 0;
+  }
+  .ue-cap-head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    margin-bottom: 44px;
+  }
+  .ue-cap-stats {
+    --cols: 2 !important;
+  }
+  .ue-cap-show__top {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+  .ue-cap-highlights {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ue-cap-split {
+    padding: 28px 24px;
+  }
+  .ue-cap-split__detail {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .ue-cap-proc__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+  .ue-cap-proc__stage {
+    order: -1;
+  }
+  /* Pinned process falls back to a static stack. */
+  .ue-cap-proc--pinned .ue-cap-proc__outer {
+    display: none;
+  }
+  .ue-cap-proc__mobile {
+    display: block;
+    padding: 88px 0 0;
+  }
+  .ue-cap-proc--pinned .ue-cap-proc__after {
+    padding-bottom: 88px;
+  }
+  .ue-cap-proc__mobile-step {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+  }
+  .ue-cap-proc__mobile-step img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    background: var(--paper);
+  }
+  .ue-cap-rail {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px;
+  }
+  .ue-cap-rail::before {
+    left: 15px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    height: auto;
+    transform-origin: top center;
+  }
+  .ue-cap [data-reveal="hidden"].ue-cap-rail::before {
+    transform: scaleY(0);
+  }
+  .ue-cap [data-reveal="shown"].ue-cap-rail::before {
+    transform: scaleY(1);
+  }
+  .ue-cap-rail__step {
+    padding: 4px 0 0 52px;
+  }
+  .ue-cap-sheet .ue-cap-rail {
+    gap: 22px;
+  }
+  .ue-cap-sheet {
+    padding: 32px 24px 36px;
+  }
+  .ue-cap-sheet__groups--split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ue-cap-sheet__media {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ue-cap-band {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .ue-cap-gallery__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ue-cap-ledger__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  .ue-cap-ledger__share {
+    text-align: left;
+  }
+  .ue-cap-ledger__meter {
+    max-width: 160px;
+    margin-left: 0;
+  }
+  .ue-cap-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ue-cap-table thead {
+    display: none;
+  }
+  .ue-cap-table,
+  .ue-cap-table tbody,
+  .ue-cap-table tr,
+  .ue-cap-table td {
+    display: block;
+    width: 100%;
+  }
+  .ue-cap-table tr {
+    padding: 18px 0;
+    border-top: 1px solid var(--border-color);
+  }
+  .ue-cap-table td {
+    border: 0;
+    padding: 3px 0;
+  }
+  .ue-cap-table td[data-label]:not(:first-child)::before {
+    content: attr(data-label) ": ";
+    color: var(--ink-500);
+    font-size: 13px;
+  }
+  .ue-cap-table tr.ue-cap-table__group {
+    border-top: 0;
+    padding-bottom: 0;
+  }
+  .ue-cap-compare {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0 10px;
+  }
+  .ue-cap-compare__cell--label {
+    grid-column: 1 / -1;
+    padding: 22px 0 8px;
+  }
+  .ue-cap-compare__cell--label.ue-cap-compare__cell--head {
+    display: none;
+  }
+  .ue-cap-compare__cell {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+  .ue-cap-compare__cell--a:not(.ue-cap-compare__cell--head),
+  .ue-cap-compare__cell--b:not(.ue-cap-compare__cell--head) {
+    border-radius: var(--radius-md);
+  }
+  .ue-cap-compare__cell--head {
+    background: transparent !important;
+    padding: 0 0 4px;
+  }
+}
+@media (max-width: 640px) {
+  .ue-cap-hero {
+    min-height: 520px;
+    padding: 96px 0 44px;
+  }
+  .ue-cap-subnav__inner {
+    padding: 0 20px;
+    gap: 12px;
+  }
+  .ue-cap-subnav__crumb a,
+  .ue-cap-subnav__crumb span[aria-hidden] {
+    display: none;
+  }
+  .ue-cap-cards {
+    --cols: 1 !important;
+  }
+  .ue-cap-tiles {
+    --cols: 2 !important;
+    gap: 28px 14px;
+  }
+  .ue-cap-lists {
+    --cols: 1 !important;
+  }
+  .ue-cap-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ue-cap-minis,
+  .ue-cap-minis--3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ue-cap-index {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ue-cap-index__card {
+    aspect-ratio: 4 / 3;
+  }
+  .ue-cap-gallery__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ue-cap-stat__value {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ue-cap [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .ue-cap *,
+  .ue-cap *::before,
+  .ue-cap *::after {
+    animation: none !important;
+  }
+  .ue-cap-rail::before {
+    transform: none !important;
+  }
+}
+
+/* ---------- Building explorer ---------- */
+/* At rest this is a plain list of chapters, each with a still picture.
+   Once the page is live the section pins and the 3D model takes over. */
+.ue-cap-section.ue-cap-bld {
+  background: var(--paper);
+  position: relative;
+}
+.ue-cap-bld__stage,
+.ue-cap-bld__index,
+.ue-cap-bld__hint {
+  display: none;
+}
+.ue-cap-bld__intro {
+  max-width: 860px;
+}
+.ue-cap-bld__intro .ue-eyebrow {
+  margin-bottom: 20px;
+}
+.ue-cap-bld__lede {
+  margin: 22px 0 0;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-500);
+  max-width: 46ch;
+}
+.ue-cap-bld__chapters {
+  list-style: none;
+  margin: 72px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 72px;
+}
+.ue-cap-bld__chapter {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+.ue-cap-bld__still {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--paper-soft);
+}
+.ue-cap-bld__still img {
+  object-fit: cover;
+}
+.ue-cap-bld__count {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: var(--w-medium);
+  color: var(--accent-500);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ue-cap-bld__count span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-400);
+}
+.ue-cap-bld__chapter h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: clamp(28px, 2.9vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.028em;
+  color: var(--ink-950);
+  text-wrap: balance;
+}
+.ue-cap-bld__text {
+  margin: 18px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-500);
+  max-width: 44ch;
+}
+.ue-cap-bld__stat,
+.ue-cap-bld__proof {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--ink-100);
+  max-width: 44ch;
+}
+.ue-cap-bld__stat {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+.ue-cap-bld__stat strong {
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--ink-950);
+  white-space: nowrap;
+}
+.ue-cap-bld__stat span,
+.ue-cap-bld__proof span {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-950);
+}
+.ue-cap-bld__stat em {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  color: var(--ink-500);
+}
+.ue-cap-bld__proof strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: var(--w-medium);
+  color: var(--ink-950);
+}
+.ue-cap-bld__proof span {
+  color: var(--ink-500);
+}
+
+/* Live: pinned stage, one chapter at a time. */
+.ue-cap-section.ue-cap-bld[data-live] {
+  padding: 0;
+  height: calc(var(--steps) * 96vh + 100vh);
+}
+.ue-cap-bld[data-live] .ue-cap-bld__pin {
+  position: sticky;
+  top: var(--cap-pin-top);
+  height: calc(100vh - var(--cap-pin-top));
+  overflow: hidden;
+}
+/* On phones the small viewport unit keeps the foot of the stage above
+   the browser toolbar. */
+@supports (height: 100svh) {
+  .ue-cap-bld[data-live] .ue-cap-bld__pin {
+    height: calc(100svh - var(--cap-pin-top));
+  }
+}
+.ue-cap-bld[data-live] .ue-cap-bld__stage {
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+/* Soft edges, so a view that runs past the frame fades out. */
+.ue-cap-bld__stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, var(--paper) 0, rgba(255, 255, 255, 0) 13%),
+    linear-gradient(to left, var(--paper) 0, rgba(255, 255, 255, 0) 7%),
+    linear-gradient(to bottom, var(--paper) 0, rgba(255, 255, 255, 0) 7%);
+}
+.ue-cap-bld__labels {
+  z-index: 1;
+}
+.ue-cap-bld__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.9s var(--cap-ease);
+}
+.ue-cap-bld[data-ready] .ue-cap-bld__canvas {
+  opacity: 1;
+}
+.ue-cap-bld__stills {
+  position: absolute;
+  inset: 0 0 0 30%;
+  transition: opacity 0.6s var(--cap-ease);
+}
+.ue-cap-bld__stills img {
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.6s var(--cap-ease);
+}
+.ue-cap-bld__stills img[data-on] {
+  opacity: 1;
+}
+.ue-cap-bld[data-ready] .ue-cap-bld__stills {
+  opacity: 0;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__ui {
+  position: relative;
+  height: 100%;
+  pointer-events: none;
+}
+/* Keeps the copy clear of the model when it swings behind the text. */
+.ue-cap-bld[data-live] .ue-cap-bld__pin::before {
+  content: "";
+  position: absolute;
+  inset: 0 52% 0 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    var(--paper) 0,
+    var(--paper) 46%,
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__ui,
+.ue-cap-bld[data-live] .ue-cap-bld__index {
+  z-index: 2;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__col {
+  position: relative;
+  height: 100%;
+  width: min(420px, 36%);
+}
+.ue-cap-bld[data-live] .ue-cap-bld__intro,
+.ue-cap-bld[data-live] .ue-cap-bld__chapter {
+  position: absolute;
+  inset: 0 0 56px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 0.45s var(--cap-ease),
+    transform 0.6s var(--cap-ease);
+  pointer-events: none;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__intro[data-on],
+.ue-cap-bld[data-live] .ue-cap-bld__chapter[data-on] {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.12s;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__chapters {
+  margin: 0;
+  display: block;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__chapter {
+  grid-template-columns: none;
+  gap: 0;
+  align-items: stretch;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__still {
+  display: none;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__intro .ue-h2 {
+  font-size: clamp(34px, 3.5vw, 50px);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__hint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 36px 0 0;
+  font-size: 13px;
+  color: var(--ink-400);
+}
+.ue-cap-bld__hint span {
+  width: 1px;
+  height: 34px;
+  background: linear-gradient(var(--accent-500), var(--accent-500)) top / 100%
+    40% no-repeat var(--ink-200);
+  animation: capBldHint 1.8s var(--cap-ease) infinite;
+}
+@keyframes capBldHint {
+  from {
+    background-position: 0 -40%;
+  }
+  to {
+    background-position: 0 240%;
+  }
+}
+
+/* Callouts pinned to points of the model. */
+.ue-cap-bld__labels {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ue-cap-bld__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.ue-cap-bld__label::before {
+  content: "";
+  position: absolute;
+  left: -0.5px;
+  bottom: 3px;
+  width: 1px;
+  height: 30px;
+  background: var(--ink-950);
+  opacity: 0.5;
+}
+.ue-cap-bld__label::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent-500);
+  box-sizing: border-box;
+}
+.ue-cap-bld__label > span {
+  position: absolute;
+  left: 0;
+  bottom: 32px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 1px 2px rgba(10, 12, 16, 0.06),
+    0 8px 24px rgba(10, 12, 16, 0.1);
+  font-size: 12.5px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.005em;
+  color: var(--ink-950);
+}
+
+/* Chapter index along the foot of the stage. */
+.ue-cap-bld[data-live] .ue-cap-bld__index {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  backdrop-filter: saturate(1.4) blur(14px);
+  box-shadow:
+    0 1px 2px rgba(10, 12, 16, 0.05),
+    0 10px 30px rgba(10, 12, 16, 0.08);
+  white-space: nowrap;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__index {
+  max-width: calc(100vw - 32px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.ue-cap-bld[data-live] .ue-cap-bld__index::-webkit-scrollbar {
+  display: none;
+}
+.ue-cap-bld__index button {
+  flex: none;
+  white-space: nowrap;
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  color: var(--ink-400);
+  transition:
+    color 0.3s,
+    background 0.3s;
+}
+.ue-cap-bld__index button:hover {
+  color: var(--ink-950);
+}
+.ue-cap-bld__index button[data-on] {
+  color: var(--ink-950);
+  background: var(--ink-100);
+}
+
+@media (max-width: 1320px) {
+  .ue-cap-bld__index button {
+    padding: 8px 10px;
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 960px) {
+  .ue-cap-bld__chapter {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__col {
+    width: 100%;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__ui::before {
+    content: "";
+    position: absolute;
+    inset: 46% 0 0 0;
+    background: linear-gradient(
+      to top,
+      var(--paper) 0,
+      var(--paper) 72%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__intro,
+  .ue-cap-bld[data-live] .ue-cap-bld__chapter {
+    inset: 0 0 52px 0;
+    justify-content: flex-end;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__intro .ue-h2 {
+    font-size: clamp(28px, 6.4vw, 40px);
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__chapter h3 {
+    font-size: clamp(24px, 5.6vw, 32px);
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__text {
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin-top: 10px;
+    max-width: none;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__lede {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__hint {
+    margin-top: 16px;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__stat,
+  .ue-cap-bld[data-live] .ue-cap-bld__proof {
+    margin-top: 14px;
+    padding-top: 12px;
+    max-width: none;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__stat strong {
+    font-size: 26px;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__stat em,
+  .ue-cap-bld[data-live] .ue-cap-bld__proof span {
+    display: none;
+  }
+  .ue-cap-bld__stills {
+    inset: 0 0 44% 0;
+  }
+  .ue-cap-bld__label > span {
+    font-size: 11px;
+    padding: 4px 9px;
+    bottom: 24px;
+  }
+  /* A small stage has room for three callouts. */
+  .ue-cap-bld__label:not([data-rank="0"], [data-rank="1"], [data-rank="2"]) {
+    display: none;
+  }
+  .ue-cap-bld__label::before {
+    height: 22px;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__index {
+    bottom: 16px;
+    gap: 6px;
+    padding: 6px 8px;
+  }
+  .ue-cap-bld[data-live] .ue-cap-bld__pin::before {
+    display: none;
+  }
+  .ue-cap-bld__index button {
+    padding: 0;
+    width: 22px;
+    height: 4px;
+    background: var(--ink-200);
+  }
+  .ue-cap-bld__index button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .ue-cap-bld__index button[data-on] {
+    background: var(--accent-500);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ue-cap-bld__hint span {
+    animation: none;
+  }
+}
