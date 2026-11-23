@@ -128,6 +128,13 @@ export function SiteHeader() {
           >
             <Link href="/contact">Contact</Link>
           </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="hidden md:inline-flex rounded-full px-5 h-9 text-[14px] font-medium"
+          >
+            <Link href="/registration">Vendors Registration</Link>
+          </Button>
           <MobileMenu />
         </div>
       </div>
@@ -161,11 +168,6 @@ function FirmMenu() {
       href: "/investors",
       name: "Investors",
       blurb: "Company information and investor document downloads.",
-    },
-    {
-      href: "/registration",
-      name: "Vendor registration",
-      blurb: "Register as a supplier or contractor.",
     },
   ];
 
@@ -357,7 +359,6 @@ function MobileMenu() {
     { href: "/approach", label: "How we deliver" },
     { href: "/careers", label: "Careers" },
     { href: "/investors", label: "Investors" },
-    { href: "/registration", label: "Vendor registration" },
   ];
   return (
     <div className="md:hidden">
@@ -436,6 +437,12 @@ function MobileMenu() {
               className="mt-4 inline-flex items-center justify-center rounded-full bg-[color:var(--accent-500)] px-5 h-11 text-[15px] font-medium text-white"
             >
               Contact
+            </Link>
+            <Link
+              href="/registration"
+              className="inline-flex items-center justify-center rounded-full border border-[color:var(--border-color)] px-5 h-11 text-[15px] font-medium text-[color:var(--ink-950)]"
+            >
+              Vendors Registration
             </Link>
           </div>
         </SheetContent>
