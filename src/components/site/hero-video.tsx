@@ -15,6 +15,8 @@ export function HomeHero() {
     const video = videoRef.current;
     if (!video || videoFailed) return;
 
+    video.defaultMuted = true;
+
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let resumePlayback = false;
     let wasVisible = false;
