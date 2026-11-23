@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { InvestorDocuments } from "./investor-documents";
 import { Button } from "@/components/ui/button";
 import { FIRM, OVERVIEW } from "@/data/firm";
 
@@ -90,6 +91,8 @@ export default function InvestorsPage() {
           </figure>
         </div>
       </section>
+
+      <InvestorDocuments />
 
       <section className="ue-investors__facts" aria-label="Company at a glance">
         <div className="ue-container ue-investors__facts-grid">
