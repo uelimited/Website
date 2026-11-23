@@ -114,7 +114,7 @@ export function SiteHeader() {
               variant="outline"
               className="rounded-full px-5 h-9 text-[14px] font-medium"
             >
-              <Link href="/registration">Registration</Link>
+              <Link href="/registration">Vendors Registration</Link>
             </Button>
           </div>
           <MobileMenu />
@@ -349,7 +349,7 @@ function MobileMenu() {
               href="/registration"
               className="inline-flex items-center justify-center rounded-full border border-[color:var(--border-color)] px-5 h-11 text-[15px] font-medium text-[color:var(--ink-950)]"
             >
-              Registration
+              Vendors Registration
             </Link>
           </div>
         </SheetContent>

@@ -3108,7 +3108,7 @@ body {
 }
 
 /* ============================================================
-   Hero v2 — tall rounded video card, title overlaid on video
+  Hero v2 — tall rounded image card, title overlaid on image
    ============================================================ */
 .ue-hero-v2 {
   padding: 24px 0 64px;
@@ -3124,42 +3124,68 @@ body {
   box-shadow: var(--shadow-md);
   isolation: isolate;
 }
-.ue-hero-v2__video {
+.ue-hero-v2__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-.ue-hero-v2__fallback {
+
+.ue-hero-v2__controls {
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle at 80% 30%,
-      rgba(59, 111, 224, 0.22),
-      transparent 50%
-    ),
-    linear-gradient(180deg, #0a0c10 0%, #0a0c10 50%, #050608 100%);
+  right: 24px;
+  bottom: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 12px 2px 4px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  background: rgba(10, 12, 16, 0.78);
 }
-.ue-hero-v2__fallback-svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+.ue-hero-v2__controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.ue-hero-v2__controls button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.ue-hero-v2__controls input {
+  width: clamp(50px, 10vw, 88px);
+  accent-color: var(--accent-300);
+  cursor: pointer;
+}
+.ue-hero-v2__controls :focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+@media (max-width: 420px) {
+  .ue-hero-v2__controls {
+    right: 12px;
+    bottom: 12px;
+  }
 }
 
-/* Scrim — dark gradient that covers the entire overlay zone so
-   headline + eyebrow stay legible against any video frame */
+/* Scrim — dark gradient that keeps the headline readable over the video. */
 .ue-hero-v2__scrim {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
     rgba(10, 12, 16, 0) 0%,
-    rgba(10, 12, 16, 0.08) 28%,
-    rgba(10, 12, 16, 0.55) 55%,
-    rgba(10, 12, 16, 0.82) 80%,
-    rgba(10, 12, 16, 0.9) 100%
+    rgba(10, 12, 16, 0.05) 35%,
+    rgba(10, 12, 16, 0.18) 55%,
+    rgba(10, 12, 16, 0.48) 78%,
+    rgba(10, 12, 16, 0.72) 100%
   );
   pointer-events: none;
 }

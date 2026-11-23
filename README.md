@@ -20,6 +20,31 @@ pnpm dev         # start the local site at http://localhost:3000
 Leave `pnpm dev` running and edit files — the site reloads automatically as you
 save. That's the whole loop.
 
+### Email forms
+
+Contact, vendor registration, and career applications send through the shared
+EmailJS template. Copy `.env.example` to `.env.local` and add your public key.
+The service and template IDs are already set. Restart the dev server after
+changing environment variables.
+
+Set **To Email** in the shared template to this single line:
+
+```text
+{{#is_vendor}}marketing@uelimited.com{{/is_vendor}}{{^is_vendor}}hr@uelimited.com{{/is_vendor}}
+```
+
+Vendor registrations go to Marketing. Careers and Contact go to HR. Replace
+the first address in this expression if the vendor inbox changes.
+
+Use `{{subject}}` as the email subject and `{{email}}` as Reply-To. Paste
+[`docs/emailjs-template.html`](docs/emailjs-template.html) into the EmailJS
+template’s HTML editor.
+
+The site sends text fields only, so it works with the EmailJS Free plan.
+File selections stay on the visitor’s device. If the template previously
+used file attachments, remove those entries from its Attachments tab.
+
+
 ---
 
 ## 📝 Editing the site

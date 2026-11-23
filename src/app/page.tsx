@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { OVERVIEW } from "@/data/firm";
 import { getAllSectors, getJourney, getLedgerStatsForSector } from "@/lib/cms";
-import { HeroVideo } from "@/components/site/hero-video";
+import { HomeHero } from "@/components/site/hero-video";
 import { StatsGrid } from "@/components/site/stat-counter";
 import { ServicesScroll } from "@/components/site/services-scroll";
 import { SectorsScroll } from "@/components/site/sectors-scroll";
@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <>
-      <HeroVideo />
+      <HomeHero />
 
       {/* Company overview — lead paragraph + CTA, then six headline figures */}
       <section className="ue-overview">

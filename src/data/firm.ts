@@ -27,8 +27,7 @@ export const FIRM = {
     phone: "0124 419 2527",
   },
 
-  // PENDING verification — placeholder email for the contact page.
-  contactEmail: "info@uelimited.com",
+  contactEmail: "hr@uelimited.com",
   hours: "Mon–Sat · 09:30–18:30 IST",
 };
 

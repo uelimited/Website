@@ -1,156 +1,106 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
-import { FIRM, HERO, HERO_VIDEO, YEARS_IN_PRACTICE } from "@/data/firm";
+import { Volume2, VolumeX } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { HERO } from "@/data/firm";
 
-/**
- * Home hero — tall rounded video card with overlaid title & subtitle.
- *
- *   ┌────────────────────────────────────┐
- *   │  [live-site badge]                 │
- *   │                                    │
- *   │          (video plays)             │
- *   │                                    │
- *   │  Design-build MEPF · since 1990    │
- *   │  Unique Engineers.    (animated)   │
- *   │  Engineered to specification.      │
- *   │  [UE · 1990 · MEPF …] mono row     │
- *   └────────────────────────────────────┘
- */
-export function HeroVideo() {
-  const prefersReduced = useReducedMotion();
-  const noAnim = !!prefersReduced;
+export function HomeHero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
+  const [volume, setVolume] = useState(1);
+  const [videoFailed, setVideoFailed] = useState(false);
 
-  const ease = [0.22, 1, 0.36, 1] as const;
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || videoFailed) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let resumePlayback = false;
+    let wasVisible = false;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) {
+        if (wasVisible) resumePlayback = !video.paused;
+        video.pause();
+      } else if (resumePlayback || !reducedMotion.matches) {
+        void video.play().catch(() => {});
+      }
+      wasVisible = entry.isIntersecting;
+    });
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [videoFailed]);
+
+  function toggleMute() {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.volume === 0) {
+      video.volume = 1;
+      video.muted = false;
+    } else {
+      video.muted = !video.muted;
+    }
+    if (!video.muted && video.paused) void video.play().catch(() => {});
+  }
+
+  function changeVolume(value: number) {
+    const video = videoRef.current;
+    if (!video) return;
+    video.volume = value;
+    video.muted = value === 0;
+    if (!video.muted && video.paused) void video.play().catch(() => {});
+  }
 
   return (
     <section className="ue-hero-v2">
+      <h1 className="sr-only">{HERO.title}</h1>
       <div className="ue-container">
-        <motion.div
-          className="ue-hero-v2__card"
-          initial={noAnim ? false : { opacity: 0, scale: 0.98, y: 20 }}
-          animate={noAnim ? false : { opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, ease }}
-        >
-          {HERO_VIDEO.src ? (
+        <div className="ue-hero-v2__card">
+          {videoFailed ? (
+            <Image
+              className="ue-hero-v2__image"
+              src="/services/scaffold-silhouettes.jpg"
+              alt=""
+              fill
+              sizes="100vw"
+            />
+          ) : (
             <video
-              className="ue-hero-v2__video"
-              src={HERO_VIDEO.src}
-              poster={HERO_VIDEO.poster || undefined}
-              autoPlay
-              muted
+              ref={videoRef}
+              className="ue-hero-v2__image"
+              src="/uel-homepage-hero.mp4"
+              poster="/services/scaffold-silhouettes.jpg"
+              muted={muted}
               loop
               playsInline
               preload="metadata"
+              onVolumeChange={({ currentTarget }) => {
+                setMuted(currentTarget.muted);
+                setVolume(currentTarget.volume);
+              }}
+              onError={() => setVideoFailed(true)}
             />
-          ) : (
-            <HeroFallback />
           )}
 
-          {/* Scrim — ensures overlay text reads against any frame */}
-          <div className="ue-hero-v2__scrim" aria-hidden />
-
-          {/* Live badge, top-right */}
-          <div className="ue-hero-v2__badge" aria-hidden>
-            <span className="ue-hero-v2__live" /> Live site —{" "}
-            {YEARS_IN_PRACTICE}+ yrs
-          </div>
-
-          {/* Overlay caption — bottom-left, headline-as-video-credit */}
-          <div className="ue-hero-v2__overlay">
-            <motion.p
-              className="ue-eyebrow ue-hero-v2__eyebrow"
-              initial={noAnim ? false : { opacity: 0, y: 10 }}
-              animate={noAnim ? false : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5, ease }}
-            >
-              Design-build MEPF · since {FIRM.foundedYear}
-            </motion.p>
-
-            <motion.h1
-              className="ue-h1 ue-h1--huge ue-hero-v2__title"
-              initial={
-                noAnim ? false : { opacity: 0, y: 40, filter: "blur(10px)" }
-              }
-              animate={
-                noAnim ? false : { opacity: 1, y: 0, filter: "blur(0px)" }
-              }
-              transition={{ duration: 1.1, delay: 0.6, ease }}
-            >
-              {HERO.title}
-              <motion.span
-                className="ue-hero-v2__dot"
-                initial={noAnim ? false : { opacity: 0, scale: 0.2 }}
-                animate={noAnim ? false : { opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.2, ease }}
-              >
-                .
-              </motion.span>
-            </motion.h1>
-
-            <motion.p
-              className="ue-hero-v2__subtitle"
-              initial={noAnim ? false : { opacity: 0, y: 20 }}
-              animate={noAnim ? false : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 1.0, ease }}
-            >
-              {HERO.subtitle}
-            </motion.p>
-
-            <motion.div
-              className="ue-hero-v2__meta"
-              initial={noAnim ? false : { opacity: 0 }}
-              animate={noAnim ? false : { opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.4, ease }}
-              aria-hidden
-            >
-              <span>UE · {FIRM.foundedYear}</span>
-              <span className="dot">·</span>
-              <span>MEPF · IBMS · Civil</span>
-              <span className="dot">·</span>
-              <span>Gurugram</span>
-            </motion.div>
-          </div>
-        </motion.div>
+          {!videoFailed && (
+            <div className="ue-hero-v2__controls" role="group" aria-label="Hero video volume">
+              <button type="button" onClick={toggleMute} aria-label={muted ? "Unmute video" : "Mute video"}>
+                {muted ? <VolumeX size={18} aria-hidden /> : <Volume2 size={18} aria-hidden />}
+              </button>
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={muted ? 0 : Math.round(volume * 100)}
+                onChange={(event) => changeVolume(event.currentTarget.valueAsNumber / 100)}
+                aria-label="Video volume"
+              />
+            </div>
+          )}
+        </div>
       </div>
     </section>
-  );
-}
-
-function HeroFallback() {
-  return (
-    <div className="ue-hero-v2__fallback">
-      <svg
-        viewBox="0 0 1200 800"
-        preserveAspectRatio="xMidYMid slice"
-        className="ue-hero-v2__fallback-svg"
-      >
-        <defs>
-          <radialGradient id="ueHeroGlow" cx="70%" cy="30%" r="60%">
-            <stop offset="0%" stopColor="rgba(59,111,224,0.28)" />
-            <stop offset="100%" stopColor="rgba(59,111,224,0)" />
-          </radialGradient>
-        </defs>
-        <rect width="1200" height="800" fill="url(#ueHeroGlow)" />
-        <motion.g
-          style={{ transformOrigin: "860px 340px" }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        >
-          {[0, 60, 120, 180, 240, 300].map((a) => (
-            <line
-              key={a}
-              x1={860}
-              y1={340}
-              x2={860 + 80 * Math.cos((a * Math.PI) / 180)}
-              y2={340 + 80 * Math.sin((a * Math.PI) / 180)}
-              stroke="rgba(255,255,255,0.16)"
-              strokeWidth={1}
-              strokeLinecap="round"
-            />
-          ))}
-        </motion.g>
-      </svg>
-    </div>
   );
 }

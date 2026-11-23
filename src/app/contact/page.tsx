@@ -13,6 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FIRM } from "@/data/firm";
+import { sendEmailForm } from "@/lib/emailjs";
 
 const fieldInputClass =
   "h-12 rounded-xl border-[color:var(--border-color)] bg-[color:var(--paper)] text-[15px] text-[color:var(--ink-950)] focus-visible:border-[color:var(--accent-500)] focus-visible:ring-[color:var(--accent-500)]/20";
@@ -22,44 +23,79 @@ export default function ContactPage() {
   const [reference, setReference] = useState("");
   const [topic, setTopic] = useState("Project enquiry");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    if (sending) return;
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const ref = `UE-${Math.floor(Math.random() * 9000 + 1000)}`;
     const name = String(data.get("name") ?? "").trim();
-    const company = String(data.get("company") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
-    const phone = String(data.get("phone") ?? "").trim();
 
-    // No backend is wired yet, so hand the enquiry to the visitor's mail
-    // client pre-filled — a real, working path with zero server. Swap this
-    // for a POST to an endpoint once the firm provides one.
-    const subject = `${topic} — website enquiry (${ref})`;
-    const body: (string | null)[] = [
-      `Name: ${name}`,
-      company ? `Company: ${company}` : null,
-      `Email: ${email}`,
-      phone ? `Phone: ${phone}` : null,
-      `Topic: ${topic}`,
-      "",
-      message.trim(),
-      "",
-      `— Sent from ${FIRM.website} · ${ref}`,
-    ];
-    const bodyText = body
-      .filter((line): line is string => line !== null)
-      .join("\n");
+    if (!name || !email || !message.trim()) {
+      setError("Please fill in your name, email and message.");
+      return;
+    }
 
-    setReference(ref);
-    setSent(true);
-    window.location.href = `mailto:${FIRM.contactEmail}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(bodyText)}`;
+    setError("");
+    setSending(true);
+    try {
+      await sendEmailForm(form);
+      setReference(ref);
+      setSent(true);
+      setShowSuccessPopup(true);
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : "Please try again in a moment.";
+      setError(`We couldn't send your message: ${message}`);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
     <section className="ue-section">
+      {showSuccessPopup ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[color:var(--ink-950)]/45 px-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="contact-success-title"
+        >
+          <div className="w-full max-w-md rounded-2xl border border-[color:var(--border-color)] bg-[color:var(--paper)] p-6 shadow-[0_24px_80px_rgba(10,12,16,0.12)]">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[color:var(--accent-50)] text-[28px] text-[color:var(--accent-600)]">
+              ✓
+            </div>
+            <h2
+              id="contact-success-title"
+              className="text-[28px] font-medium tracking-[-0.03em] text-[color:var(--ink-950)]"
+            >
+              Sent successfully.
+            </h2>
+            <p className="mt-3 text-[15px] leading-6 text-[color:var(--ink-600)]">
+              Your enquiry has been sent to the team. We&apos;ll get back to you
+              shortly.
+            </p>
+            <div className="mt-6 flex items-center justify-between gap-3">
+              <span className="text-[12px] font-medium tracking-[0.08em] text-[color:var(--accent-600)] uppercase">
+                Reference {reference || "UE"}
+              </span>
+              <Button
+                type="button"
+                onClick={() => setShowSuccessPopup(false)}
+                className="rounded-full h-10 px-5 text-[14px] font-medium"
+              >
+                Done
+              </Button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
       <div className="ue-container">
         <p className="ue-eyebrow">Contact</p>
         <h1 className="ue-h1" style={{ maxWidth: "12ch" }}>
@@ -75,7 +111,17 @@ export default function ContactPage() {
           style={{ marginTop: 72 }}
         >
           {!sent ? (
-            <form onSubmit={handleSubmit} className="grid gap-5">
+            <form method="post" onSubmit={handleSubmit} className="grid gap-5">
+              {error ? (
+                <div
+                  className="rounded-xl border border-[color:var(--stop)]/25 bg-[color:var(--stop)]/5 px-4 py-3 text-[14px] text-[color:var(--ink-950)]"
+                >
+                  {error}
+                </div>
+              ) : null}
+              <input type="hidden" name="form_type" value="Contact enquiry" />
+              <input type="hidden" name="topic" value={topic} />
+              <input type="hidden" name="subject" value={`Contact enquiry: ${topic}`} />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="grid gap-2">
                   <Label
@@ -189,9 +235,10 @@ export default function ContactPage() {
               <div className="mt-2">
                 <Button
                   type="submit"
+                  disabled={sending}
                   className="rounded-full h-11 px-6 text-[15px] font-medium"
                 >
-                  Send message
+                  {sending ? "Sending..." : "Send message"}
                 </Button>
               </div>
             </form>
@@ -205,7 +252,7 @@ export default function ContactPage() {
               }}
             >
               <div className="ue-chip ue-chip--accent">
-                Draft ready · {reference}
+                Sent · {reference}
               </div>
               <h3
                 style={{
@@ -216,7 +263,7 @@ export default function ContactPage() {
                   margin: "16px 0 8px",
                 }}
               >
-                Your message is ready to send.
+                Your message has been sent.
               </h3>
               <p
                 style={{
@@ -226,8 +273,7 @@ export default function ContactPage() {
                   lineHeight: 1.55,
                 }}
               >
-                A pre-filled email to the team is ready — just press send in
-                your mail app. Prefer to write directly?{" "}
+                Your enquiry has reached the team. Prefer to write directly?{" "}
                 <a
                   href={`mailto:${FIRM.contactEmail}`}
                   style={{ color: "var(--accent-500)" }}

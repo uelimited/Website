@@ -4,7 +4,7 @@ import { ApplicationForm } from "./application-form";
 export const metadata: Metadata = {
   title: "Apply for a role — Careers at Unique Engineers",
   description:
-    "Share your profile, choose a department, and attach your resume to apply for a role at Unique Engineers.",
+    "Share your profile and choose a department to apply for a role at Unique Engineers.",
 };
 
 export default async function CareerApplicationPage({
