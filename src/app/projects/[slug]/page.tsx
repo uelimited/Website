@@ -1,667 +1,274 @@
-import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  getAllProjects,
-  getProjectHeroImage,
-  getProjectWithContext,
-} from "@/lib/cms";
-import { Breadcrumb } from "@/components/site/breadcrumb";
+import { getAllProjects, getProjectWithContext } from "@/lib/cms";
+import { PROJECT_BRIEFS } from "@/data/project-briefs";
+import { InnerHero, InnerCTA, TextLink } from "@/components/site/inner-page";
 import { RelatedProjects } from "@/components/site/related-projects";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
+import { CAP_PROJECTS, getCapProject } from "@/data/capability/projects";
+import type { CapProject } from "@/data/capability/types";
+import { CapShowcase } from "@/components/capability/cap-showcase";
+import type { Project } from "@/data/cms/types";
+type Props = { params: Promise<{ slug: string }> };
+const valid = (text?: string | null) =>
+  Boolean(text && !/confirm|placeholder|pending/i.test(text));
+function brief(p: Project) {
+  return (
+    PROJECT_BRIEFS[p.slug] ||
+    `${p.scope_tags.filter(valid).join(", ")} works for ${p.name}.`
+  );
+}
+/**
+ * What the capability decks record for this project: facts, highlights and
+ * the scope of work by service (src/data/capability/projects.ts). The
+ * industry pages link here, so this page is where that detail is told.
+ * A project can have a second entry for its BMS and ELV package.
+ */
+function deckRecords(slug: string): CapProject[] {
+  const all = Object.values(CAP_PROJECTS)
+    .filter((p) => p.href === `/projects/${slug}`)
+    .map((p) => getCapProject(p.id));
+  const main = all.filter((p) => !p.id.startsWith("bms-"));
+  const bms = all.filter((p) => p.id.startsWith("bms-"));
+  if (all.length < 2) return all;
+  return [
+    ...main.map((p) => ({ ...p, short: "Overview" })),
+    ...bms.map((p) => ({ ...p, short: "BMS and ELV" })),
+  ];
+}
 
-type Params = { slug: string };
+/** Deck projects that have no record in the project archive. */
+function deckOnlySlugs(): string[] {
+  const known = new Set(getAllProjects().map((p) => p.slug));
+  const slugs = Object.values(CAP_PROJECTS)
+    .map((p) => p.href?.replace("/projects/", ""))
+    .filter((s): s is string => !!s && !known.has(s));
+  return [...new Set(slugs)];
+}
+
+const factOf = (p: CapProject, test: RegExp) =>
+  p.facts.find((f) => test.test(f.label))?.value;
 
 export function generateStaticParams() {
-  return getAllProjects().map((p) => ({ slug: p.slug }));
+  return [
+    ...getAllProjects().map((p) => ({ slug: p.slug })),
+    ...deckOnlySlugs().map((slug) => ({ slug })),
+  ];
 }
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const data = getProjectWithContext(slug);
-  if (!data) return {};
-  return {
-    title: data.project.seo_title ?? `${data.project.name} — Unique Engineers`,
-    description: data.project.seo_description ?? data.project.summary,
-  };
+  const p = getProjectWithContext(slug)?.project;
+  if (p)
+    return pageMetadata(
+      p.name,
+      brief(p),
+      `/projects/${p.slug}`,
+      p.hero_image_url || undefined,
+    );
+  const deck = deckRecords(slug)[0];
+  return deck
+    ? pageMetadata(deck.name, deck.scope, `/projects/${slug}`, deck.image)
+    : {};
 }
-
-export default async function ProjectDetailPage({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
+export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
-  const data = getProjectWithContext(slug);
-  if (!data) notFound();
-  const { project, services, sectors, client, related } = data;
-  const primarySector = sectors.find((s) => s.is_primary)?.sector;
-  const heroImage = getProjectHeroImage(project);
-
+  const d = getProjectWithContext(slug);
+  const deck = deckRecords(slug);
+  if (!d) {
+    if (!deck.length) notFound();
+    return <DeckProjectPage projects={deck} />;
+  }
+  const { project: p, services, sectors, related } = d;
+  const location = [p.location_city, p.location_state].filter(valid).join(", ");
+  const gallery = p.gallery || [];
   return (
     <>
-      {/* Hero — full-bleed image + overlay title */}
-      <section
-        style={{
-          position: "relative",
-          minHeight: "60vh",
-          background: heroImage
-            ? `linear-gradient(180deg, rgba(10,12,16,0.15) 0%, rgba(10,12,16,0.7) 100%), url(${heroImage}) center/cover no-repeat`
-            : "var(--ink-950)",
-          color: "var(--paper)",
-          display: "flex",
-          alignItems: "flex-end",
-          paddingBottom: 56,
-          paddingTop: 96,
-        }}
-      >
-        {!project.hero_image_url && heroImage && (
-          <span
-            style={{
-              position: "absolute",
-              top: 24,
-              right: 24,
-              padding: "6px 10px",
-              border: "1px solid rgba(255,255,255,0.45)",
-              borderRadius: 999,
-              background: "rgba(10,12,16,0.45)",
-              color: "var(--paper)",
-              fontSize: 11,
-            }}
-          >
-            Representative image
-          </span>
-        )}
-        <div className="ue-container" style={{ width: "100%" }}>
-          <div
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: 12,
-              color: "rgba(255,255,255,0.7)",
-              textTransform: "uppercase",
-              letterSpacing: 0.5,
-              marginBottom: 16,
-            }}
-          >
-            {primarySector?.name ?? project.project_type}
-            {client && ` · ${client.name}`}
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 500,
-              fontSize: 56,
-              letterSpacing: "-0.025em",
-              lineHeight: 1.02,
-              margin: 0,
-              maxWidth: "20ch",
-              color: "var(--paper)",
-            }}
-          >
-            {project.name}.
-          </h1>
-          <p
-            style={{
-              marginTop: 18,
-              fontSize: 18,
-              lineHeight: 1.55,
-              color: "rgba(255,255,255,0.85)",
-              maxWidth: "62ch",
-            }}
-          >
-            {project.summary}
-          </p>
-        </div>
-      </section>
-
-      {/* Breadcrumb + metadata row */}
-      <section
-        className="ue-section"
-        style={{ paddingTop: 40, paddingBottom: 48 }}
-      >
+      <InnerHero
+        eyebrow={p.project_type}
+        title={`${p.name}.`}
+        description={location}
+        image={p.hero_image_url || undefined}
+        back={{ label: "Projects", href: "/projects" }}
+      />
+      <section className="ue-section">
         <div className="ue-container">
-          <Breadcrumb
-            items={[
-              { label: "Work", href: "/work" },
-              {
-                label: primarySector?.name ?? project.project_type,
-                href: primarySector
-                  ? `/sectors/${primarySector.slug}`
-                  : undefined,
-              },
-              { label: project.name },
-            ]}
-          />
-          <div
-            style={{
-              marginTop: 32,
-              paddingTop: 32,
-              borderTop: "1px solid var(--border-color)",
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
-              gap: 24,
-            }}
-          >
-            <Meta
-              label="Client"
-              value={client?.name ?? project.client_name_display ?? "—"}
-            />
-            <Meta
-              label="Location"
-              value={[project.location_city, project.location_state]
-                .filter(Boolean)
-                .join(", ")}
-            />
-            <Meta label="Type" value={project.project_type} />
-            {project.timeline_text && (
-              <Meta label="Timeline" value={project.timeline_text} />
-            )}
-            {project.value_display && (
-              <Meta label="Value" value={project.value_display} />
-            )}
-            {project.code && <Meta label="Reference" value={project.code} />}
-          </div>
-        </div>
-      </section>
-
-      {/* Narrative + key metrics */}
-      <section className="ue-section" style={{ paddingTop: 0 }}>
-        <div className="ue-container">
-          <div className="grid md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] gap-12 md:gap-20">
-            {/* Narrative */}
+          <div className="ue-inner-split">
             <div>
-              <p className="ue-eyebrow">Project narrative</p>
-              <div style={{ marginTop: 16 }}>
-                {project.narrative.map((p, i) => (
-                  <p
-                    key={i}
-                    style={{
-                      fontSize: 18,
-                      lineHeight: 1.6,
-                      color: "var(--ink-700)",
-                      marginTop: i > 0 ? 20 : 0,
-                      marginBottom: 0,
-                    }}
-                  >
-                    {p}
-                  </p>
-                ))}
-              </div>
+              <p className="ue-eyebrow">The project</p>
+              <h2 className="ue-h2">Our role.</h2>
             </div>
-
-            {/* Side rail — metrics + scope */}
-            <aside>
-              {project.key_metrics && project.key_metrics.length > 0 && (
-                <div>
-                  <p className="ue-eyebrow">Key metrics</p>
-                  <dl
-                    style={{
-                      marginTop: 16,
-                      borderTop: "1px solid var(--border-color)",
-                    }}
-                  >
-                    {project.key_metrics.map((m) => (
-                      <div
-                        key={m.k}
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "baseline",
-                          padding: "14px 0",
-                          borderBottom: "1px solid var(--border-color)",
-                          gap: 12,
-                        }}
-                      >
-                        <dt
-                          style={{
-                            fontSize: 13,
-                            color: "var(--fg-muted)",
-                          }}
-                        >
-                          {m.k}
-                        </dt>
-                        <dd
-                          style={{
-                            margin: 0,
-                            fontFamily: "var(--font-display)",
-                            fontWeight: 500,
-                            fontSize: 17,
-                            letterSpacing: "-0.012em",
-                            color: "var(--ink-950)",
-                            textAlign: "right",
-                          }}
-                        >
-                          {m.v}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
-              )}
-
-              {project.scope_tags.length > 0 && (
-                <div style={{ marginTop: 40 }}>
-                  <p className="ue-eyebrow">Scope</p>
-                  <div
-                    style={{
-                      marginTop: 14,
-                      display: "flex",
-                      flexWrap: "wrap",
-                      gap: 6,
-                    }}
-                  >
-                    {project.scope_tags.map((t) => (
-                      <span
-                        key={t}
-                        style={{
-                          fontFamily: "var(--font-mono)",
-                          fontSize: 11,
-                          padding: "4px 10px",
-                          background: "var(--ink-50)",
-                          color: "var(--ink-700)",
-                          borderRadius: 999,
-                          letterSpacing: 0.3,
-                        }}
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {project.certifications && project.certifications.length > 0 && (
-                <div style={{ marginTop: 40 }}>
-                  <p className="ue-eyebrow">Certifications</p>
-                  <ul
-                    style={{
-                      marginTop: 14,
-                      padding: 0,
-                      listStyle: "none",
-                      fontSize: 14,
-                      color: "var(--ink-700)",
-                    }}
-                  >
-                    {project.certifications.map((c) => (
-                      <li key={c} style={{ padding: "6px 0" }}>
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </aside>
+            <div className="ue-inner-copy">
+              <p>{brief(p)}</p>
+              <ul className="ue-inner-scope">
+                {p.scope_tags.filter(valid).map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            </div>
           </div>
+          {deck.length === 0 && (
+            <dl className="ue-inner-meta">
+              {valid(p.client_name_display) && (
+                <div>
+                  <dt>Client</dt>
+                  <dd>{p.client_name_display}</dd>
+                </div>
+              )}
+              {location && (
+                <div>
+                  <dt>Location</dt>
+                  <dd>{location}</dd>
+                </div>
+              )}
+              <div>
+                <dt>Industry</dt>
+                <dd>
+                  {sectors.map((s) => s.sector.name).join(" · ") ||
+                    p.project_type}
+                </dd>
+              </div>
+            </dl>
+          )}
         </div>
       </section>
-
-      {/* Execution snapshots */}
-      {project.execution_snapshots &&
-        project.execution_snapshots.length > 0 && (
-          <section
-            className="ue-section"
-            style={{
-              background: "var(--paper-soft)",
-              borderTop: "1px solid var(--border-color)",
-              borderBottom: "1px solid var(--border-color)",
-            }}
-          >
-            <div className="ue-container">
-              <header style={{ marginBottom: 48 }}>
-                <p className="ue-eyebrow">Execution snapshots</p>
-                <h2
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontWeight: 500,
-                    fontSize: 40,
-                    letterSpacing: "-0.022em",
-                    lineHeight: 1.1,
-                    margin: "8px 0 0",
-                    color: "var(--ink-950)",
-                    maxWidth: "20ch",
-                  }}
-                >
-                  How the work was delivered.
-                </h2>
-              </header>
-              <div
-                style={{ display: "flex", flexDirection: "column", gap: 64 }}
-              >
-                {project.execution_snapshots.map((s, i) => (
-                  <article
-                    key={i}
-                    className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 md:gap-16 items-start"
-                  >
-                    <div>
-                      {s.image_url ? (
-                        <div
-                          style={{
-                            aspectRatio: "4 / 3",
-                            background: `url(${s.image_url}) center/cover no-repeat`,
-                            borderRadius: 12,
-                            border: "1px solid var(--border-color)",
-                          }}
-                        />
-                      ) : (
-                        <div
-                          style={{
-                            aspectRatio: "4 / 3",
-                            background: "var(--ink-100)",
-                            borderRadius: 12,
-                          }}
-                        />
-                      )}
-                    </div>
-                    <div>
-                      <p className="ue-eyebrow">
-                        {String(i + 1).padStart(2, "0")} · {s.title}
-                      </p>
-                      <h3
-                        style={{
-                          marginTop: 8,
-                          fontFamily: "var(--font-display)",
-                          fontWeight: 500,
-                          fontSize: 28,
-                          letterSpacing: "-0.018em",
-                          lineHeight: 1.15,
-                          color: "var(--ink-950)",
-                        }}
-                      >
-                        {s.title}.
-                      </h3>
-                      <div style={{ marginTop: 16 }}>
-                        {s.body.map((p, j) => (
-                          <p
-                            key={j}
-                            style={{
-                              fontSize: 17,
-                              lineHeight: 1.6,
-                              color: "var(--ink-700)",
-                              marginTop: j > 0 ? 16 : 0,
-                              marginBottom: 0,
-                            }}
-                          >
-                            {p}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-                  </article>
-                ))}
+      {deck.length > 0 && (
+        <section className="ue-section ue-inner-soft ue-cap">
+          <div className="ue-container">
+            <div className="ue-inner-head">
+              <div>
+                <p className="ue-eyebrow">Project overview</p>
+                <h2 className="ue-h2">Facts and scope of work.</h2>
               </div>
             </div>
-          </section>
-        )}
-
-      {/* Disciplines & sectors — cross-link */}
-      {(services.length > 0 || sectors.length > 0) && (
-        <section className="ue-section">
-          <div className="ue-container">
-            <header style={{ marginBottom: 32 }}>
-              <p className="ue-eyebrow">Disciplines & sectors</p>
-              <h2
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 500,
-                  fontSize: 32,
-                  letterSpacing: "-0.022em",
-                  lineHeight: 1.1,
-                  margin: "8px 0 0",
-                  color: "var(--ink-950)",
-                  maxWidth: "20ch",
-                }}
-              >
-                What was engineered, where it lands.
-              </h2>
-            </header>
-            <div className="grid md:grid-cols-2 gap-10">
-              {services.length > 0 && (
-                <div>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: 11,
-                      color: "var(--fg-muted)",
-                      textTransform: "uppercase",
-                      letterSpacing: 0.4,
-                      marginBottom: 16,
-                    }}
-                  >
-                    Disciplines delivered
-                  </p>
-                  <ul
-                    style={{
-                      margin: 0,
-                      padding: 0,
-                      listStyle: "none",
-                      borderTop: "1px solid var(--border-color)",
-                    }}
-                  >
-                    {services.map(({ service, scope_note, is_primary }) => (
-                      <li
-                        key={service.id}
-                        style={{
-                          borderBottom: "1px solid var(--border-color)",
-                        }}
-                      >
-                        <Link
-                          href={`/services/${service.slug}`}
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "baseline",
-                            padding: "14px 0",
-                            gap: 16,
-                            textDecoration: "none",
-                            color: "inherit",
-                          }}
-                          className="hover:text-[color:var(--accent-500)] group"
-                        >
-                          <span>
-                            <span
-                              style={{
-                                fontFamily: "var(--font-display)",
-                                fontWeight: 500,
-                                fontSize: 17,
-                                letterSpacing: "-0.012em",
-                                color: "var(--ink-950)",
-                              }}
-                            >
-                              {service.name}
-                              {is_primary && (
-                                <span
-                                  style={{
-                                    marginLeft: 8,
-                                    fontFamily: "var(--font-mono)",
-                                    fontSize: 10,
-                                    color: "var(--accent-500)",
-                                    textTransform: "uppercase",
-                                    letterSpacing: 0.4,
-                                  }}
-                                >
-                                  · Primary
-                                </span>
-                              )}
-                            </span>
-                            {scope_note && (
-                              <span
-                                style={{
-                                  display: "block",
-                                  marginTop: 2,
-                                  fontSize: 13,
-                                  color: "var(--ink-500)",
-                                }}
-                              >
-                                {scope_note}
-                              </span>
-                            )}
-                          </span>
-                          <ArrowRight
-                            className="size-4 shrink-0 text-[color:var(--fg-muted)] transition-transform group-hover:translate-x-0.5"
-                            aria-hidden
-                          />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {sectors.length > 0 && (
-                <div>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: 11,
-                      color: "var(--fg-muted)",
-                      textTransform: "uppercase",
-                      letterSpacing: 0.4,
-                      marginBottom: 16,
-                    }}
-                  >
-                    Sectors
-                  </p>
-                  <ul
-                    style={{
-                      margin: 0,
-                      padding: 0,
-                      listStyle: "none",
-                      borderTop: "1px solid var(--border-color)",
-                    }}
-                  >
-                    {sectors.map(({ sector }) => (
-                      <li
-                        key={sector.id}
-                        style={{
-                          borderBottom: "1px solid var(--border-color)",
-                        }}
-                      >
-                        <Link
-                          href={`/sectors/${sector.slug}`}
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "baseline",
-                            padding: "14px 0",
-                            textDecoration: "none",
-                            color: "inherit",
-                          }}
-                          className="hover:text-[color:var(--accent-500)] group"
-                        >
-                          <span
-                            style={{
-                              fontFamily: "var(--font-display)",
-                              fontWeight: 500,
-                              fontSize: 17,
-                              letterSpacing: "-0.012em",
-                              color: "var(--ink-950)",
-                            }}
-                          >
-                            {sector.name}
-                          </span>
-                          <ArrowRight
-                            className="size-4 text-[color:var(--fg-muted)] transition-transform group-hover:translate-x-0.5"
-                            aria-hidden
-                          />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
+            <CapShowcase projects={deck} hideHead hideMedia />
           </div>
         </section>
       )}
-
-      {/* Related projects */}
-      {related.length > 0 && (
-        <section className="ue-section">
+      {(gallery.length > 0 || p.video_url) && (
+        <section className="ue-section ue-inner-soft">
           <div className="ue-container">
-            <RelatedProjects
-              projects={related}
-              eyebrow="More from this sector"
-              heading="Related mandates."
-            />
+            <div className="ue-inner-head">
+              <div>
+                <p className="ue-eyebrow">Project gallery</p>
+                <h2 className="ue-h2">A closer look at the work.</h2>
+              </div>
+            </div>
+            <div className="ue-inner-gallery">
+              {gallery.map((img, i) => (
+                <figure key={img.src}>
+                  <a
+                    href={img.src}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${p.name} project image ${i + 1}`}
+                  >
+                    <Image
+                      src={img.src}
+                      alt={`${p.name} — project image ${i + 1}`}
+                      fill
+                      sizes="(max-width:640px) 100vw,50vw"
+                    />
+                  </a>
+                  <figcaption>
+                    {p.name} · {String(i + 1).padStart(2, "0")}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            {p.video_url && (
+              <video
+                className="ue-inner-video"
+                controls
+                playsInline
+                preload="none"
+                poster={p.hero_image_url || undefined}
+                aria-label={`${p.name} project video`}
+              >
+                <source src={p.video_url} type="video/mp4" />
+                Your browser does not support this video.{" "}
+                <a href={p.video_url}>Open project video</a>
+              </video>
+            )}
+            <p style={{ fontSize: 13, color: "var(--ink-500)", marginTop: 20 }}>
+              Project imagery may include site photographs and architectural
+              visualisations.
+            </p>
           </div>
         </section>
       )}
-
-      {/* CTA */}
-      <section
-        className="ue-section"
-        style={{ background: "var(--ink-950)", color: "var(--paper)" }}
-      >
-        <div
-          className="ue-container"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 24,
-            alignItems: "flex-start",
-          }}
-        >
-          <p className="ue-eyebrow" style={{ color: "var(--accent-400)" }}>
-            Start a project
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 500,
-              fontSize: 44,
-              letterSpacing: "-0.022em",
-              lineHeight: 1.05,
-              margin: 0,
-              maxWidth: "18ch",
-            }}
-          >
-            Have drawings? Let&apos;s talk.
-          </h2>
-          <Button
-            asChild
-            className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--paper)] text-[color:var(--ink-950)] hover:bg-[color:var(--ink-100)]"
-          >
-            <Link href="/contact">
-              Talk to an engineer
-              <ArrowRight className="size-4 ml-1" aria-hidden />
-            </Link>
-          </Button>
+      <section className="ue-section">
+        <div className="ue-container">
+          <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
+            {services.map((s) => (
+              <TextLink key={s.service.id} href={`/services/${s.service.slug}`}>
+                {s.service.name}
+              </TextLink>
+            ))}
+          </div>
+          <RelatedProjects
+            projects={related
+              .filter((p) => p.information_status !== "placeholder")
+              .slice(0, 3)}
+            heading="Related projects."
+          />
+          <div style={{ marginTop: 32 }}>
+            <TextLink href="/projects">Back to all projects</TextLink>
+          </div>
         </div>
       </section>
+      <InnerCTA topic={p.name} />
     </>
   );
 }
 
-function Meta({ label, value }: { label: string; value: string }) {
+/**
+ * A project the decks describe but the project archive does not hold yet.
+ * The whole page comes from the deck entry.
+ */
+function DeckProjectPage({ projects }: { projects: CapProject[] }) {
+  const p = projects[0];
   return (
-    <div>
-      <div
-        style={{
-          fontFamily: "var(--font-mono)",
-          fontSize: 11,
-          color: "var(--fg-muted)",
-          textTransform: "uppercase",
-          letterSpacing: 0.4,
-        }}
-      >
-        {label}
-      </div>
-      <div
-        style={{
-          marginTop: 6,
-          fontFamily: "var(--font-display)",
-          fontWeight: 500,
-          fontSize: 16,
-          letterSpacing: "-0.012em",
-          color: "var(--ink-950)",
-        }}
-      >
-        {value}
-      </div>
-    </div>
+    <>
+      <InnerHero
+        eyebrow={factOf(p, /^facility$/i) || "Project"}
+        title={`${p.name}.`}
+        description={factOf(p, /^location$/i) || ""}
+        back={{ label: "Projects", href: "/projects" }}
+      />
+      <section className="ue-section">
+        <div className="ue-container">
+          <div className="ue-inner-split">
+            <div>
+              <p className="ue-eyebrow">The project</p>
+              <h2 className="ue-h2">Our role.</h2>
+            </div>
+            <div className="ue-inner-copy">
+              {p.lede && <p>{p.lede}</p>}
+              <p>{p.scope}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="ue-section ue-inner-soft ue-cap">
+        <div className="ue-container">
+          <div className="ue-inner-head">
+            <div>
+              <p className="ue-eyebrow">Project overview</p>
+              <h2 className="ue-h2">Facts and scope of work.</h2>
+            </div>
+          </div>
+          <CapShowcase
+            projects={projects.map((x) => ({ ...x, scope: "" }))}
+            hideHead
+          />
+        </div>
+      </section>
+      <section className="ue-section">
+        <div className="ue-container">
+          <TextLink href="/projects">Back to all projects</TextLink>
+        </div>
+      </section>
+      <InnerCTA topic={p.name} />
+    </>
   );
 }

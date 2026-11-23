@@ -97,7 +97,7 @@ export function LedgerSearch({
 }
 
 // -----------------------------------------------------------------
-// Chip row — multi-select toggle chips with aria-pressed
+// Chip row — single-select toggle chips with aria-pressed
 // -----------------------------------------------------------------
 
 export function ChipRow({
@@ -109,8 +109,8 @@ export function ChipRow({
 }: {
   label: string;
   options: ChipOption[];
-  value: string[];
-  onChange: (v: string[]) => void;
+  value: string;
+  onChange: (v: string) => void;
   includeAll?: boolean;
 }) {
   const opts = includeAll ? [{ id: "all", name: "All" }, ...options] : options;
@@ -138,21 +138,13 @@ export function ChipRow({
         {label}
       </span>
       {opts.map((o) => {
-        const active = o.id === "all" ? value.length === 0 : value.includes(o.id);
+        const active = value === o.id;
         return (
           <button
             key={o.id}
             type="button"
             aria-pressed={active}
-            onClick={() =>
-              onChange(
-                o.id === "all"
-                  ? []
-                  : active
-                    ? value.filter((id) => id !== o.id)
-                    : [...value, o.id],
-              )
-            }
+            onClick={() => onChange(o.id)}
             className="ue-filter-chip"
             data-active={active ? "" : undefined}
           >
@@ -503,22 +495,20 @@ export function FeaturedCardView({ card }: { card: FeaturedCard }) {
             : "var(--ink-100)",
         }}
       >
-        {(card.isRepresentativeImage || !card.heroImageUrl) && (
-          <span className="ue-work-card__cover-label">
-            {card.isRepresentativeImage ? "Representative image" : "Photography"}
-          </span>
+        {!card.heroImageUrl && (
+          <span className="ue-work-card__cover-label">Photography</span>
         )}
       </div>
       <div className="ue-work-card__body">
         <div className="ue-work-card__meta">
           <span>{card.primarySectorName}</span>
-          {card.value_display && <span>{card.value_display}</span>}
         </div>
         <h3 className="ue-work-card__name">{card.name}</h3>
         <p className="ue-work-card__loc">
           {card.city}
           {card.state ? `, ${card.state}` : ""}
         </p>
+        <p className="ue-work-card__client">{card.clientName}</p>
         <div className="ue-work-card__tags">
           {card.scopeTags.map((t) => (
             <span key={t} className="ue-work-card__tag">
@@ -527,7 +517,7 @@ export function FeaturedCardView({ card }: { card: FeaturedCard }) {
           ))}
         </div>
         <span className="ue-work-card__cta">
-          View case study
+          View project
           <ArrowRight className="size-3.5" aria-hidden />
         </span>
       </div>

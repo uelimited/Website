@@ -32,8 +32,8 @@
     "status": "completed",
     "featured": true,
     "landmark_order": 2,
-    "hero_image_url": "/projects/foxconn-devanahalli_2.webp",
-    "hero_image_alt": "Aerial view of Foxconn's semiconductor manufacturing campus in Devanahalli, Bengaluru",
+    "hero_image_url": "/projects/foxconn-hero.jpg",
+    "hero_image_alt": "Foxconn semiconductor cleanroom interior with process piping and lighting array",
     "accent": "pulse",
     "key_metrics": [
       {
@@ -81,7 +81,7 @@
     "value_display": "₹411 Cr",
     "summary": "UEL's largest single-order project — full MEPF, solar and PNG for IKEA's flagship Indian mixed-use development.",
     "narrative": [
-      "The firm's biggest single-order mandate to date — full MEPF and solar services, with PNG. Unique Engineers Limited is handling all the MEPF and solar services along with PNG. A further ₹450 Cr second phase for office and hotel floors is in the pipeline.",
+      "The firm's biggest single-order mandate to date — full MEPF and solar services, with PNG. Unique Engineers Limited is handling the integrated services under a coordinated delivery structure.",
       "The project is delivered against a fully coordinated multi-disciplinary BIM model at LOD 400 across HVAC, Firefighting, Plumbing, Electrical, Solar and PNG systems. All services are integrated into a federated 3D environment where real-time clash detection and inter-trade coordination are completed before site installation.",
       "Shop drawings are generated directly from the coordinated model to ensure execution accuracy and minimise rework. The modelling process is creating a digital twin of the project, enabling constructability validation, accurate material take-offs, prefabrication planning and lifecycle-ready asset data."
     ],
@@ -148,8 +148,8 @@
     "status": "completed",
     "featured": true,
     "landmark_order": 3,
-    "hero_image_url": "/projects/Common-Central-Secretariat-Executive-Enclave-web-1.webp",
-    "hero_image_alt": "Architectural rendering of the Common Central Secretariat Executive Enclave in New Delhi",
+    "hero_image_url": "/projects/central-secretariat-hero.jpg",
+    "hero_image_alt": "Kartavya Bhavan Central Secretariat building in New Delhi",
     "accent": "fan",
     "key_metrics": [
       {
@@ -177,7 +177,7 @@
           "The Common Central Secretariat — Executive Enclave was delivered as a high-performance government office complex with IGBC Gold certification, with sustainability embedded into the mechanical and fire systems from design through execution.",
           "A 16,000 TR high-efficiency HVAC plant was installed with optimised air distribution across 5,00,000 sqm of ducting and 1,00,000 metres of piping. The system uses energy-efficient chillers, optimised airflow balancing, reduced pumping losses and intelligent zoning to improve lifecycle performance while supporting long-term carbon reduction targets."
         ],
-        "image_url": "/projects/central-secretariat-chillers.jpg"
+        "image_url": "/project-archive/common-central-secretariat/gallery-01.jpg"
       }
     ],
     "published": true
@@ -205,8 +205,8 @@
     "status": "completed",
     "featured": true,
     "landmark_order": 4,
-    "hero_image_url": "/projects/Mopa-airport-4.webp",
-    "hero_image_alt": "Mopa International Airport terminal exterior in Goa at dusk",
+    "hero_image_url": "/projects/mopa-hero.jpg",
+    "hero_image_alt": "Mopa International Airport control tower at dusk",
     "accent": "graph",
     "key_metrics": [
       {
@@ -282,7 +282,99 @@
           "The campus incorporated energy-efficient HVAC technologies including thermal energy storage for peak-load optimisation, brine chillers for enhanced heat transfer efficiency, geothermal water-cooled VRV systems, and advanced evaporative cooling strategies.",
           "An Integrated Building Management System (IBMS) was implemented to monitor and control HVAC operations, energy consumption, and system performance in real time."
         ],
-        "image_url": "/projects/nalanda-aerial.jpg"
+        "image_url": "/project-archive/nalanda-university/gallery-01.jpg"
+      }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-sael",
+    "slug": "sael-solar-cell-manufacturing",
+    "code": "UE-SEM-0300",
+    "name": "SAEL Solar Cell Manufacturing",
+    "client_id": "cli-sael",
+    "client_name_display": "SAEL Industries",
+    "location_city": "Jewar",
+    "location_state": "NCR",
+    "location_country": "India",
+    "project_type": "Solar Cell Manufacturing",
+    "timeline_text": "In execution",
+    "value_cr": 300,
+    "value_display": "₹300 Cr",
+    "summary": "India's first 5.75 GW domestic solar-cell facility — full HVAC, cleanroom and process-cooling MEPF across 66,000+ sqm of ISO 6/7/8 zones.",
+    "narrative": [
+      "India's first 5.75 GW domestic solar-cell facility — full HVAC, cleanroom and process-cooling MEPF in a single engagement. ISO 6/7/8 cleanroom zones across 66,000+ sqm with GSS ducting, insulation, pressure cascade between zones and DOAS make-up.",
+      "Hydronics and controls scope includes 29,250 TR of installed cooling, primary-secondary distribution, dual 5.05 MW SS316 plate heat exchangers for process cooling water, and a unified BMS + SCADA + historian. 1,400+ sensors and instruments across the facility tie into the controls plane.",
+      "Air-side delivery includes 13,656 fan filter units, 217 air-handling units and 130 make-up air units. The project is being executed against the SAEL PMO's tier-1 commissioning protocol with weekly earned-value reporting and a 3-week rolling look-ahead."
+    ],
+    "scope_tags": ["HVAC", "Cleanroom", "PCW", "BMS", "SCADA"],
+    "status": "active",
+    "featured": true,
+    "hero_image_url": null,
+    "hero_image_alt": "Solar cell manufacturing cleanroom interior at SAEL",
+    "accent": "sun",
+    "key_metrics": [
+      {
+        "k": "Cleanroom area",
+        "v": "66,000+ sqm"
+      },
+      {
+        "k": "Installed cooling",
+        "v": "29,250 TR"
+      },
+      {
+        "k": "FFUs",
+        "v": "13,656"
+      },
+      {
+        "k": "AHUs / MAUs",
+        "v": "217 / 130"
+      },
+      {
+        "k": "Sensors",
+        "v": "1,400+"
+      }
+    ],
+    "published": true
+  },
+  {
+    "id": "prj-tabreed",
+    "slug": "tabreed-amravati-district-cooling",
+    "code": "UE-DCO-0500",
+    "name": "Tabreed Amravati District Cooling",
+    "client_id": "cli-tabreed",
+    "client_name_display": "Tabreed (National Central Cooling)",
+    "location_city": "Amravati",
+    "location_state": "Andhra Pradesh",
+    "location_country": "India",
+    "project_type": "District Cooling",
+    "timeline_text": "In commercial close",
+    "value_cr": 500,
+    "value_display": "₹500 Cr",
+    "summary": "Single-window design-build engagement — full district-cooling design plus civil + MEPF execution across 30,000 TR central plant and multi-km CHW network.",
+    "narrative": [
+      "Design–build engagement in final stages of commercial close — UEL leading both engineering and construction. Full district-cooling design includes a central chiller plant, primary-secondary distribution network, ETS specifications, and BMS/SCADA architecture, LEED-aligned.",
+      "Construction scope covers civil and MEPF execution, chilled-water distribution across multiple kilometres, energy transfer stations at consumer buildings, TAB and operational commissioning. Long-term O&M under discussion.",
+      "30,000 TR of central-plant capacity, multi-kilometre CHW distribution, 5+ ETS at consumer buildings — all delivered under a single accountable design-build contract."
+    ],
+    "scope_tags": ["District Cooling", "HVAC", "Civil", "BMS"],
+    "status": "planning",
+    "featured": false,
+    "hero_image_url": null,
+    "hero_image_alt": "Conceptual rendering of district cooling plant",
+    "accent": "fan",
+    "key_metrics": [
+      {
+        "k": "Central plant",
+        "v": "30,000 TR"
+      },
+      {
+        "k": "ETS buildings",
+        "v": "5+"
+      },
+      {
+        "k": "Distribution",
+        "v": "Multi-km CHW"
       }
     ],
     "published": true
@@ -301,7 +393,7 @@
     "timeline_text": "In execution",
     "value_cr": 50,
     "value_display": "₹50 Cr+",
-    "summary": "Three design-build packages awarded for India's first commercial semiconductor fab — pipeline expected to expand toward ₹500 Cr as further packages are awarded.",
+    "summary": "Three design-build packages for a major semiconductor manufacturing programme, coordinated across high-precision utilities and MEPF interfaces.",
     "narrative": [
       "First-of-its-kind commercial semiconductor fab in India. Three packages awarded; expansion into the fab utility build expected in the next phase.",
       "Design-build scope covers underground piping, electrical infrastructure, and civil excavation — engineered and executed under one contract, supporting the upcoming fab build.",
@@ -310,8 +402,6 @@
     "scope_tags": ["Underground Piping", "Electrical", "Civil"],
     "status": "active",
     "featured": false,
-    "hero_image_url": "/projects/Tata-Electronics-Semiconductor-1.webp",
-    "hero_image_alt": "Tata Electronics semiconductor facility in Dholera, Gujarat",
     "accent": "blocks",
     "key_metrics": [
       {
@@ -351,8 +441,6 @@
     "scope_tags": ["MEPF", "Cleanroom", "PCW", "CDA"],
     "status": "active",
     "featured": false,
-    "hero_image_url": "/projects/JSW-EV-PROJECT.webp",
-    "hero_image_alt": "JSW electric vehicle manufacturing facility under construction",
     "accent": "current",
     "key_metrics": [
       {
@@ -393,8 +481,6 @@
     "scope_tags": ["HVAC"],
     "status": "completed",
     "featured": false,
-    "hero_image_url": "/projects/STT_GDC_Data-Centre.png",
-    "hero_image_alt": "STT GDC data centre building in Mumbai",
     "accent": "fan",
     "key_metrics": [
       {
@@ -442,8 +528,6 @@
     ],
     "status": "completed",
     "featured": false,
-    "hero_image_url": "/projects/Ctrls-data-centre-mumbai-3.webp",
-    "hero_image_alt": "CtrlS data centre campus in Mahape, Navi Mumbai",
     "accent": "current",
     "key_metrics": [
       {
@@ -483,8 +567,6 @@
     "scope_tags": ["Mechanical", "Seismic", "HSD Fuel"],
     "status": "completed",
     "featured": false,
-    "hero_image_url": "/projects/Digital-Edge-Data-Center-1.webp",
-    "hero_image_alt": "Digital Edge BOM01 data centre in Mumbai",
     "accent": "fan",
     "key_metrics": [
       {

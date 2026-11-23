@@ -1,0 +1,2728 @@
+{
+  "meta": {
+    "source_workbook": "../uel_projects_photographs_and_videos/UEL_Project Details.xlsx",
+    "source_media_directory": "../uel_projects_photographs_and_videos",
+    "generated_at": "2026-08-26T13:47:57.278Z",
+    "note": "Project facts come from the internal project workbook. Missing or disputed fields remain explicit placeholders and are not inferred."
+  },
+  "projects": [
+    {
+      "id": "prj-landmark-ingka-centre-ikea",
+      "slug": "ingka-centre-ikea",
+      "name": "INGKA Centre | IKEA",
+      "client_name_display": "INGKA Group",
+      "location_city": "Noida",
+      "location_state": "Uttar Pradesh",
+      "location_country": "India",
+      "project_type": "Mixed Use",
+      "timeline_text": "3 Years",
+      "value_cr": 411,
+      "value_display": "₹411 Cr",
+      "summary": "INGKA Centre | IKEA is UEL's largest single order to date, with an integrated mandate covering MEPF, Solar and PNG systems for a major IKEA-anchored mixed-use development in Noida. The project is being delivered to international standards, requiring coordinated engineering across retail, office, hospitality and shared infrastructure zones. UEL is also supporting the project through high-detail BIM delivery, creating an execution-ready model for multi-disciplinary coordination.",
+      "narrative": [
+        "INGKA Centre | IKEA is UEL's largest single order to date, with an integrated mandate covering MEPF, Solar and PNG systems for a major IKEA-anchored mixed-use development in Noida. The project is being delivered to international standards, requiring coordinated engineering across retail, office, hospitality and shared infrastructure zones. UEL is also supporting the project through high-detail BIM delivery, creating an execution-ready model for multi-disciplinary coordination."
+      ],
+      "scope_tags": [
+        "HVAC",
+        "Firefighting",
+        "Plumbing",
+        "Electrical",
+        "Solar",
+        "PNG"
+      ],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 1,
+      "hero_image_url": "/project-archive/ingka-centre-ikea/hero.jpg",
+      "hero_image_alt": "INGKA Centre | IKEA project execution",
+      "accent": "blocks",
+      "gallery": [
+        {
+          "src": "/project-archive/ingka-centre-ikea/gallery-01.jpg",
+          "alt": "INGKA Centre | IKEA project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/ingka-centre-ikea/gallery-02.jpg",
+          "alt": "INGKA Centre | IKEA project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/ingka-centre-ikea/gallery-03.jpg",
+          "alt": "INGKA Centre | IKEA project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/ingka-centre-ikea/gallery-04.jpg",
+          "alt": "INGKA Centre | IKEA project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/ingka-centre-ikea/gallery-05.jpg",
+          "alt": "INGKA Centre | IKEA project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/ingka-centre-ikea/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["INGKA_Centre_IKEA"],
+      "sector_ids": ["sec-corporate-retail", "sec-hospitality"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-plumbing",
+        "svc-electrical",
+        "svc-solar"
+      ],
+      "seo_title": "INGKA Centre | IKEA project | Unique Engineers",
+      "seo_description": "INGKA Centre | IKEA is UEL's largest single order to date, with an integrated mandate covering MEPF, Solar and PNG systems for a major IKEA-anchored mixed-use development in Noida. The project is being delivered to international standards, requiring coordinated engineering across retail, office, hospitality and shared infrastructure zones. UEL is also supporting the project through high-detail BIM delivery, creating an execution-ready model for multi-disciplinary coordination.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-foxconn-bangalore",
+      "slug": "foxconn-bangalore",
+      "name": "Foxconn | Apple Manufacturing Campus",
+      "client_name_display": "Foxconn",
+      "location_city": "Bangalore",
+      "location_state": "Karnataka",
+      "location_country": "India",
+      "project_type": "Semiconductor/ Manufacturing",
+      "timeline_text": "1 Years",
+      "value_cr": 650,
+      "value_display": "₹650 Cr",
+      "summary": "Preferred-vendor execution across 10+ work orders for one of India's most demanding electronics manufacturing environments. UEL has received 10+ work orders at the Foxconn | Apple manufacturing campus, reflecting its position as a preferred execution partner for fast-track, high-precision works. The scope spans MEPF, civil sections, industrial BMS and precision engineering piping, including clean-room and process utility networks. UEL's role has required exceptional pace, strict sequencing and coordinated execution across multiple active work fronts.",
+      "narrative": [
+        "Preferred-vendor execution across 10+ work orders for one of India's most demanding electronics manufacturing environments. UEL has received 10+ work orders at the Foxconn | Apple manufacturing campus, reflecting its position as a preferred execution partner for fast-track, high-precision works. The scope spans MEPF, civil sections, industrial BMS and precision engineering piping, including clean-room and process utility networks. UEL's role has required exceptional pace, strict sequencing and coordinated execution across multiple active work fronts."
+      ],
+      "scope_tags": [
+        "HVAC",
+        "Firefighting",
+        "Electrical",
+        "Civil",
+        "Industrial BMS",
+        "Clean Room",
+        "Process Utilities",
+        "Precision Piping"
+      ],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 2,
+      "hero_image_url": "/project-archive/foxconn-bangalore/hero.jpg",
+      "hero_image_alt": "Foxconn | Apple Manufacturing Campus project execution",
+      "accent": "fan",
+      "gallery": [
+        {
+          "src": "/project-archive/foxconn-bangalore/gallery-01.jpg",
+          "alt": "Foxconn | Apple Manufacturing Campus project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/foxconn-bangalore/gallery-02.jpg",
+          "alt": "Foxconn | Apple Manufacturing Campus project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/foxconn-bangalore/gallery-03.jpg",
+          "alt": "Foxconn | Apple Manufacturing Campus project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/foxconn-bangalore/gallery-04.jpg",
+          "alt": "Foxconn | Apple Manufacturing Campus project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/foxconn-bangalore/gallery-05.jpg",
+          "alt": "Foxconn | Apple Manufacturing Campus project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/foxconn-bangalore/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["FoxconnApple"],
+      "sector_ids": ["sec-semiconductor", "sec-industrial"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-plumbing",
+        "svc-electrical",
+        "svc-bms",
+        "svc-civil"
+      ],
+      "seo_title": "Foxconn | Apple Manufacturing Campus project | Unique Engineers",
+      "seo_description": "Preferred-vendor execution across 10+ work orders for one of India's most demanding electronics manufacturing environments. UEL has received 10+ work orders at the Foxconn | Apple manufacturing campus, reflecting its position as a preferred execution partner for fast-track, high-precision works. The scope spans MEPF, civil sections, industrial BMS and precision engineering piping, including clean-room and process utility networks. UEL's role has required exceptional pace, strict sequencing and coordinated execution across multiple active work fronts.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-jsw-ev-manufacturing",
+      "slug": "jsw-ev-manufacturing",
+      "name": "JSW EV Manufacturing Facility",
+      "client_name_display": "JSW Group",
+      "location_city": "Chh.Shambhaji Nagar",
+      "location_state": "Maharashtra",
+      "location_country": "India",
+      "project_type": "EV Manufacturing",
+      "timeline_text": "8 Months",
+      "value_cr": 103,
+      "value_display": "₹103 Cr",
+      "summary": "JSW is establishing a world-class 636-acre Electric Vehicle (EV) and Hybrid Vehicle manufacturing facility in the AURIC Bidkin region, Maharashtra. The project comprises a 546-acre passenger vehicle manufacturing unit and a 90-acre commercial vehicle manufacturing unit. The integrated facility will produce electric passenger cars, hybrid vehicles, and critical EV components, with a planned annual production capacity of up to 500,000 passenger vehicles and 100,000 commercial vehicles. MEP Excellence Driving the Future of Mobility.",
+      "narrative": [
+        "JSW is establishing a world-class 636-acre Electric Vehicle (EV) and Hybrid Vehicle manufacturing facility in the AURIC Bidkin region, Maharashtra. The project comprises a 546-acre passenger vehicle manufacturing unit and a 90-acre commercial vehicle manufacturing unit. The integrated facility will produce electric passenger cars, hybrid vehicles, and critical EV components, with a planned annual production capacity of up to 500,000 passenger vehicles and 100,000 commercial vehicles. MEP Excellence Driving the Future of Mobility."
+      ],
+      "scope_tags": [
+        "Fire Fighting",
+        "Electrical",
+        "Internal and External Utility Pipelines"
+      ],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 3,
+      "hero_image_url": "/project-archive/jsw-ev-manufacturing/hero.jpg",
+      "hero_image_alt": "JSW EV Manufacturing Facility project execution",
+      "accent": "current",
+      "gallery": [
+        {
+          "src": "/project-archive/jsw-ev-manufacturing/gallery-01.jpg",
+          "alt": "JSW EV Manufacturing Facility project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/jsw-ev-manufacturing/gallery-02.jpg",
+          "alt": "JSW EV Manufacturing Facility project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/jsw-ev-manufacturing/gallery-03.jpg",
+          "alt": "JSW EV Manufacturing Facility project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/jsw-ev-manufacturing/gallery-04.jpg",
+          "alt": "JSW EV Manufacturing Facility project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/jsw-ev-manufacturing/gallery-05.jpg",
+          "alt": "JSW EV Manufacturing Facility project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/jsw-ev-manufacturing/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["JSW_EV_Project"],
+      "sector_ids": ["sec-industrial"],
+      "service_ids": ["svc-firefighting", "svc-plumbing", "svc-electrical"],
+      "seo_title": "JSW EV Manufacturing Facility project | Unique Engineers",
+      "seo_description": "JSW is establishing a world-class 636-acre Electric Vehicle (EV) and Hybrid Vehicle manufacturing facility in the AURIC Bidkin region, Maharashtra. The project comprises a 546-acre passenger vehicle manufacturing unit and a 90-acre commercial vehicle manufacturing unit. The integrated facility will produce electric passenger cars, hybrid vehicles, and critical EV components, with a planned annual production capacity of up to 500,000 passenger vehicles and 100,000 commercial vehicles. MEP Excellence Driving the Future of Mobility.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-ctrls-mahape-mumbai",
+      "slug": "ctrls-mahape-mumbai",
+      "name": "CtrlS Data Centre, Mumbai",
+      "client_name_display": "CTRLS",
+      "location_city": "Mumbai",
+      "location_state": "Maharashtra",
+      "location_country": "India",
+      "project_type": "Data Centre",
+      "timeline_text": "8 Months",
+      "value_cr": 70,
+      "value_display": "₹70 Cr",
+      "summary": "Repeat work orders across mission-critical data centre infrastructure, including MEPF, BMS and civil structural works. UEL has received multiple work orders at the CtrlS Mumbai data centre campus, supporting mission-critical infrastructure across 3 floors. The scope includes complete MEPF services, BMS integration and civil structural works in a Rated-4 hyperscale data centre environment. The project requires high-reliability engineering, coordinated services and precise execution to support continuous operations under heavy electrical and thermal loads.",
+      "narrative": [
+        "Repeat work orders across mission-critical data centre infrastructure, including MEPF, BMS and civil structural works. UEL has received multiple work orders at the CtrlS Mumbai data centre campus, supporting mission-critical infrastructure across 3 floors. The scope includes complete MEPF services, BMS integration and civil structural works in a Rated-4 hyperscale data centre environment. The project requires high-reliability engineering, coordinated services and precise execution to support continuous operations under heavy electrical and thermal loads."
+      ],
+      "scope_tags": [
+        "Civil",
+        "Electrical",
+        "HVAC",
+        "BMS",
+        "Firefighting",
+        "PHE",
+        "EPMS",
+        "VESDA"
+      ],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 4,
+      "hero_image_url": "/project-archive/ctrls-mahape-mumbai/hero.jpg",
+      "hero_image_alt": "CtrlS Data Centre, Mumbai project execution",
+      "accent": "droplets",
+      "gallery": [
+        {
+          "src": "/project-archive/ctrls-mahape-mumbai/gallery-01.jpg",
+          "alt": "CtrlS Data Centre, Mumbai project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/ctrls-mahape-mumbai/gallery-02.jpg",
+          "alt": "CtrlS Data Centre, Mumbai project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/ctrls-mahape-mumbai/gallery-03.jpg",
+          "alt": "CtrlS Data Centre, Mumbai project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/ctrls-mahape-mumbai/gallery-04.jpg",
+          "alt": "CtrlS Data Centre, Mumbai project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/ctrls-mahape-mumbai/gallery-05.jpg",
+          "alt": "CtrlS Data Centre, Mumbai project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["Ctrls-data-centre-mumbai"],
+      "sector_ids": ["sec-data-centre"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-plumbing",
+        "svc-electrical",
+        "svc-bms",
+        "svc-civil"
+      ],
+      "seo_title": "CtrlS Data Centre, Mumbai project | Unique Engineers",
+      "seo_description": "Repeat work orders across mission-critical data centre infrastructure, including MEPF, BMS and civil structural works. UEL has received multiple work orders at the CtrlS Mumbai data centre campus, supporting mission-critical infrastructure across 3 floors. The scope includes complete MEPF services, BMS integration and civil structural works in a Rated-4 hyperscale data centre environment. The project requires high-reliability engineering, coordinated services and precise execution to support continuous operations under heavy electrical and thermal loads.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-tata-electronics-dholera",
+      "slug": "tata-electronics-dholera",
+      "name": "Tata Electronics Semiconductor Programme",
+      "client_name_display": "Tata Electronics",
+      "location_city": "Dholera",
+      "location_state": "Gujarat and Jagiroad, Assam",
+      "location_country": "India",
+      "project_type": "Semiconductor",
+      "timeline_text": "1 Years",
+      "value_cr": 120,
+      "value_display": "₹120 Cr",
+      "summary": "5+ project packages supporting India's emerging semiconductor manufacturing ecosystem. Tata Electronics is developing a large-scale semiconductor ecosystem across Dholera and Assam, including a wafer fabrication facility in Gujarat and a semiconductor assembly and testing facility in Assam. UEL has secured 5+ project packages with a combined value of INR 120+ Cr, supporting critical infrastructure works across both locations. The mandate includes MEPF services, infrastructure and trestle piping, civil infra for piping, electrical works in Dholera and HVAC works in Assam.",
+      "narrative": [
+        "5+ project packages supporting India's emerging semiconductor manufacturing ecosystem. Tata Electronics is developing a large-scale semiconductor ecosystem across Dholera and Assam, including a wafer fabrication facility in Gujarat and a semiconductor assembly and testing facility in Assam. UEL has secured 5+ project packages with a combined value of INR 120+ Cr, supporting critical infrastructure works across both locations. The mandate includes MEPF services, infrastructure and trestle piping, civil infra for piping, electrical works in Dholera and HVAC works in Assam."
+      ],
+      "scope_tags": [
+        "MEPF",
+        "Infrastructure Piping",
+        "Trestle Piping",
+        "Civil Infra",
+        "Electrical Works",
+        "HVAC"
+      ],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 5,
+      "hero_image_url": "/project-archive/tata-electronics-dholera/hero.jpg",
+      "hero_image_alt": "Tata Electronics Semiconductor Programme project execution",
+      "accent": "pulse",
+      "gallery": [
+        {
+          "src": "/project-archive/tata-electronics-dholera/gallery-01.jpg",
+          "alt": "Tata Electronics Semiconductor Programme project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/tata-electronics-dholera/gallery-02.jpg",
+          "alt": "Tata Electronics Semiconductor Programme project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/tata-electronics-dholera/gallery-03.jpg",
+          "alt": "Tata Electronics Semiconductor Programme project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/tata-electronics-dholera/gallery-04.jpg",
+          "alt": "Tata Electronics Semiconductor Programme project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/tata-electronics-dholera/gallery-05.jpg",
+          "alt": "Tata Electronics Semiconductor Programme project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/tata-electronics-dholera/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["Tata-Electronics-Semiconductor"],
+      "sector_ids": ["sec-semiconductor", "sec-industrial"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-plumbing",
+        "svc-electrical",
+        "svc-civil",
+        "svc-firefighting"
+      ],
+      "seo_title": "Tata Electronics Semiconductor Programme project | Unique Engineers",
+      "seo_description": "5+ project packages supporting India's emerging semiconductor manufacturing ecosystem. Tata Electronics is developing a large-scale semiconductor ecosystem across Dholera and Assam, including a wafer fabrication facility in Gujarat and a semiconductor assembly and testing facility in Assam. UEL has secured 5+ project packages with a combined value of INR 120+ Cr, supporting critical infrastructure works across both locations. The mandate includes MEPF services, infrastructure and trestle piping, civil infra for piping, electrical works in Dholera and HVAC works in Assam.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-world-trade-center-gurugram",
+      "slug": "world-trade-center-gurugram",
+      "name": "World Trade Center Gurugram",
+      "client_name_display": "WTC Group India",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Mixed Use",
+      "timeline_text": "1 Years",
+      "value_cr": 100,
+      "value_display": "₹100 Cr",
+      "summary": "INR 100+ Cr integrated MEPF mandate for a major World Trade Center commercial development. World Trade Center Gurugram is a major commercial development by TCG Real Estate, part of The Chatterjee Group. UEL has secured an INR 100+ Cr mandate for complete MEPF services across two buildings, supporting high-performance office and commercial infrastructure. The project strengthens UEL's position in large-scale commercial engineering, combining building services, coordination and execution discipline for a globally recognized business destination.",
+      "narrative": [
+        "INR 100+ Cr integrated MEPF mandate for a major World Trade Center commercial development. World Trade Center Gurugram is a major commercial development by TCG Real Estate, part of The Chatterjee Group. UEL has secured an INR 100+ Cr mandate for complete MEPF services across two buildings, supporting high-performance office and commercial infrastructure. The project strengthens UEL's position in large-scale commercial engineering, combining building services, coordination and execution discipline for a globally recognized business destination."
+      ],
+      "scope_tags": [
+        "HVAC",
+        "Firefighting",
+        "Plumbing",
+        "Electrical",
+        "Complete MEPF"
+      ],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 6,
+      "hero_image_url": "/project-archive/world-trade-center-gurugram/hero.jpg",
+      "hero_image_alt": "World Trade Center Gurugram project execution",
+      "accent": "sun",
+      "gallery": [
+        {
+          "src": "/project-archive/world-trade-center-gurugram/gallery-01.jpg",
+          "alt": "World Trade Center Gurugram project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/world-trade-center-gurugram/gallery-02.jpg",
+          "alt": "World Trade Center Gurugram project execution photograph 2"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["World-Trade-Center-Gurugram"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-plumbing",
+        "svc-electrical"
+      ],
+      "seo_title": "World Trade Center Gurugram project | Unique Engineers",
+      "seo_description": "INR 100+ Cr integrated MEPF mandate for a major World Trade Center commercial development. World Trade Center Gurugram is a major commercial development by TCG Real Estate, part of The Chatterjee Group. UEL has secured an INR 100+ Cr mandate for complete MEPF services across two buildings, supporting high-performance office and commercial infrastructure. The project strengthens UEL's position in large-scale commercial engineering, combining building services, coordination and execution discipline for a globally recognized business destination.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-prestige-bkc-101",
+      "slug": "prestige-bkc-101",
+      "name": "Prestige BKC 101",
+      "client_name_display": "Prestige Group",
+      "location_city": "Mumbai",
+      "location_state": "Maharashtra",
+      "location_country": "India",
+      "project_type": "Mixed Use",
+      "timeline_text": "2 Years",
+      "value_cr": 220,
+      "value_display": "₹220 Cr",
+      "summary": "Prestige BKC 101 is a landmark LEED Platinum certified commercial office space developed by the Prestige Group, located in the heart of Mumbai's premier business district, the Bandra Kurla Complex (BKC). As a testament to sustainable development, this project sets a new standard for green buildings in India, offering a premium, healthy, and highly productive work environment.",
+      "narrative": [
+        "Prestige BKC 101 is a landmark LEED Platinum certified commercial office space developed by the Prestige Group, located in the heart of Mumbai's premier business district, the Bandra Kurla Complex (BKC). As a testament to sustainable development, this project sets a new standard for green buildings in India, offering a premium, healthy, and highly productive work environment."
+      ],
+      "scope_tags": [
+        "HVAC",
+        "Firefighting",
+        "Plumbing",
+        "Electrical",
+        "BMS",
+        "ELV",
+        "Complete MEPF"
+      ],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 7,
+      "hero_image_url": "/project-archive/prestige-bkc-101/hero.jpg",
+      "hero_image_alt": "Prestige BKC 101 project execution",
+      "accent": "graph",
+      "gallery": [
+        {
+          "src": "/project-archive/prestige-bkc-101/gallery-01.jpg",
+          "alt": "Prestige BKC 101 project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/prestige-bkc-101/gallery-02.jpg",
+          "alt": "Prestige BKC 101 project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/prestige-bkc-101/gallery-03.jpg",
+          "alt": "Prestige BKC 101 project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/prestige-bkc-101/gallery-04.jpg",
+          "alt": "Prestige BKC 101 project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/prestige-bkc-101/gallery-05.jpg",
+          "alt": "Prestige BKC 101 project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["Prestige_BKC_101"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-plumbing",
+        "svc-electrical",
+        "svc-bms"
+      ],
+      "seo_title": "Prestige BKC 101 project | Unique Engineers",
+      "seo_description": "Prestige BKC 101 is a landmark LEED Platinum certified commercial office space developed by the Prestige Group, located in the heart of Mumbai's premier business district, the Bandra Kurla Complex (BKC). As a testament to sustainable development, this project sets a new standard for green buildings in India, offering a premium, healthy, and highly productive work environment.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-common-central-secretariat",
+      "slug": "common-central-secretariat",
+      "name": "Common Central Secretariat & Executive Enclave",
+      "client_name_display": "CPWD",
+      "location_city": "New Delhi",
+      "location_state": "Delhi",
+      "location_country": "India",
+      "project_type": "Office Building",
+      "timeline_text": "3 Years",
+      "value_cr": 250,
+      "value_display": "₹250 Cr",
+      "summary": "Large-scale HVAC and Firefighting delivery for high-security government infrastructure. UEL delivered large-scale HVAC and Firefighting works for the Common Central Secretariat - Executive Enclave in New Delhi, a high-security government infrastructure project within the Central Vista redevelopment ecosystem. The assignment required high-performance mechanical systems, disciplined coordination and reliable execution across a complex institutional environment.",
+      "narrative": [
+        "Large-scale HVAC and Firefighting delivery for high-security government infrastructure. UEL delivered large-scale HVAC and Firefighting works for the Common Central Secretariat - Executive Enclave in New Delhi, a high-security government infrastructure project within the Central Vista redevelopment ecosystem. The assignment required high-performance mechanical systems, disciplined coordination and reliable execution across a complex institutional environment."
+      ],
+      "scope_tags": ["HVAC", "Firefighting"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 8,
+      "hero_image_url": "/project-archive/common-central-secretariat/hero.jpg",
+      "hero_image_alt": "Common Central Secretariat & Executive Enclave project execution",
+      "accent": "blocks",
+      "gallery": [
+        {
+          "src": "/project-archive/common-central-secretariat/gallery-01.jpg",
+          "alt": "Common Central Secretariat & Executive Enclave project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/common-central-secretariat/gallery-02.jpg",
+          "alt": "Common Central Secretariat & Executive Enclave project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/common-central-secretariat/gallery-03.jpg",
+          "alt": "Common Central Secretariat & Executive Enclave project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/common-central-secretariat/gallery-04.jpg",
+          "alt": "Common Central Secretariat & Executive Enclave project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/common-central-secretariat/gallery-05.jpg",
+          "alt": "Common Central Secretariat & Executive Enclave project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/common-central-secretariat/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": [
+        "Common-Central-Secretariat-Executive-Enclave-web",
+        "Executive-enclave-Delhi-project"
+      ],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-hvac", "svc-firefighting"],
+      "seo_title": "Common Central Secretariat & Executive Enclave project | Unique Engineers",
+      "seo_description": "Large-scale HVAC and Firefighting delivery for high-security government infrastructure. UEL delivered large-scale HVAC and Firefighting works for the Common Central Secretariat - Executive Enclave in New Delhi, a high-security government infrastructure project within the Central Vista redevelopment ecosystem. The assignment required high-performance mechanical systems, disciplined coordination and reliable execution across a complex institutional environment.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-mopa-international-airport",
+      "slug": "mopa-international-airport",
+      "name": "Mopa International Airport",
+      "client_name_display": "GMR Goa International Airport Limited (GGIAL)",
+      "location_city": "Goa",
+      "location_state": "Goa",
+      "location_country": "India",
+      "project_type": "Airport",
+      "timeline_text": "1 Years",
+      "value_cr": 130,
+      "value_display": "₹130 Cr",
+      "summary": "Integrated MEPF delivery for a greenfield international airport environment. UEL delivered integrated MEPF services for MOPA Airport in Goa, supporting one of India's major greenfield airport developments. The project required coordinated execution across airport infrastructure zones, where service reliability, safety systems, commissioning discipline and schedule adherence were critical to operational readiness.",
+      "narrative": [
+        "Integrated MEPF delivery for a greenfield international airport environment. UEL delivered integrated MEPF services for MOPA Airport in Goa, supporting one of India's major greenfield airport developments. The project required coordinated execution across airport infrastructure zones, where service reliability, safety systems, commissioning discipline and schedule adherence were critical to operational readiness."
+      ],
+      "scope_tags": ["HVAC", "Firefighting", "Plumbing", "Electrical"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 9,
+      "hero_image_url": "/project-archive/mopa-international-airport/hero.jpg",
+      "hero_image_alt": "Mopa International Airport project execution",
+      "accent": "fan",
+      "gallery": [
+        {
+          "src": "/project-archive/mopa-international-airport/gallery-01.jpg",
+          "alt": "Mopa International Airport project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/mopa-international-airport/gallery-02.jpg",
+          "alt": "Mopa International Airport project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/mopa-international-airport/gallery-03.jpg",
+          "alt": "Mopa International Airport project execution photograph 3"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["Mopa-airport"],
+      "sector_ids": ["sec-airport"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-plumbing",
+        "svc-electrical"
+      ],
+      "seo_title": "Mopa International Airport project | Unique Engineers",
+      "seo_description": "Integrated MEPF delivery for a greenfield international airport environment. UEL delivered integrated MEPF services for MOPA Airport in Goa, supporting one of India's major greenfield airport developments. The project required coordinated execution across airport infrastructure zones, where service reliability, safety systems, commissioning discipline and schedule adherence were critical to operational readiness.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-nalanda-university",
+      "slug": "nalanda-university",
+      "name": "Nalanda University",
+      "client_name_display": "Government of India",
+      "location_city": "Bihar",
+      "location_country": "India",
+      "project_type": "University",
+      "timeline_text": "2 Years",
+      "value_cr": 60,
+      "value_display": "₹60 Cr",
+      "summary": "Advanced HVAC and IBMS delivery for one of India's most ambitious net-zero campus environments. Nalanda University was developed as a net-zero campus in Rajgir, Bihar, combining sustainable campus planning with advanced building technologies. UEL delivered HVAC and IBMS systems that supported energy-efficient operations, centralized monitoring and long-term environmental performance. The project highlights UEL's capability to integrate mechanical systems with digital controls in sustainability-led institutional infrastructure.",
+      "narrative": [
+        "Advanced HVAC and IBMS delivery for one of India's most ambitious net-zero campus environments. Nalanda University was developed as a net-zero campus in Rajgir, Bihar, combining sustainable campus planning with advanced building technologies. UEL delivered HVAC and IBMS systems that supported energy-efficient operations, centralized monitoring and long-term environmental performance. The project highlights UEL's capability to integrate mechanical systems with digital controls in sustainability-led institutional infrastructure."
+      ],
+      "scope_tags": [
+        "HVAC",
+        "IBMS",
+        "Thermal Storage",
+        "Brine Chillers",
+        "Geothermal VRV",
+        "Evaporative Cooling"
+      ],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 10,
+      "hero_image_url": "/project-archive/nalanda-university/hero.jpg",
+      "hero_image_alt": "Nalanda University project execution",
+      "accent": "current",
+      "gallery": [
+        {
+          "src": "/project-archive/nalanda-university/gallery-01.jpg",
+          "alt": "Nalanda University project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/nalanda-university/gallery-02.jpg",
+          "alt": "Nalanda University project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/nalanda-university/gallery-03.jpg",
+          "alt": "Nalanda University project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/nalanda-university/gallery-04.jpg",
+          "alt": "Nalanda University project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/nalanda-university/gallery-05.jpg",
+          "alt": "Nalanda University project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["Nalanda-University-bihar"],
+      "sector_ids": ["sec-education"],
+      "service_ids": ["svc-hvac", "svc-bms"],
+      "seo_title": "Nalanda University project | Unique Engineers",
+      "seo_description": "Advanced HVAC and IBMS delivery for one of India's most ambitious net-zero campus environments. Nalanda University was developed as a net-zero campus in Rajgir, Bihar, combining sustainable campus planning with advanced building technologies. UEL delivered HVAC and IBMS systems that supported energy-efficient operations, centralized monitoring and long-term environmental performance. The project highlights UEL's capability to integrate mechanical systems with digital controls in sustainability-led institutional infrastructure.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-digital-edge-bom01",
+      "slug": "digital-edge-bom01",
+      "name": "Digital Edge Data Center",
+      "client_name_display": "Tata Projects",
+      "location_city": "Mumbai",
+      "location_state": "Maharashtra",
+      "location_country": "India",
+      "project_type": "Data Centre",
+      "timeline_text": "8 Months",
+      "value_cr": 43,
+      "value_display": "₹43 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 11,
+      "hero_image_url": "/project-archive/digital-edge-bom01/hero.jpg",
+      "hero_image_alt": "Digital Edge Data Center project execution",
+      "accent": "droplets",
+      "gallery": [
+        {
+          "src": "/project-archive/digital-edge-bom01/gallery-01.jpg",
+          "alt": "Digital Edge Data Center project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/digital-edge-bom01/gallery-02.jpg",
+          "alt": "Digital Edge Data Center project execution photograph 2"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["Digital_Edge_Data_Center"],
+      "sector_ids": ["sec-data-centre"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Digital Edge Data Center project | Unique Engineers",
+      "seo_description": "Project archive for Digital Edge Data Center, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-m3m-mansion-113",
+      "slug": "m3m-mansion-113",
+      "name": "M3M Mansion 113",
+      "client_name_display": "M3M India",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Residential",
+      "timeline_text": "1 Years",
+      "value_cr": 70,
+      "value_display": "₹70 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC (VRV)"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 12,
+      "hero_image_url": "/project-archive/m3m-mansion-113/hero.jpg",
+      "hero_image_alt": "M3M Mansion 113 project execution",
+      "accent": "pulse",
+      "gallery": [
+        {
+          "src": "/project-archive/m3m-mansion-113/gallery-01.jpg",
+          "alt": "M3M Mansion 113 project execution photograph 1"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["M3M Mansion-113"],
+      "sector_ids": ["sec-residential"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "M3M Mansion 113 project | Unique Engineers",
+      "seo_description": "Project archive for M3M Mansion 113, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-indira-gandhi-hospital",
+      "slug": "indira-gandhi-hospital",
+      "name": "Indira Gandhi Hospital",
+      "client_name_display": "L&T Constructions",
+      "location_city": "New Delhi",
+      "location_state": "Delhi",
+      "location_country": "India",
+      "project_type": "Hospital",
+      "timeline_text": "3 Years",
+      "value_cr": 71,
+      "value_display": "₹71 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 13,
+      "hero_image_url": "/project-archive/indira-gandhi-hospital/hero.jpg",
+      "hero_image_alt": "Indira Gandhi Hospital project execution",
+      "accent": "sun",
+      "gallery": [
+        {
+          "src": "/project-archive/indira-gandhi-hospital/gallery-01.jpg",
+          "alt": "Indira Gandhi Hospital project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/indira-gandhi-hospital/gallery-02.jpg",
+          "alt": "Indira Gandhi Hospital project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/indira-gandhi-hospital/gallery-03.jpg",
+          "alt": "Indira Gandhi Hospital project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/indira-gandhi-hospital/gallery-04.jpg",
+          "alt": "Indira Gandhi Hospital project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/indira-gandhi-hospital/gallery-05.jpg",
+          "alt": "Indira Gandhi Hospital project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["Indira_Gandhi_Hospital"],
+      "sector_ids": ["sec-healthcare"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Indira Gandhi Hospital project | Unique Engineers",
+      "seo_description": "Project archive for Indira Gandhi Hospital, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-sky-mansion",
+      "slug": "sky-mansion",
+      "name": "Sky Mansion",
+      "client_name_display": "Risland India",
+      "location_city": "Chhatarpur Delhi",
+      "location_state": "Delhi",
+      "location_country": "India",
+      "project_type": "Residential",
+      "timeline_text": "3 Year",
+      "value_display": "To be confirmed",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["Electrical", "CCTV", "FA & HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 14,
+      "hero_image_url": "/project-archive/sky-mansion/hero.jpg",
+      "hero_image_alt": "Sky Mansion project execution",
+      "accent": "graph",
+      "gallery": [
+        {
+          "src": "/project-archive/sky-mansion/gallery-01.jpg",
+          "alt": "Sky Mansion project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/sky-mansion/gallery-02.jpg",
+          "alt": "Sky Mansion project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/sky-mansion/gallery-03.jpg",
+          "alt": "Sky Mansion project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/sky-mansion/gallery-04.jpg",
+          "alt": "Sky Mansion project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/sky-mansion/gallery-05.jpg",
+          "alt": "Sky Mansion project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project value", "project narrative"],
+      "source_folders": ["Sky-Mension"],
+      "sector_ids": ["sec-residential"],
+      "service_ids": ["svc-hvac", "svc-electrical"],
+      "seo_title": "Sky Mansion project | Unique Engineers",
+      "seo_description": "Project archive for Sky Mansion, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-bharti-airtel-aerocity",
+      "slug": "bharti-airtel-aerocity",
+      "name": "Bharti Airtel Aerocity",
+      "client_name_display": "Bharti Airtel Aerocity Mahipalpur",
+      "location_city": "MahipalPur NewDelhi",
+      "location_state": "Delhi",
+      "location_country": "India",
+      "project_type": "Commercial",
+      "timeline_text": "2 Year",
+      "value_cr": 48,
+      "value_display": "₹48 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 15,
+      "hero_image_url": "/project-archive/bharti-airtel-aerocity/hero.jpg",
+      "hero_image_alt": "Bharti Airtel Aerocity project execution",
+      "accent": "blocks",
+      "gallery": [
+        {
+          "src": "/project-archive/bharti-airtel-aerocity/gallery-01.jpg",
+          "alt": "Bharti Airtel Aerocity project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/bharti-airtel-aerocity/gallery-02.jpg",
+          "alt": "Bharti Airtel Aerocity project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/bharti-airtel-aerocity/gallery-03.jpg",
+          "alt": "Bharti Airtel Aerocity project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/bharti-airtel-aerocity/gallery-04.jpg",
+          "alt": "Bharti Airtel Aerocity project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/bharti-airtel-aerocity/gallery-05.jpg",
+          "alt": "Bharti Airtel Aerocity project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/bharti-airtel-aerocity/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["Bharti_Airtel_Aerocity_Mahipalpur"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Bharti Airtel Aerocity project | Unique Engineers",
+      "seo_description": "Project archive for Bharti Airtel Aerocity, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-vatika-one-on-one",
+      "slug": "vatika-one-on-one",
+      "name": "Vatika One On One",
+      "client_name_display": "Vatika",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Commercial",
+      "timeline_text": "To be confirmed",
+      "value_display": "To be confirmed",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["Scope to be confirmed"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 16,
+      "hero_image_url": "/project-archive/vatika-one-on-one/hero.jpg",
+      "hero_image_alt": "Vatika One On One project execution",
+      "accent": "fan",
+      "gallery": [
+        {
+          "src": "/project-archive/vatika-one-on-one/gallery-01.jpg",
+          "alt": "Vatika One On One project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/vatika-one-on-one/gallery-02.jpg",
+          "alt": "Vatika One On One project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/vatika-one-on-one/gallery-03.jpg",
+          "alt": "Vatika One On One project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/vatika-one-on-one/gallery-04.jpg",
+          "alt": "Vatika One On One project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/vatika-one-on-one/gallery-05.jpg",
+          "alt": "Vatika One On One project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": [
+        "timeline",
+        "project value",
+        "scope",
+        "project narrative"
+      ],
+      "source_folders": ["Vatika-One-On-One"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": [],
+      "seo_title": "Vatika One On One project | Unique Engineers",
+      "seo_description": "Project archive for Vatika One On One, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-aiims-jammu",
+      "slug": "aiims-jammu",
+      "name": "AIIMS Jammu",
+      "client_name_display": "Ahluwalia Contracts PVt",
+      "location_city": "Jammu",
+      "location_state": "Jammu & Kashmir",
+      "location_country": "India",
+      "project_type": "Healthcare",
+      "timeline_text": "2 Year",
+      "value_cr": 60,
+      "value_display": "₹60 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC", "IBMS"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 17,
+      "hero_image_url": "/project-archive/aiims-jammu/hero.jpg",
+      "hero_image_alt": "AIIMS Jammu project execution",
+      "accent": "current",
+      "gallery": [
+        {
+          "src": "/project-archive/aiims-jammu/gallery-01.jpg",
+          "alt": "AIIMS Jammu project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/aiims-jammu/gallery-02.jpg",
+          "alt": "AIIMS Jammu project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/aiims-jammu/gallery-03.jpg",
+          "alt": "AIIMS Jammu project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/aiims-jammu/gallery-04.jpg",
+          "alt": "AIIMS Jammu project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/aiims-jammu/gallery-05.jpg",
+          "alt": "AIIMS Jammu project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["Jammu-aiims"],
+      "sector_ids": ["sec-healthcare"],
+      "service_ids": ["svc-hvac", "svc-bms"],
+      "seo_title": "AIIMS Jammu project | Unique Engineers",
+      "seo_description": "Project archive for AIIMS Jammu, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-scb-medical-college-cuttack",
+      "slug": "scb-medical-college-cuttack",
+      "name": "SCB Medical College, Cuttack",
+      "client_name_display": "SCB CUTTACK",
+      "location_city": "Cuttack",
+      "location_state": "Odisha",
+      "location_country": "India",
+      "project_type": "Healthcare",
+      "timeline_text": "2 Years",
+      "value_cr": 59,
+      "value_display": "₹59 Cr",
+      "summary": "This is aims to transfer SCB into an AIIMS Plus- level institution with around 3000 beds and modern clinical, academic support Infrastructure .",
+      "narrative": [
+        "This is aims to transfer SCB into an AIIMS Plus- level institution with around 3000 beds and modern clinical, academic support Infrastructure ."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 18,
+      "hero_image_url": "/project-archive/scb-medical-college-cuttack/hero.jpg",
+      "hero_image_alt": "SCB Medical College, Cuttack project execution",
+      "accent": "droplets",
+      "gallery": [
+        {
+          "src": "/project-archive/scb-medical-college-cuttack/gallery-01.jpg",
+          "alt": "SCB Medical College, Cuttack project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/scb-medical-college-cuttack/gallery-02.jpg",
+          "alt": "SCB Medical College, Cuttack project execution photograph 2"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": [],
+      "source_folders": ["SCB-CUTTACK-web"],
+      "sector_ids": ["sec-healthcare"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "SCB Medical College, Cuttack project | Unique Engineers",
+      "seo_description": "This is aims to transfer SCB into an AIIMS Plus- level institution with around 3000 beds and modern clinical, academic support Infrastructure .",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-bitsom-mumbai",
+      "slug": "bitsom-mumbai",
+      "name": "BITSOM Mumbai",
+      "client_name_display": "BITSOM",
+      "location_city": "Mumbai",
+      "location_state": "Maharashtra",
+      "location_country": "India",
+      "project_type": "Education & Research",
+      "timeline_text": "2 Year",
+      "value_cr": 30,
+      "value_display": "₹30 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["MEPF"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 19,
+      "hero_image_url": "/project-archive/bitsom-mumbai/hero.jpg",
+      "hero_image_alt": "BITSOM Mumbai project execution",
+      "accent": "pulse",
+      "gallery": [
+        {
+          "src": "/project-archive/bitsom-mumbai/gallery-01.jpg",
+          "alt": "BITSOM Mumbai project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/bitsom-mumbai/gallery-02.jpg",
+          "alt": "BITSOM Mumbai project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/bitsom-mumbai/gallery-03.jpg",
+          "alt": "BITSOM Mumbai project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/bitsom-mumbai/gallery-04.jpg",
+          "alt": "BITSOM Mumbai project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/bitsom-mumbai/gallery-05.jpg",
+          "alt": "BITSOM Mumbai project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["BITSOM-Mumbai"],
+      "sector_ids": ["sec-education"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-plumbing",
+        "svc-electrical"
+      ],
+      "seo_title": "BITSOM Mumbai project | Unique Engineers",
+      "seo_description": "Project archive for BITSOM Mumbai, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-atc-tower-kolkata",
+      "slug": "atc-tower-kolkata",
+      "name": "ATC Tower Kolkata",
+      "client_name_display": "Ramacivil",
+      "location_city": "Kolkata",
+      "location_state": "West Bengal",
+      "location_country": "India",
+      "project_type": "Airport",
+      "timeline_text": "2 Year",
+      "value_cr": 50,
+      "value_display": "₹50 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["MEP", "IBMS"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 20,
+      "hero_image_url": "/project-archive/atc-tower-kolkata/hero.jpg",
+      "hero_image_alt": "ATC Tower Kolkata project execution",
+      "accent": "sun",
+      "gallery": [
+        {
+          "src": "/project-archive/atc-tower-kolkata/gallery-01.jpg",
+          "alt": "ATC Tower Kolkata project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/atc-tower-kolkata/gallery-02.jpg",
+          "alt": "ATC Tower Kolkata project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/atc-tower-kolkata/gallery-03.jpg",
+          "alt": "ATC Tower Kolkata project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/atc-tower-kolkata/gallery-04.jpg",
+          "alt": "ATC Tower Kolkata project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/atc-tower-kolkata/gallery-05.jpg",
+          "alt": "ATC Tower Kolkata project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["ATC-tower-kolkata"],
+      "sector_ids": ["sec-airport"],
+      "service_ids": [
+        "svc-bms",
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-plumbing",
+        "svc-electrical"
+      ],
+      "seo_title": "ATC Tower Kolkata project | Unique Engineers",
+      "seo_description": "Project archive for ATC Tower Kolkata, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-aiims-rewari",
+      "slug": "aiims-rewari",
+      "name": "AIIMS Rewari",
+      "client_name_display": "L&T",
+      "location_city": "AIIMS Majra Rewari",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Healthcare",
+      "timeline_text": "2 Years",
+      "value_cr": 49,
+      "value_display": "₹49 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 21,
+      "hero_image_url": "/project-archive/aiims-rewari/hero.jpg",
+      "hero_image_alt": "AIIMS Rewari project execution",
+      "accent": "graph",
+      "gallery": [
+        {
+          "src": "/project-archive/aiims-rewari/gallery-01.jpg",
+          "alt": "AIIMS Rewari project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/aiims-rewari/gallery-02.jpg",
+          "alt": "AIIMS Rewari project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/aiims-rewari/gallery-03.jpg",
+          "alt": "AIIMS Rewari project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/aiims-rewari/gallery-04.jpg",
+          "alt": "AIIMS Rewari project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/aiims-rewari/gallery-05.jpg",
+          "alt": "AIIMS Rewari project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["AIIMS Rewari"],
+      "sector_ids": ["sec-healthcare"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "AIIMS Rewari project | Unique Engineers",
+      "seo_description": "Project archive for AIIMS Rewari, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-amity-mohali",
+      "slug": "amity-mohali",
+      "name": "Amity Mohali",
+      "client_name_display": "Amity",
+      "location_city": "Mohali",
+      "location_country": "India",
+      "project_type": "Education & Research",
+      "timeline_text": "To be confirmed",
+      "value_display": "To be confirmed",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 22,
+      "hero_image_url": "/project-archive/amity-mohali/hero.jpg",
+      "hero_image_alt": "Amity Mohali project execution",
+      "accent": "blocks",
+      "gallery": [
+        {
+          "src": "/project-archive/amity-mohali/gallery-01.jpg",
+          "alt": "Amity Mohali project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/amity-mohali/gallery-02.jpg",
+          "alt": "Amity Mohali project execution photograph 2"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["timeline", "project value", "project narrative"],
+      "source_folders": ["AMITY-MOHALI-web"],
+      "sector_ids": ["sec-education"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Amity Mohali project | Unique Engineers",
+      "seo_description": "Project archive for Amity Mohali, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-stt-gdc-mumbai",
+      "slug": "stt-gdc-mumbai",
+      "name": "STT Data Centre Mumbai",
+      "client_name_display": "STT Telemedia Global Datacentres",
+      "location_city": "Mumbai",
+      "location_state": "Maharashtra",
+      "location_country": "India",
+      "project_type": "data Centre",
+      "timeline_text": "1 Year",
+      "value_cr": 30,
+      "value_display": "₹30 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 23,
+      "hero_image_url": "/project-archive/stt-gdc-mumbai/hero.jpg",
+      "hero_image_alt": "STT Data Centre Mumbai project execution",
+      "accent": "fan",
+      "gallery": [
+        {
+          "src": "/project-archive/stt-gdc-mumbai/gallery-01.jpg",
+          "alt": "STT Data Centre Mumbai project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/stt-gdc-mumbai/gallery-02.jpg",
+          "alt": "STT Data Centre Mumbai project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/stt-gdc-mumbai/gallery-03.jpg",
+          "alt": "STT Data Centre Mumbai project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/stt-gdc-mumbai/gallery-04.jpg",
+          "alt": "STT Data Centre Mumbai project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/stt-gdc-mumbai/gallery-05.jpg",
+          "alt": "STT Data Centre Mumbai project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["STT_GDC_Data-Centre"],
+      "sector_ids": ["sec-data-centre"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "STT Data Centre Mumbai project | Unique Engineers",
+      "seo_description": "Project archive for STT Data Centre Mumbai, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-ssh-warangal",
+      "slug": "ssh-warangal",
+      "name": "Super Speciality Hospital Warangal",
+      "client_name_display": "L&T",
+      "location_city": "Warrangel",
+      "location_state": "Telangana",
+      "location_country": "India",
+      "project_type": "Healthcare",
+      "timeline_text": "1 Year",
+      "value_cr": 32,
+      "value_display": "₹32 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 24,
+      "hero_image_url": "/project-archive/ssh-warangal/hero.jpg",
+      "hero_image_alt": "Super Speciality Hospital Warangal project execution",
+      "accent": "current",
+      "gallery": [
+        {
+          "src": "/project-archive/ssh-warangal/gallery-01.jpg",
+          "alt": "Super Speciality Hospital Warangal project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/ssh-warangal/gallery-02.jpg",
+          "alt": "Super Speciality Hospital Warangal project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/ssh-warangal/gallery-03.jpg",
+          "alt": "Super Speciality Hospital Warangal project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/ssh-warangal/gallery-04.jpg",
+          "alt": "Super Speciality Hospital Warangal project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/ssh-warangal/gallery-05.jpg",
+          "alt": "Super Speciality Hospital Warangal project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/ssh-warangal/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["SSH-WARRANGL"],
+      "sector_ids": ["sec-healthcare"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Super Speciality Hospital Warangal project | Unique Engineers",
+      "seo_description": "Project archive for Super Speciality Hospital Warangal, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-iit-palakkad",
+      "slug": "iit-palakkad",
+      "name": "IIT Palakkad",
+      "client_name_display": "CPWD",
+      "location_city": "PALAKKAD Kerala",
+      "location_state": "Kerala",
+      "location_country": "India",
+      "project_type": "Education",
+      "timeline_text": "To be confirmed",
+      "value_display": "To be confirmed",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 25,
+      "hero_image_url": "/project-archive/iit-palakkad/hero.jpg",
+      "hero_image_alt": "IIT Palakkad project execution",
+      "accent": "droplets",
+      "gallery": [
+        {
+          "src": "/project-archive/iit-palakkad/gallery-01.jpg",
+          "alt": "IIT Palakkad project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/iit-palakkad/gallery-02.jpg",
+          "alt": "IIT Palakkad project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/iit-palakkad/gallery-03.jpg",
+          "alt": "IIT Palakkad project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/iit-palakkad/gallery-04.jpg",
+          "alt": "IIT Palakkad project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/iit-palakkad/gallery-05.jpg",
+          "alt": "IIT Palakkad project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["timeline", "project value", "project narrative"],
+      "source_folders": ["IIT-Palakkad"],
+      "sector_ids": ["sec-education"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "IIT Palakkad project | Unique Engineers",
+      "seo_description": "Project archive for IIT Palakkad, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-icon-mumbai",
+      "slug": "icon-mumbai",
+      "name": "ICON Mumbai",
+      "client_name_display": "Leading Frontier Private Limited",
+      "location_city": "Mumbai",
+      "location_state": "Maharashtra",
+      "location_country": "India",
+      "project_type": "Commercial",
+      "timeline_text": "1 Year",
+      "value_cr": 10,
+      "value_display": "₹10 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC", "Electrical"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 26,
+      "hero_image_url": "/project-archive/icon-mumbai/hero.jpg",
+      "hero_image_alt": "ICON Mumbai project execution",
+      "accent": "pulse",
+      "gallery": [
+        {
+          "src": "/project-archive/icon-mumbai/gallery-01.jpg",
+          "alt": "ICON Mumbai project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/icon-mumbai/gallery-02.jpg",
+          "alt": "ICON Mumbai project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/icon-mumbai/gallery-03.jpg",
+          "alt": "ICON Mumbai project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/icon-mumbai/gallery-04.jpg",
+          "alt": "ICON Mumbai project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/icon-mumbai/gallery-05.jpg",
+          "alt": "ICON Mumbai project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["icon_mumbai"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-hvac", "svc-electrical"],
+      "seo_title": "ICON Mumbai project | Unique Engineers",
+      "seo_description": "Project archive for ICON Mumbai, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-ipc-ghaziabad",
+      "slug": "ipc-ghaziabad",
+      "name": "IPC Ghaziabad",
+      "client_name_display": "U.P. Government",
+      "location_city": "Delhi NCR",
+      "location_state": "Delhi NCR",
+      "location_country": "India",
+      "project_type": "Commercial",
+      "timeline_text": "To be confirmed",
+      "value_display": "To be confirmed",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["Scope to be confirmed"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 27,
+      "hero_image_url": "/project-archive/ipc-ghaziabad/hero.jpg",
+      "hero_image_alt": "IPC Ghaziabad project execution",
+      "accent": "sun",
+      "gallery": [
+        {
+          "src": "/project-archive/ipc-ghaziabad/gallery-01.jpg",
+          "alt": "IPC Ghaziabad project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/ipc-ghaziabad/gallery-02.jpg",
+          "alt": "IPC Ghaziabad project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/ipc-ghaziabad/gallery-03.jpg",
+          "alt": "IPC Ghaziabad project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/ipc-ghaziabad/gallery-04.jpg",
+          "alt": "IPC Ghaziabad project execution photograph 4"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": [
+        "timeline",
+        "project value",
+        "scope",
+        "project narrative"
+      ],
+      "source_folders": ["IPC-GHAZIABAD"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": [],
+      "seo_title": "IPC Ghaziabad project | Unique Engineers",
+      "seo_description": "Project archive for IPC Ghaziabad, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-amb-selfie-square",
+      "slug": "amb-selfie-square",
+      "name": "AMB Selfie Square",
+      "client_name_display": "VS Realtech",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Commercial",
+      "timeline_text": "2 Year",
+      "value_cr": 11,
+      "value_display": "₹11 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 28,
+      "hero_image_url": "/project-archive/amb-selfie-square/hero.jpg",
+      "hero_image_alt": "AMB Selfie Square project execution",
+      "accent": "graph",
+      "gallery": [
+        {
+          "src": "/project-archive/amb-selfie-square/gallery-01.jpg",
+          "alt": "AMB Selfie Square project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/amb-selfie-square/gallery-02.jpg",
+          "alt": "AMB Selfie Square project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/amb-selfie-square/gallery-03.jpg",
+          "alt": "AMB Selfie Square project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/amb-selfie-square/gallery-04.jpg",
+          "alt": "AMB Selfie Square project execution photograph 4"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["AMB"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "AMB Selfie Square project | Unique Engineers",
+      "seo_description": "Project archive for AMB Selfie Square, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-klj-square",
+      "slug": "klj-square",
+      "name": "KLJ Square",
+      "client_name_display": "KLJ Group",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Commercial",
+      "timeline_text": "2 Years",
+      "value_cr": 4.5,
+      "value_display": "₹4.5 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 29,
+      "hero_image_url": "/project-archive/klj-square/hero.jpg",
+      "hero_image_alt": "KLJ Square project execution",
+      "accent": "blocks",
+      "gallery": [
+        {
+          "src": "/project-archive/klj-square/gallery-01.jpg",
+          "alt": "KLJ Square project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/klj-square/gallery-02.jpg",
+          "alt": "KLJ Square project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/klj-square/gallery-03.jpg",
+          "alt": "KLJ Square project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/klj-square/gallery-04.jpg",
+          "alt": "KLJ Square project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/klj-square/gallery-05.jpg",
+          "alt": "KLJ Square project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["KLJ_Gurugram"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "KLJ Square project | Unique Engineers",
+      "seo_description": "Project archive for KLJ Square, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-elan-miracle",
+      "slug": "elan-miracle",
+      "name": "Elan Miracle",
+      "client_name_display": "ELAN Group",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Commercial",
+      "timeline_text": "2 Years",
+      "value_cr": 9,
+      "value_display": "₹9 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 30,
+      "hero_image_url": "/project-archive/elan-miracle/hero.jpg",
+      "hero_image_alt": "Elan Miracle project execution",
+      "accent": "fan",
+      "gallery": [
+        {
+          "src": "/project-archive/elan-miracle/gallery-01.jpg",
+          "alt": "Elan Miracle project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/elan-miracle/gallery-02.jpg",
+          "alt": "Elan Miracle project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/elan-miracle/gallery-03.jpg",
+          "alt": "Elan Miracle project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/elan-miracle/gallery-04.jpg",
+          "alt": "Elan Miracle project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/elan-miracle/gallery-05.jpg",
+          "alt": "Elan Miracle project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["ELAN Gurugram"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Elan Miracle project | Unique Engineers",
+      "seo_description": "Project archive for Elan Miracle, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-smarr-city-centre-92",
+      "slug": "smarr-city-centre-92",
+      "name": "SMARR City Centre 92",
+      "client_name_display": "SMARR",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Commercial",
+      "timeline_text": "2 Years",
+      "value_cr": 65,
+      "value_display": "₹65 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["Civil"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 31,
+      "hero_image_url": "/project-archive/smarr-city-centre-92/hero.jpg",
+      "hero_image_alt": "SMARR City Centre 92 project execution",
+      "accent": "current",
+      "gallery": [
+        {
+          "src": "/project-archive/smarr-city-centre-92/gallery-01.jpg",
+          "alt": "SMARR City Centre 92 project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/smarr-city-centre-92/gallery-02.jpg",
+          "alt": "SMARR City Centre 92 project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/smarr-city-centre-92/gallery-03.jpg",
+          "alt": "SMARR City Centre 92 project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/smarr-city-centre-92/gallery-04.jpg",
+          "alt": "SMARR City Centre 92 project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/smarr-city-centre-92/gallery-05.jpg",
+          "alt": "SMARR City Centre 92 project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/smarr-city-centre-92/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["SMARR-City-Centre-92"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-civil"],
+      "seo_title": "SMARR City Centre 92 project | Unique Engineers",
+      "seo_description": "Project archive for SMARR City Centre 92, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-amity-ranchi-operations-maintenance",
+      "slug": "amity-ranchi-operations-maintenance",
+      "name": "Amity Ranchi — Operations & Maintenance",
+      "client_name_display": "To be confirmed",
+      "location_city": "Ranchi",
+      "location_state": "Jharkhand",
+      "location_country": "India",
+      "project_type": "Education",
+      "timeline_text": "3 Years",
+      "value_cr": 12,
+      "value_display": "₹12 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 32,
+      "hero_image_url": "/project-archive/amity-ranchi-operations-maintenance/hero.jpg",
+      "hero_image_alt": "Amity Ranchi — Operations & Maintenance project execution",
+      "accent": "droplets",
+      "gallery": [
+        {
+          "src": "/project-archive/amity-ranchi-operations-maintenance/gallery-01.jpg",
+          "alt": "Amity Ranchi — Operations & Maintenance project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/amity-ranchi-operations-maintenance/gallery-02.jpg",
+          "alt": "Amity Ranchi — Operations & Maintenance project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/amity-ranchi-operations-maintenance/gallery-03.jpg",
+          "alt": "Amity Ranchi — Operations & Maintenance project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/amity-ranchi-operations-maintenance/gallery-04.jpg",
+          "alt": "Amity Ranchi — Operations & Maintenance project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/amity-ranchi-operations-maintenance/gallery-05.jpg",
+          "alt": "Amity Ranchi — Operations & Maintenance project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["client", "project narrative"],
+      "source_folders": ["Amity Ranchi"],
+      "sector_ids": ["sec-education"],
+      "service_ids": ["svc-om", "svc-hvac"],
+      "seo_title": "Amity Ranchi — Operations & Maintenance project | Unique Engineers",
+      "seo_description": "Project archive for Amity Ranchi — Operations & Maintenance, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-amity-kolkata-operations-maintenance",
+      "slug": "amity-kolkata-operations-maintenance",
+      "name": "Amity Kolkata — Operations & Maintenance",
+      "client_name_display": "To be confirmed",
+      "location_city": "To be confirmed",
+      "location_country": "India",
+      "project_type": "Education",
+      "timeline_text": "8 Years",
+      "value_cr": 40,
+      "value_display": "₹40 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 33,
+      "hero_image_url": "/project-archive/amity-kolkata-operations-maintenance/hero.jpg",
+      "hero_image_alt": "Amity Kolkata — Operations & Maintenance project execution",
+      "accent": "pulse",
+      "gallery": [
+        {
+          "src": "/project-archive/amity-kolkata-operations-maintenance/gallery-01.jpg",
+          "alt": "Amity Kolkata — Operations & Maintenance project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/amity-kolkata-operations-maintenance/gallery-02.jpg",
+          "alt": "Amity Kolkata — Operations & Maintenance project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/amity-kolkata-operations-maintenance/gallery-03.jpg",
+          "alt": "Amity Kolkata — Operations & Maintenance project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/amity-kolkata-operations-maintenance/gallery-04.jpg",
+          "alt": "Amity Kolkata — Operations & Maintenance project execution photograph 4"
+        }
+      ],
+      "video_url": "/project-archive/amity-kolkata-operations-maintenance/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": ["client", "location", "project narrative"],
+      "source_folders": ["Amity-Kolkata"],
+      "sector_ids": ["sec-education"],
+      "service_ids": ["svc-om", "svc-hvac"],
+      "seo_title": "Amity Kolkata — Operations & Maintenance project | Unique Engineers",
+      "seo_description": "Project archive for Amity Kolkata — Operations & Maintenance, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-anant-raj-cloud-data-centre",
+      "slug": "anant-raj-cloud-data-centre",
+      "name": "Anant Raj Cloud Data Centre",
+      "client_name_display": "Anant Raj Cloud Pvt.Ltd",
+      "location_city": "Manesar Haryana",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Data Centre",
+      "timeline_text": "To be confirmed",
+      "value_cr": 31,
+      "value_display": "₹31 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC", "Firefighting", "Electrical"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 34,
+      "hero_image_url": "/project-archive/anant-raj-cloud-data-centre/hero.jpg",
+      "hero_image_alt": "Anant Raj Cloud Data Centre project execution",
+      "accent": "sun",
+      "gallery": [
+        {
+          "src": "/project-archive/anant-raj-cloud-data-centre/gallery-01.jpg",
+          "alt": "Anant Raj Cloud Data Centre project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/anant-raj-cloud-data-centre/gallery-02.jpg",
+          "alt": "Anant Raj Cloud Data Centre project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/anant-raj-cloud-data-centre/gallery-03.jpg",
+          "alt": "Anant Raj Cloud Data Centre project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/anant-raj-cloud-data-centre/gallery-04.jpg",
+          "alt": "Anant Raj Cloud Data Centre project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/anant-raj-cloud-data-centre/gallery-05.jpg",
+          "alt": "Anant Raj Cloud Data Centre project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["timeline", "project narrative"],
+      "source_folders": ["Anant Raj"],
+      "sector_ids": ["sec-data-centre"],
+      "service_ids": ["svc-hvac", "svc-firefighting", "svc-electrical"],
+      "seo_title": "Anant Raj Cloud Data Centre project | Unique Engineers",
+      "seo_description": "Project archive for Anant Raj Cloud Data Centre, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-stpi-incubation-centre",
+      "slug": "stpi-incubation-centre",
+      "name": "STPI Incubation Centre",
+      "client_name_display": "CPWD",
+      "location_city": "Mohali",
+      "location_state": "Chandigarh",
+      "location_country": "India",
+      "project_type": "Data Centre",
+      "timeline_text": "6 Months",
+      "value_cr": 10,
+      "value_display": "₹10 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 35,
+      "hero_image_url": "/project-archive/stpi-incubation-centre/hero.jpg",
+      "hero_image_alt": "STPI Incubation Centre project execution",
+      "accent": "graph",
+      "gallery": [
+        {
+          "src": "/project-archive/stpi-incubation-centre/gallery-01.jpg",
+          "alt": "STPI Incubation Centre project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/stpi-incubation-centre/gallery-02.jpg",
+          "alt": "STPI Incubation Centre project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/stpi-incubation-centre/gallery-03.jpg",
+          "alt": "STPI Incubation Centre project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/stpi-incubation-centre/gallery-04.jpg",
+          "alt": "STPI Incubation Centre project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/stpi-incubation-centre/gallery-05.jpg",
+          "alt": "STPI Incubation Centre project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["STPI_Incubation_Centre"],
+      "sector_ids": ["sec-data-centre"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "STPI Incubation Centre project | Unique Engineers",
+      "seo_description": "Project archive for STPI Incubation Centre, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-chennai-airport-t3-phase-2",
+      "slug": "chennai-airport-t3-phase-2",
+      "name": "Chennai Airport T3 — Phase II",
+      "client_name_display": "L&T",
+      "location_city": "Chennai Tamil Nadu",
+      "location_state": "Tamil Nadu",
+      "location_country": "India",
+      "project_type": "Airport",
+      "timeline_text": "1.4 Years",
+      "value_cr": 30.68,
+      "value_display": "₹30.68 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC-Low Side"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 36,
+      "hero_image_url": "/project-archive/chennai-airport-t3-phase-2/hero.jpg",
+      "hero_image_alt": "Chennai Airport T3 — Phase II project execution",
+      "accent": "blocks",
+      "gallery": [
+        {
+          "src": "/project-archive/chennai-airport-t3-phase-2/gallery-01.jpg",
+          "alt": "Chennai Airport T3 — Phase II project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/chennai-airport-t3-phase-2/gallery-02.jpg",
+          "alt": "Chennai Airport T3 — Phase II project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/chennai-airport-t3-phase-2/gallery-03.jpg",
+          "alt": "Chennai Airport T3 — Phase II project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/chennai-airport-t3-phase-2/gallery-04.jpg",
+          "alt": "Chennai Airport T3 — Phase II project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/chennai-airport-t3-phase-2/gallery-05.jpg",
+          "alt": "Chennai Airport T3 — Phase II project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/chennai-airport-t3-phase-2/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["L&T-Chennai-Airport-T3-Phase-II"],
+      "sector_ids": ["sec-airport"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Chennai Airport T3 — Phase II project | Unique Engineers",
+      "seo_description": "Project archive for Chennai Airport T3 — Phase II, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-dlf-camellias-gurugram",
+      "slug": "dlf-camellias-gurugram",
+      "name": "DLF Camellias, Gurugram",
+      "client_name_display": "Samsung India Electronics Private Limited, Camellias",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Residential",
+      "timeline_text": "1 Year",
+      "value_cr": 50,
+      "value_display": "₹50 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC- VRF"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 37,
+      "hero_image_url": "/project-archive/dlf-camellias-gurugram/hero.jpg",
+      "hero_image_alt": "DLF Camellias, Gurugram project execution",
+      "accent": "fan",
+      "gallery": [
+        {
+          "src": "/project-archive/dlf-camellias-gurugram/gallery-01.jpg",
+          "alt": "DLF Camellias, Gurugram project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/dlf-camellias-gurugram/gallery-02.jpg",
+          "alt": "DLF Camellias, Gurugram project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/dlf-camellias-gurugram/gallery-03.jpg",
+          "alt": "DLF Camellias, Gurugram project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/dlf-camellias-gurugram/gallery-04.jpg",
+          "alt": "DLF Camellias, Gurugram project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/dlf-camellias-gurugram/gallery-05.jpg",
+          "alt": "DLF Camellias, Gurugram project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["DLF_Camellias_Gurugram"],
+      "sector_ids": ["sec-residential"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "DLF Camellias, Gurugram project | Unique Engineers",
+      "seo_description": "Project archive for DLF Camellias, Gurugram, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-esic-medical-college-hospital",
+      "slug": "esic-medical-college-hospital",
+      "name": "ESIC Medical College & Hospital",
+      "client_name_display": "Ramacivil India Construction Pvt Ltd",
+      "location_city": "To be confirmed",
+      "location_country": "India",
+      "project_type": "Hospital",
+      "timeline_text": "2 Years",
+      "value_cr": 39,
+      "value_display": "₹39 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC", "Electrical"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 38,
+      "hero_image_url": "/project-archive/esic-medical-college-hospital/hero.jpg",
+      "hero_image_alt": "ESIC Medical College & Hospital project execution",
+      "accent": "current",
+      "gallery": [
+        {
+          "src": "/project-archive/esic-medical-college-hospital/gallery-01.jpg",
+          "alt": "ESIC Medical College & Hospital project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/esic-medical-college-hospital/gallery-02.jpg",
+          "alt": "ESIC Medical College & Hospital project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/esic-medical-college-hospital/gallery-03.jpg",
+          "alt": "ESIC Medical College & Hospital project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/esic-medical-college-hospital/gallery-04.jpg",
+          "alt": "ESIC Medical College & Hospital project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/esic-medical-college-hospital/gallery-05.jpg",
+          "alt": "ESIC Medical College & Hospital project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["location", "project narrative"],
+      "source_folders": ["ESIC-Medical-College-Hospital"],
+      "sector_ids": ["sec-healthcare"],
+      "service_ids": ["svc-hvac", "svc-electrical"],
+      "seo_title": "ESIC Medical College & Hospital project | Unique Engineers",
+      "seo_description": "Project archive for ESIC Medical College & Hospital, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-safdarjung-hospital",
+      "slug": "safdarjung-hospital",
+      "name": "Safdarjung Hospital",
+      "client_name_display": "L&T",
+      "location_city": "New Delhi",
+      "location_state": "Delhi",
+      "location_country": "India",
+      "project_type": "Hospital",
+      "timeline_text": "3 Years",
+      "value_cr": 50,
+      "value_display": "₹50 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 39,
+      "hero_image_url": "/project-archive/safdarjung-hospital/hero.jpg",
+      "hero_image_alt": "Safdarjung Hospital project execution",
+      "accent": "droplets",
+      "gallery": [
+        {
+          "src": "/project-archive/safdarjung-hospital/gallery-01.jpg",
+          "alt": "Safdarjung Hospital project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/safdarjung-hospital/gallery-02.jpg",
+          "alt": "Safdarjung Hospital project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/safdarjung-hospital/gallery-03.jpg",
+          "alt": "Safdarjung Hospital project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/safdarjung-hospital/gallery-04.jpg",
+          "alt": "Safdarjung Hospital project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/safdarjung-hospital/gallery-05.jpg",
+          "alt": "Safdarjung Hospital project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["Safdarjung-Hospital"],
+      "sector_ids": ["sec-healthcare"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Safdarjung Hospital project | Unique Engineers",
+      "seo_description": "Project archive for Safdarjung Hospital, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-asi-greater-noida",
+      "slug": "asi-greater-noida",
+      "name": "ASI Greater Noida",
+      "client_name_display": "Ramacivil India Construction Pvt Ltd",
+      "location_city": "Greater Noida",
+      "location_state": "Uttar Pradesh",
+      "location_country": "India",
+      "project_type": "Institutional",
+      "timeline_text": "2 Years",
+      "value_cr": 45,
+      "value_display": "₹45 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": [
+        "HVAC",
+        "Interior Works",
+        "Electrical",
+        "Fire Fighting",
+        "Networking",
+        "CCTV & IBMS System"
+      ],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 40,
+      "hero_image_url": "/project-archive/asi-greater-noida/hero.jpg",
+      "hero_image_alt": "ASI Greater Noida project execution",
+      "accent": "pulse",
+      "gallery": [
+        {
+          "src": "/project-archive/asi-greater-noida/gallery-01.jpg",
+          "alt": "ASI Greater Noida project execution photograph 1"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["ASI-Greater-Noida"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": [
+        "svc-hvac",
+        "svc-firefighting",
+        "svc-electrical",
+        "svc-bms",
+        "svc-civil"
+      ],
+      "seo_title": "ASI Greater Noida project | Unique Engineers",
+      "seo_description": "Project archive for ASI Greater Noida, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-bose-institute-kolkata",
+      "slug": "bose-institute-kolkata",
+      "name": "Bose Institute, Kolkata",
+      "client_name_display": "RITES Limited",
+      "location_city": "Kolkata",
+      "location_state": "West Bengal",
+      "location_country": "India",
+      "project_type": "Education & Research",
+      "timeline_text": "2 Years",
+      "value_cr": 22,
+      "value_display": "₹22 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC", "Electrical & IBMS System"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 41,
+      "hero_image_url": "/project-archive/bose-institute-kolkata/hero.jpg",
+      "hero_image_alt": "Bose Institute, Kolkata project execution",
+      "accent": "sun",
+      "gallery": [
+        {
+          "src": "/project-archive/bose-institute-kolkata/gallery-01.jpg",
+          "alt": "Bose Institute, Kolkata project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/bose-institute-kolkata/gallery-02.jpg",
+          "alt": "Bose Institute, Kolkata project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/bose-institute-kolkata/gallery-03.jpg",
+          "alt": "Bose Institute, Kolkata project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/bose-institute-kolkata/gallery-04.jpg",
+          "alt": "Bose Institute, Kolkata project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/bose-institute-kolkata/gallery-05.jpg",
+          "alt": "Bose Institute, Kolkata project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["Bose-Institute-Kolkata"],
+      "sector_ids": ["sec-education"],
+      "service_ids": ["svc-hvac", "svc-electrical", "svc-bms"],
+      "seo_title": "Bose Institute, Kolkata project | Unique Engineers",
+      "seo_description": "Project archive for Bose Institute, Kolkata, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-cbi-headquarters-new-delhi",
+      "slug": "cbi-headquarters-new-delhi",
+      "name": "CBI Headquarters, New Delhi",
+      "client_name_display": "NBCC India Limited",
+      "location_city": "New Delhi",
+      "location_state": "Delhi",
+      "location_country": "India",
+      "project_type": "Office Building",
+      "timeline_text": "1 Year",
+      "value_cr": 18,
+      "value_display": "₹18 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC Works"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 42,
+      "hero_image_url": "/project-archive/cbi-headquarters-new-delhi/hero.jpg",
+      "hero_image_alt": "CBI Headquarters, New Delhi project execution",
+      "accent": "graph",
+      "gallery": [
+        {
+          "src": "/project-archive/cbi-headquarters-new-delhi/gallery-01.jpg",
+          "alt": "CBI Headquarters, New Delhi project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/cbi-headquarters-new-delhi/gallery-02.jpg",
+          "alt": "CBI Headquarters, New Delhi project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/cbi-headquarters-new-delhi/gallery-03.jpg",
+          "alt": "CBI Headquarters, New Delhi project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/cbi-headquarters-new-delhi/gallery-04.jpg",
+          "alt": "CBI Headquarters, New Delhi project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/cbi-headquarters-new-delhi/gallery-05.jpg",
+          "alt": "CBI Headquarters, New Delhi project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["CBI-hq_new_delhi"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "CBI Headquarters, New Delhi project | Unique Engineers",
+      "seo_description": "Project archive for CBI Headquarters, New Delhi, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-high-speed-rail-ahmedabad",
+      "slug": "high-speed-rail-ahmedabad",
+      "name": "High Speed Rail, Ahmedabad",
+      "client_name_display": "B L Kashyap",
+      "location_city": "Ahmedabad",
+      "location_state": "Gujrat",
+      "location_country": "India",
+      "project_type": "Railways",
+      "timeline_text": "2 Years",
+      "value_cr": 16,
+      "value_display": "₹16 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC Works"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 43,
+      "hero_image_url": "/project-archive/high-speed-rail-ahmedabad/hero.jpg",
+      "hero_image_alt": "High Speed Rail, Ahmedabad project execution",
+      "accent": "blocks",
+      "gallery": [
+        {
+          "src": "/project-archive/high-speed-rail-ahmedabad/gallery-01.jpg",
+          "alt": "High Speed Rail, Ahmedabad project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/high-speed-rail-ahmedabad/gallery-02.jpg",
+          "alt": "High Speed Rail, Ahmedabad project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/high-speed-rail-ahmedabad/gallery-03.jpg",
+          "alt": "High Speed Rail, Ahmedabad project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/high-speed-rail-ahmedabad/gallery-04.jpg",
+          "alt": "High Speed Rail, Ahmedabad project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/high-speed-rail-ahmedabad/gallery-05.jpg",
+          "alt": "High Speed Rail, Ahmedabad project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["High-Speed-Rail-Ahmedabad-Gujarat"],
+      "sector_ids": ["sec-airport"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "High Speed Rail, Ahmedabad project | Unique Engineers",
+      "seo_description": "Project archive for High Speed Rail, Ahmedabad, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-m3m-golf-estate",
+      "slug": "m3m-golf-estate",
+      "name": "M3M Golf Estate",
+      "client_name_display": "M3M India Pvt Ltd",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Residential",
+      "timeline_text": "2 Years",
+      "value_cr": 34,
+      "value_display": "₹34 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC Works"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 44,
+      "hero_image_url": "/project-archive/m3m-golf-estate/hero.jpg",
+      "hero_image_alt": "M3M Golf Estate project execution",
+      "accent": "fan",
+      "gallery": [
+        {
+          "src": "/project-archive/m3m-golf-estate/gallery-01.jpg",
+          "alt": "M3M Golf Estate project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/m3m-golf-estate/gallery-02.jpg",
+          "alt": "M3M Golf Estate project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/m3m-golf-estate/gallery-03.jpg",
+          "alt": "M3M Golf Estate project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/m3m-golf-estate/gallery-04.jpg",
+          "alt": "M3M Golf Estate project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/m3m-golf-estate/gallery-05.jpg",
+          "alt": "M3M Golf Estate project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["M3M_Golf_Estate_Gurugram"],
+      "sector_ids": ["sec-residential"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "M3M Golf Estate project | Unique Engineers",
+      "seo_description": "Project archive for M3M Golf Estate, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-m3m-merlin",
+      "slug": "m3m-merlin",
+      "name": "M3M Merlin",
+      "client_name_display": "M3M India Pvt Ltd",
+      "location_city": "Gurugram",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "Residential",
+      "timeline_text": "2 Years",
+      "value_cr": 20,
+      "value_display": "₹20 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC Works"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 45,
+      "hero_image_url": "/project-archive/m3m-merlin/hero.jpg",
+      "hero_image_alt": "M3M Merlin project execution",
+      "accent": "current",
+      "gallery": [
+        {
+          "src": "/project-archive/m3m-merlin/gallery-01.jpg",
+          "alt": "M3M Merlin project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/m3m-merlin/gallery-02.jpg",
+          "alt": "M3M Merlin project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/m3m-merlin/gallery-03.jpg",
+          "alt": "M3M Merlin project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/m3m-merlin/gallery-04.jpg",
+          "alt": "M3M Merlin project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/m3m-merlin/gallery-05.jpg",
+          "alt": "M3M Merlin project execution photograph 5"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["M3M_Merlin_Gurugram"],
+      "sector_ids": ["sec-residential"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "M3M Merlin project | Unique Engineers",
+      "seo_description": "Project archive for M3M Merlin, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-burari-hospital",
+      "slug": "burari-hospital",
+      "name": "Burari Hospital",
+      "client_name_display": "PWD, New Delhi",
+      "location_city": "New Delhi",
+      "location_state": "Delhi",
+      "location_country": "India",
+      "project_type": "Hospital",
+      "timeline_text": "2 Years",
+      "value_cr": 18,
+      "value_display": "₹18 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC & BMS System"],
+      "status": "completed",
+      "featured": true,
+      "landmark_order": 46,
+      "hero_image_url": "/project-archive/burari-hospital/hero.jpg",
+      "hero_image_alt": "Burari Hospital project execution",
+      "accent": "droplets",
+      "gallery": [
+        {
+          "src": "/project-archive/burari-hospital/gallery-01.jpg",
+          "alt": "Burari Hospital project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/burari-hospital/gallery-02.jpg",
+          "alt": "Burari Hospital project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/burari-hospital/gallery-03.jpg",
+          "alt": "Burari Hospital project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/burari-hospital/gallery-04.jpg",
+          "alt": "Burari Hospital project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/burari-hospital/gallery-05.jpg",
+          "alt": "Burari Hospital project execution photograph 5"
+        }
+      ],
+      "video_url": "/project-archive/burari-hospital/project-video.mp4",
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["Burari-Hospital"],
+      "sector_ids": ["sec-healthcare"],
+      "service_ids": ["svc-hvac", "svc-bms"],
+      "seo_title": "Burari Hospital project | Unique Engineers",
+      "seo_description": "Project archive for Burari Hospital, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-microsoft-noida",
+      "slug": "microsoft-noida",
+      "name": "Microsoft Noida",
+      "client_name_display": "Microsoft",
+      "location_city": "Noida",
+      "location_state": "Uttar Pradesh",
+      "location_country": "India",
+      "project_type": "Office Building",
+      "timeline_text": "1 Years",
+      "value_cr": 31,
+      "value_display": "₹31 Cr",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["HVAC-Low Side", "SITC", "Ventilation work"],
+      "status": "active",
+      "featured": true,
+      "landmark_order": 47,
+      "hero_image_url": "/project-archive/microsoft-noida/hero.jpg",
+      "hero_image_alt": "Microsoft Noida project execution",
+      "accent": "pulse",
+      "gallery": [
+        {
+          "src": "/project-archive/microsoft-noida/gallery-01.jpg",
+          "alt": "Microsoft Noida project execution photograph 1"
+        }
+      ],
+      "information_status": "project_sheet",
+      "missing_fields": ["project narrative"],
+      "source_folders": ["Microsoft-noida-project"],
+      "sector_ids": ["sec-corporate-retail"],
+      "service_ids": ["svc-hvac"],
+      "seo_title": "Microsoft Noida project | Unique Engineers",
+      "seo_description": "Project archive for Microsoft Noida, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-amity-hyderabad",
+      "slug": "amity-hyderabad",
+      "name": "Amity Hyderabad",
+      "client_name_display": "To be confirmed",
+      "location_city": "Hyderabad",
+      "location_state": "Telangana",
+      "location_country": "India",
+      "project_type": "Education & Research",
+      "timeline_text": "To be confirmed",
+      "value_display": "To be confirmed",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["Scope to be confirmed"],
+      "status": "planning",
+      "featured": true,
+      "landmark_order": 48,
+      "hero_image_url": "/project-archive/amity-hyderabad/hero.jpg",
+      "hero_image_alt": "Amity Hyderabad project execution",
+      "accent": "sun",
+      "gallery": [
+        {
+          "src": "/project-archive/amity-hyderabad/gallery-01.jpg",
+          "alt": "Amity Hyderabad project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/amity-hyderabad/gallery-02.jpg",
+          "alt": "Amity Hyderabad project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/amity-hyderabad/gallery-03.jpg",
+          "alt": "Amity Hyderabad project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/amity-hyderabad/gallery-04.jpg",
+          "alt": "Amity Hyderabad project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/amity-hyderabad/gallery-05.jpg",
+          "alt": "Amity Hyderabad project execution photograph 5"
+        }
+      ],
+      "information_status": "placeholder",
+      "missing_fields": [
+        "client",
+        "timeline",
+        "project value",
+        "scope",
+        "project narrative"
+      ],
+      "source_folders": ["Amity Hyderabad"],
+      "sector_ids": ["sec-education"],
+      "service_ids": [],
+      "seo_title": "Amity Hyderabad project | Unique Engineers",
+      "seo_description": "Project archive for Amity Hyderabad, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-bhondsi-factory-solar",
+      "slug": "bhondsi-factory-solar",
+      "name": "Bhondsi Factory Solar",
+      "client_name_display": "Unique Engineers Limited",
+      "location_city": "Bhondsi",
+      "location_state": "Haryana",
+      "location_country": "India",
+      "project_type": "In-house Solar",
+      "timeline_text": "To be confirmed",
+      "value_display": "To be confirmed",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["Scope to be confirmed"],
+      "status": "planning",
+      "featured": true,
+      "landmark_order": 49,
+      "hero_image_url": "/project-archive/bhondsi-factory-solar/hero.jpg",
+      "hero_image_alt": "Bhondsi Factory Solar project execution",
+      "accent": "graph",
+      "gallery": [
+        {
+          "src": "/project-archive/bhondsi-factory-solar/gallery-01.jpg",
+          "alt": "Bhondsi Factory Solar project execution photograph 1"
+        },
+        {
+          "src": "/project-archive/bhondsi-factory-solar/gallery-02.jpg",
+          "alt": "Bhondsi Factory Solar project execution photograph 2"
+        },
+        {
+          "src": "/project-archive/bhondsi-factory-solar/gallery-03.jpg",
+          "alt": "Bhondsi Factory Solar project execution photograph 3"
+        },
+        {
+          "src": "/project-archive/bhondsi-factory-solar/gallery-04.jpg",
+          "alt": "Bhondsi Factory Solar project execution photograph 4"
+        },
+        {
+          "src": "/project-archive/bhondsi-factory-solar/gallery-05.jpg",
+          "alt": "Bhondsi Factory Solar project execution photograph 5"
+        }
+      ],
+      "information_status": "placeholder",
+      "missing_fields": [
+        "timeline",
+        "project value",
+        "scope",
+        "project narrative"
+      ],
+      "source_folders": ["Bhondsi Factory Solar (In House Company Project)"],
+      "sector_ids": ["sec-industrial"],
+      "service_ids": ["svc-solar"],
+      "seo_title": "Bhondsi Factory Solar project | Unique Engineers",
+      "seo_description": "Project archive for Bhondsi Factory Solar, with details to be confirmed.",
+      "published": true
+    },
+    {
+      "id": "prj-landmark-vinta-realty",
+      "slug": "vinta-realty",
+      "name": "Vinta Realty",
+      "client_name_display": "To be confirmed",
+      "location_city": "To be confirmed",
+      "location_country": "India",
+      "project_type": "To be confirmed",
+      "timeline_text": "To be confirmed",
+      "value_display": "To be confirmed",
+      "summary": "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation.",
+      "narrative": [
+        "Detailed project information is being consolidated. The media on this page is drawn from UEL's project archive; outstanding commercial and technical fields are clearly marked for confirmation."
+      ],
+      "scope_tags": ["Scope to be confirmed"],
+      "status": "planning",
+      "featured": true,
+      "landmark_order": 50,
+      "hero_image_url": "/project-archive/vinta-realty/hero.jpg",
+      "hero_image_alt": "Vinta Realty project execution",
+      "accent": "blocks",
+      "gallery": [
+        {
+          "src": "/project-archive/vinta-realty/gallery-01.jpg",
+          "alt": "Vinta Realty project execution photograph 1"
+        }
+      ],
+      "information_status": "placeholder",
+      "missing_fields": [
+        "timeline",
+        "project value",
+        "scope",
+        "project narrative"
+      ],
+      "source_folders": ["Vinta-realty"],
+      "sector_ids": [],
+      "service_ids": [],
+      "seo_title": "Vinta Realty project | Unique Engineers",
+      "seo_description": "Project archive for Vinta Realty, with details to be confirmed.",
+      "published": true
+    }
+  ]
+}

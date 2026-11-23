@@ -6,12 +6,12 @@ import { ContactCTA } from "@/components/site/contact-cta";
 export const metadata: Metadata = {
   title: "Work — Every project, by sector and system | Unique Engineers",
   description:
-    "Every project Unique Engineers has delivered over the last decade — 170+ mandates across nine industries. Filter the featured case studies and the full order book by sector, service, contract value and location.",
+    "Explore landmark Unique Engineers projects with dedicated pages, photographs and videos, alongside the full project record. Filter by sector, service, contract value and location.",
 };
 
 /**
  * The unified project-discovery hub. Featured case studies float on top;
- * the full 170-row order book sits below — both in ONE filter context,
+ * the full 170-row project record sits below — both in ONE filter context,
  * URL-synced (`/work?sector=data-centre&service=hvac`).
  *
  * Awaiting `searchParams` opts the route into dynamic rendering, so the

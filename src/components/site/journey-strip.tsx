@@ -8,32 +8,82 @@ import { getJourney } from "@/lib/cms";
  */
 export function JourneyStrip() {
   const all = getJourney();
-  const highlights = all.slice(0, 9);
+  // Pick a representative subset
+  const highlights = [
+    all.find((m) => m.year === "1992"),
+    all.find((m) => m.year === "2005"),
+    all.find((m) => m.year === "2012–2018"),
+    all.find((m) => m.year === "2019"),
+    all.find((m) => m.year === "2023"),
+    all.find((m) => m.year === "2024"),
+  ].filter((m): m is NonNullable<typeof m> => Boolean(m));
 
   return (
     <section className="ue-section">
       <div className="ue-container">
-        <header className="ue-journey-strip__head">
-          <p className="ue-eyebrow">Our story</p>
-          <h2 className="ue-h2 ue-journey-strip__title">
-            Built from specialist roots to a national delivery platform.
+        <header style={{ marginBottom: 40 }}>
+          <p className="ue-eyebrow">The journey</p>
+          <h2 className="ue-h2" style={{ marginTop: 8, maxWidth: "22ch" }}>
+            From specialist HVAC to multi-discipline EPC.
           </h2>
-          <p className="ue-journey-strip__intro">
-            What began as a focused HVAC practice evolved into a multi-discipline
-            engineering business trusted on critical infrastructure and
-            mission-critical projects across India.
-          </p>
         </header>
-        <div className="ue-journey-strip__grid">
-          {highlights.map((m) => (
-            <article key={m.id} className="ue-journey-strip__item">
-              <div className="ue-journey-strip__year">{m.year}</div>
-              <h3 className="ue-journey-strip__card-title">{m.title}</h3>
-              <p className="ue-journey-strip__card-copy">{m.description}</p>
-            </article>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+            gap: 0,
+            borderTop: "1px solid var(--border-color)",
+            borderBottom: "1px solid var(--border-color)",
+          }}
+        >
+          {highlights.map((m, i) => (
+            <div
+              key={m.id}
+              style={{
+                padding: "24px 16px 24px 0",
+                paddingLeft: i > 0 ? 24 : 0,
+                borderRight:
+                  i < highlights.length - 1
+                    ? "1px solid var(--border-color)"
+                    : "none",
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 13,
+                  color: "var(--accent-500)",
+                  marginBottom: 8,
+                }}
+              >
+                {m.year}
+              </div>
+              <h3
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 500,
+                  fontSize: 17,
+                  letterSpacing: "-0.012em",
+                  margin: 0,
+                  color: "var(--ink-950)",
+                }}
+              >
+                {m.title}
+              </h3>
+              <p
+                style={{
+                  marginTop: 6,
+                  fontSize: 13,
+                  lineHeight: 1.5,
+                  color: "var(--ink-500)",
+                }}
+              >
+                {m.description}
+              </p>
+            </div>
           ))}
         </div>
-        <div className="ue-journey-strip__link-wrap">
+        <div style={{ marginTop: 24, textAlign: "right" }}>
           <Link
             href="/firm"
             style={{

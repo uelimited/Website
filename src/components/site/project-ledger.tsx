@@ -61,8 +61,8 @@ export function ProjectLedger({
   sectorSlugById,
 }: ProjectLedgerProps) {
   const [query, setQuery] = useState("");
-  const [sector, setSector] = useState<string[]>([]);
-  const [service, setService] = useState<string[]>([]);
+  const [sector, setSector] = useState<string>("all");
+  const [service, setService] = useState<string>("all");
   const [expanded, setExpanded] = useState(false);
 
   const filters: LedgerFilters = useMemo(
@@ -84,7 +84,7 @@ export function ProjectLedger({
   const hrefFor = (e: LedgerEntry): string | undefined => {
     if (caseStudyHrefs?.[e.id]) return caseStudyHrefs[e.id];
     const slug = sectorSlugById?.[e.sector_id];
-    return slug ? `/work?sector=${slug}` : undefined;
+    return slug ? `/projects?sector=${slug}` : undefined;
   };
 
   return (

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getProjectHeroImage } from "@/lib/cms";
 import type { Project } from "@/data/cms/types";
 
 export function RelatedProjects({
@@ -12,7 +11,13 @@ export function RelatedProjects({
   heading?: string;
   eyebrow?: string;
 }) {
-  if (!projects.length) return null;
+  const visible = projects.filter(
+    (p) =>
+      p.published &&
+      p.information_status !== "placeholder" &&
+      p.scope_tags.some((tag) => !/confirm|placeholder/i.test(tag)),
+  );
+  if (!visible.length) return null;
 
   return (
     <section
@@ -46,40 +51,31 @@ export function RelatedProjects({
           gap: 24,
         }}
       >
-        {projects.map((p) => {
-          const image = getProjectHeroImage(p);
-          return (
-            <Link
-              key={p.id}
-              href={`/projects/${p.slug}`}
-              className="group"
-              style={{
-                display: "block",
-                border: "1px solid var(--border-color)",
-                borderRadius: 12,
-                background: "var(--paper)",
-                textDecoration: "none",
-                color: "inherit",
-                overflow: "hidden",
-                transition: "border-color var(--dur-2) var(--ease-std)",
-              }}
-            >
+        {visible.map((p) => (
+          <Link
+            key={p.id}
+            href={`/projects/${p.slug}`}
+            className="group"
+            style={{
+              display: "block",
+              border: "1px solid var(--border-color)",
+              borderRadius: 12,
+              background: "var(--paper)",
+              textDecoration: "none",
+              color: "inherit",
+              overflow: "hidden",
+              transition: "border-color var(--dur-2) var(--ease-std)",
+            }}
+          >
             <div
               style={{
                 aspectRatio: "16 / 10",
-                position: "relative",
-                background: image
-                  ? `url(${image}) center/cover no-repeat`
+                background: p.hero_image_url
+                  ? `url(${p.hero_image_url}) center/cover no-repeat`
                   : "var(--ink-100)",
                 borderBottom: "1px solid var(--border-color)",
               }}
-            >
-              {!p.hero_image_url && image && (
-                <span className="ue-work-card__cover-label">
-                  Representative image
-                </span>
-              )}
-            </div>
+            />
             <div style={{ padding: "20px 22px 24px" }}>
               <div
                 style={{
@@ -113,8 +109,9 @@ export function RelatedProjects({
                   lineHeight: 1.45,
                 }}
               >
-                {p.location_city}
-                {p.location_state ? `, ${p.location_state}` : ""}
+                {[p.location_city, p.location_state]
+                  .filter((v) => v && !/confirm|pending/i.test(v))
+                  .join(", ")}
               </p>
               <div
                 style={{
@@ -135,9 +132,8 @@ export function RelatedProjects({
                 />
               </div>
             </div>
-            </Link>
-          );
-        })}
+          </Link>
+        ))}
       </div>
     </section>
   );

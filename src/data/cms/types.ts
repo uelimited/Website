@@ -38,7 +38,6 @@ export type Service = {
   blurb: string; // one-liner for nav menus
   tagline?: string; // human one-liner ("Air you never have to think about.")
   scope_unit: string; // "TR · CFM"
-  accent: Accent;
   intro_paragraphs: string[]; // landing-page overview
   approach_paragraphs: string[]; // how UEL approaches this discipline (technical)
   approach_plain?: string[]; // plain-language version shown first
@@ -171,17 +170,21 @@ export type Project = {
   execution_snapshots?: ExecutionSnapshot[];
   certifications?: string[]; // ["IGBC Gold"]
   gallery?: Image[];
+  video_url?: string;
+  information_status?: "project_sheet" | "placeholder";
+  missing_fields?: string[];
+  source_folders?: string[];
   seo_title?: string;
   seo_description?: string;
   published: boolean;
 };
 
 // -----------------------------------------------------------------
-// project_ledger — the full 10-year order book, consolidated
+// project_ledger — the full 10-year project record, consolidated
 //
 // Distinct from `projects` (the curated case studies). Every entry is
 // a real facility/site delivered over the last decade, categorised by
-// sector and (where evidenced) service. Compiled from the order book;
+// sector and (where evidenced) service. Compiled from the historic project register;
 // repeat purchase orders are consolidated per site, tiny sub-contracts
 // (< ₹0.5 Cr) are excluded. Sector/service ids match the tables above.
 // -----------------------------------------------------------------
@@ -239,6 +242,9 @@ export type Leader = {
   bio?: string;
   responsibilities?: string[];
   portrait_url?: string;
+  group?: "founder_directors" | "directors" | "executive_leadership";
+  profile_status?: "confirmed" | "awaiting_profile";
+  function?: string;
   sort_order: number;
 };
 
@@ -281,4 +287,76 @@ export type Office = {
   lng?: number;
   is_hq: boolean;
   sort_order: number;
+};
+
+// -----------------------------------------------------------------
+// method_statements — controlled public capability index
+// -----------------------------------------------------------------
+
+export type MethodLibrary = {
+  id: string;
+  name: string;
+  description: string;
+  href: string;
+  count: number;
+};
+
+export type MethodStatement = {
+  id: string;
+  code: string;
+  title: string;
+  library_id: string;
+  library_name: string;
+  section: string;
+  href: string;
+  availability: string;
+  source_file: string;
+  search_text: string;
+};
+
+export type MethodStatementRegistry = {
+  meta: {
+    source_directory: string;
+    generated_at: string;
+    publication_policy: string;
+  };
+  libraries: MethodLibrary[];
+  statements: MethodStatement[];
+};
+
+export type OrganisationRegistry = {
+  meta: {
+    last_reviewed: string;
+    publication_rule: string;
+  };
+  functions: Array<{
+    id: string;
+    name: string;
+    description: string;
+    count: number | null;
+    count_label: string;
+    owner: string;
+    status: "awaiting_validation" | "confirmed";
+  }>;
+  culture: {
+    principles: Array<{ title: string; body: string }>;
+    photo_slots: string[];
+  };
+  workforce: {
+    model_layers: Array<{ title: string; body: string }>;
+    continuity_controls: string[];
+    metrics: Array<{
+      label: string;
+      value: number | null;
+      display: string;
+      owner: string;
+    }>;
+  };
+  innovation: {
+    principles: string[];
+    use_cases: Array<{ title: string; body: string; status: string }>;
+  };
+  corporate_snapshot: {
+    review_tracks: Array<{ title: string; body: string; status: string }>;
+  };
 };

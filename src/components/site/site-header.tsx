@@ -19,14 +19,17 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Menu, ArrowRight } from "lucide-react";
-import { NAV, SECTOR_NAV, DISCIPLINES } from "@/data/firm";
+import { NAV, SECTOR_NAV } from "@/data/firm";
+import { SERVICES } from "@/data/site-content";
+import { WHY_PAGES } from "@/data/why-unique";
 import { Wordmark } from "./wordmark";
 import { cn } from "@/lib/utils";
+import { getCompanyFactDisplay } from "@/data/company-facts";
 
 type NavItem = {
   href: string;
   label: string;
-  menu?: "capabilities" | "sectors" | "firm";
+  menu?: "capabilities" | "sectors" | "firm" | "why";
 };
 
 export function SiteHeader() {
@@ -41,11 +44,26 @@ export function SiteHeader() {
   }, []);
 
   const isActive = (href: string) =>
-    href === "/"
-      ? pathname === "/"
-      : href === "/firm"
-        ? pathname === "/firm"
-        : pathname.startsWith(href);
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const isItemActive = (item: NavItem) =>
+    isActive(item.href) ||
+    (item.menu === "capabilities" &&
+      pathname.startsWith("/execution-library")) ||
+    (item.menu === "firm" &&
+      [
+        "/leadership",
+        "/culture",
+        "/engineering-strength",
+        "/workforce",
+        "/journey",
+        "/innovation-ai",
+        "/corporate-snapshot",
+        "/quality-safety",
+        "/technology",
+        "/approach",
+        "/careers",
+      ].some((href) => pathname.startsWith(href)));
 
   return (
     <header
@@ -57,10 +75,10 @@ export function SiteHeader() {
           <Wordmark />
         </Link>
 
-        {/* Desktop nav — Capabilities, Sectors, and The firm open menus;
-          Projects and Careers remain direct links.
+        {/* Desktop nav — four peers (Capabilities, Industries, Projects, Company).
+            Capabilities, Industries and Company open mega-menus.
             The wordmark is the home link, so Home is not repeated. */}
-        <NavigationMenu className="hidden lg:flex ml-auto" align="start">
+        <NavigationMenu className="hidden md:flex ml-auto" align="start">
           <NavigationMenuList className="gap-0">
             {(NAV as NavItem[]).map((item) =>
               item.menu ? (
@@ -68,7 +86,7 @@ export function SiteHeader() {
                   <NavigationMenuTrigger
                     className={cn(
                       "ue-nav-link",
-                      isActive(item.href) && "ue-nav-link--active",
+                      isItemActive(item) && "ue-nav-link--active",
                     )}
                   >
                     {item.label}
@@ -76,10 +94,12 @@ export function SiteHeader() {
                   <NavigationMenuContent className="p-0">
                     {item.menu === "sectors" ? (
                       <SectorsMenu />
-                    ) : item.menu === "capabilities" ? (
-                      <CapabilitiesMenu />
-                    ) : (
+                    ) : item.menu === "firm" ? (
                       <FirmMenu />
+                    ) : item.menu === "why" ? (
+                      <WhyMenu />
+                    ) : (
+                      <CapabilitiesMenu />
                     )}
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -87,10 +107,10 @@ export function SiteHeader() {
                 <NavigationMenuItem key={item.href}>
                   <NavigationMenuLink
                     render={<Link href={item.href} />}
-                    data-active={isActive(item.href) ? "" : undefined}
+                    data-active={isItemActive(item) ? "" : undefined}
                     className={cn(
                       "ue-nav-link",
-                      isActive(item.href) && "ue-nav-link--active",
+                      isItemActive(item) && "ue-nav-link--active",
                     )}
                   >
                     {item.label}
@@ -101,26 +121,133 @@ export function SiteHeader() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="ml-auto flex items-center gap-2 lg:ml-4">
-          <div className="hidden items-center gap-2 lg:flex">
-            <Button
-              asChild
-              className="rounded-full px-5 h-9 text-[14px] font-medium"
-            >
-              <Link href="/contact">Contact</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="rounded-full px-5 h-9 text-[14px] font-medium"
-            >
-              <Link href="/registration">Vendors Registration</Link>
-            </Button>
-          </div>
+        <div className="ml-auto md:ml-4 flex items-center gap-2">
+          <Button
+            asChild
+            className="rounded-full px-5 h-9 text-[14px] font-medium"
+          >
+            <Link href="/contact">Contact</Link>
+          </Button>
           <MobileMenu />
         </div>
       </div>
     </header>
+  );
+}
+
+function FirmMenu() {
+  const links = [
+    {
+      href: "/about",
+      name: "Our story",
+      blurb: "Who we are and how the practice has grown.",
+    },
+    {
+      href: "/leadership",
+      name: "Leadership",
+      blurb: "The people responsible for our direction and delivery.",
+    },
+    {
+      href: "/approach",
+      name: "How we deliver",
+      blurb: "Engineering, site execution, quality and safety.",
+    },
+    {
+      href: "/careers",
+      name: "Careers",
+      blurb: "Build your career with Unique Engineers.",
+    },
+    {
+      href: "/investors",
+      name: "Investors",
+      blurb: "Company information and investor document downloads.",
+    },
+    {
+      href: "/registration",
+      name: "Vendor registration",
+      blurb: "Register as a supplier or contractor.",
+    },
+  ];
+
+  return (
+    <div className="ue-services-menu">
+      <div className="ue-services-menu__head">
+        <div className="ue-eyebrow" style={{ margin: 0 }}>
+          About Unique
+        </div>
+        <p
+          className="text-[color:var(--ink-500)]"
+          style={{ fontSize: 14, margin: "8px 0 0", maxWidth: "36ch" }}
+        >
+          Our history, our people and the way we work.
+        </p>
+      </div>
+      <div className="ue-services-menu__grid">
+        {links.map((item, index) => (
+          <NavigationMenuLink
+            key={item.href}
+            render={<Link href={item.href} />}
+            className="ue-services-menu__item group"
+          >
+            <span className="num">{String(index + 1).padStart(2, "0")}</span>
+            <span className="body">
+              <span className="name">{item.name}</span>
+              <span className="blurb">{item.blurb}</span>
+            </span>
+          </NavigationMenuLink>
+        ))}
+      </div>
+      <div className="ue-services-menu__foot">
+        <Link
+          href="/about"
+          className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
+        >
+          Get to know Unique <ArrowRight className="size-3.5" aria-hidden />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function WhyMenu() {
+  return (
+    <div className="ue-services-menu">
+      <div className="ue-services-menu__head">
+        <div className="ue-eyebrow" style={{ margin: 0 }}>
+          Why Unique
+        </div>
+        <p
+          className="text-[color:var(--ink-500)]"
+          style={{ fontSize: 14, margin: "8px 0 0", maxWidth: "36ch" }}
+        >
+          Value we add beyond installing the specification.
+        </p>
+      </div>
+      <div className="ue-services-menu__grid">
+        {WHY_PAGES.map((p, index) => (
+          <NavigationMenuLink
+            key={p.slug}
+            render={<Link href={`/why-unique/${p.slug}`} />}
+            className="ue-services-menu__item group"
+          >
+            <span className="num">{String(index + 1).padStart(2, "0")}</span>
+            <span className="body">
+              <span className="name">{p.name}</span>
+              <span className="blurb">{p.text}</span>
+            </span>
+          </NavigationMenuLink>
+        ))}
+      </div>
+      <div className="ue-services-menu__foot">
+        <Link
+          href="/why-unique"
+          className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-600)]"
+        >
+          View all eight value additions{" "}
+          <ArrowRight className="size-3.5" aria-hidden />
+        </Link>
+      </div>
+    </div>
   );
 }
 
@@ -129,37 +256,46 @@ function CapabilitiesMenu() {
     <div className="ue-services-menu">
       <div className="ue-services-menu__head">
         <div className="ue-eyebrow" style={{ margin: 0 }}>
-          Capabilities
+          Services
         </div>
         <p
           className="text-[color:var(--ink-500)]"
           style={{ fontSize: 14, margin: "8px 0 0", maxWidth: "36ch" }}
         >
-          Eight disciplines under one delivery standard.
+          {getCompanyFactDisplay("delivery_disciplines")} under one delivery
+          standard.
         </p>
       </div>
       <div className="ue-services-menu__grid">
-        {DISCIPLINES.map((d) => (
+        {SERVICES.map((d, index) => (
           <NavigationMenuLink
             key={d.slug}
             render={<Link href={`/services/${d.slug}`} />}
             className="ue-services-menu__item group"
           >
-            <span className="num">{d.num}</span>
+            <span className="num">{String(index + 1).padStart(2, "0")}</span>
             <span className="body">
               <span className="name">{d.name}</span>
-              <span className="blurb">{d.blurb}</span>
+              <span className="blurb">{d.description}</span>
             </span>
           </NavigationMenuLink>
         ))}
       </div>
       <div className="ue-services-menu__foot">
-        <Link
-          href="/services"
-          className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
-        >
-          View all capabilities <ArrowRight className="size-3.5" aria-hidden />
-        </Link>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
+          >
+            View all services <ArrowRight className="size-3.5" aria-hidden />
+          </Link>
+          <Link
+            href="/execution-library"
+            className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--ink-700)] hover:text-[color:var(--accent-700)]"
+          >
+            Execution Library <ArrowRight className="size-3.5" aria-hidden />
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -170,7 +306,7 @@ function SectorsMenu() {
     <div className="ue-services-menu">
       <div className="ue-services-menu__head">
         <div className="ue-eyebrow" style={{ margin: 0 }}>
-          Sectors
+          Industries
         </div>
         <p
           className="text-[color:var(--ink-500)]"
@@ -199,91 +335,7 @@ function SectorsMenu() {
           href="/sectors"
           className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
         >
-          View all sectors <ArrowRight className="size-3.5" aria-hidden />
-        </Link>
-      </div>
-    </div>
-  );
-}
-
-function FirmMenu() {
-  return (
-    <div className="ue-services-menu">
-      <div className="ue-services-menu__head">
-        <div className="ue-eyebrow" style={{ margin: 0 }}>
-          The firm
-        </div>
-        <p
-          className="text-[color:var(--ink-500)]"
-          style={{ fontSize: 14, margin: "8px 0 0", maxWidth: "36ch" }}
-        >
-          Meet the people and explore opportunities at Unique Engineers.
-        </p>
-      </div>
-      <div className="ue-services-menu__grid">
-        <NavigationMenuLink
-          render={<Link href="/firm#our-story" />}
-          className="ue-services-menu__item group"
-        >
-          <span className="num">01</span>
-          <span className="body">
-            <span className="name">Our Story</span>
-            <span className="blurb">
-              See the history and momentum behind the firm.
-            </span>
-          </span>
-        </NavigationMenuLink>
-        <NavigationMenuLink
-          render={<Link href="/firm#how-we-deliver" />}
-          className="ue-services-menu__item group"
-        >
-          <span className="num">02</span>
-          <span className="body">
-            <span className="name">How We Deliver</span>
-            <span className="blurb">
-              Precision planning, execution and accountability on every site.
-            </span>
-          </span>
-        </NavigationMenuLink>
-        <NavigationMenuLink
-          render={<Link href="/firm#leadership" />}
-          className="ue-services-menu__item group"
-        >
-          <span className="num">03</span>
-          <span className="body">
-            <span className="name">Our Leadership</span>
-            <span className="blurb">
-              Meet the engineers behind the practice.
-            </span>
-          </span>
-        </NavigationMenuLink>
-        <NavigationMenuLink
-          render={<Link href="/firm/culture" />}
-          className="ue-services-menu__item group"
-        >
-          <span className="num">04</span>
-          <span className="body">
-            <span className="name">Culture</span>
-            <span className="blurb">Meet the people and values behind the work.</span>
-          </span>
-        </NavigationMenuLink>
-        <NavigationMenuLink
-          render={<Link href="/investors" />}
-          className="ue-services-menu__item group"
-        >
-          <span className="num">05</span>
-          <span className="body">
-            <span className="name">Investors</span>
-            <span className="blurb">Company profile, scale and project record.</span>
-          </span>
-        </NavigationMenuLink>
-      </div>
-      <div className="ue-services-menu__foot">
-        <Link
-          href="/firm"
-          className="inline-flex items-center gap-2 text-[13px] font-medium text-[color:var(--accent-500)] hover:text-[color:var(--accent-700)]"
-        >
-          Firm overview <ArrowRight className="size-3.5" aria-hidden />
+          View all industries <ArrowRight className="size-3.5" aria-hidden />
         </Link>
       </div>
     </div>
@@ -292,9 +344,24 @@ function FirmMenu() {
 
 function MobileMenu() {
   const primary = NAV as NavItem[];
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const [lastPath, setLastPath] = useState(pathname);
+  if (lastPath !== pathname) {
+    setLastPath(pathname);
+    setOpen(false);
+  }
+  const firmLinks = [
+    { href: "/about", label: "Our story" },
+    { href: "/leadership", label: "Leadership" },
+    { href: "/approach", label: "How we deliver" },
+    { href: "/careers", label: "Careers" },
+    { href: "/investors", label: "Investors" },
+    { href: "/registration", label: "Vendor registration" },
+  ];
   return (
-    <div className="lg:hidden">
-      <Sheet>
+    <div className="md:hidden">
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger
           aria-label="Open menu"
           className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-[color:var(--border-color)] bg-transparent text-[color:var(--ink-950)] transition-colors hover:bg-[color:var(--ink-50)] focus-visible:outline-2 focus-visible:outline-[color:var(--accent-500)] focus-visible:outline-offset-2"
@@ -306,29 +373,48 @@ function MobileMenu() {
           className="bg-[color:var(--paper)] border-l-[color:var(--border-color)] overflow-y-auto"
         >
           <SheetTitle className="sr-only">Navigation</SheetTitle>
-          <div className="pt-12 px-6 flex flex-col gap-1">
+          <div
+            className="pt-12 px-6 flex flex-col gap-1"
+            onClick={(event) => {
+              if ((event.target as HTMLElement).closest("a")) setOpen(false);
+            }}
+          >
             {primary.map((item) => (
-              <div key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block py-3 text-[17px] font-medium text-[color:var(--ink-950)] border-b border-[color:var(--border-color)]"
-                >
-                  {item.label}
-                </Link>
-                {item.menu === "firm" && (
-                  <div className="ue-mobile-firm-links">
-                    <Link href="/firm#our-story">Our Story</Link>
-                    <Link href="/firm#how-we-deliver">How We Deliver</Link>
-                    <Link href="/firm#leadership">Our Leadership</Link>
-                    <Link href="/firm/culture">Culture</Link>
-                    <Link href="/investors">Investors</Link>
-                  </div>
-                )}
-              </div>
+              <Link
+                key={item.href}
+                href={item.href}
+                className="py-3 text-[17px] font-medium text-[color:var(--ink-950)] border-b border-[color:var(--border-color)]"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="pt-5 pb-1 text-[12px] font-medium tracking-[0.02em] text-[color:var(--ink-400)]">
+              About Unique
+            </div>
+            {firmLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="py-2 text-[15px] text-[color:var(--ink-700)]"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="pt-5 pb-1 text-[12px] font-medium tracking-[0.02em] text-[color:var(--ink-400)]">
+              Why Unique
+            </div>
+            {WHY_PAGES.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/why-unique/${p.slug}`}
+                className="py-2 text-[15px] text-[color:var(--ink-700)]"
+              >
+                {p.name}
+              </Link>
             ))}
             {/* Sector quick-links — surface the high-value verticals directly */}
             <div className="pt-5 pb-1 text-[12px] font-medium tracking-[0.02em] text-[color:var(--ink-400)]">
-              Sectors
+              Industries
             </div>
             {SECTOR_NAV.slice(0, 4).map((s) => (
               <Link
@@ -340,16 +426,16 @@ function MobileMenu() {
               </Link>
             ))}
             <Link
+              href="/execution-library"
+              className="mt-3 py-3 text-[15px] font-medium text-[color:var(--accent-600)] border-y border-[color:var(--border-color)]"
+            >
+              Execution Library
+            </Link>
+            <Link
               href="/contact"
               className="mt-4 inline-flex items-center justify-center rounded-full bg-[color:var(--accent-500)] px-5 h-11 text-[15px] font-medium text-white"
             >
               Contact
-            </Link>
-            <Link
-              href="/registration"
-              className="inline-flex items-center justify-center rounded-full border border-[color:var(--border-color)] px-5 h-11 text-[15px] font-medium text-[color:var(--ink-950)]"
-            >
-              Vendors Registration
             </Link>
           </div>
         </SheetContent>

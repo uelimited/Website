@@ -17,17 +17,37 @@ src/
   app/                     Routes (App Router). One folder per URL segment.
     layout.tsx             Root layout — fonts, <SiteHeader/>, <SiteFooter/>
     page.tsx               Home
-    work/                  Unified project hub (dynamic — reads searchParams)
+    projects/              Unified project hub + 52 project detail pages
     services/[slug]/[sub]/ Capabilities → discipline → sub-discipline
     sectors/[slug]/        Sectors → sector detail
-    projects/[slug]/       Case-study detail
-    firm/ approach/ careers/ contact/
+    projects/[slug]/       Case-study detail, with the deck's facts and scope of work
+                           by service where the capability decks cover the project
+    why-unique/[slug]/     One page per value addition (DfMA, the Bhondsi yard, floor
+                           kits, AI workflows, intelligent buildings) and an index
+    firm/ leadership/ culture/ engineering-strength/ workforce/ journey/
+    innovation-ai/ corporate-snapshot/ approach/ careers/ contact/
   components/
     site/                  Page sections & site-specific components (~26 files)
+    capability/            Industry and service detail pages: one block renderer
+                           (capability-page.tsx) and the motion components it uses
+      building/            The scroll driven 3D models (three.js): kit.ts builds
+                           solids, parts.ts holds the shared parts (storeys,
+                           chillers, tanks, panels, sprinklers), stage.ts draws a
+                           model, building-explorer.tsx is the pinned section and
+                           packs.ts lists the models by name. dc-model.ts and
+                           dc-views.ts are the data centre; models/ holds one file
+                           per other building (fab, factory, terminal, campus,
+                           hospital, mixed-use, residential) and per technique
+                           (module, yard, floor-kits), each with its own
+                           camera stops and label points. A page downloads only
+                           the model it shows, when the section comes near.
     ui/                    shadcn/ui primitives (button, input, sheet, …)
   data/
     cms/                   The content — JSON + types.ts (the "CMS")
-    firm.ts                Site config: company facts, hero, nav, homepage stats
+    capability/            Industry and service page content, as typed block lists
+                           taken from the capability decks (types.ts explains the blocks)
+    company-facts.ts       Typed access to the company fact register
+    firm.ts                Narrative, capabilities, hero and navigation
     careers.ts             Careers page content
     subservices.ts         Long-form body content for sub-discipline pages
   lib/
@@ -37,8 +57,10 @@ src/
   styles/
     design-tokens.css      Colours, type, spacing… (single source of truth)
     design-system.css      .ue-* utility classes
+    capability.css         .ue-cap-* classes for the industry and service pages
     globals.css            Resets + wiring
 public/                    Static assets (images, hero.mp4, india.svg)
+scripts/                   Repeatable content importers
 ```
 
 ---
@@ -47,6 +69,16 @@ public/                    Static assets (images, hero.mp4, india.svg)
 
 There's no database. Content is JSON in `src/data/cms/`, typed in `types.ts`, and
 read through **one access layer: `src/lib/cms.ts`**.
+
+Company-wide facts and figures have an additional governance layer:
+`src/data/cms/company_facts.json` stores the value, period, as-of date, owner,
+visibility, source and verification status for every reusable company claim.
+`src/data/company-facts.ts` is its typed access layer. Project-specific facts are
+imported into `landmark_projects.json` from the internal project workbook; selected
+long-form narratives remain in `projects.json`, and the historic register remains
+in `project_ledger.json`. `method_statements.json` indexes the controlled Marketing
+method libraries; `organisation.json` is the source for culture, functions, workforce,
+AI and corporate-review sections; `content_todos.json` tracks every known evidence gap.
 
 **Rule: pages read content through `cms.ts` helpers, never by importing JSON
 directly.** This keeps a single, typed, swappable seam — if this ever moves to a real
@@ -63,14 +95,20 @@ const stats = getLedgerStatsForSector(sector.id); // { count, total_cr, total_di
 Representative helpers: `getAllProjects`, `getProjectBySlug`, `getFeaturedProjects`,
 `getProjectsBySector`, `getProjectsByService`, `getProjectLedger`, `getLedgerBySector`,
 `getLedgerByService`, `getLedgerStatsFor{Sector,Service}`, `getAllSectors`,
-`getAllServices`, `getLeadership`, `getJourney`, `getCertifications`, `getWorkHubData`.
+`getAllServices`, `getLeadership`, `getJourney`, `getCertifications`, `getWorkHubData`,
+`getMethodStatementRegistry`, `getMethodStatementsForService`,
+`getOrganisationRegistry`.
 
 ### Data model
 
-Two project stores, joined to sectors and services:
+Three project stores, joined to sectors and services:
 
-- **`projects.json`** — 12 rich case studies (photographed, narrative, metrics).
-- **`project_ledger.json`** — the 170-row order book (the full track record). Each
+- **`landmark_projects.json`** — 50 photographed landmark records, generated from
+  the internal project workbook and media folders. It includes gallery/video paths,
+  taxonomy ids and explicit missing-field markers.
+- **`projects.json`** — selected long-form narratives and metrics. Matching slugs
+  are merged onto the current landmark records by `cms.ts`.
+- **`project_ledger.json`** — the 170-row historic project record. Each
   row carries a `sector_id` and `service_ids[]`.
 - **`sectors.json`**, **`services.json`**, **`service_categories.json`** — the taxonomy.
 - **Join tables** — `project_sectors.json`, `project_services.json`,
@@ -78,20 +116,26 @@ Two project stores, joined to sectors and services:
 - **Supporting** — `clients.json`, `leadership.json`, `journey.json`,
   `certifications.json`, `offices.json`, `testimonials.json`.
 
-`cms.ts` also exports `CASE_STUDY_SLUG_BY_LEDGER_ID`, which links an order-book row to
-its case study so ledger rows on `/work` can deep-link into `/projects/[slug]`.
+`cms.ts` also exports `CASE_STUDY_SLUG_BY_LEDGER_ID`, which links a project-record row to
+its case study so ledger rows on `/projects` can deep-link into `/projects/[slug]`.
+
+`scripts/import-landmark-projects.mjs` is the repeatable import path. It reads the
+workbook with the spreadsheet artifact runtime, consolidates duplicate media folders,
+keeps missing/disputed fields as placeholders, and creates web-sized assets under
+`public/project-archive/`.
 
 ---
 
-## The `/work` hub
+## The `/projects` hub
 
-The site's centrepiece — one filterable surface merging the old `/projects` +
-`/track-record` (both now 308-redirect to `/work`, configured in `next.config.ts`).
+The site's centrepiece is one filterable surface combining the landmark photographic
+archive and the controlled historic project record. `/work` and `/track-record` now
+redirect to canonical `/projects`, with query strings preserved.
 
-- **`app/work/page.tsx`** — server component; awaits `searchParams` (so it renders
+- **`app/projects/page.tsx`** — server component; awaits `searchParams` (so it renders
   server-side and is a **dynamic** route), passes data to the client hub.
 - **`components/site/work-hub.tsx`** — client component. The **URL is the source of
-  truth** for filter state: `/work?sector=data-centre&service=hvac&state=…&band=…`.
+  truth** for filter state: `/projects?sector=data-centre&service=hvac&state=…&band=…`.
   Chips are real `aria-pressed` buttons; state syncs via `router.replace(..., { scroll: false })`.
 - **`lib/ledger-filters.ts`** — framework-free filter logic (also reused by the
   scoped ledgers embedded on sector/service pages).
@@ -104,7 +148,8 @@ The site's centrepiece — one filterable surface merging the old `/projects` +
 
 - Almost every page is **statically prerendered** (SSG). Detail pages use
   `generateStaticParams`. Run `pnpm build` to see the route table.
-- **`/work` is dynamic** because it reads `searchParams` for deep-linkable filters.
+- **`/projects` and `/execution-library` are dynamic** because they read
+  `searchParams` for deep-linkable filters.
 - **Content is always present without JS.** Animations (via `motion`) are progressive
   enhancement only — no reveal ever leaves content at `opacity: 0` in the server-
   rendered HTML. Count-up stats rest at their real value; scroll reveals default to

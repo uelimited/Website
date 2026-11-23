@@ -12,6 +12,7 @@ import {
 } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { DISCIPLINES } from "@/data/firm";
+import { getCompanyFactDisplay } from "@/data/company-facts";
 
 /**
  * Home services section — pinned parallax reel.
@@ -112,7 +113,8 @@ export function ServicesScroll() {
             <div className="ue-svc-scroll__head">
               <p className="ue-eyebrow">Capabilities</p>
               <h2 className="ue-h2 ue-svc-scroll__title">
-                Eight disciplines. One delivery standard.
+                {getCompanyFactDisplay("delivery_disciplines")}. One delivery
+                standard.
               </h2>
             </div>
 

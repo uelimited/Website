@@ -33,19 +33,22 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <h6>Firm</h6>
+          <h6>About Unique</h6>
           <ul>
             <li>
-              <Link href="/firm">The firm</Link>
+              <Link href="/about">Our story</Link>
             </li>
             <li>
-              <Link href="/careers">Why join us</Link>
+              <Link href="/leadership">Leadership</Link>
             </li>
             <li>
-              <Link href="/work">Work</Link>
+              <Link href="/approach">How we deliver</Link>
             </li>
             <li>
-              <Link href="/services">Capabilities</Link>
+              <Link href="/careers">Careers</Link>
+            </li>
+            <li>
+              <Link href="/projects">Projects</Link>
             </li>
             <li>
               <Link href="/contact">Contact</Link>
@@ -69,7 +72,10 @@ export function SiteFooter() {
         <span>
           © {year} {FIRM.legalName} · Since {FIRM.foundedYear}
         </span>
-        <span>Privacy · Terms · Grievance</span>
+        <span>
+          <Link href="/privacy">Privacy</Link> ·{" "}
+          <Link href="/terms">Terms</Link>
+        </span>
       </div>
     </footer>
   );

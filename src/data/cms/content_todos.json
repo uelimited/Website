@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "purpose": "Controlled register for content that is required for the V2 website but is not yet supported by approved source material.",
+    "last_reviewed": "2026-08-26",
+    "rule": "A placeholder may identify a missing item, but no name, number, credential, client endorsement or corporate claim may be invented."
+  },
+  "items": [
+    {
+      "id": "leadership-executive-profiles",
+      "page": "/leadership",
+      "priority": "critical",
+      "item": "Confirm the full director and senior leadership roster, names, reporting titles, 80–120 word bios, credentials and approved portraits for every director, CFO, CHRO, COO, Chief Commercial Officer, Chief Engineering & Digital Officer, Head of Quality & Commissioning, Head of HSE, Head of Procurement & Supply Chain and Company Secretary & Compliance Officer.",
+      "owner": "HR / Corporate",
+      "status": "placeholder_published"
+    },
+    {
+      "id": "leadership-founder-portrait",
+      "page": "/leadership",
+      "priority": "high",
+      "item": "Provide the approved portrait and final profile review for Rajiv Aggarwal.",
+      "owner": "Corporate",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "market-leadership-claim",
+      "page": "sitewide",
+      "priority": "critical",
+      "item": "Obtain independent, current market evidence and Legal approval before publishing any 'India's largest' or '#1 MEPF firm' claim. Until then, lead with verified scale facts.",
+      "owner": "Strategy / Legal",
+      "status": "blocked_by_evidence"
+    },
+    {
+      "id": "workforce-facts",
+      "page": "/firm",
+      "priority": "high",
+      "item": "Reconcile and approve current workforce, engineer, manager, QA/QC, HSE, commissioning and design-team headcounts with an as-of date.",
+      "owner": "HR / Operations",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "project-case-study-gaps",
+      "page": "/projects",
+      "priority": "high",
+      "item": "Resolve the missing_fields listed against the 39 incomplete landmark-project records, including client, value, dates, location, scope and approved narrative where absent.",
+      "owner": "Projects / Commercial",
+      "status": "placeholder_published"
+    },
+    {
+      "id": "project-record-missing-sites",
+      "page": "/projects",
+      "priority": "high",
+      "item": "Add approved workbook records for Amity Hyderabad, Bhondsi Factory Solar and Vinta Realty; resolve the Sky Mansion value discrepancy.",
+      "owner": "Commercial / Finance",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "project-outcomes",
+      "page": "/projects/[slug]",
+      "priority": "medium",
+      "item": "Add measurable case-study outcomes: programme milestones, safety performance, commissioning results, energy or reliability outcomes and client-approved handover evidence.",
+      "owner": "Projects / QA",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "method-publication-approval",
+      "page": "/execution-library",
+      "priority": "medium",
+      "item": "Decide which controlled method statements may be released externally, in what format, and under which approval or confidentiality workflow. The public V2 currently exposes only the index.",
+      "owner": "Engineering / Legal",
+      "status": "index_only"
+    },
+    {
+      "id": "certification-evidence",
+      "page": "/quality-safety",
+      "priority": "high",
+      "item": "Attach approved certificate images or verification links, issuer, certificate number, scope and validity dates for each certification and empanelment.",
+      "owner": "QA / Corporate",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "hse-performance",
+      "page": "/quality-safety",
+      "priority": "high",
+      "item": "Provide approved HSE performance metrics with reporting period and calculation basis, such as safe work-hours, LTIFR, training hours and audit closure rate.",
+      "owner": "HSE",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "testimonial-attribution",
+      "page": "homepage / project pages",
+      "priority": "high",
+      "item": "Obtain written client approval for the two attributed testimonials, confirm full names and current titles, and retain the approval record before final publication.",
+      "owner": "Marketing / Client Relations",
+      "status": "awaiting_approval"
+    },
+    {
+      "id": "careers-stories",
+      "page": "/careers",
+      "priority": "medium",
+      "item": "Replace the three employee-story placeholders with real employees, roles, locations, approved portraits and approved quotations.",
+      "owner": "HR",
+      "status": "placeholder_published"
+    },
+    {
+      "id": "client-logo-permissions",
+      "page": "homepage / industries / projects",
+      "priority": "medium",
+      "item": "Confirm current logo artwork and publication permission for every displayed client; add missing high-resolution vector logos.",
+      "owner": "Marketing / Legal",
+      "status": "awaiting_review"
+    },
+    {
+      "id": "sustainability-evidence",
+      "page": "/technology or new sustainability page",
+      "priority": "medium",
+      "item": "Provide approved sustainability policy, carbon and resource metrics, waste controls, green-building outcomes and reporting period before creating a substantive ESG page.",
+      "owner": "Sustainability / HSE",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "current-financial-facts",
+      "page": "investor / information memorandum only",
+      "priority": "high",
+      "item": "Reconcile current order book, FY25 turnover, net worth, banking lines, credit rating and single-project capacity. Keep these off the public marketing site until Finance approves the values and as-of dates.",
+      "owner": "Finance",
+      "status": "blocked_by_reconciliation"
+    },
+    {
+      "id": "international-footprint",
+      "page": "/firm and contact CTA",
+      "priority": "medium",
+      "item": "Validate the status, dates and scope of work in Bangladesh, Nepal and Maldives before presenting them as an active operating footprint.",
+      "owner": "Operations / Legal",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "legal-pages",
+      "page": "/privacy /terms /grievance",
+      "priority": "high",
+      "item": "Provide Legal-approved privacy notice, terms of use, cookie position and grievance/contact details; replace the current non-linked footer labels.",
+      "owner": "Legal",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "enquiry-workflow",
+      "page": "/contact",
+      "priority": "high",
+      "item": "Replace the mail-client-only form with an approved enquiry endpoint or CRM route, consent text, spam protection, routing owners and response-time SLA.",
+      "owner": "IT / Business Development / Legal",
+      "status": "awaiting_implementation"
+    },
+    {
+      "id": "awards-media",
+      "page": "new recognition section",
+      "priority": "low",
+      "item": "Collect verifiable awards, professional memberships, press coverage and publication dates before adding a recognition section.",
+      "owner": "Marketing",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "functional-headcounts",
+      "page": "/engineering-strength",
+      "priority": "critical",
+      "item": "Validate current headcount by function—engineering/design, BIM, planning, procurement, site execution, quality, HSE, commissioning, commercial and corporate services—with one agreed as-of date and employment basis.",
+      "owner": "HR / Functional Heads",
+      "status": "placeholder_published"
+    },
+    {
+      "id": "workforce-model-metrics",
+      "page": "/workforce",
+      "priority": "high",
+      "item": "Confirm direct workforce, project-site workforce, approved specialist-partner count, language coverage, regional distribution, competency controls and the exact direct/partner employment basis.",
+      "owner": "HR / Operations / Procurement",
+      "status": "placeholder_published"
+    },
+    {
+      "id": "culture-photography",
+      "page": "/culture",
+      "priority": "medium",
+      "item": "Replace eight grey photography slots with authentic, approved office, site, learning, testing, celebration and community photographs, each with caption and consent confirmation.",
+      "owner": "HR / Marketing",
+      "status": "placeholder_published"
+    },
+    {
+      "id": "ai-adoption-evidence",
+      "page": "/innovation-ai",
+      "priority": "high",
+      "item": "Validate current versus pilot AI use cases, approved platforms, data-governance policy, accountable owners and at least one measured delivery outcome before changing any status to 'in use'.",
+      "owner": "Engineering / IT / Legal",
+      "status": "awaiting_source"
+    },
+    {
+      "id": "ma-diligence-pack",
+      "page": "/corporate-snapshot",
+      "priority": "critical",
+      "item": "Prepare the controlled M&A/client diligence pack: audited financials, current order book, customer concentration, management depth, statutory registrations, claims/litigation, HSE/quality evidence, working capital and integration systems map.",
+      "owner": "Finance / Legal / Corporate",
+      "status": "awaiting_source"
+    }
+  ]
+}

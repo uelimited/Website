@@ -9,6 +9,11 @@
  * photo paths with real team members before publishing (see note there).
  */
 
+import {
+  getCompanyFactDisplay,
+  getCompanyFactStat,
+} from "@/data/company-facts";
+
 export const CAREERS_HERO = {
   eyebrow: "Careers · Life at Unique Engineers",
   title: "Become the engineer you want to be.",
@@ -48,7 +53,7 @@ export const CULTURE_PILLARS = [
   {
     num: "03",
     title: "Range that compounds.",
-    body: "Nine sectors, twenty-three states, eight disciplines. Move from a data centre in Mumbai to a hospital in Delhi to a semiconductor fab in Gujarat. The breadth you build here makes you the engineer every project wants — and it's yours to keep.",
+    body: `${getCompanyFactDisplay("industries_served")}, ${getCompanyFactDisplay("states_executed")} and ${getCompanyFactDisplay("delivery_disciplines")}. Move from a data centre in Mumbai to a hospital in Delhi to a semiconductor fab in Gujarat. The breadth you build here makes you the engineer every project wants — and it's yours to keep.`,
   },
   {
     num: "04",
@@ -61,7 +66,7 @@ export const CULTURE_PILLARS = [
 export const CAREERS_OFFERS = [
   {
     title: "Mentorship that's real",
-    body: "Work directly under engineers with 15+ years on the tools. Design and BIM upskilling, honest technical reviews, and seniors who make the time.",
+    body: "Work directly under senior engineers with deep delivery experience. Design and BIM upskilling, honest technical reviews, and leaders who make the time.",
   },
   {
     title: "Delivery is rewarded",
@@ -73,7 +78,7 @@ export const CAREERS_OFFERS = [
   },
   {
     title: "The country as your classroom",
-    body: "Six regional offices, live projects across 23 states and three neighbouring countries. Cross-discipline, cross-country exposure most engineers wait a whole career for.",
+    body: `Regional offices and a documented project record across ${getCompanyFactDisplay("states_executed")}. Cross-discipline exposure most engineers wait a whole career for.`,
   },
 ];
 
@@ -81,12 +86,12 @@ export const CAREERS_OFFERS = [
 export const CAREERS_GROWTH = {
   eyebrow: "Room to rise",
   title: "A firm on the way up — with room for you on it.",
-  body: "The firm entered the data-centre vertical in 2023 and semiconductors in 2024, and now handles mandates up to ₹1,000 Cr. New fronts open every year — and the people who open them are the ones already here.",
+  body: "The firm entered the data-centre vertical in 2023 and semiconductors in 2024. New fronts open every year — and the people who open them are the ones already here.",
   stats: [
-    { n: "2,500+", l: "People on the team" },
-    { n: "275+", l: "Managers & engineers" },
-    { n: "9", l: "Industries you can work across" },
-    { n: "23", l: "States, plus 3 countries" },
+    getCompanyFactStat("projects_last_decade", "Projects · last decade"),
+    getCompanyFactStat("delivery_disciplines"),
+    getCompanyFactStat("industries_served"),
+    getCompanyFactStat("states_executed"),
   ],
 };
 

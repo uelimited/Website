@@ -1,0 +1,11 @@
+node_modules
+.next
+.git
+.codex
+.agents
+docs
+scripts
+src/data/cms/company_facts.json
+src/data/cms/content_todos.json
+
+public/hero.mp4

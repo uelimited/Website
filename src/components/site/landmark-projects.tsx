@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import {
-  getLandmarkProjects,
-  getClientById,
-  getProjectHeroImage,
-} from "@/lib/cms";
+import { getLandmarkProjects, getClientById } from "@/lib/cms";
 
 /**
  * "Landmark projects" — home-page showcase of flagship mandates.
@@ -16,12 +12,11 @@ import {
  * links to its case-study page.
  */
 export function LandmarkProjects() {
-  const projects = getLandmarkProjects();
+  const projects = getLandmarkProjects().slice(0, 5);
   const [featured, ...rest] = projects;
-  const featuredImage = featured ? getProjectHeroImage(featured) : null;
 
   return (
-    <section className="ue-landmark">
+    <section id="landmark-projects" className="ue-landmark">
       <div className="ue-container">
         <div className="ue-landmark__head">
           <div>
@@ -46,17 +41,12 @@ export function LandmarkProjects() {
             <div
               className="ue-landmark__cover ue-landmark__cover--featured"
               style={{
-                background: featuredImage
-                  ? `linear-gradient(180deg, rgba(10,12,16,0) 60%, rgba(10,12,16,0.4) 100%), url(${featuredImage}) center/cover no-repeat`
+                background: featured.hero_image_url
+                  ? `linear-gradient(180deg, rgba(10,12,16,0) 60%, rgba(10,12,16,0.4) 100%), url(${featured.hero_image_url}) center/cover no-repeat`
                   : undefined,
               }}
             >
-              {!featuredImage && <div className="ue-photo" />}
-              {!featured.hero_image_url && featuredImage && (
-                <span className="ue-work-card__cover-label">
-                  Representative image
-                </span>
-              )}
+              {!featured.hero_image_url && <div className="ue-photo" />}
               <span className="ue-landmark__tag">Featured mandate</span>
             </div>
             <div className="ue-landmark__body">
@@ -99,29 +89,22 @@ export function LandmarkProjects() {
         )}
 
         <div className="ue-landmark__grid">
-          {rest.map((p) => {
-            const image = getProjectHeroImage(p);
-            return (
-              <Link
-                key={p.id}
-                href={`/projects/${p.slug}`}
-                className="ue-landmark__card group"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
+          {rest.map((p) => (
+            <Link
+              key={p.id}
+              href={`/projects/${p.slug}`}
+              className="ue-landmark__card group"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
               <div
                 className="ue-landmark__cover"
                 style={{
-                  background: image
-                    ? `url(${image}) center/cover no-repeat`
+                  background: p.hero_image_url
+                    ? `url(${p.hero_image_url}) center/cover no-repeat`
                     : undefined,
                 }}
               >
-                {!image && <div className="ue-photo" />}
-                {!p.hero_image_url && image && (
-                  <span className="ue-work-card__cover-label">
-                    Representative image
-                  </span>
-                )}
+                {!p.hero_image_url && <div className="ue-photo" />}
               </div>
               <div className="ue-landmark__body">
                 <div className="ue-landmark__client">
@@ -163,13 +146,12 @@ export function LandmarkProjects() {
                   ))}
                 </ul>
               </div>
-              </Link>
-            );
-          })}
+            </Link>
+          ))}
         </div>
 
         <div className="ue-landmark__foot">
-          <Link href="/work" className="ue-landmark__more">
+          <Link href="/projects" className="ue-landmark__more">
             Review full project record
             <ArrowRight className="size-4" aria-hidden />
           </Link>
