@@ -58,50 +58,48 @@ export function HomeHero() {
   return (
     <section className="ue-hero-v2">
       <h1 className="sr-only">{HERO.title}</h1>
-      <div className="ue-container">
-        <div className="ue-hero-v2__card">
-          {videoFailed ? (
-            <Image
-              className="ue-hero-v2__image"
-              src="/services/scaffold-silhouettes.jpg"
-              alt=""
-              fill
-              sizes="100vw"
-            />
-          ) : (
-            <video
-              ref={videoRef}
-              className="ue-hero-v2__image"
-              src="/uel-homepage-hero.mp4"
-              poster="/services/scaffold-silhouettes.jpg"
-              muted={muted}
-              loop
-              playsInline
-              preload="metadata"
-              onVolumeChange={({ currentTarget }) => {
-                setMuted(currentTarget.muted);
-                setVolume(currentTarget.volume);
-              }}
-              onError={() => setVideoFailed(true)}
-            />
-          )}
+      <div className="ue-hero-v2__card">
+        {videoFailed ? (
+          <Image
+            className="ue-hero-v2__image"
+            src="/services/scaffold-silhouettes.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+          />
+        ) : (
+          <video
+            ref={videoRef}
+            className="ue-hero-v2__image"
+            src="/uel-homepage-hero.mp4"
+            poster="/services/scaffold-silhouettes.jpg"
+            muted={muted}
+            loop
+            playsInline
+            preload="metadata"
+            onVolumeChange={({ currentTarget }) => {
+              setMuted(currentTarget.muted);
+              setVolume(currentTarget.volume);
+            }}
+            onError={() => setVideoFailed(true)}
+          />
+        )}
 
-          {!videoFailed && (
-            <div className="ue-hero-v2__controls" role="group" aria-label="Hero video volume">
-              <button type="button" onClick={toggleMute} aria-label={muted ? "Unmute video" : "Mute video"}>
-                {muted ? <VolumeX size={18} aria-hidden /> : <Volume2 size={18} aria-hidden />}
-              </button>
-              <input
-                type="range"
-                min={0}
-                max={100}
-                value={muted ? 0 : Math.round(volume * 100)}
-                onChange={(event) => changeVolume(event.currentTarget.valueAsNumber / 100)}
-                aria-label="Video volume"
-              />
-            </div>
-          )}
-        </div>
+        {!videoFailed && (
+          <div className="ue-hero-v2__controls" role="group" aria-label="Hero video volume">
+            <button type="button" onClick={toggleMute} aria-label={muted ? "Unmute video" : "Mute video"}>
+              {muted ? <VolumeX size={18} aria-hidden /> : <Volume2 size={18} aria-hidden />}
+            </button>
+            <input
+              type="range"
+              min={0}
+              max={100}
+              value={muted ? 0 : Math.round(volume * 100)}
+              onChange={(event) => changeVolume(event.currentTarget.valueAsNumber / 100)}
+              aria-label="Video volume"
+            />
+          </div>
+        )}
       </div>
     </section>
   );

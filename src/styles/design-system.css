@@ -3125,21 +3125,13 @@ video {
   }
 }
 
-/* ============================================================
-  Hero v2 — tall rounded image card, title overlaid on image
-   ============================================================ */
-.ue-hero-v2 {
-  padding: 24px 0 64px;
-  background: var(--paper);
-}
+/* Full-width homepage video hero. */
 .ue-hero-v2__card {
   position: relative;
-  height: calc(100svh - 24px - 64px - 16px); /* fill viewport under header */
-  min-height: 560px;
-  border-radius: var(--radius-xl);
+  height: 100vh;
+  height: 100svh;
   overflow: hidden;
   background: var(--ink-950);
-  box-shadow: var(--shadow-md);
   isolation: isolate;
 }
 .ue-hero-v2__image {
@@ -3307,13 +3299,9 @@ video {
   flex-wrap: wrap;
 }
 @media (max-width: 820px) {
-  .ue-hero-v2 {
-    padding: 16px 0 48px;
-  }
   .ue-hero-v2__card {
     aspect-ratio: 16 / 9;
     height: auto;
-    min-height: 0;
   }
   video.ue-hero-v2__image {
     object-fit: contain;
