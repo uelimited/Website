@@ -1,15 +1,37 @@
 "use client";
 
-import { Volume2, VolumeX } from "lucide-react";
+import { Maximize, Minimize, Volume2, VolumeX } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { HERO } from "@/data/firm";
 
 export function HomeHero() {
+  const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
   const [volume, setVolume] = useState(1);
   const [videoFailed, setVideoFailed] = useState(false);
+
+  const [fullscreenAvailable, setFullscreenAvailable] = useState(false);
+  const [fullscreen, setFullscreen] = useState(false);
+
+  useEffect(() => {
+    setFullscreenAvailable(document.fullscreenEnabled === true);
+    function syncFullscreen() {
+      setFullscreen(document.fullscreenElement === cardRef.current);
+    }
+    document.addEventListener("fullscreenchange", syncFullscreen);
+    return () => document.removeEventListener("fullscreenchange", syncFullscreen);
+  }, []);
+
+  function toggleFullscreen() {
+    const card = cardRef.current;
+    if (!card) return;
+    const action = document.fullscreenElement === card
+      ? document.exitFullscreen()
+      : card.requestFullscreen();
+    void action.catch(() => {});
+  }
 
   useEffect(() => {
     const video = videoRef.current;
@@ -58,7 +80,7 @@ export function HomeHero() {
   return (
     <section className="ue-hero-v2">
       <h1 className="sr-only">{HERO.title}</h1>
-      <div className="ue-hero-v2__card">
+      <div ref={cardRef} className="ue-hero-v2__card">
         {videoFailed ? (
           <Image
             className="ue-hero-v2__image"
@@ -86,7 +108,7 @@ export function HomeHero() {
         )}
 
         {!videoFailed && (
-          <div className="ue-hero-v2__controls" role="group" aria-label="Hero video volume">
+          <div className="ue-hero-v2__controls" role="group" aria-label="Hero video controls">
             <button type="button" onClick={toggleMute} aria-label={muted ? "Unmute video" : "Mute video"}>
               {muted ? <VolumeX size={18} aria-hidden /> : <Volume2 size={18} aria-hidden />}
             </button>
@@ -98,6 +120,15 @@ export function HomeHero() {
               onChange={(event) => changeVolume(event.currentTarget.valueAsNumber / 100)}
               aria-label="Video volume"
             />
+            {fullscreenAvailable && (
+              <button
+                type="button"
+                onClick={toggleFullscreen}
+                aria-label={fullscreen ? "Exit full screen" : "Enter full screen"}
+              >
+                {fullscreen ? <Minimize size={18} aria-hidden /> : <Maximize size={18} aria-hidden />}
+              </button>
+            )}
           </div>
         )}
       </div>
