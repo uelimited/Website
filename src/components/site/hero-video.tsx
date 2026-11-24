@@ -6,6 +6,7 @@ import Image from "next/image";
 import { HERO } from "@/data/firm";
 
 export function HomeHero() {
+  const sectionRef = useRef<HTMLElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
@@ -14,6 +15,21 @@ export function HomeHero() {
 
   const [fullscreenAvailable, setFullscreenAvailable] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const header = document.querySelector<HTMLElement>(".ue-header");
+    if (!section || !header) return;
+
+    function updateHeaderHeight() {
+      section?.style.setProperty("--hero-header-height", `${header?.offsetHeight}px`);
+    }
+
+    updateHeaderHeight();
+    const observer = new ResizeObserver(updateHeaderHeight);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     setFullscreenAvailable(document.fullscreenEnabled === true);
@@ -78,7 +94,7 @@ export function HomeHero() {
   }
 
   return (
-    <section className="ue-hero-v2">
+    <section ref={sectionRef} className="ue-hero-v2">
       <h1 className="sr-only">{HERO.title}</h1>
       <div ref={cardRef} className="ue-hero-v2__card">
         {videoFailed ? (
