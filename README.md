@@ -23,10 +23,10 @@ save. That's the whole loop.
 ### Email forms
 
 Contact and vendor registration use the existing shared EmailJS template.
-Career applications use the separate careers template and EmailJS settings.
-Copy `.env.example` to `.env.local` and fill in the public keys. Set the
-`NEXT_PUBLIC_EMAILJS_CAREERS_*` variables in the hosting environment before
-building the production site.
+All forms share the EmailJS service ID and public key. Career applications
+use a separate template. Copy `.env.example` to `.env.local` and fill in the
+public key. Set `NEXT_PUBLIC_EMAILJS_CAREERS_TEMPLATE_ID` in the hosting
+environment before building the production site.
 
 Set **To Email** to `hr@uelimited.com` in the careers template
 (`template_aiobnso`). The careers form also supplies `to_email` for templates

@@ -94,12 +94,8 @@ export async function sendEmailForm(
   channel: "general" | "careers" = "general",
 ) {
   const isCareers = channel === "careers";
-  const serviceId = isCareers
-    ? process.env.NEXT_PUBLIC_EMAILJS_CAREERS_SERVICE_ID
-    : process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-  const publicKey = isCareers
-    ? process.env.NEXT_PUBLIC_EMAILJS_CAREERS_PUBLIC_KEY
-    : process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
   const templateId = isCareers
     ? process.env.NEXT_PUBLIC_EMAILJS_CAREERS_TEMPLATE_ID
     : process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
