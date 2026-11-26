@@ -14,6 +14,8 @@ import {
   getCompanyFactStat,
 } from "@/data/company-facts";
 
+export const CAREERS_EMAIL = "hr@uelimited.com";
+
 export const CAREERS_HERO = {
   eyebrow: "Careers · Life at Unique Engineers",
   title: "Become the engineer you want to be.",
@@ -119,56 +121,3 @@ export const CAREERS_LIFE_IMAGES = [
   },
   { src: "/firm/india-presence.jpg", alt: "Pan-India project presence" },
 ];
-
-/**
- * Areas you can grow into — mirrors the eight disciplines, framed for a
- * candidate ("where you'd fit") rather than a client ("what we sell").
- */
-export const CAREERS_PATHS = [
-  "Design & BIM engineering",
-  "Site execution & project management",
-  "Testing & commissioning",
-  "QA / QC engineering",
-  "Health, safety & environment (HSE)",
-  "Operations & maintenance",
-];
-
-export const CAREER_OPENINGS = [
-  {
-    id: "design-bim-engineer",
-    title: "Design & BIM Engineer",
-    department: "Design & BIM engineering",
-    summary: "Support coordinated engineering design and model-based project delivery.",
-  },
-  {
-    id: "site-project-engineer",
-    title: "Site / Project Engineer",
-    department: "Site execution & project management",
-    summary: "Contribute to on-site execution, coordination, and project delivery.",
-  },
-  {
-    id: "testing-commissioning-engineer",
-    title: "Testing & Commissioning Engineer",
-    department: "Testing & commissioning",
-    summary: "Help verify building systems through testing and commissioning.",
-  },
-  {
-    id: "quality-engineer",
-    title: "QA / QC Engineer",
-    department: "QA / QC",
-    summary: "Support quality planning, inspections, and consistent project standards.",
-  },
-  {
-    id: "hse-engineer",
-    title: "Health, Safety & Environment Engineer",
-    department: "Health, safety & environment",
-    summary: "Help teams maintain safe, responsible project sites and practices.",
-  },
-  {
-    id: "operations-maintenance-engineer",
-    title: "Operations & Maintenance Engineer",
-    department: "Operations & maintenance",
-    summary: "Support reliable operation and upkeep of building systems.",
-  },
-];
-

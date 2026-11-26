@@ -75,10 +75,8 @@ export function SiteHeader() {
           <Wordmark />
         </Link>
 
-        {/* Desktop nav — four peers (Capabilities, Industries, Projects, Company).
-            Capabilities, Industries and Company open mega-menus.
-            The wordmark is the home link, so Home is not repeated. */}
-        <NavigationMenu className="hidden md:flex ml-auto" align="start">
+        {/* The wordmark links home. The full navigation appears on wider screens. */}
+        <NavigationMenu className="hidden lg:flex ml-auto" align="start">
           <NavigationMenuList className="gap-0">
             {(NAV as NavItem[]).map((item) =>
               item.menu ? (
@@ -121,7 +119,7 @@ export function SiteHeader() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="ml-auto md:ml-4 flex items-center gap-2">
+        <div className="ml-auto lg:ml-4 flex items-center gap-2">
           <Button
             asChild
             className="rounded-full px-5 h-9 text-[14px] font-medium"
@@ -163,11 +161,6 @@ function FirmMenu() {
       href: "/careers",
       name: "Careers",
       blurb: "Build your career with Unique Engineers.",
-    },
-    {
-      href: "/investors",
-      name: "Investors",
-      blurb: "Company information and investor document downloads.",
     },
   ];
 
@@ -358,10 +351,9 @@ function MobileMenu() {
     { href: "/leadership", label: "Leadership" },
     { href: "/approach", label: "How we deliver" },
     { href: "/careers", label: "Careers" },
-    { href: "/investors", label: "Investors" },
   ];
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger
           aria-label="Open menu"

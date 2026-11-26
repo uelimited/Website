@@ -3,14 +3,13 @@ import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/site/breadcrumb";
-import { FIRM } from "@/data/firm";
 import {
+  CAREERS_EMAIL,
   CAREERS_HERO,
   CAREERS_PITCH,
   CULTURE_PILLARS,
   CAREERS_OFFERS,
   CAREERS_GROWTH,
-  CAREERS_PATHS,
 } from "@/data/careers";
 
 export const metadata: Metadata = {
@@ -80,16 +79,9 @@ export default function CareersPage() {
               className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--paper)] text-[color:var(--ink-950)] hover:bg-[color:var(--ink-100)]"
             >
               <Link href="/careers/openings">
-                Open hiring
+                Hiring status
                 <ArrowRight className="size-4 ml-1" aria-hidden />
               </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="h-12 rounded-full border-white/50 bg-white/10 px-7 text-[15px] font-medium text-white hover:bg-white/20 hover:text-white"
-            >
-              <Link href="/careers/apply">Apply directly</Link>
             </Button>
           </div>
         </div>
@@ -291,69 +283,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Where you'd fit */}
-      <section style={{ padding: "88px 0" }}>
-        <div className="ue-container">
-          <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 md:gap-20 items-start">
-            <div>
-              <p className="ue-eyebrow">Where you&apos;d fit</p>
-              <h2
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 500,
-                  fontSize: "clamp(28px, 3vw, 38px)",
-                  letterSpacing: "-0.022em",
-                  lineHeight: 1.1,
-                  margin: "10px 0 0",
-                  color: "var(--ink-950)",
-                  maxWidth: "16ch",
-                }}
-              >
-                Hiring for strength, across disciplines.
-              </h2>
-              <p
-                style={{
-                  marginTop: 16,
-                  fontSize: 16,
-                  lineHeight: 1.6,
-                  color: "var(--ink-500)",
-                  maxWidth: "48ch",
-                }}
-              >
-                Fresh out of college or fifteen years in — if you&apos;re good
-                and you want to get better, a bench is waiting for you.
-              </p>
-            </div>
-            <ul
-              style={{
-                listStyle: "none",
-                margin: 0,
-                padding: 0,
-                borderTop: "1px solid var(--border-color)",
-              }}
-            >
-              {CAREERS_PATHS.map((p) => (
-                <li
-                  key={p}
-                  style={{
-                    padding: "18px 0",
-                    borderBottom: "1px solid var(--border-color)",
-                    fontFamily: "var(--font-display)",
-                    fontWeight: 500,
-                    fontSize: 19,
-                    letterSpacing: "-0.014em",
-                    color: "var(--ink-950)",
-                  }}
-                >
-                  {p}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* CV submission */}
+      {/* Hiring status */}
       <section style={{ padding: "88px 0" }}>
         <div className="ue-container">
           <div
@@ -383,7 +313,7 @@ export default function CareersPage() {
                   maxWidth: "16ch",
                 }}
               >
-                Bring your skills to a bigger kind of work.
+                No open positions at the moment.
               </h2>
             </div>
             <p
@@ -395,10 +325,7 @@ export default function CareersPage() {
                 maxWidth: "60ch",
               }}
             >
-              Join an in-house team that values execution, invests in growth,
-              and delivers landmark projects across India. Explore the
-              disciplines we hire for and submit your profile through our
-              application form.
+              We will announce new positions here when they become available.
             </p>
             <div
               style={{
@@ -413,12 +340,12 @@ export default function CareersPage() {
                 className="rounded-full h-12 px-7 text-[15px] font-medium bg-[color:var(--accent-500)] text-[color:var(--paper)] hover:bg-[color:var(--accent-600)] shadow-[0_12px_26px_rgba(194,46,30,0.25)]"
               >
                 <Link href="/careers/openings">
-                  Open hiring
+                  Hiring status
                   <ArrowRight className="size-4 ml-1" aria-hidden />
                 </Link>
               </Button>
               <a
-                href={`mailto:${FIRM.contactEmail}`}
+                href={`mailto:${CAREERS_EMAIL}`}
                 style={{
                   fontSize: 15,
                   color: "var(--accent-700)",
@@ -427,7 +354,7 @@ export default function CareersPage() {
                   textUnderlineOffset: 3,
                 }}
               >
-                Questions? {FIRM.contactEmail}
+                Questions? {CAREERS_EMAIL}
               </a>
             </div>
           </div>

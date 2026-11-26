@@ -22,19 +22,16 @@ save. That's the whole loop.
 
 ### Email forms
 
-Contact, vendor registration, and career applications send through the shared
-EmailJS template. Copy `.env.example` to `.env.local` and add your public key.
-The service and template IDs are already set. Restart the dev server after
-changing environment variables.
+Contact and vendor registration use the existing shared EmailJS template.
+Career applications use the separate careers template and EmailJS settings.
+Copy `.env.example` to `.env.local` and fill in the public keys. Set the
+`NEXT_PUBLIC_EMAILJS_CAREERS_*` variables in the hosting environment before
+building the production site.
 
-Set **To Email** in the shared template to this single line:
-
-```text
-{{#is_vendor}}marketing@uelimited.com{{/is_vendor}}{{^is_vendor}}hr@uelimited.com{{/is_vendor}}
-```
-
-Vendor registrations go to Marketing. Careers and Contact go to HR. Replace
-the first address in this expression if the vendor inbox changes.
+Set **To Email** to `hr@uelimited.com` in the careers template
+(`template_aiobnso`). The careers form also supplies `to_email` for templates
+that already use that parameter. Keep the shared template's recipients as
+configured for Contact and Vendor Registration.
 
 Use `{{subject}}` as the email subject and `{{email}}` as Reply-To. Paste
 [`docs/emailjs-template.html`](docs/emailjs-template.html) into the EmailJS

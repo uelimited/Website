@@ -163,15 +163,48 @@
 }
 .ue-inner-timeline {
   list-style: none;
-  padding: 0;
   margin: 36px 0 0;
+  padding: 0;
 }
 .ue-inner-timeline li {
+  position: relative;
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 48px;
   border-top: 1px solid var(--border-color);
-  padding: 32px 0;
+  padding: 32px 0 32px 23px;
+}
+.ue-inner-timeline__track {
+  position: absolute;
+  inset-block: 24px;
+  inset-inline-start: 0;
+  width: 3px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--ink-100);
+}
+.ue-inner-timeline__fill {
+  display: block;
+  height: 100%;
+  transform-origin: top;
+  background: var(--accent-500);
+}
+@keyframes ue-story-timeline-fill {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-range: entry-crossing) {
+    .ue-inner-timeline li {
+      view-timeline-name: --story-milestone;
+      view-timeline-inset: 40% 25%;
+    }
+    .ue-inner-timeline__fill {
+      animation: ue-story-timeline-fill auto linear both;
+      animation-timeline: --story-milestone;
+      animation-range: entry-crossing;
+    }
+  }
 }
 .ue-inner-timeline time {
   color: var(--accent-500);
@@ -371,7 +404,7 @@
   .ue-inner-timeline li {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding: 26px 0;
+    padding-block: 26px;
   }
   .ue-inner-hero--image {
     min-height: 440px;

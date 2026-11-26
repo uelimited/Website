@@ -170,12 +170,12 @@
       "notes": ""
     },
     {
-      "id": "founder_directors",
+      "id": "directors",
       "category": "people",
-      "label": "Founder-directors",
+      "label": "Directors",
       "value": 3,
       "unit": "people",
-      "display": "3 founder-directors",
+      "display": "3 directors",
       "stat_value": "3",
       "stat_unit": "",
       "period": "Current leadership register",

@@ -311,7 +311,7 @@ export const PILLARS = [
     title: "Exceptional Team",
     lead: "Founder-led, multi-disciplinary engineering under one delivery model.",
     points: [
-      { k: getCompanyFactDisplay("founder_directors"), l: "Leadership" },
+      { k: getCompanyFactDisplay("directors"), l: "Leadership" },
       {
         k: getCompanyFactDisplay("delivery_disciplines"),
         l: "Integrated capabilities",
@@ -322,7 +322,7 @@ export const PILLARS = [
 ];
 
 /**
- * V2 primary navigation — four clear pillars + the Contact CTA (the wordmark
+ * Primary navigation and the Contact CTA (the wordmark
  * is the home link). Capabilities, Industries and Company open mega-menus;
  * Projects is the unified landmark archive + historic project record.
  */
@@ -332,6 +332,7 @@ export const NAV = [
   { href: "/projects", label: "Projects" },
   { href: "/why-unique", label: "Why Unique", menu: "why" as const },
   { href: "/about", label: "About Unique", menu: "firm" as const },
+  { href: "/investors", label: "Investors" },
 ];
 
 /** Sectors mega-menu — lead with the high-value verticals (data centre,

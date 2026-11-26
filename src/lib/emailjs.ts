@@ -1,4 +1,5 @@
 import { EmailJSResponseStatus, send } from "@emailjs/browser";
+import { CAREERS_EMAIL } from "@/data/careers";
 
 const fieldLabels: Record<string, string> = {
   name: "Full name",
@@ -88,17 +89,33 @@ function getEmailParams(form: HTMLFormElement) {
   };
 }
 
-export async function sendEmailForm(form: HTMLFormElement) {
-  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+export async function sendEmailForm(
+  form: HTMLFormElement,
+  channel: "general" | "careers" = "general",
+) {
+  const isCareers = channel === "careers";
+  const serviceId = isCareers
+    ? process.env.NEXT_PUBLIC_EMAILJS_CAREERS_SERVICE_ID
+    : process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const publicKey = isCareers
+    ? process.env.NEXT_PUBLIC_EMAILJS_CAREERS_PUBLIC_KEY
+    : process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+  const templateId = isCareers
+    ? process.env.NEXT_PUBLIC_EMAILJS_CAREERS_TEMPLATE_ID
+    : process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 
   if (!serviceId || !publicKey || !templateId) {
     throw new Error("Email delivery is unavailable. Please try again later.");
   }
 
   try {
-    await send(serviceId, templateId, getEmailParams(form), { publicKey });
+    const params = getEmailParams(form);
+    await send(
+      serviceId,
+      templateId,
+      isCareers ? { ...params, to_email: CAREERS_EMAIL } : params,
+      { publicKey },
+    );
   } catch (error) {
     if (error instanceof EmailJSResponseStatus && error.status === 413) {
       throw new Error("The form text is too long. Shorten it and try again.");

@@ -107,7 +107,7 @@ export function ApplicationForm({
 
     try {
 
-      await sendEmailForm(form);
+      await sendEmailForm(form, "careers");
 
       setSubmitted(true);
 

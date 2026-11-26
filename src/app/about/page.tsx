@@ -45,6 +45,9 @@ export default function AboutPage() {
           <ol className="ue-inner-timeline">
             {HISTORY.map((m) => (
               <li key={m.year}>
+                <span className="ue-inner-timeline__track" aria-hidden="true">
+                  <span className="ue-inner-timeline__fill" />
+                </span>
                 <time>{m.year}</time>
                 <div>
                   <h3>{m.title}</h3>
